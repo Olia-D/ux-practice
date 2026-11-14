@@ -1,0 +1,125 @@
+{
+  "id": "behavioral-evidence",
+  "module": "foundations",
+  "title": "Behavioral > Self-Reported Evidence",
+  "icon": "🧠",
+  "intro": "Users are consistently unreliable narrators of their own behavior. Not because they're dishonest — because memory is reconstructive, social desirability is real, and people genuinely can't articulate why they do what they do.",
+  "topics": [
+    {
+      "id": "the-gap",
+      "title": "The Say–Do Gap",
+      "learn": [
+        {
+          "title": "Two types of data, two different questions",
+          "text": "**Self-reported data** (surveys, interviews, preference ratings) answers:\n→ What do users **think**?\n\n**Behavioral data** (task completion, clicks, time, errors) answers:\n→ What do users **do**?\n\nConflating them leads to overconfident product decisions. They answer fundamentally different questions.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Self-Reported", "items": ["Attitudes", "Motivations", "Satisfaction", "Intent"] },
+            "right": { "label": "Behavioral", "items": ["Task success/failure", "Time on task", "Error rates", "Click patterns"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "\"82% of users said they were satisfied with the checkout flow.\" What type of evidence is this?",
+            "options": ["Self-reported", "Behavioral", "Mixed methods", "Heuristic"],
+            "answer": 0,
+            "explain": "Satisfaction ratings are self-reported data — they tell you what users THINK, not what they DO."
+          }
+        },
+        {
+          "title": "Where the gap hits hardest",
+          "text": "**Feature preferences:** Users say they want more features. Behavioral data shows they use fewer than they think.\n\n**Task difficulty:** Users rate tasks as \"easy\" that actually took twice as long and produced twice the errors.\n\n**Navigation confidence:** Users say they found what they looked for. Eye-tracking shows they scanned past it multiple times.\n\n**Onboarding feedback:** Users say onboarding was clear. Activation and time-to-value data tells the real story.",
+          "try": {
+            "type": "single",
+            "q": "Users rate a new feature as \"easy to use\" in a post-task survey, but task completion was only 40%. Which data point should drive your next design decision?",
+            "options": [
+              "The 40% task completion rate",
+              "The 'easy to use' rating",
+              "Average the two",
+              "Discard both and survey more users"
+            ],
+            "answer": 0,
+            "explain": "Behavioral data (task completion) wins. Users genuinely can't accurately assess their own performance."
+          }
+        },
+        {
+          "title": "Why this happens",
+          "text": "It's not that users are liars. Three real mechanisms are at work:\n\n**Reconstructive memory** — People don't replay events; they reconstruct them, filling gaps with what \"must have\" happened.\n\n**Social desirability** — People answer the way they think a competent, attentive person would answer.\n\n**Introspection limits** — People genuinely don't know or can't articulate why they do what they do. \"I always read error messages\" → they don't.",
+          "try": {
+            "type": "single",
+            "q": "A user in a study says: \"I carefully read all the error messages.\" Video shows they dismissed every error without reading. Why?",
+            "options": [
+              "Social desirability — they're describing the ideal version of their behavior",
+              "They're deliberately lying to the researcher",
+              "The video recording is inaccurate",
+              "Error messages weren't visible enough"
+            ],
+            "answer": 0,
+            "explain": "Social desirability: users describe how a competent person would behave, not what they actually did."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What does self-reported data primarily tell you?",
+          "options": [
+            "What users think, feel, or believe",
+            "What users actually do",
+            "How long tasks take",
+            "Where users click"
+          ],
+          "answer": 0,
+          "explain": "Self-reported data captures attitudes, motivations, and preferences — not actual behavior."
+        },
+        {
+          "type": "single",
+          "q": "Users say they prefer fewer features, but analytics show they use 12 features regularly. What's this an example of?",
+          "options": [
+            "The say–do gap",
+            "Feature creep",
+            "Bad analytics",
+            "Statistical noise"
+          ],
+          "answer": 0,
+          "explain": "Classic say–do gap: what users report about their behavior doesn't match their actual behavior."
+        },
+        {
+          "type": "single",
+          "q": "Which of these is behavioral evidence?",
+          "options": [
+            "Task completion rate of 73%",
+            "4.2/5 satisfaction score",
+            "\"I found the navigation intuitive\"",
+            "Net Promoter Score of 45"
+          ],
+          "answer": 0,
+          "explain": "Task completion rate is behavioral — it measures what users did, not what they said."
+        },
+        {
+          "type": "single",
+          "q": "Why are users \"unreliable narrators\" of their own behavior?",
+          "options": [
+            "Reconstructive memory, social desirability, and introspection limits",
+            "They're not paying attention during studies",
+            "They want to sabotage the research",
+            "They're confused by the questions"
+          ],
+          "answer": 0,
+          "explain": "Three mechanisms: memory reconstruction, desire to appear competent, and genuine inability to explain their own actions."
+        },
+        {
+          "type": "single",
+          "q": "Post-study survey says onboarding was \"clear and helpful.\" Activation data shows 60% of users never complete setup. What should you trust?",
+          "options": [
+            "Activation data — behavioral evidence trumps self-report",
+            "The survey — users know their own experience",
+            "Neither — the sample size is too small",
+            "The survey — it's more recent data"
+          ],
+          "answer": 0,
+          "explain": "Behavioral data (activation rate) wins when it conflicts with self-report. Always."
+        }
+      ]
+    }
+  ]
+}

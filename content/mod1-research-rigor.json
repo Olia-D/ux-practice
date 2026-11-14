@@ -1,0 +1,120 @@
+{
+  "id": "research-rigor",
+  "module": "foundations",
+  "title": "Research Rigor at Product Speed",
+  "icon": "⚡",
+  "intro": "Speed and rigor aren't opposites. Slow research is usually slow for operational reasons — recruiting, formatting, score calculation. This article gives you a framework for matching evidence to the decision's risk level.",
+  "topics": [
+    {
+      "id": "magic-questions",
+      "title": "The 3 Magic Questions",
+      "learn": [
+        {
+          "title": "Question 1: What if we're wrong?",
+          "text": "Before any study, ask: **what's the real-world impact of making this decision incorrectly?**\n\nA wrong color on a CTA button → cheap to fix, low impact.\n\nA wrong information architecture for a product serving millions → expensive, high impact.\n\nThe answer determines how much evidence you need. Not every decision deserves a full study.",
+          "try": {
+            "type": "single",
+            "q": "Which decision has the highest \"what if we're wrong\" cost?",
+            "options": [
+              "Restructuring the main navigation of a SaaS product",
+              "Changing the color of a secondary button",
+              "Updating placeholder text in a search field",
+              "Moving a tooltip from left to right"
+            ],
+            "answer": 0,
+            "explain": "Navigation restructuring affects every user's ability to find core features — high impact, hard to reverse."
+          }
+        },
+        {
+          "title": "Question 2: Can we reverse it?",
+          "text": "Some decisions are easy to undo:\n→ Copy changes, button placement, color tweaks\n\nOthers are nearly impossible to reverse once shipped:\n→ Data model changes, core navigation, onboarding flows that set permanent user expectations\n\n**Irreversible decisions need more rigor.** You're not just making a choice — you're closing doors.",
+          "try": {
+            "type": "single",
+            "q": "Which of these is hardest to reverse after shipping?",
+            "options": [
+              "A data model change that restructures how users organize their work",
+              "Button label copy",
+              "The order of items in a dropdown",
+              "An illustration style on a marketing page"
+            ],
+            "answer": 0,
+            "explain": "Data model changes reshape how users think about and organize their work — once they've adapted, reversing is disruptive."
+          }
+        },
+        {
+          "title": "Question 3: How much uncertainty is acceptable?",
+          "text": "This is the team's actual comfort with being wrong.\n\n**Low uncertainty tolerance:** \"We need to be 95% confident\" → full study, adequate sample size\n\n**High uncertainty tolerance:** \"We're probably right based on prior evidence\" → a few quick checks, existing data review\n\nThe three questions together determine the **minimum rigor threshold** — the least amount of evidence needed for a responsible decision.",
+          "try": {
+            "type": "single",
+            "q": "Your team says: \"We already have strong signal from 3 prior studies and analytics. Let's just do a quick 5-person spot check.\" Is this appropriate?",
+            "options": [
+              "Yes — if the decision is reversible and prior evidence is strong, lower rigor is reasonable",
+              "No — you always need at least 20 participants",
+              "No — prior studies are never relevant to new decisions",
+              "Yes — 5 users is always enough"
+            ],
+            "answer": 0,
+            "explain": "The 3 questions framework: if prior evidence is strong and the decision is reversible, a lighter approach is legitimate."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What do the 3 Magic Questions determine?",
+          "options": [
+            "The minimum rigor threshold — how much evidence you need",
+            "The maximum sample size for a study",
+            "Which research method to use",
+            "The project timeline"
+          ],
+          "answer": 0,
+          "explain": "The 3 questions determine the minimum rigor threshold — not maximum, not ideal. The floor below which you're guessing."
+        },
+        {
+          "type": "single",
+          "q": "Which is the 4th step of the Minimum Rigor Threshold?",
+          "options": [
+            "Align with stakeholders before research begins",
+            "Publish the findings report",
+            "Calculate statistical significance",
+            "Run a follow-up study"
+          ],
+          "answer": 0,
+          "explain": "Step 4: Align before research. Agreement on 'enough evidence' must happen BEFORE data exists — prevents goalpost-shifting."
+        },
+        {
+          "type": "single",
+          "q": "Where does research speed actually come from?",
+          "options": [
+            "Eliminating operational waste — recruiting, formatting, score calculation",
+            "Reducing sample size",
+            "Skipping the analysis phase",
+            "Using surveys instead of usability tests"
+          ],
+          "answer": 0,
+          "explain": "PURE benchmarking: 5.5× faster through operational automation. Same rigor, less overhead."
+        },
+        {
+          "type": "single",
+          "q": "According to MeasuringU, ~9 participants give you an 85% chance of finding a problem that affects what percentage of users?",
+          "options": ["20%", "50%", "5%", "80%"],
+          "answer": 0,
+          "explain": "Binomial probability: ~9 participants → 85% chance of observing a problem affecting 20% of users."
+        },
+        {
+          "type": "single",
+          "q": "\"Users prefer this design.\" What's wrong with this research communication?",
+          "options": [
+            "It's overconfident — doesn't state method, sample, metrics, or uncertainty",
+            "It's too short",
+            "It should say 'customers' not 'users'",
+            "Nothing — it's clear and concise"
+          ],
+          "answer": 0,
+          "explain": "Precise version states: what was observed, what can be concluded, where uncertainty remains. The overconfident version does none of this."
+        }
+      ]
+    }
+  ]
+}

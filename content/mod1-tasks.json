@@ -1,0 +1,125 @@
+{
+  "id": "tasks",
+  "module": "foundations",
+  "title": "UX Research Starts with Tasks",
+  "icon": "📋",
+  "intro": "The task is the atomic unit of usability testing. Get the task wrong, and even a perfectly run study produces misleading results. This article gives you a 3-step framework for writing tasks that reveal real behavior.",
+  "topics": [
+    {
+      "id": "three-steps",
+      "title": "The 3-Step Framework",
+      "learn": [
+        {
+          "title": "Step 1: User goal, not UI action",
+          "text": "Write tasks in terms of what the user is trying to **accomplish**, not what buttons to press.\n\n❌ \"Click on the Settings icon and find the notification preferences\"\n→ This tests whether they can follow instructions.\n\n✅ \"You're getting too many email notifications. Figure out how to reduce them.\"\n→ This tests whether the interface supports the real goal.",
+          "try": {
+            "type": "single",
+            "q": "Which task is correctly written as a user goal?",
+            "options": [
+              "You need to add a new team member to your project. Set them up so they can start.",
+              "Click the 'Add Member' button in the top right and enter an email address.",
+              "Navigate to Settings > Team > Add Member.",
+              "Use the team management feature to invite someone."
+            ],
+            "answer": 0,
+            "explain": "The first option frames a goal (add someone who can start working) without prescribing UI steps."
+          }
+        },
+        {
+          "title": "Step 2: Realistic scenario",
+          "text": "Wrap the task in a scenario that gives the user **context** and **motivation** — the same kind they'd have in real life.\n\n❌ \"Find a product under $50.\"\n→ Why? For whom? What kind of product?\n\n✅ \"Your friend's birthday is next week. You want to find a gift for under $50 that they'd actually like. They're into cooking.\"\n→ Now the user has a reason, constraints, and a way to evaluate success.",
+          "try": {
+            "type": "single",
+            "q": "What does a realistic scenario add to a research task?",
+            "options": [
+              "Context and motivation that mirror real-world use",
+              "More words to make the task seem professional",
+              "Constraints that make the task harder",
+              "Entertainment value for the participant"
+            ],
+            "answer": 0,
+            "explain": "Scenarios give users the same context and motivation they'd have in real life, producing realistic behavior."
+          }
+        },
+        {
+          "title": "Step 3: No leading language",
+          "text": "Don't use the same words the interface uses. If the button says \"Manage Notifications,\" your task shouldn't say \"manage your notifications.\"\n\n**Leading language** tells users where to look, which means you're testing reading comprehension, not usability.\n\n❌ \"Use the **filter** feature to narrow results\" (if the UI label says \"Filter\")\n✅ \"You only want to see items from the last month. How would you do that?\"\n\nThe user should discover the path, not follow your breadcrumbs.",
+          "try": {
+            "type": "single",
+            "q": "The UI has a button labeled \"Export Report.\" Which task avoids leading language?",
+            "options": [
+              "Your manager needs this data in a spreadsheet for a meeting tomorrow. How would you get it to her?",
+              "Use the Export Report button to download the data.",
+              "Export the report using the available tools.",
+              "Find the export functionality."
+            ],
+            "answer": 0,
+            "explain": "It describes the goal without using UI labels. The user has to figure out that 'Export Report' is the path."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What are the 3 steps for writing good research tasks?",
+          "options": [
+            "User goal, realistic scenario, no leading language",
+            "Clear instruction, time limit, success criteria",
+            "Simple wording, multiple choice, follow-up questions",
+            "Hypothesis, test plan, statistical analysis"
+          ],
+          "answer": 0,
+          "explain": "The 3-step framework: frame as a user goal, wrap in a realistic scenario, avoid leading language."
+        },
+        {
+          "type": "single",
+          "q": "Why is \"Click on Settings and find notification preferences\" a bad task?",
+          "options": [
+            "It tests instruction-following, not usability",
+            "It's too short",
+            "Settings is hard to find",
+            "It doesn't have a time limit"
+          ],
+          "answer": 0,
+          "explain": "Task prescribes UI steps. You're testing whether they can follow directions, not whether the interface works."
+        },
+        {
+          "type": "single",
+          "q": "The button says \"Archive.\" Your task says: \"Archive the completed project.\" What's the problem?",
+          "options": [
+            "Leading language — you're using the same word as the UI label",
+            "The task is too short",
+            "Archive is not a common word",
+            "Nothing — this is fine"
+          ],
+          "answer": 0,
+          "explain": "Using the UI label in the task tells users exactly where to look, defeating the purpose of the test."
+        },
+        {
+          "type": "single",
+          "q": "A task reads: \"Find a flight.\" What's missing?",
+          "options": [
+            "A realistic scenario — where, when, why, for whom?",
+            "A time limit",
+            "Technical specifications",
+            "The correct answer"
+          ],
+          "answer": 0,
+          "explain": "Without scenario context, users have no motivation or constraints — their behavior won't match real-world use."
+        },
+        {
+          "type": "single",
+          "q": "If you write tasks well but the interface is good, what should happen in the test?",
+          "options": [
+            "Users complete tasks successfully — confirming the design works",
+            "Users fail — good tasks always expose problems",
+            "Users get confused by the scenario",
+            "Nothing useful — you wasted the study"
+          ],
+          "answer": 0,
+          "explain": "Well-written tasks reveal real behavior. If the design is good, success is the valid finding."
+        }
+      ]
+    }
+  ]
+}
