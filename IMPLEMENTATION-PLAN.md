@@ -1,0 +1,65 @@
+# UX Practice — gap analysis and implementation plan
+
+Date: 2026-11-15. State audited: 26 articles, 78 learn cards, 130 quiz questions + 78 quick checks. App renders without console errors on iPhone viewport; home, module, learn, quiz and result views all work.
+
+## Findings
+
+### 1. Quiz validity — correct answer is the longest option 88% of the time (184/208)
+Options are shuffled at runtime, so position doesn't leak — but length does. A test-wise learner can score ~90% without reading the cards. Eight articles are 8/8. This is the most important fix: it undermines the "test" half of learn-then-test.
+
+### 2. "Read original article" links are guessed slugs
+Manifest uses `/p/animations`, `/p/ab-testing`, `/p/ic`; the real posts are `/p/most-ui-animations-shouldnt-exist`, `/p/ab-testing-and-the-two-party-trap`, `/p/why-i-stay-an-ic`. Most of the 26 links are probably 404s.
+
+### 3. Coverage — 9 of Calabro's 35 articles are not in the app
+Confirmed missing: *UX Job Security*, *UX Has a Basics Problem*, *The Rules of AI Chat History*, *Reframing Dark Patterns: 2026 Edition*, *The Problem With Split Buttons*. The remaining four are in the HTML reference book on the Mac (`ux-research-in-the-wild-book.html`).
+
+### 4. Knowledge gathered today that the app doesn't carry
+- **Data visualization** — FT Visual Vocabulary, London data design guidelines, Datawrapper colour rules, dataschool ACES, Chartability. Only one article (*Why Your Data Dashboard Stinks*) touches this.
+- **AI UX** — Agentic UX autonomy levels, T.R.U.S.T., C.O.N.V.E.R.S.E., plus Calabro's own *Rules of AI Chat History*. Nothing in the app.
+- Hall and Torres are already folded in where they fit. Their out-of-scope topics (surveys, personas, OSTs) stay out by design.
+
+### 5. Promised features that don't exist
+- The schedule text promises a "mixed quiz at end of each module". There is none.
+- Missed questions live only in `sessionStorage` for the current attempt — there is no cross-article "review what you missed" bank, which is the single most effective retention mechanic that isn't gamification.
+- No concept index: once an article is done there is no fast way to re-find "the 4 walkthrough questions" without re-reading cards.
+
+### 6. Small things
+- No web-app manifest or service worker → not installable, no offline. The whole app is ~200 KB of static files; offline is cheap.
+- Quick-check "Check" button is disabled with no explanation until an option is picked (the skills flag exactly this pattern). Keep it enabled and show "Pick an answer" on click instead.
+- `content/manifest.json` title is "UX Lärbasen" (template leftover, unused by the app, but English-only rule).
+- No automated content check; the audit was manual.
+
+## Plan
+
+### Phase 1 — Fix what's broken (½ day)
+1. **De-bias answer length.** Script flags every question where the correct option is the longest; rewrite distractors to match length and specificity (plausible wrong answers, not short throwaways). Target: correct-is-longest ≤ 30%, no article above 50%. Re-run the content audit agent on rewritten questions.
+2. **Fix source links.** Resolve all 26 real slugs; verify each returns 200; update manifest.
+3. **Add `scripts/check-content.py`** — JSON validity, id uniqueness, answer index in range, longest-option ratio, every manifest file exists, link check. Document "run before push" in README.
+4. Rename manifest title; enable the Check button with inline prompt.
+
+### Phase 2 — Retention mechanics, no gamification (1 day)
+5. **Missed-question bank.** Persist missed question refs per article in `uxp-progress-v1`; clear a ref when answered right twice. Home shows "Review 7 missed questions" when non-empty.
+6. **Module review quiz.** `#/m/<id>/review` — 10 questions drawn across the module's articles, weighted toward missed ones. Counts toward module completion label ("Reviewed").
+7. **Concept index.** `#/index` — every learn-card title grouped by module, linking straight to the card. Replaces re-reading.
+
+### Phase 3 — Complete the newsletter (1 day)
+8. Add the 9 missing Calabro articles: split buttons, dark patterns 2026, basics problem, job security into Modules 4/6; *Rules of AI Chat History* becomes the seed of Module 8. Same format: 3 cards, 5 questions, compare visuals where there's a do/don't. Verify against originals with the audit agent.
+
+### Phase 4 — Two new modules from today's sources (2 days)
+9. **Module 7 — Data Visualization** (5 articles): Choosing the chart (FT purposes) · Chart design rules (London: data-ink, labels, zero baseline) · Colour scales (Datawrapper) · Dashboards that lead to decisions (ACES + Calabro's three jobs) · Accessible charts (Fossheim, Chartability critical checks). Compare visuals carry most of the weight here.
+10. **Module 8 — AI UX** (5 articles): How much should the agent do (Agentic L1–L5 + scoring) · Trust at the moment of reliance (T.R.U.S.T.) · Anatomy of a chat turn (C.O.N.V.E.R.S.E.) · Memory and chat history (Playground guide + Calabro) · Citations and failure disclosure. Source: aiuxplayground.com frameworks, with "breaks as" anti-patterns as the quiz material.
+11. Update schedule text (8 modules, ~8 weeks), header count (26 → 40), unlock chain.
+
+### Phase 5 — Install and offline (2 hours)
+12. `manifest.webmanifest` + minimal service worker (cache-first for app shell and `content/*.json`, network-first for manifest). Add-to-home-screen on the phone; works on the walk without signal.
+
+### Not planned
+- Streaks, points, badges, leaderboards — against the brief.
+- Hall's surveys/personas/recruiting, Torres's opportunity solution trees — different scope; the skills cover them for daily work.
+- Cross-device sync beyond copy/paste — would need a backend.
+
+## Definition of done per phase
+- Phase 1: `check-content.py` passes; all 26 links return 200; audit agent re-verifies rewritten questions.
+- Phase 2: a missed question reappears in the bank and in the module review; index links land on the right card.
+- Phase 3–4: audit agent confirms each new article against its source; no quiz question asks what the cards don't teach.
+- Phase 5: app loads with network disabled after one visit.
