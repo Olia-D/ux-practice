@@ -32,7 +32,7 @@
         },
         {
           "title": "Running a good synthesis session",
-          "text": "**Who:** Keep it small. Researchers, one or two designers, maybe a PM who's comfortable with ambiguity.\n\n**How:** Display evidence — quotes, screenshots, clips. Look for patterns across participants, not solutions.\n\n**Close with three buckets:**\n→ What we know (confirmed patterns)\n→ What we think (emerging themes, needs validation)\n→ What we need to verify (open questions)\n\n**Critical rule:** Keep roadmap talk out of synthesis. The moment someone says \"so we should build...\" you've jumped to strategy too early.",
+          "text": "**Who:** Keep it small. Researchers, one or two designers, maybe a PM who's comfortable with ambiguity.\n\n**How:** Display evidence — quotes, screenshots, clips. Look for patterns across participants, not solutions.\n\n**Close with three buckets:**\n→ What we know (confirmed patterns)\n→ What we think (emerging themes, needs validation)\n→ What we need to verify (open questions)\n\n**Torres's interview snapshot:** Instead of batch-synthesizing 6–12 interviews at the end, create a one-page snapshot after each interview — a photo, a memorable quote, and the key opportunities. Your snapshot collection becomes a searchable index. Synthesize as you go, not in a big batch.\n\n**Critical rule:** Keep roadmap talk out of synthesis. The moment someone says \"so we should build...\" you've jumped to strategy too early.",
           "try": {
             "type": "single",
             "q": "During synthesis, a designer says 'We should add a tooltip there.' What do you do?",
