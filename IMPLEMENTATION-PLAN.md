@@ -41,7 +41,7 @@ Confirmed missing: *UX Job Security*, *UX Has a Basics Problem*, *The Rules of A
 Checking the book against Calabro's posts showed that some original chapters, and the app cards built from them, had drifted from the source. Example: *UX Research Starts with Tasks* taught a three-step task-writing framework that isn't in the post, which is about building a Top Task List.
 
 - **Rebuilt from the posts (cards + questions):** tasks, usability-vs-concept, cognitive-walkthrough, fake-ai, cognitive-biases, ab-testing, dashboard, debrief, delight, figma. Generators are in `scripts/rewrite_batch1.py` and `rewrite_batch2.py`.
-- **Still to verify line by line against the posts (16):** behavioral-evidence, research-rigor, ux-as-service, ab-mislead, misunderstandings, mixed-methods, affordances, animations, icons, input-field, status-design, roi, ic, institutional, predictions, thankless. Their questions were only de-biased, not re-sourced. Known issue to fix there: institutional quotes “12 years” where the post says ten.
+- **Still to verify line by line against the posts (16):** behavioral-evidence, research-rigor, ux-as-service, ab-mislead, misunderstandings, mixed-methods, affordances, animations, icons, input-field, status-design, roi, ic, institutional, predictions, thankless. Their questions were only de-biased, not re-sourced.
 
 ### Phase 2 — Retention mechanics, no gamification (1 day)
 5. **Missed-question bank.** Persist missed question refs per article in `uxp-progress-v1`; clear a ref when answered right twice. Home shows "Review 7 missed questions" when non-empty.
