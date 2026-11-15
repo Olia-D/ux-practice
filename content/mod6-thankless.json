@@ -1,0 +1,135 @@
+{
+  "id": "thankless",
+  "module": "career",
+  "title": "UX Is Thankless (That's Good)",
+  "icon": "🏅",
+  "intro": "Good UX is invisible. That's not a failure of recognition — it's proof the work is doing its job. Understanding hedonic adaptation changes how you measure your own impact.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "Core Concepts",
+      "learn": [
+        {
+          "title": "Hedonic adaptation and UX",
+          "text": "**Hedonic adaptation** is the psychological tendency to return to a baseline level of satisfaction after changes — positive or negative.\n\nIn UX, this means: **every improvement you ship becomes the new normal.** Users don't keep feeling grateful for a fix. They just stop noticing the problem.\n\nThis creates a paradox: the better your UX work is, the more invisible it becomes. Users don't thank you for things that \"just work.\" They only notice when things break.\n\nThis isn't a bug — it's the nature of good infrastructure.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "What users notice", "items": ["Things that break", "New friction points", "Slow loading", "Confusing errors"] },
+            "right": { "label": "What users forget", "items": ["Smooth checkout flow", "Clear navigation", "Fast page loads", "Helpful error recovery"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "Your team fixed a confusing settings page 6 months ago. Support tickets dropped 40%. Now nobody mentions it. What happened?",
+            "options": [
+              "Hedonic adaptation — the fix became invisible baseline",
+              "Users found a workaround",
+              "The fix wasn't that important",
+              "Users forgot the old version"
+            ],
+            "answer": 0,
+            "explain": "Hedonic adaptation: the improvement became the new normal. The 40% ticket drop is your proof of impact."
+          }
+        },
+        {
+          "title": "Measuring invisible impact",
+          "text": "If good UX is invisible, how do you prove your work matters? Track **what stopped happening**:\n\n→ Support tickets that disappeared\n→ Error rates that dropped\n→ Task completion time that shortened\n→ Abandonment rates that fell\n→ Training requests that went away\n\nThese \"absence metrics\" are your strongest evidence. Nobody notices when the plumbing works — but the plumber can show you the water bill.\n\nDocument your **before** numbers obsessively. You can't show improvement without a baseline.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Weak evidence", "items": ["\"Users seem happier\"", "\"Nobody complained\"", "\"The PM liked it\"", "\"It looks cleaner\""] },
+            "right": { "label": "Strong evidence", "items": ["Support tickets: 340 → 95", "Task time: 4.2min → 1.8min", "Error rate: 23% → 6%", "Abandonment: 31% → 12%"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "You want to prove impact of a checkout redesign. What's your strongest argument?",
+            "options": [
+              "Completion rate went from 62% to 84%",
+              "The design team is proud of it",
+              "Stakeholders approved the new design",
+              "It follows current design trends"
+            ],
+            "answer": 0,
+            "explain": "Numbers that show a change in behavior are your strongest evidence. Opinions fade; data persists."
+          }
+        },
+        {
+          "title": "Reframing \"thankless\" as success",
+          "text": "The absence of praise is the **presence of usability**. Reframe your expectations:\n\n**Bad UX** gets attention → complaints, workarounds, support tickets\n**Good UX** gets silence → \"it just works\"\n\nThis means your job security comes from a paradox: the better you are, the harder it is to see why you're needed.\n\nThe fix isn't to make your work more visible by adding unnecessary features or friction. It's to:\n→ **Document baselines** before every project\n→ **Track absence metrics** after shipping\n→ **Communicate in business language** — cost saved, revenue retained, time recovered\n→ **Build a portfolio of before/after data**, not just pretty screens",
+          "try": {
+            "type": "single",
+            "q": "A VP asks: \"What has the UX team actually done this quarter?\" What's the best response?",
+            "options": [
+              "Show before/after metrics: support costs down, task completion up",
+              "Show all the Figma files produced",
+              "List the number of usability tests run",
+              "Show the design system components built"
+            ],
+            "answer": 0,
+            "explain": "Business impact in numbers — costs saved, revenue protected, efficiency gained — is what leadership responds to."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What is hedonic adaptation in the context of UX?",
+          "options": [
+            "Users return to their baseline satisfaction — improvements become the new normal",
+            "Users adapt their behavior to bad interfaces over time",
+            "Users prefer familiar designs over better ones",
+            "Users become resistant to change"
+          ],
+          "answer": 0,
+          "explain": "Hedonic adaptation means every improvement becomes invisible. Users don't stay grateful — they just stop noticing the old problem."
+        },
+        {
+          "type": "single",
+          "q": "Why is good UX 'thankless'?",
+          "options": [
+            "Because when things work smoothly, users don't notice — they only notice friction",
+            "Because UX teams are underfunded",
+            "Because designers don't get credit in product launches",
+            "Because UX is hard to explain to non-designers"
+          ],
+          "answer": 0,
+          "explain": "Good UX is invisible by nature. Users notice broken things, not things that work. That invisibility IS the success."
+        },
+        {
+          "type": "single",
+          "q": "What are 'absence metrics'?",
+          "options": [
+            "Measurements of things that stopped happening after a UX improvement",
+            "Metrics for features that are missing from a product",
+            "Data about users who left the product",
+            "Analytics for pages users don't visit"
+          ],
+          "answer": 0,
+          "explain": "Absence metrics track what disappeared: fewer support tickets, lower error rates, shorter task times. They prove invisible impact."
+        },
+        {
+          "type": "single",
+          "q": "What's the most important thing to do BEFORE shipping a UX improvement?",
+          "options": [
+            "Document baseline metrics so you can show the change",
+            "Get stakeholder sign-off",
+            "Create a press release for the change",
+            "Run a satisfaction survey"
+          ],
+          "answer": 0,
+          "explain": "Without a baseline, you can't prove improvement. Document the 'before' numbers obsessively."
+        },
+        {
+          "type": "single",
+          "q": "When communicating UX impact to leadership, which language works best?",
+          "options": [
+            "Business language: cost saved, revenue retained, time recovered",
+            "Design language: improved hierarchy, better affordances",
+            "Research language: statistical significance, confidence intervals",
+            "Technical language: performance metrics, load times"
+          ],
+          "answer": 0,
+          "explain": "Leadership responds to business impact. Translate UX wins into costs saved, revenue protected, and efficiency gained."
+        }
+      ]
+    }
+  ]
+}

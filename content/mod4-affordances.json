@@ -1,0 +1,125 @@
+{
+  "id": "affordances",
+  "module": "design-principles",
+  "title": "Make It Look Like What It Does",
+  "icon": "🔘",
+  "intro": "Affordances show what something **is**. Signifiers show what it **does**. When either is broken, users stop trusting your interface.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "Affordances & Signifiers",
+      "learn": [
+        {
+          "title": "Affordances vs. signifiers",
+          "text": "**Affordance** = the visual form that signals what an element is and how to interact with it. A button that looks raised and clickable has a strong affordance.\n\n**Signifier** = the label, icon, or cue that tells users what will happen. A button labeled \"Download Report\" has a clear signifier.\n\nThe author's test for \"intuitive\" design: **When someone sees this, do they know what to do?** If not, it's broken.\n\nIn an informal study, the author showed a button to 100 people. All 100 said they'd click it. Rule of thumb: if 95 out of 100 people say it \"looks like a button,\" the affordance is strong.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Affordance", "items": ["What something IS", "Visual form and shape", "A button looks clickable", "An input looks typeable"] },
+            "right": { "label": "Signifier", "items": ["What something DOES", "Labels, icons, cues", "\"Download Report\"", "\"Enter your email\""] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A raised, rounded element with a slight gradient — that's an example of:",
+            "options": ["Strong affordance", "Strong signifier", "Good accessibility", "Visual hierarchy"],
+            "answer": 0,
+            "explain": "The visual form signals 'this is clickable' — that's an affordance. The label on it would be the signifier."
+          }
+        },
+        {
+          "title": "Weak affordances — when things don't look like what they are",
+          "text": "These patterns look clean in Figma but fail with real users:\n\n→ **Single-line inputs with no border** — users don't see them as input fields\n→ **Buttons styled as plain text** — users don't know they can click\n→ **Floating labels** used as the only hint — users miss the interaction\n\nThe core problem: if users must **stop and think about what something is**, the affordance is weak.\n\nConsistency matters across the whole UI. Tabs should look like tabs. Toggles should look like toggles. Input fields should look like places to type.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Strong affordance", "items": ["Button with outline + fill", "Input with visible border", "Tab that looks raised/selected", "Toggle that looks switchable"] },
+            "right": { "label": "Weak affordance", "items": ["Text-only link as action", "Borderless input field", "Text that's secretly a tab", "Checkbox disguised as text"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A text input with no visible border — why is this a problem?",
+            "options": ["Users don't recognize it as a place to type", "It breaks on mobile browsers", "Screen readers can't detect it", "It violates WCAG color contrast"],
+            "answer": 0,
+            "explain": "Without visual borders, the affordance is weak — users literally don't see it as an input field."
+          }
+        },
+        {
+          "title": "Broken signifiers — when labels lie",
+          "text": "A signifier mismatch is when an element's label doesn't match what it actually does:\n\n→ A \"Download\" button that opens a form first\n→ A \"Learn More\" link that actually means \"Subscribe\"\n→ A text-like element that opens a modal\n\nThese mismatches **destroy trust**. Users hesitate, feel tricked, and stop exploring.\n\nThe fix is simple: **if it looks like a button and says \"Download,\" it should download.** No extra steps, no surprises.\n\nWhen a product feels \"not intuitive,\" check two things first:\n1. Do elements look like what they are? (affordance)\n2. Do labels accurately describe what will happen? (signifier)",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Honest signifier", "items": ["\"Download Report\" → downloads", "\"Learn More\" → shows info", "\"Delete\" → deletes with confirmation"] },
+            "right": { "label": "Deceptive signifier", "items": ["\"Download\" → opens a form", "\"Learn More\" → subscription wall", "\"Free Trial\" → requires credit card"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A button says \"Download\" but first opens a registration form. What's the problem?",
+            "options": ["The signifier is deceptive — the label doesn't match the action", "The affordance is weak", "The button needs a better icon", "The form should load faster"],
+            "answer": 0,
+            "explain": "The label promises one action but delivers another. This is a signifier mismatch — a dark pattern that erodes trust."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What's the difference between an affordance and a signifier?",
+          "options": [
+            "Affordance = what it looks like (is). Signifier = what it says it does",
+            "Affordance = the label. Signifier = the visual design",
+            "Affordance = for sighted users. Signifier = for screen readers",
+            "They're the same thing, just different terminology"
+          ],
+          "answer": 0,
+          "explain": "Affordance is the visual form (looks clickable). Signifier is the label/cue (says what happens when you click)."
+        },
+        {
+          "type": "single",
+          "q": "What's the author's diagnostic test for intuitive design?",
+          "options": [
+            "\"When someone sees this, do they know what to do?\"",
+            "\"Can users complete the task in under 3 seconds?\"",
+            "\"Does it follow Material Design guidelines?\"",
+            "\"Do users rate it 4+ stars in satisfaction surveys?\""
+          ],
+          "answer": 0,
+          "explain": "If users can't tell what to do just by looking, the design has broken affordances or signifiers."
+        },
+        {
+          "type": "single",
+          "q": "Which of these is an example of a weak affordance?",
+          "options": [
+            "A button styled as plain text with no visual distinction",
+            "A button with a clear label but wrong color",
+            "A button that's too small to tap on mobile",
+            "A button with an icon but no label"
+          ],
+          "answer": 0,
+          "explain": "A button that looks like plain text doesn't signal 'clickable' — users don't know it's interactive."
+        },
+        {
+          "type": "single",
+          "q": "\"Learn More\" that actually leads to a subscription page is an example of:",
+          "options": [
+            "A deceptive signifier — the label lies about what happens",
+            "A weak affordance — it doesn't look clickable",
+            "Bad information architecture",
+            "A missing tooltip"
+          ],
+          "answer": 0,
+          "explain": "The label promises information but delivers a sales page. That's a broken signifier that erodes user trust."
+        },
+        {
+          "type": "single",
+          "q": "When a product feels \"not intuitive,\" what should you check first?",
+          "options": [
+            "Do elements look like what they are, and do labels match what happens?",
+            "Is the visual design consistent with the brand guidelines?",
+            "Are all interactions animated smoothly?",
+            "Does it follow the latest design trends?"
+          ],
+          "answer": 0,
+          "explain": "Check affordances (do things look like what they are?) and signifiers (do labels match actions?). These are the two most common causes of confusion."
+        }
+      ]
+    }
+  ]
+}

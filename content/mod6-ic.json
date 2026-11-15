@@ -1,0 +1,135 @@
+{
+  "id": "ic",
+  "module": "career",
+  "title": "Why I Stay an IC",
+  "icon": "💎",
+  "intro": "Management isn't the only path to impact. Senior IC researchers influence decisions through insight, not authority — and that influence can be more durable than a manager's.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "Core Concepts",
+      "learn": [
+        {
+          "title": "Insight vs. authority",
+          "text": "Managers influence through **authority** — they assign work, set priorities, approve decisions.\n\nSenior ICs influence through **insight** — they change how teams think about problems by surfacing evidence others don't have.\n\nAuthority works top-down and stops at your org boundary. Insight travels horizontally — a well-placed finding can shift strategy across the entire company.\n\nThe IC path isn't \"staying small.\" It's choosing a different lever.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Manager influence", "items": ["Through authority", "Bounded by org chart", "Allocates resources", "Stops when role changes"] },
+            "right": { "label": "IC influence", "items": ["Through insight", "Crosses org boundaries", "Changes how people think", "Persists after you leave"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A UX finding changes how the product team frames their entire roadmap. What kind of influence is this?",
+            "options": [
+              "Insight-driven — it changed thinking, not reporting lines",
+              "Authority-driven — it changed the roadmap",
+              "Neither — roadmap decisions are PM territory",
+              "Political — it's about internal dynamics"
+            ],
+            "answer": 0,
+            "explain": "Changing how people think about problems is insight-driven influence. No authority needed."
+          }
+        },
+        {
+          "title": "What senior IC work actually looks like",
+          "text": "Senior IC impact isn't about doing more studies. It's about:\n\n→ **Choosing the right question** — not \"test this flow\" but \"should we build this at all?\"\n→ **Connecting dots across research** — seeing the pattern in 12 studies that nobody else noticed\n→ **Building research capability** — teaching teams to think in evidence, not just commissioning studies\n→ **Shaping methodology** — knowing when a quick guerrilla test beats a 6-week study\n\nThe shift from mid to senior IC is from \"doing research\" to \"making research matter.\"",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Mid-level IC", "items": ["Executes assigned studies", "Reports findings", "Follows the brief", "Measures what's asked"] },
+            "right": { "label": "Senior IC", "items": ["Chooses what to study", "Connects findings to strategy", "Challenges the brief", "Defines what to measure"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A PM asks you to test a checkout flow redesign. You suspect the real problem is earlier in the funnel. What does a senior IC do?",
+            "options": [
+              "Push back on the brief and propose studying the real friction point",
+              "Test the checkout flow as requested",
+              "Test both and let the PM decide",
+              "Escalate to the PM's manager"
+            ],
+            "answer": 0,
+            "explain": "Senior ICs challenge the brief when the question is wrong. Testing the wrong thing perfectly still wastes everyone's time."
+          }
+        },
+        {
+          "title": "The IC ceiling is a myth",
+          "text": "Common objections to the IC path:\n\n\"You can't grow without managing people\" — Growth means expanding your **impact radius**, not your headcount.\n\n\"You'll hit a pay ceiling\" — Companies with mature UX tracks have staff/principal levels that match director comp.\n\n\"You'll lose influence\" — The opposite: a senior IC who regularly surfaces insights that shift strategy has more influence than a manager buried in 1:1s and hiring.\n\nThe real risk isn't staying IC. It's becoming a **manager who stops doing the work** that made them valuable in the first place.",
+          "try": {
+            "type": "single",
+            "q": "A colleague says: \"You'll never have real influence unless you manage people.\" What's the strongest counter-argument?",
+            "options": [
+              "Influence comes from insight that changes decisions, not from having direct reports",
+              "Some people just aren't cut out for management",
+              "ICs can always become managers later",
+              "Management is overrated"
+            ],
+            "answer": 0,
+            "explain": "The strongest argument is about the mechanism of influence: insight changes decisions directly, authority changes them through hierarchy."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What is the primary way a senior IC researcher influences decisions?",
+          "options": [
+            "Through insight that changes how teams think about problems",
+            "Through authority in the org chart",
+            "Through managing a research team",
+            "Through presenting at conferences"
+          ],
+          "answer": 0,
+          "explain": "Senior ICs influence through insight — surfacing evidence that shifts how teams frame problems and make decisions."
+        },
+        {
+          "type": "single",
+          "q": "What distinguishes a senior IC from a mid-level IC?",
+          "options": [
+            "Choosing what to study and connecting findings to strategy",
+            "Running more studies per quarter",
+            "Using more advanced research methods",
+            "Having more years of experience"
+          ],
+          "answer": 0,
+          "explain": "The shift is from executing research to making research matter — choosing the right questions and connecting dots across studies."
+        },
+        {
+          "type": "single",
+          "q": "Why can IC influence be more durable than manager influence?",
+          "options": [
+            "Insight crosses org boundaries and persists after the person leaves",
+            "ICs work longer hours",
+            "ICs have better technical skills",
+            "Managers change roles more often"
+          ],
+          "answer": 0,
+          "explain": "A manager's authority is bounded by their org chart and disappears when they change roles. Insights that change thinking persist."
+        },
+        {
+          "type": "single",
+          "q": "A PM hands you a brief to \"test the new settings page.\" A senior IC would:",
+          "options": [
+            "Question whether the settings page is the right thing to test",
+            "Run the test exactly as briefed",
+            "Suggest adding more participants",
+            "Propose a different testing tool"
+          ],
+          "answer": 0,
+          "explain": "Senior ICs challenge the brief. If the real problem is elsewhere, testing the wrong thing — even perfectly — wastes effort."
+        },
+        {
+          "type": "single",
+          "q": "What is the real risk of moving from IC to management?",
+          "options": [
+            "Stopping the hands-on work that made you valuable",
+            "Lower salary",
+            "Less prestige",
+            "Fewer career options"
+          ],
+          "answer": 0,
+          "explain": "Managers often get pulled into hiring, 1:1s, and process — losing touch with the research craft that created their impact."
+        }
+      ]
+    }
+  ]
+}

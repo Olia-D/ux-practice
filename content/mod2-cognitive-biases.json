@@ -1,0 +1,100 @@
+{
+  "id": "cognitive-biases",
+  "module": "running-studies",
+  "title": "Cognitive Biases in UX Research",
+  "icon": "🪤",
+  "intro": "Your brain is working against your research. 20 cognitive biases quietly distort how you collect, interpret, and present UX findings — and most teams never notice.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "Core Concepts",
+      "learn": [
+        {
+          "title": "How we misjudge people",
+          "text": "Three biases shape how you see the humans in your research:\n\n**Implicit bias** — Unconscious assumptions about groups. You assume an older user isn't tech-savvy, then interpret their hesitation as incompetence instead of a confusing UI.\n\n**Attribution error** — Blaming personality when circumstances explain behavior. A talkative user doesn't explore more features because they're chatty — they explore more because the facilitator gave them extra time.\n\n**False consensus** — Assuming others share your mental model and vocabulary. You label a button \"Configure\" because it makes sense to you — but users search for \"Settings.\"",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "What you think", "items": ["This user isn't tech-savvy", "They're just not detail-oriented", "Everyone knows what 'Configure' means"] },
+            "right": { "label": "What's actually happening", "items": ["The UI is confusing for anyone new", "The task setup was unclear", "Your vocabulary ≠ their vocabulary"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A user struggles with your prototype. You think: \"They're just not very technical.\" Which bias is this?",
+            "options": ["Implicit bias", "Confirmation bias", "Recency bias", "Sunk cost fallacy"],
+            "answer": 0,
+            "explain": "Attributing their struggle to who they are (implicit bias) rather than what your design does wrong."
+          }
+        },
+        {
+          "title": "How we fool ourselves",
+          "text": "The most dangerous biases affect your own reasoning:\n\n**Confirmation bias** — You only log evidence that supports your hypothesis. You remember the 3 users who struggled with checkout but forget the 5 who sailed through.\n\n**Sunk cost fallacy** — Resisting a fix because \"we already built this.\" Testing reveals a flaw, but the team doubles down because redesigning feels wasteful.\n\n**Motivated reasoning** — Treating one Medium article as equal to decades of research with tens of thousands of participants, because the article confirms what you already believe.\n\n**Recency bias** — Changing your design based on one recent interview that contradicts many earlier ones.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Do this", "items": ["Log disconfirming evidence deliberately", "Judge fixes on current evidence, not past effort", "Weigh evidence by quality and volume", "Compare new findings to the full body of research"] },
+            "right": { "label": "Not this", "items": ["Cherry-pick quotes that match your hypothesis", "Refuse to redesign because it took 3 sprints", "Cite a blog post to override field data", "Pivot the design after one surprising interview"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "Testing reveals a clear usability issue, but your team says: \"We spent 6 weeks on this — we're not changing it.\" Which bias?",
+            "options": ["Sunk cost fallacy", "Confirmation bias", "Hindsight bias", "False consensus"],
+            "answer": 0,
+            "explain": "Sunk cost fallacy — continuing because of investment already made, not because the evidence supports the current design."
+          }
+        },
+        {
+          "title": "Biases in the research itself",
+          "text": "Some biases are baked into how you run sessions:\n\n**Social desirability** — Users overstate positive behavior. \"I'd use this feature all the time\" usually means \"I want to be polite.\"\n\n**Self-reporting bias** — A user calls a task \"easy\" after failing to complete it. What they say and what they do are different data.\n\n**Framing effect** — Telling a participant \"others found this hard\" changes how they approach the task.\n\n**Serial-position effect** — Items at the start and end of a list seem more important. Your dropdown order shapes what gets picked.\n\nBiases rarely appear alone. A single team discussion dismissing a usability finding can involve five biases at once.\n\n**What to do:** Keep a shared reference of these biases. Check the list when a gut feeling seems off.",
+          "try": {
+            "type": "single",
+            "q": "A user rates your prototype 9/10 but couldn't finish the main task. Which bias explains the gap?",
+            "options": ["Social desirability bias", "Confirmation bias", "Attribution error", "Base rate neglect"],
+            "answer": 0,
+            "explain": "Social desirability — they're being polite and don't want to seem negative, even though their behavior tells a different story."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "You only record interview quotes that support your hypothesis. Which bias is this?",
+          "options": ["Confirmation bias", "Recency bias", "Framing effect", "Social desirability"],
+          "answer": 0,
+          "explain": "Confirmation bias — seeking or recording only evidence that supports what you already believe."
+        },
+        {
+          "type": "single",
+          "q": "A teammate says: \"Our power users don't need labels on icons — they're advanced.\" No data supports this. Which bias?",
+          "options": ["Power-user fallacy", "Attribution error", "Negativity bias", "Clustering bias"],
+          "answer": 0,
+          "explain": "Power-user fallacy — assuming heavy users behave differently without data to back it up."
+        },
+        {
+          "type": "single",
+          "q": "After a failed usability test, a user says: \"Oh yeah, I knew that button was wrong the whole time.\" Which bias?",
+          "options": ["Hindsight bias", "Confirmation bias", "Implicit bias", "Motivated reasoning"],
+          "answer": 0,
+          "explain": "Hindsight bias — rationalizing the past as if the outcome was always obvious."
+        },
+        {
+          "type": "single",
+          "q": "You change your entire design direction based on one recent interview, even though 8 earlier sessions said the opposite. Which bias?",
+          "options": ["Recency bias", "Sunk cost fallacy", "Base rate neglect", "Framing effect"],
+          "answer": 0,
+          "explain": "Recency bias — overvaluing the newest information at the expense of the larger body of evidence."
+        },
+        {
+          "type": "single",
+          "q": "According to the article, how should teams use awareness of cognitive biases?",
+          "options": [
+            "Keep a shared reference and check it when gut feelings seem off",
+            "Assign a 'bias officer' to each project",
+            "Run a bias-elimination workshop before every sprint",
+            "Avoid qualitative research to reduce bias exposure"
+          ],
+          "answer": 0,
+          "explain": "The article recommends a shared reference document you can check during decisions, onboarding, and intense projects — not eliminating research or creating new roles."
+        }
+      ]
+    }
+  ]
+}

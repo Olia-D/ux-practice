@@ -1,0 +1,120 @@
+{
+  "id": "animations",
+  "module": "design-principles",
+  "title": "Most UI Animations Shouldn't Exist",
+  "icon": "🎬",
+  "intro": "The problem isn't animation — it's **untriggered motion**. Auto-playing, looping, decorative animation hurts usability, accessibility, and comprehension.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "Animation in UI",
+      "learn": [
+        {
+          "title": "Auto-triggered motion is the problem",
+          "text": "The article's core argument: **untriggered motion** — anything that moves without an explicit user action — is almost always harmful.\n\nExamples of harmful auto-triggered animation:\n→ Auto-rotating carousels\n→ Autoplay videos\n→ Looping decorative GIFs\n→ Auto-blinking feature callouts\n→ Cursor-following elements\n→ Interrupting pop-ups\n→ Auto-prompting chatbots\n\nThe data backs this up:\n• **NN/g (Siemens):** Users completely missed a large auto-rotating promo panel\n• **Yale usability team:** First carousel slide got ~40% of interactions, second ~18%, then it dropped off\n• **92%** of users find auto-animations annoying (Bureau of Internet Accessibility)\n• An insurance company found **64%** of users struggled to find key info on a page with animated backgrounds",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "User-triggered (good)", "items": ["Click reveals content", "Hover shows tooltip", "Scroll triggers transition", "User starts a video"] },
+            "right": { "label": "Auto-triggered (bad)", "items": ["Carousel auto-rotates", "Video autoplays", "Chat widget pops up", "Feature callout blinks on loop"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "What percentage of carousel interactions go to just the first slide, according to Yale's usability team?",
+            "options": ["About 40%", "About 10%", "About 70%", "About 90%"],
+            "answer": 0,
+            "explain": "The first slide gets ~40% of interactions, the second ~18%, and it drops sharply from there. Most carousel content goes unseen."
+          }
+        },
+        {
+          "title": "Why it actually hurts",
+          "text": "**Cognitive load:** Auto-triggered animation is what Sweller's Cognitive Load Theory calls *extraneous load* — effort the design adds that the task doesn't require.\n\n**Banner blindness:** Users learn to ignore anything that behaves like an ad. Moving elements get dismissed, not engaged with.\n\n**Comprehension drops:** Tuch et al. (2009) found animated interfaces **reduced comprehension by 26%** compared to static designs. Lowe (1999) and Mayer & Moreno (2003) showed decorative animation in learning materials reduced retention.\n\n**NN/g scroll-animation study:** Users waited for text to animate in, grew impatient, and assumed the system was slow. One said they wanted to see the info \"without waiting for some cool movement.\"\n\nUsers don't call auto-animation \"delightful.\" They call it annoying, frustrating, or confusing.",
+          "try": {
+            "type": "single",
+            "q": "By how much did animated interfaces reduce comprehension in the Tuch et al. study?",
+            "options": ["26%", "10%", "50%", "5%"],
+            "answer": 0,
+            "explain": "Animated interfaces reduced comprehension by 26% vs. static designs — a significant hit to usability."
+          }
+        },
+        {
+          "title": "When animation actually helps",
+          "text": "Good animation meets all of these criteria:\n\n✓ **Triggered by a user action** (not automatic)\n✓ **Shows system state** that would otherwise be invisible\n✓ **Reinforces cause and effect**\n✓ **Ends quickly** — no loops or lingering\n✓ **The interaction still works without it**\n\n**Good examples:**\n→ Text cursor blinks only after user focuses the field\n→ Chrome's download icon shows progress, then animates into the tray to show where the file went\n→ A progress bar during a heavy computation\n\n**Timing (NN/g):**\n→ Visual feedback for interactive elements: within **100ms**\n→ Hover-revealed content: **300–500ms** delay to prevent accidental triggers\n\n**Before shipping any animation, ask:**\nDoes it clarify something? Does it respond to a user action? Does it reduce cognitive load? Does the interaction work without it? If any answer is no — remove it.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Animation that helps", "items": ["Progress bar during upload", "Download slides into tray", "Expand/collapse on click", "Loading skeleton on fetch"] },
+            "right": { "label": "Animation that hurts", "items": ["Menu items animate in on open", "Feature tooltip bounces every 3s", "Context menu slowly fades in", "Background parallax on scroll"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "What's the recommended timing for visual feedback on interactive elements?",
+            "options": ["Within 100ms", "Within 500ms", "Within 1 second", "Within 2 seconds"],
+            "answer": 0,
+            "explain": "NN/g recommends visual feedback within 100ms for interactive elements. Anything slower feels unresponsive."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What is the article's core distinction about animation?",
+          "options": [
+            "User-triggered animation can help; auto-triggered animation almost always hurts",
+            "All animation should be removed from enterprise software",
+            "Animation is fine as long as it's under 300ms",
+            "Only mobile apps should use animation"
+          ],
+          "answer": 0,
+          "explain": "The problem isn't animation itself — it's untriggered motion that moves without user action."
+        },
+        {
+          "type": "single",
+          "q": "In the NN/g Siemens study, what happened with the auto-rotating promo panel?",
+          "options": [
+            "Users completely missed it — one concluded the promotions didn't exist",
+            "Users found it helpful for discovering new features",
+            "It increased engagement by 15%",
+            "Users complained it was too fast"
+          ],
+          "answer": 0,
+          "explain": "The auto-rotating panel was invisible to users. One participant literally said there were no promotions while looking at them."
+        },
+        {
+          "type": "single",
+          "q": "What type of cognitive load does auto-triggered animation add, according to Sweller's theory?",
+          "options": [
+            "Extraneous load — effort the design adds that the task doesn't require",
+            "Intrinsic load — complexity inherent to the task",
+            "Germane load — effort that helps learning",
+            "Working memory load — temporary storage demands"
+          ],
+          "answer": 0,
+          "explain": "Auto-triggered animation is extraneous load — it doesn't help the task, it just adds noise."
+        },
+        {
+          "type": "single",
+          "q": "Which WCAG criterion specifically addresses auto-playing animations?",
+          "options": [
+            "SC 2.2.2 — requires a way to pause or stop moving content after 5 seconds",
+            "SC 1.4.3 — minimum color contrast ratio",
+            "SC 2.4.7 — visible focus indicator",
+            "SC 3.3.1 — error identification"
+          ],
+          "answer": 0,
+          "explain": "WCAG 2.2 SC 2.2.2 requires a pause/stop mechanism for moving, blinking, or auto-updating content lasting more than 5 seconds."
+        },
+        {
+          "type": "single",
+          "q": "Before shipping an animation, which question should you NOT need to answer yes to?",
+          "options": [
+            "Does it make the interface look more modern?",
+            "Does it clarify something?",
+            "Does it respond to a user action?",
+            "Does the interaction still work without it?"
+          ],
+          "answer": 0,
+          "explain": "Looking modern is not a valid reason for animation. It should clarify, respond to user action, reduce load, and be non-essential."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,135 @@
+{
+  "id": "mixed-methods",
+  "module": "testing-analysis",
+  "title": "Mixed Methods Studies That Mix",
+  "icon": "🔀",
+  "intro": "Most teams that say they run mixed methods are just running separate studies and putting them in one deck. Real mixed methods means the methods inform each other — planned from the start, integrated during analysis.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "Core Concepts",
+      "learn": [
+        {
+          "title": "Parallel tracks ≠ mixed methods",
+          "text": "Running a survey and a few interviews and combining them in one report is **parallel research**, not mixed methods.\n\n**Mixed methods** means:\n→ Methods answer the **same question** from different angles\n→ Methods **inform each other** — one shapes the next\n→ Integration is **planned before** data collection\n→ Findings **change because of how the methods interacted**\n\nThe test: if one method alone would have reached the same result, it wasn't mixed.\n\nSynthesis left until after data collection is too late. You end up stacking findings instead of letting one method challenge the other.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Parallel Research", "items": ["Separate studies, combined in a report", "Methods don't inform each other", "Synthesis happens at the end", "Each method answers its own question"] },
+            "right": { "label": "Real Mixed Methods", "items": ["Methods answer the same question", "One method shapes the next", "Integration planned upfront", "Findings change because methods interacted"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "You ran a survey and 5 interviews separately, then put both in one deck. Is this mixed methods?",
+            "options": [
+              "No — it's parallel research unless the methods informed each other",
+              "Yes — you used both qualitative and quantitative methods",
+              "Yes — any combination of methods is mixed methods",
+              "Only if you had more than 30 survey responses"
+            ],
+            "answer": 0,
+            "explain": "Mixed methods requires the methods to interact — one shaping the other. Running them separately and combining at the end is parallel research."
+          }
+        },
+        {
+          "title": "The four designs",
+          "text": "**1. Exploratory Sequential (qual → quant)**\nInterviews or field work first, then a survey to size what you found.\nExample: Patient interviews reveal different mental models of blood pressure graphs. A survey measures how common each model is.\n\n**2. Explanatory Sequential (quant → qual)**\nStart with a quantitative pattern, then use qual to explain it.\nExample: A new onboarding raised activation but lowered retention. Interviews revealed users felt rushed.\n\n**3. Concurrent Triangulation (qual + quant in parallel)**\nBoth at once, integrated during analysis by looking for alignment or conflict.\nExample: A usability test collects task success rates, eye-tracking, and post-task surveys — analyzed together.\n\n**4. Embedded Design (one primary + one supporting)**\nOne method drives, another is layered in.\nExample: A MaxDiff survey ranks features; open-text responses after each task explain the choices.",
+          "try": {
+            "type": "single",
+            "q": "A dashboard metric shows a 20% drop-off. You run follow-up interviews to understand why. Which design is this?",
+            "options": [
+              "Explanatory Sequential — quant pattern first, then qual to explain it",
+              "Exploratory Sequential — qual first, then quant",
+              "Concurrent Triangulation — both at the same time",
+              "Embedded Design — one supporting the other"
+            ],
+            "answer": 0,
+            "explain": "Starting with a quantitative finding and then using qualitative research to explain the 'why' is Explanatory Sequential."
+          }
+        },
+        {
+          "title": "When it fits and how to do it right",
+          "text": "**Good fit when:**\n→ You need both behavior AND intent\n→ You expect conflicting signals from different sources\n→ An expensive decision needs both scale and nuance\n→ Edge cases or regulated contexts need extra rigor\n\n**Poor fit when:**\n→ The question is narrow and one method already answers it\n→ Timeline can't support real integration\n→ Stakeholders can't engage with layered findings\n\n**Six-step process:**\n1. Start with the decision, not the methods\n2. Map each question to a method\n3. Align sample sizes upfront\n4. Plan integration points before collecting data\n5. Prevent cherry-picking — show conflicts explicitly\n6. Build time to reconcile contradictions\n\n**Key principle:** Don't average conflicting findings. Surface the tension. A feature users rate highly in surveys but struggle with in testing → they like the concept but not the execution.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Don't", "items": ["Average conflicting findings", "Leave synthesis until the end", "Cherry-pick supporting data", "Use mixed methods when one method suffices"] },
+            "right": { "label": "Do", "items": ["Surface contradictions explicitly", "Plan integration before collecting data", "Show where findings conflict and why", "Match method to the decision you need"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A feature scores high in a survey but frustrates users in interviews. What should you do?",
+            "options": [
+              "Surface the tension: users like the concept but struggle with the execution",
+              "Average the results — it's probably fine",
+              "Trust the survey because it has a larger sample",
+              "Trust the interviews because they're more detailed"
+            ],
+            "answer": 0,
+            "explain": "Conflicting findings are a signal, not a failure. Users may like the idea but struggle with the implementation — that points to a redesign, not removal."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What's the key difference between parallel research and mixed methods?",
+          "options": [
+            "In mixed methods, the methods inform each other and are integrated from the start",
+            "Mixed methods always uses more participants",
+            "Parallel research is qualitative, mixed methods is quantitative",
+            "Mixed methods takes longer to run"
+          ],
+          "answer": 0,
+          "explain": "Mixed methods means integration is planned upfront and methods shape each other. Parallel research runs methods separately and combines at the end."
+        },
+        {
+          "type": "single",
+          "q": "You want to understand why users are dropping off a specific page. Analytics show the pattern but not the cause. Which mixed methods design fits?",
+          "options": [
+            "Explanatory Sequential — start with quant, then qual to explain",
+            "Exploratory Sequential — start with qual, then quant to size it",
+            "Concurrent Triangulation — both at the same time",
+            "Embedded Design — one method inside another"
+          ],
+          "answer": 0,
+          "explain": "You already have a quantitative pattern (drop-off) and need qualitative work to explain why. That's Explanatory Sequential."
+        },
+        {
+          "type": "single",
+          "q": "When should you NOT use mixed methods?",
+          "options": [
+            "When the question is narrow enough that one method already answers it",
+            "When the decision is expensive",
+            "When you expect conflicting signals",
+            "When you need both behavior and intent"
+          ],
+          "answer": 0,
+          "explain": "If one method answers the question cleanly, adding another just adds complexity without insight. Mixed methods is for questions that genuinely need multiple angles."
+        },
+        {
+          "type": "single",
+          "q": "What should you do with contradictory findings from different methods?",
+          "options": [
+            "Surface the contradiction and investigate what it means for the decision",
+            "Trust whichever method had the larger sample size",
+            "Average the results for a balanced view",
+            "Discard the weaker finding"
+          ],
+          "answer": 0,
+          "explain": "Contradictions are valuable signals. A feature users love in concept but struggle with in practice points to an execution problem, not a data problem."
+        },
+        {
+          "type": "single",
+          "q": "The self-check for real mixed methods includes 5 criteria. Which of these is one of them?",
+          "options": [
+            "Findings changed because of how the methods interacted",
+            "At least 100 participants were used across methods",
+            "Both methods used the same data collection tool",
+            "Results were presented in a single slide deck"
+          ],
+          "answer": 0,
+          "explain": "If one method alone would have reached the same result, the study wasn't truly mixed. The methods should produce different — and richer — findings together."
+        }
+      ]
+    }
+  ]
+}

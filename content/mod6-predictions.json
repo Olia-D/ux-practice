@@ -1,0 +1,140 @@
+{
+  "id": "predictions",
+  "module": "career",
+  "title": "2026 Predictions for UX",
+  "icon": "🔮",
+  "intro": "The divide isn't between companies that use AI and those that don't. It's between those that make UX decisions from systems and evidence, and those that run on gut feel and politics.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "Core Concepts",
+      "learn": [
+        {
+          "title": "System-driven vs. vibes-driven orgs",
+          "text": "The defining split in UX maturity isn't budget or headcount. It's **how decisions get made**.\n\n**System-driven orgs** use repeatable processes:\n→ Research informs the roadmap (not validates it after)\n→ Design decisions reference evidence and best practices\n→ Quality is measured by user outcomes, not stakeholder approval\n→ Standards exist and are followed\n\n**Vibes-driven orgs** rely on:\n→ The loudest voice in the room\n→ \"I think users would want...\"\n→ Copy what competitors are doing\n→ Whatever the CEO saw at a conference\n\nMost orgs are a mix — but the direction they're trending matters more than where they are today.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "System-driven", "items": ["Evidence-based decisions", "Repeatable research process", "Outcomes measured by user data", "Standards documented and followed"] },
+            "right": { "label": "Vibes-driven", "items": ["HiPPO decisions", "Ad-hoc research (if any)", "Success = stakeholder approval", "\"Best practices\" = whatever feels right"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A team skips research because \"the CEO already decided the direction.\" What type of org is this?",
+            "options": [
+              "Vibes-driven — decisions come from authority, not evidence",
+              "System-driven — the CEO is part of the system",
+              "Efficient — research would slow them down",
+              "Mature — they trust leadership"
+            ],
+            "answer": 0,
+            "explain": "When decisions come from authority and gut feel rather than evidence, that's vibes-driven, regardless of how senior the decision-maker is."
+          }
+        },
+        {
+          "title": "AI becomes useful (not magical)",
+          "text": "The hype cycle around AI in UX is settling into reality:\n\n**What AI is actually good for:**\n→ Speeding up analysis of qualitative data\n→ Surfacing patterns across large datasets\n→ Generating first-draft prototypes to react to\n→ Automating routine tagging and categorization\n\n**What AI still can't do:**\n→ Replace watching a real user struggle\n→ Generate surprise — the most valuable research outcome\n→ Understand context and culture\n→ Know when a best practice doesn't apply\n\nAI is a **tool**, not a replacement for UX judgment. Teams that use it to speed up research will outperform those that use it to skip research.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "AI as tool (good)", "items": ["Speeds up transcription", "Helps spot patterns", "Generates starting points", "Augments researcher judgment"] },
+            "right": { "label": "AI as replacement (bad)", "items": ["\"Synthetic users\"", "Skipping real research", "Auto-generated insights", "Removing humans from the loop"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "Your team wants to use AI to replace moderated usability testing. What's the biggest risk?",
+            "options": [
+              "AI can't generate surprise — the most valuable research outcome",
+              "AI is too expensive for research",
+              "AI gives biased results",
+              "AI can't create video recordings"
+            ],
+            "answer": 0,
+            "explain": "The value of real research is discovering things you didn't expect. AI can only work with patterns it's seen before."
+          }
+        },
+        {
+          "title": "Where UX careers are heading",
+          "text": "Key trends shaping UX careers:\n\n**One senior > many juniors.** Companies are favoring one experienced UX person who can own strategy over several juniors who need direction. The hiring market rewards depth.\n\n**Qualitative research comes back.** The quant-heavy era is recalibrating. Teams are rediscovering that behavioral insights from watching real users can't be replaced by dashboards.\n\n**The heuristics still work.** Nielsen's 10 usability heuristics apply to AR, VR, and AI interfaces just as they do to web forms. New tech succeeds in spite of its usability, not because of it.\n\n**Micro-tools rise.** UX practitioners build their own lightweight tools for internal workflows — not products to sell, but scripts and utilities that solve real daily friction.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Fading", "items": ["Hiring many juniors", "Pure quant / analytics", "\"Move fast, skip research\"", "AI replaces researchers"] },
+            "right": { "label": "Rising", "items": ["One senior who owns strategy", "Qualitative comeback", "Evidence-based speed", "AI augments researchers"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A startup is deciding between hiring 3 junior UX researchers or 1 senior. Based on current trends, which is the better investment?",
+            "options": [
+              "1 senior who can own strategy and mentor",
+              "3 juniors for more research coverage",
+              "It depends on the budget",
+              "Neither — use AI instead"
+            ],
+            "answer": 0,
+            "explain": "The trend is toward fewer, more experienced researchers who can own strategy, not just execute studies."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What defines a 'system-driven' UX organization?",
+          "options": [
+            "Decisions are based on evidence and repeatable processes",
+            "They use the latest design tools",
+            "They have a large UX team",
+            "They follow what competitors do"
+          ],
+          "answer": 0,
+          "explain": "System-driven means decisions come from evidence and repeatable processes, not gut feel or authority."
+        },
+        {
+          "type": "single",
+          "q": "What is the most valuable outcome of real user research that AI cannot replicate?",
+          "options": [
+            "Surprise — discovering things you didn't expect",
+            "Speed — getting results faster",
+            "Scale — testing with more users",
+            "Cost — reducing research budgets"
+          ],
+          "answer": 0,
+          "explain": "AI works with existing patterns. The most valuable research findings are surprises that change your understanding."
+        },
+        {
+          "type": "single",
+          "q": "What hiring trend is the author predicting for UX?",
+          "options": [
+            "Companies prefer one senior researcher over several juniors",
+            "Companies are hiring more juniors than ever",
+            "AI is replacing all UX roles",
+            "UX researchers are becoming PMs"
+          ],
+          "answer": 0,
+          "explain": "The trend is toward fewer, more experienced UX professionals who can own strategy and deliver depth."
+        },
+        {
+          "type": "single",
+          "q": "In a 'vibes-driven' org, how are UX decisions typically made?",
+          "options": [
+            "By the loudest voice, gut feel, or copying competitors",
+            "By structured research processes",
+            "By data analysis teams",
+            "By democratic team voting"
+          ],
+          "answer": 0,
+          "explain": "Vibes-driven orgs rely on authority, gut instinct, and competitive mimicry rather than evidence."
+        },
+        {
+          "type": "single",
+          "q": "Nielsen's 10 usability heuristics are predicted to:",
+          "options": [
+            "Stay relevant even for AR, VR, and AI interfaces",
+            "Become obsolete with new technology",
+            "Be replaced by AI-generated guidelines",
+            "Only apply to web and mobile"
+          ],
+          "answer": 0,
+          "explain": "The heuristics are fundamental enough to apply to any interface paradigm. New tech often succeeds in spite of its usability."
+        }
+      ]
+    }
+  ]
+}

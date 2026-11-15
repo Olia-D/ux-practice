@@ -1,0 +1,135 @@
+{
+  "id": "dashboard",
+  "module": "business-impact",
+  "title": "Why Your Data Dashboard Stinks",
+  "icon": "📉",
+  "intro": "A dashboard can be accurate and visually clean and still lead users to wrong conclusions. The chart being correct isn't enough — the takeaway has to be correct too.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "Decisions-First Dashboard Design",
+      "learn": [
+        {
+          "title": "Five ways dashboards mislead",
+          "text": "Tufte's principles (data-ink ratio, avoid chartjunk) address how a chart is **presented** — not how people **perceive** it.\n\n1. **Misleading continuity** — Lines connect unrelated snapshots, implying a trend that doesn't exist.\n\n2. **Accidental grouping** — Proximity and shared color make users infer relationships between unrelated metrics.\n\n3. **Color assumptions** — Users read red/green/yellow as bad/good/average. Colorblindness and cultural differences make it worse. Color should never be the only signal.\n\n4. **Memory overload** — Toggles and tabs force users to remember values across screens instead of comparing directly. (Nielsen: recognition rather than recall.)\n\n5. **Anchoring and framing** — The first metric shown becomes the benchmark. 'Risk' vs. 'Stability' changes emotional response to the same number.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Looks correct", "items": ["Clean Tufte-style chart", "Accurate data", "Modern color palette", "Responsive layout"] },
+            "right": { "label": "Still misleads", "items": ["Users infer wrong trend", "Unrelated metrics look grouped", "Color is only differentiator", "First number anchors everything"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A dashboard shows revenue and headcount on the same line chart with dual Y-axes. Both go up. What will users likely conclude?",
+            "options": [
+              "That revenue and headcount are related — even if they're not",
+              "That revenue is more important because it's on the left",
+              "Nothing — dual Y-axes are clear",
+              "That both metrics are performing well"
+            ],
+            "answer": 0,
+            "explain": "Proximity + shared chart = accidental grouping. Users infer correlation from co-location, even when there is none."
+          }
+        },
+        {
+          "title": "Start from the decision, not the data",
+          "text": "Most dashboards start with: \"What data do we have?\" then display all of it.\n\nThe right question: **\"What decision does the user need to make?\"**\n\nThen show only the data that supports that decision.\n\nA sales manager looking at pipeline doesn't need 15 charts. They need to know:\n→ Am I on track to hit quota?\n→ Which deals need attention this week?\n→ What changed since last week?\n\nThree questions. Maybe four charts. Everything else is noise.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Data-first (typical)", "items": ["Show all available metrics", "15 charts on one page", "User must find what matters", "Dashboard = data dump"] },
+            "right": { "label": "Decision-first (better)", "items": ["What decision does user make?", "Show only supporting data", "User sees answer immediately", "Dashboard = decision tool"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A PM asks you to 'add user engagement metrics to the dashboard.' What do you ask first?",
+            "options": [
+              "What decision will these metrics help someone make?",
+              "Which chart type should we use?",
+              "How many metrics do we have?",
+              "Where should they go on the page?"
+            ],
+            "answer": 0,
+            "explain": "Start from the decision. If a metric doesn't support a specific decision, it's just noise on the screen."
+          }
+        },
+        {
+          "title": "Practical fixes",
+          "text": "**Show comparisons side by side** — not behind toggles or tabs. Users can't accurately compare values they have to remember.\n\n**Use inline labels and direct annotations** — not separate legends. Every legend lookup is a micro-interruption.\n\n**Add context** — benchmarks, thresholds, previous-period values. A number without context has no meaning. '12%' means nothing. '12%, up from 8%, target is 15%' tells a story.\n\n**State scope explicitly** — timeframe, population, and scope in titles, sublabels, and tooltips.\n\n**Pair color with shape, text, or position** — color alone fails for colorblindness and grayscale printing.\n\n**Give KPIs equal visual weight** — unless you intentionally want to anchor on one.",
+          "try": {
+            "type": "single",
+            "q": "A KPI card shows '94%' with no other context. What's missing?",
+            "options": [
+              "Comparison point — previous period, target, or benchmark",
+              "A chart showing the trend",
+              "The exact number of users",
+              "A color indicator"
+            ],
+            "answer": 0,
+            "explain": "'94%' means nothing alone. Is it up or down? Is 94% good or bad? A benchmark or previous value gives meaning."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What's the core problem with most dashboards?",
+          "options": [
+            "They can be accurate and clean but still lead users to wrong conclusions",
+            "They use too many colors",
+            "They show too little data",
+            "They aren't updated frequently enough"
+          ],
+          "answer": 0,
+          "explain": "If the chart is correct but the takeaway is wrong, the work is not finished. Perception matters as much as accuracy."
+        },
+        {
+          "type": "single",
+          "q": "What does 'anchoring' mean in dashboard design?",
+          "options": [
+            "The first metric shown becomes the benchmark users compare everything else against",
+            "Pinning a chart to the top of the page",
+            "Using a fixed Y-axis scale",
+            "Keeping the same layout across dashboard versions"
+          ],
+          "answer": 0,
+          "explain": "Anchoring bias: whatever users see first sets their frame of reference. This means the order and prominence of metrics matters."
+        },
+        {
+          "type": "single",
+          "q": "Why are toggles and tabs bad for data comparison?",
+          "options": [
+            "They force users to remember values across screens instead of comparing directly",
+            "They add too many clicks",
+            "They slow down page load",
+            "They're not accessible"
+          ],
+          "answer": 0,
+          "explain": "Recognition rather than recall (Nielsen). Humans are bad at remembering exact values. Show comparisons side by side."
+        },
+        {
+          "type": "single",
+          "q": "What question should you ask FIRST when designing a dashboard?",
+          "options": [
+            "What decision does the user need to make?",
+            "What data is available?",
+            "What chart types work best?",
+            "How many KPIs should we show?"
+          ],
+          "answer": 0,
+          "explain": "Decision-first design. The user's decision determines what data to show. Everything else is noise."
+        },
+        {
+          "type": "single",
+          "q": "Why should color never be the only differentiator in a chart?",
+          "options": [
+            "Colorblindness, cultural differences, and grayscale printing all break color-only encoding",
+            "Colors don't look good on all screens",
+            "Users prefer shapes over colors",
+            "Color is harder to implement in code"
+          ],
+          "answer": 0,
+          "explain": "~8% of men have some form of colorblindness. Pair color with shape, text, or position. Color reinforces — it shouldn't carry the signal alone."
+        }
+      ]
+    }
+  ]
+}

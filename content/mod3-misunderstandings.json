@@ -1,0 +1,140 @@
+{
+  "id": "misunderstandings",
+  "module": "testing-analysis",
+  "title": "Top 10 UX Misunderstandings",
+  "icon": "❌",
+  "intro": "These misunderstandings sound just enough like truth to pass a design review. Each one hides complexity instead of handling it — and shifts work onto the user.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "Core Concepts",
+      "learn": [
+        {
+          "title": "Navigation, clicks, and progressive disclosure",
+          "text": "**\"Search or AI can fix bad navigation.\"**\nSearch and chatbots are additional access paths, not replacements. Baymard found about half of ecommerce users prefer search, half use navigation. You need both.\n\n**\"Optimize for fewer clicks.\"**\nThe three-click rule is built on flimsy data. A click with **strong information scent** (users can predict where it leads) is cheap. A click into uncertainty is expensive — even if it's the first one.\n\nTurboTax has more clicks than a single tax form. It's a better experience.\n\n**\"Progressive disclosure simplifies everything.\"**\nHiding information doesn't simplify — it just moves complexity. Progressive disclosure works for secondary or advanced content. It breaks when you hide **decision-critical** information.\n\nNever hide: eligibility rules, consequences, fees, destructive-action warnings, or permission impacts.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Misunderstandings", "items": ["Search replaces navigation", "Fewer clicks = better UX", "Hiding info = simplifying", "Tooltips for critical info"] },
+            "right": { "label": "Reality", "items": ["Search supplements navigation — you need both", "Clear paths beat short paths", "Hidden complexity is still complexity", "Show decision-critical info at the moment of decision"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A designer hides pricing caveats in a tooltip to keep the page \"clean.\" What's wrong with this?",
+            "options": [
+              "Pricing information is decision-critical and should be visible at the moment of decision",
+              "Tooltips don't work on mobile so it's a technical issue",
+              "The page should show all information at once",
+              "Caveats should be on a separate page"
+            ],
+            "answer": 0,
+            "explain": "Decision-critical information should never be hidden behind progressive disclosure. Fees, caveats, and constraints need to be visible when users make the choice."
+          }
+        },
+        {
+          "title": "Forms, validation, and filtering",
+          "text": "**\"Simpler forms = fewer labels.\"**\nA form is simple when users complete it with low uncertainty, low memory load, and low recovery effort. Looking clean isn't the same thing.\n\nBaymard found inline labels cause users to **delete their own input** just to see the label again. Placeholder text makes it harder to remember, check, and fix entries.\n\n**\"Validation = blocking bad input.\"**\nValidation should help users **recover**, not just block them. Show the problem near its source, explain it in plain language, preserve user work, and confirm success when it helps.\n\nA generic \"Invalid input\" is not validation.\n\n**\"Filters are nice-to-haves.\"**\nFor many tasks, filters and sorting are the **primary** way users manage information. This applies beyond ecommerce — admin consoles, CRMs, audit logs, security events. Design filters around user mental models, not database structure.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Don't", "items": ["Use placeholder text as labels", "Show generic \"Invalid input\" errors", "Clear the form on failed submission", "Treat filters as optional"] },
+            "right": { "label": "Do", "items": ["Keep labels persistent and visible", "Show specific errors near the field", "Preserve all entered data on failure", "Design filters around how users think"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A payment form clears all fields when a credit card is declined. What principle does this violate?",
+            "options": [
+              "Validation should preserve user work and help them recover",
+              "Forms should never clear",
+              "Credit card validation should happen server-side",
+              "Payment forms should have fewer fields"
+            ],
+            "answer": 0,
+            "explain": "Clearing a form on failed submission is a major usability failure. Validation should respect the effort users already invested and help them fix just the problem."
+          }
+        },
+        {
+          "title": "Icons, hover, and sample size",
+          "text": "**\"Icons are self-explanatory.\"**\nTeams become fluent in their own product language. Users don't. Very few icons are broadly recognized — a trash can works, but \"reconcile variance\" does not.\n\n**Label all icons.** For usability, accessibility, and code compliance.\n\n**\"Fast hover menus feel responsive.\"**\nHair-trigger hover (no delay) feels jumpy. Baymard recommends a 300–500ms delay to reduce flicker and accidental triggers. And hover-only patterns exclude touch, keyboard, and assistive technology users.\n\nWhen in doubt, don't hide it under a hover.\n\n**\"Small samples = invalid findings.\"**\nSample size should follow the study goal. 5 users reveal common usability problems. 50+ users are needed for benchmarking, rare issues, or precise estimates.\n\nA researcher reporting a clear pattern from 12 users shouldn't be dismissed — but shouldn't claim statistical precision either.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Misunderstandings", "items": ["Our icons are intuitive", "Instant hover = responsive UI", "5 users is never enough", "12 users can't prove anything"] },
+            "right": { "label": "Reality", "items": ["Label all icons — team fluency ≠ user fluency", "300–500ms delay reduces errors", "5 users find common problems well", "Match sample to the claim you're making"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A stakeholder says: \"12 participants isn't enough to prove anything.\" How should you respond?",
+            "options": [
+              "12 users can reveal common patterns — match sample size to the study goal",
+              "They're right — you always need at least 30 participants",
+              "Small studies are always invalid",
+              "Show them the p-value from your analysis"
+            ],
+            "answer": 0,
+            "explain": "Small formative studies suit identifying common problems. Larger samples are for benchmarking and precise estimates. The key is matching sample to claim."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "According to Baymard research, about what proportion of ecommerce users prefer search over main navigation?",
+          "options": [
+            "About half — both are essential",
+            "Almost all users prefer search",
+            "Less than 10% use search",
+            "It depends entirely on the product category"
+          ],
+          "answer": 0,
+          "explain": "Baymard found roughly half preferred search and half used navigation. Both are essential access paths — one can't replace the other."
+        },
+        {
+          "type": "single",
+          "q": "What does \"information scent\" mean in navigation design?",
+          "options": [
+            "Users' ability to predict where a link will lead based on its label and context",
+            "How many clicks it takes to reach content",
+            "The visual prominence of navigation elements",
+            "The loading speed of each page in the path"
+          ],
+          "answer": 0,
+          "explain": "Information scent is about predictability. Users scan labels and context to decide if a path will lead where they want. Clear scent makes even longer paths feel easy."
+        },
+        {
+          "type": "single",
+          "q": "Why do inline (placeholder) labels cause usability problems?",
+          "options": [
+            "Users delete their input to see the label again, increasing memory load and errors",
+            "They make forms look too simple",
+            "Screen readers can't detect them",
+            "They only work in specific browsers"
+          ],
+          "answer": 0,
+          "explain": "Baymard found users delete their own input to re-read disappeared labels. Placeholder text increases memory load and makes it harder to check and fix entries."
+        },
+        {
+          "type": "single",
+          "q": "What delay does Baymard recommend for hover-triggered dropdown menus?",
+          "options": [
+            "300–500 milliseconds",
+            "No delay — instant response",
+            "1–2 seconds",
+            "50–100 milliseconds"
+          ],
+          "answer": 0,
+          "explain": "Baymard recommends 300–500ms to prevent flicker and accidental triggers. This is a well-documented issue that persisted in testing for over a decade."
+        },
+        {
+          "type": "single",
+          "q": "When should you use progressive disclosure?",
+          "options": [
+            "For secondary or advanced content — never for decision-critical information",
+            "Always — it makes every interface simpler",
+            "For all form fields to reduce visual clutter",
+            "For pricing and fee information to avoid overwhelming users"
+          ],
+          "answer": 0,
+          "explain": "Progressive disclosure works for rarely used or advanced features. Never hide eligibility rules, consequences, fees, warnings, or permission impacts."
+        }
+      ]
+    }
+  ]
+}

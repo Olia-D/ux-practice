@@ -1,0 +1,140 @@
+{
+  "id": "figma",
+  "module": "business-impact",
+  "title": "Users Don't Care About Your Figma File",
+  "icon": "🎨",
+  "intro": "Clean, modern interfaces fail every day because teams skip basic usability principles. Visual polish doesn't make a product usable. Clarity is not a luxury — it's the foundation of UX.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "Internal Quality vs. UX Quality",
+      "learn": [
+        {
+          "title": "Polish ≠ usability",
+          "text": "A product can look polished while failing users. Clean design isn't useful if users can't figure out how to use it.\n\nTeams spend weeks perfecting spacing, color systems, and component libraries. The Figma file looks immaculate. Then users:\n\n→ Can't find the button they need\n→ Don't understand what an icon means\n→ Submit a form and get no confirmation\n→ Hit 'Archive' when they meant 'Add'\n\n**The rule:** Make things that work first. Then make them look good.\n\nUX quality is judged by whether users can complete real tasks confidently, not by how good the interface looks.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Internal quality (Figma)", "items": ["Perfect spacing and alignment", "Consistent component library", "On-brand color system", "Clean, minimal layout"] },
+            "right": { "label": "UX quality (users)", "items": ["Can I find what I need?", "Do I understand what this does?", "Do I know what just happened?", "Can I complete my task?"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A design review praises a settings page for its 'clean, minimal layout.' Users in testing can't find the save button. What's the real quality?",
+            "options": [
+              "High internal quality, low UX quality — it looks good but doesn't work",
+              "Low quality overall — the design is bad",
+              "High quality — users will learn eventually",
+              "It needs more user education, not redesign"
+            ],
+            "answer": 0,
+            "explain": "The Figma file is great. The UX isn't. These are different things, and only one of them matters to users."
+          }
+        },
+        {
+          "title": "The five failure patterns",
+          "text": "**1. Lack of clarity** — Unlabeled icons, hidden requirements, controls that change names or locations. Password rules hidden behind an info icon that only appear after submission fails.\n\n**2. Small interaction problems** — Tiny click targets, buttons with no visual feedback, clickable-looking elements that aren't clickable.\n\n**3. Communication failures** — No confirmation after submissions. Vague error messages. A budget tool where users resubmitted because nothing said the first one went through.\n\n**4. Cognitive load** — Modals that hide context users need. Forms that force you to remember rules or re-enter data.\n\n**5. Dangerous neighbors** — Destructive actions placed next to common ones. 'Archive Project' next to 'Add Task,' both looking identical.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Do", "items": ["Label every icon", "Show requirements upfront", "Confirm every action", "Separate destructive from common actions"] },
+            "right": { "label": "Don't", "items": ["Rely on icon recognition", "Hide rules behind info icons", "Let submissions go silent", "Put 'Delete' next to 'Save'"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "A cloud storage app updates its layout. Users can't find the share button because the icon changed position and has no label. Which failure pattern?",
+            "options": [
+              "Lack of clarity — unlabeled icons that break muscle memory",
+              "Cognitive load — too many features",
+              "Communication failure — no feedback",
+              "Dangerous neighbors — misplaced actions"
+            ],
+            "answer": 0,
+            "explain": "Unlabeled icons + changed position = clarity failure. Users relied on location AND label, and both were taken away."
+          }
+        },
+        {
+          "title": "Measure task completion, not aesthetics",
+          "text": "The real test of UX quality: **Can users complete their actual tasks?**\n\n**Measure these:**\n→ Task completion rate\n→ Time on task\n→ Error rate\n→ Recovery from errors\n→ Confidence level (do they know it worked?)\n\n**Not these (as quality metrics):**\n→ Visual consistency score\n→ Component coverage\n→ Design system compliance\n→ Stakeholder approval in review\n\nDesign reviews catch visual problems. Usability tests catch task problems. You need both, but if you skip one, skip the design review.\n\n**The bottom line:** Clarity is not a luxury. It is the foundation of UX.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "UX quality metrics", "items": ["Task completion rate", "Time on task", "Error rate + recovery", "User confidence"] },
+            "right": { "label": "Internal quality metrics", "items": ["Visual consistency", "Component coverage", "Design system compliance", "Stakeholder sign-off"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "Your design system has 98% component coverage. Users complete the core task only 60% of the time. What's the priority?",
+            "options": [
+              "Fix the task completion problem — that's what users experience",
+              "Increase component coverage to 100%",
+              "Both are equally important",
+              "Run a design review to find visual inconsistencies"
+            ],
+            "answer": 0,
+            "explain": "Users don't care about your component library. They care about whether they can do what they came to do."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What does 'Users don't care about your Figma file' mean?",
+          "options": [
+            "Internal design quality (polish, consistency) is different from UX quality (can users do their tasks)",
+            "Figma is a bad tool",
+            "Users don't look at design files",
+            "Visual design doesn't matter at all"
+          ],
+          "answer": 0,
+          "explain": "The Figma file serves the team. UX quality serves the user. A perfect file doesn't guarantee a usable product."
+        },
+        {
+          "type": "single",
+          "q": "A form submission has no confirmation message. Users resubmit, creating duplicates. Which failure pattern?",
+          "options": [
+            "Communication failure — no feedback after action",
+            "Cognitive load — too complex",
+            "Dangerous neighbors — wrong button",
+            "Lack of clarity — unclear labels"
+          ],
+          "answer": 0,
+          "explain": "Users need to know what happened. Silent submissions cause resubmissions and erode trust."
+        },
+        {
+          "type": "single",
+          "q": "Why are 'dangerous neighbors' a UX problem?",
+          "options": [
+            "Placing destructive actions next to common ones leads to accidental data loss",
+            "They make the interface look cluttered",
+            "They violate design system guidelines",
+            "They slow down page performance"
+          ],
+          "answer": 0,
+          "explain": "'Archive Project' next to 'Add Task' — same size, same style, adjacent. One click and your project is gone."
+        },
+        {
+          "type": "single",
+          "q": "Which is a better measure of UX quality?",
+          "options": [
+            "Task completion rate",
+            "Design system compliance",
+            "Number of components used",
+            "Stakeholder approval in design review"
+          ],
+          "answer": 0,
+          "explain": "Task completion rate directly measures whether users can do what they came to do. Everything else is internal."
+        },
+        {
+          "type": "single",
+          "q": "What's the right order of priorities?",
+          "options": [
+            "Make it work, then make it look good",
+            "Make it look good, then make it work",
+            "Make it look good — usability follows naturally",
+            "They should happen simultaneously with equal weight"
+          ],
+          "answer": 0,
+          "explain": "Clarity is the foundation. Polish is the finish. A beautiful product that doesn't work is worse than an ugly one that does."
+        }
+      ]
+    }
+  ]
+}

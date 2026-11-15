@@ -1,0 +1,125 @@
+{
+  "id": "roi",
+  "module": "business-impact",
+  "title": "Calculating the ROI of UX",
+  "icon": "📈",
+  "intro": "Stakeholders see UX as a 'nice-to-have' until you put a number on it. This 5-step framework turns usability improvements into dollars saved or earned.",
+  "topics": [
+    {
+      "id": "core",
+      "title": "ROI Framework",
+      "learn": [
+        {
+          "title": "The 5-step ROI framework",
+          "text": "Step 1: **Identify the problem and benchmark it.** Measure the current state — support calls, error rates, time-on-task, conversion.\n\nStep 2: **Define goals and expected outcomes.** Set measurable targets tied to both UX and business results.\n\nStep 3: **Gather data to estimate ROI.** Quantify the Return (time saved, errors reduced, revenue gained) and the Investment (recruitment, team hours, dev cost).\n\nStep 4: **Calculate ROI.** Benefits minus cost, divided by cost. Convert to a dollar figure.\n\nStep 5: **Communicate results.** Lead with the problem, highlight key metrics, be transparent about assumptions.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Return (benefits)", "items": ["Time savings", "Error reduction", "Revenue increase", "Support call decrease"] },
+            "right": { "label": "Investment (costs)", "items": ["Research recruitment", "Team hours", "Development cost", "Maintenance + training"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "What's the ROI formula?",
+            "options": ["(Benefit − Cost) ÷ Cost", "Benefit ÷ Cost", "Cost ÷ Benefit", "Benefit − Cost"],
+            "answer": 0,
+            "explain": "ROI = (Benefit − Cost) ÷ Cost. Then multiply by 100 for a percentage."
+          }
+        },
+        {
+          "title": "A real example: support cost reduction",
+          "text": "A university redesigned their registration form.\n\n**Before:** 940 support hours per semester on registration issues.\n**After:** 280 hours — a drop of 660 hours.\n\nAt $26.44/hour, that's **~$17,450 saved per semester.**\nProject cost: ~$10,000.\n\nROI = ($17,450 − $10,000) ÷ $10,000 = **74.5%**\nOr: **$1.75 returned per dollar spent.**\n\nThis is a conservative, single-metric calculation. The real impact (fewer frustrated students, faster throughput) is even bigger.",
+          "try": {
+            "type": "single",
+            "q": "Why is this called a 'conservative' calculation?",
+            "options": [
+              "It only counts one benefit (support hours) and ignores indirect gains",
+              "It rounds the numbers up",
+              "It uses the most expensive hourly rate",
+              "It includes future projections"
+            ],
+            "answer": 0,
+            "explain": "Conservative means you count only the most measurable, direct benefit. The real impact on retention, satisfaction, and throughput is bigger."
+          }
+        },
+        {
+          "title": "Communicating ROI to stakeholders",
+          "text": "The calculation is useless if nobody acts on it.\n\n**Lead with the number.** \"This redesign returns $1.75 for every $1 spent.\"\n\n**Then tell the story.** Problem → what you did → what changed → what it's worth.\n\n**Be honest about assumptions.** Round down projections, use ranges, base estimates on historical data or benchmarks.\n\n**Triangulate.** Pair the ROI number with qualitative evidence — user quotes, task completion improvements, NPS shifts.\n\nDon't bury the number in a 40-slide deck. Put it on slide 2.",
+          "visual": {
+            "type": "compare",
+            "left": { "label": "Do", "items": ["Lead with the dollar figure", "Show conservative estimates", "Be transparent about assumptions", "Pair with qualitative evidence"] },
+            "right": { "label": "Don't", "items": ["Bury numbers in a long deck", "Overproject or cherry-pick", "Use vague language like 'improved UX'", "Present ROI without context"] }
+          },
+          "try": {
+            "type": "single",
+            "q": "You calculated a 200% ROI on a checkout redesign. What goes on slide 2?",
+            "options": [
+              "The ROI number with a one-line problem statement",
+              "Your research methodology",
+              "A timeline of the project",
+              "User personas"
+            ],
+            "answer": 0,
+            "explain": "Lead with the number. Stakeholders need the bottom line first, then the story behind it."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What is the first step in the ROI framework?",
+          "options": [
+            "Identify the problem and establish benchmarks",
+            "Calculate the project cost",
+            "Present findings to stakeholders",
+            "Define the research methodology"
+          ],
+          "answer": 0,
+          "explain": "You can't measure improvement without knowing where you started. Benchmark first."
+        },
+        {
+          "type": "single",
+          "q": "A redesign saves 500 support hours/year at $30/hour. The project cost $8,000. What's the ROI?",
+          "options": ["87.5%", "187.5%", "53%", "150%"],
+          "answer": 0,
+          "explain": "Benefit = 500 × $30 = $15,000. ROI = ($15,000 − $8,000) ÷ $8,000 = 87.5%. That's $1.88 back per dollar spent."
+        },
+        {
+          "type": "single",
+          "q": "Why should you use conservative estimates when calculating UX ROI?",
+          "options": [
+            "Overprojecting destroys credibility — if you promise 10x and deliver 3x, stakeholders lose trust",
+            "Conservative numbers are easier to calculate",
+            "Stakeholders prefer small numbers",
+            "UX improvements always underperform"
+          ],
+          "answer": 0,
+          "explain": "If your projections are too optimistic and reality falls short, future UX budget requests suffer. Underpromise, overdeliver."
+        },
+        {
+          "type": "single",
+          "q": "What should you pair with ROI numbers when presenting to stakeholders?",
+          "options": [
+            "Qualitative evidence — user quotes, task completion data, observed pain points",
+            "More ROI numbers from other projects",
+            "Competitor analysis",
+            "A full research methodology section"
+          ],
+          "answer": 0,
+          "explain": "Numbers tell the business story. Qualitative evidence makes it human and credible. Triangulate."
+        },
+        {
+          "type": "single",
+          "q": "Which of these counts as 'Investment' in the ROI formula?",
+          "options": [
+            "Team hours, recruitment, development, maintenance, and training costs",
+            "Only the development cost",
+            "Only the researcher's salary",
+            "The revenue the company lost during the project"
+          ],
+          "answer": 0,
+          "explain": "Investment includes everything: team time, research recruitment, dev work, maintenance, training, subscriptions. Leave nothing out."
+        }
+      ]
+    }
+  ]
+}
