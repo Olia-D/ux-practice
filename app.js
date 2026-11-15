@@ -202,8 +202,7 @@
           (hasContent ? '<ul class="steps">' +
             '<li class="step"><span class="lbl">Learn' + (learned.done ? ' <span class="note">· done</span>' : '') + '</span>' +
               '<a class="btn small' + (learned.done ? ' secondary' : '') + '" href="#/a/' + a.id + '/learn/0">' + (learned.done ? 'Review' : 'Start') + '</a></li>' +
-            '<li class="step"><span class="lbl">Quiz · 5 questions<br>' + scoreLabel(r.best, 5) +
-              (r.best != null ? '<span class="quiz-bar"><i style="width:' + Math.round(100 * r.best / 5) + '%"></i></span>' : '') + '</span>' +
+            '<li class="step"><span class="lbl">Quiz · 5 questions<br>' + scoreLabel(r.best, 5) + '</span>' +
               '<a class="btn small' + (quizDone ? ' secondary' : '') + '" href="#/a/' + a.id + '/test">' + (quizDone ? 'Retake' : 'Start') + '</a></li>' +
           '</ul>' : '<p class="note" style="margin-top:8px">Content coming soon</p>') +
           '<div class="source"><a href="' + esc(a.source) + '" target="_blank">Read original article ↗</a></div>' +
