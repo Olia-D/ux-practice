@@ -34,7 +34,7 @@
       "options": [
        "The survey only fires on completion",
        "The sample is too small",
-       "The scale has too few points",
+       "The rating scale has too few points to be sensitive",
        "Users rate politely"
       ],
       "answer": 0,
@@ -69,7 +69,7 @@
       "options": [
        "Ending collection at the target sample",
        "Deciding which users to exclude",
-       "Setting the significance threshold",
+       "Setting the significance threshold before launch",
        "Choosing when to repeat the survey"
       ],
       "answer": 0,
@@ -83,7 +83,7 @@
      "q": "Who is this guidance written for?",
      "options": [
       "Complex, lower-frequency enterprise workflows",
-      "High-traffic consumer apps",
+      "High-traffic consumer apps with frequent repeat visits",
       "Mobile-only products",
       "Early-stage startups"
      ],
@@ -97,7 +97,7 @@
       "Benchmarking and overall sentiment",
       "Task difficulty",
       "Error recovery",
-      "Feature-level feedback"
+      "Feature-level feedback on a specific screen"
      ],
      "answer": 0,
      "explain": "SUS, SUPR-Q or NPS, run on a schedule."
@@ -121,7 +121,7 @@
       "Same workflow, users and trigger",
       "Same sample size",
       "Same time of year",
-      "Same question wording only"
+      "Identical question wording, whatever else changed"
      ],
      "answer": 0,
      "explain": "Change any of the three and you're comparing different things."
@@ -131,7 +131,7 @@
      "q": "What should be written down before launch?",
      "options": [
       "Purpose, segment, target, other surveys, stop rule",
-      "The analysis plan and chart templates",
+      "The analysis plan, chart templates and reporting schedule",
       "The list of stakeholders to notify",
       "The expected score range"
      ],

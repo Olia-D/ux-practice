@@ -18,7 +18,7 @@
       "options": [
        "The minimum detectable effect",
        "The confidence level",
-       "The statistical power",
+       "The statistical power you choose",
        "The baseline rate"
       ],
       "answer": 0,
@@ -35,7 +35,7 @@
        "A conversation with the product team",
        "The statistical power calculation",
        "The baseline conversion data",
-       "Industry benchmarks for the sector"
+       "Industry benchmarks for the same sector"
       ],
       "answer": 0,
       "explain": "“How much better must B be for this to be worth shipping?”"
@@ -82,20 +82,20 @@
      "type": "single",
      "q": "Why is there no standard A/B sample size?",
      "options": [
-      "It depends on baseline, MDE, confidence and power",
+      "It depends on baseline, MDE",
       "Every tool calculates it differently",
       "Traffic varies too much between products",
       "Standards differ by industry"
      ],
      "answer": 0,
-     "explain": "Four inputs, each of which moves the number."
+     "explain": "Four inputs, each of which moves the number. Confidence and power."
     },
     {
      "type": "single",
      "q": "What does statistical power describe?",
      "options": [
       "The chance of detecting a real effect",
-      "The size of the observed difference",
+      "The size of the difference you observed",
       "The confidence in the result",
       "The variability of the data"
      ],
@@ -121,7 +121,7 @@
       "In terms of the decision it supports",
       "As a statistical requirement",
       "As the industry standard",
-      "Relative to the last test you ran"
+      "Relative to the last test the team ran"
      ],
      "answer": 0,
      "explain": "This many users, to tell that size of improvement from noise."
@@ -131,7 +131,7 @@
      "q": "Why are one-point lifts on low-traffic flows a problem?",
      "options": [
       "The required sample is enormous",
-      "They are never worth shipping",
+      "They are almost never worth shipping",
       "Tools can't measure them",
       "Confidence levels don't apply"
      ],

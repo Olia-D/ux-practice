@@ -1,0 +1,144 @@
+{
+ "id": "seven-patterns",
+ "module": "career",
+ "title": "7 Patterns That Derail Product Teams",
+ "icon": "🧯",
+ "intro": "Written for PMs, engineers and stakeholders working with UXers: teams think they're debating a design when they're debating the goal, the constraints and what counts as evidence.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "7 Patterns That Derail Product Teams",
+   "learn": [
+    {
+     "title": "The seven patterns",
+     "text": "**1.** A screen change treated as a decision — “redesign” isn't a goal\n**2.** Research as a vending machine — a Friday deadline doesn't recruit the right users\n**3.** Opinions versus evidence — label what's observed, inferred and unknown\n**4.** “Bias” heard as an insult — it's a predictable feature of thinking; ask which one\n**5.** Speed versus confidence — how much weight can this finding carry?\n**6.** The wrong slice of users — champions and power users aren't typical users\n**7.** Shared goals left unstated — agree the goal before judging the screen",
+     "try": {
+      "type": "single",
+      "q": "A stakeholder hears “that's a bias” as a personal criticism. What's the better framing?",
+      "options": [
+       "Biases are predictable",
+       "Everyone has biases, so it doesn't matter",
+       "Only researchers can identify bias",
+       "Bias only affects participants"
+      ],
+      "answer": 0,
+      "explain": "It's a feature of thinking, not an accusation. Which one is this?."
+     }
+    },
+    {
+     "title": "What the UXer's question is really doing",
+     "text": "“What are we trying to accomplish?” isn't pushback. It prevents the team from locking into a solution before agreeing on the goal, the constraints and what counts as evidence.\n\nMost of the seven patterns are the same conversation underneath: **what decision, what evidence, how sure.**",
+     "try": {
+      "type": "single",
+      "q": "What are most of the seven patterns really about?",
+      "options": [
+       "What decision, what evidence, how sure",
+       "Who owns the design",
+       "How much time the research is going to take",
+       "Which methods to use"
+      ],
+      "answer": 0,
+      "explain": "The same conversation in different disguises."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Looks like",
+       "items": [
+        "Pushback on the design",
+        "Slowing the team down",
+        "Perfectionism about recruiting"
+       ]
+      },
+      "right": {
+       "label": "Actually is",
+       "items": [
+        "Preventing premature lock-in",
+        "Agreeing the goal first",
+        "Protection against false confidence"
+       ]
+      }
+     }
+    },
+    {
+     "title": "How stakeholders can help",
+     "text": "**Describe problems in verbs and consequences:** “people abandon after the fee summary, which creates calls” — not “the fee page needs a redesign”.\n\n**Ask the UXer** what they directly observed, what they're inferring, and what evidence carries the most weight.\n\n**Treat recruiting concerns as protection** against false confidence, not as perfectionism.",
+     "try": {
+      "type": "single",
+      "q": "How should a stakeholder describe a problem?",
+      "options": [
+       "In verbs and consequences",
+       "As a proposed solution",
+       "With a priority score",
+       "By naming the screen affected"
+      ],
+      "answer": 0,
+      "explain": "“People abandon after the fee summary, which creates calls.”"
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Who is the article written for?",
+     "options": [
+      "PMs, engineers and stakeholders",
+      "UX researchers",
+      "Design managers and research leads",
+      "Executives"
+     ],
+     "answer": 0,
+     "explain": "It explains the UXer's questions from the other side."
+    },
+    {
+     "type": "single",
+     "q": "What is wrong with “research as a vending machine”?",
+     "options": [
+      "A deadline doesn't recruit the right users",
+      "Research costs more than expected",
+      "Researchers dislike short notice",
+      "The vending-machine metaphor implies low quality"
+     ],
+     "answer": 0,
+     "explain": "Timeline pressure is applied to the part that can't compress."
+    },
+    {
+     "type": "single",
+     "q": "What three labels help separate opinion from evidence?",
+     "options": [
+      "Observed, inferred, unknown",
+      "Certain, likely, possible",
+      "Qualitative, quantitative, mixed",
+      "Confirmed, pending, rejected"
+     ],
+     "answer": 0,
+     "explain": "It makes the basis of a claim explicit."
+    },
+    {
+     "type": "single",
+     "q": "Why are champion users a problem?",
+     "options": [
+      "They aren't typical users",
+      "They refuse to criticise the product",
+      "They're hard to recruit",
+      "They know the team personally"
+     ],
+     "answer": 0,
+     "explain": "Studying the wrong slice produces confident, wrong findings."
+    },
+    {
+     "type": "single",
+     "q": "What does “speed versus confidence” ask?",
+     "options": [
+      "How much weight can this finding carry?",
+      "How fast can we run the study?",
+      "Which method is quickest?",
+      "When will the results actually be ready?"
+     ],
+     "answer": 0,
+     "explain": "A fast study can still be useful if its limits are known."
+    }
+   ]
+  }
+ ]
+}

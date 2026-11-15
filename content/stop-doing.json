@@ -19,7 +19,7 @@
        "No — it's casual wording over an interruption",
        "Yes, if the tone matches the brand voice",
        "Yes, if users rate the copy positively",
-       "Only if the upsell can be dismissed easily"
+       "Only if the upsell can be dismissed in one click"
       ],
       "answer": 0,
       "explain": "Conversational UX is about how the interaction unfolds, not how chatty it sounds."
@@ -84,7 +84,7 @@
      "options": [
       "Indexes five arguments Calabro makes elsewhere",
       "Introduces five new research methods",
-      "Lists the five most common usability errors",
+      "Lists the five most common usability errors found",
       "Ranks UX practices by business impact"
      ],
      "answer": 0,
@@ -108,7 +108,7 @@
      "options": [
       "A convention needs prevalence across similar products",
       "Popular apps change their patterns too often",
-      "Users rarely use more than one app in a category",
+      "Users rarely use more than one app in the same category",
       "The app may be under a different design licence"
      ],
      "answer": 0,
@@ -121,7 +121,7 @@
       "Using institutional knowledge to end a discussion",
       "Running too many usability tests per quarter",
       "Writing research plans that are too detailed",
-      "Reporting confidence intervals to stakeholders"
+      "Reporting confidence intervals to senior stakeholders"
      ],
      "answer": 0,
      "explain": "The other three are things he recommends doing."

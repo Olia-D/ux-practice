@@ -1,0 +1,144 @@
+{
+ "id": "c-three-books",
+ "module": "career",
+ "title": "Three Sources, One Practice",
+ "icon": "📚",
+ "intro": "Checked against Erika Hall's *Just Enough Research* and Teresa Torres's *Continuous Discovery Habits*, this book has no conflicts.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Three Sources, One Practice",
+   "learn": [
+    {
+     "title": "Three layers",
+     "text": "**Hall — foundations.** Why research, how much, honest language, organisational research.\n**Torres — discovery cadence.** The product trio, weekly touchpoints, opportunity solution trees, assumption tests.\n**Calabro — execution.** Methods, rigor, biases, interaction evidence, proving impact.\n\nDifferent questions, compatible answers.",
+     "try": {
+      "type": "single",
+      "q": "Which source covers the weekly discovery cadence?",
+      "options": [
+       "Torres",
+       "Hall",
+       "Calabro",
+       "All three equally"
+      ],
+      "answer": 0,
+      "explain": "Product trio, weekly touchpoints, opportunity solution trees."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Different layers",
+       "items": [
+        "Hall: foundations",
+        "Torres: cadence",
+        "Calabro: execution"
+       ]
+      },
+      "right": {
+       "label": "Same direction",
+       "items": [
+        "Evidence over opinion",
+        "Small, frequent, honest work",
+        "Research tied to decisions"
+       ]
+      }
+     }
+    },
+    {
+     "title": "From Hall",
+     "text": "**Five usability qualities** (Nielsen): learnability, efficiency, memorability, error recovery, satisfaction. Most studies only test the first.\n\n**Never say “validate”.** It frames research as proving you're right. Say *evaluate* or *test*, and aim to be proven wrong.\n\n**Cheap tests first:** paper before interactive, colleagues before recruited participants.",
+     "try": {
+      "type": "single",
+      "q": "Why does Hall object to the word “validate”?",
+      "options": [
+       "It frames research as proving you're right",
+       "It is too technical for stakeholders",
+       "It implies statistical testing",
+       "It belongs to engineering, not research"
+      ],
+      "answer": 0,
+      "explain": "Say evaluate or test, and aim to be proven wrong."
+     }
+    },
+    {
+     "title": "Where they sharpen each other",
+     "text": "Hall's five usability qualities sharpen the usability-versus-concept-test argument: most studies only measure learnability.\n\nHall on “validate” pairs with the cognitive-biases article — the word invites confirmation bias before the study starts.\n\nTorres's cadence answers a question Calabro mostly doesn't: how often to talk to users when nothing is broken.",
+     "try": {
+      "type": "single",
+      "q": "Which question does Torres answer that Calabro mostly doesn't?",
+      "options": [
+       "How often to talk to users when nothing is broken",
+       "Which statistical test to use",
+       "How to run a usability test",
+       "How to calculate ROI"
+      ],
+      "answer": 0,
+      "explain": "Continuous discovery is a cadence question."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What was the conclusion of the cross-check?",
+     "options": [
+      "No conflicts between the three",
+      "Several direct contradictions",
+      "Hall and Torres disagree with each other",
+      "Calabro's methods are superseded"
+     ],
+     "answer": 0,
+     "explain": "They work at different layers."
+    },
+    {
+     "type": "single",
+     "q": "Which of the five usability qualities do most studies test?",
+     "options": [
+      "Learnability",
+      "Efficiency",
+      "Memorability",
+      "Error recovery"
+     ],
+     "answer": 0,
+     "explain": "First-use performance is the easiest to observe."
+    },
+    {
+     "type": "single",
+     "q": "What does Hall recommend testing before interactive prototypes?",
+     "options": [
+      "Paper",
+      "Wireframes",
+      "Production code",
+      "Competitor products"
+     ],
+     "answer": 0,
+     "explain": "Cheap tests first."
+    },
+    {
+     "type": "single",
+     "q": "What is an opportunity solution tree?",
+     "options": [
+      "Torres's structure for connecting outcomes to solutions",
+      "Hall's framework for research planning",
+      "A prioritisation matrix for findings",
+      "A method for mapping user journeys"
+     ],
+     "answer": 0,
+     "explain": "Part of the continuous discovery cadence."
+    },
+    {
+     "type": "single",
+     "q": "What does Calabro's layer contribute?",
+     "options": [
+      "Execution: methods, rigor, biases, impact",
+      "The business case for research",
+      "Organisational change management",
+      "Product strategy frameworks"
+     ],
+     "answer": 0,
+     "explain": "Tactical execution, built on the other two."
+    }
+   ]
+  }
+ ]
+}

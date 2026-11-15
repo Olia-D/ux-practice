@@ -1,0 +1,144 @@
+{
+ "id": "career",
+ "module": "career",
+ "title": "UX Career Paths Are Weird",
+ "icon": "🛤️",
+ "intro": "A straightforward UX career path is a myth. The most experienced practitioners got there through unexpected combinations of roles and industries.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "UX Career Paths Are Weird",
+   "learn": [
+    {
+     "title": "A scribbly line",
+     "text": "Calabro's own path: **ARRIS** (behavioural UX design at a telecom company, before “UX” was a job title) → **Minitab** (nine years beside PhD statisticians) → **Siemens Software** (building ResearchOps at enterprise scale) → consulting and generative research → **FINRA** (research inside a large, complex regulated environment).\n\n“Not A to B, but a scribbly line with a series of short stints at drastically different organisations.”",
+     "try": {
+      "type": "single",
+      "q": "What did nine years beside PhD statisticians give him?",
+      "options": [
+       "Quantitative reasoning no UX course teaches",
+       "A formal statistics qualification from a university",
+       "A faster route to management",
+       "A specialism in survey design"
+      ],
+      "answer": 0,
+      "explain": "It's what made him a mixed-methods researcher."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "The expected path",
+       "items": [
+        "One discipline, deepening",
+        "Steady title progression",
+        "A clean narrative"
+       ]
+      },
+      "right": {
+       "label": "What actually happens",
+       "items": [
+        "Different industries",
+        "Short stints",
+        "Skills that combine oddly"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The pressure to look linear",
+     "text": "The pressure to have a **clean career narrative** works against developing the breadth that makes researchers effective.\n\nA zig-zag isn't a failure to commit. It's how someone ends up able to run a usability test, size the result, build the ops to repeat it, and explain the money to an executive.",
+     "try": {
+      "type": "single",
+      "q": "What does the pressure for a clean narrative cost?",
+      "options": [
+       "The breadth that makes researchers effective",
+       "Opportunities for promotion",
+       "Credibility with recruiters",
+       "Time that could be spent developing one deep specialism"
+      ],
+      "answer": 0,
+      "explain": "Linear stories reward depth in one place and punish range."
+     }
+    },
+    {
+     "title": "Why he published it",
+     "text": "“Sharing a messy path helps to take some of the pressure off the rest of you.”\n\nThe point isn't that everyone should job-hop. It's that the combination you end up with matters more than the shape of the line — and that unexpected depth (statistics, operations, a regulated industry) is often what makes someone valuable later.",
+     "try": {
+      "type": "single",
+      "q": "What does the article say matters more than the shape of the path?",
+      "options": [
+       "The combination of skills you end up with",
+       "The seniority you reach",
+       "The industries you avoid",
+       "How quickly you specialise in a single research method"
+      ],
+      "answer": 0,
+      "explain": "Unexpected depth compounds."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Where did his career start?",
+     "options": [
+      "ARRIS, a telecom company",
+      "Minitab",
+      "Siemens Software, building research operations",
+      "A design agency"
+     ],
+     "answer": 0,
+     "explain": "Before UX was commonly used as a job title."
+    },
+    {
+     "type": "single",
+     "q": "What did he build at Siemens?",
+     "options": [
+      "ResearchOps at enterprise scale",
+      "A design system",
+      "A quantitative research team working with statisticians",
+      "An accessibility programme"
+     ],
+     "answer": 0,
+     "explain": "Operations infrastructure for a large organisation."
+    },
+    {
+     "type": "single",
+     "q": "What is the article's view of short stints?",
+     "options": [
+      "They can build valuable breadth",
+      "They damage long-term prospects",
+      "They should be hidden on a CV",
+      "They suit juniors only"
+     ],
+     "answer": 0,
+     "explain": "Drastically different organisations taught different things."
+    },
+    {
+     "type": "single",
+     "q": "What is “unexpected depth” in this context?",
+     "options": [
+      "Expertise picked up outside the UX syllabus",
+      "A second degree",
+      "A specialism within research",
+      "Deep knowledge of one product over many years"
+     ],
+     "answer": 0,
+     "explain": "Statistics, operations, regulated environments."
+    },
+    {
+     "type": "single",
+     "q": "Why did he share his own path?",
+     "options": [
+      "To take pressure off people with messy paths",
+      "To argue for frequent job changes",
+      "To document how UX job titles have changed over time",
+      "To justify his current specialism"
+     ],
+     "answer": 0,
+     "explain": "The article is reassurance, not advice to move."
+    }
+   ]
+  }
+ ]
+}

@@ -18,7 +18,7 @@
       "options": [
        "Teams argue the label doesn't apply to them",
        "Names are hard to translate",
-       "Users learn to recognise the names",
+       "Users eventually learn to recognise the names",
        "Regulators only ban named patterns"
       ],
       "answer": 0,
@@ -70,7 +70,7 @@
       "q": "Why does the article call accessibility “the canary in the coal mine”?",
       "options": [
        "Patterns that remove control break there first",
-       "Accessibility audits catch them automatically",
+       "Automated accessibility audits catch them reliably",
        "Regulators test accessibility before ethics",
        "Disabled users complain more often"
       ],
@@ -87,7 +87,7 @@
       "A principle grounded in user control",
       "A stricter legal definition",
       "An industry certification",
-      "A public register of offenders"
+      "A public register of repeat offenders"
      ],
      "answer": 0,
      "explain": "Can they stop, undo, refuse?"
@@ -98,7 +98,7 @@
      "options": [
       "Easy to enter, very hard to leave",
       "A pre-checked consent box",
-      "An offer that expires on refresh",
+      "An offer whose timer expires on refresh",
       "A button labelled to mislead"
      ],
      "answer": 0,
@@ -111,7 +111,7 @@
       "Making the decline option insulting to choose",
       "Asking for confirmation twice",
       "Hiding the confirm button",
-      "Shaming users who abandon a cart by email"
+      "Emailing users who abandon a cart to shame them"
      ],
      "answer": 0,
      "explain": "“No thanks, I hate saving money.”"
@@ -120,13 +120,13 @@
      "type": "single",
      "q": "What did naming achieve, according to Calabro?",
      "options": [
-      "It helped at first, by creating shared vocabulary",
+      "It helped at first",
       "It had no effect at all",
       "It reduced dark patterns substantially",
       "It led directly to regulation"
      ],
      "answer": 0,
-     "explain": "The problem is that it stopped there."
+     "explain": "The problem is that it stopped there. By creating shared vocabulary."
     },
     {
      "type": "single",

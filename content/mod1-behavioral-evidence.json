@@ -132,13 +132,13 @@
      "type": "single",
      "q": "Post-study survey says onboarding was \"clear and helpful.\" Activation data shows 60% of users never complete setup. What should you trust?",
      "options": [
-      "Activation data — behavioral evidence trumps self-report",
+      "Activation data",
       "The survey — users know their own experience",
       "Neither — the sample size is too small",
       "The survey — it's more recent data"
      ],
      "answer": 0,
-     "explain": "Behavioral data (activation rate) wins when it conflicts with self-report. Always."
+     "explain": "Behavioral data (activation rate) wins when it conflicts with self-report. Always. Behavioral evidence trumps self-report."
     }
    ]
   }

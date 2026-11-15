@@ -18,7 +18,7 @@
       "options": [
        "There's no chance to fix it after launch",
        "Surveys are harder to write than tasks",
-       "Respondents can't ask for clarification",
+       "Respondents can't ask anyone for clarification",
        "Statistical tests require a pilot"
       ],
       "answer": 0,
@@ -72,7 +72,7 @@
        "It turns a number into something actionable",
        "It improves the response rate",
        "It validates the rating scale",
-       "It allows statistical comparison"
+       "It allows statistical comparison between groups"
       ],
       "answer": 0,
       "explain": "The score locates the problem; the comment explains it."
@@ -99,7 +99,7 @@
       "Jargon and differing interpretations",
       "A broken skip logic",
       "Too many questions",
-      "An unrepresentative sample"
+      "An unrepresentative sample of respondents"
      ],
      "answer": 0,
      "explain": "Both would have ruined the data at launch."
@@ -111,7 +111,7 @@
       "When the segment will change a design decision",
       "In every survey, for analysis",
       "Only for B2B audiences",
-      "When the sample is large enough to split"
+      "When the sample is large enough to split by segment"
      ],
      "answer": 0,
      "explain": "Segment, don't stereotype."

@@ -51,13 +51,13 @@
       "type": "single",
       "q": "Why does this question work better than challenging the method?",
       "options": [
-       "It makes you a collaborator, not a critic",
+       "It makes you a collaborator",
        "It takes less of the stakeholder's time",
        "It avoids committing to a timeline",
        "It gives you grounds to decline the work"
       ],
       "answer": 0,
-      "explain": "And it moves the conversation from method to goal."
+      "explain": "And it moves the conversation from method to goal. Not a critic."
      }
     },
     {

@@ -141,7 +141,7 @@
       var totalDone = 0, totalAll = 0;
       var html = '<h1>UX Practice</h1>';
       html += '<p class="sub">Key concepts from Trevor Calabro\'s UX Research in the Wild. Learn the ideas, then test yourself.</p>';
-      html += '<div class="schedule-hint"><b>Suggested pace:</b> 1 article per day, 4 days a week. Read the cards, take the quiz. About 6 weeks total.</div>';
+      html += '<div class="schedule-hint"><b>Suggested pace:</b> 1 article per day, 4 days a week. Read the cards, take the quiz. 99 articles across 12 modules.</div>';
 
       m.modules.forEach(function (mod, mi) {
         var p = moduleProgress(mod);
@@ -205,7 +205,8 @@
             '<li class="step"><span class="lbl">Quiz · 5 questions<br>' + scoreLabel(r.best, 5) + '</span>' +
               '<a class="btn small' + (quizDone ? ' secondary' : '') + '" href="#/a/' + a.id + '/test">' + (quizDone ? 'Retake' : 'Start') + '</a></li>' +
           '</ul>' : '<p class="note" style="margin-top:8px">Content coming soon</p>') +
-          '<div class="source"><a href="' + esc(a.source) + '" target="_blank">Read original article ↗</a></div>' +
+          (a.source ? '<div class="source"><a href="' + esc(a.source) + '" target="_blank">Read original article ↗</a></div>'
+                    : a.sourceNote ? '<div class="source">Source: ' + esc(a.sourceNote) + '</div>' : '') +
           '</div>';
       });
       setView(html);

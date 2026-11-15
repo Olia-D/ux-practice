@@ -1,0 +1,144 @@
+{
+ "id": "service-failure",
+ "module": "business",
+ "title": "When the Whole Service Fails",
+ "icon": "🧊",
+ "intro": "A fridge repair turned into 46 days of looping chatbots, cancelled appointments and broken escalation.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "When the Whole Service Fails",
+   "learn": [
+    {
+     "title": "46 days, by the numbers",
+     "text": "• ~**8.5 hours** on the phone with customer service\n• ~**64 trips** up and down the basement stairs with bags of ice packs\n• ~**$600** of groceries thrown away\n• ~**$1,000** in takeaway and unexpected restaurant meals\n• **4** technician visits\n• **3** Post-its of 1-800 numbers, extensions and dead-end routes\n\nOutcome: “I will never shop at Sears again.”",
+     "try": {
+      "type": "single",
+      "q": "What is the outcome that matters commercially?",
+      "options": [
+       "A customer lost for good",
+       "The cost of the repair visits",
+       "The time spent on the phone",
+       "The negative review posted"
+      ],
+      "answer": 0,
+      "explain": "Everything else is recoverable; that isn't."
+     }
+    },
+    {
+     "title": "The failure wasn't the interface",
+     "text": "No screen caused this. The service **couldn't handle an exception** — an out-of-stock part, a delay, a customer who had already called five times.\n\nChatbots looped. Escalation paths dead-ended. Each call started from zero.\n\nAs UX professionals, we talk a lot about empathy. **Empathy without the infrastructure to support it means nothing.**",
+     "try": {
+      "type": "single",
+      "q": "What did the service fail to handle?",
+      "options": [
+       "Exceptions",
+       "High call volume",
+       "Technical complexity",
+       "Out-of-hours contact"
+      ],
+      "answer": 0,
+      "explain": "Delays, missing parts and repeat contacts are normal, not edge cases."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Designed for",
+       "items": [
+        "The repair that goes to plan",
+        "First contact",
+        "One channel at a time"
+       ]
+      },
+      "right": {
+       "label": "What actually happens",
+       "items": [
+        "Parts out of stock",
+        "The fifth call about the same issue",
+        "Handovers between channels"
+       ]
+      }
+     }
+    },
+    {
+     "title": "What this means for design",
+     "text": "**Design for exceptions:** out-of-stock parts, delays, rescheduling, a customer who has already called five times.\n\n**Give people a path to a human who can actually act** — not one who can only read the same script.\n\nService blueprints expose exactly these failure points, which is why they beat an imagined journey map.",
+     "try": {
+      "type": "single",
+      "q": "Which artefact would have exposed these failure points?",
+      "options": [
+       "A service blueprint",
+       "A journey map",
+       "A persona set",
+       "A usability test report"
+      ],
+      "answer": 0,
+      "explain": "It documents backstage systems, owners and hand-offs — where this broke."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "How long did the ordeal last?",
+     "options": [
+      "46 days",
+      "16 days",
+      "4 months",
+      "A week"
+     ],
+     "answer": 0,
+     "explain": "From the day the fridge stopped cooling."
+    },
+    {
+     "type": "single",
+     "q": "Why does Calabro call this a UX story?",
+     "options": [
+      "The experience is the whole service, not the screen",
+      "The chatbot had poor usability",
+      "The website was hard to navigate",
+      "The scheduling tool failed"
+     ],
+     "answer": 0,
+     "explain": "He usually writes about research; this was deliberate."
+    },
+    {
+     "type": "single",
+     "q": "What does empathy need to be worth anything?",
+     "options": [
+      "Infrastructure that supports acting on it",
+      "Training for frontline staff",
+      "A documented tone of voice",
+      "Executive sponsorship"
+     ],
+     "answer": 0,
+     "explain": "Otherwise it's a sentiment with no mechanism."
+    },
+    {
+     "type": "single",
+     "q": "What should an escalation path lead to?",
+     "options": [
+      "Someone who can act",
+      "A supervisor",
+      "A written case record",
+      "A callback within 24 hours"
+     ],
+     "answer": 0,
+     "explain": "A human reading the same script is still a dead end."
+    },
+    {
+     "type": "single",
+     "q": "Which of these is an exception a service should design for?",
+     "options": [
+      "A customer calling for the fifth time",
+      "A first-time enquiry",
+      "A standard warranty claim",
+      "An in-stock replacement part"
+     ],
+     "answer": 0,
+     "explain": "The repeat contact is where the experience is decided."
+    }
+   ]
+  }
+ ]
+}

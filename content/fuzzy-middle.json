@@ -1,0 +1,146 @@
+{
+ "id": "fuzzy-middle",
+ "module": "business",
+ "title": "Escape the Fuzzy Middle",
+ "icon": "🌫️",
+ "intro": "After the 2023–24 layoffs, Calabro diagnosed a root cause: research that is interesting but not tied to a decision.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Escape the Fuzzy Middle",
+   "learn": [
+    {
+     "title": "What the fuzzy middle is",
+     "text": "Research that sits between strategy and detail: user-focused questions, not connected to a business outcome, producing findings that are **general, easy to dismiss and easy to misuse**.\n\nTypical shape: a mid-fidelity prototype, a “blocking” question nobody is waiting on, and a deck that everyone finds interesting and nobody acts on.",
+     "try": {
+      "type": "single",
+      "q": "What makes a finding “easy to dismiss”?",
+      "options": [
+       "It isn't connected to a decision anyone is making",
+       "It comes from a small sample",
+       "It contradicts what the stakeholders already believe",
+       "It lacks statistical significance"
+      ],
+      "answer": 0,
+      "explain": "Nobody is waiting for the answer, so nobody has to act on it."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "The fuzzy middle",
+       "items": [
+        "Interesting but not tied to a decision",
+        "Mid-fidelity blocking questions",
+        "General, dismissible findings",
+        "Performative research"
+       ]
+      },
+      "right": {
+       "label": "Macro + micro",
+       "items": [
+        "Frameworks for big business bets",
+        "Detailed usability and technical studies",
+        "Insights framed in money and risk",
+        "Findings tracked over time"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Macro and micro",
+     "text": "**Macro research** shapes strategy: which bet to make, which market, which problem is worth solving.\n\n**Micro research** improves the thing being built: detailed usability, technical constraints, specific flows.\n\nBoth are defensible because both are attached to something. The middle isn't.",
+     "try": {
+      "type": "single",
+      "q": "Which kind of research informs a big business bet?",
+      "options": [
+       "Macro",
+       "Micro",
+       "Both equally",
+       "Neither — that's a product decision"
+      ],
+      "answer": 0,
+      "explain": "Frameworks for the strategic choice."
+     }
+    },
+    {
+     "title": "What to add, what to avoid",
+     "text": "**Add:** business acumen, technical fluency, data skills — the non-UX skills that let you speak about money and risk.\n\n**Avoid:** performative research run to look user-centred, and the assumption that profit and user needs are opposed. Accept that profit usually takes precedence, then show how good UX drives it.\n\n**Track findings over time** instead of producing one-offs.",
+     "try": {
+      "type": "single",
+      "q": "What is Calabro's stance on profit versus user needs?",
+      "options": [
+       "Accept profit takes precedence",
+       "Argue that user needs must come first",
+       "Treat them as unrelated concerns",
+       "Avoid the question in stakeholder meetings"
+      ],
+      "answer": 0,
+      "explain": "Arguing the premise loses; demonstrating the link works. Then show UX drives it."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What prompted this article?",
+     "options": [
+      "The 2023–24 UX layoffs",
+      "A single client engagement",
+      "A change in his own role",
+      "A new research framework"
+     ],
+     "answer": 0,
+     "explain": "He was diagnosing why research teams were cut."
+    },
+    {
+     "type": "single",
+     "q": "What is “performative research”?",
+     "options": [
+      "Research run to look user-centred",
+      "Research presented theatrically",
+      "Research built on too small a sample",
+      "Research repeated each quarter"
+     ],
+     "answer": 0,
+     "explain": "It produces the appearance of rigour without the function."
+    },
+    {
+     "type": "single",
+     "q": "Which skills does he want researchers to add?",
+     "options": [
+      "Business, technical and data skills",
+      "Facilitation and workshop design skills",
+      "Visual design and prototyping",
+      "Project management and planning"
+     ],
+     "answer": 0,
+     "explain": "Non-UX skills that connect findings to outcomes."
+    },
+    {
+     "type": "single",
+     "q": "How should findings be handled over time?",
+     "options": [
+      "Tracked, not treated as one-offs",
+      "Archived at the end of each project",
+      "Summarised annually",
+      "Deleted when superseded"
+     ],
+     "answer": 0,
+     "explain": "Which is what the 5-star confidence system supports."
+    },
+    {
+     "type": "single",
+     "q": "What does a fuzzy-middle study usually produce?",
+     "options": [
+      "Interesting findings nobody acts on",
+      "Contradictory results",
+      "Expensive recruiting bills and long timelines",
+      "Stakeholder conflict"
+     ],
+     "answer": 0,
+     "explain": "General, easy to dismiss, easy to misuse."
+    }
+   ]
+  }
+ ]
+}

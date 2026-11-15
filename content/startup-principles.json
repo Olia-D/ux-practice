@@ -1,0 +1,144 @@
+{
+ "id": "startup-principles",
+ "module": "business",
+ "title": "Five Principles for Small UX Teams",
+ "icon": "🚀",
+ "intro": "A decision template for small teams: move fast without guessing.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Five Principles for Small UX Teams",
+   "learn": [
+    {
+     "title": "Five principles",
+     "text": "**1. Short-term** — design for the next 6–8 months and today's technology\n**2. Clear writing over minimalism** — when in doubt, be explicit\n**3. Just in time** — information at the point of need\n**4. Best practice** — don't reinvent problems that are already solved\n**5. Behaviour over opinion** — what users do, not what they say",
+     "try": {
+      "type": "single",
+      "q": "How far ahead should a small team design?",
+      "options": [
+       "The next 6–8 months",
+       "Two to three years",
+       "The next release only",
+       "Until the next funding round"
+      ],
+      "answer": 0,
+      "explain": "Realistic users and tech stack, not a hypothetical future at scale."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Guidelines, not rules",
+       "items": [
+        "Next 6–8 months",
+        "Explicit over minimal",
+        "Proven patterns"
+       ]
+      },
+      "right": {
+       "label": "What they replace",
+       "items": [
+        "Designing for a hypothetical scale",
+        "Minimal copy by default",
+        "Inventing new patterns"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Documentation and patterns",
+     "text": "Collaborate early and often with other UXers so decisions are shared and documented — **optimising for 6–8 months in the future**, when a different designer picks it up. (Only applies if there's more than one UXer.)\n\n**Do:** look for a handful of successful examples of a similar pattern before designing one.\n**Don't:** design for hypothetical future behaviour, especially based on a single example.",
+     "try": {
+      "type": "single",
+      "q": "Before inventing a pattern, what should you look for?",
+      "options": [
+       "A handful of successful examples of it",
+       "A design system component that already exists",
+       "Stakeholder approval",
+       "An A/B test result"
+      ],
+      "answer": 0,
+      "explain": "Don't reinvent what's already solved."
+     }
+    },
+    {
+     "title": "Writing and research",
+     "text": "“Use as few words as possible — but add the words that make it explicit.” Minimalism is not the goal; clarity is.\n\nAnd prefer **usability tests and analytics over preference surveys** when time is short: base new designs on how generative research predicts behaviour will change, not on hypotheticals.",
+     "try": {
+      "type": "single",
+      "q": "With limited time, which method does the template prefer?",
+      "options": [
+       "Usability tests and analytics",
+       "Preference surveys",
+       "Stakeholder workshops and reviews",
+       "Competitive analysis"
+      ],
+      "answer": 0,
+      "explain": "Behavioural evidence over opinion."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Who was this written for?",
+     "options": [
+      "Startup and small UX teams",
+      "Enterprise design systems teams",
+      "Agency consultants",
+      "Solo freelancers"
+     ],
+     "answer": 0,
+     "explain": "Though most of it applies more widely."
+    },
+    {
+     "type": "single",
+     "q": "What does “clear writing over minimalism” mean?",
+     "options": [
+      "Add the words that make it explicit",
+      "Write longer help text for each field",
+      "Use formal language",
+      "Avoid abbreviations"
+     ],
+     "answer": 0,
+     "explain": "As few words as possible, but no fewer."
+    },
+    {
+     "type": "single",
+     "q": "Why document for 6–8 months ahead?",
+     "options": [
+      "A different designer will pick it up",
+      "Compliance requires a record",
+      "Design systems are usually revised twice a year",
+      "Investors review documentation"
+     ],
+     "answer": 0,
+     "explain": "Shared, documented decisions survive turnover."
+    },
+    {
+     "type": "single",
+     "q": "What is the risk of designing for hypothetical future behaviour?",
+     "options": [
+      "It's often based on a single example",
+      "It takes longer to build",
+      "It usually conflicts with the design system",
+      "Engineers can't estimate it"
+     ],
+     "answer": 0,
+     "explain": "Use generative research to predict realistic change instead."
+    },
+    {
+     "type": "single",
+     "q": "Are these presented as rules?",
+     "options": [
+      "No — guidelines",
+      "Yes, for startups only",
+      "Yes, in priority order",
+      "Only the first three are"
+     ],
+     "answer": 0,
+     "explain": "Guidelines, and most apply beyond startups."
+    }
+   ]
+  }
+ ]
+}

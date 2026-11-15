@@ -1,0 +1,144 @@
+{
+ "id": "ai-chat-history",
+ "module": "ai-ux",
+ "title": "The Rules of AI Chat History",
+ "icon": "💬",
+ "intro": "A chat transcript is a record, not a history.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "The Rules of AI Chat History",
+   "learn": [
+    {
+     "title": "Three layers",
+     "text": "**1 · Task history** — separate tasks or background jobs the user can reopen, each with a status\n**2 · Interaction history** — instructions, clarifications and tool activity: scannable and collapsible\n**3 · Output workspace** — reports, drafts and tables, persistent, with the current version obvious\n\nEach layer does a different job. The transcript can stay, but it shouldn't carry the whole experience.",
+     "try": {
+      "type": "single",
+      "q": "Which layer holds the finished report the user came for?",
+      "options": [
+       "The output workspace",
+       "Task history",
+       "Interaction history",
+       "The transcript"
+      ],
+      "answer": 0,
+      "explain": "Persistent, with the current version clearly marked."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Transcript only",
+       "items": [
+        "One endless scroll",
+        "Old versions mixed with current",
+        "Status invisible"
+       ]
+      },
+      "right": {
+       "label": "Three layers",
+       "items": [
+        "Tasks with status",
+        "Scannable interactions",
+        "Current output obvious"
+       ]
+      }
+     }
+    },
+    {
+     "title": "What counts as a separate task",
+     "text": "The most important design decision. A task is **a self-contained request with a goal and a finish point**.\n\nThree questions:\n\n• Is the user still working toward the same outcome?\n• Does the new instruction refine the existing output?\n• Could earlier context distort the answer?\n\n**A subject change isn't always a new task** — and staying in one thread isn't always right either.",
+     "try": {
+      "type": "single",
+      "q": "A user changes subject mid-thread. Is that a new task?",
+      "options": [
+       "Not necessarily",
+       "Yes, always",
+       "Only if the output changes",
+       "Only after a set number of turns"
+      ],
+      "answer": 0,
+      "explain": "The test is whether they're still working toward the same outcome."
+     }
+    },
+    {
+     "title": "Why this matters",
+     "text": "Without the layers, users scroll through old versions looking for the current one, can't tell whether a background job finished, and lose track of which instruction produced which output.\n\nThe transcript is good at one thing: showing what was said. It is bad at status, at versioning and at finding things again.",
+     "try": {
+      "type": "single",
+      "q": "What is a transcript genuinely good at?",
+      "options": [
+       "Showing what was said",
+       "Showing current status",
+       "Finding the latest version",
+       "Separating tasks"
+      ],
+      "answer": 0,
+      "explain": "Which is why it's a record rather than a history."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does Calabro mean by “a record, not a history”?",
+     "options": [
+      "It logs turns but doesn't organise the work",
+      "It can't be exported",
+      "It's stored server-side",
+      "It only keeps recent messages"
+     ],
+     "answer": 0,
+     "explain": "History implies structure the transcript doesn't provide."
+    },
+    {
+     "type": "single",
+     "q": "What should task history show besides the task?",
+     "options": [
+      "Its status",
+      "The model version used",
+      "The number of turns",
+      "The time spent"
+     ],
+     "answer": 0,
+     "explain": "Including background jobs the user can reopen."
+    },
+    {
+     "type": "single",
+     "q": "What should the interaction layer be?",
+     "options": [
+      "Scannable and collapsible",
+      "Hidden by default",
+      "Exportable as plain text",
+      "Limited to the last ten turns"
+     ],
+     "answer": 0,
+     "explain": "Instructions, clarifications and tool activity."
+    },
+    {
+     "type": "single",
+     "q": "When might earlier context be a reason to start a new task?",
+     "options": [
+      "When it could distort the answer",
+      "When the thread is long",
+      "When the user pauses",
+      "When tools were used"
+     ],
+     "answer": 0,
+     "explain": "One of the three questions for task separation."
+    },
+    {
+     "type": "single",
+     "q": "What problem do users hit without an output workspace?",
+     "options": [
+      "Scrolling to find the current version",
+      "Losing their chat history",
+      "Repeating their instructions",
+      "Hitting context limits"
+     ],
+     "answer": 0,
+     "explain": "Old versions and the current one look the same in a transcript."
+    }
+   ]
+  }
+ ]
+}

@@ -51,13 +51,13 @@
       "type": "single",
       "q": "What does a service blueprint document that a journey map typically doesn't?",
       "options": [
-       "Backstage systems, owners and hand-offs",
+       "Backstage systems",
        "The user's emotional highs and lows",
        "Competitor comparisons",
        "Future-state opportunities"
       ],
       "answer": 0,
-      "explain": "It describes real operations, which can be verified."
+      "explain": "It describes real operations, which can be verified. Owners and hand-offs."
      }
     },
     {

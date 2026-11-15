@@ -130,13 +130,13 @@
      "type": "single",
      "q": "Why does Calabro call this an old concept worth bringing back?",
      "options": [
-      "It applies to every review, and teams have stopped using it",
+      "It applies to every review",
       "It was disproved and later re-validated",
       "It predates usability testing as a method",
       "Modern analytics tools can finally measure it"
      ],
      "answer": 0,
-     "explain": "He wants it back in every design review."
+     "explain": "He wants it back in every design review. And teams have stopped using it."
     }
    ]
   }

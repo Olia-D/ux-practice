@@ -19,7 +19,7 @@
        "Noisy minor issues outrank rare severe ones",
        "Counts are hard to calculate reliably",
        "Participants mention different things",
-       "Stakeholders distrust qualitative numbers"
+       "Stakeholders tend to distrust qualitative numbers"
       ],
       "answer": 0,
       "explain": "Frequency is not severity."
@@ -84,7 +84,7 @@
      "options": [
       "When the decision drives a major investment",
       "For every interview study",
-      "Whenever stakeholders ask for numbers",
+      "Whenever stakeholders ask you for hard numbers",
       "When the sample exceeds twenty people"
      ],
      "answer": 0,
@@ -96,7 +96,7 @@
      "options": [
       "The decisions the study informs",
       "The interview guide",
-      "The product's feature list",
+      "The product's current feature list",
       "Standard UX taxonomies"
      ],
      "answer": 0,
@@ -118,13 +118,13 @@
      "type": "single",
      "q": "Which three factors drive the weighting?",
      "options": [
-      "Severity, segment, evidence quality",
+      "Severity, segment",
       "Frequency, recency, sample size",
       "Impact, effort, confidence",
       "Cost, risk, reversibility"
      ],
      "answer": 0,
-     "explain": "Weighting is what stops counting from misleading."
+     "explain": "Weighting is what stops counting from misleading. Evidence quality."
     },
     {
      "type": "single",
@@ -132,7 +132,7 @@
      "options": [
       "A range, and what could change it",
       "A single percentage",
-      "The number of mentions per theme",
+      "The number of mentions recorded per theme",
       "A ranked list of quotes"
      ],
      "answer": 0,

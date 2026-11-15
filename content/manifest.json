@@ -232,21 +232,24 @@
      "title": "Confirm or Undo?",
      "icon": "↩️",
      "summary": "Undo by default; confirm when rare and severe; label the outcome, never “Yes”.",
-     "file": "content/c-confirm-undo.json"
+     "file": "content/c-confirm-undo.json",
+     "sourceNote": "Vitaly Friedman — confirm vs. undo decision tree"
     },
     {
      "id": "c-selection-controls",
      "title": "Choosing the Selection Control",
      "icon": "☑️",
      "summary": "Radio = one question; checkbox = a statement; toggle = instant. Never pre-select.",
-     "file": "content/c-selection-controls.json"
+     "file": "content/c-selection-controls.json",
+     "sourceNote": "Vitaly Friedman, after Runi Goswami (Lyft) — selection control decision tree"
     },
     {
      "id": "c-tables-bulk",
      "title": "Tables and Bulk Operations",
      "icon": "📑",
      "summary": "Visible row actions, user-built filters, and a repair step that fixes the import instead of rejecting it.",
-     "file": "content/c-tables-bulk.json"
+     "file": "content/c-tables-bulk.json",
+     "sourceNote": "Vitaly Friedman — complex data tables and bulk import UX"
     }
    ]
   },
@@ -399,7 +402,8 @@
      "title": "Research Without User Access",
      "icon": "🏢",
      "summary": "No user access? Task analysis, shadowing, CS experts and job postings — and never mistake the buyer for the user.",
-     "file": "content/c-b2b-research.json"
+     "file": "content/c-b2b-research.json",
+     "sourceNote": "Vitaly Friedman — UX research in B2B and enterprise"
     }
    ]
   },
@@ -657,7 +661,7 @@
      "id": "chart-types",
      "title": "Choosing the Right Chart Type",
      "icon": "📈",
-     "summary": "An Uber design team–inspired reference guide",
+     "summary": "Distribution, composition, comparison, relationship — plus “does time matter?”",
      "file": "content/chart-types.json",
      "source": "https://trevorcalabro.substack.com/p/choosing-the-right-chart-type"
     },
@@ -665,8 +669,9 @@
      "id": "c-dataviz",
      "title": "Charts and Dashboards That Lead to Decisions",
      "icon": "🎨",
-     "summary": "Extends “Why Your Data Dashboard Stinks” and “Choosing the Right Chart Type”",
-     "file": "content/c-dataviz.json"
+     "summary": "Direct labels, takeaway titles, one highlight colour — and the four-way dashboard trade-off.",
+     "file": "content/c-dataviz.json",
+     "sourceNote": "FT Visual Vocabulary · dataschool ACES · Bach et al. · Chartability"
     }
    ]
   },
@@ -713,7 +718,7 @@
      "id": "pmf",
      "title": "Measuring Product-Market Fit",
      "icon": "🎯",
-     "summary": "Sean Ellis's survey, used by a UX researcher",
+     "summary": "40% “very disappointed” among recent users — then learn from exactly those people.",
      "file": "content/pmf.json",
      "source": "https://trevorcalabro.substack.com/p/product-market-fit-in-the-real-world"
     },
@@ -721,14 +726,15 @@
      "id": "c-tars",
      "title": "Measuring Feature Impact (TARS)",
      "icon": "📶",
-     "summary": "Target audience, Adoption, Retention, Satisfaction",
-     "file": "content/c-tars.json"
+     "summary": "Target → Adoption → Retention → Satisfaction, measured against the users with the problem.",
+     "file": "content/c-tars.json",
+     "sourceNote": "Adrian Raudaschl, via Smashing Magazine"
     },
     {
      "id": "fuzzy-middle",
      "title": "Escape the Fuzzy Middle",
      "icon": "🌫️",
-     "summary": "Macro and micro research over vague 'interesting' studies",
+     "summary": "Macro research shapes the bet, micro research improves the build. The middle gets cut.",
      "file": "content/fuzzy-middle.json",
      "source": "https://trevorcalabro.substack.com/p/saving-ux-research"
     },
@@ -736,7 +742,7 @@
      "id": "service-failure",
      "title": "When the Whole Service Fails",
      "icon": "🧊",
-     "summary": "46 days, one broken fridge",
+     "summary": "46 days, 8.5 hours on the phone, one customer lost — services fail at the exceptions.",
      "file": "content/service-failure.json",
      "source": "https://trevorcalabro.substack.com/p/cx-refrigerator-story"
     },
@@ -744,7 +750,7 @@
      "id": "startup-principles",
      "title": "Five Principles for Small UX Teams",
      "icon": "🚀",
-     "summary": "Moving fast while staying user-centred",
+     "summary": "Six to eight months out, explicit words, just-in-time info, proven patterns, behavioural evidence.",
      "file": "content/startup-principles.json",
      "source": "https://trevorcalabro.substack.com/p/a-ux-strategy-template-for-startups"
     }
@@ -761,7 +767,7 @@
      "id": "ai-chat-history",
      "title": "The Rules of AI Chat History",
      "icon": "💬",
-     "summary": "A real-world framework for designing good chatbot experiences",
+     "summary": "Task history, interaction history, output workspace — the transcript shouldn't carry all three.",
      "file": "content/ai-chat-history.json",
      "source": "https://trevorcalabro.substack.com/p/the-rules-of-ai-chat-history"
     },
@@ -769,7 +775,7 @@
      "id": "ai-cant-do",
      "title": "5 Things AI Still Can’t Do for UX Research",
      "icon": "🚧",
-     "summary": "Why expertise still matters",
+     "summary": "Five gaps AI can't close: real users, good questions, complex models, test choice, interpretation.",
      "file": "content/ai-cant-do.json",
      "source": "https://trevorcalabro.substack.com/p/5-things-ai-still-cant-do-for-uxr"
     },
@@ -777,15 +783,17 @@
      "id": "c-ai-frameworks",
      "title": "Deciding How Much the AI Should Do",
      "icon": "🎚️",
-     "summary": "Autonomy levels, trust scaffolding and the anatomy of a chat turn",
-     "file": "content/c-ai-frameworks.json"
+     "summary": "Five autonomy levels, T.R.U.S.T. for the moment of reliance, C.O.N.V.E.R.S.E. for the turn.",
+     "file": "content/c-ai-frameworks.json",
+     "sourceNote": "AI UX Playground — Agentic UX, T.R.U.S.T., C.O.N.V.E.R.S.E."
     },
     {
      "id": "c-eu-ai-labels",
      "title": "AI Labelling Is Now Law",
      "icon": "⚖️",
-     "summary": "EU AI Act transparency rules, in force since 2 August 2026",
-     "file": "content/c-eu-ai-labels.json"
+     "summary": "Disclose chatbots, deepfakes and unreviewed public-interest text. Icon plus plain text, persistent.",
+     "file": "content/c-eu-ai-labels.json",
+     "sourceNote": "Smashing Magazine and the EU Code of Practice on AI transparency"
     }
    ]
   },
@@ -824,7 +832,7 @@
      "id": "career",
      "title": "UX Career Paths Are Weird",
      "icon": "🛤️",
-     "summary": "A messy, zig-zagging 20-year journey that eventually made sense",
+     "summary": "A scribbly line through telecom, statistics, enterprise ops and regulation — breadth beats a clean story.",
      "file": "content/career.json",
      "source": "https://trevorcalabro.substack.com/p/ux-career-paths-are-weird"
     },
@@ -832,7 +840,7 @@
      "id": "career-craft",
      "title": "Growing Without Chasing Titles",
      "icon": "🪜",
-     "summary": "Career ladders, résumés, interviews and mentoring",
+     "summary": "Good work, real allies, deliberate learning — and a résumé that tells a story, not a list.",
      "file": "content/career-craft.json",
      "source": "https://trevorcalabro.substack.com/p/reframing-career-ladders"
     },
@@ -840,7 +848,7 @@
      "id": "job-security",
      "title": "UX Job Security",
      "icon": "🛡️",
-     "summary": "Including the follow-up, “The Data Behind the Rant”",
+     "summary": "Decades-old problems still ship, and the layoff data doesn't show UX being cut first.",
      "file": "content/job-security.json",
      "source": "https://trevorcalabro.substack.com/p/ux-job-security"
     },
@@ -856,7 +864,7 @@
      "id": "opt-in",
      "title": "The Opt-In Approach",
      "icon": "🌱",
-     "summary": "Building influence with people who already want it",
+     "summary": "Grow influence with willing partners; let results recruit the rest.",
      "file": "content/opt-in.json",
      "source": "https://trevorcalabro.substack.com/p/introducing-the-opt-in-approach-for"
     },
@@ -864,7 +872,7 @@
      "id": "critical-error",
      "title": "Never Ship a Known Critical Error",
      "icon": "🚨",
-     "summary": "A story about politics, five users and a highlight reel",
+     "summary": "A known critical error isn't an MVP trade-off. Prototype, test with five, show the footage.",
      "file": "content/critical-error.json",
      "source": "https://trevorcalabro.substack.com/p/when-critical-errors-go-unchecked"
     },
@@ -872,7 +880,7 @@
      "id": "seven-patterns",
      "title": "7 Patterns That Derail Product Teams",
      "icon": "🧯",
-     "summary": "Written for PMs, engineers and stakeholders working with UXers",
+     "summary": "Agree the goal, the constraints and the evidence before arguing about the screen.",
      "file": "content/seven-patterns.json",
      "source": "https://trevorcalabro.substack.com/p/7-patterns-that-derail-product-teams"
     },
@@ -880,7 +888,7 @@
      "id": "leader-traps",
      "title": "Four Traps That Block UX Leaders",
      "icon": "🪤",
-     "summary": "Muriel Wilkins's Leadership Unblocked, translated into UX",
+     "summary": "Over-functioning, pacing and perfection, partnership, identity — strengths that became reflexes.",
      "file": "content/leader-traps.json",
      "source": "https://trevorcalabro.substack.com/p/this-is-really-a-book-about-ux"
     },
@@ -888,8 +896,9 @@
      "id": "c-three-books",
      "title": "Three Sources, One Practice",
      "icon": "📚",
-     "summary": "How Calabro lines up with Erika Hall and Teresa Torres",
-     "file": "content/c-three-books.json"
+     "summary": "Hall gives foundations, Torres the cadence, Calabro execution — no conflicts between them.",
+     "file": "content/c-three-books.json",
+     "sourceNote": "Erika Hall, Just Enough Research · Teresa Torres, Continuous Discovery Habits"
     }
    ]
   }

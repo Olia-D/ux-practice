@@ -1,0 +1,144 @@
+{
+ "id": "career-craft",
+ "module": "career",
+ "title": "Growing Without Chasing Titles",
+ "icon": "🪜",
+ "intro": "Four posts, one consistent message: do genuinely good work for people who need it, and tell it as a story.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Growing Without Chasing Titles",
+   "learn": [
+    {
+     "title": "What compounds",
+     "text": "**Do good work** — impact over visibility plays\n**Work with allies** — people who already value research\n**Learn on purpose** — broaden methods; certificates aren't magic\n**Tell the story** — each role led to the next\n\nOn certifications: people ask about his NN/g badge constantly. His answer is that it didn't get him jobs — the work did. “Becoming a trusted, skilled partner who solves real problems” is what makes progression take care of itself.",
+     "try": {
+      "type": "single",
+      "q": "What does Calabro say about his NN/g certification?",
+      "options": [
+       "The work got him jobs",
+       "It opened every door",
+       "It matters only for juniors",
+       "It replaced a formal qualification"
+      ],
+      "answer": 0,
+      "explain": "Certificates aren't magic. Not the badge."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Chasing the title",
+       "items": [
+        "Visibility plays",
+        "Collecting certificates",
+        "A tidy linear story"
+       ]
+      },
+      "right": {
+       "label": "What compounds",
+       "items": [
+        "Impact on real problems",
+        "Deliberate learning",
+        "A narrative that connects"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The résumé, in two steps",
+     "text": "**Step 1: Aggregate your highlights.** One bulleted list of your biggest career accomplishments — a snapshot of everything.\n\n**Step 2: Craft targeted career narratives.** Break the career into segments and show how each role built on the last, chosen for the job you want.\n\nA list of duties doesn't stand out in a sea of experienced candidates. A narrative does.",
+     "try": {
+      "type": "single",
+      "q": "What is step 2 of his résumé approach?",
+      "options": [
+       "Targeted narratives showing how roles built on each other",
+       "Tailoring keywords to the job advert",
+       "Cutting the résumé to one page",
+       "Adding metrics to every bullet"
+      ],
+      "answer": 0,
+      "explain": "Step 1 is the raw highlights list; step 2 selects and connects."
+     }
+    },
+    {
+     "title": "Interviews and mentoring",
+     "text": "He was laid off in 2024 and **botched two final-round case-study presentations** before changing his approach:\n\n• Treat it as a conversation, not a rehearsed monologue\n• **Show, don't narrate** every method\n• Expect a mixed room — designers, PMs and leaders want decisions and impact, not statistics\n• Leave out the unnecessary detail — that was the change that got him hired\n\n**Mentoring newcomers:** skip boot camps; practise three entry-level methods — diary studies, card sorting, usability testing — guerrilla-style for a friend's or family member's business, and read the fundamental NN/g articles.",
+     "try": {
+      "type": "single",
+      "q": "What change finally made his case-study presentations work?",
+      "options": [
+       "Leaving out unnecessary detail",
+       "Adding more research methodology",
+       "Using a standard template",
+       "Presenting a single project in depth"
+      ],
+      "answer": 0,
+      "explain": "A mixed room wants decisions and impact."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does a mixed interview panel want to hear?",
+     "options": [
+      "Decisions and impact",
+      "Methods and statistics",
+      "Process diagrams",
+      "Tool proficiency"
+     ],
+     "answer": 0,
+     "explain": "Designers, PMs and leaders are all in the room."
+    },
+    {
+     "type": "single",
+     "q": "Which three methods does he recommend to newcomers?",
+     "options": [
+      "Diary studies, card sorting",
+      "Surveys, interviews, A/B tests",
+      "Heuristic review, tree testing, analytics",
+      "Contextual inquiry, PURE, GOMS-KLM"
+     ],
+     "answer": 0,
+     "explain": "Low barrier to entry, practised guerrilla-style. Usability testing."
+    },
+    {
+     "type": "single",
+     "q": "What does he suggest instead of a boot camp?",
+     "options": [
+      "Practising methods for a small real business",
+      "A university course",
+      "A certification programme",
+      "An internship at an agency"
+     ],
+     "answer": 0,
+     "explain": "A friend's or family member's business gives you a real context."
+    },
+    {
+     "type": "single",
+     "q": "What is step 1 of the résumé method?",
+     "options": [
+      "One list of your biggest accomplishments",
+      "Researching the target company",
+      "Rewriting your summary statement",
+      "Collecting references"
+     ],
+     "answer": 0,
+     "explain": "A snapshot you then select from."
+    },
+    {
+     "type": "single",
+     "q": "What happened to him in 2024?",
+     "options": [
+      "He was laid off",
+      "He moved into management",
+      "He left research for design",
+      "He started consulting full time"
+     ],
+     "answer": 0,
+     "explain": "Which is the context for the interview lessons."
+    }
+   ]
+  }
+ ]
+}

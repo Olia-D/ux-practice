@@ -16,13 +16,13 @@
       "type": "single",
       "q": "Why doesn't 7 ± 2 apply to an open dropdown?",
       "options": [
-       "Nothing has to be remembered — the items are visible",
+       "Nothing has to be remembered",
        "Dropdowns scroll, so length doesn't matter",
        "Miller's sample was too small to generalise",
        "Menus are scanned faster than digits are recalled"
       ],
       "answer": 0,
-      "explain": "Recall and recognition are different tasks."
+      "explain": "Recall and recognition are different tasks. The items are visible."
      },
      "visual": {
       "type": "compare",

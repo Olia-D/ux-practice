@@ -54,7 +54,7 @@
        "Self-ratings don't track observed difficulty",
        "The task was easier than it looked",
        "The rating scale was badly worded",
-       "The participant wanted to be polite only"
+       "The participant only wanted to be polite about it"
       ],
       "answer": 0,
       "explain": "It is a consistent pattern across hundreds of sessions."
@@ -69,7 +69,7 @@
       "options": [
        "How confident do people feel about this?",
        "How long does the task take?",
-       "Where do users abandon the flow?",
+       "Where exactly do users abandon the checkout flow?",
        "Which design is faster to use?"
       ],
       "answer": 0,
@@ -82,13 +82,13 @@
      "type": "single",
      "q": "What do surveys actually measure?",
      "options": [
-      "What people think, remember or want to believe",
+      "What people think",
       "What people do",
       "How long tasks take",
       "Which features are used most"
      ],
      "answer": 0,
-     "explain": "Which is useful, as long as you don't claim otherwise."
+     "explain": "Which is useful, as long as you don't claim otherwise. Remember or want to believe."
     },
     {
      "type": "single",
@@ -96,7 +96,7 @@
      "options": [
       "Predicting your own future use is unreliable",
       "Samples are usually too small",
-      "Respondents don't read carefully",
+      "Respondents rarely read the questions carefully",
       "The questions are always leading"
      ],
      "answer": 0,
@@ -121,7 +121,7 @@
       "When the question needs a different instrument",
       "When the sample is under 30",
       "When the product is new",
-      "When stakeholders want a number"
+      "When stakeholders simply want a number to report"
      ],
      "answer": 0,
      "explain": "Pick the instrument for the question, not out of habit."

@@ -82,13 +82,13 @@
      "type": "single",
      "q": "Where do these percentages come from?",
      "options": [
-      "A Baymard survey of US shoppers, as cited in 2024",
+      "A Baymard survey of US shoppers",
       "Calabro's own e-commerce client data",
       "A Nielsen Norman Group benchmark study",
       "Aggregated analytics from retail platforms"
      ],
      "answer": 0,
-     "explain": "And the article notes they should be re-checked before quoting."
+     "explain": "And the article notes they should be re-checked before quoting. As cited in 2024."
     },
     {
      "type": "single",

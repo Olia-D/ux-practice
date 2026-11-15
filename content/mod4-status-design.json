@@ -37,13 +37,13 @@
       "type": "single",
       "q": "Why is status design especially hard in enterprise software?",
       "options": [
-       "Workflows span people, approvals, and async processes",
+       "Workflows span people, approvals",
        "Enterprise users are less tech-savvy",
        "Enterprise software has more bugs",
        "Enterprise companies have smaller design teams"
       ],
       "answer": 0,
-      "explain": "Enterprise workflows involve multiple people, approvals, and backend processes. The system's state is distributed across all of them."
+      "explain": "Enterprise workflows involve multiple people, approvals, and backend processes. The system's state is distributed across all of them. And async processes."
      }
     },
     {

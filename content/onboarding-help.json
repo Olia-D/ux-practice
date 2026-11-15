@@ -72,7 +72,7 @@
        "They make the weak patterns trivial to add",
        "Their analytics are inaccurate",
        "They can't be made accessible",
-       "They conflict with most design systems"
+       "They conflict with most existing design systems"
       ],
       "answer": 0,
       "explain": "Ease of shipping is how the maze of popups accumulates."
@@ -99,7 +99,7 @@
       "Something the system needs to function",
       "A guided tour of the main features",
       "A preferences questionnaire",
-      "An invitation to connect integrations"
+      "An invitation to connect your integrations"
      ],
      "answer": 0,
      "explain": "Or security and compliance requirements."
@@ -111,7 +111,7 @@
       "Required help has to be visible on the screen",
       "Tooltips are hard to translate",
       "Tooltips slow the page down",
-      "Tooltips can't contain formatted text"
+      "Tooltips cannot contain formatted or linked text"
      ],
      "answer": 0,
      "explain": "An icon-only trigger hides what people need."
@@ -134,7 +134,7 @@
      "options": [
       "Structure, validation and review",
       "A clear error message",
-      "An undo button on every action",
+      "An undo button on every destructive action",
       "A support contact link"
      ],
      "answer": 0,

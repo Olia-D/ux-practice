@@ -18,7 +18,7 @@
       "options": [
        "Motivated users both finish and stay",
        "The tutorial is too long",
-       "Retention is measured incorrectly",
+       "Retention has been measured incorrectly",
        "The sample was unrepresentative"
       ],
       "answer": 0,
@@ -54,7 +54,7 @@
        "Is associated with",
        "Drives",
        "Causes",
-       "Results in"
+       "Directly results in"
       ],
       "answer": 0,
       "explain": "Causal language overclaims what the data supports."
@@ -68,7 +68,7 @@
       "q": "What is the right response to an interesting correlation?",
       "options": [
        "Design a study that can test it",
-       "Ship the change and monitor",
+       "Ship the change and monitor the metric",
        "Report it as a key finding",
        "Discard it as unreliable"
       ],
@@ -109,7 +109,7 @@
       "How much one variable predicts another, controlling for others",
       "Proof of causation",
       "A larger effective sample",
-      "A significance test for correlation"
+      "A significance test for the correlation coefficient and its direction"
      ],
      "answer": 0,
      "explain": "Useful, but still not proof of cause."
@@ -132,7 +132,7 @@
      "options": [
       "You scale a cause that may not exist",
       "The tutorial becomes too long",
-      "Retention gets harder to measure",
+      "Retention becomes much harder to measure",
       "Motivated users will disengage"
      ],
      "answer": 0,

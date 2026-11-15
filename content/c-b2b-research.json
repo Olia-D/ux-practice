@@ -67,13 +67,13 @@
       "type": "single",
       "q": "How do you eventually get access to real users in a protective organisation?",
       "options": [
-       "Build trust with small, low-risk steps",
+       "Build trust with small",
        "Escalate through the account manager",
        "Add a research clause to the contract",
        "Offer larger participant incentives"
       ],
       "answer": 0,
-      "explain": "Access follows trust, not requests."
+      "explain": "Access follows trust, not requests. Low-risk steps."
      }
     }
    ],
@@ -106,13 +106,13 @@
      "type": "single",
      "q": "What is an internal test lab, in this note?",
      "options": [
-      "Colleagues closest to customers, used as testers",
+      "Colleagues closest to customers",
       "A dedicated usability lab room",
       "A staging environment for prototypes",
       "A panel of recruited external users"
      ],
      "answer": 0,
-     "explain": "Imperfect, but closer than nobody."
+     "explain": "Imperfect, but closer than nobody. Used as testers."
     },
     {
      "type": "single",

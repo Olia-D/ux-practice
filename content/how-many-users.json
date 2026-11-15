@@ -94,13 +94,13 @@
      "type": "single",
      "q": "Which sign suggests saturation?",
      "options": [
-      "Nothing surprised you, twice running",
+      "Nothing surprised you",
       "Participants agree with each other",
       "You've run the planned number",
       "The transcripts stop getting longer"
      ],
      "answer": 0,
-     "explain": "Agreement isn't the test; a stable framework is."
+     "explain": "Agreement isn't the test; a stable framework is. Twice running."
     },
     {
      "type": "single",

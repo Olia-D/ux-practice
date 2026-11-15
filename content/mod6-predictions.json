@@ -162,13 +162,13 @@
      "type": "single",
      "q": "In a 'vibes-driven' org, how are UX decisions typically made?",
      "options": [
-      "By the loudest voice, gut feel, or copying competitors",
+      "By the loudest voice, gut feel",
       "By structured research processes agreed in advance",
       "By data analysis teams",
       "By democratic team voting"
      ],
      "answer": 0,
-     "explain": "Vibes-driven orgs rely on authority, gut instinct, and competitive mimicry rather than evidence."
+     "explain": "Vibes-driven orgs rely on authority, gut instinct, and competitive mimicry rather than evidence. Or copying competitors."
     },
     {
      "type": "single",

@@ -37,13 +37,13 @@
       "type": "single",
       "q": "A stakeholder says \"Our power users don't need icon labels.\" Who should provide evidence?",
       "options": [
-       "The stakeholder — they're claiming an exception to a best practice",
+       "The stakeholder",
        "The designer — they need to prove labels work",
        "Nobody — it's a matter of preference",
        "The engineering team — they decide what ships"
       ],
       "answer": 0,
-      "explain": "The burden of proof is on whoever claims their case is the exception. Best practices are the default."
+      "explain": "The burden of proof is on whoever claims their case is the exception. Best practices are the default. They're claiming an exception to a best practice."
      }
     },
     {

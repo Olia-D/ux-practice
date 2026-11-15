@@ -1,0 +1,144 @@
+{
+ "id": "c-tars",
+ "module": "business",
+ "title": "Measuring Feature Impact (TARS)",
+ "icon": "📶",
+ "intro": "Measure a feature against the users who have the problem it solves — not all users.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Measuring Feature Impact (TARS)",
+   "learn": [
+    {
+     "title": "The four steps",
+     "text": "**T · Target** — the percentage of users who actually have the problem\n**A · Adoption** — the percentage of that target who meaningfully use it\n**R · Retention** — the percentage of adopters who come back\n**S · Satisfaction** — Customer Effort Score, asked only of retained users\n\nTARS deliberately leaves out conversion: too many non-design factors move it.",
+     "try": {
+      "type": "single",
+      "q": "Why does TARS exclude conversion?",
+      "options": [
+       "Too many non-design factors move it",
+       "It is hard to measure accurately",
+       "It only applies to e-commerce",
+       "It duplicates the retention metric"
+      ],
+      "answer": 0,
+      "explain": "Pricing, marketing and seasonality all move conversion."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Common metric",
+       "items": [
+        "% of all users who clicked",
+        "Session time on the feature",
+        "Conversion lift"
+       ]
+      },
+      "right": {
+       "label": "TARS",
+       "items": [
+        "% of the target audience",
+        "Value signals, not clicks",
+        "CES from retained users"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Reading the numbers",
+     "text": "**Adoption** above ~60% suggests the feature solves a real problem. Below ~20% often means easy workarounds exist, or the feature isn't discoverable.\n\n**Retention** above 50% signals high strategic importance; 25–35% medium; 10–20% low.\n\nA niche feature used by 50–75% of its 10% audience can be a success. The denominator is what makes that judgement possible.",
+     "try": {
+      "type": "single",
+      "q": "Adoption is 15% of the target audience. What are the likely explanations?",
+      "options": [
+       "Easy workarounds",
+       "The feature is too complex",
+       "The target was estimated too narrowly",
+       "Users prefer a competitor's version"
+      ],
+      "answer": 0,
+      "explain": "Below ~20% is the warning band. Or poor discoverability."
+     }
+    },
+    {
+     "title": "Counting the right things",
+     "text": "**Target:** estimate from similar features. Usage of the feature itself is not the audience — that's circular.\n\n**Adoption:** count value signals — exports shared, filters used — not clicks or session time.\n\n**Satisfaction:** Customer Effort Score, from “much harder” to “much easier than expected”, asked of people who kept using it.",
+     "try": {
+      "type": "single",
+      "q": "What is wrong with using the feature's own usage to define the target audience?",
+      "options": [
+       "It's circular",
+       "It undercounts new users",
+       "It requires analytics access",
+       "It mixes segments"
+      ],
+      "answer": 0,
+      "explain": "Estimate from similar features instead."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does the T stand for?",
+     "options": [
+      "Target audience",
+      "Time to value",
+      "Task completion",
+      "Trial conversion"
+     ],
+     "answer": 0,
+     "explain": "The users who have the problem the feature solves."
+    },
+    {
+     "type": "single",
+     "q": "Which signal counts as adoption?",
+     "options": [
+      "An export being shared",
+      "A page view",
+      "Time spent on the screen",
+      "A click on the menu item"
+     ],
+     "answer": 0,
+     "explain": "Value signals, not activity."
+    },
+    {
+     "type": "single",
+     "q": "What does retention above 50% indicate?",
+     "options": [
+      "High strategic importance",
+      "A mature feature",
+      "A small target audience",
+      "Successful onboarding"
+     ],
+     "answer": 0,
+     "explain": "25–35% is medium; 10–20% low."
+    },
+    {
+     "type": "single",
+     "q": "Who is asked the satisfaction question?",
+     "options": [
+      "Retained users",
+      "All adopters",
+      "The whole target audience",
+      "Users who churned"
+     ],
+     "answer": 0,
+     "explain": "CES, from people who kept using it."
+    },
+    {
+     "type": "single",
+     "q": "Can a feature used by 10% of users be a success?",
+     "options": [
+      "Yes, if it reaches most of its target",
+      "No, adoption is too low",
+      "Only if retention exceeds 80%",
+      "Only for enterprise products"
+     ],
+     "answer": 0,
+     "explain": "50–75% of a 10% audience is strong."
+    }
+   ]
+  }
+ ]
+}

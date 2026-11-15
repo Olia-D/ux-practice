@@ -1,0 +1,144 @@
+{
+ "id": "chart-types",
+ "module": "data-viz",
+ "title": "Choosing the Right Chart Type",
+ "icon": "📈",
+ "intro": "Decide what the reader should understand, then pick the chart.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Choosing the Right Chart Type",
+   "learn": [
+    {
+     "title": "Four purposes",
+     "text": "**Distribution** — how values spread: histogram, heatmap, bubble, candlestick\n**Composition** — what the whole is made of: pie or donut for a few parts, treemap, 100% stacked bar, waterfall\n**Comparison** — bigger or smaller: bar, ordered bar for ranking, combination charts\n**Relationship** — do measures move together: scatterplot\n\nThen one extra question: **does change over time matter?** If so, favour line, multiline or stacked area.",
+     "try": {
+      "type": "single",
+      "q": "You want readers to see which regions sold most. Which purpose is that?",
+      "options": [
+       "Comparison",
+       "Composition",
+       "Distribution",
+       "Relationship"
+      ],
+      "answer": 0,
+      "explain": "An ordered bar chart ranks them directly."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Ask first",
+       "items": [
+        "What should the reader understand?",
+        "Which of the four purposes?",
+        "Does the path matter, or the snapshot?"
+       ]
+      },
+      "right": {
+       "label": "Then pick",
+       "items": [
+        "Distribution → histogram",
+        "Comparison → ordered bar",
+        "Over time → line"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Time is the extra question",
+     "text": "The four purposes get you most of the way. Then ask whether the reader needs **the path, not just the snapshot**.\n\nIf they do, move to a line, multiline or stacked area chart. If they don't, a bar chart usually reads faster.",
+     "try": {
+      "type": "single",
+      "q": "Readers need to see how a metric got to today's value. What does that call for?",
+      "options": [
+       "A line chart",
+       "An ordered bar chart",
+       "A treemap",
+       "A scatterplot"
+      ],
+      "answer": 0,
+      "explain": "They need the path, not just the snapshot."
+     }
+    },
+    {
+     "title": "Use the simple chart",
+     "text": "Scatterplots show relationships — and correlation is not causation.\n\nUse **tables** when readers need exact numbers.\n\nAnd the rule that saves the most time: **if a simple bar chart answers the question, use the bar chart.**",
+     "try": {
+      "type": "single",
+      "q": "When should you use a table instead of a chart?",
+      "options": [
+       "When readers need exact numbers",
+       "When there are more than five categories",
+       "When the data updates frequently",
+       "When the trend is flat"
+      ],
+      "answer": 0,
+      "explain": "A chart shows shape; a table gives values."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the first decision?",
+     "options": [
+      "What the reader should understand",
+      "Which chart library to use",
+      "How much space is available",
+      "Which colours match the brand"
+     ],
+     "answer": 0,
+     "explain": "Purpose before chart type."
+    },
+    {
+     "type": "single",
+     "q": "Which chart shows whether two measures move together?",
+     "options": [
+      "Scatterplot",
+      "Stacked bar",
+      "Histogram",
+      "Waterfall"
+     ],
+     "answer": 0,
+     "explain": "And correlation is still not causation."
+    },
+    {
+     "type": "single",
+     "q": "Which purpose does a treemap serve?",
+     "options": [
+      "Composition",
+      "Comparison",
+      "Distribution",
+      "Relationship"
+     ],
+     "answer": 0,
+     "explain": "What the whole is made of."
+    },
+    {
+     "type": "single",
+     "q": "What does a histogram show?",
+     "options": [
+      "How values are distributed",
+      "The parts of a total",
+      "A ranking of categories",
+      "Change over time"
+     ],
+     "answer": 0,
+     "explain": "Distribution is its purpose."
+    },
+    {
+     "type": "single",
+     "q": "What is the article's default advice?",
+     "options": [
+      "Use the bar chart if it answers the question",
+      "Use a line chart for most metrics",
+      "Avoid pie charts entirely",
+      "Match the chart to the design system"
+     ],
+     "answer": 0,
+     "explain": "Simplicity beats sophistication when both work."
+    }
+   ]
+  }
+ ]
+}

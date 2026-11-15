@@ -67,7 +67,7 @@
       "type": "single",
       "q": "Two laws point to different solutions and the team is stuck. What does Calabro suggest?",
       "options": [
-       "Default to the familiar pattern (Jakob's Law)",
+       "Default to the familiar pattern",
        "Apply whichever law was published earliest",
        "Run an A/B test on both versions",
        "Escalate the decision to the product manager"

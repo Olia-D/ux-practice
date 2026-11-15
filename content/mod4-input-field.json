@@ -37,13 +37,13 @@
       "type": "single",
       "q": "Where should explanatory text (help text) be placed?",
       "options": [
-       "Visible below the label, never hidden behind a tooltip",
+       "Visible below the label",
        "Inside the input as placeholder",
        "In a tooltip on an 'i' icon",
        "Above the form as a general instruction"
       ],
       "answer": 0,
-      "explain": "Help text should be visible without interaction. Hiding it behind icons or tooltips means most users will never see it."
+      "explain": "Help text should be visible without interaction. Hiding it behind icons or tooltips means most users will never see it. Never hidden behind a tooltip."
      }
     },
     {

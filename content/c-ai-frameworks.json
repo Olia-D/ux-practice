@@ -1,0 +1,144 @@
+{
+ "id": "c-ai-frameworks",
+ "module": "ai-ux",
+ "title": "Deciding How Much the AI Should Do",
+ "icon": "🎚️",
+ "intro": "Autonomy is a product decision. Grant the lowest level that delivers the outcome.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Deciding How Much the AI Should Do",
+   "learn": [
+    {
+     "title": "Five autonomy levels",
+     "text": "**1 · Suggest** — AI advises; you act\n**2 · Draft** — AI starts; you finish\n**3 · Confirm** — AI proposes; you approve\n**4 · Bounded** — AI acts within hard limits\n**5 · Monitor** — AI runs; you watch\n\nJudge by impact, reversibility, reliability, sensitivity, and whether anyone would notice a bad outcome.\n\n**Reversibility and detectability set the ceiling:** hard-to-undo or hard-to-spot actions get lower autonomy, however reliable the model.",
+     "try": {
+      "type": "single",
+      "q": "An action is reliable but hard to undo and hard to notice. What autonomy level?",
+      "options": [
+       "A low one",
+       "The highest the accuracy supports",
+       "Bounded, with limits",
+       "Monitor, with alerts"
+      ],
+      "answer": 0,
+      "explain": "Reversibility and detectability set the ceiling regardless of reliability."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Lower autonomy when",
+       "items": [
+        "Hard to undo",
+        "Hard to notice",
+        "High sensitivity"
+       ]
+      },
+      "right": {
+       "label": "Higher autonomy when",
+       "items": [
+        "Easily reversible",
+        "Visible immediately",
+        "Low impact if wrong"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Trust is calibrated, not maximised",
+     "text": "**T.R.U.S.T.**, applied at the moment someone decides whether to rely on the output:\n\n• **Truthful expectations** — say what the AI does and doesn't do, in task terms\n• **Reasons and provenance** — claim-level citations; why this recommendation\n• **Uncertainty and limits** — plain-language ranges, not an unexplained “78%”\n• **Safeguards and control** — inspect → adjust → correct\n• **Track record** — let people see how it has performed\n\nThe goal isn't maximum trust. It's trust that matches how reliable the system actually is.",
+     "try": {
+      "type": "single",
+      "q": "What is wrong with showing an unexplained “78% confident”?",
+      "options": [
+       "A number without meaning doesn't calibrate trust",
+       "Percentages always imply a false level of precision",
+       "Users prefer visual indicators",
+       "It should be rounded to 80%"
+      ],
+      "answer": 0,
+      "explain": "Plain-language ranges tell people what to do with it."
+     }
+    },
+    {
+     "title": "The anatomy of a chat turn",
+     "text": "**C.O.N.V.E.R.S.E.** covers what a single AI turn needs: context carried in, options offered, a visible next step, an escape route, and a way to correct the system.\n\nThe practical test: after one turn, can the user tell what the AI did, what it used, how sure it is, and what to do next?",
+     "try": {
+      "type": "single",
+      "q": "What is the practical test for a single AI turn?",
+      "options": [
+       "Can the user tell what it did and what to do next",
+       "Does it respond within the expected two-second window",
+       "Does it use the brand voice",
+       "Is the answer under 200 words"
+      ],
+      "answer": 0,
+      "explain": "What it did, what it used, how sure it is, what comes next."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What decides the autonomy level?",
+     "options": [
+      "Impact, reversibility, reliability, sensitivity, detectability",
+      "Model accuracy alone",
+      "Whichever autonomy preference the user has selected in their settings",
+      "The product's maturity"
+     ],
+     "answer": 0,
+     "explain": "Grant the lowest level that still delivers the outcome."
+    },
+    {
+     "type": "single",
+     "q": "At which level does the AI act within hard limits?",
+     "options": [
+      "Bounded",
+      "Confirm",
+      "Monitor",
+      "Draft"
+     ],
+     "answer": 0,
+     "explain": "Level four of five."
+    },
+    {
+     "type": "single",
+     "q": "What does “claim-level citations” mean?",
+     "options": [
+      "Each claim shows where it came from",
+      "One source list per response",
+      "Links to the model's underlying training data",
+      "A confidence score per sentence"
+     ],
+     "answer": 0,
+     "explain": "Provenance attached to the claim, not the whole answer."
+    },
+    {
+     "type": "single",
+     "q": "What is the goal of trust scaffolding?",
+     "options": [
+      "Trust that matches actual reliability",
+      "The highest trust possible",
+      "Eliminating user scepticism about the output",
+      "Reducing support contacts"
+     ],
+     "answer": 0,
+     "explain": "Calibrated, not maximised."
+    },
+    {
+     "type": "single",
+     "q": "What should safeguards let a user do?",
+     "options": [
+      "Inspect, adjust and correct",
+      "Disable the AI feature entirely",
+      "Request a human review",
+      "Export the conversation"
+     ],
+     "answer": 0,
+     "explain": "Control at the point of reliance."
+    }
+   ]
+  }
+ ]
+}

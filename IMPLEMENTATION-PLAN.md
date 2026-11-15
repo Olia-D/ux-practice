@@ -43,7 +43,25 @@ Checking the book against Calabro's posts showed that some original chapters, an
 - **Rebuilt from the posts (cards + questions):** tasks, usability-vs-concept, cognitive-walkthrough, fake-ai, cognitive-biases, ab-testing, dashboard, debrief, delight, figma. Generators are in `scripts/rewrite_batch1.py` and `rewrite_batch2.py`.
 - **Still to verify line by line against the posts (16):** behavioral-evidence, research-rigor, ux-as-service, ab-mislead, misunderstandings, mixed-methods, affordances, animations, icons, input-field, status-design, roi, ic, institutional, predictions, thankless. Their questions were only de-biased, not re-sourced.
 
-### Phase 2 — Retention mechanics, no gamification (1 day)
+### Phase 3+4 — Full book coverage — done 15 Nov
+The app now carries **all 99 chapters of the book** (was 26), restructured into 12 modules:
+
+| Module | Articles | Module | Articles |
+|---|---|---|---|
+| Foundations | 10 | Experiments & Statistics | 12 |
+| Interaction Design | 10 | Surveys & Metrics | 5 |
+| Forms, Controls & Status | 8 | Data Visualization | 3 |
+| Accessibility & Content | 6 | Business Impact | 9 |
+| Running Studies | 11 | AI UX | 4 |
+| Evidence & Bias | 9 | Career & Influence | 12 |
+
+Each new article has 3 learn cards with a quick check and a 5-question quiz, written from Calabro's posts via the book (792 questions in total). Generators live in `scripts/b_*.py`; `scripts/restructure.py` rebuilds the manifest from `scripts/article-meta.json`.
+
+Companion articles (Friedman, Raudaschl, FT, AI UX Playground, Hall/Torres) have no single original post, so they carry a `sourceNote` instead of a `source` URL, and the app renders it as text.
+
+**Answer-length bias after the expansion:** the correct option is the longest in 21% of questions (target ≤ 30%); by length rank it is 1st in 26%, 2nd in 40%, 3rd in 15%, 4th in 18%. Rank 1 is now at chance level. Rank 2 at 40% is the remaining weak cue and is worth evening out.
+
+### Phase 2 — Retention mechanics, no gamification (1 day) — NOT STARTED
 5. **Missed-question bank.** Persist missed question refs per article in `uxp-progress-v1`; clear a ref when answered right twice. Home shows "Review 7 missed questions" when non-empty.
 6. **Module review quiz.** `#/m/<id>/review` — 10 questions drawn across the module's articles, weighted toward missed ones. Counts toward module completion label ("Reviewed").
 7. **Concept index.** `#/index` — every learn-card title grouped by module, linking straight to the card. Replaces re-reading.
@@ -82,5 +100,5 @@ Folded into planned articles rather than new ones: Bach et al. dashboard tradeof
 ## Definition of done per phase
 - Phase 1: `check-content.py` passes with no errors (done); all 26 links return 200 (open); Phase 1b's 16 articles verified against the posts (open).
 - Phase 2: a missed question reappears in the bank and in the module review; index links land on the right card.
-- Phase 3–4: audit agent confirms each new article against its source; no quiz question asks what the cards don't teach.
+- Phase 3–4: structure done and all 99 render; an independent check of each new article against its source post is still outstanding.
 - Phase 5: app loads with network disabled after one visit.

@@ -1,0 +1,144 @@
+{
+ "id": "job-security",
+ "module": "career",
+ "title": "UX Job Security",
+ "icon": "🛡️",
+ "intro": "The amount of bad UX still shipping is the case for optimism.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "UX Job Security",
+   "learn": [
+    {
+     "title": "The heuristic review",
+     "text": "A visually stunning site failed on basics the stakeholders accepted immediately:\n\n• Four differently worded buttons (“Talk to a Representative”, “Compare Options”…) that all opened the same form\n• A gallery that swapped one stock photo for another\n• Hover-dependent multi-level navigation that collapsed if the pointer drifted\n• Top-level items that opened menus on hover but navigated on click\n\nProblems known for about **40 years**. The team simply agreed.",
+     "try": {
+      "type": "single",
+      "q": "What does the review's outcome suggest about demand for UX expertise?",
+      "options": [
+       "There is still plenty of basic work to do",
+       "Stakeholders already understand the basics",
+       "Visual design is the main gap",
+       "Teams resist UX recommendations"
+      ],
+      "answer": 0,
+      "explain": "The problems were decades old and nobody had caught them."
+     }
+    },
+    {
+     "title": "What the layoff data shows",
+     "text": "Lawton Pybus's analysis of 12 layoff directories covering 5,521 people:\n\n• Engineering — **27%**\n• Product and Program — **11%**\n• All UX roles — **8.7%**\n• UX Design — **3.9%**\n• UX Research — **2.3%**\n\n**These are directory shares, not layoff probabilities.** UX may still be hit hard relative to its size — the data says UX isn't being cut first, not that it's safe.",
+     "try": {
+      "type": "single",
+      "q": "What do the percentages represent?",
+      "options": [
+       "Shares of people listed in layoff directories",
+       "The probability of being laid off",
+       "Headcount reductions by department",
+       "The share of currently open roles by discipline"
+      ],
+      "answer": 0,
+      "explain": "Share of a directory isn't risk, because it doesn't account for how many people hold each role."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "The claim",
+       "items": [
+        "“UX is being cut first”",
+        "Research is the most exposed role",
+        "Engineering is protected"
+       ]
+      },
+      "right": {
+       "label": "The data",
+       "items": [
+        "UX roles are 8.7% of those listed",
+        "Research is 2.3%",
+        "Engineering is 27%"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Expert in the loop",
+     "text": "AI makes experts faster but **can't supply the expertise to tell good output from plausible output**.\n\nSo: ground AI recommendations in trusted sources — NN/g, MeasuringU, Baymard — and spot-check anything you'd be willing to act on.\n\nThat's the job that doesn't go away: judging whether the plausible thing is also the right thing.",
+     "try": {
+      "type": "single",
+      "q": "What is the expertise AI can't supply?",
+      "options": [
+       "Telling good output from plausible output",
+       "Writing faster first drafts",
+       "Summarising the published research literature",
+       "Generating design variations"
+      ],
+      "answer": 0,
+      "explain": "Which is why the expert stays in the loop."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Why is bad UX a reason for optimism?",
+     "options": [
+      "It shows how much work remains",
+      "It proves users tolerate poor design",
+      "It means standards are rising",
+      "It lowers competition for roles"
+     ],
+     "answer": 0,
+     "explain": "The basics are still being missed everywhere."
+    },
+    {
+     "type": "single",
+     "q": "How old were the problems in the heuristic review?",
+     "options": [
+      "About 40 years",
+      "About 10 years",
+      "About 20 years",
+      "They were new to the industry"
+     ],
+     "answer": 0,
+     "explain": "Hover-dependent navigation and mislabelled buttons are long-documented."
+    },
+    {
+     "type": "single",
+     "q": "Whose analysis is cited?",
+     "options": [
+      "Lawton Pybus's",
+      "Jeff Sauro's",
+      "Jakob Nielsen's",
+      "Baymard Institute's"
+     ],
+     "answer": 0,
+     "explain": "Across 12 layoff directories and 5,521 people."
+    },
+    {
+     "type": "single",
+     "q": "What is the caveat on the layoff figures?",
+     "options": [
+      "Shares don't account for role population sizes",
+      "The sample is too small",
+      "The data is from one country",
+      "Layoff directories exclude contractors and agencies"
+     ],
+     "answer": 0,
+     "explain": "UX may still be hit hard relative to its size."
+    },
+    {
+     "type": "single",
+     "q": "How should AI recommendations be handled?",
+     "options": [
+      "Grounded in trusted sources and spot-checked",
+      "Accepted whenever they match published best practice",
+      "Used only for first drafts",
+      "Avoided in client work"
+     ],
+     "answer": 0,
+     "explain": "NN/g, MeasuringU, Baymard — then verify."
+    }
+   ]
+  }
+ ]
+}

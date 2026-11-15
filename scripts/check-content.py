@@ -21,7 +21,8 @@ for m in manifest["modules"]:
         path = os.path.join(ROOT, a["file"])
         if a["id"] in seen: errors.append(f"duplicate article id {a['id']}")
         seen.add(a["id"])
-        if not a.get("source", "").startswith("https://"): errors.append(f"{a['id']}: missing source URL")
+        if not a.get("source", "").startswith("https://") and not a.get("sourceNote"):
+            errors.append(f"{a['id']}: needs a source URL or a sourceNote")
         if not os.path.exists(path): errors.append(f"{a['id']}: missing file {a['file']}"); continue
         try: art = json.load(open(path, encoding="utf-8"))
         except Exception as e: errors.append(f"{a['file']}: invalid JSON ({e})"); continue

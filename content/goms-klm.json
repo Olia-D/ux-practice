@@ -94,13 +94,13 @@
      "type": "single",
      "q": "What is an operator?",
      "options": [
-      "A keystroke, click, pointer move or mental step",
+      "A keystroke, click",
       "A person running the evaluation",
       "A rule for choosing a method",
       "A measured task completion"
      ],
      "answer": 0,
-     "explain": "KLM assigns each a standard time."
+     "explain": "KLM assigns each a standard time. Pointer move or mental step."
     },
     {
      "type": "single",

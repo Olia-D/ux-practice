@@ -106,13 +106,13 @@
      "type": "single",
      "q": "What should be reported alongside significance?",
      "options": [
-      "The difference, the uncertainty and the consequence",
+      "The difference",
       "The p-value and the sample size",
       "The method and the tool used",
       "The confidence level alone"
      ],
      "answer": 0,
-     "explain": "Together, so the reader can judge practical meaning."
+     "explain": "Together, so the reader can judge practical meaning. The uncertainty and the consequence."
     },
     {
      "type": "single",

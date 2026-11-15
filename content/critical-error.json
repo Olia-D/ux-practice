@@ -1,0 +1,144 @@
+{
+ "id": "critical-error",
+ "module": "career",
+ "title": "Never Ship a Known Critical Error",
+ "icon": "🚨",
+ "intro": "A team decided to ship “save content blocks” without edit or delete, because the stack couldn't support them yet. They called it MVP.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Never Ship a Known Critical Error",
+   "learn": [
+    {
+     "title": "Why it was critical, not minor",
+     "text": "Users would be stuck with every typo forever. Blocks could only be removed by an admin.\n\n• Typos saved permanently\n• Workspaces clogged with stale, slightly different blocks\n• “I have to email an admin to delete this?”\n\nA **critical error** stops users completing the task or recovering from a mistake — different from friction.",
+     "try": {
+      "type": "single",
+      "q": "What distinguishes a critical error from friction?",
+      "options": [
+       "Users can't complete or recover",
+       "It affects more users",
+       "It appears in every session",
+       "It has no workaround in the UI"
+      ],
+      "answer": 0,
+      "explain": "Friction slows people down; a critical error stops them."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "What the team saw",
+       "items": [
+        "Meets MVP criteria",
+        "Fix it in a later release",
+        "An experiment we can run"
+       ]
+      },
+      "right": {
+       "label": "What users would hit",
+       "items": [
+        "Typos saved forever",
+        "Stale blocks everywhere",
+        "An admin request to delete"
+       ]
+      }
+     }
+    },
+    {
+     "title": "One-on-one persuasion failed",
+     "text": "The argument that it still met MVP criteria “received no pushback in the meeting”.\n\nThe designer wasn't convinced and felt their concern had been dismissed. Calabro's attempts to argue it in conversation didn't change anything either.\n\nResistance here was about ownership and deadlines, not about the evidence.",
+     "try": {
+      "type": "single",
+      "q": "What was the real source of the resistance?",
+      "options": [
+       "Ownership and deadlines",
+       "Disagreement about the research",
+       "Lack of design resource",
+       "Uncertainty about user needs"
+      ],
+      "answer": 0,
+      "explain": "Which is why arguing the evidence one-on-one didn't work."
+     }
+    },
+    {
+     "title": "What changed it",
+     "text": "He teamed up with the designer, prototyped the feature quickly, and ran a short usability test with **five users**.\n\nOne participant spent several minutes trying to remove a block they had saved by mistake.\n\nThey cut a **two-minute highlight reel** of people hitting dead ends. That changed the outcome.\n\nThe lasting fix: make “no known critical errors at launch” an explicit release criterion.",
+     "try": {
+      "type": "single",
+      "q": "What finally changed the decision?",
+      "options": [
+       "A short highlight reel of users failing",
+       "A written risk assessment",
+       "Escalation to the product lead",
+       "A competitor comparison"
+      ],
+      "answer": 0,
+      "explain": "Five users, a quick prototype, two minutes of footage."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What was missing from the feature?",
+     "options": [
+      "Edit and delete",
+      "Search and filter",
+      "Sharing and permissions",
+      "Undo and version history"
+     ],
+     "answer": 0,
+     "explain": "Users could save blocks but never change them."
+    },
+    {
+     "type": "single",
+     "q": "What does “MVP” not justify, according to this article?",
+     "options": [
+      "Shipping a known critical error",
+      "A reduced feature set",
+      "A phased rollout",
+      "Deferring visual polish"
+     ],
+     "answer": 0,
+     "explain": "It's a release blocker, not a trade-off."
+    },
+    {
+     "type": "single",
+     "q": "How many users were in the test?",
+     "options": [
+      "Five",
+      "Twelve",
+      "Three",
+      "Twenty"
+     ],
+     "answer": 0,
+     "explain": "Enough to produce footage nobody could argue with."
+    },
+    {
+     "type": "single",
+     "q": "What is the lasting fix he recommends?",
+     "options": [
+      "Make it an explicit release criterion",
+      "Require research sign-off on every release",
+      "Add a UX representative to planning",
+      "Run a usability test before each launch"
+     ],
+     "answer": 0,
+     "explain": "“No known critical errors at launch”, written down."
+    },
+    {
+     "type": "single",
+     "q": "Why does showing beat arguing here?",
+     "options": [
+      "Footage of users failing is hard to dispute",
+      "Video is more persuasive than data",
+      "It avoids naming who was wrong",
+      "It takes less meeting time"
+     ],
+     "answer": 0,
+     "explain": "The evidence stopped being a matter of opinion."
+    }
+   ]
+  }
+ ]
+}

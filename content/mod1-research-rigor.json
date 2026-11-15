@@ -48,13 +48,13 @@
       "type": "single",
       "q": "Your team says: \"We already have strong signal from 3 prior studies and analytics. Let's just do a quick 5-person spot check.\" Is this appropriate?",
       "options": [
-       "Yes — if the decision is reversible and prior evidence is strong, lower rigor is reasonable",
+       "Yes — if the decision is reversible and prior evidence is strong",
        "No — you always need at least 20 participants",
        "No — prior studies are never relevant to a new decision, however similar the question is",
        "Yes — 5 users is always enough"
       ],
       "answer": 0,
-      "explain": "The 3 questions framework: if prior evidence is strong and the decision is reversible, a lighter approach is legitimate."
+      "explain": "The 3 questions framework: if prior evidence is strong and the decision is reversible, a lighter approach is legitimate. Lower rigor is reasonable."
      }
     }
    ],

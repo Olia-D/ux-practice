@@ -1,0 +1,144 @@
+{
+ "id": "c-eu-ai-labels",
+ "module": "ai-ux",
+ "title": "AI Labelling Is Now Law",
+ "icon": "⚖️",
+ "intro": "The EU AI Act's transparency rules have been in force since 2 August 2026. A sparkle icon is not a label.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "AI Labelling Is Now Law",
+   "learn": [
+    {
+     "title": "What must be disclosed",
+     "text": "Any product whose AI output reaches people in the EU must disclose:\n\n• **Chatbots and AI agents** — users must know they're not talking to a person\n• **Realistic images, audio or video** of real things (deepfakes)\n• **Unreviewed AI text on matters of public interest**\n• **Emotion recognition and biometric categorisation**\n\nPublic interest covers health, safety, environment, economy, finance, politics, science and culture — product claims touching these count.",
+     "try": {
+      "type": "single",
+      "q": "Which is usually exempt?",
+      "options": [
+       "Grammar and spellcheck assistance",
+       "A customer-service chatbot",
+       "A realistic synthetic product photo",
+       "Unreviewed AI text about a health claim"
+      ],
+      "answer": 0,
+      "explain": "Most AI-assisted work is exempt; it's the generated and unreviewed output that isn't."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Must be disclosed",
+       "items": [
+        "Chatbots and agents",
+        "Realistic synthetic media",
+        "Unreviewed public-interest text"
+       ]
+      },
+      "right": {
+       "label": "Usually exempt",
+       "items": [
+        "Human-reviewed text with a named editor",
+        "Spellcheck, grammar, translation",
+        "Clearly non-realistic imagery"
+       ]
+      }
+     }
+    },
+    {
+     "title": "What counts as review",
+     "text": "**A skim before publishing isn't review.** Editing must be substantive, and someone named takes responsibility.\n\nSummaries, composite images, substantive rewrites, and adding or removing elements in photographs all count as generation rather than assistance.",
+     "try": {
+      "type": "single",
+      "q": "Your team runs AI-drafted copy past an editor who scans it quickly. Is it exempt?",
+      "options": [
+       "No — review must be substantive",
+       "Yes, a human saw it",
+       "Only if the editor is named",
+       "Only outside public-interest topics"
+      ],
+      "answer": 0,
+      "explain": "A skim isn't review; someone named must take responsibility."
+     }
+    },
+    {
+     "title": "How to label",
+     "text": "Use the **EU mark plus plain text**. The label must be **visible, persistent and accessible** — not a decorative sparkle, not a tooltip, not something that disappears on scroll.\n\nIt also has to survive the places the content travels to: a label that only exists in your interface doesn't help when the image is shared.",
+     "try": {
+      "type": "single",
+      "q": "What is wrong with a sparkle icon as an AI label?",
+      "options": [
+       "It isn't a label",
+       "It fails colour contrast requirements",
+       "It isn't recognised outside the EU",
+       "It can't be made persistent"
+      ],
+      "answer": 0,
+      "explain": "Icon plus plain text, visible and persistent. It carries no meaning."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Since when have the transparency rules applied?",
+     "options": [
+      "2 August 2026",
+      "1 January 2026",
+      "2 August 2025",
+      "They are still in draft"
+     ],
+     "answer": 0,
+     "explain": "In force for anything EU users see."
+    },
+    {
+     "type": "single",
+     "q": "Who do the rules apply to?",
+     "options": [
+      "Any product whose AI output reaches EU users",
+      "Companies headquartered in the EU",
+      "Products with more than 10,000 EU users",
+      "Public-sector products only"
+     ],
+     "answer": 0,
+     "explain": "Reach, not location."
+    },
+    {
+     "type": "single",
+     "q": "Which topics count as public interest?",
+     "options": [
+      "Health, safety, environment, economy, finance, politics, science, culture",
+      "Politics and elections only",
+      "Health and safety only",
+      "Anything a journalist might cover"
+     ],
+     "answer": 0,
+     "explain": "Product claims touching these count."
+    },
+    {
+     "type": "single",
+     "q": "What must a label be, besides visible?",
+     "options": [
+      "Persistent and accessible",
+      "Localised and branded",
+      "Dismissible and compact",
+      "Linked to documentation"
+     ],
+     "answer": 0,
+     "explain": "It can't vanish on scroll or hide behind a tooltip."
+    },
+    {
+     "type": "single",
+     "q": "Does adding or removing elements in a photo count as generation?",
+     "options": [
+      "Yes",
+      "No, it's editing",
+      "Only for images of people",
+      "Only if the result is realistic"
+     ],
+     "answer": 0,
+     "explain": "Along with summaries, composites and substantive rewrites."
+    }
+   ]
+  }
+ ]
+}

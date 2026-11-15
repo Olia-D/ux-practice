@@ -1,0 +1,144 @@
+{
+ "id": "pmf",
+ "module": "business",
+ "title": "Measuring Product-Market Fit",
+ "icon": "🎯",
+ "intro": "One question, from Sean Ellis: “How would you feel if you could no longer use this product?”",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Measuring Product-Market Fit",
+   "learn": [
+    {
+     "title": "The 40% benchmark",
+     "text": "If **40% or more** of real, recent users answer **“very disappointed”**, you're likely on track.\n\nIgnore the “somewhat disappointed” group — to them you're a nice-to-have.\n\nEllis himself calls 40% a target to aim for, not a magic line: a leading indicator, not a certificate.",
+     "try": {
+      "type": "single",
+      "q": "Which answer group does the benchmark count?",
+      "options": [
+       "Very disappointed",
+       "Somewhat disappointed",
+       "Both disappointed groups",
+       "Everyone who responded"
+      ],
+      "answer": 0,
+      "explain": "“Somewhat” means nice-to-have."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Counts",
+       "items": [
+        "“Very disappointed”",
+        "Recent, meaningful users",
+        "40% or more"
+       ]
+      },
+      "right": {
+       "label": "Doesn't count",
+       "items": [
+        "“Somewhat disappointed”",
+        "Everyone on the mailing list",
+        "A score from inactive users"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Who to ask",
+     "text": "Survey people who have used the product **recently and meaningfully** — not everyone on the list.\n\nAn inactive user's answer tells you about your churn, not your fit. Mixing them in moves the number without telling you anything you can act on.\n\nEllis's own example: a startup scored **7%**, made targeted changes, and reached **40%** two weeks later.",
+     "try": {
+      "type": "single",
+      "q": "A startup scores 7% and reaches 40% two weeks later. What does that show?",
+      "options": [
+       "The score responds to targeted changes",
+       "The first measurement was wrong",
+       "Two weeks is the right interval",
+       "Product-market fit is easy to reach quickly"
+      ],
+      "answer": 0,
+      "explain": "It's a leading indicator you can move, not a fixed property."
+     }
+    },
+    {
+     "title": "The follow-up questions",
+     "text": "The survey points you at **whom to learn from**, not why.\n\nFollow up with the “very disappointed” group:\n\n• What is the main benefit you get?\n• Who else would benefit from this?\n• How could we improve it for you?\n• What would you use instead?\n\nThen triangulate with usage data and interviews.",
+     "try": {
+      "type": "single",
+      "q": "What does the survey itself not tell you?",
+      "options": [
+       "Why people feel that way",
+       "How many are very disappointed",
+       "Whether you're on track",
+       "Which segment responded"
+      ],
+      "answer": 0,
+      "explain": "It identifies whom to interview next."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Whose survey is this?",
+     "options": [
+      "Sean Ellis's",
+      "Jeff Sauro's",
+      "Teresa Torres's",
+      "Jakob Nielsen's"
+     ],
+     "answer": 0,
+     "explain": "Widely used as a product-market fit signal."
+    },
+    {
+     "type": "single",
+     "q": "What is the question asked?",
+     "options": [
+      "How would you feel if you could no longer use this?",
+      "How likely are you to recommend this to a colleague?",
+      "How satisfied are you overall?",
+      "How often do you use this?"
+     ],
+     "answer": 0,
+     "explain": "The disappointment framing is what makes it predictive."
+    },
+    {
+     "type": "single",
+     "q": "Why ignore “somewhat disappointed”?",
+     "options": [
+      "To them the product is a nice-to-have",
+      "They rarely respond to follow-ups",
+      "Their answers are statistically noisy",
+      "They are usually new users"
+     ],
+     "answer": 0,
+     "explain": "Only strong disappointment signals fit."
+    },
+    {
+     "type": "single",
+     "q": "Who should be surveyed?",
+     "options": [
+      "Recent, meaningful users",
+      "Everyone with a registered account",
+      "Users who churned",
+      "A random market sample"
+     ],
+     "answer": 0,
+     "explain": "Otherwise the number measures something else."
+    },
+    {
+     "type": "single",
+     "q": "What should follow the survey?",
+     "options": [
+      "Interviews with the most disappointed group",
+      "A second survey to confirm the first set of results",
+      "A pricing experiment",
+      "A competitor analysis"
+     ],
+     "answer": 0,
+     "explain": "Plus triangulation with usage data."
+    }
+   ]
+  }
+ ]
+}

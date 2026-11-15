@@ -17,7 +17,7 @@
       "q": "What is Calabro's main objection to the Baymard article?",
       "options": [
        "It legitimises a pattern the evidence rejects",
-       "Its ten requirements are technically wrong",
+       "Its ten requirements contradict the research it cites",
        "It was published without original research",
        "It ignores accessibility entirely"
       ],
@@ -53,7 +53,7 @@
       "options": [
        "Say plainly that it's harm reduction",
        "Withhold the guidance entirely",
-       "Add a disclaimer about sample sizes",
+       "Add a disclaimer about the sample sizes behind it",
        "Require sign-off from a researcher"
       ],
       "answer": 0,
@@ -68,7 +68,7 @@
       "q": "What industry habit does the article criticise?",
       "options": [
        "Softening strong evidence to stay agreeable",
-       "Publishing research without peer review",
+       "Publishing usability research without peer review",
        "Relying on competitor analysis",
        "Testing with too few participants"
       ],
@@ -95,7 +95,7 @@
      "q": "Which counter-argument does Calabro accept as reasonable?",
      "options": [
       "Stopgap guidance for teams phasing carousels out",
-      "Carousels work well when auto-rotation is off",
+      "Carousels perform acceptably once auto-rotation is off",
       "Carousel performance depends on the industry",
       "Users have learned to expect carousels by now"
      ],
@@ -120,7 +120,7 @@
      "options": [
       "Teams cite it as permission to ship the pattern",
       "Guides reach a larger audience",
-      "Opinion pieces are rarely read by stakeholders",
+      "Opinion pieces are rarely read by product stakeholders",
       "Guides are harder to correct later"
      ],
      "answer": 0,
@@ -133,7 +133,7 @@
       "How the UX industry communicates evidence",
       "The specific usability of carousels",
       "Baymard's research methodology",
-      "E-commerce homepage conversion rates"
+      "E-commerce homepage conversion rates across retailers"
      ],
      "answer": 0,
      "explain": "Carousels are the example, not the subject."

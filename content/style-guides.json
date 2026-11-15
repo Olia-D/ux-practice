@@ -85,7 +85,7 @@
       "Developers make UX decisions without context",
       "Designers spend longer in review",
       "Components take longer to build",
-      "The design system falls out of date"
+      "The design system gradually falls out of date"
      ],
      "answer": 0,
      "explain": "The inconsistency surfaces as bugs and accessibility failures."
@@ -96,7 +96,7 @@
      "options": [
       "Immediate proof the action registered",
       "A preview of the resulting page",
-      "An indication the control is enabled",
+      "An indication that the control is still enabled",
       "A visual match with the hover state"
      ],
      "answer": 0,
@@ -108,7 +108,7 @@
      "options": [
       "Whenever it triggers a background process",
       "Only on forms that submit to a server",
-      "Only when the wait exceeds five seconds",
+      "Only when the expected wait exceeds five seconds",
       "Whenever the design system provides one"
      ],
      "answer": 0,
@@ -119,7 +119,7 @@
      "q": "Why do combined states matter?",
      "options": [
       "Users switch between mouse and keyboard",
-      "Designers forget to specify them",
+      "Designers routinely forget to specify them",
       "They are required by WCAG 2.2",
       "They appear only in dark mode"
      ],
@@ -133,7 +133,7 @@
       "What happens while the action is processing",
       "Which grey the disabled state uses",
       "How much padding the label gets",
-      "Which corner radius the component has"
+      "Which corner radius the component should have"
      ],
      "answer": 0,
      "explain": "Behaviour is what the guide must specify."

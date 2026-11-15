@@ -19,7 +19,7 @@
        "At the hand-offs between stages",
        "In the synthesis stage",
        "During recruiting",
-       "When reporting to stakeholders"
+       "When reporting findings to stakeholders"
       ],
       "answer": 0,
       "explain": "Each transition adds admin work and loses fidelity."
@@ -32,13 +32,13 @@
       "type": "single",
       "q": "What should an ops audit look for?",
       "options": [
-       "What gets re-typed, re-uploaded or re-explained",
+       "What gets re-typed",
        "How many tools the team pays for",
        "How long each study takes end to end",
        "Which methods are used most often"
       ],
       "answer": 0,
-      "explain": "The friction lives in the transitions."
+      "explain": "The friction lives in the transitions. Re-uploaded or re-explained."
      },
      "visual": {
       "type": "compare",
@@ -83,7 +83,7 @@
      "q": "What does Calabro say research usually fails for?",
      "options": [
       "Hand-offs, not methods or talent",
-      "Lack of stakeholder buy-in",
+      "A lack of stakeholder buy-in and budget",
       "Insufficient sample sizes",
       "Poor question design"
      ],
@@ -109,7 +109,7 @@
       "Outreach from a real person that looks legitimate",
       "Larger incentives",
       "Shorter screener surveys",
-      "Contacting people on weekdays"
+      "Contacting people on weekday mornings rather than evenings"
      ],
      "answer": 0,
      "explain": "Legitimacy matters more than volume."
@@ -120,7 +120,7 @@
      "options": [
       "The data goes stale and work is duplicated",
       "It breaches data protection rules",
-      "Recruiting platforms charge per pool",
+      "Recruiting platforms charge for each pool you build",
       "Participants resent repeat contact"
      ],
      "answer": 0,
@@ -131,7 +131,7 @@
      "q": "What should the final story do?",
      "options": [
       "Trace back to the evidence",
-      "Summarise every session",
+      "Summarise every session in order",
       "Lead with the method",
       "Include all raw quotes"
      ],

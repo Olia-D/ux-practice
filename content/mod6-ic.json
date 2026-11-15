@@ -37,13 +37,13 @@
       "type": "single",
       "q": "A UX finding changes how the product team frames their entire roadmap. What kind of influence is this?",
       "options": [
-       "Insight-driven — it changed thinking, not reporting lines",
+       "Insight-driven — it changed thinking",
        "Authority-driven — it changed the roadmap",
        "Neither — roadmap decisions are PM territory",
        "Political — it's about internal dynamics"
       ],
       "answer": 0,
-      "explain": "Changing how people think about problems is insight-driven influence. No authority needed."
+      "explain": "Changing how people think about problems is insight-driven influence. No authority needed. Not reporting lines."
      }
     },
     {

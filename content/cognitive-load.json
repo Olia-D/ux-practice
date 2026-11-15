@@ -80,13 +80,13 @@
      "type": "single",
      "q": "Where does cognitive load theory come from?",
      "options": [
-      "Educational psychology, via John Sweller",
+      "Educational psychology",
       "Human factors research in aviation",
       "Nielsen Norman Group's heuristics",
       "Cognitive neuroscience in the 2000s"
      ],
      "answer": 0,
-     "explain": "Late 1980s, before UX adopted it."
+     "explain": "Late 1980s, before UX adopted it. Via John Sweller."
     },
     {
      "type": "single",

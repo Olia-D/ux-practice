@@ -130,13 +130,13 @@
      "type": "single",
      "q": "What are chips best for?",
      "options": [
-      "Short multi-select, such as filters",
+      "Short multi-select",
       "Single-choice questions",
       "Binary settings",
       "Long lists of records"
      ],
      "answer": 0,
-     "explain": "Styling radio buttons as chips is listed as a mistake."
+     "explain": "Styling radio buttons as chips is listed as a mistake. Such as filters."
     }
    ]
   }

@@ -1,0 +1,144 @@
+{
+ "id": "leader-traps",
+ "module": "career",
+ "title": "Four Traps That Block UX Leaders",
+ "icon": "🪤",
+ "intro": "From his UXPA 2026 keynote: Muriel Wilkins's seven hidden blockers, grouped into four traps for UX people at any level.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Four Traps That Block UX Leaders",
+   "learn": [
+    {
+     "title": "The seven blockers",
+     "text": "“I need to be involved.” · “I can't say no.” · “I need it done now.” · “I can't make a mistake.” · “I know I'm right.” · “If I can do it, so can you.” · “I don't belong here.”\n\nEach starts as a strength that turned into a reflex.",
+     "try": {
+      "type": "single",
+      "q": "What do the blockers have in common?",
+      "options": [
+       "Each is a strength that became a reflex",
+       "Each comes from inexperience",
+       "Each affects only managers",
+       "Each is a response to a difficult manager"
+      ],
+      "answer": 0,
+      "explain": "The value isn't the problem; the automatic reaction is."
+     }
+    },
+    {
+     "title": "Four traps",
+     "text": "**Over-functioning** — “I need to be involved” and “I can't say no”\n→ reframe: where do I add the *most* value? When does saying yes truly matter?\n\n**Pacing and perfection** — “I need it done now” and “I can't make a mistake”\n→ panic or paralysis, both expensive\n\n**Partnership** — “I know I'm right” and “If I can do it, so can you”\n\n**Leader identity** — “I don't belong here”: waiting for permission to lead",
+     "try": {
+      "type": "single",
+      "q": "Which trap pairs “I need it done now” with “I can't make a mistake”?",
+      "options": [
+       "Pacing and perfection",
+       "Over-functioning at work",
+       "Partnership",
+       "Leader identity"
+      ],
+      "answer": 0,
+      "explain": "Panic and paralysis are two faces of the same trap."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "The blocker",
+       "items": [
+        "“I need to be involved”",
+        "“I need it done now”",
+        "“I know I'm right”"
+       ]
+      },
+      "right": {
+       "label": "The reframe",
+       "items": [
+        "Where do I add most value?",
+        "What pace does this actually need?",
+        "What might they be seeing?"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Why UX people get these",
+     "text": "Wanting to be involved often comes from **knowing UX gets brought in too late**. That experience is real — the reflex it creates isn't always useful.\n\nThe self-coaching loop: notice the trigger (an invitation, a deadline, a challenge), name the blocker, ask what it's protecting, choose the reframe, act — then review afterwards.",
+     "try": {
+      "type": "single",
+      "q": "What is the first step of the self-coaching loop?",
+      "options": [
+       "Notice the trigger",
+       "Name the blocker",
+       "Choose a reframe",
+       "Ask what it protects"
+      ],
+      "answer": 0,
+      "explain": "An invitation, a deadline or a challenge."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Whose book is this based on?",
+     "options": [
+      "Muriel Wilkins's Leadership Unblocked",
+      "Marty Cagan's Inspired",
+      "Teresa Torres's Continuous Discovery Habits",
+      "Erika Hall's Just Enough Research"
+     ],
+     "answer": 0,
+     "explain": "From Calabro's UXPA 2026 opening keynote."
+    },
+    {
+     "type": "single",
+     "q": "How many hidden blockers does Wilkins describe?",
+     "options": [
+      "Seven",
+      "Fourteen",
+      "Five",
+      "Ten"
+     ],
+     "answer": 0,
+     "explain": "Calabro groups them into four traps."
+    },
+    {
+     "type": "single",
+     "q": "Which blocker belongs to the leader-identity trap?",
+     "options": [
+      "“I don't belong here”",
+      "“I can't say no”",
+      "“I know I'm right”",
+      "“I need it done right now”"
+     ],
+     "answer": 0,
+     "explain": "Waiting for permission to lead."
+    },
+    {
+     "type": "single",
+     "q": "Why do UX people often feel they must be involved in everything?",
+     "options": [
+      "They know UX gets brought in too late",
+      "They don't trust other disciplines",
+      "They are measured on visibility",
+      "Their teams are almost always understaffed"
+     ],
+     "answer": 0,
+     "explain": "A real experience, turned into an automatic reaction."
+    },
+    {
+     "type": "single",
+     "q": "What does the loop end with?",
+     "options": [
+      "Reviewing afterwards",
+      "Acting on the reframe",
+      "Naming the blocker",
+      "Asking a colleague"
+     ],
+     "answer": 0,
+     "explain": "Notice, name, ask, reframe, act, review."
+    }
+   ]
+  }
+ ]
+}

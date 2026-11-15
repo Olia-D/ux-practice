@@ -1,0 +1,144 @@
+{
+ "id": "opt-in",
+ "module": "career",
+ "title": "The Opt-In Approach",
+ "icon": "🌱",
+ "intro": "Instead of converting sceptics, work with the colleagues who already value research.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "The Opt-In Approach",
+   "learn": [
+    {
+     "title": "The approach",
+     "text": "**Find allies** — curious or frustrated colleagues\n**Start small** — a project you know will succeed\n**Let it spread** — results, not declarations\n**Trade up** — replace low-value work with opt-in demand\n**Say no gently** — offer alternatives, be transparent\n\nIt blends bottom-up management, servant leadership and the HCI idea of user opt-in.",
+     "try": {
+      "type": "single",
+      "q": "Who should you start with?",
+      "options": [
+       "Colleagues who already want it",
+       "The most sceptical stakeholder",
+       "The most senior executive",
+       "Whoever controls the budget"
+      ],
+      "answer": 0,
+      "explain": "Demand spreads from results, not from persuasion."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "“Teach them the value first”",
+       "items": [
+        "Convert the sceptics",
+        "Declare UX principles",
+        "Wait for a mandate"
+       ]
+      },
+      "right": {
+       "label": "Opt-in",
+       "items": [
+        "Work with willing partners",
+        "Deliver a visible win",
+        "Let demand spread"
+       ]
+      }
+     }
+    },
+    {
+     "title": "How to find them",
+     "text": "Listen in cross-functional meetings for **who asks about users** — and who **complains about customer pain**. Both are signals of someone ready to opt in.\n\nThen choose a manageable first project with a likely, measurable win. Not the hardest problem; the one that will demonstrably work.",
+     "try": {
+      "type": "single",
+      "q": "Which colleague is a likely ally?",
+      "options": [
+       "One who complains about customer pain",
+       "One who asks for faster delivery",
+       "One who owns the largest budget",
+       "One who has used research before"
+      ],
+      "answer": 0,
+      "explain": "Frustration with customer problems is an opening."
+     }
+    },
+    {
+     "title": "Saying no without saying no",
+     "text": "Prioritise existing commitments honestly, and use opt-in demand to **retire low-value requests**.\n\nWhen you have to decline: offer a lighter method, a later slot, or existing evidence. Be transparent about why.\n\nThis is the origin of his later “research as a service” model — the same idea, matured.",
+     "try": {
+      "type": "single",
+      "q": "What should you offer when declining a request?",
+      "options": [
+       "A lighter method, a later slot",
+       "A detailed explanation of your workload",
+       "An escalation to your manager",
+       "A promise to revisit next quarter"
+      ],
+      "answer": 0,
+      "explain": "Saying no without saying no. Or existing evidence."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the premise of the opt-in approach?",
+     "options": [
+      "Build influence with people who already want it",
+      "Persuade executives first",
+      "Run research in secret until it proves itself",
+      "Standardise research across the org"
+     ],
+     "answer": 0,
+     "explain": "“You must teach stakeholders the value first” rarely works with executives."
+    },
+    {
+     "type": "single",
+     "q": "What should the first project be?",
+     "options": [
+      "Manageable, with a likely measurable win",
+      "The highest-profile problem available",
+      "The one the sceptics care about",
+      "A long-term discovery study"
+     ],
+     "answer": 0,
+     "explain": "Visible success is the recruiting mechanism."
+    },
+    {
+     "type": "single",
+     "q": "What spreads the approach?",
+     "options": [
+      "Results",
+      "Declarations of principle",
+      "Training sessions",
+      "Executive mandates"
+     ],
+     "answer": 0,
+     "explain": "Let the work do the arguing."
+    },
+    {
+     "type": "single",
+     "q": "What should opt-in demand be used to retire?",
+     "options": [
+      "Low-value requests",
+      "Quantitative studies",
+      "Stakeholder interviews",
+      "Design critiques"
+     ],
+     "answer": 0,
+     "explain": "Trading up is part of the method."
+    },
+    {
+     "type": "single",
+     "q": "What did this approach grow into?",
+     "options": [
+      "Research as a service",
+      "The 5-star confidence system",
+      "The PURE method",
+      "The fuzzy-middle argument"
+     ],
+     "answer": 0,
+     "explain": "The same idea, matured."
+    }
+   ]
+  }
+ ]
+}
