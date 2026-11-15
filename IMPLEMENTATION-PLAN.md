@@ -33,17 +33,17 @@ Confirmed missing: *UX Job Security*, *UX Has a Basics Problem*, *The Rules of A
 
 ### Phase 1 — Fix what's broken (½ day)
 1. **De-bias answer length.** Script flags every question where the correct option is the longest; rewrite distractors to match length and specificity (plausible wrong answers, not short throwaways). Target: correct-is-longest ≤ 30%, no article above 50%. Re-run the content audit agent on rewritten questions.
-2. **Fix source links.** Resolve all 26 real slugs; verify each returns 200; update manifest.
+2. ~~**Fix source links.**~~ Done 15 Nov — 21 of 26 slugs were wrong; now taken from the book. Resolve all 26 real slugs; verify each returns 200; update manifest.
 3. **Add `scripts/check-content.py`** — JSON validity, id uniqueness, answer index in range, longest-option ratio, every manifest file exists, link check. Document "run before push" in README.
-4. Rename manifest title; enable the Check button with inline prompt.
+4. ~~Rename manifest title~~ (done); enable the Check button with inline prompt.
 
 ### Phase 2 — Retention mechanics, no gamification (1 day)
 5. **Missed-question bank.** Persist missed question refs per article in `uxp-progress-v1`; clear a ref when answered right twice. Home shows "Review 7 missed questions" when non-empty.
 6. **Module review quiz.** `#/m/<id>/review` — 10 questions drawn across the module's articles, weighted toward missed ones. Counts toward module completion label ("Reviewed").
 7. **Concept index.** `#/index` — every learn-card title grouped by module, linking straight to the card. Replaces re-reading.
 
-### Phase 3 — Complete the newsletter (1 day)
-8. Add the 9 missing Calabro articles: split buttons, dark patterns 2026, basics problem, job security into Modules 4/6; *Rules of AI Chat History* becomes the seed of Module 8. Same format: 3 cards, 5 questions, compare visuals where there's a do/don't. Verify against originals with the audit agent.
+### Phase 3 — Bring the app up to the book (1–2 days)
+8. The book (v2, Nov 2026) now has 54 Calabro articles; the app has 26. Candidates, in priority order: Top 10 UX Misunderstandings is in; add **UX Has a Basics Problem, Stop Weaponizing Miller's Law, Primary Navigation Guide, Onboarding & In-App Help, Research Rigor** (already in), **Time-on-Task, A/B Strategies, A/B Sample Sizing, Statistically Significant or Not, Mixed Methods at Work, Research as a Service** (in), **Choosing the Right Chart Type, Dark Patterns 2026, The Rules of AI Chat History**. Book articles from before v2 not yet in the app: split buttons, navigation, carousels, Jakob's Law, accessibility, dark patterns 2025, career paths. Same format; verify against originals with the audit agent.
 
 ### Phase 4 — Two new modules from today's sources (2 days)
 9. **Module 7 — Data Visualization** (5 articles): Choosing the chart (FT purposes) · Chart design rules (London: data-ink, labels, zero baseline) · Colour scales (Datawrapper) · Dashboards that lead to decisions (ACES + Calabro's three jobs) · Accessible charts (Fossheim, Chartability critical checks). Compare visuals carry most of the weight here.
