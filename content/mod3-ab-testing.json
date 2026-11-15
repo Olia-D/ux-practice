@@ -1,135 +1,144 @@
 {
-  "id": "ab-testing",
-  "module": "testing-analysis",
-  "title": "A/B Testing and the Two-Party Trap",
-  "icon": "⚖️",
-  "intro": "A/B testing only tells you which version won — not why. Most teams run weak tests with vague hypotheses, then treat the winner as proof. This article covers what makes a test worth running.",
-  "topics": [
+ "id": "ab-testing",
+ "module": "testing-analysis",
+ "title": "A/B Testing and the Two-Party Trap",
+ "icon": "⚖️",
+ "intro": "Calabro compares A/B testing to the US two-party system: both assume almost any problem reduces to two options, and both sell clarity while delivering a narrow answer.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "A/B Testing and the Two-Party Trap",
+   "learn": [
     {
-      "id": "core",
-      "title": "Core Concepts",
-      "learn": [
-        {
-          "title": "Weak vs. strong A/B tests",
-          "text": "Most A/B tests are weak. They test vague ideas (\"we think this version will perform better\") with no link to a user problem.\n\nA **strong** test starts with a specific hypothesis: what user behavior are you trying to change, what causes it, and what exactly is changing in the design.\n\n**Weak:** \"Make the button brighter because we think it converts better.\"\n**Strong:** \"Users miss the primary action because it blends with surrounding content. Increasing contrast and adding a verb label should raise task completion.\"",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Weak Test", "items": ["Vague hypothesis", "Opinion-based variations", "Multiple changes at once", "Only tracks clicks"] },
-            "right": { "label": "Strong Test", "items": ["Specific hypothesis tied to user problem", "Variations grounded in research", "One variable isolated", "Guardrail metrics included"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A PM says: \"Let's A/B test the new checkout — we changed the layout, copy, and color scheme all at once.\" What's the problem?",
-            "options": [
-              "You can't attribute the result to any single change",
-              "A/B tests need at least 3 variants",
-              "Color changes don't affect conversion",
-              "You should only test on mobile"
-            ],
-            "answer": 0,
-            "explain": "When multiple things change at once, a win tells you the package won — not which change drove it. You need multivariate testing or staged tests."
-          }
-        },
-        {
-          "title": "Match the test to the claim",
-          "text": "The size of your claim should match the scope of your test.\n\n→ Changed **one element** (e.g., button label)? You can claim something about that element.\n→ Tested a **full redesign**? You can only compare two design packages — not claim any single change drove the result.\n→ Changed **several variables**? You need a multivariate test or a staged rollout.\n\nA bigger button getting more clicks could mean: better discoverability, clearer copy, attention pulled from other content, or pressure to act before understanding. Each explanation points to a different fix.",
-          "try": {
-            "type": "single",
-            "q": "Your A/B test compared a full page redesign against the original. The new version won. What can you claim?",
-            "options": [
-              "The new design package performed better overall on the measured metric",
-              "Every individual change in the redesign was an improvement",
-              "The new layout caused the improvement",
-              "The old design was bad"
-            ],
-            "answer": 0,
-            "explain": "A full redesign test only compares two packages. You can't attribute the win to any single element — it could be the layout, the copy, or something else entirely."
-          }
-        },
-        {
-          "title": "Ground your variations in research",
-          "text": "The best A/B tests don't start in a design tool — they start in research.\n\n**Before designing a variation:**\n→ Run a usability test to find where users actually struggle\n→ Check behavioral analytics and session replays\n→ Interview users to understand the problem\n\n**Torres's alternative:** Instead of A/B testing whole ideas, identify your riskiest assumptions and test those individually. A 10-person simulation test on one assumption takes a day. An A/B test on the whole idea takes weeks and still can't tell you which assumption was wrong.\n\n**Before launching a test:**\n→ Quick usability check on both variants\n→ Define guardrail metrics (support contacts, downstream completion, accessibility)\n→ Ask: \"What will we learn either way?\"\n\nIf a test only teaches you something when it wins, it's a weak test. A good test generates insight regardless of outcome.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Don't", "items": ["Test based on team opinions", "Track only clicks", "Ship the winner without asking why", "Celebrate the p-value"] },
-            "right": { "label": "Do", "items": ["Ground variations in user research", "Add guardrail metrics", "Investigate why a variant won", "Ask what you'll learn either way"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Your A/B test shows Variant B raised CTA clicks by 11%. What should you do next?",
-            "options": [
-              "Investigate what else changed that week and who clicked",
-              "Ship Variant B immediately",
-              "Run the test again with more users",
-              "Celebrate and move to the next feature"
-            ],
-            "answer": 0,
-            "explain": "A click increase alone doesn't tell you why. You need to check what else changed, who the clickers were, and what happened after the click."
-          }
-        }
+     "title": "The false choice",
+     "text": "An A/B test only compares the two things you thought of. Life doesn't work that way: users, like voters, aren't a toggle. They are driven by a network of motivations, needs and context.\n\nA user might like option A's interaction and option B's layout. A binary test has no way to say so.",
+     "try": {
+      "type": "single",
+      "q": "Variant B beat variant A. What have you learned?",
+      "options": [
+       "B did better than A on that metric",
+       "B is the best possible design for users",
+       "Users understand and like variant B",
+       "The redesign as a whole was worth doing"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What makes an A/B test hypothesis \"weak\"?",
-          "options": [
-            "It has no link to a specific user problem or expected behavior change",
-            "It tests only one variable at a time",
-            "It includes guardrail metrics",
-            "It runs for too long"
-          ],
-          "answer": 0,
-          "explain": "A weak hypothesis is vague — \"we think this will perform better\" — with no connection to a user problem or behavioral expectation."
-        },
-        {
-          "type": "single",
-          "q": "You A/B test a full page redesign and the new version wins. What can you claim?",
-          "options": [
-            "The new package performed better on the chosen metric",
-            "Each individual change was an improvement",
-            "The new layout was the key driver",
-            "The original design was fundamentally flawed"
-          ],
-          "answer": 0,
-          "explain": "A full redesign test compares two packages. You can't attribute the win to any single change within the redesign."
-        },
-        {
-          "type": "single",
-          "q": "What is a guardrail metric in A/B testing?",
-          "options": [
-            "A metric that catches harm outside the primary metric being tested",
-            "The minimum sample size needed",
-            "The p-value threshold for significance",
-            "The baseline conversion rate"
-          ],
-          "answer": 0,
-          "explain": "Guardrail metrics (like support contacts or downstream completion) catch negative effects the primary metric might miss — e.g., clicks went up but confusion increased."
-        },
-        {
-          "type": "single",
-          "q": "What's the UX researcher's primary role in A/B testing?",
-          "options": [
-            "Clarify the user problem and turn vague ideas into testable hypotheses",
-            "Choose the sample size and run the statistical analysis",
-            "Design both variants in Figma",
-            "Present the winning variant to stakeholders"
-          ],
-          "answer": 0,
-          "explain": "UXR's role is to ground the test in real user problems, sharpen the hypothesis, flag when too many things change at once, and keep interpretation honest."
-        },
-        {
-          "type": "single",
-          "q": "A bigger, brighter CTA button gets more clicks in an A/B test. Which explanation is NOT a plausible cause?",
-          "options": [
-            "The button color scientifically triggers purchasing behavior",
-            "The button was easier to discover due to higher contrast",
-            "The copy was clearer and more action-oriented",
-            "The button pulled attention from surrounding content"
-          ],
-          "answer": 0,
-          "explain": "There's no scientific evidence that specific button colors trigger purchasing. The other explanations — discoverability, clarity, and attention redistribution — are all plausible."
-        }
-      ]
+      "answer": 0,
+      "explain": "Winning a two-way comparison says nothing about options you didn't test, or why B won."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "What A/B tells you",
+       "items": [
+        "Which of two did better",
+        "On one metric",
+        "For one change"
+       ]
+      },
+      "right": {
+       "label": "What it leaves out",
+       "items": [
+        "Whether either is good",
+        "Why it happened",
+        "Options you didn't build"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The illusion of learning",
+     "text": "A/B testing promises hard data on which design is better. But you are looking at **one variable at a time**.\n\n“You might get a 5% bump in clicks by changing a button size, but what does that really tell you about the overall experience?”",
+     "try": {
+      "type": "single",
+      "q": "A bigger button gets 5% more clicks. What does Calabro say this tells you about the overall experience?",
+      "options": [
+       "Very little",
+       "That the page is now easier to use",
+       "That users prefer larger controls",
+       "That conversion will rise by 5% too"
+      ],
+      "answer": 0,
+      "explain": "One variable on one metric is a narrow answer."
+     }
+    },
+    {
+     "title": "Confounds, and what to do",
+     "text": "Test more than one element at once, such as button placement and navigation structure, and you can no longer tell which change caused the result.\n\nFactors interact. That is why Calabro prefers **multivariate testing** when several things change, plus research that explains why.",
+     "try": {
+      "type": "single",
+      "q": "You change the button placement and the navigation in the same A/B variant, and it wins. What is the problem?",
+      "options": [
+       "You can't tell which change caused the result",
+       "The sample was too small to be valid",
+       "A/B tests can't measure changes to navigation structure",
+       "Winning variants must always be re-tested"
+      ],
+      "answer": 0,
+      "explain": "Two changes in one variant are confounded."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What do A/B testing and a two-party system share, in Calabro's analogy?",
+     "options": [
+      "They reduce complex choices to two options",
+      "They both rely on very large samples",
+      "They always produce a clear majority",
+      "They measure opinions rather than behaviour"
+     ],
+     "answer": 0,
+     "explain": "Both squeeze real-world complexity into an artificial binary."
+    },
+    {
+     "type": "single",
+     "q": "What can a binary test not express?",
+     "options": [
+      "Liking parts of A and parts of B",
+      "Which variant got more clicks",
+      "A difference in conversion rate",
+      "That one option lost the comparison"
+     ],
+     "answer": 0,
+     "explain": "Anything that doesn't fit the two options is ignored."
+    },
+    {
+     "type": "single",
+     "q": "What does Calabro recommend when several factors interact?",
+     "options": [
+      "Multivariate testing",
+      "Running the same A/B test twice",
+      "Testing with a smaller audience",
+      "Asking stakeholders to pick a winner"
+     ],
+     "answer": 0,
+     "explain": "It accounts for how different factors shape behaviour together."
+    },
+    {
+     "type": "single",
+     "q": "Why is the “clarity” of an A/B result limited?",
+     "options": [
+      "It looks at one variable at a time",
+      "It can only be run on mobile traffic",
+      "It never reaches significance",
+      "It needs users to explain their choice"
+     ],
+     "answer": 0,
+     "explain": "A narrow comparison gives a narrow answer."
+    },
+    {
+     "type": "single",
+     "q": "Which statement fits the article best?",
+     "options": [
+      "It compares two options; it doesn't show either is good",
+      "A/B tests are useless and should be dropped",
+      "A/B tests are reliable only for small visual changes to a page",
+      "A/B results should always override research"
+     ],
+     "answer": 0,
+     "explain": "It is a critique of binary thinking, not a ban on testing."
+    }
+   ]
+  }
+ ]
 }

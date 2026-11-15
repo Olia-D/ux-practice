@@ -31,11 +31,17 @@ Confirmed missing: *UX Job Security*, *UX Has a Basics Problem*, *The Rules of A
 
 ## Plan
 
-### Phase 1 — Fix what's broken (½ day)
-1. **De-bias answer length.** Script flags every question where the correct option is the longest; rewrite distractors to match length and specificity (plausible wrong answers, not short throwaways). Target: correct-is-longest ≤ 30%, no article above 50%. Re-run the content audit agent on rewritten questions.
-2. ~~**Fix source links.**~~ Done 15 Nov — 21 of 26 slugs were wrong; now taken from the book. Resolve all 26 real slugs; verify each returns 200; update manifest.
-3. **Add `scripts/check-content.py`** — JSON validity, id uniqueness, answer index in range, longest-option ratio, every manifest file exists, link check. Document "run before push" in README.
-4. ~~Rename manifest title~~ (done); enable the Check button with inline prompt.
+### Phase 1 — Fix what's broken — done 15 Nov, with two follow-ups
+1. ~~**De-bias answer length.**~~ Correct-is-the-longest went from 88% to 16% (target ≤ 30%), and no article is above 50%. Follow-up: the correct option is now the *second*-longest in 54% of questions. A weaker cue, but it should be spread evenly; `check-content.py` warns about it.
+2. ~~**Fix source links.**~~ 21 of 26 slugs were wrong; now taken from the book. (Not yet re-verified by HTTP status.)
+3. ~~**Add `scripts/check-content.py`.**~~ JSON validity, id uniqueness, answer index in range, duplicate options, missing explanations, answer-length bias and length-rank spread. Run before every push.
+4. ~~Rename manifest title; keep the Check button enabled with an inline “Pick an answer first.”~~
+
+### Phase 1b — Content accuracy (new finding, 15 Nov)
+Checking the book against Calabro's posts showed that some original chapters, and the app cards built from them, had drifted from the source. Example: *UX Research Starts with Tasks* taught a three-step task-writing framework that isn't in the post, which is about building a Top Task List.
+
+- **Rebuilt from the posts (cards + questions):** tasks, usability-vs-concept, cognitive-walkthrough, fake-ai, cognitive-biases, ab-testing, dashboard, debrief, delight, figma. Generators are in `scripts/rewrite_batch1.py` and `rewrite_batch2.py`.
+- **Still to verify line by line against the posts (16):** behavioral-evidence, research-rigor, ux-as-service, ab-mislead, misunderstandings, mixed-methods, affordances, animations, icons, input-field, status-design, roi, ic, institutional, predictions, thankless. Their questions were only de-biased, not re-sourced. Known issue to fix there: institutional quotes “12 years” where the post says ten.
 
 ### Phase 2 — Retention mechanics, no gamification (1 day)
 5. **Missed-question bank.** Persist missed question refs per article in `uxp-progress-v1`; clear a ref when answered right twice. Home shows "Review 7 missed questions" when non-empty.
@@ -74,7 +80,7 @@ Folded into planned articles rather than new ones: Bach et al. dashboard tradeof
 - Cross-device sync beyond copy/paste — would need a backend.
 
 ## Definition of done per phase
-- Phase 1: `check-content.py` passes; all 26 links return 200; audit agent re-verifies rewritten questions.
+- Phase 1: `check-content.py` passes with no errors (done); all 26 links return 200 (open); Phase 1b's 16 articles verified against the posts (open).
 - Phase 2: a missed question reappears in the bank and in the module review; index links land on the right card.
 - Phase 3–4: audit agent confirms each new article against its source; no quiz question asks what the cards don't teach.
 - Phase 5: app loads with network disabled after one visit.

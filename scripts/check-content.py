@@ -15,6 +15,7 @@ def questions(article):
 
 manifest = json.load(open(os.path.join(ROOT, "content/manifest.json"), encoding="utf-8"))
 seen, tot, tot_long = set(), 0, 0
+ranks = {}
 for m in manifest["modules"]:
     for a in m["articles"]:
         path = os.path.join(ROOT, a["file"])
@@ -34,6 +35,7 @@ for m in manifest["modules"]:
             if len(set(opts)) != len(opts): errors.append(f"{where}: duplicate options")
             if not q.get("explain"): errors.append(f"{where}: no explanation")
             lens = [len(o) for o in opts]; n += 1
+            r = sorted(lens, reverse=True).index(lens[ans]) + 1; ranks[r] = ranks.get(r, 0) + 1
             if lens[ans] == max(lens) and lens.count(max(lens)) == 1: long += 1
             if max(lens) > 2.2 * max(1, min(lens)) and lens[ans] in (max(lens), min(lens)):
                 warnings.append(f"{where}: correct option is the length outlier ({lens[ans]} vs {sorted(lens)})")
@@ -43,6 +45,9 @@ for m in manifest["modules"]:
 
 share = tot_long / max(1, tot)
 print(f"{len(seen)} articles, {tot} questions. Correct answer is the longest option in {tot_long} ({share:.0%}; target ≤ {MAX_BIAS_TOTAL:.0%}).")
+print("Length rank of the correct option (1 = longest): " + ", ".join(f"{k}: {v} ({v / tot:.0%})" for k, v in sorted(ranks.items())))
+for k, v in sorted(ranks.items()):
+    if v / tot > 0.45: warnings.append(f"correct option is the #{k} longest in {v / tot:.0%} of questions; aim for an even spread")
 for w in warnings: print("WARN ", w)
 for e in errors: print("ERROR", e)
 if share > MAX_BIAS_TOTAL: print("WARN  overall answer-length bias above target")

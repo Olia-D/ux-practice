@@ -96,7 +96,7 @@
      "title": "A/B Testing and the Two-Party Trap",
      "icon": "⚖️",
      "source": "https://trevorcalabro.substack.com/p/ab-testing-and-the-two-party-trap",
-     "summary": "Binary choice can't find solutions you didn't build.",
+     "summary": "Why a two-option test gives a narrow answer, and what it leaves out.",
      "file": "content/mod3-ab-testing.json"
     },
     {
@@ -194,7 +194,7 @@
      "title": "UX Research Debriefs Reframed",
      "icon": "🗣️",
      "source": "https://trevorcalabro.substack.com/p/ux-research-debriefs-reframed",
-     "summary": "Two types: synthesis (team) and strategic (decision-makers). Don't mix them.",
+     "summary": "Two different meetings: synthesis first, strategy second. What goes wrong when they merge.",
      "file": "content/mod5-debrief.json"
     },
     {
@@ -202,7 +202,7 @@
      "title": "Rethinking User Delight",
      "icon": "✨",
      "source": "https://trevorcalabro.substack.com/p/rethinking-user-delight",
-     "summary": "Delight = task was hard, now it's easy. Not confetti.",
+     "summary": "Bill Scott's “interesting moments” versus decoration: six misunderstandings and three principles.",
      "file": "content/mod5-delight.json"
     },
     {
@@ -210,7 +210,7 @@
      "title": "Why Your Data Dashboard Stinks",
      "icon": "📉",
      "source": "https://trevorcalabro.substack.com/p/your-data-dashboard-sucks",
-     "summary": "Decisions-first design for data visualization.",
+     "summary": "Five ways dashboards mislead, and four things UX adds beyond visual clarity.",
      "file": "content/mod5-dashboard.json"
     },
     {
@@ -218,7 +218,7 @@
      "title": "Users Don't Care About Your Figma File",
      "icon": "🎨",
      "source": "https://trevorcalabro.substack.com/p/users-dont-care-about-your-figma",
-     "summary": "Internal quality ≠ UX quality. Measure task completion.",
+     "summary": "Polished interfaces fail when teams forget labels, feedback and defaults. Five places to look.",
      "file": "content/mod5-figma.json"
     }
    ]

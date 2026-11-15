@@ -1,120 +1,167 @@
 {
-  "id": "ux-as-service",
-  "module": "running-studies",
-  "title": "UX Research as a Service",
-  "icon": "🤝",
-  "intro": "UX research works best as a professional service — not passive order-taking, but active partnership. Show up during shaping, match method to risk, stay involved through decisions, and know when existing evidence is enough.",
-  "topics": [
+ "id": "ux-as-service",
+ "module": "running-studies",
+ "title": "UX Research as a Service",
+ "icon": "🤝",
+ "intro": "UX research works best as a professional service — not passive order-taking, but active partnership. Show up during shaping, match method to risk, stay involved through decisions, and know when existing evidence is enough.",
+ "topics": [
+  {
+   "id": "core",
+   "title": "Core Concepts",
+   "learn": [
     {
-      "id": "core",
-      "title": "Core Concepts",
-      "learn": [
-        {
-          "title": "Service, not order-taking",
-          "text": "\"Research as a service\" sounds passive. It's not.\n\nThink of it like servant leadership: the researcher helps the team make better decisions, with professional judgment, standards, and responsibility for outcomes.\n\nThe opposite is a researcher who appears only when a formal study is requested, responds only to incoming requests, or operates with little autonomy.\n\n**Service means:**\n→ Using your judgment about what to study and how\n→ Pushing back when a study won't answer the real question\n→ Saying \"we already know enough\" when that's true\n→ Staying close to decisions, not handing off a report",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Service model", "items": ["Active judgment on what to research", "Show up during shaping", "Match method to risk level", "Stay involved through decisions"] },
-            "right": { "label": "Order-taking", "items": ["Wait for study requests", "Appear after requirements harden", "Run the study that was asked for", "Hand off a report and move on"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A PM asks you to run a usability test on a feature that already has strong analytics data showing it works well. What should you do?",
-            "options": ["Say existing evidence is strong enough — no study needed", "Run the test anyway because the PM asked", "Suggest a concept test instead", "Delay until after launch"],
-            "answer": 0,
-            "explain": "Part of the service model is saying when existing evidence is already strong enough to decide. Not every project needs new research."
-          }
-        },
-        {
-          "title": "Show up during shaping",
-          "text": "The most impact happens before prototypes exist.\n\n**During project shaping, ask:**\n→ What problem are we solving?\n→ Who is affected?\n→ Which decisions are already made?\n→ Where can we still change direction?\n\n**Before running anything new:**\n→ Review existing evidence — past research, analytics, support tickets, sales feedback\n→ Name the riskiest assumptions before they become requirements\n\nResearch doesn't mean running studies on everything. It means learning the right things at the right time. If past data already answers the question, say so.\n\nThe goal is to surface uncertainty before it hardens into requirements that nobody questions.\n\n**Torres's product trio:** Designer, PM, and engineer should do discovery together — not hand off between roles. When all three interview users weekly, each spots different signals. The PM hears business needs, the designer sees UX friction, and the engineer spots technical constraints. All from the same 20-minute conversation.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "High impact (do this)", "items": ["Join during shaping — before direction hardens", "Name riskiest assumptions early", "Review past research first", "Match method to the level of risk"] },
-            "right": { "label": "Low impact (not this)", "items": ["Wait for a study request", "Accept assumptions as requirements", "Start fresh every time", "Use the same method regardless of stakes"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "When should a UX researcher first get involved in a project?",
-            "options": ["During shaping — before prototypes exist", "After the prototype is built", "When usability testing is scheduled", "After launch, to measure impact"],
-            "answer": 0,
-            "explain": "Showing up during shaping — before direction hardens — is where research has the most influence on decisions."
-          }
-        },
-        {
-          "title": "Stay through decisions",
-          "text": "Research doesn't end at the readout. The service model means staying involved at every phase:\n\n**Design phase** — Pair with UX design as ideas become workflows, screens, and interactions.\n\n**Prototyping and testing** — Make sure the prototype can answer the team's real questions. Focus tasks on actual decisions.\n\n**Post-launch** — Check whether the work helped. Feed what you learned into future projects.\n\n**Match method to risk:**\n→ High-risk decisions → formal studies\n→ Lower-risk decisions → lightweight sessions or expert reviews\n→ Strong existing evidence → no new research needed\n\n**Frame findings around the project's choices:**\n\"Here's what must be fixed before release\" and \"Here's what we can monitor after launch\" — not a list of 47 findings ranked by severity.",
-          "try": {
-            "type": "single",
-            "q": "You've just delivered research findings to the team. What should you do next?",
-            "options": ["Stay involved to make sure findings influence actual decisions", "Move on to the next project", "Send a follow-up email summarizing the report", "Wait for the team to come back with questions"],
-            "answer": 0,
-            "explain": "The service model means staying involved after the readout so findings actually influence decisions — not handing off a report and disappearing."
-          }
-        }
+     "title": "Service, not order-taking",
+     "text": "\"Research as a service\" sounds passive. It's not.\n\nThink of it like servant leadership: the researcher helps the team make better decisions, with professional judgment, standards, and responsibility for outcomes.\n\nThe opposite is a researcher who appears only when a formal study is requested, responds only to incoming requests, or operates with little autonomy.\n\n**Service means:**\n→ Using your judgment about what to study and how\n→ Pushing back when a study won't answer the real question\n→ Saying \"we already know enough\" when that's true\n→ Staying close to decisions, not handing off a report",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Service model",
+       "items": [
+        "Active judgment on what to research",
+        "Show up during shaping",
+        "Match method to risk level",
+        "Stay involved through decisions"
+       ]
+      },
+      "right": {
+       "label": "Order-taking",
+       "items": [
+        "Wait for study requests",
+        "Appear after requirements harden",
+        "Run the study that was asked for",
+        "Hand off a report and move on"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "A PM asks you to run a usability test on a feature that already has strong analytics data showing it works well. What should you do?",
+      "options": [
+       "Say existing evidence is strong enough",
+       "Run the test anyway because the PM asked",
+       "Suggest a concept test instead",
+       "Delay until after launch"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What does 'research as a service' mean according to the article?",
-          "options": [
-            "Active professional partnership with judgment, standards, and responsibility for outcomes",
-            "A centralized research team that handles all study requests",
-            "Outsourcing research to a third-party agency",
-            "Making research faster by using standardized templates"
-          ],
-          "answer": 0,
-          "explain": "Service = professional judgment and active partnership, not passive order-taking. Think servant leadership, not help desk."
-        },
-        {
-          "type": "single",
-          "q": "When during a project does a service-model researcher have the most impact?",
-          "options": [
-            "During shaping — before prototypes exist and before direction hardens",
-            "After the prototype is complete and ready for testing",
-            "Post-launch, when real usage data is available",
-            "During the design review meeting"
-          ],
-          "answer": 0,
-          "explain": "Showing up during shaping lets research surface uncertainty before it becomes unquestioned requirements."
-        },
-        {
-          "type": "single",
-          "q": "What should a researcher do before starting a new study?",
-          "options": [
-            "Review existing evidence — past research, analytics, support tickets, sales feedback",
-            "Write a full research plan with timeline and budget",
-            "Get stakeholder sign-off on the methodology",
-            "Recruit at least 5 participants"
-          ],
-          "answer": 0,
-          "explain": "Check what you already know first. Past research, analytics, support tickets, and sales feedback might already answer the question."
-        },
-        {
-          "type": "single",
-          "q": "How should researchers frame their findings?",
-          "options": [
-            "Around the project's actual choices — what to fix now vs. monitor after launch",
-            "As a ranked severity list of all issues found",
-            "As a comparison to competitor products",
-            "As recommendations for the next quarter's roadmap"
-          ],
-          "answer": 0,
-          "explain": "Frame findings around decisions the team can actually make: what must be fixed before release, what can be monitored after launch."
-        },
-        {
-          "type": "single",
-          "q": "When should a researcher say 'no study needed'?",
-          "options": [
-            "When existing evidence is already strong enough to decide",
-            "Never — every project benefits from new research",
-            "Only when the budget doesn't allow it",
-            "When the team has already made their decision"
-          ],
-          "answer": 0,
-          "explain": "Part of the service model is knowing when existing evidence is sufficient. Not every project needs new research — saying so is a professional judgment call."
-        }
-      ]
+      "answer": 0,
+      "explain": "Part of the service model is saying when existing evidence is already strong enough to decide. Not every project needs new research. (No study needed.)"
+     }
+    },
+    {
+     "title": "Show up during shaping",
+     "text": "The most impact happens before prototypes exist.\n\n**During project shaping, ask:**\n→ What problem are we solving?\n→ Who is affected?\n→ Which decisions are already made?\n→ Where can we still change direction?\n\n**Before running anything new:**\n→ Review existing evidence — past research, analytics, support tickets, sales feedback\n→ Name the riskiest assumptions before they become requirements\n\nResearch doesn't mean running studies on everything. It means learning the right things at the right time. If past data already answers the question, say so.\n\nThe goal is to surface uncertainty before it hardens into requirements that nobody questions.\n\n**Torres's product trio:** Designer, PM, and engineer should do discovery together — not hand off between roles. When all three interview users weekly, each spots different signals. The PM hears business needs, the designer sees UX friction, and the engineer spots technical constraints. All from the same 20-minute conversation.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "High impact (do this)",
+       "items": [
+        "Join during shaping — before direction hardens",
+        "Name riskiest assumptions early",
+        "Review past research first",
+        "Match method to the level of risk"
+       ]
+      },
+      "right": {
+       "label": "Low impact (not this)",
+       "items": [
+        "Wait for a study request",
+        "Accept assumptions as requirements",
+        "Start fresh every time",
+        "Use the same method regardless of stakes"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "When should a UX researcher first get involved in a project?",
+      "options": [
+       "During shaping",
+       "After the prototype is built",
+       "When usability testing is scheduled",
+       "After launch, to measure impact"
+      ],
+      "answer": 0,
+      "explain": "Showing up during shaping — before direction hardens — is where research has the most influence on decisions. (Before prototypes exist.)"
+     }
+    },
+    {
+     "title": "Stay through decisions",
+     "text": "Research doesn't end at the readout. The service model means staying involved at every phase:\n\n**Design phase** — Pair with UX design as ideas become workflows, screens, and interactions.\n\n**Prototyping and testing** — Make sure the prototype can answer the team's real questions. Focus tasks on actual decisions.\n\n**Post-launch** — Check whether the work helped. Feed what you learned into future projects.\n\n**Match method to risk:**\n→ High-risk decisions → formal studies\n→ Lower-risk decisions → lightweight sessions or expert reviews\n→ Strong existing evidence → no new research needed\n\n**Frame findings around the project's choices:**\n\"Here's what must be fixed before release\" and \"Here's what we can monitor after launch\" — not a list of 47 findings ranked by severity.",
+     "try": {
+      "type": "single",
+      "q": "You've just delivered research findings to the team. What should you do next?",
+      "options": [
+       "Stay involved to make sure findings influence actual decisions",
+       "Move on to the next project",
+       "Send a follow-up email summarizing the report",
+       "Wait for the team to come back with questions"
+      ],
+      "answer": 0,
+      "explain": "The service model means staying involved after the readout so findings actually influence decisions — not handing off a report and disappearing."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does 'research as a service' mean according to the article?",
+     "options": [
+      "Active professional partnership with judgment, standards, and responsibility for outcomes",
+      "A centralised research team that takes every study request in order and reports back when done",
+      "Outsourcing research to a third-party agency",
+      "Making research faster by using standardized templates"
+     ],
+     "answer": 0,
+     "explain": "Service = professional judgment and active partnership, not passive order-taking. Think servant leadership, not help desk."
+    },
+    {
+     "type": "single",
+     "q": "When during a project does a service-model researcher have the most impact?",
+     "options": [
+      "During shaping",
+      "After the prototype is complete and ready for testing",
+      "Post-launch, when real usage data is available",
+      "During the design review meeting"
+     ],
+     "answer": 0,
+     "explain": "Showing up during shaping lets research surface uncertainty before it becomes unquestioned requirements. (Before prototypes exist and before direction hardens.)"
+    },
+    {
+     "type": "single",
+     "q": "What should a researcher do before starting a new study?",
+     "options": [
+      "Review existing evidence",
+      "Write a full research plan with timeline and budget",
+      "Get stakeholder sign-off on the methodology",
+      "Recruit at least 5 participants"
+     ],
+     "answer": 0,
+     "explain": "Check what you already know first. Past research, analytics, support tickets, and sales feedback might already answer the question."
+    },
+    {
+     "type": "single",
+     "q": "How should researchers frame their findings?",
+     "options": [
+      "Around the project's actual choices",
+      "As a ranked severity list of all issues found",
+      "As a comparison to competitor products",
+      "As recommendations for the next quarter's roadmap"
+     ],
+     "answer": 0,
+     "explain": "Frame findings around decisions the team can actually make: what must be fixed before release, what can be monitored after launch. (What to fix now vs. monitor after launch.)"
+    },
+    {
+     "type": "single",
+     "q": "When should a researcher say 'no study needed'?",
+     "options": [
+      "When existing evidence is already strong enough to decide",
+      "Never — every project benefits from new research",
+      "Only when the budget doesn't allow it",
+      "When the team has already made their decision"
+     ],
+     "answer": 0,
+     "explain": "Part of the service model is knowing when existing evidence is sufficient. Not every project needs new research — saying so is a professional judgment call."
+    }
+   ]
+  }
+ ]
 }

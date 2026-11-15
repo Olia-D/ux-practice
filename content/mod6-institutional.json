@@ -1,130 +1,167 @@
 {
-  "id": "institutional",
-  "module": "career",
-  "title": "Weaponized Institutional Knowledge",
-  "icon": "🛡️",
-  "intro": "Institutional knowledge is valuable — until it's used to shut down research. \"Our users are different\" is the most dangerous phrase in UX because it replaces evidence with tenure.",
-  "topics": [
+ "id": "institutional",
+ "module": "career",
+ "title": "Weaponized Institutional Knowledge",
+ "icon": "🛡️",
+ "intro": "Institutional knowledge is valuable — until it's used to shut down research. \"Our users are different\" is the most dangerous phrase in UX because it replaces evidence with tenure.",
+ "topics": [
+  {
+   "id": "core",
+   "title": "Core Concepts",
+   "learn": [
     {
-      "id": "core",
-      "title": "Core Concepts",
-      "learn": [
-        {
-          "title": "The 90/10 rule",
-          "text": "NNG analyzed its own foundational usability guidelines and found they produce a usable design about **90% of the time**.\n\nThat leaves roughly 10% of cases where breaking a best practice might produce something better.\n\nSo why do teams break best practices by default? The burden of proof belongs on the person who wants to deviate — and they need **behavioral data**, not anecdotes or seniority.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Follow best practices (90%)", "items": ["Icon labels", "Visible navigation", "Clear error messages", "Accessible defaults"] },
-            "right": { "label": "Break with evidence (10%)", "items": ["Tested exception for your users", "Behavioral data supports it", "Not based on opinion", "Documented rationale"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A stakeholder says \"Our power users don't need icon labels.\" Who should provide evidence?",
-            "options": [
-              "The stakeholder — they're claiming an exception to a best practice",
-              "The designer — they need to prove labels work",
-              "Nobody — it's a matter of preference",
-              "The engineering team — they decide what ships"
-            ],
-            "answer": 0,
-            "explain": "The burden of proof is on whoever claims their case is the exception. Best practices are the default."
-          }
-        },
-        {
-          "title": "\"Our users are different\"",
-          "text": "The most common claims that shut down research:\n\n→ \"Users have memorized our icon language, labels would clutter the UI\"\n→ \"Technical users like jargon and dense layouts\"\n→ \"Users don't scroll, everything must be above the fold\"\n→ \"No accessibility needs — nobody's complained\"\n\nAcross ~20 years and several companies, the author tested icon-only navigation in **seven organizations**. Each time, participants — including power users — struggled. Almost every \"our users are different\" claim, when tested, matched standard best practices.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "What they say", "items": ["Our users are technical", "They've memorized the icons", "Nobody's complained", "We've always done it this way"] },
-            "right": { "label": "What testing shows", "items": ["Technical users still struggle", "Recognition fails without labels", "Silence ≠ satisfaction", "Familiarity ≠ usability"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A PM says: \"No one has complained about accessibility, so we're fine.\" What's wrong with this logic?",
-            "options": [
-              "Absence of complaints doesn't mean absence of problems",
-              "PMs shouldn't make accessibility decisions",
-              "Accessibility is a legal requirement",
-              "Complaints always reflect real issues"
-            ],
-            "answer": 0,
-            "explain": "Users who can't use a product often leave quietly. No complaints ≠ no problems."
-          }
-        },
-        {
-          "title": "Six ways institutional knowledge hurts UX",
-          "text": "1. **Shuts down research before it starts** — \"We already know our users\"\n2. **Flips the burden of proof** — researchers must disprove claims instead of claimants validating them\n3. **Introduces bias in research** — SME-mindset interviewers lead users and steer answers\n4. **Limits participant pool** — the same \"champion\" users become unofficial team members\n5. **Turns research into a formality** — polished presentations to focus groups seek confirmation\n6. **Creates subtle validation bias** — researchers over-identify with users and miss blind spots\n\nThe fix: start with best practices. Exceptions need behavioral evidence. If no one is ever confused in your sessions, your research may be flawed.",
-          "try": {
-            "type": "single",
-            "q": "Your team always tests with the same 5 \"champion\" users who know the product well. What's the risk?",
-            "options": [
-              "You'll miss confusion that new users experience",
-              "Five users is statistically invalid",
-              "Champion users give better feedback",
-              "You need at least 10 users"
-            ],
-            "answer": 0,
-            "explain": "Champion users are too familiar with the product. Rotate participants and seek new voices to find real usability problems."
-          }
-        }
+     "title": "The 90/10 rule",
+     "text": "NNG analyzed its own foundational usability guidelines and found they produce a usable design about **90% of the time**.\n\nThat leaves roughly 10% of cases where breaking a best practice might produce something better.\n\nSo why do teams break best practices by default? The burden of proof belongs on the person who wants to deviate — and they need **behavioral data**, not anecdotes or seniority.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Follow best practices (90%)",
+       "items": [
+        "Icon labels",
+        "Visible navigation",
+        "Clear error messages",
+        "Accessible defaults"
+       ]
+      },
+      "right": {
+       "label": "Break with evidence (10%)",
+       "items": [
+        "Tested exception for your users",
+        "Behavioral data supports it",
+        "Not based on opinion",
+        "Documented rationale"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "A stakeholder says \"Our power users don't need icon labels.\" Who should provide evidence?",
+      "options": [
+       "The stakeholder — they're claiming an exception to a best practice",
+       "The designer — they need to prove labels work",
+       "Nobody — it's a matter of preference",
+       "The engineering team — they decide what ships"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "According to the 90/10 rule, what percentage of the time do established usability best practices produce a usable design?",
-          "options": ["About 90%", "About 50%", "About 70%", "About 60%"],
-          "answer": 0,
-          "explain": "NNG's analysis found best practices work about 90% of the time. The 10% exception requires behavioral evidence."
-        },
-        {
-          "type": "single",
-          "q": "When someone says \"our users are different\" to argue against a best practice, who holds the burden of proof?",
-          "options": [
-            "The person claiming the exception",
-            "The UX researcher",
-            "The product manager",
-            "Whoever has more seniority"
-          ],
-          "answer": 0,
-          "explain": "The burden of proof is on whoever wants to break from a best practice. They need behavioral data, not opinions."
-        },
-        {
-          "type": "single",
-          "q": "Icon-only navigation was tested across seven organizations. What was the consistent finding?",
-          "options": [
-            "Even power users struggled without labels",
-            "Power users performed fine",
-            "Labels slowed users down",
-            "Results varied by industry"
-          ],
-          "answer": 0,
-          "explain": "In every test, participants — including power users — struggled with icon-only navigation. Labels consistently help."
-        },
-        {
-          "type": "single",
-          "q": "What makes institutional knowledge 'weaponized'?",
-          "options": [
-            "When it replaces user data to stop research or win arguments",
-            "When it's shared across teams",
-            "When it's documented in wikis",
-            "When it's used by senior employees"
-          ],
-          "answer": 0,
-          "explain": "Institutional knowledge becomes weaponized when it's used to end conversations, block research, or override evidence with seniority."
-        },
-        {
-          "type": "single",
-          "q": "If no participant is ever confused during your research sessions, what should you suspect?",
-          "options": [
-            "The research methodology may be flawed",
-            "The product is perfectly designed",
-            "You've reached peak usability",
-            "Your sample size is too small"
-          ],
-          "answer": 0,
-          "explain": "Some confusion is normal. If nobody struggles, you may be testing with too-familiar users or leading them through the tasks."
-        }
-      ]
+      "answer": 0,
+      "explain": "The burden of proof is on whoever claims their case is the exception. Best practices are the default."
+     }
+    },
+    {
+     "title": "\"Our users are different\"",
+     "text": "The most common claims that shut down research:\n\n→ \"Users have memorized our icon language, labels would clutter the UI\"\n→ \"Technical users like jargon and dense layouts\"\n→ \"Users don't scroll, everything must be above the fold\"\n→ \"No accessibility needs — nobody's complained\"\n\nAcross ~20 years and several companies, the author tested icon-only navigation in **seven organizations**. Each time, participants — including power users — struggled. Almost every \"our users are different\" claim, when tested, matched standard best practices.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "What they say",
+       "items": [
+        "Our users are technical",
+        "They've memorized the icons",
+        "Nobody's complained",
+        "We've always done it this way"
+       ]
+      },
+      "right": {
+       "label": "What testing shows",
+       "items": [
+        "Technical users still struggle",
+        "Recognition fails without labels",
+        "Silence ≠ satisfaction",
+        "Familiarity ≠ usability"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "A PM says: \"No one has complained about accessibility, so we're fine.\" What's wrong with this logic?",
+      "options": [
+       "Absence of complaints doesn't mean absence of problems",
+       "PMs shouldn't be making accessibility decisions at all",
+       "Accessibility is a legal requirement",
+       "Complaints always reflect real issues"
+      ],
+      "answer": 0,
+      "explain": "Users who can't use a product often leave quietly. No complaints ≠ no problems."
+     }
+    },
+    {
+     "title": "Six ways institutional knowledge hurts UX",
+     "text": "1. **Shuts down research before it starts** — \"We already know our users\"\n2. **Flips the burden of proof** — researchers must disprove claims instead of claimants validating them\n3. **Introduces bias in research** — SME-mindset interviewers lead users and steer answers\n4. **Limits participant pool** — the same \"champion\" users become unofficial team members\n5. **Turns research into a formality** — polished presentations to focus groups seek confirmation\n6. **Creates subtle validation bias** — researchers over-identify with users and miss blind spots\n\nThe fix: start with best practices. Exceptions need behavioral evidence. If no one is ever confused in your sessions, your research may be flawed.",
+     "try": {
+      "type": "single",
+      "q": "Your team always tests with the same 5 \"champion\" users who know the product well. What's the risk?",
+      "options": [
+       "You'll miss confusion that new users experience",
+       "Five users is statistically invalid",
+       "Champion users give better feedback",
+       "You need at least 10 users"
+      ],
+      "answer": 0,
+      "explain": "Champion users are too familiar with the product. Rotate participants and seek new voices to find real usability problems."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "According to the 90/10 rule, what percentage of the time do established usability best practices produce a usable design?",
+     "options": [
+      "About 90%",
+      "About 50%",
+      "About 70%",
+      "About 60%"
+     ],
+     "answer": 0,
+     "explain": "NNG's analysis found best practices work about 90% of the time. The 10% exception requires behavioral evidence."
+    },
+    {
+     "type": "single",
+     "q": "When someone says \"our users are different\" to argue against a best practice, who holds the burden of proof?",
+     "options": [
+      "The person claiming the exception",
+      "The UX researcher",
+      "The product manager",
+      "Whoever has more seniority in the room"
+     ],
+     "answer": 0,
+     "explain": "The burden of proof is on whoever wants to break from a best practice. They need behavioral data, not opinions."
+    },
+    {
+     "type": "single",
+     "q": "Icon-only navigation was tested across seven organizations. What was the consistent finding?",
+     "options": [
+      "Even power users struggled without labels",
+      "Power users performed fine without any labels",
+      "Labels slowed users down",
+      "Results varied by industry"
+     ],
+     "answer": 0,
+     "explain": "In every test, participants — including power users — struggled with icon-only navigation. Labels consistently help."
+    },
+    {
+     "type": "single",
+     "q": "What makes institutional knowledge 'weaponized'?",
+     "options": [
+      "When it replaces user data to stop research or win arguments",
+      "When it's shared across teams",
+      "When it's documented in wikis",
+      "When it's used by senior employees who have been at the company longest"
+     ],
+     "answer": 0,
+     "explain": "Institutional knowledge becomes weaponized when it's used to end conversations, block research, or override evidence with seniority."
+    },
+    {
+     "type": "single",
+     "q": "If no participant is ever confused during your research sessions, what should you suspect?",
+     "options": [
+      "The research methodology may be flawed",
+      "The product is already perfectly designed",
+      "You've reached peak usability",
+      "Your sample size is too small"
+     ],
+     "answer": 0,
+     "explain": "Some confusion is normal. If nobody struggles, you may be testing with too-familiar users or leading them through the tasks."
+    }
+   ]
+  }
+ ]
 }

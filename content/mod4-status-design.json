@@ -1,125 +1,188 @@
 {
-  "id": "status-design",
-  "module": "design-principles",
-  "title": "Fixing Bad Status Design",
-  "icon": "🚦",
-  "intro": "Most UX effort goes into the moment of action. But **post-action UX** — what happens after users click Submit — is where confusion actually lives, especially in enterprise.",
-  "topics": [
+ "id": "status-design",
+ "module": "design-principles",
+ "title": "Fixing Bad Status Design",
+ "icon": "🚦",
+ "intro": "Most UX effort goes into the moment of action. But **post-action UX** — what happens after users click Submit — is where confusion actually lives, especially in enterprise.",
+ "topics": [
+  {
+   "id": "core",
+   "title": "Status Design",
+   "learn": [
     {
-      "id": "core",
-      "title": "Status Design",
-      "learn": [
-        {
-          "title": "The post-action gap",
-          "text": "Enterprise workflows span people, approvals, dependencies, and backend processes. Users can handle complexity — but they struggle when the system's **actual state is unclear**.\n\nThe real usability burden shifts to what happens AFTER the action. Yet most teams spend all their design effort on the action itself.\n\n**Status is a time-based problem, not a single-screen one.** It's about communicating state over the life of a workflow — not just at the moment of submission.\n\nThe principle behind this: NN/g's **visibility of system status** heuristic. Users need to know what's happening, what happened, and what's next.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Where teams focus", "items": ["The submit button", "The form validation", "The initial action", "The happy path"] },
-            "right": { "label": "Where users struggle", "items": ["What happened after submit?", "Who has it now?", "Do I need to do anything?", "Is it stuck or just slow?"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Why is status design especially hard in enterprise software?",
-            "options": ["Workflows span people, approvals, and async processes — state is distributed", "Enterprise users are less tech-savvy", "Enterprise software has more bugs", "Enterprise companies have smaller design teams"],
-            "answer": 0,
-            "explain": "Enterprise workflows involve multiple people, approvals, and backend processes. The system's state is distributed across all of them."
-          }
-        },
-        {
-          "title": "Common status design failures",
-          "text": "**Vague labels:** \"Submitted\" or \"In Progress\" says nothing useful. \"Pending\" could mean review, sync, another team's work, a nightly job, or a broken state.\n\n**Disappearing toasts:** \"Saved\" or \"Submitted\" flashes briefly — easy to miss, doesn't say where the item went or who has it.\n\n**Generic spinners:** Fine for short waits. For longer or unpredictable waits, they give no sense of duration or what's happening.\n\n**Dashboard of badges:** Moving confusion to another screen. Tables of timestamps and badges can't show which items are healthy, stuck, or waiting.\n\n**Silent table updates:** Something changed in the table — but what? When?\n\n**Hidden costs:** Users resubmit, refresh, check email, ask coworkers, and build side spreadsheets. Unreliable status erodes product trust.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Bad status patterns", "items": ["\"Pending\" (pending what?)", "Toast: \"Saved\" (where? who?)", "Indefinite spinner", "Table of badges + timestamps"] },
-            "right": { "label": "What users actually do", "items": ["Resubmit the request", "Refresh the page repeatedly", "Ask a coworker", "Build a tracking spreadsheet"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Why is \"Pending\" a bad status label?",
-            "options": ["It could mean at least 5 different things — review, sync, queue, error, or someone else's action", "It's too short", "Users don't understand the word", "It's not an industry-standard term"],
-            "answer": 0,
-            "explain": "\"Pending\" is ambiguous — it hides the actual system state. Users can't tell if something is in review, queued, waiting on someone, or broken."
-          }
-        },
-        {
-          "title": "What good status design looks like",
-          "text": "**Pair the state with its meaning:**\n\"Submitted for manager review\" instead of \"Submitted.\" Say what the status means for the user's work.\n\n**State ownership and next steps:**\nSay who holds the next step and what the system is waiting on. \"Waiting for finance approval — expected by tomorrow.\"\n\n**Signal when no action is needed:**\nExplicitly tell users when they can leave: \"No action needed. Expected completion by tomorrow morning.\"\n\n**Keep status visible over time:**\nUse persistent locations, timestamps, and status history — not disappearing messages. \"Changes saved at 2:14 PM\" stays visible.\n\n**Show what changed:**\nUpdates should say what changed, when, and what happens next.\n\n**Design post-action states as part of the core workflow** — not as an afterthought bolted on with badges and filters.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Do", "items": ["\"Submitted for manager review\"", "\"No action needed — done by tomorrow\"", "\"Saved at 2:14 PM\"", "Status history with timestamps"] },
-            "right": { "label": "Don't", "items": ["\"Submitted\"", "\"Processing...\"", "Toast: \"Saved\" (disappears)", "Badge: \"In Progress\" (no context)"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "What makes \"Submitted for manager review\" better than \"Submitted\"?",
-            "options": ["It tells the user who has it and what's happening next", "It uses more words, which feels more professional", "It includes the manager's name", "It triggers an email notification"],
-            "answer": 0,
-            "explain": "The improved version tells users the state (submitted), who has it (manager), and what's happening (review). No ambiguity."
-          }
-        }
+     "title": "The post-action gap",
+     "text": "Enterprise workflows span people, approvals, dependencies, and backend processes. Users can handle complexity — but they struggle when the system's **actual state is unclear**.\n\nThe real usability burden shifts to what happens AFTER the action. Yet most teams spend all their design effort on the action itself.\n\n**Status is a time-based problem, not a single-screen one.** It's about communicating state over the life of a workflow — not just at the moment of submission.\n\nThe principle behind this: NN/g's **visibility of system status** heuristic. Users need to know what's happening, what happened, and what's next.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Where teams focus",
+       "items": [
+        "The submit button",
+        "The form validation",
+        "The initial action",
+        "The happy path"
+       ]
+      },
+      "right": {
+       "label": "Where users struggle",
+       "items": [
+        "What happened after submit?",
+        "Who has it now?",
+        "Do I need to do anything?",
+        "Is it stuck or just slow?"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "Why is status design especially hard in enterprise software?",
+      "options": [
+       "Workflows span people, approvals, and async processes",
+       "Enterprise users are less tech-savvy",
+       "Enterprise software has more bugs",
+       "Enterprise companies have smaller design teams"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What NN/g heuristic does the article use to frame status design?",
-          "options": [
-            "Visibility of system status",
-            "Error prevention",
-            "Recognition rather than recall",
-            "Aesthetic and minimalist design"
-          ],
-          "answer": 0,
-          "explain": "The article frames status as a visibility problem — users need to see what's happening, what happened, and what's next."
-        },
-        {
-          "type": "single",
-          "q": "Why are disappearing toast notifications problematic for status communication?",
-          "options": [
-            "They're easy to miss and don't say where the item went or who has it",
-            "They cause performance issues on mobile",
-            "They violate WCAG guidelines",
-            "They only work on desktop browsers"
-          ],
-          "answer": 0,
-          "explain": "Toasts flash briefly — easy to miss, and they carry no information about what happens next or who owns the next step."
-        },
-        {
-          "type": "single",
-          "q": "What do users resort to when status design is unreliable?",
-          "options": [
-            "Resubmitting, refreshing, asking coworkers, and building side spreadsheets",
-            "Filing support tickets",
-            "Switching to a competitor product",
-            "Reading the documentation"
-          ],
-          "answer": 0,
-          "explain": "Bad status design forces workarounds: resubmitting requests, refreshing pages, asking colleagues, and tracking in spreadsheets."
-        },
-        {
-          "type": "single",
-          "q": "What information should a good status message include?",
-          "options": [
-            "What state it's in, who owns the next step, and whether user action is needed",
-            "Just the current state name",
-            "A timestamp and nothing else",
-            "A link to the support page"
-          ],
-          "answer": 0,
-          "explain": "Good status = state + ownership + next steps + whether the user needs to act. Anything less creates ambiguity."
-        },
-        {
-          "type": "single",
-          "q": "The article argues status indicators should be designed as:",
-          "options": [
-            "Part of the core workflow — not bolted on as an afterthought",
-            "A separate admin dashboard",
-            "Optional features for power users",
-            "Email notifications instead of in-app indicators"
-          ],
-          "answer": 0,
-          "explain": "Post-action states are part of the workflow, not an add-on. Bolted-on badges and filters just move confusion to another screen."
-        }
-      ]
+      "answer": 0,
+      "explain": "Enterprise workflows involve multiple people, approvals, and backend processes. The system's state is distributed across all of them."
+     }
+    },
+    {
+     "title": "Common status design failures",
+     "text": "**Vague labels:** \"Submitted\" or \"In Progress\" says nothing useful. \"Pending\" could mean review, sync, another team's work, a nightly job, or a broken state.\n\n**Disappearing toasts:** \"Saved\" or \"Submitted\" flashes briefly — easy to miss, doesn't say where the item went or who has it.\n\n**Generic spinners:** Fine for short waits. For longer or unpredictable waits, they give no sense of duration or what's happening.\n\n**Dashboard of badges:** Moving confusion to another screen. Tables of timestamps and badges can't show which items are healthy, stuck, or waiting.\n\n**Silent table updates:** Something changed in the table — but what? When?\n\n**Hidden costs:** Users resubmit, refresh, check email, ask coworkers, and build side spreadsheets. Unreliable status erodes product trust.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Bad status patterns",
+       "items": [
+        "\"Pending\" (pending what?)",
+        "Toast: \"Saved\" (where? who?)",
+        "Indefinite spinner",
+        "Table of badges + timestamps"
+       ]
+      },
+      "right": {
+       "label": "What users actually do",
+       "items": [
+        "Resubmit the request",
+        "Refresh the page repeatedly",
+        "Ask a coworker",
+        "Build a tracking spreadsheet"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "Why is \"Pending\" a bad status label?",
+      "options": [
+       "It could mean at least 5 different things",
+       "It's too short",
+       "Users don't understand the word",
+       "It's not an industry-standard term for workflows"
+      ],
+      "answer": 0,
+      "explain": "\"Pending\" is ambiguous — it hides the actual system state. Users can't tell if something is in review, queued, waiting on someone, or broken. (Review, sync, queue, error, or someone else's action.)"
+     }
+    },
+    {
+     "title": "What good status design looks like",
+     "text": "**Pair the state with its meaning:**\n\"Submitted for manager review\" instead of \"Submitted.\" Say what the status means for the user's work.\n\n**State ownership and next steps:**\nSay who holds the next step and what the system is waiting on. \"Waiting for finance approval — expected by tomorrow.\"\n\n**Signal when no action is needed:**\nExplicitly tell users when they can leave: \"No action needed. Expected completion by tomorrow morning.\"\n\n**Keep status visible over time:**\nUse persistent locations, timestamps, and status history — not disappearing messages. \"Changes saved at 2:14 PM\" stays visible.\n\n**Show what changed:**\nUpdates should say what changed, when, and what happens next.\n\n**Design post-action states as part of the core workflow** — not as an afterthought bolted on with badges and filters.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Do",
+       "items": [
+        "\"Submitted for manager review\"",
+        "\"No action needed — done by tomorrow\"",
+        "\"Saved at 2:14 PM\"",
+        "Status history with timestamps"
+       ]
+      },
+      "right": {
+       "label": "Don't",
+       "items": [
+        "\"Submitted\"",
+        "\"Processing...\"",
+        "Toast: \"Saved\" (disappears)",
+        "Badge: \"In Progress\" (no context)"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "What makes \"Submitted for manager review\" better than \"Submitted\"?",
+      "options": [
+       "It tells the user who has it and what's happening next",
+       "It uses more words, which feels more professional",
+       "It includes the manager's name",
+       "It triggers an email notification"
+      ],
+      "answer": 0,
+      "explain": "The improved version tells users the state (submitted), who has it (manager), and what's happening (review). No ambiguity."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What NN/g heuristic does the article use to frame status design?",
+     "options": [
+      "Visibility of system status",
+      "Error prevention",
+      "Recognition rather than recall",
+      "Aesthetic and minimalist design"
+     ],
+     "answer": 0,
+     "explain": "The article frames status as a visibility problem — users need to see what's happening, what happened, and what's next."
+    },
+    {
+     "type": "single",
+     "q": "Why are disappearing toast notifications problematic for status communication?",
+     "options": [
+      "They're easy to miss and don't say where the item went or who has it",
+      "They cause performance issues on mobile and slow down the rest of the page",
+      "They violate WCAG guidelines",
+      "They only work on desktop browsers"
+     ],
+     "answer": 0,
+     "explain": "Toasts flash briefly — easy to miss, and they carry no information about what happens next or who owns the next step."
+    },
+    {
+     "type": "single",
+     "q": "What do users resort to when status design is unreliable?",
+     "options": [
+      "Resubmitting, refreshing, asking coworkers, and building side spreadsheets",
+      "Filing support tickets",
+      "Switching to a competitor product within a few weeks of the first confusing status",
+      "Reading the documentation"
+     ],
+     "answer": 0,
+     "explain": "Bad status design forces workarounds: resubmitting requests, refreshing pages, asking colleagues, and tracking in spreadsheets."
+    },
+    {
+     "type": "single",
+     "q": "What information should a good status message include?",
+     "options": [
+      "What state it's in, who owns the next step, and whether user action is needed",
+      "Just the current state name",
+      "A precise timestamp and nothing else, so the message stays short and scannable",
+      "A link to the support page"
+     ],
+     "answer": 0,
+     "explain": "Good status = state + ownership + next steps + whether the user needs to act. Anything less creates ambiguity."
+    },
+    {
+     "type": "single",
+     "q": "The article argues status indicators should be designed as:",
+     "options": [
+      "Part of the core workflow",
+      "A separate admin dashboard",
+      "Optional features for power users",
+      "Email notifications instead of in-app indicators"
+     ],
+     "answer": 0,
+     "explain": "Post-action states are part of the workflow, not an add-on. Bolted-on badges and filters just move confusion to another screen. (Not bolted on as an afterthought.)"
+    }
+   ]
+  }
+ ]
 }

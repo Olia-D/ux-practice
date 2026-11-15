@@ -1,140 +1,184 @@
 {
-  "id": "ab-mislead",
-  "module": "testing-analysis",
-  "title": "Another Way A/B Tests Mislead",
-  "icon": "🎭",
-  "intro": "A/B results show correlation, not causation. Teams treat p < 0.05 as proof, but the result only means two things occurred together — not that one caused the other. Even Netflix and Booking.com get this wrong.",
-  "topics": [
+ "id": "ab-mislead",
+ "module": "testing-analysis",
+ "title": "Another Way A/B Tests Mislead",
+ "icon": "🎭",
+ "intro": "A/B results show correlation, not causation. Teams treat p < 0.05 as proof, but the result only means two things occurred together — not that one caused the other. Even Netflix and Booking.com get this wrong.",
+ "topics": [
+  {
+   "id": "core",
+   "title": "Core Concepts",
+   "learn": [
     {
-      "id": "core",
-      "title": "Core Concepts",
-      "learn": [
-        {
-          "title": "Correlation is not causation (really)",
-          "text": "There are three levels of data reasoning:\n\n**1. Correlation:** Do these things move together?\n**2. Prediction:** If I see X, can I forecast Y?\n**3. Causation:** If I do X, will Y happen?\n\nMost A/B tests answer #1 at best. Teams read them as #3.\n\nA p-value < 0.05 means the result is unlikely to be chance. It does NOT mean:\n→ The variant caused the outcome\n→ The effect will hold broadly\n→ You understand why it happened\n\n**Netflix** found that promising controlled-trial results often failed after full rollout. **Booking.com** runs tens of thousands of experiments yearly and is still wrong about 9 out of 10 predictions.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "What teams think", "items": ["p < 0.05 = proven", "Variant B caused the improvement", "Ship it and move on"] },
-            "right": { "label": "What's actually shown", "items": ["The difference is unlikely to be chance", "Variant B is associated with the outcome", "You still don't know why"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Your A/B test shows p = 0.03 for Variant B. What does this tell you?",
-            "options": [
-              "The difference is unlikely to be random chance, but not that B caused it",
-              "Variant B definitively caused the improvement",
-              "You need a larger sample size",
-              "The test was run incorrectly"
-            ],
-            "answer": 0,
-            "explain": "A low p-value means the result is unlikely to be chance. It says nothing about what caused it — other factors may be at play."
-          }
-        },
-        {
-          "title": "Hidden confounds that wreck your results",
-          "text": "Several things can make A/B results unreliable:\n\n**Novelty effects:** Users engage more with anything new. Results look strong in trials but fade after rollout.\n\n**Concurrent changes:** A bug fix, backend performance improvement, or another feature launched during the same period can inflate (or deflate) your numbers.\n\n**Selection effects:** A new onboarding flow may \"improve\" retention by filtering out confused users early — not by helping them.\n\n**Segment bleed:** The improvement came from one user segment only, but you're reading the aggregate.\n\n**Returning users:** Task performance improves because users adapted over time, not because of your design change.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "The story you tell", "items": ["Our redesign increased engagement 15%", "The new flow improved retention", "Users prefer the simpler layout"] },
-            "right": { "label": "What might really be happening", "items": ["A major bug fix shipped the same week", "Confused users dropped out earlier", "One power-user segment drove all the gains"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Engagement rose 15% after a redesign. A major bug fix also shipped that week. What's the right interpretation?",
-            "options": [
-              "You can't separate the redesign's effect from the bug fix",
-              "The redesign clearly caused the improvement",
-              "The bug fix was unrelated to engagement",
-              "Run the test longer to see which one mattered"
-            ],
-            "answer": 0,
-            "explain": "Concurrent changes are a classic confound. You can't attribute the engagement lift to the redesign when another change landed in the same window."
-          }
-        },
-        {
-          "title": "Moving toward causal reasoning",
-          "text": "You don't need a statistics PhD. You need better reasoning habits.\n\n**Practical approaches:**\n→ **Document a theory of change** before the test: what's the intervention, the expected behavior change, and what could interfere?\n→ **Triangulate:** Combine analytics with usability findings. Faster completion means little if users are confused.\n→ **Look for natural experiments:** Phased rollouts, feature toggles, or accidental bugs create cleaner before/after comparisons.\n→ **Communicate likelihood, not certainty:** \"This change likely contributed to...\" is more honest than \"This caused...\".\n\nUX researchers already ask \"why\" through hypotheses, usability tests, and interviews. The skill is applying that same reasoning to quantitative data.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Don't", "items": ["Treat A/B wins as proven causation", "Ship without investigating why", "Ignore what else changed", "Report with certainty"] },
-            "right": { "label": "Do", "items": ["Document theory of change upfront", "Triangulate quant with qual", "Use natural experiments when possible", "Report in terms of likelihood"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "What's the most useful thing to do BEFORE launching an A/B test?",
-            "options": [
-              "Document a theory of change: what you're changing, why, and what could interfere",
-              "Calculate the exact p-value threshold",
-              "Get executive sign-off on the winning variant",
-              "Design three variants instead of two"
-            ],
-            "answer": 0,
-            "explain": "A theory of change forces you to think about the mechanism, expected behavior, and confounds before you collect data — which makes interpretation much stronger."
-          }
-        }
+     "title": "Correlation is not causation (really)",
+     "text": "There are three levels of data reasoning:\n\n**1. Correlation:** Do these things move together?\n**2. Prediction:** If I see X, can I forecast Y?\n**3. Causation:** If I do X, will Y happen?\n\nMost A/B tests answer #1 at best. Teams read them as #3.\n\nA p-value < 0.05 means the result is unlikely to be chance. It does NOT mean:\n→ The variant caused the outcome\n→ The effect will hold broadly\n→ You understand why it happened\n\n**Netflix** found that promising controlled-trial results often failed after full rollout. **Booking.com** runs tens of thousands of experiments yearly and is still wrong about 9 out of 10 predictions.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "What teams think",
+       "items": [
+        "p < 0.05 = proven",
+        "Variant B caused the improvement",
+        "Ship it and move on"
+       ]
+      },
+      "right": {
+       "label": "What's actually shown",
+       "items": [
+        "The difference is unlikely to be chance",
+        "Variant B is associated with the outcome",
+        "You still don't know why"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "Your A/B test shows p = 0.03 for Variant B. What does this tell you?",
+      "options": [
+       "The difference is unlikely to be random chance, but not that B caused it",
+       "Variant B definitively caused the improvement",
+       "You need a larger sample size",
+       "The test was run incorrectly"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What is the main limitation of A/B test results?",
-          "options": [
-            "They show association, not causation — you know what happened but not why",
-            "They require too many participants",
-            "They can only test visual changes",
-            "They don't work on mobile devices"
-          ],
-          "answer": 0,
-          "explain": "A/B tests show that two things occurred together. They don't prove that one caused the other."
-        },
-        {
-          "type": "single",
-          "q": "What is a \"novelty effect\" in A/B testing?",
-          "options": [
-            "Users engage more with anything new, inflating initial results that fade after rollout",
-            "New features always perform better than old ones",
-            "Users prefer familiar interfaces over novel ones",
-            "The first variant tested always wins"
-          ],
-          "answer": 0,
-          "explain": "Novelty effects mean users interact more with something simply because it's new. The effect wears off, so initial A/B results can be misleading."
-        },
-        {
-          "type": "single",
-          "q": "A new onboarding flow shows better 30-day retention. But it also has a 40% higher drop-off during onboarding. What's likely happening?",
-          "options": [
-            "Selection effect — confused users quit earlier, making survivors look more retained",
-            "The flow is genuinely better at teaching the product",
-            "The sample size was too small",
-            "Users prefer longer onboarding experiences"
-          ],
-          "answer": 0,
-          "explain": "A selection effect: the new flow filtered out confused users early, so only more motivated users remained. Retention improved not because users learned more, but because the group changed."
-        },
-        {
-          "type": "single",
-          "q": "What does \"triangulate\" mean in the context of A/B test interpretation?",
-          "options": [
-            "Combine quantitative results with qualitative findings like usability tests and interviews",
-            "Run the same A/B test three times",
-            "Use three different statistical methods on the same data",
-            "Test three variants against each other"
-          ],
-          "answer": 0,
-          "explain": "Triangulation means using multiple data sources — analytics, usability, interviews — to understand what the numbers actually mean."
-        },
-        {
-          "type": "single",
-          "q": "How should UX researchers communicate A/B test findings to stakeholders?",
-          "options": [
-            "In terms of likelihood: \"this change likely contributed to...\"",
-            "With absolute certainty: \"this caused the improvement\"",
-            "Only share winning results, not inconclusive ones",
-            "Let the data team present all quantitative findings"
-          ],
-          "answer": 0,
-          "explain": "Honest communication uses likelihood language. Claiming certainty from an A/B test overstates what the method can show."
-        }
-      ]
+      "answer": 0,
+      "explain": "A low p-value means the result is unlikely to be chance. It says nothing about what caused it — other factors may be at play."
+     }
+    },
+    {
+     "title": "Hidden confounds that wreck your results",
+     "text": "Several things can make A/B results unreliable:\n\n**Novelty effects:** Users engage more with anything new. Results look strong in trials but fade after rollout.\n\n**Concurrent changes:** A bug fix, backend performance improvement, or another feature launched during the same period can inflate (or deflate) your numbers.\n\n**Selection effects:** A new onboarding flow may \"improve\" retention by filtering out confused users early — not by helping them.\n\n**Segment bleed:** The improvement came from one user segment only, but you're reading the aggregate.\n\n**Returning users:** Task performance improves because users adapted over time, not because of your design change.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "The story you tell",
+       "items": [
+        "Our redesign increased engagement 15%",
+        "The new flow improved retention",
+        "Users prefer the simpler layout"
+       ]
+      },
+      "right": {
+       "label": "What might really be happening",
+       "items": [
+        "A major bug fix shipped the same week",
+        "Confused users dropped out earlier",
+        "One power-user segment drove all the gains"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "Engagement rose 15% after a redesign. A major bug fix also shipped that week. What's the right interpretation?",
+      "options": [
+       "You can't separate the redesign's effect from the bug fix",
+       "The redesign clearly caused the improvement",
+       "The bug fix was unrelated to engagement",
+       "Run the test for two more weeks to see which change mattered most"
+      ],
+      "answer": 0,
+      "explain": "Concurrent changes are a classic confound. You can't attribute the engagement lift to the redesign when another change landed in the same window."
+     }
+    },
+    {
+     "title": "Moving toward causal reasoning",
+     "text": "You don't need a statistics PhD. You need better reasoning habits.\n\n**Practical approaches:**\n→ **Document a theory of change** before the test: what's the intervention, the expected behavior change, and what could interfere?\n→ **Triangulate:** Combine analytics with usability findings. Faster completion means little if users are confused.\n→ **Look for natural experiments:** Phased rollouts, feature toggles, or accidental bugs create cleaner before/after comparisons.\n→ **Communicate likelihood, not certainty:** \"This change likely contributed to...\" is more honest than \"This caused...\".\n\nUX researchers already ask \"why\" through hypotheses, usability tests, and interviews. The skill is applying that same reasoning to quantitative data.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Don't",
+       "items": [
+        "Treat A/B wins as proven causation",
+        "Ship without investigating why",
+        "Ignore what else changed",
+        "Report with certainty"
+       ]
+      },
+      "right": {
+       "label": "Do",
+       "items": [
+        "Document theory of change upfront",
+        "Triangulate quant with qual",
+        "Use natural experiments when possible",
+        "Report in terms of likelihood"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "What's the most useful thing to do BEFORE launching an A/B test?",
+      "options": [
+       "Document a theory of change: what you're changing, why, and what could interfere",
+       "Calculate the exact p-value threshold",
+       "Get executive sign-off on the winning variant so that rollout isn't delayed afterwards",
+       "Design three variants instead of two"
+      ],
+      "answer": 0,
+      "explain": "A theory of change forces you to think about the mechanism, expected behavior, and confounds before you collect data — which makes interpretation much stronger."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the main limitation of A/B test results?",
+     "options": [
+      "They show association, not causation",
+      "They always require too many participants",
+      "They can only test visual changes",
+      "They don't work on mobile devices"
+     ],
+     "answer": 0,
+     "explain": "A/B tests show that two things occurred together. They don't prove that one caused the other. (You know what happened but not why.)"
+    },
+    {
+     "type": "single",
+     "q": "What is a \"novelty effect\" in A/B testing?",
+     "options": [
+      "Users engage more with anything new, inflating initial results that fade after rollout",
+      "New features always perform better than old ones, because users prefer modern-looking design",
+      "Users prefer familiar interfaces over novel ones",
+      "The first variant tested always wins"
+     ],
+     "answer": 0,
+     "explain": "Novelty effects mean users interact more with something simply because it's new. The effect wears off, so initial A/B results can be misleading."
+    },
+    {
+     "type": "single",
+     "q": "A new onboarding flow shows better 30-day retention. But it also has a 40% higher drop-off during onboarding. What's likely happening?",
+     "options": [
+      "Selection effect",
+      "The flow is genuinely better at teaching the product",
+      "The sample size was too small",
+      "Users prefer longer onboarding experiences"
+     ],
+     "answer": 0,
+     "explain": "A selection effect: the new flow filtered out confused users early, so only more motivated users remained. Retention improved not because users learned more, but because the group changed. (Confused users quit earlier, making survivors look more retained.)"
+    },
+    {
+     "type": "single",
+     "q": "What does \"triangulate\" mean in the context of A/B test interpretation?",
+     "options": [
+      "Combine quantitative results with qualitative findings like usability tests and interviews",
+      "Run the same A/B test three times",
+      "Use three different statistical methods on the same data set and report whichever of them agree",
+      "Test three variants against each other"
+     ],
+     "answer": 0,
+     "explain": "Triangulation means using multiple data sources — analytics, usability, interviews — to understand what the numbers actually mean."
+    },
+    {
+     "type": "single",
+     "q": "How should UX researchers communicate A/B test findings to stakeholders?",
+     "options": [
+      "In terms of likelihood: \"this change likely contributed to...\"",
+      "With certainty: \"this change caused the improvement we saw\"",
+      "Only share winning results, not inconclusive ones",
+      "Let the data team present all quantitative findings"
+     ],
+     "answer": 0,
+     "explain": "Honest communication uses likelihood language. Claiming certainty from an A/B test overstates what the method can show."
+    }
+   ]
+  }
+ ]
 }

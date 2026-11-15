@@ -1,2 +1,6 @@
 # ux-practice
 Practice ux
+
+## Before you push
+
+Run `python3 scripts/check-content.py`. It fails on broken content (bad JSON, missing files, answer index out of range, duplicate options) and warns when the length of the options gives the answer away.

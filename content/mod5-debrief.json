@@ -1,135 +1,144 @@
 {
-  "id": "debrief",
-  "module": "business-impact",
-  "title": "UX Research Debriefs Reframed",
-  "icon": "🗣️",
-  "intro": "Most debrief meetings fail because they try to do two things at once: make sense of data AND decide what to do about it. These are different meetings.",
-  "topics": [
+ "id": "debrief",
+ "module": "business-impact",
+ "title": "UX Research Debriefs Reframed",
+ "icon": "🗣️",
+ "intro": "Teams merge two kinds of research debrief to save time and get the worst of both. Calabro separates them: a **synthesis session** to make sense of data, then a **strategic session** to decide.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "UX Research Debriefs Reframed",
+   "learn": [
     {
-      "id": "core",
-      "title": "Two Types of Debriefs",
-      "learn": [
-        {
-          "title": "Synthesis vs. strategic sessions",
-          "text": "There are two fundamentally different meetings hiding behind the word \"debrief.\"\n\n**Synthesis session:** Right after data collection. Goal is to make sense of what you learned. Not to decide anything.\n\n**Strategic session:** After findings are synthesized. Goal is to decide what happens next and set priorities.\n\nCombining them into one meeting causes confusion, rework, and frustration. The people in the room, the questions on the table, and the expected output are all different.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Synthesis Session", "items": ["Right after research", "Small group: researchers + 1-2 designers", "Look for patterns", "Output: shared understanding"] },
-            "right": { "label": "Strategic Session", "items": ["After synthesis is done", "Decision-makers with budget/roadmap", "Connect insights to decisions", "Output: action items with owners"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "You just finished 8 user interviews. Your PM wants to schedule a debrief with the VP to plan next quarter's roadmap. What's wrong?",
-            "options": [
-              "You need synthesis first — jumping to strategy with raw data leads to half-baked actions",
-              "Nothing — this is efficient",
-              "You need more interviews first",
-              "The VP shouldn't be involved in UX decisions"
-            ],
-            "answer": 0,
-            "explain": "Strategy without synthesis = action items based on half-formed insights. Synthesize first, then invite decision-makers."
-          }
-        },
-        {
-          "title": "Running a good synthesis session",
-          "text": "**Who:** Keep it small. Researchers, one or two designers, maybe a PM who's comfortable with ambiguity.\n\n**How:** Display evidence — quotes, screenshots, clips. Look for patterns across participants, not solutions.\n\n**Close with three buckets:**\n→ What we know (confirmed patterns)\n→ What we think (emerging themes, needs validation)\n→ What we need to verify (open questions)\n\n**Torres's interview snapshot:** Instead of batch-synthesizing 6–12 interviews at the end, create a one-page snapshot after each interview — a photo, a memorable quote, and the key opportunities. Your snapshot collection becomes a searchable index. Synthesize as you go, not in a big batch.\n\n**Critical rule:** Keep roadmap talk out of synthesis. The moment someone says \"so we should build...\" you've jumped to strategy too early.",
-          "try": {
-            "type": "single",
-            "q": "During synthesis, a designer says 'We should add a tooltip there.' What do you do?",
-            "options": [
-              "Note it as a hypothesis but steer back to patterns — solutions come later",
-              "Add it to the action items",
-              "Debate the tooltip design",
-              "Ask the PM to prioritize it"
-            ],
-            "answer": 0,
-            "explain": "Synthesis is for understanding, not solving. Jumping to solutions during analysis turns it into guesswork."
-          }
-        },
-        {
-          "title": "Running a good strategic session",
-          "text": "**Who:** Decision-makers who control resources or roadmaps.\n\n**How:** Open with 3–5 evidence-backed insights. For each one, follow the sequence:\n\nInsight → Implication → Decision\n\n\"Users abandon checkout at the address step\" → \"Our address form is the #1 conversion blocker\" → \"Do we fix the form or add address autocomplete?\"\n\n**Output:** Validated insights and next steps with owners and timing.\n\n**Rule of thumb:** If you're still finding surprises in the data, it's too early for this meeting.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Do", "items": ["Wait until synthesis is complete", "Lead with evidence-backed insights", "Assign owners and deadlines", "Schedule follow-up checkpoints"] },
-            "right": { "label": "Don't", "items": ["Hold strategy while data still holds surprises", "Present raw quotes without patterns", "Leave actions unowned", "Skip follow-up on impact"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "What's the right sequence for presenting findings in a strategic session?",
-            "options": [
-              "Insight → Implication → Decision",
-              "Data → Charts → Recommendations",
-              "Problem → Solution → Timeline",
-              "Quote → Theme → Priority"
-            ],
-            "answer": 0,
-            "explain": "Insight (what you found) → Implication (what it means for the business) → Decision (what to do about it)."
-          }
-        }
+     "title": "Type 1: Synthesis session",
+     "text": "Happens right after data collection, while observations are fresh.\n\n**Who:** researchers, one or two designers, a PM comfortable with open-ended discussion.\n**How:** evidence visible (quotes, screenshots, clips); look for patterns.\n**Close with:** what we know, what we think, what we need to verify.\n\nKeep it deliberately open-ended.",
+     "try": {
+      "type": "single",
+      "q": "How should a synthesis session end?",
+      "options": [
+       "What we know, think, and need to verify",
+       "A ranked list of features to build next",
+       "A sign-off from the product leadership",
+       "A final slide deck for all stakeholders"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What's the main mistake teams make with research debriefs?",
-          "options": [
-            "Combining synthesis and strategy into one meeting",
-            "Not inviting enough people",
-            "Spending too long on synthesis",
-            "Using slides instead of documents"
-          ],
-          "answer": 0,
-          "explain": "One meeting tries to do two jobs. The result: confusion, rework, and action items based on half-formed insights."
-        },
-        {
-          "type": "single",
-          "q": "Who should attend a synthesis session?",
-          "options": [
-            "A small group: researchers, 1-2 designers, maybe a PM comfortable with ambiguity",
-            "All stakeholders and the full product team",
-            "Only the lead researcher",
-            "Decision-makers who control the roadmap"
-          ],
-          "answer": 0,
-          "explain": "Synthesis needs people comfortable with open-ended discussion. Decision-makers belong in the strategic session."
-        },
-        {
-          "type": "single",
-          "q": "A synthesis session should close with which three categories?",
-          "options": [
-            "What we know, what we think, what we need to verify",
-            "Problems, solutions, timeline",
-            "Must-have, nice-to-have, won't-do",
-            "Users, stakeholders, developers"
-          ],
-          "answer": 0,
-          "explain": "These three buckets capture confirmed patterns, emerging themes, and open questions — the building blocks for strategy."
-        },
-        {
-          "type": "single",
-          "q": "When is it too early for a strategic session?",
-          "options": [
-            "When you're still finding surprises in the data",
-            "When fewer than 10 users have been tested",
-            "When the PM hasn't reviewed the findings",
-            "When no design solutions have been proposed"
-          ],
-          "answer": 0,
-          "explain": "Surprises mean synthesis isn't done. Strategy on incomplete understanding leads to action items that make research look 'too vague.'"
-        },
-        {
-          "type": "single",
-          "q": "What's the right output of a strategic session?",
-          "options": [
-            "Validated insights and next steps with owners and timing",
-            "A research report document",
-            "A list of follow-up research questions",
-            "Wireframes for the proposed solution"
-          ],
-          "answer": 0,
-          "explain": "Strategic sessions produce decisions and accountability — who does what, by when. Without owners and timing, nothing happens."
-        }
-      ]
+      "answer": 0,
+      "explain": "It produces themes and open questions, not next steps."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Synthesis",
+       "items": [
+        "Small group",
+        "Explore patterns",
+        "Know / think / verify"
+       ]
+      },
+      "right": {
+       "label": "Strategic",
+       "items": [
+        "Decision-makers",
+        "Align and act",
+        "Finding → decision"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Type 2: Strategic session",
+     "text": "Once findings are synthesised, the purpose shifts to alignment and action. A clear sequence:\n\n**Finding** → **Implication** → **Decision needed**\n\nExample: appraisers worked in three unofficial stages → re-architect navigation around those stages → validate with a low-fidelity prototype before committing engineering time.",
+     "try": {
+      "type": "single",
+      "q": "In a strategic debrief, what follows the finding?",
+      "options": [
+       "Its implication, then the decision needed",
+       "The full method, sample and recruiting details",
+       "A vote on whether the finding is true",
+       "All remaining raw quotes and clips"
+      ],
+      "answer": 0,
+      "explain": "Insight, implication, decision. Then repeat."
+     }
+    },
+    {
+     "title": "Why mixing them fails",
+     "text": "When synthesis and strategy are blended, three things happen:\n\n• Leaders expecting answers **lose patience with ambiguity**\n• Researchers get **derailed into solutions** before the evidence is solid\n• **Action items rest on half-baked insights**",
+     "try": {
+      "type": "single",
+      "q": "A VP joins your first look at raw interview notes and starts proposing fixes. Which problem is this?",
+      "options": [
+       "Researchers derailed before evidence is solid",
+       "The VP has not read the research plan",
+       "The session has too few participants",
+       "The notes were not transcribed and tagged in time"
+      ],
+      "answer": 0,
+      "explain": "Solutions arrive before the analysis is done."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Who belongs in a synthesis session?",
+     "options": [
+      "A small group at ease with open questions",
+      "Every stakeholder affected by the project",
+      "Only executives who own the budget",
+      "Customers who took part in the study"
+     ],
+     "answer": 0,
+     "explain": "Researchers, one or two designers, an open-minded PM."
+    },
+    {
+     "type": "single",
+     "q": "What is the purpose of a strategic debrief?",
+     "options": [
+      "Alignment and action",
+      "Finding patterns in raw data",
+      "Training new team members",
+      "Recruiting for the next study"
+     ],
+     "answer": 0,
+     "explain": "It turns settled findings into decisions."
+    },
+    {
+     "type": "single",
+     "q": "Why do teams merge the two debriefs?",
+     "options": [
+      "To save time",
+      "Because research guidelines require it",
+      "Because findings are usually simple",
+      "To keep designers out of the room"
+     ],
+     "answer": 0,
+     "explain": "It seems efficient on paper and costs more in practice."
+    },
+    {
+     "type": "single",
+     "q": "What else does a good strategic session surface?",
+     "options": [
+      "Trade-offs, such as tech debt blocking a fix",
+      "Every usability issue ever recorded",
+      "The researcher's personal design preferences, in full",
+      "A new list of research questions only"
+     ],
+     "answer": 0,
+     "explain": "Sometimes a finding can't be addressed yet; that is discussed openly."
+    },
+    {
+     "type": "single",
+     "q": "Which is NOT a result of mixing synthesis and strategy?",
+     "options": [
+      "Findings become statistically significant",
+      "Leaders lose patience with ambiguity",
+      "Researchers get pulled into solutions early",
+      "Action items rest on half-baked insights"
+     ],
+     "answer": 0,
+     "explain": "The other three are the failures Calabro lists."
+    }
+   ]
+  }
+ ]
 }

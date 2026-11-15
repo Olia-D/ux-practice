@@ -1,140 +1,144 @@
 {
-  "id": "figma",
-  "module": "business-impact",
-  "title": "Users Don't Care About Your Figma File",
-  "icon": "🎨",
-  "intro": "Clean, modern interfaces fail every day because teams skip basic usability principles. Visual polish doesn't make a product usable. Clarity is not a luxury — it's the foundation of UX.",
-  "topics": [
+ "id": "figma",
+ "module": "business-impact",
+ "title": "Users Don't Care About Your Figma File",
+ "icon": "🎨",
+ "intro": "A licence renewal site looked modern and didn't work: “Submit” clicked three times with no response. Calabro's point: first make things that work, and only then make them look appealing.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Users Don't Care About Your Figma File",
+   "learn": [
     {
-      "id": "core",
-      "title": "Internal Quality vs. UX Quality",
-      "learn": [
-        {
-          "title": "Polish ≠ usability",
-          "text": "A product can look polished while failing users. Clean design isn't useful if users can't figure out how to use it.\n\nTeams spend weeks perfecting spacing, color systems, and component libraries. The Figma file looks immaculate. Then users:\n\n→ Can't find the button they need\n→ Don't understand what an icon means\n→ Submit a form and get no confirmation\n→ Hit 'Archive' when they meant 'Add'\n\n**The rule:** Make things that work first. Then make them look good.\n\nUX quality is judged by whether users can complete real tasks confidently, not by how good the interface looks.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Internal quality (Figma)", "items": ["Perfect spacing and alignment", "Consistent component library", "On-brand color system", "Clean, minimal layout"] },
-            "right": { "label": "UX quality (users)", "items": ["Can I find what I need?", "Do I understand what this does?", "Do I know what just happened?", "Can I complete my task?"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A design review praises a settings page for its 'clean, minimal layout.' Users in testing can't find the save button. What's the real quality?",
-            "options": [
-              "High internal quality, low UX quality — it looks good but doesn't work",
-              "Low quality overall — the design is bad",
-              "High quality — users will learn eventually",
-              "It needs more user education, not redesign"
-            ],
-            "answer": 0,
-            "explain": "The Figma file is great. The UX isn't. These are different things, and only one of them matters to users."
-          }
-        },
-        {
-          "title": "The five failure patterns",
-          "text": "**1. Lack of clarity** — Unlabeled icons, hidden requirements, controls that change names or locations. Password rules hidden behind an info icon that only appear after submission fails.\n\n**2. Small interaction problems** — Tiny click targets, buttons with no visual feedback, clickable-looking elements that aren't clickable.\n\n**3. Communication failures** — No confirmation after submissions. Vague error messages. A budget tool where users resubmitted because nothing said the first one went through.\n\n**4. Cognitive load** — Modals that hide context users need. Forms that force you to remember rules or re-enter data.\n\n**5. Dangerous neighbors** — Destructive actions placed next to common ones. 'Archive Project' next to 'Add Task,' both looking identical.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Do", "items": ["Label every icon", "Show requirements upfront", "Confirm every action", "Separate destructive from common actions"] },
-            "right": { "label": "Don't", "items": ["Rely on icon recognition", "Hide rules behind info icons", "Let submissions go silent", "Put 'Delete' next to 'Save'"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A cloud storage app updates its layout. Users can't find the share button because the icon changed position and has no label. Which failure pattern?",
-            "options": [
-              "Lack of clarity — unlabeled icons that break muscle memory",
-              "Cognitive load — too many features",
-              "Communication failure — no feedback",
-              "Dangerous neighbors — misplaced actions"
-            ],
-            "answer": 0,
-            "explain": "Unlabeled icons + changed position = clarity failure. Users relied on location AND label, and both were taken away."
-          }
-        },
-        {
-          "title": "Measure task completion, not aesthetics",
-          "text": "The real test of UX quality: **Can users complete their actual tasks?**\n\n**Measure these:**\n→ Task completion rate\n→ Time on task\n→ Error rate\n→ Recovery from errors\n→ Confidence level (do they know it worked?)\n\n**Not these (as quality metrics):**\n→ Visual consistency score\n→ Component coverage\n→ Design system compliance\n→ Stakeholder approval in review\n\nDesign reviews catch visual problems. Usability tests catch task problems. You need both, but if you skip one, skip the design review.\n\n**Watch for the \"build trap\"** (Torres/Perri): Teams obsess over shipping features and assume success = launches. But customers don't care about your feature count. They care about solving their problems. Measure outcomes (did the user succeed?) not outputs (did we ship it?).\n\n**The bottom line:** Clarity is not a luxury. It is the foundation of UX.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "UX quality metrics", "items": ["Task completion rate", "Time on task", "Error rate + recovery", "User confidence"] },
-            "right": { "label": "Internal quality metrics", "items": ["Visual consistency", "Component coverage", "Design system compliance", "Stakeholder sign-off"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Your design system has 98% component coverage. Users complete the core task only 60% of the time. What's the priority?",
-            "options": [
-              "Fix the task completion problem — that's what users experience",
-              "Increase component coverage to 100%",
-              "Both are equally important",
-              "Run a design review to find visual inconsistencies"
-            ],
-            "answer": 0,
-            "explain": "Users don't care about your component library. They care about whether they can do what they came to do."
-          }
-        }
+     "title": "Lack of clarity",
+     "text": "Teams believe that if an interface looks clean, users will know how it works. Common problems:\n\n• Unlabeled icons users must memorise\n• Tooltips in place of labels or visible guidance\n• Weak signifiers: buttons that look like plain text\n• No defaults, even when the system knows the likely choice\n\nExample: a signup form that showed password rules only **after** submission failed.",
+     "try": {
+      "type": "single",
+      "q": "Password rules appear only after the form fails. Which problem is this?",
+      "options": [
+       "Guidance hidden instead of visible",
+       "A destructive action placed beside a routine one",
+       "A click target that is too small",
+       "A modal that blocks the context"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What does 'Users don't care about your Figma file' mean?",
-          "options": [
-            "Internal design quality (polish, consistency) is different from UX quality (can users do their tasks)",
-            "Figma is a bad tool",
-            "Users don't look at design files",
-            "Visual design doesn't matter at all"
-          ],
-          "answer": 0,
-          "explain": "The Figma file serves the team. UX quality serves the user. A perfect file doesn't guarantee a usable product."
-        },
-        {
-          "type": "single",
-          "q": "A form submission has no confirmation message. Users resubmit, creating duplicates. Which failure pattern?",
-          "options": [
-            "Communication failure — no feedback after action",
-            "Cognitive load — too complex",
-            "Dangerous neighbors — wrong button",
-            "Lack of clarity — unclear labels"
-          ],
-          "answer": 0,
-          "explain": "Users need to know what happened. Silent submissions cause resubmissions and erode trust."
-        },
-        {
-          "type": "single",
-          "q": "Why are 'dangerous neighbors' a UX problem?",
-          "options": [
-            "Placing destructive actions next to common ones leads to accidental data loss",
-            "They make the interface look cluttered",
-            "They violate design system guidelines",
-            "They slow down page performance"
-          ],
-          "answer": 0,
-          "explain": "'Archive Project' next to 'Add Task' — same size, same style, adjacent. One click and your project is gone."
-        },
-        {
-          "type": "single",
-          "q": "Which is a better measure of UX quality?",
-          "options": [
-            "Task completion rate",
-            "Design system compliance",
-            "Number of components used",
-            "Stakeholder approval in design review"
-          ],
-          "answer": 0,
-          "explain": "Task completion rate directly measures whether users can do what they came to do. Everything else is internal."
-        },
-        {
-          "type": "single",
-          "q": "What's the right order of priorities?",
-          "options": [
-            "Make it work, then make it look good",
-            "Make it look good, then make it work",
-            "Make it look good — usability follows naturally",
-            "They should happen simultaneously with equal weight"
-          ],
-          "answer": 0,
-          "explain": "Clarity is the foundation. Polish is the finish. A beautiful product that doesn't work is worse than an ugly one that does."
-        }
-      ]
+      "answer": 0,
+      "explain": "Lack of clarity: rules were hidden when users needed them."
+     }
+    },
+    {
+     "title": "Interaction and communication",
+     "text": "**Interaction doubts:** tiny click targets, buttons that don't respond visually, decoration that looks clickable.\n\n**Communication failures:** no confirmation after submit, progress indicators that appear too late, vague errors like “Try again later.”\n\nWhen feedback is missing, people stop trusting the interface and fall back on screenshots and refreshes.",
+     "try": {
+      "type": "single",
+      "q": "Submitting a form just refreshes the screen. What do users do next?",
+      "options": [
+       "Stop trusting it and use workarounds",
+       "Assume it worked and move on",
+       "Read the documentation for help",
+       "Wait patiently for an email confirmation to arrive"
+      ],
+      "answer": 0,
+      "explain": "In his example, users had no way of knowing whether the request went through."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Looks finished",
+       "items": [
+        "Clean layout",
+        "Icon-only buttons",
+        "Silent submit"
+       ]
+      },
+      "right": {
+       "label": "Works",
+       "items": [
+        "Labels and rules visible",
+        "Visible response",
+        "Confirmation"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Memory and bad neighbours",
+     "text": "**Cognitive overload:** modals that hide the context users need, re-entering information, rules to remember across steps.\n\n**Bad neighbours:** destructive actions beside save or confirm, styled alike, where muscle memory takes over.\n\nExample: “Archive Project” placed directly beside “Add Task.”",
+     "try": {
+      "type": "single",
+      "q": "“Archive Project” sits right next to “Add Task” with a similar icon. Which problem is this?",
+      "options": [
+       "Bad neighbours",
+       "Lack of clarity",
+       "Communication failure",
+       "Cognitive overload"
+      ],
+      "answer": 0,
+      "explain": "A high-impact action next to a routine one invites mis-clicks."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the order Calabro argues for?",
+     "options": [
+      "Make it work, then make it look good",
+      "Make it look good, then test it",
+      "Build the design system, then the flows",
+      "Ship fast, then fix what users report"
+     ],
+     "answer": 0,
+     "explain": "“We must first make things that work, and then, and only then, make sure they look visually appealing.”"
+    },
+    {
+     "type": "single",
+     "q": "As an interface gets more stripped-down, what does it need more of?",
+     "options": [
+      "Structure, context and visible rules",
+      "White space, larger typography and fewer controls",
+      "Animation to explain the layout",
+      "Onboarding tours for new users"
+     ],
+     "answer": 0,
+     "explain": "Minimal screens leave users with fewer clues."
+    },
+    {
+     "type": "single",
+     "q": "Which is an example of a weak signifier?",
+     "options": [
+      "A button that looks like plain text",
+      "An error message in technical language",
+      "A modal that covers the table behind it",
+      "A delete button next to a save button"
+     ],
+     "answer": 0,
+     "explain": "Users can't tell it is interactive."
+    },
+    {
+     "type": "single",
+     "q": "An edit modal covers the table users need to refer to. Which heuristic does this break?",
+     "options": [
+      "Recognition rather than recall",
+      "Aesthetic and minimalist design",
+      "Flexibility and efficiency of use",
+      "Help and documentation"
+     ],
+     "answer": 0,
+     "explain": "It forces users to remember what they were just looking at."
+    },
+    {
+     "type": "single",
+     "q": "What does the title mean?",
+     "options": [
+      "Users experience the product, not the design file",
+      "Figma is the wrong tool for product teams",
+      "Design files should be shared with users before launch",
+      "Users dislike modern visual styles"
+     ],
+     "answer": 0,
+     "explain": "Polish in the file doesn't matter if the product doesn't work."
+    }
+   ]
+  }
+ ]
 }

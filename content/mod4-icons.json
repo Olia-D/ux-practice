@@ -1,120 +1,165 @@
 {
-  "id": "icons",
-  "module": "design-principles",
-  "title": "Every Icon Needs a Label",
-  "icon": "🏷️",
-  "intro": "19 years of field data across 5 companies: unlabeled icons fail usability tests every time. Even \"universal\" icons aren't universal enough.",
-  "topics": [
+ "id": "icons",
+ "module": "design-principles",
+ "title": "Every Icon Needs a Label",
+ "icon": "🏷️",
+ "intro": "19 years of field data across 5 companies: unlabeled icons fail usability tests every time. Even \"universal\" icons aren't universal enough.",
+ "topics": [
+  {
+   "id": "core",
+   "title": "Icons and Labels",
+   "learn": [
     {
-      "id": "core",
-      "title": "Icons and Labels",
-      "learn": [
-        {
-          "title": "Icons alone don't work",
-          "text": "The author tested icon-only UIs **11 times across 19 years at 5 companies**. Every time, users struggled to identify unlabeled icons.\n\nIn one study at Minitab (statistical software), users were asked to match icons to command names. Even power users who'd used the software for years couldn't do it reliably.\n\nIn another test, experienced users could find commands with labeled icons — but when the icons were shuffled to new positions, they were lost. They'd memorized **location**, not the icon itself.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "What we think", "items": ["Users learn icons over time", "Power users recognize icons", "Icons save space"] },
-            "right": { "label": "What testing shows", "items": ["Users memorize position, not icons", "Even power users guess wrong", "Icons without labels add cognitive load"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "In icon recognition tests, what did experienced users actually rely on to find commands?",
-            "options": ["Location on screen", "The icon's visual design", "Color coding", "Tooltip memory"],
-            "answer": 0,
-            "explain": "Users memorized where commands were, not what the icons looked like. When positions were shuffled, they couldn't find anything."
-          }
-        },
-        {
-          "title": "The arguments against labels — and why they're wrong",
-          "text": "**\"Labels make it too busy.\"**\nClarity beats minimalism. Labels actually reduce cognitive load because users stop guessing.\n\n**\"Tooltips provide labels.\"**\nTooltips are slow, require hovering, and don't work on touch devices. Use them for supplementary info, never as the primary label.\n\n**\"Other apps use unlabeled icons.\"**\nGoogle can get away with it because of market dominance, not because it's good UX. Your B2B SaaS isn't Google.\n\n**\"Universal icons don't need labels.\"**\n\"Universal\" implies 100% recognition. In reality, only about **7–8 icons** are truly ubiquitous (home, search, close, etc.). The hamburger menu isn't one of them.",
-          "try": {
-            "type": "single",
-            "q": "Why are tooltips not an acceptable substitute for icon labels?",
-            "options": ["They don't work on touch devices and require extra interaction", "They're too expensive to implement", "They make the interface slower to render", "They violate WCAG guidelines"],
-            "answer": 0,
-            "explain": "Tooltips need hover (impossible on mobile), add interaction cost, and shouldn't carry essential information."
-          }
-        },
-        {
-          "title": "What to do instead",
-          "text": "**Always label icons** — especially for critical actions and navigation. The unlabeled icon sidebar (common in SaaS dashboards) is a particularly bad pattern.\n\n**Test your icons:**\n→ Matching test: Put icons and labels in two columns. Ask users to match them. If they struggle, the icons aren't clear.\n→ Location test: Shuffle icon positions. If users can't find functions, they were relying on position, not recognition.\n\n**Accessibility matters too.** Unlabeled icons can fail WCAG compliance and ISO audits. They exclude users with disabilities — which is both unethical and legally risky.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Do", "items": ["Label all icons", "Use tooltips for extra info only", "Run matching tests", "Treat labels as essential, not decorative"] },
-            "right": { "label": "Don't", "items": ["Rely on icon-only navigation", "Use tooltips as primary labels", "Assume any icon is universal", "Copy Google's patterns without their scale"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "How many icons does the article consider truly ubiquitous (recognized by nearly everyone)?",
-            "options": ["About 7–8", "About 20–30", "About 50", "All standard UI icons"],
-            "answer": 0,
-            "explain": "Only about 7–8 icons (home, search, close, etc.) approach universal recognition. Everything else needs a label."
-          }
-        }
+     "title": "Icons alone don't work",
+     "text": "The author tested icon-only UIs **11 times across 19 years at 5 companies**. Every time, users struggled to identify unlabeled icons.\n\nIn one study at Minitab (statistical software), users were asked to match icons to command names. Even power users who'd used the software for years couldn't do it reliably.\n\nIn another test, experienced users could find commands with labeled icons — but when the icons were shuffled to new positions, they were lost. They'd memorized **location**, not the icon itself.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "What we think",
+       "items": [
+        "Users learn icons over time",
+        "Power users recognize icons",
+        "Icons save space"
+       ]
+      },
+      "right": {
+       "label": "What testing shows",
+       "items": [
+        "Users memorize position, not icons",
+        "Even power users guess wrong",
+        "Icons without labels add cognitive load"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "In icon recognition tests, what did experienced users actually rely on to find commands?",
+      "options": [
+       "Location on screen",
+       "The icon's visual design",
+       "Color coding",
+       "Tooltip memory"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "How many times did the author test icon-only interfaces, and what was the consistent result?",
-          "options": [
-            "11 times — users always struggled with unlabeled icons",
-            "3 times — results were mixed",
-            "5 times — power users performed well",
-            "Once — the results were inconclusive"
-          ],
-          "answer": 0,
-          "explain": "11 tests over 19 years at 5 companies. Users consistently failed to identify unlabeled icons."
-        },
-        {
-          "type": "single",
-          "q": "When experienced users' icon positions were shuffled, what happened?",
-          "options": [
-            "They couldn't find commands — they had memorized location, not the icon",
-            "They found commands quickly because they recognized the icons",
-            "They performed the same as new users",
-            "They used keyboard shortcuts instead"
-          ],
-          "answer": 0,
-          "explain": "Users had memorized where things were on screen, not what the icons looked like. Shuffling positions broke their workflow."
-        },
-        {
-          "type": "single",
-          "q": "Why does the article say Google can get away with unlabeled icons but your product can't?",
-          "options": [
-            "Google's market dominance lets it skip usability norms others can't afford to",
-            "Google's icons are better designed than most",
-            "Google has trained users over decades",
-            "Google only uses universal icons"
-          ],
-          "answer": 0,
-          "explain": "Google's dominance means users will figure things out regardless. Most products don't have that luxury."
-        },
-        {
-          "type": "single",
-          "q": "What should tooltips be used for, according to the article?",
-          "options": [
-            "Supplementary information only — never as the primary label",
-            "As the main label for all icons",
-            "Only for accessibility compliance",
-            "Only on desktop, never mobile"
-          ],
-          "answer": 0,
-          "explain": "Tooltips are fine for extra tips, but essential labels must be visible without interaction."
-        },
-        {
-          "type": "single",
-          "q": "Which of these is a valid test for icon usability mentioned in the article?",
-          "options": [
-            "A matching test: ask users to match icons to their labels in two columns",
-            "A preference test: ask users which icons they like most",
-            "An A/B test: compare click rates with and without icons",
-            "A card sort: group icons into categories"
-          ],
-          "answer": 0,
-          "explain": "The matching test reveals whether users can identify what icons mean. If they can't match them to labels, the icons aren't working."
-        }
-      ]
+      "answer": 0,
+      "explain": "Users memorized where commands were, not what the icons looked like. When positions were shuffled, they couldn't find anything."
+     }
+    },
+    {
+     "title": "The arguments against labels — and why they're wrong",
+     "text": "**\"Labels make it too busy.\"**\nClarity beats minimalism. Labels actually reduce cognitive load because users stop guessing.\n\n**\"Tooltips provide labels.\"**\nTooltips are slow, require hovering, and don't work on touch devices. Use them for supplementary info, never as the primary label.\n\n**\"Other apps use unlabeled icons.\"**\nGoogle can get away with it because of market dominance, not because it's good UX. Your B2B SaaS isn't Google.\n\n**\"Universal icons don't need labels.\"**\n\"Universal\" implies 100% recognition. In reality, only about **7–8 icons** are truly ubiquitous (home, search, close, etc.). The hamburger menu isn't one of them.",
+     "try": {
+      "type": "single",
+      "q": "Why are tooltips not an acceptable substitute for icon labels?",
+      "options": [
+       "They don't work on touch devices and require extra interaction",
+       "They're too expensive to implement",
+       "They make the interface slower to render",
+       "They violate WCAG guidelines"
+      ],
+      "answer": 0,
+      "explain": "Tooltips need hover (impossible on mobile), add interaction cost, and shouldn't carry essential information."
+     }
+    },
+    {
+     "title": "What to do instead",
+     "text": "**Always label icons** — especially for critical actions and navigation. The unlabeled icon sidebar (common in SaaS dashboards) is a particularly bad pattern.\n\n**Test your icons:**\n→ Matching test: Put icons and labels in two columns. Ask users to match them. If they struggle, the icons aren't clear.\n→ Location test: Shuffle icon positions. If users can't find functions, they were relying on position, not recognition.\n\n**Accessibility matters too.** Unlabeled icons can fail WCAG compliance and ISO audits. They exclude users with disabilities — which is both unethical and legally risky.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Do",
+       "items": [
+        "Label all icons",
+        "Use tooltips for extra info only",
+        "Run matching tests",
+        "Treat labels as essential, not decorative"
+       ]
+      },
+      "right": {
+       "label": "Don't",
+       "items": [
+        "Rely on icon-only navigation",
+        "Use tooltips as primary labels",
+        "Assume any icon is universal",
+        "Copy Google's patterns without their scale"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "How many icons does the article consider truly ubiquitous (recognized by nearly everyone)?",
+      "options": [
+       "About 7–8",
+       "About 20–30",
+       "About 50",
+       "All standard UI icons"
+      ],
+      "answer": 0,
+      "explain": "Only about 7–8 icons (home, search, close, etc.) approach universal recognition. Everything else needs a label."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "How many times did the author test icon-only interfaces, and what was the consistent result?",
+     "options": [
+      "11 times — users always struggled with unlabeled icons",
+      "3 times — results were mixed",
+      "5 times — power users performed well with icons alone",
+      "Once — the results were inconclusive"
+     ],
+     "answer": 0,
+     "explain": "11 tests over 19 years at 5 companies. Users consistently failed to identify unlabeled icons."
+    },
+    {
+     "type": "single",
+     "q": "When experienced users' icon positions were shuffled, what happened?",
+     "options": [
+      "They couldn't find commands",
+      "They found commands quickly because they recognized the icons",
+      "They performed the same as new users",
+      "They used keyboard shortcuts instead"
+     ],
+     "answer": 0,
+     "explain": "Users had memorized where things were on screen, not what the icons looked like. Shuffling positions broke their workflow. (They had memorized location, not the icon.)"
+    },
+    {
+     "type": "single",
+     "q": "Why does the article say Google can get away with unlabeled icons but your product can't?",
+     "options": [
+      "Google's market dominance lets it skip usability norms others can't afford to",
+      "Google's icons are simply better designed and tested than the icons most companies use",
+      "Google has trained users over decades",
+      "Google only uses universal icons"
+     ],
+     "answer": 0,
+     "explain": "Google's dominance means users will figure things out regardless. Most products don't have that luxury."
+    },
+    {
+     "type": "single",
+     "q": "What should tooltips be used for, according to the article?",
+     "options": [
+      "Supplementary information only",
+      "As the main label for all icons",
+      "Only for accessibility compliance",
+      "Only on desktop, never mobile"
+     ],
+     "answer": 0,
+     "explain": "Tooltips are fine for extra tips, but essential labels must be visible without interaction. (Never as the primary label.)"
+    },
+    {
+     "type": "single",
+     "q": "Which of these is a valid test for icon usability mentioned in the article?",
+     "options": [
+      "A matching test: ask users to match icons to their labels in two columns",
+      "A preference test: ask users which icons they like most and count the votes",
+      "An A/B test: compare click rates with and without icons",
+      "A card sort: group icons into categories"
+     ],
+     "answer": 0,
+     "explain": "The matching test reveals whether users can identify what icons mean. If they can't match them to labels, the icons aren't working."
+    }
+   ]
+  }
+ ]
 }

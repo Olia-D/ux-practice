@@ -1,135 +1,144 @@
 {
-  "id": "delight",
-  "module": "business-impact",
-  "title": "Rethinking User Delight",
-  "icon": "✨",
-  "intro": "Delight is on every OKR and job posting, but rarely defined. Teams paste it on at the end — cheeky microcopy, celebratory animations — while the flow underneath still doesn't work.",
-  "topics": [
+ "id": "delight",
+ "module": "business-impact",
+ "title": "Rethinking User Delight",
+ "icon": "✨",
+ "intro": "Teams that set out to “add delight” usually layer effects on top of the product. The result is often slower, less accessible and more frustrating. Calabro goes back to Bill Scott's idea of **interesting moments**.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Rethinking User Delight",
+   "learn": [
     {
-      "id": "core",
-      "title": "What Delight Actually Is",
-      "learn": [
-        {
-          "title": "Delight is not decoration",
-          "text": "Teams treat delight as a layer you add on top:\n→ Cheeky loading messages\n→ Confetti after completing a form\n→ Playful microcopy in error states\n→ Visual polish on a confusing task flow\n\nThese touches can actually **hurt** usability and accessibility. And they don't fix the underlying problem.\n\nIf the checkout flow takes 7 steps when it should take 3, no amount of confetti will make users feel delighted.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "What teams call delight", "items": ["Celebratory animations", "Cheeky microcopy", "Visual polish", "Decorative UI elements"] },
-            "right": { "label": "What delight actually is", "items": ["The task was hard, now it's easy", "The system responds instantly", "Errors are prevented, not decorated", "Effort is reduced, not hidden"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A PM asks you to 'add delight' to a slow, confusing settings page. What's the right first move?",
-            "options": [
-              "Reduce the effort — cut steps, simplify decisions, speed up the page",
-              "Add friendly illustrations and microcopy",
-              "Design a celebratory animation for when settings are saved",
-              "Add a progress bar to show how much is left"
-            ],
-            "answer": 0,
-            "explain": "Reduce effort before adding anything new. Delight emerges from interaction quality, not decoration."
-          }
-        },
-        {
-          "title": "Bill Scott's 'interesting moments'",
-          "text": "Bill Scott's concept reframes delight as **interaction quality.** Delight comes from small moments where the system:\n\n→ **Prevents errors** before they happen\n→ **Gives timely feedback** so users know where they stand\n→ **Maintains continuity** so context isn't lost\n→ **Reduces effort** by removing unnecessary steps\n\nUsers don't consciously notice delight mid-task. They experience it as smooth, low-effort, responsive, and predictable. It's what happens when everything just works.\n\nWell-timed, supportive transitions keep users in a flow state. Decorative ones knock them out of it.",
-          "try": {
-            "type": "single",
-            "q": "A form auto-saves as you type, preventing data loss. Is this 'delight'?",
-            "options": [
-              "Yes — it prevents errors and reduces effort, which is real delight",
-              "No — delight needs to be visible and celebratory",
-              "No — it's just good engineering",
-              "Only if users consciously notice and appreciate it"
-            ],
-            "answer": 0,
-            "explain": "This is a textbook 'interesting moment.' Users may not notice it, but they'd sure notice if it was gone."
-          }
-        },
-        {
-          "title": "The rule of thumb",
-          "text": "**\"Reduce effort before adding anything new.\"**\n\nBefore you add a single animation, illustration, or microcopy flourish:\n\n1. Remove unnecessary steps\n2. Consolidate decisions\n3. Cut unnecessary confirmations\n4. Speed up system responses\n5. Prevent errors instead of handling them\n\nThen — and only then — consider whether decorative touches add value.\n\nAnimations aren't inherently bad. Helpful ones respond to user action, communicate system status, and end quickly. Decorative ones that exist mainly to feel 'modern' are the problem.\n\nTreat delight as something that **emerges from interaction quality**, not something you paste on at the end.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Helpful animation", "items": ["Responds to user action", "Communicates system status", "Ends quickly", "Keeps user in flow"] },
-            "right": { "label": "Decorative animation", "items": ["Auto-triggered, no user action", "Adds no information", "Loops or lingers", "Breaks flow state"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Which animation adds real delight?",
-            "options": [
-              "A brief transition that shows a new item sliding into a list after 'Add'",
-              "A 3-second logo animation on every page load",
-              "Parallax scrolling on a settings page",
-              "A bouncing arrow pointing to the CTA"
-            ],
-            "answer": 0,
-            "explain": "It responds to user action, communicates that the item was added, and ends immediately. That's an interesting moment."
-          }
-        }
+     "title": "Six misunderstandings",
+     "text": "**1.** Skipping the basics\n**2.** Confusing good looks with good design\n**3.** Misusing design systems\n**4.** Over-relying on motion\n**5.** Overloading the screen\n**6.** Trying to please everyone\n\nIf people are forced to wait, guess or reorient mid-flow, no decoration fixes it.",
+     "try": {
+      "type": "single",
+      "q": "A team adds animations to a checkout that still has usability problems. Which misunderstanding is this?",
+      "options": [
+       "Skipping the basics",
+       "Trying to please everyone",
+       "Misusing design systems",
+       "Overloading the screen"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "According to this framework, what is user delight?",
-          "options": [
-            "An outcome that emerges from interaction quality — smooth, low-effort, responsive systems",
-            "Visual polish and aesthetic appeal",
-            "Celebratory moments after task completion",
-            "High NPS scores and positive reviews"
-          ],
-          "answer": 0,
-          "explain": "Delight isn't a layer you add. It's what users experience when the interaction is smooth, responsive, and effortless."
-        },
-        {
-          "type": "single",
-          "q": "What should you do BEFORE adding any decorative touches to a flow?",
-          "options": [
-            "Reduce effort — remove steps, consolidate decisions, cut confirmations",
-            "Run an A/B test on different animations",
-            "Survey users about what would 'delight' them",
-            "Benchmark competitor decorative patterns"
-          ],
-          "answer": 0,
-          "explain": "Reduce effort before adding anything new. You can't decorate your way out of a confusing flow."
-        },
-        {
-          "type": "single",
-          "q": "A user finishes a 12-step onboarding flow and sees confetti. They say they liked it in a survey. What's the problem?",
-          "options": [
-            "The flow is 12 steps — reducing it to 4 would create more delight than any confetti",
-            "Nothing — the confetti is working",
-            "Confetti is bad for accessibility",
-            "Surveys can't measure delight"
-          ],
-          "answer": 0,
-          "explain": "Users may like confetti, but they'd like a 4-step flow more. Real delight comes from reducing effort, not celebrating its end."
-        },
-        {
-          "type": "single",
-          "q": "What makes an animation helpful rather than decorative?",
-          "options": [
-            "It responds to a user action, communicates status, and ends quickly",
-            "It uses the latest CSS techniques",
-            "It matches the brand guidelines",
-            "It plays on every page load for consistency"
-          ],
-          "answer": 0,
-          "explain": "Helpful animations are triggered by user action, carry information, and don't overstay. Decorative ones play on their own and add nothing."
-        },
-        {
-          "type": "single",
-          "q": "Why do users not consciously notice 'real' delight during a task?",
-          "options": [
-            "Because delight in this sense IS the flow state — you only notice when something breaks it",
-            "Because users have low attention spans",
-            "Because delight is subconscious by definition",
-            "Because good design is invisible to non-designers"
-          ],
-          "answer": 0,
-          "explain": "Delight is experienced as smooth, low-effort interaction. You notice friction, not flow. That's the whole point."
-        }
-      ]
+      "answer": 0,
+      "explain": "Surface enhancements on a flow that still fails."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Decoration",
+       "items": [
+        "Effects on top",
+        "Motion without intent",
+        "More prompts"
+       ]
+      },
+      "right": {
+       "label": "Real delight",
+       "items": [
+        "Basics work first",
+        "Feedback that guides",
+        "Well-timed"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Scott's principles",
+     "text": "**Keep interactions direct:** show only what's needed, when it's needed.\n**Maintain flow:** keep users in context; avoid interruptions.\n**Respond with intent:** feedback should match the user's action, “not to entertain, but to reassure and guide.”\n\nDelight comes from well-timed interactions, when things unfold as expected or better.",
+     "try": {
+      "type": "single",
+      "q": "What is system feedback for, in Scott's “respond with intent”?",
+      "options": [
+       "To reassure and guide",
+       "To entertain and surprise",
+       "To show brand personality",
+       "To fill waiting time"
+      ],
+      "answer": 0,
+      "explain": "Feedback aligns with the user's action."
+     }
+    },
+    {
+     "title": "Two animations",
+     "text": "Calabro's two examples both use animation and both look polished.\n\n✅ One gives immediate, contextual feedback **as the user types** and prevents errors.\n❌ The other interrupts someone who has just found what they were looking for.\n\nAlso: Material or Fluent give visual consistency, but consistency is a tool, not the goal.",
+     "try": {
+      "type": "single",
+      "q": "Which animation improves the experience?",
+      "options": [
+       "Feedback that appears as the user types",
+       "A transition that plays on page load",
+       "A banner that slides in over the content",
+       "A looping effect that draws the eye"
+      ],
+      "answer": 0,
+      "explain": "It is triggered by the user and prevents errors."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Where does delight come from, according to the article?",
+     "options": [
+      "Well-timed interactions that go as expected or better",
+      "Playful copy and brand illustrations throughout the product",
+      "The number of features on each screen",
+      "A consistent component library by itself"
+     ],
+     "answer": 0,
+     "explain": "Pacing and responsiveness, not surface flair."
+    },
+    {
+     "type": "single",
+     "q": "What are Bill Scott's “interesting moments”?",
+     "options": [
+      "Small interaction details that make a system feel responsive",
+      "Marketing campaigns that are timed to major product launches",
+      "Surprise rewards shown after a purchase",
+      "Moments when users share feedback"
+     ],
+     "answer": 0,
+     "explain": "Small interaction details."
+    },
+    {
+     "type": "single",
+     "q": "A team applies Material components everywhere and calls the product delightful. What is missing?",
+     "options": [
+      "Decisions rooted in user goals",
+      "A second design system as backup",
+      "More animation between screens",
+      "Custom icons for each feature"
+     ],
+     "answer": 0,
+     "explain": "Visual consistency is a tool, not the goal."
+    },
+    {
+     "type": "single",
+     "q": "What is the usual result of “adding delight” as effects?",
+     "options": [
+      "Slower, less accessible, more frustrating",
+      "Higher task completion and fewer support requests",
+      "Fewer support requests overall",
+      "No measurable change at all"
+     ],
+     "answer": 0,
+     "explain": "Style for its own sake causes real harm."
+    },
+    {
+     "type": "single",
+     "q": "Which is NOT one of the six misunderstandings?",
+     "options": [
+      "Responding with intent",
+      "Over-relying on motion",
+      "Overloading the screen",
+      "Confusing good looks with good design"
+     ],
+     "answer": 0,
+     "explain": "Responding with intent is one of Scott's principles."
+    }
+   ]
+  }
+ ]
 }

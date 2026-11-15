@@ -1,135 +1,144 @@
 {
-  "id": "dashboard",
-  "module": "business-impact",
-  "title": "Why Your Data Dashboard Stinks",
-  "icon": "📉",
-  "intro": "A dashboard can be accurate and visually clean and still lead users to wrong conclusions. The chart being correct isn't enough — the takeaway has to be correct too.",
-  "topics": [
+ "id": "dashboard",
+ "module": "business-impact",
+ "title": "Why Your Data Dashboard Stinks",
+ "icon": "📉",
+ "intro": "Most teams stop at visual clarity: the chart renders, matches the design system and passes accessibility checks. Dashboards built that way still mislead, because human cognition is full of shortcuts.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Why Your Data Dashboard Stinks",
+   "learn": [
     {
-      "id": "core",
-      "title": "Decisions-First Dashboard Design",
-      "learn": [
-        {
-          "title": "Five ways dashboards mislead",
-          "text": "Tufte's principles (data-ink ratio, avoid chartjunk) address how a chart is **presented** — not how people **perceive** it.\n\n1. **Misleading continuity** — Lines connect unrelated snapshots, implying a trend that doesn't exist.\n\n2. **Accidental grouping** — Proximity and shared color make users infer relationships between unrelated metrics.\n\n3. **Color assumptions** — Users read red/green/yellow as bad/good/average. Colorblindness and cultural differences make it worse. Color should never be the only signal.\n\n4. **Memory overload** — Toggles and tabs force users to remember values across screens instead of comparing directly. (Nielsen: recognition rather than recall.)\n\n5. **Anchoring and framing** — The first metric shown becomes the benchmark. 'Risk' vs. 'Stability' changes emotional response to the same number.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Looks correct", "items": ["Clean Tufte-style chart", "Accurate data", "Modern color palette", "Responsive layout"] },
-            "right": { "label": "Still misleads", "items": ["Users infer wrong trend", "Unrelated metrics look grouped", "Color is only differentiator", "First number anchors everything"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A dashboard shows revenue and headcount on the same line chart with dual Y-axes. Both go up. What will users likely conclude?",
-            "options": [
-              "That revenue and headcount are related — even if they're not",
-              "That revenue is more important because it's on the left",
-              "Nothing — dual Y-axes are clear",
-              "That both metrics are performing well"
-            ],
-            "answer": 0,
-            "explain": "Proximity + shared chart = accidental grouping. Users infer correlation from co-location, even when there is none."
-          }
-        },
-        {
-          "title": "Start from the decision, not the data",
-          "text": "Most dashboards start with: \"What data do we have?\" then display all of it.\n\nThe right question: **\"What decision does the user need to make?\"**\n\nThen show only the data that supports that decision.\n\nA sales manager looking at pipeline doesn't need 15 charts. They need to know:\n→ Am I on track to hit quota?\n→ Which deals need attention this week?\n→ What changed since last week?\n\nThree questions. Maybe four charts. Everything else is noise.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Data-first (typical)", "items": ["Show all available metrics", "15 charts on one page", "User must find what matters", "Dashboard = data dump"] },
-            "right": { "label": "Decision-first (better)", "items": ["What decision does user make?", "Show only supporting data", "User sees answer immediately", "Dashboard = decision tool"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A PM asks you to 'add user engagement metrics to the dashboard.' What do you ask first?",
-            "options": [
-              "What decision will these metrics help someone make?",
-              "Which chart type should we use?",
-              "How many metrics do we have?",
-              "Where should they go on the page?"
-            ],
-            "answer": 0,
-            "explain": "Start from the decision. If a metric doesn't support a specific decision, it's just noise on the screen."
-          }
-        },
-        {
-          "title": "Practical fixes",
-          "text": "**Show comparisons side by side** — not behind toggles or tabs. Users can't accurately compare values they have to remember.\n\n**Use inline labels and direct annotations** — not separate legends. Every legend lookup is a micro-interruption.\n\n**Add context** — benchmarks, thresholds, previous-period values. A number without context has no meaning. '12%' means nothing. '12%, up from 8%, target is 15%' tells a story.\n\n**State scope explicitly** — timeframe, population, and scope in titles, sublabels, and tooltips.\n\n**Pair color with shape, text, or position** — color alone fails for colorblindness and grayscale printing.\n\n**Give KPIs equal visual weight** — unless you intentionally want to anchor on one.",
-          "try": {
-            "type": "single",
-            "q": "A KPI card shows '94%' with no other context. What's missing?",
-            "options": [
-              "Comparison point — previous period, target, or benchmark",
-              "A chart showing the trend",
-              "The exact number of users",
-              "A color indicator"
-            ],
-            "answer": 0,
-            "explain": "'94%' means nothing alone. Is it up or down? Is 94% good or bad? A benchmark or previous value gives meaning."
-          }
-        }
+     "title": "Five ways dashboards mislead",
+     "text": "**1. Misleading continuity:** a line between two quarterly numbers looks like a trend.\n**2. Accidental grouping:** things placed together look related.\n**3. Colour assumptions:** red, green and yellow carry meaning whether intended or not.\n**4. Memory overload:** comparisons hidden behind toggles and tabs.\n**5. Anchoring and framing:** the first metric becomes the benchmark.",
+     "try": {
+      "type": "single",
+      "q": "Two quarterly figures are joined by a line. What will users assume?",
+      "options": [
+       "That something is trending between them",
+       "That the two figures are unrelated",
+       "That the data between them is incomplete or missing",
+       "That the second figure is the target"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What's the core problem with most dashboards?",
-          "options": [
-            "They can be accurate and clean but still lead users to wrong conclusions",
-            "They use too many colors",
-            "They show too little data",
-            "They aren't updated frequently enough"
-          ],
-          "answer": 0,
-          "explain": "If the chart is correct but the takeaway is wrong, the work is not finished. Perception matters as much as accuracy."
-        },
-        {
-          "type": "single",
-          "q": "What does 'anchoring' mean in dashboard design?",
-          "options": [
-            "The first metric shown becomes the benchmark users compare everything else against",
-            "Pinning a chart to the top of the page",
-            "Using a fixed Y-axis scale",
-            "Keeping the same layout across dashboard versions"
-          ],
-          "answer": 0,
-          "explain": "Anchoring bias: whatever users see first sets their frame of reference. This means the order and prominence of metrics matters."
-        },
-        {
-          "type": "single",
-          "q": "Why are toggles and tabs bad for data comparison?",
-          "options": [
-            "They force users to remember values across screens instead of comparing directly",
-            "They add too many clicks",
-            "They slow down page load",
-            "They're not accessible"
-          ],
-          "answer": 0,
-          "explain": "Recognition rather than recall (Nielsen). Humans are bad at remembering exact values. Show comparisons side by side."
-        },
-        {
-          "type": "single",
-          "q": "What question should you ask FIRST when designing a dashboard?",
-          "options": [
-            "What decision does the user need to make?",
-            "What data is available?",
-            "What chart types work best?",
-            "How many KPIs should we show?"
-          ],
-          "answer": 0,
-          "explain": "Decision-first design. The user's decision determines what data to show. Everything else is noise."
-        },
-        {
-          "type": "single",
-          "q": "Why should color never be the only differentiator in a chart?",
-          "options": [
-            "Colorblindness, cultural differences, and grayscale printing all break color-only encoding",
-            "Colors don't look good on all screens",
-            "Users prefer shapes over colors",
-            "Color is harder to implement in code"
-          ],
-          "answer": 0,
-          "explain": "~8% of men have some form of colorblindness. Pair color with shape, text, or position. Color reinforces — it shouldn't carry the signal alone."
-        }
-      ]
+      "answer": 0,
+      "explain": "Misleading continuity: people read a line as continuous change."
+     }
+    },
+    {
+     "title": "Start from the decision",
+     "text": "Ask **“What decisions do users need to make here?”** before “What data do we have?”\n\nWhen a dashboard is built around decisions, structure becomes obvious: show only the data that supports the choice at hand.\n\nThen map visuals to mental models. People expect bars to compare categories and lines to show change over time.",
+     "try": {
+      "type": "single",
+      "q": "What should you ask first when designing a dashboard?",
+      "options": [
+       "What decisions do users need to make here?",
+       "What data do we already have available?",
+       "Which chart types does the library support?",
+       "How many metrics fit above the fold?"
+      ],
+      "answer": 0,
+      "explain": "Decision first, data second."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Starts from data",
+       "items": [
+        "Shows everything available",
+        "Structure follows the database",
+        "Users filter and hunt"
+       ]
+      },
+      "right": {
+       "label": "Starts from a decision",
+       "items": [
+        "Shows what supports the choice",
+        "Structure follows the task",
+        "Less noise"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Compare side by side, and label",
+     "text": "If users need to compare metrics, **place them next to each other**. Never hide them behind toggles or tabs: the moment someone has to remember a number, errors follow.\n\n“Think of comparison as a visual task, not a cognitive one.”\n\nAnd use labels, not just legends, so every chart explains itself.",
+     "try": {
+      "type": "single",
+      "q": "Revenue is on one tab and cost on another. Users must compare them. What is the fix?",
+      "options": [
+       "Show both metrics side by side",
+       "Add a tooltip with the other value",
+       "Use a brighter colour on each tab",
+       "Add a legend below the tab bar"
+      ],
+      "answer": 0,
+      "explain": "Comparison from memory is the “memory overload” problem."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "A 98% success rate and a 2% failure rate feel different to users. Which effect is this?",
+     "options": [
+      "Framing",
+      "Accidental grouping",
+      "Misleading continuity",
+      "Memory overload"
+     ],
+     "answer": 0,
+     "explain": "Same number, different frame."
+    },
+    {
+     "type": "single",
+     "q": "Metric A drops and metric B, placed beside it, rises. What might users wrongly conclude?",
+     "options": [
+      "That one caused the other",
+      "That both are measured weekly",
+      "That A is more important than B",
+      "That the dashboard has a bug"
+     ],
+     "answer": 0,
+     "explain": "Accidental grouping: proximity suggests a relationship."
+    },
+    {
+     "type": "single",
+     "q": "Which chart do people expect for change over time?",
+     "options": [
+      "A line chart",
+      "A bar chart",
+      "A pie chart",
+      "A table of totals"
+     ],
+     "answer": 0,
+     "explain": "Lines for change over time, bars for comparing categories."
+    },
+    {
+     "type": "single",
+     "q": "Why is “the chart renders correctly and passes accessibility checks” not enough?",
+     "options": [
+      "It ignores how users interpret and decide",
+      "Accessibility checks are usually wrong about charts",
+      "Rendering bugs always appear later",
+      "Design systems forbid most charts"
+     ],
+     "answer": 0,
+     "explain": "UX research adds how people interpret, compare and decide."
+    },
+    {
+     "type": "single",
+     "q": "What does “use labels, not just legends” aim for?",
+     "options": [
+      "Every chart is self-explanatory",
+      "Charts use fewer colours overall",
+      "Legends can be hidden on mobile",
+      "Users learn the colour code faster"
+     ],
+     "answer": 0,
+     "explain": "Direct labels remove the look-up step."
+    }
+   ]
+  }
+ ]
 }

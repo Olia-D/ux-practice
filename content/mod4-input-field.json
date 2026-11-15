@@ -1,120 +1,188 @@
 {
-  "id": "input-field",
-  "module": "design-principles",
-  "title": "The Anatomy of an Input Field",
-  "icon": "📝",
-  "intro": "Every input field has up to **7 elements**. Most teams get at least 2 wrong. The required indicator debate alone has tripped up entire design systems.",
-  "topics": [
+ "id": "input-field",
+ "module": "design-principles",
+ "title": "The Anatomy of an Input Field",
+ "icon": "📝",
+ "intro": "Every input field has up to **7 elements**. Most teams get at least 2 wrong. The required indicator debate alone has tripped up entire design systems.",
+ "topics": [
+  {
+   "id": "core",
+   "title": "Input Field Elements",
+   "learn": [
     {
-      "id": "core",
-      "title": "Input Field Elements",
-      "learn": [
-        {
-          "title": "The 7 elements of an input field",
-          "text": "Every input field can have up to 7 elements. Here's the stack, top to bottom:\n\n**1. Asterisk (*)** — Required indicator. Place it left of the label, in a standout color like red.\n\n**2. Label** — Always visible, always present. Never rely on placeholder text as a label.\n\n**3. Optional indicator** — Use only when mixing required and optional fields. Place right of label, in parentheses.\n\n**4. Explanatory text** — Context-specific help. Keep it visible — don't hide it behind an \"i\" icon or tooltip.\n\n**5. Input field control** — The standard input box. Users recognize it without help (40+ years of convention).\n\n**6. Placeholder text** — Almost never use it. The article's rule: avoid it.\n\n**7. System help text** — Goes at the bottom. For field requirements, data warnings, and status messages.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Do", "items": ["Always show a visible label", "Put asterisk left of label", "Keep help text visible", "Put system messages at bottom"] },
-            "right": { "label": "Don't", "items": ["Use placeholder as a label", "Hide help behind an icon", "Skip labels on 'obvious' fields", "Put error messages above the field"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Where should explanatory text (help text) be placed?",
-            "options": ["Visible below the label, never hidden behind a tooltip", "Inside the input as placeholder", "In a tooltip on an 'i' icon", "Above the form as a general instruction"],
-            "answer": 0,
-            "explain": "Help text should be visible without interaction. Hiding it behind icons or tooltips means most users will never see it."
-          }
-        },
-        {
-          "title": "Why placeholder text is almost always wrong",
-          "text": "The article's position: **avoid placeholder text**. Three reasons:\n\n**1. Filled fields look pre-filled.** When placeholder text disappears on focus, users may think a value was already entered — leading to skipped fields and errors.\n\n**2. Accessibility problems.** Many browsers and assistive technologies don't reliably read placeholder text. It creates barriers for screen reader users.\n\n**3. Low visual contrast.** Placeholder text is typically gray and sometimes italic — weak and easy to miss, especially for users with visual impairments.\n\n**What to use instead:**\n→ A visible label (always)\n→ Explanatory text below the label for formatting hints\n→ Auto-formatting to guide input (e.g., phone numbers grouping into segments)\n\n**Also: never use floating labels.** NN/g confirms placing the label and hint outside the field is the best approach. Floating labels create usability and accessibility problems.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Instead of placeholder", "items": ["Visible label above field", "Helper text below label", "Auto-formatting (phone, ZIP)", "Example shown outside the field"] },
-            "right": { "label": "Placeholder problems", "items": ["Disappears on focus", "Looks pre-filled", "Low contrast, hard to read", "Screen readers may skip it"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "What does the article recommend instead of placeholder text for format hints?",
-            "options": ["Auto-formatting (like grouping phone number digits)", "A tooltip on hover", "A placeholder with higher contrast", "An info icon next to the field"],
-            "answer": 0,
-            "explain": "Auto-formatting guides users naturally — e.g., a phone field that groups digits shows the expected format without placeholder text."
-          }
-        },
-        {
-          "title": "The required indicator debate",
-          "text": "The article's position: **mark every required field with an asterisk**, even when ALL fields are required.\n\n**The counterargument:** \"Just put a note at the top saying 'all fields required' — asterisks on every field add visual clutter.\"\n\n**Why the article rejects that:**\n\n→ Users focus on the field under their cursor and process one task at a time. A note at the top of the form is easily missed.\n→ Users must hold that top note in working memory while filling each field. That's a cognitive burden.\n→ It's a **Type 1 vs. Type 2 error** trade-off. An unmarked required field risks false negatives — users skip it, submit, hit an error. The article judges that outcome worse than visual clutter.\n\nBottom line: the cost of a user missing a required field is higher than the cost of visual noise from asterisks.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Mark every required field", "items": ["Clear at the field level", "No memory burden", "Prevents skipped-field errors", "Works for scanning users"] },
-            "right": { "label": "Top-of-form note only", "items": ["Easily missed", "Requires working memory", "Users process field-by-field", "Skipped fields → submission errors"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Why does the article say a 'top of form' note about required fields is insufficient?",
-            "options": ["Users focus field-by-field and easily miss top-level instructions", "It doesn't meet WCAG requirements", "It's slower to implement", "Screen readers can't detect it"],
-            "answer": 0,
-            "explain": "Users process forms one field at a time. A note at the top requires them to remember it while filling every subsequent field."
-          }
-        }
+     "title": "The 7 elements of an input field",
+     "text": "Every input field can have up to 7 elements. Here's the stack, top to bottom:\n\n**1. Asterisk (*)** — Required indicator. Place it left of the label, in a standout color like red.\n\n**2. Label** — Always visible, always present. Never rely on placeholder text as a label.\n\n**3. Optional indicator** — Use only when mixing required and optional fields. Place right of label, in parentheses.\n\n**4. Explanatory text** — Context-specific help. Keep it visible — don't hide it behind an \"i\" icon or tooltip.\n\n**5. Input field control** — The standard input box. Users recognize it without help (40+ years of convention).\n\n**6. Placeholder text** — Almost never use it. The article's rule: avoid it.\n\n**7. System help text** — Goes at the bottom. For field requirements, data warnings, and status messages.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Do",
+       "items": [
+        "Always show a visible label",
+        "Put asterisk left of label",
+        "Keep help text visible",
+        "Put system messages at bottom"
+       ]
+      },
+      "right": {
+       "label": "Don't",
+       "items": [
+        "Use placeholder as a label",
+        "Hide help behind an icon",
+        "Skip labels on 'obvious' fields",
+        "Put error messages above the field"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "Where should explanatory text (help text) be placed?",
+      "options": [
+       "Visible below the label, never hidden behind a tooltip",
+       "Inside the input as placeholder",
+       "In a tooltip on an 'i' icon",
+       "Above the form as a general instruction"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "How many elements can an input field have, according to the article?",
-          "options": ["Up to 7", "Exactly 3", "Up to 5", "Up to 10"],
-          "answer": 0,
-          "explain": "The anatomy includes: asterisk, label, optional indicator, explanatory text, input control, placeholder text, and system help text."
-        },
-        {
-          "type": "single",
-          "q": "What is the article's position on placeholder text?",
-          "options": [
-            "Avoid it — it disappears, looks pre-filled, and has accessibility issues",
-            "Use it for all fields to save space",
-            "Use it only for email and password fields",
-            "Use it as a replacement for labels on mobile"
-          ],
-          "answer": 0,
-          "explain": "Placeholder text disappears on focus, can look pre-filled, has low contrast, and screen readers may skip it."
-        },
-        {
-          "type": "single",
-          "q": "Why does the article recommend against floating labels?",
-          "options": [
-            "They create usability and accessibility problems — NN/g says labels belong outside the field",
-            "They're too expensive to implement",
-            "They only work on iOS, not Android",
-            "They slow down form submission"
-          ],
-          "answer": 0,
-          "explain": "NN/g confirms that placing labels and hints outside the field is the best approach. Floating labels introduce interaction and accessibility issues."
-        },
-        {
-          "type": "single",
-          "q": "When should you use the optional indicator (the word 'Optional' next to a label)?",
-          "options": [
-            "Only when mixing required and optional fields in the same form",
-            "On every optional field in every form",
-            "Never — just use asterisks for required fields",
-            "Only on long forms with more than 10 fields"
-          ],
-          "answer": 0,
-          "explain": "The optional indicator is useful only when the form has a mix of required and optional fields — it helps distinguish between them."
-        },
-        {
-          "type": "single",
-          "q": "The article frames the required-indicator debate as what kind of trade-off?",
-          "options": [
-            "Type 1 vs. Type 2 error — visual clutter vs. users skipping required fields",
-            "Speed vs. accuracy in form completion",
-            "Desktop vs. mobile design patterns",
-            "Accessibility vs. aesthetics"
-          ],
-          "answer": 0,
-          "explain": "Asterisks add visual noise (Type 1) but unmarked fields risk users skipping them and getting submission errors (Type 2). The article says Type 2 is worse."
-        }
-      ]
+      "answer": 0,
+      "explain": "Help text should be visible without interaction. Hiding it behind icons or tooltips means most users will never see it."
+     }
+    },
+    {
+     "title": "Why placeholder text is almost always wrong",
+     "text": "The article's position: **avoid placeholder text**. Three reasons:\n\n**1. Filled fields look pre-filled.** When placeholder text disappears on focus, users may think a value was already entered — leading to skipped fields and errors.\n\n**2. Accessibility problems.** Many browsers and assistive technologies don't reliably read placeholder text. It creates barriers for screen reader users.\n\n**3. Low visual contrast.** Placeholder text is typically gray and sometimes italic — weak and easy to miss, especially for users with visual impairments.\n\n**What to use instead:**\n→ A visible label (always)\n→ Explanatory text below the label for formatting hints\n→ Auto-formatting to guide input (e.g., phone numbers grouping into segments)\n\n**Also: never use floating labels.** NN/g confirms placing the label and hint outside the field is the best approach. Floating labels create usability and accessibility problems.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Instead of placeholder",
+       "items": [
+        "Visible label above field",
+        "Helper text below label",
+        "Auto-formatting (phone, ZIP)",
+        "Example shown outside the field"
+       ]
+      },
+      "right": {
+       "label": "Placeholder problems",
+       "items": [
+        "Disappears on focus",
+        "Looks pre-filled",
+        "Low contrast, hard to read",
+        "Screen readers may skip it"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "What does the article recommend instead of placeholder text for format hints?",
+      "options": [
+       "Auto-formatting (like grouping phone number digits)",
+       "A tooltip on hover",
+       "A placeholder with higher contrast and a larger font",
+       "An info icon next to the field"
+      ],
+      "answer": 0,
+      "explain": "Auto-formatting guides users naturally — e.g., a phone field that groups digits shows the expected format without placeholder text."
+     }
+    },
+    {
+     "title": "The required indicator debate",
+     "text": "The article's position: **mark every required field with an asterisk**, even when ALL fields are required.\n\n**The counterargument:** \"Just put a note at the top saying 'all fields required' — asterisks on every field add visual clutter.\"\n\n**Why the article rejects that:**\n\n→ Users focus on the field under their cursor and process one task at a time. A note at the top of the form is easily missed.\n→ Users must hold that top note in working memory while filling each field. That's a cognitive burden.\n→ It's a **Type 1 vs. Type 2 error** trade-off. An unmarked required field risks false negatives — users skip it, submit, hit an error. The article judges that outcome worse than visual clutter.\n\nBottom line: the cost of a user missing a required field is higher than the cost of visual noise from asterisks.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Mark every required field",
+       "items": [
+        "Clear at the field level",
+        "No memory burden",
+        "Prevents skipped-field errors",
+        "Works for scanning users"
+       ]
+      },
+      "right": {
+       "label": "Top-of-form note only",
+       "items": [
+        "Easily missed",
+        "Requires working memory",
+        "Users process field-by-field",
+        "Skipped fields → submission errors"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "Why does the article say a 'top of form' note about required fields is insufficient?",
+      "options": [
+       "Users focus field-by-field and easily miss top-level instructions",
+       "It doesn't meet WCAG requirements",
+       "It's slower to implement",
+       "Screen readers can't detect it"
+      ],
+      "answer": 0,
+      "explain": "Users process forms one field at a time. A note at the top requires them to remember it while filling every subsequent field."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "How many elements can an input field have, according to the article?",
+     "options": [
+      "Up to 7",
+      "Exactly 3",
+      "Up to 5",
+      "Up to 10"
+     ],
+     "answer": 0,
+     "explain": "The anatomy includes: asterisk, label, optional indicator, explanatory text, input control, placeholder text, and system help text."
+    },
+    {
+     "type": "single",
+     "q": "What is the article's position on placeholder text?",
+     "options": [
+      "Avoid it — it disappears, looks pre-filled, and has accessibility issues",
+      "Use it for all fields to save space",
+      "Use it only for email and password fields",
+      "Use it as a replacement for labels on mobile, where vertical space is limited"
+     ],
+     "answer": 0,
+     "explain": "Placeholder text disappears on focus, can look pre-filled, has low contrast, and screen readers may skip it."
+    },
+    {
+     "type": "single",
+     "q": "Why does the article recommend against floating labels?",
+     "options": [
+      "They create usability and accessibility problems",
+      "They're too expensive to implement in most systems",
+      "They only work on iOS, not Android",
+      "They slow down form submission"
+     ],
+     "answer": 0,
+     "explain": "NN/g confirms that placing labels and hints outside the field is the best approach. Floating labels introduce interaction and accessibility issues. (NN/g says labels belong outside the field.)"
+    },
+    {
+     "type": "single",
+     "q": "When should you use the optional indicator (the word 'Optional' next to a label)?",
+     "options": [
+      "Only when mixing required and optional fields in the same form",
+      "On every optional field in every form",
+      "Never — just use asterisks for required fields and leave the rest unmarked",
+      "Only on long forms with more than 10 fields"
+     ],
+     "answer": 0,
+     "explain": "The optional indicator is useful only when the form has a mix of required and optional fields — it helps distinguish between them."
+    },
+    {
+     "type": "single",
+     "q": "The article frames the required-indicator debate as what kind of trade-off?",
+     "options": [
+      "Type 1 vs. Type 2 error",
+      "Speed vs. accuracy in form completion",
+      "Desktop vs. mobile design patterns",
+      "Accessibility vs. aesthetics"
+     ],
+     "answer": 0,
+     "explain": "Asterisks add visual noise (Type 1) but unmarked fields risk users skipping them and getting submission errors (Type 2). The article says Type 2 is worse. (Visual clutter vs. users skipping required fields.)"
+    }
+   ]
+  }
+ ]
 }
