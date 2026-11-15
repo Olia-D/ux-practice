@@ -338,6 +338,11 @@
     var l = e.target.closest && e.target.closest('a[href^="#"]');
     if (!l) return;
     if (l.classList.contains('cancel')) clearSession();
+    // If the hash is already the same, hashchange won't fire — route manually
+    if (l.getAttribute('href') === location.hash) {
+      e.preventDefault();
+      route();
+    }
   });
 
   window.addEventListener('hashchange', route);
