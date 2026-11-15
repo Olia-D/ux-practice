@@ -27,7 +27,7 @@
         },
         {
           "title": "Question 2: Can we reverse it?",
-          "text": "Some decisions are easy to undo:\n→ Copy changes, button placement, color tweaks\n\nOthers are nearly impossible to reverse once shipped:\n→ Data model changes, core navigation, onboarding flows that set permanent user expectations\n\n**Irreversible decisions need more rigor.** You're not just making a choice — you're closing doors.",
+          "text": "Some decisions are easy to undo:\n→ Copy changes, button placement, color tweaks\n\nOthers are nearly impossible to reverse once shipped:\n→ Data model changes, core navigation, onboarding flows that set permanent user expectations\n\n**Irreversible decisions need more rigor.** You're not just making a choice — you're closing doors.\n\n**Sequence by cost:** Test with paper prototypes before interactive ones. Test with colleagues before recruiting users. Test competitors before building your own. Each cheaper round eliminates issues the expensive round doesn't need to find.",
           "try": {
             "type": "single",
             "q": "Which of these is hardest to reverse after shipping?",

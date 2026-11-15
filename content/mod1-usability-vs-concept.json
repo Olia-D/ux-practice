@@ -11,7 +11,7 @@
       "learn": [
         {
           "title": "Two fundamentally different methods",
-          "text": "A **usability test** gives users a realistic task on a working interface and observes what they actually do — errors, confusion, hesitation, workarounds.\n\nA **concept test** shows users a concept or prototype and asks for reactions, preferences, or opinions.\n\nThey answer different questions. They are not interchangeable.",
+          "text": "A **usability test** gives users a realistic task on a working interface and observes what they actually do — errors, confusion, hesitation, workarounds.\n\nA **concept test** shows users a concept or prototype and asks for reactions, preferences, or opinions.\n\nThey answer different questions. They are not interchangeable.\n\nUsability testing evaluates 5 specific qualities (Nielsen): **learnability**, **efficiency**, **memorability**, **error recovery**, and **satisfaction**. If your test doesn't measure at least one of these, it's not a usability test.",
           "visual": {
             "type": "compare",
             "left": { "label": "Usability Test", "items": ["Observe behavior", "Working interface", "Realistic task", "See errors + confusion"] },
