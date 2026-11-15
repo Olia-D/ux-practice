@@ -185,7 +185,7 @@
       var html = '<a class="crumb" href="#/">← All modules</a>';
       html += '<h1>' + esc(mod.name) + '</h1>';
       html += '<p class="sub">' + esc(mod.subtitle) + '</p>';
-      html += '<div class="mod-progress" style="margin-bottom:12px"><div class="mod-bar"><i style="width:' + mp.pct + '%"></i></div><span class="mod-pct">' + mp.done + '/' + mp.total + ' done</span></div>';
+      html += '<p class="note" style="margin:0 0 8px">' + mp.done + '/' + mp.total + ' articles done</p>';
 
       mod.articles.forEach(function (a, i) {
         var r = (progress.items || {})[a.id + '/test'] || {};
