@@ -43,7 +43,7 @@
         },
         {
           "title": "Question 3: How much uncertainty is acceptable?",
-          "text": "This is the team's actual comfort with being wrong.\n\n**Low uncertainty tolerance:** \"We need to be 95% confident\" → full study, adequate sample size\n\n**High uncertainty tolerance:** \"We're probably right based on prior evidence\" → a few quick checks, existing data review\n\nThe three questions together determine the **minimum rigor threshold** — the least amount of evidence needed for a responsible decision.",
+          "text": "This is the team's actual comfort with being wrong.\n\n**Low uncertainty tolerance:** \"We need to be 95% confident\" → full study, adequate sample size\n\n**High uncertainty tolerance:** \"We're probably right based on prior evidence\" → a few quick checks, existing data review\n\nThe three questions together determine the **minimum rigor threshold** — the least amount of evidence needed for a responsible decision.\n\n**Critical step:** Align with stakeholders on what counts as \"enough evidence\" **before** the research begins. If you wait until data exists, people move the goalposts — rejecting findings they don't like or demanding more proof. Agreement on the threshold must happen while everyone is still objective.",
           "try": {
             "type": "single",
             "q": "Your team says: \"We already have strong signal from 3 prior studies and analytics. Let's just do a quick 5-person spot check.\" Is this appropriate?",
@@ -73,15 +73,15 @@
         },
         {
           "type": "single",
-          "q": "Which is the 4th step of the Minimum Rigor Threshold?",
+          "q": "Why must you align with stakeholders on 'enough evidence' BEFORE research begins?",
           "options": [
-            "Align with stakeholders before research begins",
-            "Publish the findings report",
-            "Calculate statistical significance",
-            "Run a follow-up study"
+            "Once data exists, people move the goalposts — rejecting findings they don't like",
+            "Stakeholders need to approve the budget first",
+            "It's a legal requirement for user research",
+            "To ensure enough participants are recruited"
           ],
           "answer": 0,
-          "explain": "Step 4: Align before research. Agreement on 'enough evidence' must happen BEFORE data exists — prevents goalpost-shifting."
+          "explain": "Agreement on what counts as enough evidence must happen while everyone is still objective. After data exists, confirmation bias kicks in."
         },
         {
           "type": "single",

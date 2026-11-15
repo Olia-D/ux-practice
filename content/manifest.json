@@ -38,7 +38,7 @@
           "title": "Research Rigor at Product Speed",
           "icon": "⚡",
           "source": "https://trevorcalabro.substack.com/p/research-rigor-at-product-speed",
-          "summary": "3 magic questions + 4-step minimum rigor threshold.",
+          "summary": "3 magic questions to determine your minimum rigor threshold.",
           "file": "content/mod1-research-rigor.json"
         }
       ]
@@ -55,7 +55,7 @@
           "title": "Cognitive Biases in UX Research",
           "icon": "🪤",
           "source": "https://trevorcalabro.substack.com/p/cognitive-biases",
-          "summary": "6 biases that matter: confirmation, acquiescence, social desirability, recency, primacy, facilitator.",
+          "summary": "20 biases in 3 groups: how we think about others, our own thinking, research artifacts.",
           "file": "content/mod2-cognitive-biases.json"
         },
         {
@@ -63,7 +63,7 @@
           "title": "How to Run a Cognitive Walkthrough",
           "icon": "🚶",
           "source": "https://trevorcalabro.substack.com/p/cognitive-walkthrough",
-          "summary": "4 questions at each step. 2–3 evaluators independently. No users needed.",
+          "summary": "4 questions at each step. Expert evaluation, no users needed.",
           "file": "content/mod2-cognitive-walkthrough.json"
         },
         {

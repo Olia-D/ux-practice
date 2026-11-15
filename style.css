@@ -139,15 +139,8 @@ p{margin:8px 0}
 /* schedule on home */
 .schedule-hint{background:var(--gold-bg);border:1px solid var(--gold);border-radius:var(--radius);padding:14px;margin:12px 0;font-size:15px}
 
-/* article progress */
-.art-progress{height:4px;background:var(--sky);border-radius:99px;overflow:hidden;margin:8px 0 0}
-.art-progress>i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .3s}
 .card.done{border-left:3px solid var(--ok)}
 .card.done h3{color:var(--ok)}
-
-/* quiz score bar in article view */
-.quiz-bar{display:block;height:6px;background:var(--sky);border-radius:99px;overflow:hidden;margin:6px 0 0}
-.quiz-bar>i{display:block;height:100%;background:var(--ok);border-radius:99px;transition:width .3s}
 
 /* backup */
 .backup-section{margin:16px 0 0;padding:0}
