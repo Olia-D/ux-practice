@@ -139,6 +139,16 @@ p{margin:8px 0}
 /* schedule on home */
 .schedule-hint{background:var(--gold-bg);border:1px solid var(--gold);border-radius:var(--radius);padding:14px;margin:12px 0;font-size:15px}
 
+/* article progress */
+.art-progress{height:4px;background:var(--sky);border-radius:99px;overflow:hidden;margin:8px 0 0}
+.art-progress>i{display:block;height:100%;background:var(--accent);border-radius:99px;transition:width .3s}
+.card.done{border-left:3px solid var(--ok)}
+.card.done h3{color:var(--ok)}
+
+/* backup */
+.backup-section{margin:16px 0 0;padding:0}
+.backup-section summary{cursor:pointer;padding:8px 0}
+
 /* source link */
 .source{font-size:13px;font-family:var(--mono)}
 .source a{color:var(--muted)}

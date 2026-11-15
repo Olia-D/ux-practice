@@ -162,7 +162,17 @@
         var totalPct = Math.round(100 * totalDone / totalAll);
         html += '<div class="card" style="text-align:center"><p class="muted">Overall: ' + totalDone + ' of ' + totalAll + ' articles done</p><div class="mod-progress"><div class="mod-bar"><i style="width:' + totalPct + '%"></i></div><span class="mod-pct">' + totalPct + '%</span></div></div>';
       }
+
+      // progress backup
+      html += '<details class="backup-section"><summary class="note">Progress backup</summary>' +
+        '<p class="note">Your progress saves in this browser automatically. Use backup to move it to another device or keep a copy.</p>' +
+        '<div class="row" style="gap:8px;margin:8px 0"><button class="btn small secondary" id="export-btn">Copy progress</button>' +
+        '<button class="btn small secondary" id="import-btn">Paste progress</button>' +
+        '<button class="btn small secondary" id="reset-btn" style="color:var(--warm)">Reset</button></div>' +
+        '</details>';
+
       setView(html);
+      bindBackup();
     }).catch(showError);
   }
 
@@ -171,9 +181,11 @@
     loadManifest().then(function (m) {
       var mod = m.modules.filter(function (x) { return x.id === mid; })[0];
       if (!mod) return viewHome();
+      var mp = moduleProgress(mod);
       var html = '<a class="crumb" href="#/">← All modules</a>';
       html += '<h1>' + esc(mod.name) + '</h1>';
       html += '<p class="sub">' + esc(mod.subtitle) + '</p>';
+      html += '<div class="mod-progress" style="margin-bottom:12px"><div class="mod-bar"><i style="width:' + mp.pct + '%"></i></div><span class="mod-pct">' + mp.done + '/' + mp.total + ' done</span></div>';
 
       mod.articles.forEach(function (a, i) {
         var r = (progress.items || {})[a.id + '/test'] || {};
@@ -181,8 +193,11 @@
         var hasContent = !!a.file;
         var quizDone = r.best != null;
 
-        html += '<div class="card">' +
-          '<div class="row between"><h3>' + esc(a.title) + '</h3><span class="pill">' + (i + 1) + '</span></div>' +
+        var articleDone = learned.done && quizDone;
+        var artPct = articleDone ? 100 : (learned.done ? 50 : 0);
+        html += '<div class="card' + (articleDone ? ' done' : '') + '">' +
+          '<div class="row between"><h3>' + (articleDone ? '✓ ' : '') + esc(a.title) + '</h3><span class="pill">' + (i + 1) + '</span></div>' +
+          '<div class="art-progress"><i style="width:' + artPct + '%"></i></div>' +
           '<p class="muted" style="margin:4px 0 0">' + esc(a.summary) + '</p>' +
           (hasContent ? '<ul class="steps">' +
             '<li class="step"><span class="lbl">Learn' + (learned.done ? ' <span class="note">· done</span>' : '') + '</span>' +
@@ -316,6 +331,34 @@
     setView(html);
     var rb = app.querySelector('.retry');
     if (rb) rb.addEventListener('click', function () { startQuiz(s.aid, s.missed.slice()); });
+  }
+
+  // ---------- backup ----------
+  function bindBackup() {
+    var exp = document.getElementById('export-btn');
+    var imp = document.getElementById('import-btn');
+    var rst = document.getElementById('reset-btn');
+    if (exp) exp.addEventListener('click', function () {
+      var data = JSON.stringify(progress);
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(data).then(function () { exp.textContent = 'Copied!'; setTimeout(function () { exp.textContent = 'Copy progress'; }, 2000); });
+      } else {
+        prompt('Copy this:', data);
+      }
+    });
+    if (imp) imp.addEventListener('click', function () {
+      var raw = prompt('Paste your progress data:');
+      if (!raw) return;
+      try {
+        var d = JSON.parse(raw);
+        if (d && typeof d === 'object') { progress = d; saveProgress(); viewHome(); }
+      } catch (e) { alert('Could not read that data. Make sure you pasted the full text.'); }
+    });
+    if (rst) rst.addEventListener('click', function () {
+      if (confirm('Reset all progress? This cannot be undone.')) {
+        progress = {}; saveProgress(); viewHome();
+      }
+    });
   }
 
   // ---------- error ----------
