@@ -197,7 +197,6 @@
         var artPct = articleDone ? 100 : (learned.done ? 50 : 0);
         html += '<div class="card' + (articleDone ? ' done' : '') + '">' +
           '<div class="row between"><h3>' + (articleDone ? '✓ ' : '') + esc(a.title) + '</h3><span class="pill">' + (i + 1) + '</span></div>' +
-          '<div class="art-progress"><i style="width:' + artPct + '%"></i></div>' +
           '<p class="muted" style="margin:4px 0 0">' + esc(a.summary) + '</p>' +
           (hasContent ? '<ul class="steps">' +
             '<li class="step"><span class="lbl">Learn' + (learned.done ? ' <span class="note">· done</span>' : '') + '</span>' +
