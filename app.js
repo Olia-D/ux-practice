@@ -21,6 +21,36 @@
   }
   function rec(id) { progress.items = progress.items || {}; return progress.items[id] = progress.items[id] || {}; }
 
+  // ---------- missed-question bank ----------
+  // progress.missed = { "<articleId>#<questionIndex>": rightInARow }
+  // A reference is dropped once it has been answered correctly twice.
+  function missedBank() { progress.missed = progress.missed || {}; return progress.missed; }
+  function missedKey(aid, qi) { return aid + '#' + qi; }
+  function noteMissed(aid, qi) { missedBank()[missedKey(aid, qi)] = 0; }
+  function noteCorrect(aid, qi) {
+    var b = missedBank(), k = missedKey(aid, qi);
+    if (!(k in b)) return;
+    b[k] += 1;
+    if (b[k] >= 2) delete b[k];
+  }
+  function missedRefs(filterIds) {
+    var b = missedBank(), out = [];
+    Object.keys(b).forEach(function (k) {
+      var p = k.split('#'), aid = p[0], qi = parseInt(p[1], 10);
+      if (filterIds && filterIds.indexOf(aid) < 0) return;
+      out.push({ aid: aid, qi: qi, streak: b[k] });
+    });
+    return out;
+  }
+  function pruneMissed() {
+    if (!manifest) return;
+    var live = {};
+    manifest.modules.forEach(function (m) { m.articles.forEach(function (x) { live[x.id] = true; }); });
+    var b = missedBank(), changed = false;
+    Object.keys(b).forEach(function (k) { if (!live[k.split('#')[0]]) { delete b[k]; changed = true; } });
+    if (changed) saveProgress();
+  }
+
   // ---------- header summary ----------
   function renderSummary() {
     if (!manifest) { summaryEl.textContent = ''; return; }
@@ -138,6 +168,7 @@
   function viewHome() {
     loadManifest().then(function (m) {
       renderSummary();
+      pruneMissed();
       var totalDone = 0, totalAll = 0;
       var html = '<h1>UX Practice</h1>';
       html += '<p class="sub">Key concepts from Trevor Calabro\'s UX Research in the Wild. Learn the ideas, then test yourself.</p>';
@@ -159,6 +190,11 @@
           '</a>';
       });
 
+      var nMissed = missedRefs().length;
+      html += '<div class="card tools"><a class="toolrow" href="#/review"><span><b>Review missed questions</b>'
+           + (nMissed ? '<span class="note"> · ' + nMissed + ' waiting</span>' : '<span class="note"> · nothing yet</span>')
+           + '</span><span class="chev">→</span></a>'
+           + '<a class="toolrow" href="#/index"><span><b>Concept index</b><span class="note"> · every learn card</span></span><span class="chev">→</span></a></div>';
       if (totalAll) {
         var totalPct = Math.round(100 * totalDone / totalAll);
         html += '<div class="card" style="text-align:center"><p class="muted">Overall: ' + totalDone + ' of ' + totalAll + ' articles done</p><div class="mod-progress"><div class="mod-bar"><i style="width:' + totalPct + '%"></i></div><span class="mod-pct">' + totalPct + '%</span></div></div>';
@@ -209,6 +245,15 @@
                     : a.sourceNote ? '<div class="source">Source: ' + esc(a.sourceNote) + '</div>' : '') +
           '</div>';
       });
+      var mr = (progress.items || {})['module/' + mod.id] || {};
+      var mMissed = missedRefs(mod.articles.map(function (x) { return x.id; })).length;
+      html += '<div class="card modreview"><div class="row between"><h3 style="margin:0">Module review</h3>' +
+        (mr.reviewed ? '<span class="pill">Reviewed</span>' : '') + '</div>' +
+        '<p class="muted" style="margin:4px 0 0">10 questions drawn across this module' +
+        (mMissed ? ', weighted toward the ' + mMissed + ' you have missed' : '') + '.' +
+        (mr.last != null ? ' Last time: ' + mr.last + '/' + mr.of + '.' : '') + '</p>' +
+        '<div class="row end" style="margin-top:10px"><a class="btn' + (mr.reviewed ? ' secondary' : '') + '" href="#/m/' + mod.id + '/review">' +
+        (mr.reviewed ? 'Review again' : 'Start review') + '</a></div></div>';
       setView(html);
     }).catch(showError);
   }
@@ -289,18 +334,60 @@
     }).catch(showError);
   }
 
+  // A mixed session draws questions from several articles.
+  // items: [{aid, qi, q, title}]; label shows in the crumb.
+  function startMixed(items, label, backHash) {
+    if (!items.length) { location.hash = backHash || '#/'; return; }
+    session = {
+      aid: null, modId: null, mixed: true, label: label, back: backHash || '#/',
+      art: { title: label }, all: items.map(function (x) { return x.q; }),
+      srcIds: items.map(function (x) { return x.aid; }),
+      srcQis: items.map(function (x) { return x.qi; }),
+      idxs: items.map(function (_, i) { return i; }), pos: 0, right: 0, missed: [], retry: false
+    };
+    renderQuizStep();
+  }
+
+  // Collect quiz questions for a set of article ids, in manifest order.
+  function collectQuestions(ids) {
+    return loadManifest().then(function (m) {
+      var arts = [];
+      m.modules.forEach(function (mod) { mod.articles.forEach(function (a) { if (ids.indexOf(a.id) >= 0) arts.push(a); }); });
+      return Promise.all(arts.map(function (a) {
+        return loadArticle(a.file).then(function (d) { return { a: a, d: d }; }, function () { return null; });
+      })).then(function (rows) {
+        var out = {};
+        rows.forEach(function (r) {
+          if (!r) return;
+          var t = r.d.topics && r.d.topics[0];
+          if (t && t.test) out[r.a.id] = { title: r.a.title, test: t.test };
+        });
+        return out;
+      });
+    });
+  }
+
   function renderQuizStep() {
     var s = session, n = s.idxs.length;
     if (s.pos >= n) return renderQuizEnd();
     saveSession();
     var q = s.all[s.idxs[s.pos]];
-    var html = '<div class="row between"><a class="crumb cancel" href="#/m/' + s.modId + '">← Stop</a><span class="note">' + (s.retry ? 'Retry · ' : '') + esc(s.art.title) + '</span></div>' +
+    var back = s.mixed ? s.back : '#/m/' + s.modId;
+    var srcLine = s.mixed && s.srcTitles ? '<p class="note" style="margin:0 0 4px">From <b>' + esc(s.srcTitles[s.pos]) + '</b></p>' : '';
+    var html = '<div class="row between"><a class="crumb cancel" href="' + back + '">← Stop</a><span class="note">' + (s.retry ? 'Retry · ' : '') + esc(s.art.title) + '</span></div>' +
       '<div class="progress" aria-hidden="true"><i style="width:' + Math.round(100 * s.pos / n) + '%"></i></div>' +
-      '<p class="note" style="margin:0 0 4px">' + (s.pos + 1) + ' of ' + n + '</p>' +
+      '<p class="note" style="margin:0 0 4px">' + (s.pos + 1) + ' of ' + n + '</p>' + srcLine +
       '<div class="card qbox pop"></div>';
     setView(html);
     renderQuestion(q, app.querySelector('.qbox'), function (ok, fbw) {
-      if (ok) s.right++; else s.missed.push(s.idxs[s.pos]);
+      var qi = s.idxs[s.pos];
+      // In a mixed session idxs are positions in the picked list, so the bank
+      // key has to come from the question's own article and index.
+      var bankId = s.mixed ? s.srcIds[s.pos] : s.aid;
+      var bankQi = s.mixed ? s.srcQis[s.pos] : qi;
+      if (ok) { s.right++; noteCorrect(bankId, bankQi); }
+      else { s.missed.push(qi); noteMissed(bankId, bankQi); }
+      saveProgress();
       s.pos++; saveSession();
       var b = document.createElement('div'); b.className = 'row end';
       b.innerHTML = '<button class="btn nextq" type="button">' + (s.pos < n ? 'Next →' : 'See results →') + '</button>';
@@ -313,10 +400,12 @@
   }
 
   function renderQuizEnd() {
-    var s = session, n = s.idxs.length, key = s.aid + '/test', r = rec(key);
+    var s = session, n = s.idxs.length;
     clearSession();
-    try { history.replaceState(null, '', '#/m/' + s.modId); } catch (e) {}
     var ratio = s.right / n;
+    if (s.mixed) return renderMixedEnd(s, n, ratio);
+    var key = s.aid + '/test', r = rec(key);
+    try { history.replaceState(null, '', '#/m/' + s.modId); } catch (e) {}
     if (!s.retry) { r.best = Math.max(r.best || 0, s.right); r.last = s.right; }
     r.updated = new Date().toISOString();
     saveProgress();
@@ -334,6 +423,143 @@
     setView(html);
     var rb = app.querySelector('.retry');
     if (rb) rb.addEventListener('click', function () { startQuiz(s.aid, s.missed.slice()); });
+  }
+
+  function renderMixedEnd(s, n, ratio) {
+    if (s.modId) { var mr = rec('module/' + s.modId); mr.reviewed = true; mr.last = s.right; mr.of = n; mr.updated = new Date().toISOString(); }
+    saveProgress();
+    var left = missedRefs().length;
+    var msg = s.right === n ? 'All correct.' : ratio >= 0.7 ? 'Solid. You got the key ideas.' : 'Worth another pass — the learn cards will help.';
+    var scorePct = Math.round(100 * s.right / n);
+    var html = '<div class="card result pop"><p class="score">' + s.right + ' / ' + n + '</p>' +
+      '<div class="mod-progress" style="max-width:200px;margin:8px auto"><div class="mod-bar"><i style="width:' + scorePct + '%"></i></div></div>' +
+      '<p style="font-size:17px">' + msg + '</p>' +
+      '<p class="note">' + (left ? left + ' question' + (left === 1 ? '' : 's') + ' still in your review list.' : 'Your review list is empty.') + '</p></div>' +
+      '<div class="stack">' + (left ? '<a class="btn wide" href="#/review">Review missed questions</a>' : '') +
+      '<a class="btn secondary wide" href="' + s.back + '">Back</a></div>';
+    setView(html);
+  }
+
+  // ---------- REVIEW: the missed-question bank ----------
+  function reviewItems() {
+    var refs = missedRefs();
+    if (!refs.length) return Promise.resolve([]);
+    var ids = refs.map(function (r) { return r.aid; }).filter(function (v, i, arr) { return arr.indexOf(v) === i; });
+    return collectQuestions(ids).then(function (byId) {
+      var items = [];
+      refs.forEach(function (r) {
+        var row = byId[r.aid];
+        if (row && row.test[r.qi]) items.push({ aid: r.aid, qi: r.qi, q: row.test[r.qi], title: row.title });
+      });
+      return items;
+    });
+  }
+
+  function runReview() {
+    reviewItems().then(function (items) {
+      if (!items.length) { location.hash = '#/review'; return; }
+      var pick = shuffle(items).slice(0, 12);
+      startMixed(pick, 'Review', '#/review');
+      session.srcTitles = pick.map(function (x) { return x.title; });
+      renderQuizStep();
+    }).catch(showError);
+  }
+
+  function viewReview() {
+    reviewItems().then(function (items) {
+      if (!items.length) {
+        return setView('<a class="crumb" href="#/">\u2190 All modules</a>' +
+          '<div class="card"><h2 style="margin-top:0">Nothing to review</h2>' +
+          '<p class="sub">Questions you get wrong land here. They leave once you answer them right twice.</p></div>');
+      }
+      var byArticle = {};
+      items.forEach(function (x) { byArticle[x.title] = (byArticle[x.title] || 0) + 1; });
+      var list = Object.keys(byArticle).sort().map(function (t) {
+        return '<li>' + esc(t) + ' <span class="note">\u00b7 ' + byArticle[t] + '</span></li>';
+      }).join('');
+      setView('<a class="crumb" href="#/">\u2190 All modules</a>' +
+        '<div class="card"><h2 style="margin-top:0">Review</h2>' +
+        '<p class="sub">' + items.length + ' question' + (items.length === 1 ? '' : 's') + ' you have missed. Each one leaves this list after two correct answers.</p>' +
+        '<ul class="review-list">' + list + '</ul>' +
+        '<div class="row end"><a class="btn" href="#/review/run">Start review</a></div></div>');
+    }).catch(showError);
+  }
+
+  // ---------- MODULE REVIEW QUIZ ----------
+  function viewModuleReview(modId) {
+    loadManifest().then(function (m) {
+      var mod = null;
+      m.modules.forEach(function (x) { if (x.id === modId) mod = x; });
+      if (!mod) return showError(new Error('Module not found'));
+      var ids = mod.articles.map(function (a) { return a.id; });
+      return collectQuestions(ids).then(function (byId) {
+        var missedSet = {};
+        missedRefs(ids).forEach(function (r) { missedSet[r.aid + '#' + r.qi] = true; });
+        var pool = [], weighted = [];
+        ids.forEach(function (aid) {
+          var row = byId[aid];
+          if (!row) return;
+          row.test.forEach(function (q, qi) {
+            var item = { aid: aid, qi: qi, q: q, title: row.title };
+            (missedSet[aid + '#' + qi] ? weighted : pool).push(item);
+          });
+        });
+        var pick = shuffle(weighted).slice(0, 10);
+        pick = pick.concat(shuffle(pool).slice(0, Math.max(0, 10 - pick.length)));
+        pick = shuffle(pick);
+        if (!pick.length) return showError(new Error('No questions in this module'));
+        startMixed(pick, mod.name + ' review', '#/m/' + modId);
+        session.modId = modId;
+        session.srcTitles = pick.map(function (x) { return x.title; });
+        renderQuizStep();
+      });
+    }).catch(showError);
+  }
+
+  // ---------- CONCEPT INDEX ----------
+  function viewIndex() {
+    loadManifest().then(function (m) {
+      var all = [];
+      m.modules.forEach(function (mod) { mod.articles.forEach(function (a) { all.push({ mod: mod, a: a }); }); });
+      return Promise.all(all.map(function (row) {
+        return loadArticle(row.a.file).then(function (d) { return { row: row, d: d }; }, function () { return null; });
+      })).then(function (rows) {
+        var html = '<a class="crumb" href="#/">← All modules</a>' +
+          '<div class="card"><h2 style="margin-top:0">Concept index</h2>' +
+          '<p class="sub">Every learn card in the app. Tap one to open it.</p>' +
+          '<input class="idxfilter" type="search" placeholder="Filter concepts…" aria-label="Filter concepts">' +
+          '</div><div class="idxresults">';
+        var curMod = null;
+        rows.forEach(function (r) {
+          if (!r) return;
+          var t = r.d.topics && r.d.topics[0];
+          if (!t) return;
+          if (curMod !== r.row.mod.id) {
+            if (curMod !== null) html += '</div>';
+            curMod = r.row.mod.id;
+            html += '<div class="card idxmod"><p class="idxmodname">' + esc(r.row.mod.name) + '</p>';
+          }
+          t.learn.forEach(function (c, i) {
+            html += '<a class="idxrow" href="#/a/' + r.row.a.id + '/learn/' + i + '">' +
+              '<span class="idxcard">' + esc(c.title) + '</span>' +
+              '<span class="idxart">' + esc(r.row.a.title) + '</span></a>';
+          });
+        });
+        html += curMod !== null ? '</div></div>' : '</div>';
+        setView(html);
+        var f = app.querySelector('.idxfilter');
+        if (f) f.addEventListener('input', function () {
+          var q = this.value.trim().toLowerCase();
+          Array.prototype.forEach.call(app.querySelectorAll('.idxrow'), function (el) {
+            el.style.display = !q || el.textContent.toLowerCase().indexOf(q) >= 0 ? '' : 'none';
+          });
+          Array.prototype.forEach.call(app.querySelectorAll('.idxmod'), function (el) {
+            var any = el.querySelector('.idxrow:not([style*="none"])');
+            el.style.display = any ? '' : 'none';
+          });
+        });
+      });
+    }).catch(showError);
   }
 
   // ---------- backup ----------
@@ -372,7 +598,12 @@
   // ---------- router ----------
   function route() {
     var h = location.hash.replace(/^#\/?/, '').split('/');
-    if (h[0] === 'm' && h[1]) return viewModule(h[1]);
+    if (h[0] === 'review') return h[1] === 'run' ? runReview() : viewReview();
+    if (h[0] === 'index') return viewIndex();
+    if (h[0] === 'm' && h[1]) {
+      if (h[2] === 'review') return viewModuleReview(h[1]);
+      return viewModule(h[1]);
+    }
     if (h[0] === 'a' && h[1]) {
       if (h[2] === 'learn') return viewLearn(h[1], parseInt(h[3] || '0', 10) || 0);
       if (h[2] === 'test') return startQuiz(h[1]);

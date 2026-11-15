@@ -37,11 +37,14 @@ Confirmed missing: *UX Job Security*, *UX Has a Basics Problem*, *The Rules of A
 3. ~~**Add `scripts/check-content.py`.**~~ JSON validity, id uniqueness, answer index in range, duplicate options, missing explanations, answer-length bias and length-rank spread. Run before every push.
 4. ~~Rename manifest title; keep the Check button enabled with an inline “Pick an answer first.”~~
 
-### Phase 1b — Content accuracy (new finding, 15 Nov)
+### Phase 1b — Content accuracy — done 15 Nov
 Checking the book against Calabro's posts showed that some original chapters, and the app cards built from them, had drifted from the source. Example: *UX Research Starts with Tasks* taught a three-step task-writing framework that isn't in the post, which is about building a Top Task List.
 
 - **Rebuilt from the posts (cards + questions):** tasks, usability-vs-concept, cognitive-walkthrough, fake-ai, cognitive-biases, ab-testing, dashboard, debrief, delight, figma. Generators are in `scripts/rewrite_batch1.py` and `rewrite_batch2.py`.
-- **Still to verify line by line against the posts (16):** behavioral-evidence, research-rigor, ux-as-service, ab-mislead, misunderstandings, mixed-methods, affordances, animations, icons, input-field, status-design, roi, ic, institutional, predictions, thankless. Their questions were only de-biased, not re-sourced.
+- **Checked against the posts and rewritten (4):** predictions (listed two predictions Calabro never made), behavioral-evidence (invented three cognitive mechanisms; the post gives three organisational reasons and a behaviour/perception/sentiment framework), ic (invented an "IC ceiling" section), thankless (invented the term "absence metrics").
+- **Checked and patched (3):** institutional cited icon testing "across seven organizations"; icons misstated why Google gets away with unlabeled icons; mixed-methods claimed a five-criteria self-check.
+- **Checked and correct (9):** research-rigor, research-service, ab-mislead, misunderstandings, affordances, animations, input-field, status-design, roi. Verified down to the figures — Yale's 40%/18% carousel data, the 2013 NN/g Siemens test, 100ms feedback, 7–8 ubiquitous icons, the 7 input-field elements and Type 1/Type 2 reframe, five meanings of "Pending", the university ROI example, the Three Magic Questions, MeasuringU's nine participants, Baymard's 300–500ms hover delay and the search/navigation split.
+- The same four corrections were applied to the book (`fixes.py`).
 
 ### Phase 3+4 — Full book coverage — done 15 Nov
 The app now carries **all 99 chapters of the book** (was 26), restructured into 12 modules:
@@ -61,33 +64,12 @@ Companion articles (Friedman, Raudaschl, FT, AI UX Playground, Hall/Torres) have
 
 **Answer-length bias after the expansion:** the correct option is the longest in 21% of questions (target ≤ 30%); by length rank it is 1st in 26%, 2nd in 40%, 3rd in 15%, 4th in 18%. Rank 1 is now at chance level. Rank 2 at 40% is the remaining weak cue and is worth evening out.
 
-### Phase 2 — Retention mechanics, no gamification (1 day) — NOT STARTED
-5. **Missed-question bank.** Persist missed question refs per article in `uxp-progress-v1`; clear a ref when answered right twice. Home shows "Review 7 missed questions" when non-empty.
-6. **Module review quiz.** `#/m/<id>/review` — 10 questions drawn across the module's articles, weighted toward missed ones. Counts toward module completion label ("Reviewed").
-7. **Concept index.** `#/index` — every learn-card title grouped by module, linking straight to the card. Replaces re-reading.
+### Phase 2 — Retention mechanics — done 15 Nov
+5. **Missed-question bank.** A wrong answer stores `articleId#questionIndex` in `uxp-progress-v1.missed`; the reference is dropped after **two** correct answers (one isn't enough to show it stuck). The home screen shows "Review missed questions · N waiting", and `#/review` lists them grouped by article with `#/review/run` drawing up to 12.
+6. **Module review quiz.** `#/m/<id>/review` — 10 questions across the module, weighted toward the ones you have missed, with the source article named above each question. Marks the module "Reviewed" and records the last score. A card at the bottom of every module page starts it.
+7. **Concept index.** `#/index` — all 297 learn-card titles grouped by module, each linking to its card, with a live filter.
 
-### Phase 3 — Bring the app up to the book (1–2 days)
-8. The book (v2, Nov 2026) has 54 Calabro articles; the app has 26. Not yet in the app, in priority order: UX Has a Basics Problem, Stop Weaponizing Miller's Law, Primary Navigation Guide, Onboarding & In-App Help, Stop Throwing Away Time-on-Task Data, A/B Test Strategies, A/B Sample Sizing, Statistically Significant or Not, Mixed Methods at Work, Choosing the Right Chart Type, Dark Patterns 2026, The Rules of AI Chat History; then the older book articles the app skipped (split buttons, navigation, carousels, Jakob's Law, accessibility, career paths). Same format; verify against originals with the audit agent.
-
-### Phase 4 — Two new modules from today's sources (2 days)
-9. **Module 7 — Data Visualization** (5 articles): Choosing the chart (FT purposes) · Chart design rules (London: data-ink, labels, zero baseline) · Colour scales (Datawrapper) · Dashboards that lead to decisions (ACES + Calabro's three jobs) · Accessible charts (Fossheim, Chartability critical checks). Compare visuals carry most of the weight here.
-10. **Module 8 — AI UX** (5 articles): How much should the agent do (Agentic L1–L5 + scoring) · Trust at the moment of reliance (T.R.U.S.T.) · Anatomy of a chat turn (C.O.N.V.E.R.S.E.) · Memory and chat history (Playground guide + Calabro) · Citations and failure disclosure. Source: aiuxplayground.com frameworks, with "breaks as" anti-patterns as the quiz material.
-11. Update schedule text (8 modules, ~8 weeks), header count (26 → 40), unlock chain.
-
-
-### Phase 4b — From saved LinkedIn posts (1½ days)
-Reviewed all 85 saved posts (Nov 2026). ~50 are tool lists, Figma plugins, portfolio/interview tips or resource dumps — skipped. These carry rules the app and skills don't have:
-
-| New article | Module | Source | Why |
-|---|---|---|---|
-| Confirm or Undo? | 4 Design Principles | Friedman, Confirm vs Undo decision tree | Severity × frequency rule; Undo by default, typed confirm for severe+rare; specific verbs ("Delete forever") not "Yes/Confirm" |
-| Choosing the selection control | 4 | Goswami/Lyft decision tree | Radio = question, checkbox = statement; never pre-select; dropdown only for 5+; toggle only for instant effect |
-| Tables and bulk operations | 4 | Sergushkin/Shestopalov tables; Friedman bulk import | B2B core: no row-hover actions, column show/hide, density modes; 5 import stages (pre-import → upload → map → repair → import) |
-| Research without user access | 2 Running Studies | Friedman, B2B/enterprise research | What you can do when you can't recruit: task analysis, job postings, shadowing proxies, CS/domain experts; buyer ≠ user |
-| Measuring feature impact (TARS) | 5 Business Impact | Raudaschl via Smashing | Target → Adoption → Retention → Satisfaction (CES); thresholds; deliberately excludes conversion — matches Calabro on attribution |
-| AI labelling is now law | 8 AI UX | Friedman/Smashing on EU AI Act Art. 50 | In force since 2 Aug 2026 for anything EU users see: chatbots/agents disclose, deepfakes, unreviewed public-interest text; a sparkle ✨ is not a label; icon + plain text, persistent, accessible |
-
-Folded into planned articles rather than new ones: Bach et al. dashboard tradeoffs (screenspace ↔ abstraction ↔ pages ↔ interaction; "you might not need a dashboard") → Module 7 dashboards; UX KPI targets → Module 5 ROI; design critique formats + Samsonov "design is taking too long" → Module 6.
+Correct answers in any session (article quiz, module review or review run) count toward retiring a reference, so the bank drains through normal use.
 
 ### Phase 5 — Install and offline (2 hours)
 12. `manifest.webmanifest` + minimal service worker (cache-first for app shell and `content/*.json`, network-first for manifest). Add-to-home-screen on the phone; works on the walk without signal.
@@ -99,6 +81,6 @@ Folded into planned articles rather than new ones: Bach et al. dashboard tradeof
 
 ## Definition of done per phase
 - Phase 1: `check-content.py` passes with no errors (done); all 26 links return 200 (open); Phase 1b's 16 articles verified against the posts (open).
-- Phase 2: a missed question reappears in the bank and in the module review; index links land on the right card.
+- Phase 2: verified — a failed question enters the bank, survives one correct answer, and leaves on the second; module review runs for all 12 modules; all 297 index links resolve.
 - Phase 3–4: structure done and all 99 render; an independent check of each new article against its source post is still outstanding.
 - Phase 5: app loads with network disabled after one visit.
