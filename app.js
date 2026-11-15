@@ -202,7 +202,8 @@
           (hasContent ? '<ul class="steps">' +
             '<li class="step"><span class="lbl">Learn' + (learned.done ? ' <span class="note">· done</span>' : '') + '</span>' +
               '<a class="btn small' + (learned.done ? ' secondary' : '') + '" href="#/a/' + a.id + '/learn/0">' + (learned.done ? 'Review' : 'Start') + '</a></li>' +
-            '<li class="step"><span class="lbl">Quiz · 5 questions<br>' + scoreLabel(r.best, 5) + '</span>' +
+            '<li class="step"><span class="lbl">Quiz · 5 questions<br>' + scoreLabel(r.best, 5) +
+              (r.best != null ? '<span class="quiz-bar"><i style="width:' + Math.round(100 * r.best / 5) + '%"></i></span>' : '') + '</span>' +
               '<a class="btn small' + (quizDone ? ' secondary' : '') + '" href="#/a/' + a.id + '/test">' + (quizDone ? 'Retake' : 'Start') + '</a></li>' +
           '</ul>' : '<p class="note" style="margin-top:8px">Content coming soon</p>') +
           '<div class="source"><a href="' + esc(a.source) + '" target="_blank">Read original article ↗</a></div>' +
@@ -324,7 +325,9 @@
     var retryLabel = m === 1 ? 'Retry missed question' : 'Retry ' + m + ' missed';
     var learnBtn = m ? '<a class="btn' + (ratio < 0.5 ? '' : ' secondary') + ' wide" href="#/a/' + s.aid + '/learn/0">Review learn cards</a>' : '';
     var retryBtn = m ? '<button class="btn' + (ratio < 0.5 ? ' secondary' : '') + ' wide retry" type="button">' + retryLabel + '</button>' : '';
+    var scorePct = Math.round(100 * s.right / n);
     var html = '<div class="card result pop"><p class="score">' + s.right + ' / ' + n + '</p>' +
+      '<div class="mod-progress" style="max-width:200px;margin:8px auto"><div class="mod-bar"><i style="width:' + scorePct + '%"></i></div></div>' +
       '<p style="font-size:17px">' + msg + '</p></div>' +
       '<div class="stack">' + (ratio < 0.5 ? learnBtn + retryBtn : retryBtn + learnBtn) +
       '<a class="btn secondary wide" href="#/m/' + s.modId + '">Back to module</a></div>';
