@@ -1,0 +1,146 @@
+{
+ "id": "writing-surveys",
+ "module": "metrics",
+ "title": "Writing Surveys That Work",
+ "icon": "✍️",
+ "intro": "Three habits make survey data usable. Each is cheap; skipping them is how a whole survey's data ends up unusable.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Writing Surveys That Work",
+   "learn": [
+    {
+     "title": "1 · Pretest the survey",
+     "text": "Run it with a few people **thinking aloud** — moderated over video if you can.\n\nIn Calabro's real-estate example, pretesting exposed jargon participants misread and questions they interpreted differently — before the real launch, where there was no room for a redo.\n\nA survey is a one-shot instrument. That's exactly why it needs a usability test.",
+     "try": {
+      "type": "single",
+      "q": "Why does a survey need a pretest more than most artefacts?",
+      "options": [
+       "There's no chance to fix it after launch",
+       "Surveys are harder to write than tasks",
+       "Respondents can't ask for clarification",
+       "Statistical tests require a pilot"
+      ],
+      "answer": 0,
+      "explain": "One shot, no redo."
+     }
+    },
+    {
+     "title": "2 · Know your item type",
+     "text": "**Attributes** — who they are. Segment, don't stereotype; ask only when the segment will genuinely change a design decision.\n**Behaviours** — what they do. Analytics may be a better source.\n**Abilities** — what they can do or know.\n**Sentiments** — what they think, feel or judge.\n\nThe structure of a good question depends on which kind of information it is meant to collect.",
+     "try": {
+      "type": "single",
+      "q": "You want to know how often people use a feature. What's usually the better source?",
+      "options": [
+       "Analytics",
+       "A behaviour question",
+       "An attribute question",
+       "A sentiment question"
+      ],
+      "answer": 0,
+      "explain": "Self-reported frequency is unreliable when the data exists."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Four item types",
+       "items": [
+        "Attributes — who they are",
+        "Behaviours — what they do",
+        "Abilities — what they can do",
+        "Sentiments — what they think"
+       ]
+      },
+      "right": {
+       "label": "Watch out",
+       "items": [
+        "Only if it changes a decision",
+        "Analytics may be better",
+        "Don't confuse with confidence",
+        "Most surveys are all sentiment"
+       ]
+      }
+     }
+    },
+    {
+     "title": "3 · Pair the important questions",
+     "text": "Add a **“why”** after the rating questions that matter.\n\nA score tells you where you stand; the open follow-up tells you what to do about it. Pairing the two is the cheapest way to turn a number into an action — and it's what makes a one-question pop-up worth running at all.",
+     "try": {
+      "type": "single",
+      "q": "What does pairing a rating with an open “why” achieve?",
+      "options": [
+       "It turns a number into something actionable",
+       "It improves the response rate",
+       "It validates the rating scale",
+       "It allows statistical comparison"
+      ],
+      "answer": 0,
+      "explain": "The score locates the problem; the comment explains it."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "How should a pretest be run?",
+     "options": [
+      "With a few people thinking aloud",
+      "With a large pilot sample",
+      "By a second researcher reviewing the wording",
+      "By testing both versions against each other"
+     ],
+     "answer": 0,
+     "explain": "Moderated over video if you can."
+    },
+    {
+     "type": "single",
+     "q": "What did pretesting reveal in the real-estate example?",
+     "options": [
+      "Jargon and differing interpretations",
+      "A broken skip logic",
+      "Too many questions",
+      "An unrepresentative sample"
+     ],
+     "answer": 0,
+     "explain": "Both would have ruined the data at launch."
+    },
+    {
+     "type": "single",
+     "q": "When should you ask an attribute question?",
+     "options": [
+      "When the segment will change a design decision",
+      "In every survey, for analysis",
+      "Only for B2B audiences",
+      "When the sample is large enough to split"
+     ],
+     "answer": 0,
+     "explain": "Segment, don't stereotype."
+    },
+    {
+     "type": "single",
+     "q": "What are the four item types?",
+     "options": [
+      "Attributes, behaviours, abilities, sentiments",
+      "Open, closed, scaled, ranked",
+      "Demographic, behavioural, attitudinal, predictive",
+      "Screening, core, follow-up, optional"
+     ],
+     "answer": 0,
+     "explain": "Each needs a different question structure."
+    },
+    {
+     "type": "single",
+     "q": "Which habit is cheapest to skip and most costly to have skipped?",
+     "options": [
+      "The pretest",
+      "The item-type check",
+      "The paired why",
+      "The sample size calculation"
+     ],
+     "answer": 0,
+     "explain": "An unusable dataset can't be fixed afterwards."
+    }
+   ]
+  }
+ ]
+}

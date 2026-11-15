@@ -1,0 +1,144 @@
+{
+ "id": "in-app-surveys",
+ "module": "metrics",
+ "title": "In-App Surveys Need Lots of Guardrails",
+ "icon": "📨",
+ "intro": "Single-question 1–5 pop-ups are easy to launch and badly overused. Written for complex, lower-frequency enterprise workflows.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "In-App Surveys Need Lots of Guardrails",
+   "learn": [
+    {
+     "title": "Five guardrails",
+     "text": "**1. Purpose** — task-level, not overall sentiment\n**2. Trigger** — on attempts, not only completions\n**3. Stop rule** — around 55 per segment; cut off past 100\n**4. Exposure** — cooldowns, and one survey per session\n**5. Compare** — same workflow, same users, same trigger\n\nOverall sentiment and benchmarking belong in periodic instruments (SUS, SUPR-Q, NPS). Pop-ups measure one task.",
+     "try": {
+      "type": "single",
+      "q": "What should an in-app pop-up measure?",
+      "options": [
+       "One task",
+       "Overall product sentiment",
+       "Likelihood to recommend",
+       "Feature awareness"
+      ],
+      "answer": 0,
+      "explain": "Benchmarking belongs in periodic instruments."
+     }
+    },
+    {
+     "title": "Completion-only triggers lie",
+     "text": "If the survey fires only on success, **you hear only from people who made it**.\n\nThe users who abandoned, hit errors or needed help never see the question — and they are the ones whose experience you were trying to measure.",
+     "try": {
+      "type": "single",
+      "q": "Your satisfaction score is high but support tickets are rising. What's a likely cause?",
+      "options": [
+       "The survey only fires on completion",
+       "The sample is too small",
+       "The scale has too few points",
+       "Users rate politely"
+      ],
+      "answer": 0,
+      "explain": "Survivors answer; the people who failed never saw it."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Triggers on completion",
+       "items": [
+        "Only successful users answer",
+        "Scores look healthy",
+        "Failures are invisible"
+       ]
+      },
+      "right": {
+       "label": "Triggers on attempt",
+       "items": [
+        "Both outcomes represented",
+        "Scores reflect reality",
+        "Abandonment is visible"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Write it down before launch",
+     "text": "Before it goes live, record: **purpose, audience segment, target sample, other active surveys, and a stop rule.**\n\nWithout that, pop-ups accumulate — several running at once, firing indefinitely, with nobody able to say what any of them was for.\n\n*High-traffic consumer products can loosen several of these limits.*",
+     "try": {
+      "type": "single",
+      "q": "What is the stop rule for?",
+      "options": [
+       "Ending collection at the target sample",
+       "Deciding which users to exclude",
+       "Setting the significance threshold",
+       "Choosing when to repeat the survey"
+      ],
+      "answer": 0,
+      "explain": "Around 55 per segment, cut off past 100 — then stop asking."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Who is this guidance written for?",
+     "options": [
+      "Complex, lower-frequency enterprise workflows",
+      "High-traffic consumer apps",
+      "Mobile-only products",
+      "Early-stage startups"
+     ],
+     "answer": 0,
+     "explain": "Consumer products with lots of traffic can loosen the limits."
+    },
+    {
+     "type": "single",
+     "q": "What belongs in a periodic instrument rather than a pop-up?",
+     "options": [
+      "Benchmarking and overall sentiment",
+      "Task difficulty",
+      "Error recovery",
+      "Feature-level feedback"
+     ],
+     "answer": 0,
+     "explain": "SUS, SUPR-Q or NPS, run on a schedule."
+    },
+    {
+     "type": "single",
+     "q": "How many surveys should a user see in one session?",
+     "options": [
+      "One",
+      "Two",
+      "As many as are triggered",
+      "None, if they answered last week"
+     ],
+     "answer": 0,
+     "explain": "Plus cooldowns between sessions."
+    },
+    {
+     "type": "single",
+     "q": "What makes two in-app survey results comparable?",
+     "options": [
+      "Same workflow, users and trigger",
+      "Same sample size",
+      "Same time of year",
+      "Same question wording only"
+     ],
+     "answer": 0,
+     "explain": "Change any of the three and you're comparing different things."
+    },
+    {
+     "type": "single",
+     "q": "What should be written down before launch?",
+     "options": [
+      "Purpose, segment, target, other surveys, stop rule",
+      "The analysis plan and chart templates",
+      "The list of stakeholders to notify",
+      "The expected score range"
+     ],
+     "answer": 0,
+     "explain": "It's what stops pop-ups accumulating unmanaged."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,145 @@
+{
+ "id": "ab-strategies",
+ "module": "experiments",
+ "title": "A/B Test Strategies That Work",
+ "icon": "♟️",
+ "intro": "An A/B test only compares the variations you put into it. Clean mechanics can't rescue a weak variation.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "A/B Test Strategies That Work",
+   "learn": [
+    {
+     "title": "One win, four explanations",
+     "text": "A bigger, brighter, more urgent button gets more clicks. That single result is consistent with four different problems:\n\n• It was easier to find\n• The copy was clearer\n• It pulled attention away from other information\n• Urgency pushed people into a premature action\n\nEach needs a different fix — and the test can't tell you which.",
+     "try": {
+      "type": "single",
+      "q": "A more prominent button wins on clicks. What do you know?",
+      "options": [
+       "That clicks went up",
+       "That the button is easier to find",
+       "That the copy is clearer",
+       "That the page is more usable overall"
+      ],
+      "answer": 0,
+      "explain": "Four explanations fit the same result."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "“Make it more obvious” wins",
+       "items": [
+        "Easier to find?",
+        "Clearer copy?",
+        "Stole attention?",
+        "Rushed the decision?"
+       ]
+      },
+      "right": {
+       "label": "What a strong test fixes",
+       "items": [
+        "Hypothesis names the cause",
+        "One change, narrow claim",
+        "Guardrails catch harm"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Ground the variation",
+     "text": "**Weak:** “we think this version will perform better.”\n\n**Strong:** “users miss the primary action because the label is vague and disconnected from the task; a specific label will increase completion.”\n\nThe hypothesis has to name **the cause**, not just predict the outcome. That's what makes the result interpretable afterwards.",
+     "try": {
+      "type": "single",
+      "q": "What is missing from “we think this version will perform better”?",
+      "options": [
+       "A named cause",
+       "A success metric",
+       "A sample size",
+       "A confidence level"
+      ],
+      "answer": 0,
+      "explain": "Without a cause, a win teaches you nothing."
+     }
+    },
+    {
+     "title": "Match the claim to the change, and add guardrails",
+     "text": "Change **one thing** if you want a narrow claim. Change a **bundle** and you may only compare packages, not elements.\n\nAdd **guardrail metrics** so a win on clicks doesn't hide a loss elsewhere — refunds, support contacts, downstream completion.\n\nAnd when the meeting stalls and someone says “let's just A/B test it”, don't refuse. Slow the team down enough to ask what the variation is actually testing.",
+     "try": {
+      "type": "single",
+      "q": "You redesign the whole page and version B wins. What can you claim?",
+      "options": [
+       "Package B beat package A",
+       "The new layout caused the lift",
+       "Each change contributed positively",
+       "The old design was unusable"
+      ],
+      "answer": 0,
+      "explain": "A bundled change supports only a bundled claim."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does an A/B test compare?",
+     "options": [
+      "Only the variations you built",
+      "The best available solutions",
+      "Your design against the market standard",
+      "User preferences across segments"
+     ],
+     "answer": 0,
+     "explain": "Which is why the variation matters more than the mechanics."
+    },
+    {
+     "type": "single",
+     "q": "What is a guardrail metric for?",
+     "options": [
+      "Catching harm the primary metric hides",
+      "Confirming the sample is balanced",
+      "Measuring statistical power",
+      "Tracking the test's duration"
+     ],
+     "answer": 0,
+     "explain": "A click win can hide a refund loss."
+    },
+    {
+     "type": "single",
+     "q": "What should you do when someone says “let's just A/B test it”?",
+     "options": [
+      "Ask what the variation is testing",
+      "Refuse until research is done",
+      "Run it with a smaller sample first",
+      "Convert it to a multivariate test"
+     ],
+     "answer": 0,
+     "explain": "Slow the team down without blocking them."
+    },
+    {
+     "type": "single",
+     "q": "Why does “winning isn't the same as learning”?",
+     "options": [
+      "A win doesn't tell you which cause produced it",
+      "Winners often fail to replicate",
+      "Wins are usually statistically weak",
+      "Teams stop testing after a win"
+     ],
+     "answer": 0,
+     "explain": "That's the point of the four-explanations example."
+    },
+    {
+     "type": "single",
+     "q": "When can you make a narrow causal claim?",
+     "options": [
+      "When one element changed",
+      "When the sample is large",
+      "When the result is significant",
+      "When the test ran for two weeks"
+     ],
+     "answer": 0,
+     "explain": "Match the claim to what actually changed."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "id": "correlation",
+ "module": "experiments",
+ "title": "Correlation Is a Signal, Not a Cause",
+ "icon": "🔀",
+ "intro": "Users who finished the onboarding tutorial had much higher three-month retention, so the team credited the tutorial. Maybe — or motivated users both finish tutorials and stay.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Correlation Is a Signal, Not a Cause",
+   "learn": [
+    {
+     "title": "Same pattern, different stories",
+     "text": "**What the team concluded:** tutorial → retention. So force the tutorial.\n\n**What else could explain it:** motivated users do both.\n\nAnother example: “Learn more” clicks correlate with conversion, so add more buttons. Or: interested buyers click to read, and would have converted anyway.",
+     "try": {
+      "type": "single",
+      "q": "Tutorial completers retain better. What is the competing explanation?",
+      "options": [
+       "Motivated users both finish and stay",
+       "The tutorial is too long",
+       "Retention is measured incorrectly",
+       "The sample was unrepresentative"
+      ],
+      "answer": 0,
+      "explain": "Self-selection explains the pattern without the tutorial causing anything."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "The conclusion drawn",
+       "items": [
+        "Tutorial drives retention",
+        "Clicks drive conversion",
+        "So scale the cause"
+       ]
+      },
+      "right": {
+       "label": "The alternative",
+       "items": [
+        "Motivated users do both",
+        "Interested buyers click to read",
+        "Test it before scaling it"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Language discipline",
+     "text": "Say **“is associated with”** or **“moves with”** — not “drives” or “causes”.\n\nList the alternative explanations **before** presenting the pattern: self-selection, a third factor, or a reversed direction.\n\nr runs from −1 to +1: close to ±1 the two move together, close to 0 they don't. The practical meaning matters more than the maths.",
+     "try": {
+      "type": "single",
+      "q": "Which phrasing is appropriate for a correlation?",
+      "options": [
+       "Is associated with",
+       "Drives",
+       "Causes",
+       "Results in"
+      ],
+      "answer": 0,
+      "explain": "Causal language overclaims what the data supports."
+     }
+    },
+    {
+     "title": "Use it to design the next step",
+     "text": "In real-world UX data, correlation is often all you have. Treat it as a reason to ask a sharper question — not as proof.\n\nNext steps: an experiment, a staged rollout, or interviews with both groups.\n\n**Regression** can show how much one variable predicts another while controlling for others — useful, but still not proof of cause.",
+     "try": {
+      "type": "single",
+      "q": "What is the right response to an interesting correlation?",
+      "options": [
+       "Design a study that can test it",
+       "Ship the change and monitor",
+       "Report it as a key finding",
+       "Discard it as unreliable"
+      ],
+      "answer": 0,
+      "explain": "An experiment, a staged rollout, or interviews with both groups."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does r = 0 mean?",
+     "options": [
+      "The two don't move together",
+      "There is no relationship of any kind",
+      "The sample is too small",
+      "The variables are identical"
+     ],
+     "answer": 0,
+     "explain": "It measures linear association, not all possible relationships."
+    },
+    {
+     "type": "single",
+     "q": "When should alternative explanations be listed?",
+     "options": [
+      "Before presenting the pattern",
+      "Only if someone asks",
+      "In the appendix of the report",
+      "After the recommendation"
+     ],
+     "answer": 0,
+     "explain": "Self-selection, a third factor, a reversed direction."
+    },
+    {
+     "type": "single",
+     "q": "What can regression add?",
+     "options": [
+      "How much one variable predicts another, controlling for others",
+      "Proof of causation",
+      "A larger effective sample",
+      "A significance test for correlation"
+     ],
+     "answer": 0,
+     "explain": "Useful, but still not proof of cause."
+    },
+    {
+     "type": "single",
+     "q": "Why is correlation often all you have in UX?",
+     "options": [
+      "Real-world data is observational",
+      "Experiments are statistically weak",
+      "Users won't join controlled studies",
+      "Analytics tools don't support testing"
+     ],
+     "answer": 0,
+     "explain": "Which is why the discipline is in how you talk about it."
+    },
+    {
+     "type": "single",
+     "q": "What is the risk of “so force the tutorial”?",
+     "options": [
+      "You scale a cause that may not exist",
+      "The tutorial becomes too long",
+      "Retention gets harder to measure",
+      "Motivated users will disengage"
+     ],
+     "answer": 0,
+     "explain": "Acting on a correlation as if it were causal."
+    }
+   ]
+  }
+ ]
+}

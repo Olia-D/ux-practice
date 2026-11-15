@@ -1,0 +1,144 @@
+{
+ "id": "time-on-task",
+ "module": "experiments",
+ "title": "Stop Throwing Away Time-on-Task Data",
+ "icon": "⏲️",
+ "intro": "Small-sample timing data is skewed: everyone has a minimum time, but delays are open-ended.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Stop Throwing Away Time-on-Task Data",
+   "learn": [
+    {
+     "title": "Eight participants, one task",
+     "text": "42s · 48s · 52s · 55s · 57s · 64s · 69s · **240s** (reread, misclicked, backtracked)\n\n**Median 56s** describes the typical experience. **Mean 78s** is pulled up by one participant.\n\nBoth are correct — they answer different questions.",
+     "try": {
+      "type": "single",
+      "q": "Why is the median the better headline here?",
+      "options": [
+       "It describes the typical experience",
+       "It is always more accurate",
+       "It ignores the failed attempt",
+       "It has a smaller margin of error"
+      ],
+      "answer": 0,
+      "explain": "Timing data is skewed, so the mean follows the slow tail."
+     }
+    },
+    {
+     "title": "Never delete the outlier",
+     "text": "Practitioners do one of two things with eight timings: dismiss them as meaningless, or **trim the slowest one** to make the report look clean.\n\nCalabro calls trimming risky and unethical. **The slow case is usually the most important finding** — it's the failure path.",
+     "try": {
+      "type": "single",
+      "q": "What does the 240-second participant usually represent?",
+      "options": [
+       "The failure path",
+       "A measurement error",
+       "An unrepresentative user",
+       "A participant who misunderstood the task"
+      ],
+      "answer": 0,
+      "explain": "Deleting it removes the most important finding."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "What people do",
+       "items": [
+        "Dismiss eight timings as meaningless",
+        "Trim the slowest to look clean",
+        "Report only the mean"
+       ]
+      },
+      "right": {
+       "label": "What to do",
+       "items": [
+        "Lead with the median",
+        "Keep and explain the slow case",
+        "Show the individual times"
+       ]
+      }
+     }
+    },
+    {
+     "title": "How to report it",
+     "text": "**Use the median** — it represents typical observed behaviour when data is skewed.\n\n**Show the range and the individual times** — with eight people, the individual times are often the clearest chart.\n\n**Explain the slow cases from what you observed** — “reread the label, misclicked, backtracked” is the finding, not the number.",
+     "try": {
+      "type": "single",
+      "q": "With eight participants, what is often the clearest chart?",
+      "options": [
+       "The individual times",
+       "A box plot",
+       "A histogram",
+       "The mean with error bars"
+      ],
+      "answer": 0,
+      "explain": "Eight dots show the shape and the outlier at once."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Why is timing data skewed?",
+     "options": [
+      "There's a floor but no ceiling",
+      "Participants rush at the start",
+      "Moderators stop slow attempts",
+      "Timers round up"
+     ],
+     "answer": 0,
+     "explain": "Everyone has a minimum time; delays are open-ended."
+    },
+    {
+     "type": "single",
+     "q": "What does the mean answer that the median doesn't?",
+     "options": [
+      "Total time across all participants",
+      "The typical user's experience",
+      "The fastest realistic completion",
+      "Whether the task was completed"
+     ],
+     "answer": 0,
+     "explain": "Both are correct; they answer different questions."
+    },
+    {
+     "type": "single",
+     "q": "What does Calabro call trimming the slowest result?",
+     "options": [
+      "Risky and unethical",
+      "Acceptable with a footnote",
+      "Standard practice for small samples",
+      "Necessary for statistical validity"
+     ],
+     "answer": 0,
+     "explain": "It deletes the failure path."
+    },
+    {
+     "type": "single",
+     "q": "What should accompany a slow time in the report?",
+     "options": [
+      "What you observed happening",
+      "An apology for the sample size",
+      "A comparison with the industry average",
+      "The participant's background"
+     ],
+     "answer": 0,
+     "explain": "“Reread, misclicked, backtracked” is the actual finding."
+    },
+    {
+     "type": "single",
+     "q": "What is the common mistake besides trimming?",
+     "options": [
+      "Dismissing small-sample timings entirely",
+      "Averaging across different tasks",
+      "Using a stopwatch instead of software",
+      "Reporting seconds rather than minutes"
+     ],
+     "answer": 0,
+     "explain": "Eight timings tell you a lot if you report them honestly."
+    }
+   ]
+  }
+ ]
+}

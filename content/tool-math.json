@@ -1,0 +1,144 @@
+{
+ "id": "tool-math",
+ "module": "experiments",
+ "title": "Check Your Tool’s Math",
+ "icon": "🧮",
+ "intro": "In a 32-person ranking survey, Microsoft Forms named a winner the raw data didn't support.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Check Your Tool’s Math",
+   "learn": [
+    {
+     "title": "The undocumented weighting",
+     "text": "Forms applied **positional weighting** that was never explained in the interface. It rewarded options that often landed near the top on average — not the option most people actually preferred.\n\nThe raw data showed a different option with far more first-place votes and most head-to-head wins.",
+     "try": {
+      "type": "single",
+      "q": "What did the tool's method reward?",
+      "options": [
+       "Ranking high on average",
+       "Winning the most head-to-head matchups",
+       "Getting the most first-place votes",
+       "Appearing in the top three most often"
+      ],
+      "answer": 0,
+      "explain": "Which is a legitimate method — but not the one the team thought they were using."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "The tool's default",
+       "items": [
+        "Positional weights",
+        "Method not explained",
+        "Picked a different winner"
+       ]
+      },
+      "right": {
+       "label": "What Calabro used",
+       "items": [
+        "Pairwise wins, Borda tie-break",
+        "Reported first-place votes",
+        "Showed full rank distributions"
+       ]
+      }
+     }
+    },
+    {
+     "title": "What he did instead",
+     "text": "He exported the responses and rebuilt the rankings himself, comparing methods:\n\n• **Pairwise wins with a Borda tie-breaker** — chosen, because it's easy to explain\n• **The Schulze method** — handles preference cycles, but harder to reproduce\n\nLLMs were useful for surfacing candidate methods.\n\nBecause the deadline forced a small sample, he had agreed beforehand how the results would be presented.",
+     "try": {
+      "type": "single",
+      "q": "Why did he pick pairwise wins with a Borda tie-break over Schulze?",
+      "options": [
+       "It's easier to explain",
+       "It is more accurate",
+       "Schulze needs a larger sample",
+       "The tool supported it natively"
+      ],
+      "answer": 0,
+      "explain": "Reproducibility and explainability beat sophistication here."
+     }
+    },
+    {
+     "title": "The general lesson",
+     "text": "Different aggregation methods **legitimately crown different winners**. That isn't a bug — it's why the method has to match the question.\n\nSo: find out what your tool does, say which method you used, and show the distribution rather than only the winner.",
+     "try": {
+      "type": "single",
+      "q": "Two valid methods pick different winners. What does that mean?",
+      "options": [
+       "The method must match the question",
+       "One of the methods is wrong",
+       "The sample is too small",
+       "The ranking question was badly written"
+      ],
+      "answer": 0,
+      "explain": "Aggregation is a choice, and it should be a deliberate one."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "How many people were in the ranking survey?",
+     "options": [
+      "32",
+      "132",
+      "12",
+      "320"
+     ],
+     "answer": 0,
+     "explain": "Small enough that the presentation approach was agreed in advance."
+    },
+    {
+     "type": "single",
+     "q": "What was wrong with the tool's behaviour?",
+     "options": [
+      "Its method was undocumented",
+      "It miscalculated the totals",
+      "It dropped incomplete responses",
+      "It reordered the options randomly"
+     ],
+     "answer": 0,
+     "explain": "The weighting was legitimate but invisible."
+    },
+    {
+     "type": "single",
+     "q": "What should you report alongside a ranking winner?",
+     "options": [
+      "The full rank distribution",
+      "The response rate",
+      "The confidence interval",
+      "The survey completion time"
+     ],
+     "answer": 0,
+     "explain": "Plus first-place votes and the method used."
+    },
+    {
+     "type": "single",
+     "q": "What were LLMs useful for here?",
+     "options": [
+      "Surfacing candidate methods",
+      "Running the survey",
+      "Recruiting participants",
+      "Writing the final report"
+     ],
+     "answer": 0,
+     "explain": "He still chose and verified the method himself."
+    },
+    {
+     "type": "single",
+     "q": "What is the broader risk this illustrates?",
+     "options": [
+      "Trusting a tool's summary without knowing its maths",
+      "Using surveys for ranking questions",
+      "Small samples in enterprise research",
+      "Exporting data to spreadsheets"
+     ],
+     "answer": 0,
+     "explain": "The tool was not broken; the assumption about it was."
+    }
+   ]
+  }
+ ]
+}

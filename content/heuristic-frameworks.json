@@ -1,0 +1,144 @@
+{
+ "id": "heuristic-frameworks",
+ "module": "metrics",
+ "title": "Six Heuristic Frameworks",
+ "icon": "📜",
+ "intro": "Heuristic evaluation isn't a last resort or a checklist. The mistake is using only Nielsen's ten and stopping at naming violations.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Six Heuristic Frameworks",
+   "learn": [
+    {
+     "title": "Six lenses",
+     "text": "**Norman — 7 principles:** big-picture “is it intuitive?”, physical or cross-device products\n**Nielsen — 10 heuristics:** general usability review; the shared vocabulary\n**Weinschenk & Barker — 20:** detailed guidelines including persuasion and emotion\n**Tognazzini — first principles:** complex interaction; defaults, anticipation, autonomy\n**Gerhardt-Powals — 10:** data-heavy, high-stakes screens; cognitive engineering\n**Covert — IA heuristics:** navigation, findability, labelling, structure\n\nOne framework is a checklist; several are a toolkit.",
+     "try": {
+      "type": "single",
+      "q": "You're reviewing a data-heavy trading screen. Which lens fits best?",
+      "options": [
+       "Gerhardt-Powals",
+       "Covert",
+       "Norman",
+       "Weinschenk & Barker"
+      ],
+      "answer": 0,
+      "explain": "Cognitive engineering principles were written for high-stakes, information-dense displays."
+     }
+    },
+    {
+     "title": "Norman's seven, as a starting point",
+     "text": "• Use knowledge in the world and in the head\n• Simplify the structure of tasks\n• Make things visible — state, options, results\n• Get the mappings right\n• Exploit the power of constraints\n• Design for error\n• When all else fails, standardise\n\nGood for asking whether something is intuitive at all, before you go looking for specific violations.",
+     "try": {
+      "type": "single",
+      "q": "What is “design for error” an example of?",
+      "options": [
+       "One of Norman's seven principles",
+       "A Nielsen heuristic",
+       "A Tognazzini first principle",
+       "A Covert IA heuristic"
+      ],
+      "answer": 0,
+      "explain": "Norman's list is the big-picture lens."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Checklist use",
+       "items": [
+        "Nielsen's ten, every time",
+        "Stop at naming violations",
+        "One reviewer, one pass"
+       ]
+      },
+      "right": {
+       "label": "Toolkit use",
+       "items": [
+        "Pick the lens for the problem",
+        "Explain the cost to the user",
+        "Several reviewers, compared"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Stop at the violation and you've stopped early",
+     "text": "Naming the heuristic is the beginning. The useful output says **what it costs the user** and what to change.\n\nAnd a navigation problem is better served by Covert's IA heuristics than by forcing it into Nielsen's ten — which is the point of keeping six frameworks to hand.",
+     "try": {
+      "type": "single",
+      "q": "Which framework suits a findability and labelling problem?",
+      "options": [
+       "Covert's IA heuristics",
+       "Nielsen's ten",
+       "Norman's seven",
+       "Gerhardt-Powals"
+      ],
+      "answer": 0,
+      "explain": "Navigation, findability, labelling and structure."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the common mistake with heuristic evaluation?",
+     "options": [
+      "Using only Nielsen's ten and naming violations",
+      "Running it with too few reviewers",
+      "Applying it too early in design",
+      "Choosing the wrong severity scale"
+     ],
+     "answer": 0,
+     "explain": "It becomes a checklist instead of research."
+    },
+    {
+     "type": "single",
+     "q": "Which set includes persuasion and emotion?",
+     "options": [
+      "Weinschenk & Barker's twenty",
+      "Norman's seven",
+      "Nielsen's ten",
+      "Tognazzini's first principles"
+     ],
+     "answer": 0,
+     "explain": "The most detailed of the six."
+    },
+    {
+     "type": "single",
+     "q": "What is Nielsen's set best used for?",
+     "options": [
+      "General review and shared vocabulary",
+      "Information architecture problems",
+      "High-stakes data displays",
+      "Physical and cross-device products"
+     ],
+     "answer": 0,
+     "explain": "It's the common language, not the only lens."
+    },
+    {
+     "type": "single",
+     "q": "Which lens covers defaults, anticipation and autonomy?",
+     "options": [
+      "Tognazzini's first principles",
+      "Gerhardt-Powals",
+      "Covert",
+      "Norman"
+     ],
+     "answer": 0,
+     "explain": "Written for complex interaction in complex UIs."
+    },
+    {
+     "type": "single",
+     "q": "What should a heuristic finding include?",
+     "options": [
+      "What it costs the user",
+      "The reviewer's confidence score",
+      "A reference to the original paper",
+      "The number of screens affected"
+     ],
+     "answer": 0,
+     "explain": "Naming the violation is only the start."
+    }
+   ]
+  }
+ ]
+}

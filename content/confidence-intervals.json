@@ -1,0 +1,144 @@
+{
+ "id": "confidence-intervals",
+ "module": "experiments",
+ "title": "5 out of 5 Isn't 100%",
+ "icon": "📊",
+ "intro": "Five engineers completed the new export flow: “100% success”. The 95% confidence interval was 48–100%.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "5 out of 5 Isn't 100%",
+   "learn": [
+    {
+     "title": "What the interval does",
+     "text": "It turns “trust me” into a range, and shifts the conversation from “is five participants significant?” to **“how much risk can we accept?”**\n\nSame task, more data:\n\n• 5 test participants: 100% — 95% CI **48–100%**\n• ~45 engineers (analytics): 93% — 95% CI **83–100%**\n\nThe estimate barely moved. The interval narrowed from 52 points to 17.",
+     "try": {
+      "type": "single",
+      "q": "Five of five participants succeeded. What does the interval tell you?",
+      "options": [
+       "The true rate could be anywhere from about half to all",
+       "The task has a 100% success rate",
+       "The sample was too small to analyse",
+       "The result is statistically significant"
+      ],
+      "answer": 0,
+      "explain": "48–100% at 95% confidence."
+     }
+    },
+    {
+     "title": "Which method for which measure",
+     "text": "**Task completion** is binary, so use the **Wilson score interval** — it behaves properly at 0% and 100%, where simpler formulas break.\n\nEnter 1 or 0 per participant, take the average and the count, pick z (1.645 for 90%, 1.96 for 95%) and apply the formula. Calabro shares a spreadsheet version.\n\n**Time on task** is skewed, so use a **log-normal** approach instead.",
+     "try": {
+      "type": "single",
+      "q": "Which interval method suits task completion?",
+      "options": [
+       "Wilson score",
+       "Log-normal",
+       "Standard error of the mean",
+       "Bootstrap percentile"
+      ],
+      "answer": 0,
+      "explain": "It behaves at the extremes, where simpler formulas break down."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Completion (binary)",
+       "items": [
+        "Wilson score interval",
+        "Works at 0% and 100%",
+        "z = 1.645 (90%) or 1.96 (95%)"
+       ]
+      },
+      "right": {
+       "label": "Time on task (skewed)",
+       "items": [
+        "Log-normal approach",
+        "Median leads",
+        "Simple averages mislead"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Error bars change the conversation",
+     "text": "Put the interval on the chart.\n\nA false-alert rate of **12%** sounds minor. The same finding as **9–15% across traders, with some well above average**, changes the priority.\n\nAnd for new users, a realistic completion benchmark is around **90%** — not 100%. Aiming for perfection in the numbers usually means the measurement is wrong.",
+     "try": {
+      "type": "single",
+      "q": "Why put error bars on the chart?",
+      "options": [
+       "The range changes how people prioritise",
+       "Charts without them fail review",
+       "It proves significance visually",
+       "It compresses the y-axis usefully"
+      ],
+      "answer": 0,
+      "explain": "“12%” and “9–15%, some well above” lead to different decisions."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does a confidence interval replace?",
+     "options": [
+      "“Trust me” with a range",
+      "Significance testing",
+      "The need for larger samples",
+      "Qualitative explanation"
+     ],
+     "answer": 0,
+     "explain": "It makes the uncertainty explicit."
+    },
+    {
+     "type": "single",
+     "q": "What happened when the sample grew from 5 to about 45?",
+     "options": [
+      "The interval narrowed sharply; the estimate barely moved",
+      "Both the estimate and the interval changed",
+      "The estimate rose and the interval widened",
+      "Nothing changed meaningfully"
+     ],
+     "answer": 0,
+     "explain": "52 points down to 17."
+    },
+    {
+     "type": "single",
+     "q": "Why not use a simple formula at 100% completion?",
+     "options": [
+      "It breaks down at the extremes",
+      "It requires a larger sample",
+      "It assumes a normal distribution of time",
+      "It can't handle binary data"
+     ],
+     "answer": 0,
+     "explain": "Wilson is designed to behave at 0% and 100%."
+    },
+    {
+     "type": "single",
+     "q": "What is a realistic completion benchmark for new users?",
+     "options": [
+      "Around 90%",
+      "100%",
+      "About 70%",
+      "It can't be generalised"
+     ],
+     "answer": 0,
+     "explain": "Perfection in the numbers usually means a measurement problem."
+    },
+    {
+     "type": "single",
+     "q": "Which z value corresponds to 90% confidence?",
+     "options": [
+      "1.645",
+      "1.96",
+      "2.33",
+      "1.28"
+     ],
+     "answer": 0,
+     "explain": "1.96 is the 95% value."
+    }
+   ]
+  }
+ ]
+}

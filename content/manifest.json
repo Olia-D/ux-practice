@@ -511,7 +511,7 @@
      "id": "ab-strategies",
      "title": "A/B Test Strategies That Work",
      "icon": "♟️",
-     "summary": "Winning isn't the same as learning",
+     "summary": "Ground the variation in an observed problem, name the cause, change one thing, add guardrails.",
      "file": "content/ab-strategies.json",
      "source": "https://trevorcalabro.substack.com/p/ab-test-strategies-that-work"
     },
@@ -519,7 +519,7 @@
      "id": "ab-sample-size",
      "title": "A/B Test Sample Sizing",
      "icon": "📏",
-     "summary": "Calculating sample size in the real world",
+     "summary": "Baseline, MDE, confidence, power. The MDE is a product decision, so bring stakeholders in.",
      "file": "content/ab-sample-size.json",
      "source": "https://trevorcalabro.substack.com/p/ab-test-sample-sizing"
     },
@@ -527,7 +527,7 @@
      "id": "stat-significance",
      "title": "Statistically Significant or Not?",
      "icon": "📉",
-     "summary": "Significance belongs to findings, not studies",
+     "summary": "Findings are significant, studies aren't — and significant doesn't mean large.",
      "file": "content/stat-significance.json",
      "source": "https://trevorcalabro.substack.com/p/statistically-significant-or-not"
     },
@@ -535,7 +535,7 @@
      "id": "confidence-intervals",
      "title": "5 out of 5 Isn't 100%",
      "icon": "📊",
-     "summary": "Confidence intervals, error bars and realistic completion benchmarks",
+     "summary": "5 of 5 is 48–100%. Wilson for completion, log-normal for time, error bars on the chart.",
      "file": "content/confidence-intervals.json",
      "source": "https://trevorcalabro.substack.com/p/confidence-intervals-for-usability"
     },
@@ -543,7 +543,7 @@
      "id": "correlation",
      "title": "Correlation Is a Signal, Not a Cause",
      "icon": "🔀",
-     "summary": "How to use patterns in messy data without over-claiming",
+     "summary": "Association, not cause. Name the alternatives, then design something that can test it.",
      "file": "content/correlation.json",
      "source": "https://trevorcalabro.substack.com/p/rethinking-correlation"
     },
@@ -551,7 +551,7 @@
      "id": "stats-llms",
      "title": "Stats With LLMs: Expert in the Loop",
      "icon": "🤖",
-     "summary": "Which test answers which question — and what the AI can't decide for you",
+     "summary": "The LLM runs the code; you choose the test, check the prep and interpret the result.",
      "file": "content/stats-llms.json",
      "source": "https://trevorcalabro.substack.com/p/t-tests-with-llms"
     },
@@ -559,7 +559,7 @@
      "id": "tool-math",
      "title": "Check Your Tool’s Math",
      "icon": "🧮",
-     "summary": "From “Microsoft Forms Did Me Dirty”",
+     "summary": "A survey tool's undocumented weighting picked the wrong winner. Know your tool's maths.",
      "file": "content/tool-math.json",
      "source": "https://trevorcalabro.substack.com/p/microsoft-forms-did-me-dirty"
     },
@@ -567,7 +567,7 @@
      "id": "time-on-task",
      "title": "Stop Throwing Away Time-on-Task Data",
      "icon": "⏲️",
-     "summary": "The truth about small-sample task time",
+     "summary": "Median first, show every time, keep the outlier — it's usually the failure path.",
      "file": "content/time-on-task.json",
      "source": "https://trevorcalabro.substack.com/p/stop-throwing-away-time-on-task-data"
     },
@@ -575,7 +575,7 @@
      "id": "goms-klm",
      "title": "GOMS-KLM: Predicting Task Time",
      "icon": "⌛",
-     "summary": "A forty-year-old method that still beats guesswork",
+     "summary": "Goals, operators, methods, selection rules — expert task time within 10–20%, no recruiting.",
      "file": "content/goms-klm.json",
      "source": "https://trevorcalabro.substack.com/p/goms-klm-calculating-time-on-task"
     },
@@ -583,7 +583,7 @@
      "id": "pure",
      "title": "PURE: Usability Scores From Experts",
      "icon": "🧰",
-     "summary": "Combines four articles on the Pragmatic Usability Rating by Experts",
+     "summary": "Break tasks into steps, rate each 1–5 with several experts, sum and track over time.",
      "file": "content/pure.json",
      "source": "https://trevorcalabro.substack.com/p/pures-real-world-impact-on-ux-teams"
     }
@@ -600,7 +600,7 @@
      "id": "survey-myths",
      "title": "Survey Myths That Harm UX",
      "icon": "🚫",
-     "summary": "What surveys can and can't tell you",
+     "summary": "Surveys tell you what people say. Report respondents, not users, and don't validate ideas with them.",
      "file": "content/survey-myths.json",
      "source": "https://trevorcalabro.substack.com/p/surveys-myths-that-harm-ux"
     },
@@ -608,7 +608,7 @@
      "id": "writing-surveys",
      "title": "Writing Surveys That Work",
      "icon": "✍️",
-     "summary": "Pretest the test, know your item types, pair the important questions",
+     "summary": "Pretest it like a usability test, know your item type, and pair ratings with a “why”.",
      "file": "content/writing-surveys.json",
      "source": "https://trevorcalabro.substack.com/p/survey-writing-best-practices"
     },
@@ -616,7 +616,7 @@
      "id": "in-app-surveys",
      "title": "In-App Surveys Need Lots of Guardrails",
      "icon": "📨",
-     "summary": "How to make one-question pop-up surveys the least terrible",
+     "summary": "Task-level purpose, trigger on attempts, stop at the target, one per session.",
      "file": "content/in-app-surveys.json",
      "source": "https://trevorcalabro.substack.com/p/in-app-surveys-need-lots-of-guardrails"
     },
@@ -624,7 +624,7 @@
      "id": "supr-q",
      "title": "Rethinking UX Metrics With SUPR-Q",
      "icon": "🌡️",
-     "summary": "Get more from your standard surveys",
+     "summary": "Usability, credibility, loyalty, appearance — one short survey that points at what to do next.",
      "file": "content/supr-q.json",
      "source": "https://trevorcalabro.substack.com/p/rethinking-ux-metrics-with-supr-q"
     },
@@ -632,7 +632,7 @@
      "id": "heuristic-frameworks",
      "title": "Six Heuristic Frameworks",
      "icon": "📜",
-     "summary": "Heuristics are real research — if you pick the right lens",
+     "summary": "Six frameworks, picked by the problem. One is a checklist; several are a toolkit.",
      "file": "content/heuristic-frameworks.json",
      "source": "https://trevorcalabro.substack.com/p/ux-heuristics-in-the-real-world"
     }

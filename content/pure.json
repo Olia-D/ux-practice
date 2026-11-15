@@ -1,0 +1,144 @@
+{
+ "id": "pure",
+ "module": "experiments",
+ "title": "PURE: Usability Scores From Experts",
+ "icon": "🧰",
+ "intro": "PURE turns expert review into a number you can compare across versions and competitors.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "PURE: Usability Scores From Experts",
+   "learn": [
+    {
+     "title": "How a PURE review runs",
+     "text": "**1. Define tasks** — the primary tasks for a target user\n**2. Break into steps** — what the user does, in order\n**3. Rate each step** — several experts rate difficulty independently\n**4. Sum and compare** — a task score and a product score you can track over time\n\nPragmatic Usability Rating by Experts: structured enough to be comparable, cheap enough to run often.",
+     "try": {
+      "type": "single",
+      "q": "What does PURE produce?",
+      "options": [
+       "A comparable score per task",
+       "A list of usability problems",
+       "A prediction of task time",
+       "A satisfaction rating from users"
+      ],
+      "answer": 0,
+      "explain": "Scores you can track across versions and against competitors."
+     }
+    },
+    {
+     "title": "The 5-point scale",
+     "text": "The original 3-point scale — easy / some difficulty / high difficulty — was **too coarse for elaborate workflows**.\n\nWith help from PURE co-creator Christian Rohrer, Calabro trialled a 5-point version: 14 researchers, 24 evaluations across CAD simulation products.\n\nThe two new anchors — **frictionless** at one end and **critical error** at the other — made scoring faster and easier, according to the evaluators.",
+     "try": {
+      "type": "single",
+      "q": "What did adding two anchors to the scale achieve?",
+      "options": [
+       "Evaluators found scoring faster and easier",
+       "It removed the need for multiple raters",
+       "It doubled the number of tasks covered",
+       "It made scores comparable with SUS"
+      ],
+      "answer": 0,
+      "explain": "Frictionless and critical error gave the extremes a definition."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "3-point scale",
+       "items": [
+        "Easy",
+        "Some difficulty",
+        "High difficulty"
+       ]
+      },
+      "right": {
+       "label": "5-point scale",
+       "items": [
+        "1 Frictionless",
+        "…",
+        "5 Critical error"
+       ]
+      }
+     }
+    },
+    {
+     "title": "What it's for",
+     "text": "Calabro has seen PURE raise quality across **seven teams**: it gives a shared vocabulary for difficulty and makes regressions visible between releases.\n\nIt is an expert method, so it tells you what trained evaluators predict — not what users did. Use it to prioritise and to track, then confirm the risky steps with real people.",
+     "try": {
+      "type": "single",
+      "q": "What does a PURE score represent?",
+      "options": [
+       "What trained evaluators predict",
+       "What users actually experienced",
+       "The number of defects found",
+       "The time an expert takes"
+      ],
+      "answer": 0,
+      "explain": "It is expert judgement, structured and summed."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does PURE stand for?",
+     "options": [
+      "Pragmatic Usability Rating by Experts",
+      "Predictive Usability Review Evaluation",
+      "Practical Usability Rating Exercise",
+      "Prioritised Usability Risk Estimate"
+     ],
+     "answer": 0,
+     "explain": "Expert ratings, turned into a comparable number."
+    },
+    {
+     "type": "single",
+     "q": "Why did the 3-point scale need extending?",
+     "options": [
+      "It was too coarse for elaborate workflows",
+      "Evaluators disagreed too often",
+      "It couldn't produce a product score",
+      "It wasn't comparable with competitors"
+     ],
+     "answer": 0,
+     "explain": "Complex products needed finer distinctions."
+    },
+    {
+     "type": "single",
+     "q": "Who helped trial the 5-point version?",
+     "options": [
+      "PURE co-creator Christian Rohrer",
+      "The Nielsen Norman Group",
+      "A team at Minitab",
+      "Jeff Sauro at MeasuringU"
+     ],
+     "answer": 0,
+     "explain": "14 researchers, 24 evaluations across CAD simulation products."
+    },
+    {
+     "type": "single",
+     "q": "How many experts should rate each step?",
+     "options": [
+      "Several, independently",
+      "One, for consistency",
+      "Exactly three",
+      "As many as are available"
+     ],
+     "answer": 0,
+     "explain": "Independent ratings are what make the score trustworthy."
+    },
+    {
+     "type": "single",
+     "q": "What should follow a PURE review?",
+     "options": [
+      "Confirming the risky steps with users",
+      "A redesign of the lowest-scoring task",
+      "A benchmark usability test",
+      "A second review by the same experts"
+     ],
+     "answer": 0,
+     "explain": "Expert prediction prioritises; user evidence confirms."
+    }
+   ]
+  }
+ ]
+}

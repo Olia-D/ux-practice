@@ -1,0 +1,144 @@
+{
+ "id": "ab-sample-size",
+ "module": "experiments",
+ "title": "A/B Test Sample Sizing",
+ "icon": "📏",
+ "intro": "There is no standard A/B sample size. “We always test with 200” skips every input that makes the number meaningful.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "A/B Test Sample Sizing",
+   "learn": [
+    {
+     "title": "Four inputs",
+     "text": "**Baseline** — what happens today, e.g. 18% complete the task\n**MDE** — the minimum detectable effect: the smallest improvement worth shipping\n**Confidence** — 90% or 95%, agreed up front\n**Power** — the chance of detecting a real effect, typically 80%\n\nChange any one of these and the required number changes.",
+     "try": {
+      "type": "single",
+      "q": "Which input is a business judgement rather than a statistical setting?",
+      "options": [
+       "The minimum detectable effect",
+       "The confidence level",
+       "The statistical power",
+       "The baseline rate"
+      ],
+      "answer": 0,
+      "explain": "How much better B must be to be worth shipping is a product decision."
+     }
+    },
+    {
+     "title": "Calabro's example",
+     "text": "18% of users complete the task today. Moving to 19% wouldn't justify a redesign; the team agrees that **about 26%** would.\n\nThat 8-point improvement is the MDE — and it came from a conversation with the product team, not from a calculator.\n\nSo stakeholders belong in the sample-size discussion, which is not where most teams put them.",
+     "try": {
+      "type": "single",
+      "q": "Where did the 8-point MDE in his example come from?",
+      "options": [
+       "A conversation with the product team",
+       "The statistical power calculation",
+       "The baseline conversion data",
+       "Industry benchmarks for the sector"
+      ],
+      "answer": 0,
+      "explain": "“How much better must B be for this to be worth shipping?”"
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "“We always test with 200”",
+       "items": [
+        "No baseline",
+        "No agreed MDE",
+        "Confidence unexamined"
+       ]
+      },
+      "right": {
+       "label": "A sized test",
+       "items": [
+        "Baseline from analytics",
+        "MDE agreed with product",
+        "Confidence and power set up front"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Sizing in practice",
+     "text": "Take the **baseline from analytics** if you have it; a reasoned estimate beats ignoring it.\n\nSet **confidence and power** from your organisation's agreed standard rather than per-test.\n\nThen explain the final number to stakeholders in terms of the decision: this many users, to be able to tell an 8-point improvement from noise.\n\nHalving the MDE roughly quadruples the sample — which is why chasing one-point lifts on low-traffic flows rarely works.",
+     "try": {
+      "type": "single",
+      "q": "You halve the MDE. Roughly what happens to the required sample?",
+      "options": [
+       "It quadruples",
+       "It doubles",
+       "It halves",
+       "It stays about the same"
+      ],
+      "answer": 0,
+      "explain": "Which is why small lifts need very large samples."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Why is there no standard A/B sample size?",
+     "options": [
+      "It depends on baseline, MDE, confidence and power",
+      "Every tool calculates it differently",
+      "Traffic varies too much between products",
+      "Standards differ by industry"
+     ],
+     "answer": 0,
+     "explain": "Four inputs, each of which moves the number."
+    },
+    {
+     "type": "single",
+     "q": "What does statistical power describe?",
+     "options": [
+      "The chance of detecting a real effect",
+      "The size of the observed difference",
+      "The confidence in the result",
+      "The variability of the data"
+     ],
+     "answer": 0,
+     "explain": "Typically set at 80%."
+    },
+    {
+     "type": "single",
+     "q": "What should you do if you have no baseline data?",
+     "options": [
+      "Use a reasoned estimate",
+      "Default to a 50% baseline",
+      "Skip the calculation",
+      "Run the test until it reaches significance"
+     ],
+     "answer": 0,
+     "explain": "A reasoned estimate beats ignoring the input."
+    },
+    {
+     "type": "single",
+     "q": "How should the final number be explained to stakeholders?",
+     "options": [
+      "In terms of the decision it supports",
+      "As a statistical requirement",
+      "As the industry standard",
+      "Relative to the last test you ran"
+     ],
+     "answer": 0,
+     "explain": "This many users, to tell that size of improvement from noise."
+    },
+    {
+     "type": "single",
+     "q": "Why are one-point lifts on low-traffic flows a problem?",
+     "options": [
+      "The required sample is enormous",
+      "They are never worth shipping",
+      "Tools can't measure them",
+      "Confidence levels don't apply"
+     ],
+     "answer": 0,
+     "explain": "Halving the MDE roughly quadruples the sample."
+    }
+   ]
+  }
+ ]
+}

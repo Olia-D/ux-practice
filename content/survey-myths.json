@@ -1,0 +1,144 @@
+{
+ "id": "survey-myths",
+ "module": "metrics",
+ "title": "Survey Myths That Harm UX",
+ "icon": "🚫",
+ "intro": "Surveys are fast, scalable and look great on a slide, which is why they get asked to do jobs they can't.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Survey Myths That Harm UX",
+   "learn": [
+    {
+     "title": "Five myths",
+     "text": "**“Surveys tell you what users do”** → they tell you what users *say*.\n**“75% of users prefer A”** → 75% of 28 respondents did.\n**“A survey can validate an idea”** → predicting future use is unreliable.\n**“Self-rated 'easy' means easy”** → users rate failed tasks as easy.\n**“Always run a standard survey”** → pick the instrument for the question.",
+     "try": {
+      "type": "single",
+      "q": "How should you report a survey result?",
+      "options": [
+       "As respondents, not users",
+       "As a percentage of the user base",
+       "With the confidence interval only",
+       "As a trend against last quarter"
+      ],
+      "answer": 0,
+      "explain": "“75% of 28 respondents”, not “75% of users”."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Myth",
+       "items": [
+        "Surveys show behaviour",
+        "“75% of users”",
+        "Self-rated easy means easy"
+       ]
+      },
+      "right": {
+       "label": "Reality",
+       "items": [
+        "They show what people say",
+        "75% of 28 respondents",
+        "Failed tasks get rated easy"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The say–do gap, measured",
+     "text": "“Ask 100 people how often they exercise, then compare with gym check-ins.” The gap is the same in UX.\n\nCalabro has watched hundreds of moderated sessions where participants struggle, hesitate and use trial and error — then say the task was easy.\n\nA user reports using a feature “frequently”; analytics show twice in six months.",
+     "try": {
+      "type": "single",
+      "q": "A participant struggles visibly, then rates the task easy. What does that tell you?",
+      "options": [
+       "Self-ratings don't track observed difficulty",
+       "The task was easier than it looked",
+       "The rating scale was badly worded",
+       "The participant wanted to be polite only"
+      ],
+      "answer": 0,
+      "explain": "It is a consistent pattern across hundreds of sessions."
+     }
+    },
+    {
+     "title": "What surveys are good at",
+     "text": "Attitudes, preferences, self-reported context and satisfaction trends over time — measured honestly, with the right instrument.\n\nWhat they can't do: tell you what happened, or confirm that an idea will work. For those, watch behaviour or run a test.",
+     "try": {
+      "type": "single",
+      "q": "Which question is a survey well suited to?",
+      "options": [
+       "How confident do people feel about this?",
+       "How long does the task take?",
+       "Where do users abandon the flow?",
+       "Which design is faster to use?"
+      ],
+      "answer": 0,
+      "explain": "Attitudes and self-reported context — not behaviour."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What do surveys actually measure?",
+     "options": [
+      "What people think, remember or want to believe",
+      "What people do",
+      "How long tasks take",
+      "Which features are used most"
+     ],
+     "answer": 0,
+     "explain": "Which is useful, as long as you don't claim otherwise."
+    },
+    {
+     "type": "single",
+     "q": "Why can't a survey validate an idea?",
+     "options": [
+      "Predicting your own future use is unreliable",
+      "Samples are usually too small",
+      "Respondents don't read carefully",
+      "The questions are always leading"
+     ],
+     "answer": 0,
+     "explain": "Intent is a weak predictor of behaviour."
+    },
+    {
+     "type": "single",
+     "q": "What's wrong with “75% of users prefer A”?",
+     "options": [
+      "Respondents aren't the whole user base",
+      "Preference can't be measured",
+      "The percentage needs a confidence interval",
+      "A is not necessarily better"
+     ],
+     "answer": 0,
+     "explain": "Report respondents, not users."
+    },
+    {
+     "type": "single",
+     "q": "When is a standardised survey the wrong choice?",
+     "options": [
+      "When the question needs a different instrument",
+      "When the sample is under 30",
+      "When the product is new",
+      "When stakeholders want a number"
+     ],
+     "answer": 0,
+     "explain": "Pick the instrument for the question, not out of habit."
+    },
+    {
+     "type": "single",
+     "q": "What is the exercise-and-gym-check-ins example for?",
+     "options": [
+      "Illustrating the say–do gap",
+      "Explaining sampling error",
+      "Showing survey fatigue",
+      "Demonstrating recall bias only"
+     ],
+     "answer": 0,
+     "explain": "The same gap applies in UX."
+    }
+   ]
+  }
+ ]
+}

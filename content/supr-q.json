@@ -1,0 +1,145 @@
+{
+ "id": "supr-q",
+ "module": "metrics",
+ "title": "Rethinking UX Metrics With SUPR-Q",
+ "icon": "🌡️",
+ "intro": "NPS and SUS each produce one number with little guidance on what to do next.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Rethinking UX Metrics With SUPR-Q",
+   "learn": [
+    {
+     "title": "Four dimensions",
+     "text": "**Usability** — ease of use and navigation; the basis for an estimated SUS\n**Credibility** — trustworthy, credible, comfortable doing business with\n**Loyalty** — likely to recommend (the NPS item) and to return\n**Appearance** — attractive, clean, simple presentation\n\nA usable-but-not-trusted result calls for very different research than a trusted-but-hard-to-use one.",
+     "try": {
+      "type": "single",
+      "q": "Your score is stable but credibility has fallen. What does the overall number show?",
+      "options": [
+       "Nothing — the total hides it",
+       "A matching decline",
+       "A small improvement",
+       "An invalid result"
+      ],
+      "answer": 0,
+      "explain": "Which is why you track each dimension, not just the total."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "One number",
+       "items": [
+        "NPS: would you recommend?",
+        "SUS: overall usability",
+        "No pointer to the next step"
+       ]
+      },
+      "right": {
+       "label": "Four dimensions",
+       "items": [
+        "Usability",
+        "Credibility",
+        "Loyalty",
+        "Appearance"
+       ]
+      }
+     }
+    },
+    {
+     "title": "What you can derive",
+     "text": "SUPR-Q lets you derive an **NPS** from its built-in recommend item, and an **estimated SUS** from the two usability items.\n\nTwo rules:\n\n• Label the SUS figure as **estimated** — it isn't the full 10-item instrument\n• Calculate NPS from the recommend item, **never** by converting the SUPR-Q score",
+     "try": {
+      "type": "single",
+      "q": "How should you calculate NPS from SUPR-Q?",
+      "options": [
+       "From the built-in recommend item",
+       "By converting the overall score",
+       "By averaging the loyalty dimension",
+       "You can't — run NPS separately"
+      ],
+      "answer": 0,
+      "explain": "Converting the composite score is not the same measure."
+     }
+    },
+    {
+     "title": "Reading the movement",
+     "text": "Small score movements are noise. Look at the dimensions, and at what changed in the product between measurements.\n\nAnd don't compare a product's NPS with the company-wide marketing NPS — different population, different question context, different meaning.",
+     "try": {
+      "type": "single",
+      "q": "Why not compare your product NPS with the company's marketing NPS?",
+      "options": [
+       "Different population and context",
+       "Marketing uses a different scale",
+       "Product NPS is always lower",
+       "NPS can't be compared at all"
+      ],
+      "answer": 0,
+      "explain": "The numbers look alike and mean different things."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the main criticism of NPS and SUS here?",
+     "options": [
+      "One number with no guidance on what to do",
+      "They are statistically unreliable",
+      "They take too long to run",
+      "They only work for consumer products"
+     ],
+     "answer": 0,
+     "explain": "SUPR-Q points at a specific follow-up."
+    },
+    {
+     "type": "single",
+     "q": "Which dimension covers trust?",
+     "options": [
+      "Credibility",
+      "Loyalty",
+      "Usability",
+      "Appearance"
+     ],
+     "answer": 0,
+     "explain": "Trustworthy, credible, comfortable doing business with."
+    },
+    {
+     "type": "single",
+     "q": "What must the derived SUS figure be labelled?",
+     "options": [
+      "Estimated",
+      "Provisional",
+      "Unweighted",
+      "Partial"
+     ],
+     "answer": 0,
+     "explain": "It comes from two items, not ten."
+    },
+    {
+     "type": "single",
+     "q": "What should you track over time?",
+     "options": [
+      "The total and each dimension",
+      "The total only",
+      "The loyalty item only",
+      "The lowest-scoring dimension"
+     ],
+     "answer": 0,
+     "explain": "A stable total can hide a falling credibility score."
+    },
+    {
+     "type": "single",
+     "q": "Why does a usable-but-not-trusted product need different research?",
+     "options": [
+      "The problem isn't in the interface",
+      "Usability tests are already passing",
+      "Trust can't be measured",
+      "The sample must be larger"
+     ],
+     "answer": 0,
+     "explain": "The follow-up study is a different study."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "id": "stats-llms",
+ "module": "experiments",
+ "title": "Stats With LLMs: Expert in the Loop",
+ "icon": "🤖",
+ "intro": "LLMs remove the software friction from statistics: upload a CSV, describe the comparison, and the model writes and runs the code. The calculation is deterministic; the choices around it aren't.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Stats With LLMs: Expert in the Loop",
+   "learn": [
+    {
+     "title": "Pick the test from the question",
+     "text": "**Two independent groups, numeric** → two-sample t-test (paired if the same people did both)\n**Three or more groups, or several factors** → ANOVA, then follow-up comparisons\n**Categories vs categories** → chi-squared test of association (version × completed yes/no)\n**Ranking options** → pairwise methods (Schulze, Borda tie-break), not averages\n**Two numeric measures together** → correlation or regression — association, not cause",
+     "try": {
+      "type": "single",
+      "q": "You compare completion (yes/no) across two design versions. Which test?",
+      "options": [
+       "Chi-squared",
+       "Two-sample t-test",
+       "ANOVA",
+       "Correlation"
+      ],
+      "answer": 0,
+      "explain": "Categories against categories."
+     }
+    },
+    {
+     "title": "Same people, or different people?",
+     "text": "The t-test has two forms, and picking the wrong one is a common error.\n\n**Two-sample** — different people in each group.\n**Paired** — the same people did both, so each person is their own control.\n\nWith three or more groups you move to ANOVA; a significant ANOVA only says *something* differs, so follow-up comparisons tell you which groups.",
+     "try": {
+      "type": "single",
+      "q": "The same twelve participants tried both versions. Which test?",
+      "options": [
+       "Paired t-test",
+       "Two-sample t-test",
+       "Chi-squared",
+       "ANOVA"
+      ],
+      "answer": 0,
+      "explain": "Each person acts as their own control."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "The model can do",
+       "items": [
+        "Write and run the code",
+        "Produce the numbers",
+        "Suggest candidate methods"
+       ]
+      },
+      "right": {
+       "label": "You must decide",
+       "items": [
+        "Which test fits the design",
+        "Whether the data prep is right",
+        "What it means for the decision"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Expert in the loop",
+     "text": "The workflow: you describe the analysis including the design, the model writes and runs the code, you check the data preparation and interpret the result against the decision.\n\nThe calculation is deterministic. The judgement isn't.\n\n*Calabro's 2023–24 tutorials did all this in Minitab, SPSS, Excel and R. The method choice hasn't changed; the tooling has.*",
+     "try": {
+      "type": "single",
+      "q": "What hasn't changed since the Minitab and SPSS tutorials?",
+      "options": [
+       "Which test answers which question",
+       "The time the analysis takes",
+       "The need for specialist software",
+       "The sample sizes required"
+      ],
+      "answer": 0,
+      "explain": "The tooling changed; the method choice didn't."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Which part of the work is deterministic?",
+     "options": [
+      "The calculation",
+      "Choosing the test",
+      "Preparing the data",
+      "Interpreting the result"
+     ],
+     "answer": 0,
+     "explain": "Everything around it is judgement."
+    },
+    {
+     "type": "single",
+     "q": "What should you use to aggregate rankings?",
+     "options": [
+      "Pairwise methods",
+      "The average rank",
+      "The modal first choice",
+      "A chi-squared test"
+     ],
+     "answer": 0,
+     "explain": "Schulze or Borda; averaging ranks is the classic mistake."
+    },
+    {
+     "type": "single",
+     "q": "A significant ANOVA across four groups tells you what?",
+     "options": [
+      "That something differs",
+      "Which group is best",
+      "That all groups differ",
+      "The size of the difference"
+     ],
+     "answer": 0,
+     "explain": "Follow-up comparisons identify which groups differ."
+    },
+    {
+     "type": "single",
+     "q": "What must the researcher check about the model's work?",
+     "options": [
+      "The data preparation",
+      "The arithmetic",
+      "The random seed",
+      "The code formatting"
+     ],
+     "answer": 0,
+     "explain": "A correct calculation on wrongly prepared data is still wrong."
+    },
+    {
+     "type": "single",
+     "q": "When is a correlation or regression the right choice?",
+     "options": [
+      "Two numeric measures considered together",
+      "Two groups with numeric outcomes",
+      "Categories against categories",
+      "Rankings of several options"
+     ],
+     "answer": 0,
+     "explain": "And it shows association, not cause."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "id": "goms-klm",
+ "module": "experiments",
+ "title": "GOMS-KLM: Predicting Task Time",
+ "icon": "⌛",
+ "intro": "A forty-year-old method that still beats guesswork: predict how long an expert takes to complete a task, without recruiting anyone.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "GOMS-KLM: Predicting Task Time",
+   "learn": [
+    {
+     "title": "What the letters mean",
+     "text": "**Goals** — what the user wants to achieve\n**Operators** — keystroke, point, click, mental preparation\n**Methods** — sequences of operators that accomplish a goal\n**Selection rules** — which method applies in which context\n\n**KLM** assigns a standard time to each operator. Developed at Xerox PARC and Carnegie Mellon, and replicated for decades.",
+     "try": {
+      "type": "single",
+      "q": "What does GOMS-KLM predict?",
+      "options": [
+       "Error-free expert task time",
+       "Average time for a new user",
+       "The number of errors in a flow",
+       "How satisfied users will be"
+      ],
+      "answer": 0,
+      "explain": "Skilled performance without errors."
+     }
+    },
+    {
+     "title": "Five steps",
+     "text": "**1. Define the workflow** — pick top tasks\n**2. Identify goals and methods** — including alternatives, such as menu versus keyboard shortcut\n**3. List operators** — every keystroke, pointer move, click and mental preparation\n**4. Assign times and total** — use a template, and include system response time\n**5. Validate and improve** — spot-check against real timings\n\nCalabro reports it predicts skilled task time within **10–20%**.",
+     "try": {
+      "type": "single",
+      "q": "How accurate does Calabro report the predictions to be?",
+      "options": [
+       "Within 10–20%",
+       "Within 1–2%",
+       "Within 40–50%",
+       "Accurate only for keyboard-driven tasks"
+      ],
+      "answer": 0,
+      "explain": "Close enough to compare designs and prioritise work."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Needs participants",
+       "items": [
+        "Benchmark usability test",
+        "Diary study",
+        "Field observation"
+       ]
+      },
+      "right": {
+       "label": "Needs none",
+       "items": [
+        "GOMS-KLM prediction",
+        "Comparing two designs on paper",
+        "Prioritising efficiency work"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Where it fits, and where it doesn't",
+     "text": "**Good for:** comparing two designs before building, prioritising efficiency work in high-repetition tasks, and settling “is this faster?” arguments without recruiting.\n\n**Not for:** learnability, error recovery, satisfaction, or anything involving a novice — it models an expert who makes no mistakes.\n\n*A related 2025 post compared GOMS-KLM with ChatGPT estimates; that comparison is tied to the model of the day.*",
+     "try": {
+      "type": "single",
+      "q": "What does GOMS-KLM deliberately ignore?",
+      "options": [
+       "Errors and learning",
+       "System response time",
+       "Keyboard shortcuts",
+       "Mental preparation"
+      ],
+      "answer": 0,
+      "explain": "It models an expert performing the task error-free."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Where was the method developed?",
+     "options": [
+      "Xerox PARC and Carnegie Mellon",
+      "Bell Labs",
+      "MIT Media Lab",
+      "Nielsen Norman Group"
+     ],
+     "answer": 0,
+     "explain": "And replicated for decades since."
+    },
+    {
+     "type": "single",
+     "q": "What is an operator?",
+     "options": [
+      "A keystroke, click, pointer move or mental step",
+      "A person running the evaluation",
+      "A rule for choosing a method",
+      "A measured task completion"
+     ],
+     "answer": 0,
+     "explain": "KLM assigns each a standard time."
+    },
+    {
+     "type": "single",
+     "q": "Why include alternative methods in step 2?",
+     "options": [
+      "Users may take the menu or the shortcut",
+      "It doubles the sample size",
+      "To satisfy accessibility requirements",
+      "To test both novice and expert paths"
+     ],
+     "answer": 0,
+     "explain": "Different routes have different predicted times."
+    },
+    {
+     "type": "single",
+     "q": "What should you add beyond the human operators?",
+     "options": [
+      "System response time",
+      "Error recovery time",
+      "Time spent reading help",
+      "Training time"
+     ],
+     "answer": 0,
+     "explain": "The system's own delays count toward the task."
+    },
+    {
+     "type": "single",
+     "q": "Which question can GOMS-KLM answer without recruiting?",
+     "options": [
+      "Which of two designs is faster for an expert",
+      "Which design is easier to learn",
+      "Which design users prefer",
+      "Where users will make mistakes"
+     ],
+     "answer": 0,
+     "explain": "That is its specific strength."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "id": "stat-significance",
+ "module": "experiments",
+ "title": "Statistically Significant or Not?",
+ "icon": "📉",
+ "intro": "A study isn't “significant” as a whole. Each comparison in it is, or isn't.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Statistically Significant or Not?",
+   "learn": [
+    {
+     "title": "Same study, same participants",
+     "text": "One survey can produce three significant findings and seven that aren't — from exactly the same people.\n\n• Satisfaction 5.1 → 5.2 — a tiny effect, likely not significant\n• Completion 55% → 85% — a large effect, likely significant\n\n**Effect size** is why one clears the threshold and the other doesn't, with an identical sample.",
+     "try": {
+      "type": "single",
+      "q": "Two findings come from the same survey and sample. Why is only one significant?",
+      "options": [
+       "The effect sizes differ",
+       "One used a different test",
+       "The response rates differed",
+       "One had more missing data"
+      ],
+      "answer": 0,
+      "explain": "Effect size is the deciding factor here."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Tiny effect",
+       "items": [
+        "Satisfaction 5.1 → 5.2",
+        "Hard to separate from noise",
+        "Likely not significant"
+       ]
+      },
+      "right": {
+       "label": "Large effect",
+       "items": [
+        "Completion 55% → 85%",
+        "Stands out from noise",
+        "Likely significant"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The four inputs",
+     "text": "**Sample size** — how much information you have\n**Effect size** — how big the observed difference is\n**Variability** — how consistent responses are; noisy data needs more people\n**Confidence level** — the threshold your organisation agreed for calling a result real",
+     "try": {
+      "type": "single",
+      "q": "Responses are very inconsistent across participants. What does that mean for the test?",
+      "options": [
+       "You need more people",
+       "The effect size is smaller",
+       "Confidence should be lowered",
+       "The finding can't be tested"
+      ],
+      "answer": 0,
+      "explain": "Variability is one of the four inputs."
+     }
+    },
+    {
+     "title": "What significance doesn't tell you",
+     "text": "Significance does **not** mean a result is large or important. The American Statistical Association warns explicitly against reading it that way.\n\nReport the observed difference, the uncertainty and the practical consequence together.\n\nAnd **set the threshold before the data.** Calabro used 90% confidence as the agreed standard in contexts where that level of risk was acceptable — agreed in advance, not chosen once the numbers were in.",
+     "try": {
+      "type": "single",
+      "q": "Why set the confidence level before collecting data?",
+      "options": [
+       "Otherwise the threshold follows the result",
+       "It speeds up the analysis",
+       "Tools require it in advance",
+       "It determines the sample size only"
+      ],
+      "answer": 0,
+      "explain": "Choosing afterwards is how a finding gets talked over the line."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does significance belong to?",
+     "options": [
+      "Individual findings",
+      "The study as a whole",
+      "The method used",
+      "The research question"
+     ],
+     "answer": 0,
+     "explain": "Each comparison is significant or it isn't."
+    },
+    {
+     "type": "single",
+     "q": "What does a significant result NOT tell you?",
+     "options": [
+      "That the difference is large or important",
+      "That the difference is unlikely to be chance",
+      "That the test was applied",
+      "That a threshold was met"
+     ],
+     "answer": 0,
+     "explain": "The ASA warns against that reading."
+    },
+    {
+     "type": "single",
+     "q": "What should be reported alongside significance?",
+     "options": [
+      "The difference, the uncertainty and the consequence",
+      "The p-value and the sample size",
+      "The method and the tool used",
+      "The confidence level alone"
+     ],
+     "answer": 0,
+     "explain": "Together, so the reader can judge practical meaning."
+    },
+    {
+     "type": "single",
+     "q": "What is the confidence level?",
+     "options": [
+      "The agreed threshold for calling a result real",
+      "The probability the finding is true",
+      "The percentage of users affected",
+      "The width of the confidence interval"
+     ],
+     "answer": 0,
+     "explain": "An organisational agreement, not a property of the data."
+    },
+    {
+     "type": "single",
+     "q": "Which input is about how much information you have?",
+     "options": [
+      "Sample size",
+      "Effect size",
+      "Variability",
+      "Confidence level"
+     ],
+     "answer": 0,
+     "explain": "More people, more information — but it's one factor of four."
+    }
+   ]
+  }
+ ]
+}
