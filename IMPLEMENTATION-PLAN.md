@@ -50,6 +50,21 @@ Confirmed missing: *UX Job Security*, *UX Has a Basics Problem*, *The Rules of A
 10. **Module 8 — AI UX** (5 articles): How much should the agent do (Agentic L1–L5 + scoring) · Trust at the moment of reliance (T.R.U.S.T.) · Anatomy of a chat turn (C.O.N.V.E.R.S.E.) · Memory and chat history (Playground guide + Calabro) · Citations and failure disclosure. Source: aiuxplayground.com frameworks, with "breaks as" anti-patterns as the quiz material.
 11. Update schedule text (8 modules, ~8 weeks), header count (26 → 40), unlock chain.
 
+
+### Phase 4b — From saved LinkedIn posts (1½ days)
+Reviewed all 85 saved posts (Nov 2026). ~50 are tool lists, Figma plugins, portfolio/interview tips or resource dumps — skipped. These carry rules the app and skills don't have:
+
+| New article | Module | Source | Why |
+|---|---|---|---|
+| Confirm or Undo? | 4 Design Principles | Friedman, Confirm vs Undo decision tree | Severity × frequency rule; Undo by default, typed confirm for severe+rare; specific verbs ("Delete forever") not "Yes/Confirm" |
+| Choosing the selection control | 4 | Goswami/Lyft decision tree | Radio = question, checkbox = statement; never pre-select; dropdown only for 5+; toggle only for instant effect |
+| Tables and bulk operations | 4 | Sergushkin/Shestopalov tables; Friedman bulk import | B2B core: no row-hover actions, column show/hide, density modes; 5 import stages (pre-import → upload → map → repair → import) |
+| Research without user access | 2 Running Studies | Friedman, B2B/enterprise research | What you can do when you can't recruit: task analysis, job postings, shadowing proxies, CS/domain experts; buyer ≠ user |
+| Measuring feature impact (TARS) | 5 Business Impact | Raudaschl via Smashing | Target → Adoption → Retention → Satisfaction (CES); thresholds; deliberately excludes conversion — matches Calabro on attribution |
+| AI labelling is now law | 8 AI UX | Friedman/Smashing on EU AI Act Art. 50 | In force since 2 Aug 2026 for anything EU users see: chatbots/agents disclose, deepfakes, unreviewed public-interest text; a sparkle ✨ is not a label; icon + plain text, persistent, accessible |
+
+Folded into planned articles rather than new ones: Bach et al. dashboard tradeoffs (screenspace ↔ abstraction ↔ pages ↔ interaction; "you might not need a dashboard") → Module 7 dashboards; UX KPI targets → Module 5 ROI; design critique formats + Samsonov "design is taking too long" → Module 6.
+
 ### Phase 5 — Install and offline (2 hours)
 12. `manifest.webmanifest` + minimal service worker (cache-first for app shell and `content/*.json`, network-first for manifest). Add-to-home-screen on the phone; works on the walk without signal.
 
