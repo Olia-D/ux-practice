@@ -1,6 +1,6 @@
 {
  "id": "ab-mislead",
- "module": "testing-analysis",
+ "module": "experiments",
  "title": "Another Way A/B Tests Mislead",
  "icon": "🎭",
  "intro": "A/B results show correlation, not causation. Teams treat p < 0.05 as proof, but the result only means two things occurred together — not that one caused the other. Even Netflix and Booking.com get this wrong.",

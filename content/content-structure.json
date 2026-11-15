@@ -1,0 +1,144 @@
+{
+ "id": "content-structure",
+ "module": "accessibility",
+ "title": "Content Beyond Readability",
+ "icon": "📝",
+ "intro": "A readability score says text is easy to read, not easy to use. Three layers sit above it.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Content Beyond Readability",
+   "learn": [
+    {
+     "title": "Four layers of usable content",
+     "text": "**Readability** — plain words, short sentences. Necessary, not sufficient.\n**Structure** — headings, chunks, lists, links, so people can scan and jump.\n**Information architecture** — content organised by users' mental models and tasks.\n**Voice and tone** — consistent personality; tone adapts to the moment.\n\nWikipedia is his example: dense subject matter made navigable through structure and linking.",
+     "try": {
+      "type": "single",
+      "q": "Dense technical content scores poorly on readability but users find what they need. What's carrying it?",
+      "options": [
+       "Structure and linking",
+       "Voice and tone",
+       "Shorter paragraphs",
+       "A larger type size"
+      ],
+      "answer": 0,
+      "explain": "Wikipedia is the example: hard subject matter made navigable."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Readability alone",
+       "items": [
+        "Short sentences",
+        "Plain words",
+        "A good Flesch score"
+       ]
+      },
+      "right": {
+       "label": "Usable content",
+       "items": [
+        "Headings that carry the scan",
+        "Organised by user tasks",
+        "Terms users recognise"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Front-load and group by task",
+     "text": "**Front-load the point** and let headings carry the scan.\n\n**Group content the way users look for it** — use card sorts and tree tests, not the org chart.\n\n**Match terms to users' words**, which is the shared-meaning idea from conversational UX.",
+     "try": {
+      "type": "single",
+      "q": "Which methods should decide how content is grouped?",
+      "options": [
+       "Card sorts and tree tests",
+       "Stakeholder workshops",
+       "Search log analysis alone",
+       "The existing site structure"
+      ],
+      "answer": 0,
+      "explain": "Not the org chart."
+     }
+    },
+    {
+     "title": "Using LLMs for content audits",
+     "text": "LLM audits are useful **for scale** — word counts, tone checks, readability across hundreds of pages — but judge the results yourself.\n\n*Context: written in 2023 around a ChatGPT-4 audit, so the prompt workflow has dated. Some statistics the original cites (such as a “124% more likely to engage” figure attributed to NN/g) can't be found in the named sources — keep the principles, not the numbers.*",
+     "try": {
+      "type": "single",
+      "q": "What are LLM content audits good for?",
+      "options": [
+       "Scale — checking many pages quickly",
+       "Deciding the information architecture",
+       "Replacing a content strategist",
+       "Judging whether the tone is right"
+      ],
+      "answer": 0,
+      "explain": "Use them for breadth, then apply your own judgement."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does a readability score tell you?",
+     "options": [
+      "That the text is easy to read",
+      "That the page is easy to use",
+      "That the structure works",
+      "That the terminology matches users"
+     ],
+     "answer": 0,
+     "explain": "Necessary, not sufficient."
+    },
+    {
+     "type": "single",
+     "q": "What should headings do?",
+     "options": [
+      "Carry the scan",
+      "Repeat the key phrase for SEO",
+      "Summarise the paragraph below",
+      "Keep sections to equal length"
+     ],
+     "answer": 0,
+     "explain": "Front-load the point and let headings do the navigating."
+    },
+    {
+     "type": "single",
+     "q": "Which layer is about matching users' mental models?",
+     "options": [
+      "Information architecture",
+      "Structure",
+      "Voice and tone",
+      "Readability"
+     ],
+     "answer": 0,
+     "explain": "Organised the way users look for things."
+    },
+    {
+     "type": "single",
+     "q": "What is the difference between voice and tone?",
+     "options": [
+      "Voice is constant; tone adapts to the moment",
+      "Voice is written; tone is spoken",
+      "Voice is the brand's; tone is the writer's",
+      "They are interchangeable terms"
+     ],
+     "answer": 0,
+     "explain": "Consistent personality, situational register."
+    },
+    {
+     "type": "single",
+     "q": "Why treat the article's statistics with caution?",
+     "options": [
+      "Some can't be traced to the sources named",
+      "They come from a single industry",
+      "They predate mobile browsing",
+      "They were measured on desktop only"
+     ],
+     "answer": 0,
+     "explain": "The principles hold; the numbers don't check out."
+    }
+   ]
+  }
+ ]
+}

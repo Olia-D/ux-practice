@@ -1,6 +1,6 @@
 {
  "id": "animations",
- "module": "design-principles",
+ "module": "interaction",
  "title": "Most UI Animations Shouldn't Exist",
  "icon": "🎬",
  "intro": "The problem isn't animation — it's **untriggered motion**. Auto-playing, looping, decorative animation hurts usability, accessibility, and comprehension.",

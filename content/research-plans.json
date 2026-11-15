@@ -1,0 +1,144 @@
+{
+ "id": "research-plans",
+ "module": "running-studies",
+ "title": "Research Plans Are for Alignment",
+ "icon": "🗺️",
+ "intro": "Most research plans read like contracts written to survive scrutiny. A plan's real job is shared understanding.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Research Plans Are for Alignment",
+   "learn": [
+    {
+     "title": "What a plan is for",
+     "text": "Everyone should know **which decision the study informs**, **what success looks like**, and **their own role** — when to contribute, when to observe, when to step back.\n\nCalabro's early-career plan had colour-coded transcripts and full sampling criteria. By slide 3, the PM was messaging someone else.",
+     "try": {
+      "type": "single",
+      "q": "What is the real job of a research plan?",
+      "options": [
+       "Shared understanding",
+       "Methodological defensibility",
+       "A record for the research repository",
+       "Stakeholder sign-off before fieldwork"
+      ],
+      "answer": 0,
+      "explain": "Which decision, what success looks like, and everyone's role."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Written to survive scrutiny",
+       "items": [
+        "Full sampling criteria",
+        "Colour-coded analysis plan",
+        "Every method justified in advance"
+       ]
+      },
+      "right": {
+       "label": "Written for alignment",
+       "items": [
+        "The decision it informs",
+        "How the team will use the results",
+        "Who does what, and when"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The one question",
+     "text": "When a request arrives — “can you run a survey?” — the move is:\n\n> “Yes, I can do that. But first, **what main questions are you hoping to answer with this research?**”\n\nIt shifts the conversation from method to goal, and it surfaces validation requests (“we've decided to build it and want proof people will like it”) without accusing anyone.\n\nIt also positions you as a collaborator rather than a critic.",
+     "try": {
+      "type": "single",
+      "q": "Why does this question work better than challenging the method?",
+      "options": [
+       "It makes you a collaborator, not a critic",
+       "It takes less of the stakeholder's time",
+       "It avoids committing to a timeline",
+       "It gives you grounds to decline the work"
+      ],
+      "answer": 0,
+      "explain": "And it moves the conversation from method to goal."
+     }
+    },
+    {
+     "title": "Then cascade",
+     "text": "Follow-ups once the goal is on the table:\n\n• Where are we in the build?\n• Which decisions are still open?\n• Do we need to track this over time?\n• Are we comparing to something existing?\n\nThese questions decide the method far better than the original request did.",
+     "try": {
+      "type": "single",
+      "q": "A stakeholder says they've already decided to build it and want proof people will like it. What has the question surfaced?",
+      "options": [
+       "A validation request",
+       "A tracking study",
+       "A comparative study",
+       "A prioritisation problem"
+      ],
+      "answer": 0,
+      "explain": "Better to find that out before designing the study."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What went wrong with his early-career plan?",
+     "options": [
+      "The PM stopped reading by slide 3",
+      "It missed the sampling criteria",
+      "It was rejected by the research lead",
+      "It took too long to write"
+     ],
+     "answer": 0,
+     "explain": "Thoroughness isn't the same as alignment."
+    },
+    {
+     "type": "single",
+     "q": "Which three things should a plan make clear?",
+     "options": [
+      "Decision, success, roles",
+      "Method, sample, timeline",
+      "Budget, scope, deliverable",
+      "Hypothesis, metric, threshold"
+     ],
+     "answer": 0,
+     "explain": "That is the alignment a plan exists to create."
+    },
+    {
+     "type": "single",
+     "q": "What does the one question shift the conversation from?",
+     "options": [
+      "Method to goal",
+      "Timeline to budget",
+      "Output to outcome",
+      "Qualitative to quantitative"
+     ],
+     "answer": 0,
+     "explain": "“What main questions are you hoping to answer?”"
+    },
+    {
+     "type": "single",
+     "q": "Which follow-up tells you whether you need a baseline?",
+     "options": [
+      "Are we comparing to something existing?",
+      "Where are we in the build?",
+      "Which decisions are still open?",
+      "Do we need to track this over time?"
+     ],
+     "answer": 0,
+     "explain": "A comparison needs something to compare against."
+    },
+    {
+     "type": "single",
+     "q": "Why do plans get over-written in the first place?",
+     "options": [
+      "They're built to survive scrutiny",
+      "Templates demand every section",
+      "Researchers enjoy the detail",
+      "Clients pay by the page"
+     ],
+     "answer": 0,
+     "explain": "Defensive thoroughness, aimed at the wrong audience."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,596 @@
+{
+ "id-basics": {
+  "title": "Reframing Interaction Design Basics",
+  "summary": "How to simplify 8 foundational UX laws so early-career designers actually understand them",
+  "icon": "📐",
+  "source": "https://trevorcalabro.substack.com/p/reframing-interaction-design-basics"
+ },
+ "icons": {
+  "title": "Every Icon Needs a Label",
+  "summary": "A data-driven recommendation backed by 11 studies over 19 years",
+  "icon": "🏷️",
+  "source": "https://trevorcalabro.substack.com/p/every-icon-needs-a-label"
+ },
+ "affordances": {
+  "title": "Make It Look Like What It Does",
+  "summary": "A real-world guide to affordances and signifiers — what \"intuitive\" actually means",
+  "icon": "👆",
+  "source": "https://trevorcalabro.substack.com/p/make-it-look-like-what-it-does"
+ },
+ "animations": {
+  "title": "Most UI Animations Shouldn't Exist",
+  "summary": "A case against anything auto-triggered",
+  "icon": "🎬",
+  "source": "https://trevorcalabro.substack.com/p/most-ui-animations-shouldnt-exist"
+ },
+ "split-buttons": {
+  "title": "The Problem With Split Buttons",
+  "summary": "My \"Famous\" Split Buttons Rant",
+  "icon": "🔀",
+  "source": "https://trevorcalabro.substack.com/p/the-problem-with-split-buttons"
+ },
+ "navigation": {
+  "title": "Why Your Navigation Stinks",
+  "summary": "Information scent: users follow clues, and most labels don't give any",
+  "icon": "🧭",
+  "source": "https://trevorcalabro.substack.com/p/why-your-navigation-sucks"
+ },
+ "carousels": {
+  "title": "Bad UI Patterns Don't Need Checklists",
+  "summary": "On carousels, and the industry habit of softening strong evidence",
+  "icon": "🎠",
+  "source": "https://trevorcalabro.substack.com/p/bad-patterns-dont-need-checklists"
+ },
+ "input-field": {
+  "title": "The Anatomy of an Input Field (Parts 1 & 2)",
+  "summary": "Why required field indicators aren't visual clutter — and why the argument keeps resurfacing",
+  "icon": "⌨️",
+  "source": "https://trevorcalabro.substack.com/p/the-anatomy-of-an-input-field"
+ },
+ "jakobs-law": {
+  "title": "Stop Weaponizing Jakob's Law",
+  "summary": "What the law actually says — and how teams misuse it to justify bad design decisions",
+  "icon": "🔁",
+  "source": "https://trevorcalabro.substack.com/p/stop-weaponizing-jakobs-law"
+ },
+ "status-design": {
+  "title": "Fixing Bad Status Design",
+  "summary": "Enterprise UX teams spend too much time designing the interaction and not enough designing what happens after it",
+  "icon": "📡",
+  "source": "https://trevorcalabro.substack.com/p/fixing-bad-status-design"
+ },
+ "basics-problem": {
+  "title": "UX Has a Basics Problem",
+  "summary": "Raise the floor, not just the ceiling",
+  "icon": "🧩",
+  "source": "https://trevorcalabro.substack.com/p/ux-has-a-basics-problem"
+ },
+ "millers-law": {
+  "title": "Stop Weaponizing Miller's Law",
+  "summary": "7 ± 2 is about memory, not menus",
+  "icon": "🧠",
+  "source": "https://trevorcalabro.substack.com/p/stop-weaponizing-millers-law"
+ },
+ "nav-guide": {
+  "title": "Primary Navigation Interaction Guide",
+  "summary": "A free reference for interaction, accessibility and implementation",
+  "icon": "📋",
+  "source": "https://trevorcalabro.substack.com/p/primary-navigation-interaction-guide"
+ },
+ "onboarding-help": {
+  "title": "Onboarding & In-App Help Strategy",
+  "summary": "A framework for usable and accessible help systems",
+  "icon": "💡",
+  "source": "https://trevorcalabro.substack.com/p/onboarding-and-in-app-help-strategy"
+ },
+ "misunderstandings": {
+  "title": "Top 10 UX Misunderstandings",
+  "summary": "What I see in the real world — each corrected with NN/g, Baymard and MeasuringU",
+  "icon": "❓",
+  "source": "https://trevorcalabro.substack.com/p/top-10-ux-misunderstandings"
+ },
+ "ai-chat-history": {
+  "title": "The Rules of AI Chat History",
+  "summary": "A real-world framework for designing good chatbot experiences",
+  "icon": "💬",
+  "source": "https://trevorcalabro.substack.com/p/the-rules-of-ai-chat-history"
+ },
+ "interaction-cost": {
+  "title": "Remembering Interaction Cost",
+  "summary": "A framework for cradle-to-grave user-centred design",
+  "icon": "⏱️",
+  "source": "https://trevorcalabro.substack.com/p/remembering-interaction-cost"
+ },
+ "cognitive-load": {
+  "title": "Cognitive Load, Three Ways",
+  "summary": "Including how to measure workload with NASA-TLX",
+  "icon": "🪣",
+  "source": "https://trevorcalabro.substack.com/p/cognitive-load-revisited"
+ },
+ "style-guides": {
+  "title": "Why Your UI Style Guide Sucks",
+  "summary": "Document behaviour, not just looks",
+  "icon": "📖",
+  "source": "https://trevorcalabro.substack.com/p/why-your-style-guide-sucks"
+ },
+ "conversational-ux": {
+  "title": "Stop Weaponizing Conversational UX",
+  "summary": "Including a paper-based content test",
+  "icon": "💬",
+  "source": "https://trevorcalabro.substack.com/p/stop-weaponizing-conversational-ux"
+ },
+ "harmful-ideas": {
+  "title": "UX Ideas That Do More Harm Than Good",
+  "summary": "Combines “Lipstick on a Pig”, “4 UX Ideas…” and “5 UX Ideas…”",
+  "icon": "⚠️",
+  "source": "https://trevorcalabro.substack.com/p/5-ux-ideas-that-often-do-more-harm"
+ },
+ "checkout": {
+  "title": "11 Checkout Essentials",
+  "summary": "Baymard Institute's abandonment research, applied",
+  "icon": "🛒",
+  "source": "https://trevorcalabro.substack.com/p/11-e-commerce-best-practices"
+ },
+ "aria": {
+  "title": "ARIA 101 for UXers",
+  "summary": "The attributes that matter, and the ones that need care",
+  "icon": "🔊",
+  "source": "https://trevorcalabro.substack.com/p/aria-101-for-ux"
+ },
+ "accessibility-first": {
+  "title": "Accessibility First, Not Last",
+  "summary": "From his son's communication app to Apple's Liquid Glass",
+  "icon": "🫱",
+  "source": "https://trevorcalabro.substack.com/p/speaking-without-words-my-sons-tech"
+ },
+ "content-structure": {
+  "title": "Content Beyond Readability",
+  "summary": "Structure, information architecture, voice — not just a reading score",
+  "icon": "📝",
+  "source": "https://trevorcalabro.substack.com/p/beyond-readability"
+ },
+ "usability-vs-concept": {
+  "title": "Usability Tests vs. Concept Tests",
+  "summary": "A usability test observes behaviour; a concept test collects opinions",
+  "icon": "🔬",
+  "source": "https://trevorcalabro.substack.com/p/usability-tests-vs-concept-tests"
+ },
+ "tasks": {
+  "title": "UX Research Starts with Tasks",
+  "summary": "The Top Task List: task analysis in three steps",
+  "icon": "🎯",
+  "source": "https://trevorcalabro.substack.com/p/ux-research-starts-with-tasks"
+ },
+ "cognitive-walkthrough": {
+  "title": "How to Run a Cognitive Walkthrough",
+  "summary": "Four questions per step, and how to keep confirmation bias out",
+  "icon": "🚶",
+  "source": "https://trevorcalabro.substack.com/p/how-to-run-a-cognitive-walkthrough"
+ },
+ "ab-testing": {
+  "title": "A/B Testing and the Two-Party Trap",
+  "summary": "Binary choices hide most of what matters, in elections and in UX",
+  "icon": "🅰️",
+  "source": "https://trevorcalabro.substack.com/p/ab-testing-and-the-two-party-trap"
+ },
+ "ab-mislead": {
+  "title": "Another Way A/B Tests Mislead",
+  "summary": "Causal inference, confounds, and the limits of correlation",
+  "icon": "🪞",
+  "source": "https://trevorcalabro.substack.com/p/another-way-ab-tests-mislead"
+ },
+ "mixed-methods": {
+  "title": "Mixed Methods Studies That Mix",
+  "summary": "What real integration of qual and quant looks like in practice",
+  "icon": "🔗",
+  "source": "https://trevorcalabro.substack.com/p/mixed-methods-studies-that-mix"
+ },
+ "fake-ai": {
+  "title": "The Dangerous Appeal of Fake AI Users",
+  "summary": "What a proxy user could never tell you",
+  "icon": "🎭",
+  "source": "https://trevorcalabro.substack.com/p/the-dangerous-appeal-of-fake-users"
+ },
+ "cognitive-biases": {
+  "title": "Cognitive Biases in UX Research",
+  "summary": "20 biases in three groups, each with an antidote",
+  "icon": "🌀",
+  "source": "https://trevorcalabro.substack.com/p/cognitive-biases-in-ux-research"
+ },
+ "behavioral-evidence": {
+  "title": "Behavioral Evidence > Self-Reported Evidence",
+  "summary": "What people say and what people do are systematically different — and the gap costs teams real money",
+  "icon": "👣",
+  "source": "https://trevorcalabro.substack.com/p/behavioral-evidence-self-reported"
+ },
+ "accessibility": {
+  "title": "Reframing Accessibility",
+  "summary": "Accessibility is usability under real-world conditions — not a separate checklist step",
+  "icon": "♿",
+  "source": "https://trevorcalabro.substack.com/p/reframing-accessibility"
+ },
+ "dashboard": {
+  "title": "Why Your Data Dashboard Stinks",
+  "summary": "Tufte made charts clear; UX has to make them understood",
+  "icon": "📊",
+  "source": "https://trevorcalabro.substack.com/p/your-data-dashboard-sucks"
+ },
+ "research-rigor": {
+  "title": "Research Rigor at Product Speed",
+  "summary": "Avoid becoming the bottleneck",
+  "icon": "⚖️",
+  "source": "https://trevorcalabro.substack.com/p/research-rigor-at-product-speed"
+ },
+ "time-on-task": {
+  "title": "Stop Throwing Away Time-on-Task Data",
+  "summary": "The truth about small-sample task time",
+  "icon": "⏲️",
+  "source": "https://trevorcalabro.substack.com/p/stop-throwing-away-time-on-task-data"
+ },
+ "ab-strategies": {
+  "title": "A/B Test Strategies That Work",
+  "summary": "Winning isn't the same as learning",
+  "icon": "♟️",
+  "source": "https://trevorcalabro.substack.com/p/ab-test-strategies-that-work"
+ },
+ "ab-sample-size": {
+  "title": "A/B Test Sample Sizing",
+  "summary": "Calculating sample size in the real world",
+  "icon": "📏",
+  "source": "https://trevorcalabro.substack.com/p/ab-test-sample-sizing"
+ },
+ "stat-significance": {
+  "title": "Statistically Significant or Not?",
+  "summary": "Significance belongs to findings, not studies",
+  "icon": "📉",
+  "source": "https://trevorcalabro.substack.com/p/statistically-significant-or-not"
+ },
+ "in-app-surveys": {
+  "title": "In-App Surveys Need Lots of Guardrails",
+  "summary": "How to make one-question pop-up surveys the least terrible",
+  "icon": "📨",
+  "source": "https://trevorcalabro.substack.com/p/in-app-surveys-need-lots-of-guardrails"
+ },
+ "supr-q": {
+  "title": "Rethinking UX Metrics With SUPR-Q",
+  "summary": "Get more from your standard surveys",
+  "icon": "🌡️",
+  "source": "https://trevorcalabro.substack.com/p/rethinking-ux-metrics-with-supr-q"
+ },
+ "mixed-methods-work": {
+  "title": "Mixed Methods at Work",
+  "summary": "A story about what to do when qual and quant disagree",
+  "icon": "🧪",
+  "source": "https://trevorcalabro.substack.com/p/mixed-methods-at-work"
+ },
+ "mixed-methods-advantage": {
+  "title": "The Mixed-Methods Advantage",
+  "summary": "Beyond specialization — including “The Future Is Mixed Methods”",
+  "icon": "🧬",
+  "source": "https://trevorcalabro.substack.com/p/the-mixed-methods-advantage"
+ },
+ "tool-math": {
+  "title": "Check Your Tool’s Math",
+  "summary": "From “Microsoft Forms Did Me Dirty”",
+  "icon": "🧮",
+  "source": "https://trevorcalabro.substack.com/p/microsoft-forms-did-me-dirty"
+ },
+ "ai-cant-do": {
+  "title": "5 Things AI Still Can’t Do for UX Research",
+  "summary": "Why expertise still matters",
+  "icon": "🚧",
+  "source": "https://trevorcalabro.substack.com/p/5-things-ai-still-cant-do-for-uxr"
+ },
+ "how-many-users": {
+  "title": "How Many Users Do I Need?",
+  "summary": "Saturation for qual, plus Calabro's startup sample-size cheat sheet",
+  "icon": "👥",
+  "source": "https://trevorcalabro.substack.com/p/how-many-users-do-i-need-42e"
+ },
+ "confidence-intervals": {
+  "title": "5 out of 5 Isn't 100%",
+  "summary": "Confidence intervals, error bars and realistic completion benchmarks",
+  "icon": "📊",
+  "source": "https://trevorcalabro.substack.com/p/confidence-intervals-for-usability"
+ },
+ "quantifying-qual": {
+  "title": "Quantifying Qual Without Losing the Story",
+  "summary": "Evidence units, codebooks, rater agreement and weighting",
+  "icon": "🔢",
+  "source": "https://trevorcalabro.substack.com/p/quantifying-qual-a-comprehensive"
+ },
+ "five-star-confidence": {
+  "title": "The 5-Star Confidence System",
+  "summary": "Michelin-style stars for findings, built up the Bayesian way",
+  "icon": "⭐",
+  "source": "https://trevorcalabro.substack.com/p/the-5-star-confidence-system"
+ },
+ "heuristic-frameworks": {
+  "title": "Six Heuristic Frameworks",
+  "summary": "Heuristics are real research — if you pick the right lens",
+  "icon": "📜",
+  "source": "https://trevorcalabro.substack.com/p/ux-heuristics-in-the-real-world"
+ },
+ "pure": {
+  "title": "PURE: Usability Scores From Experts",
+  "summary": "Combines four articles on the Pragmatic Usability Rating by Experts",
+  "icon": "🧰",
+  "source": "https://trevorcalabro.substack.com/p/pures-real-world-impact-on-ux-teams"
+ },
+ "goms-klm": {
+  "title": "GOMS-KLM: Predicting Task Time",
+  "summary": "A forty-year-old method that still beats guesswork",
+  "icon": "⌛",
+  "source": "https://trevorcalabro.substack.com/p/goms-klm-calculating-time-on-task"
+ },
+ "survey-myths": {
+  "title": "Survey Myths That Harm UX",
+  "summary": "What surveys can and can't tell you",
+  "icon": "🚫",
+  "source": "https://trevorcalabro.substack.com/p/surveys-myths-that-harm-ux"
+ },
+ "writing-surveys": {
+  "title": "Writing Surveys That Work",
+  "summary": "Pretest the test, know your item types, pair the important questions",
+  "icon": "✍️",
+  "source": "https://trevorcalabro.substack.com/p/survey-writing-best-practices"
+ },
+ "interview-questions": {
+  "title": "Interview Questions That Work",
+  "summary": "Avoid leading — and avoid the new over-neutrality",
+  "icon": "🎤",
+  "source": "https://trevorcalabro.substack.com/p/how-to-run-bias-free-interviews"
+ },
+ "correlation": {
+  "title": "Correlation Is a Signal, Not a Cause",
+  "summary": "How to use patterns in messy data without over-claiming",
+  "icon": "🔀",
+  "source": "https://trevorcalabro.substack.com/p/rethinking-correlation"
+ },
+ "stats-llms": {
+  "title": "Stats With LLMs: Expert in the Loop",
+  "summary": "Which test answers which question — and what the AI can't decide for you",
+  "icon": "🤖",
+  "source": "https://trevorcalabro.substack.com/p/t-tests-with-llms"
+ },
+ "research-plans": {
+  "title": "Research Plans Are for Alignment",
+  "summary": "And the one question that improves any study request",
+  "icon": "🗺️",
+  "source": "https://trevorcalabro.substack.com/p/reframing-user-research-plans"
+ },
+ "honest-artifacts": {
+  "title": "Honest Artifacts and Alignment Workshops",
+  "summary": "Service blueprints over imagined journey maps; workshops for alignment, not insight",
+  "icon": "📔",
+  "source": "https://trevorcalabro.substack.com/p/honest-ux-artifacts"
+ },
+ "researchops": {
+  "title": "ResearchOps Breaks at the Hand-Offs",
+  "summary": "Including analytics set-up: strategy before tags",
+  "icon": "🔧",
+  "source": "https://trevorcalabro.substack.com/p/most-researchops-problems-start-with"
+ },
+ "ethics": {
+  "title": "Ethics You Can Actually Use",
+  "summary": "Borrowing the APA Ethics Code",
+  "icon": "🤝",
+  "source": "https://trevorcalabro.substack.com/p/ethics-in-ux-research"
+ },
+ "best-practice-default": {
+  "title": "Best Practices Are the Default",
+  "summary": "…and use your head about which research applies",
+  "icon": "✅",
+  "source": "https://trevorcalabro.substack.com/p/advancing-ux-research-with-a-best"
+ },
+ "roi": {
+  "title": "Calculating the ROI of UX",
+  "summary": "A 5-step framework template for showing how UX work saves money and drives revenue",
+  "icon": "💰",
+  "source": "https://trevorcalabro.substack.com/p/calculating-the-roi-of-ux"
+ },
+ "debrief": {
+  "title": "UX Research Debriefs Reframed",
+  "summary": "Two different meetings: synthesis first, strategy second",
+  "icon": "🗣️",
+  "source": "https://trevorcalabro.substack.com/p/ux-research-debriefs-reframed"
+ },
+ "figma": {
+  "title": "Users Don't Care About Your Figma File",
+  "summary": "Polished interfaces that forgot labels, feedback and defaults",
+  "icon": "🖼️",
+  "source": "https://trevorcalabro.substack.com/p/users-dont-care-about-your-figma"
+ },
+ "dark-patterns": {
+  "title": "Reframing Dark Patterns: 2025 Edition",
+  "summary": "UX's Real Horror Story — naming them isn't enough, we need a principle",
+  "icon": "🎃",
+  "source": "https://trevorcalabro.substack.com/p/reframing-dark-patterns-2025-edition"
+ },
+ "delight": {
+  "title": "Rethinking User Delight",
+  "summary": "Bill Scott's “interesting moments” versus decoration",
+  "icon": "✨",
+  "source": "https://trevorcalabro.substack.com/p/rethinking-user-delight"
+ },
+ "chart-types": {
+  "title": "Choosing the Right Chart Type",
+  "summary": "An Uber design team–inspired reference guide",
+  "icon": "📈",
+  "source": "https://trevorcalabro.substack.com/p/choosing-the-right-chart-type"
+ },
+ "dark-patterns-2026": {
+  "title": "Reframing Dark Patterns: 2026 Edition",
+  "summary": "The dark side of B2C and retail UX",
+  "icon": "🕸️",
+  "source": "https://trevorcalabro.substack.com/p/reframing-dark-patterns-2026-edition"
+ },
+ "pmf": {
+  "title": "Measuring Product-Market Fit",
+  "summary": "Sean Ellis's survey, used by a UX researcher",
+  "icon": "🎯",
+  "source": "https://trevorcalabro.substack.com/p/product-market-fit-in-the-real-world"
+ },
+ "startup-principles": {
+  "title": "Five Principles for Small UX Teams",
+  "summary": "Moving fast while staying user-centred",
+  "icon": "🚀",
+  "source": "https://trevorcalabro.substack.com/p/a-ux-strategy-template-for-startups"
+ },
+ "service-failure": {
+  "title": "When the Whole Service Fails",
+  "summary": "46 days, one broken fridge",
+  "icon": "🧊",
+  "source": "https://trevorcalabro.substack.com/p/cx-refrigerator-story"
+ },
+ "fuzzy-middle": {
+  "title": "Escape the Fuzzy Middle",
+  "summary": "Macro and micro research over vague 'interesting' studies",
+  "icon": "🌫️",
+  "source": "https://trevorcalabro.substack.com/p/saving-ux-research"
+ },
+ "ic": {
+  "title": "Why I Stay an IC",
+  "summary": "Senior UX researchers don't need management titles to lead strategy",
+  "icon": "🧗",
+  "source": "https://trevorcalabro.substack.com/p/why-i-stay-an-ic"
+ },
+ "thankless": {
+  "title": "UX Is Thankless and That's a Good Thing",
+  "summary": "Reframing using hedonic adaptation theory",
+  "icon": "🫥",
+  "source": "https://trevorcalabro.substack.com/p/ux-is-thankless-and-thats-a-good"
+ },
+ "institutional": {
+  "title": "Weaponized Institutional Knowledge in UX",
+  "summary": "A hot take rant",
+  "icon": "🏛️",
+  "source": "https://trevorcalabro.substack.com/p/weaponized-institutional-knowledge"
+ },
+ "career": {
+  "title": "UX Career Paths Are Weird",
+  "summary": "A messy, zig-zagging 20-year journey that eventually made sense",
+  "icon": "🛤️",
+  "source": "https://trevorcalabro.substack.com/p/ux-career-paths-are-weird"
+ },
+ "predictions": {
+  "title": "2026 Predictions for UX",
+  "summary": "Where the field is heading — 10 predictions from 20 years in the trenches",
+  "icon": "🔮",
+  "source": "https://trevorcalabro.substack.com/p/2025-in-review"
+ },
+ "research-service": {
+  "title": "UX Research as a Service",
+  "summary": "“Hear me out, please”",
+  "icon": "🤲",
+  "source": "https://trevorcalabro.substack.com/p/ux-research-as-a-service"
+ },
+ "job-security": {
+  "title": "UX Job Security",
+  "summary": "Including the follow-up, “The Data Behind the Rant”",
+  "icon": "🛡️",
+  "source": "https://trevorcalabro.substack.com/p/ux-job-security"
+ },
+ "think-researcher": {
+  "title": "Think Like a Researcher",
+  "summary": "Why good UXers keep learning",
+  "icon": "🔍",
+  "source": "https://trevorcalabro.substack.com/p/think-like-a-researcher"
+ },
+ "stop-doing": {
+  "title": "5 Things UXers Need to Stop Doing",
+  "summary": "Bad practices we should stop accepting",
+  "icon": "🛑",
+  "source": "https://trevorcalabro.substack.com/p/5-things-uxers-need-to-stop-doing"
+ },
+ "seven-patterns": {
+  "title": "7 Patterns That Derail Product Teams",
+  "summary": "Written for PMs, engineers and stakeholders working with UXers",
+  "icon": "🧯",
+  "source": "https://trevorcalabro.substack.com/p/7-patterns-that-derail-product-teams"
+ },
+ "opt-in": {
+  "title": "The Opt-In Approach",
+  "summary": "Building influence with people who already want it",
+  "icon": "🌱",
+  "source": "https://trevorcalabro.substack.com/p/introducing-the-opt-in-approach-for"
+ },
+ "critical-error": {
+  "title": "Never Ship a Known Critical Error",
+  "summary": "A story about politics, five users and a highlight reel",
+  "icon": "🚨",
+  "source": "https://trevorcalabro.substack.com/p/when-critical-errors-go-unchecked"
+ },
+ "analogies": {
+  "title": "Five Analogies That Explain UX",
+  "summary": "Plus the metaphors for triangulation",
+  "icon": "🚪",
+  "source": "https://trevorcalabro.substack.com/p/5-analogies-for-big-ux-concepts"
+ },
+ "career-craft": {
+  "title": "Growing Without Chasing Titles",
+  "summary": "Career ladders, résumés, interviews and mentoring",
+  "icon": "🪜",
+  "source": "https://trevorcalabro.substack.com/p/reframing-career-ladders"
+ },
+ "leader-traps": {
+  "title": "Four Traps That Block UX Leaders",
+  "summary": "Muriel Wilkins's Leadership Unblocked, translated into UX",
+  "icon": "🪤",
+  "source": "https://trevorcalabro.substack.com/p/this-is-really-a-book-about-ux"
+ },
+ "c-three-books": {
+  "title": "Three Sources, One Practice",
+  "summary": "How Calabro lines up with Erika Hall and Teresa Torres",
+  "icon": "📚",
+  "source": ""
+ },
+ "c-confirm-undo": {
+  "title": "Confirm or Undo?",
+  "summary": "Guardrails that don't slow everyone down",
+  "icon": "↩️",
+  "source": ""
+ },
+ "c-selection-controls": {
+  "title": "Choosing the Selection Control",
+  "summary": "Extends “UX Has a Basics Problem”",
+  "icon": "☑️",
+  "source": ""
+ },
+ "c-tables-bulk": {
+  "title": "Tables and Bulk Operations",
+  "summary": "The B2B work most products get wrong",
+  "icon": "📑",
+  "source": ""
+ },
+ "c-b2b-research": {
+  "title": "Research Without User Access",
+  "summary": "What you can still do in B2B and enterprise",
+  "icon": "🏢",
+  "source": ""
+ },
+ "c-tars": {
+  "title": "Measuring Feature Impact (TARS)",
+  "summary": "Target audience, Adoption, Retention, Satisfaction",
+  "icon": "📶",
+  "source": ""
+ },
+ "c-eu-ai-labels": {
+  "title": "AI Labelling Is Now Law",
+  "summary": "EU AI Act transparency rules, in force since 2 August 2026",
+  "icon": "⚖️",
+  "source": ""
+ },
+ "c-dataviz": {
+  "title": "Charts and Dashboards That Lead to Decisions",
+  "summary": "Extends “Why Your Data Dashboard Stinks” and “Choosing the Right Chart Type”",
+  "icon": "🎨",
+  "source": ""
+ },
+ "c-ai-frameworks": {
+  "title": "Deciding How Much the AI Should Do",
+  "summary": "Autonomy levels, trust scaffolding and the anatomy of a chat turn",
+  "icon": "🎚️",
+  "source": ""
+ }
+}

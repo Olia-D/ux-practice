@@ -1,0 +1,144 @@
+{
+ "id": "navigation",
+ "module": "interaction",
+ "title": "Why Your Navigation Stinks",
+ "icon": "🧭",
+ "intro": "People search for information the way animals forage for food. They follow a trail of clues about what lies ahead — **information scent**. Navigation fails when labels stop giving off scent.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Why Your Navigation Stinks",
+   "learn": [
+    {
+     "title": "Information foraging",
+     "text": "Pirolli and Card's information foraging theory: users follow clues that suggest what content or action lies ahead.\n\nNone of this is new. Information scent is a framing for principles you already know — starting with Nielsen's *match between system and the real world*, or as Calabro puts it: **talk like a human, not a product manager**.",
+     "try": {
+      "type": "single",
+      "q": "What is information scent?",
+      "options": [
+       "The clues that suggest what lies behind a link",
+       "The visual weight given to key navigation items",
+       "The time it takes users to find a page",
+       "A ranking of pages by how often they are visited"
+      ],
+      "answer": 0,
+      "explain": "Users predict where their goal lives, then follow the trail."
+     }
+    },
+    {
+     "title": "Where scent goes to die",
+     "text": "Bad scent is usually the result of compromise, not sabotage: a label rewritten for a marketing push, a category renamed after the org chart.\n\n• **Vague labels** — “Explore”, “Solutions”, “Resources”, “Experience”\n• **Icons without text** — a gear or lightning bolt is a guessing game\n• **Overlapping categories** — “Help Center”, “Support Articles” and “FAQs” side by side\n• **Branded language** that doesn't match user vocabulary\n• **Org-chart IA**",
+     "try": {
+      "type": "single",
+      "q": "A site has “Help Center”, “Support Articles” and “FAQs” in the same menu. What's the problem?",
+      "options": [
+       "Overlapping categories give no clear trail",
+       "Three links is too many for a help section",
+       "Support content should live behind login",
+       "The labels are too long for a top nav"
+      ],
+      "answer": 0,
+      "explain": "Users can't predict which one holds their answer."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Weak scent",
+       "items": [
+        "Explore",
+        "Solutions",
+        "Resources"
+       ]
+      },
+      "right": {
+       "label": "Strong scent",
+       "items": [
+        "Track my orders",
+        "Manage my account",
+        "Get help"
+       ]
+      }
+     }
+    },
+    {
+     "title": "How to spot it and fix it",
+     "text": "**Spot it:** tree tests and card sorts, 5-second tests, click tracking, and quotes from usability tests like “I wouldn't have clicked that.”\n\n**Fix it:** plain language that matches what users search for; key tasks visible from the main entry points; combine or rename categories that are too similar; add short explanatory text; and if you use icons, always pair them with labels.",
+     "try": {
+      "type": "single",
+      "q": "Which method tells you whether users can predict what a section contains?",
+      "options": [
+       "A tree test",
+       "A/B testing two layouts",
+       "A satisfaction survey",
+       "A heuristic review by two experts"
+      ],
+      "answer": 0,
+      "explain": "Tree tests and card sorts check the IA against user expectations."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Whose theory is information foraging?",
+     "options": [
+      "Pirolli and Card's",
+      "Nielsen and Norman's",
+      "Pirolli and Nielsen's",
+      "Card and Moran's"
+     ],
+     "answer": 0,
+     "explain": "They studied how people search for information the way animals forage."
+    },
+    {
+     "type": "single",
+     "q": "Why do labels usually lose their scent?",
+     "options": [
+      "Through compromise, not bad intent",
+      "Because designers prefer short words",
+      "Because translations lose meaning",
+      "Because analytics reward clever names"
+     ],
+     "answer": 0,
+     "explain": "A marketing rewrite here, an org-chart rename there."
+    },
+    {
+     "type": "single",
+     "q": "What is wrong with “Explore” as a top-level label?",
+     "options": [
+      "It gives no clue what's behind it",
+      "It is too informal for enterprise products",
+      "It duplicates the search function",
+      "It performs poorly on small screens"
+     ],
+     "answer": 0,
+     "explain": "Vague labels are the first category of scent failure."
+    },
+    {
+     "type": "single",
+     "q": "What does a 5-second test tell you here?",
+     "options": [
+      "Whether users can say what a section is about",
+      "How long the page takes to load",
+      "Which link gets the most clicks",
+      "Whether the layout works on mobile"
+     ],
+     "answer": 0,
+     "explain": "It checks whether the label and context communicate quickly."
+    },
+    {
+     "type": "single",
+     "q": "Why is “scent” a useful word with stakeholders?",
+     "options": [
+      "It explains that users are following clues, not failing",
+      "It sounds more scientific than usability",
+      "It avoids blaming the marketing team",
+      "It maps directly to analytics metrics"
+     ],
+     "answer": 0,
+     "explain": "It gives non-UX colleagues language for what is going wrong."
+    }
+   ]
+  }
+ ]
+}

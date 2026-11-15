@@ -1,0 +1,142 @@
+{
+ "id": "cognitive-load",
+ "module": "interaction",
+ "title": "Cognitive Load, Three Ways",
+ "icon": "🪣",
+ "intro": "“Reduce cognitive load” is too blunt. Sweller's theory splits it into three kinds, and each one calls for a different response.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Cognitive Load, Three Ways",
+   "learn": [
+    {
+     "title": "Three kinds of load",
+     "text": "**Intrinsic** — the task's own complexity. Calculating returns is harder than reading a price. You can't remove it; you can chunk it.\n\n**Extraneous** — effort caused by the design: clutter, poor layout, jargon. **Remove this.**\n\n**Germane** — effort that builds a useful mental model. Support it with consistent patterns.",
+     "try": {
+      "type": "single",
+      "q": "A tax form is hard because tax is hard. Which load is that?",
+      "options": [
+       "Intrinsic",
+       "Extraneous",
+       "Germane",
+       "Recovery"
+      ],
+      "answer": 0,
+      "explain": "You can chunk it into steps, but you can't design it away."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Can't remove",
+       "items": [
+        "Intrinsic: the task is genuinely hard",
+        "Chunk it across steps or screens"
+       ]
+      },
+      "right": {
+       "label": "Remove or support",
+       "items": [
+        "Extraneous: clutter, jargon, layout",
+        "Germane: effort that builds understanding"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The hospital example",
+     "text": "On a hospital medication system, nurses faced medication lists, patient details and schedules crammed onto one screen.\n\nFieldwork showed the **intrinsic** load was unavoidable. The team **chunked** information across screens to cut the extraneous load, and simplified the language to support learning.\n\nErrors dropped and efficiency rose. Nurses disliked the change at first; within a few months they were fully on board.",
+     "try": {
+      "type": "single",
+      "q": "What does the hospital example suggest about user reaction to load reduction?",
+      "options": [
+       "Initial dislike doesn't mean the change is wrong",
+       "Users always prefer fewer items per screen",
+       "Clinical users resist all interface change",
+       "Training matters more than layout"
+      ],
+      "answer": 0,
+      "explain": "Errors dropped and efficiency rose; acceptance followed within months."
+     }
+    },
+    {
+     "title": "Measuring it: NASA-TLX",
+     "text": "When you need numbers, **NASA-TLX** measures perceived workload on six dimensions: mental demand, physical demand, temporal demand, performance, effort and frustration.\n\nIn practice: chunk complex tasks into steps, strip elements that don't serve the primary task, and use consistent patterns so effort goes into learning the domain rather than the UI.",
+     "try": {
+      "type": "single",
+      "q": "What does NASA-TLX measure?",
+      "options": [
+       "Perceived workload on six dimensions",
+       "Task completion time under pressure",
+       "Error rates in safety-critical systems",
+       "The ratio of intrinsic to extraneous load"
+      ],
+      "answer": 0,
+      "explain": "It is a subjective workload instrument, not an objective timing method."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Where does cognitive load theory come from?",
+     "options": [
+      "Educational psychology, via John Sweller",
+      "Human factors research in aviation",
+      "Nielsen Norman Group's heuristics",
+      "Cognitive neuroscience in the 2000s"
+     ],
+     "answer": 0,
+     "explain": "Late 1980s, before UX adopted it."
+    },
+    {
+     "type": "single",
+     "q": "Which load should you remove outright?",
+     "options": [
+      "Extraneous",
+      "Intrinsic",
+      "Germane",
+      "All three, as far as possible"
+     ],
+     "answer": 0,
+     "explain": "It is effort the design added, serving nothing."
+    },
+    {
+     "type": "single",
+     "q": "What do you do with intrinsic load?",
+     "options": [
+      "Chunk it",
+      "Remove it",
+      "Measure it with NASA-TLX",
+      "Shift it to a help article"
+     ],
+     "answer": 0,
+     "explain": "The complexity belongs to the task; break it into steps."
+    },
+    {
+     "type": "single",
+     "q": "What is germane load?",
+     "options": [
+      "Effort that builds a useful mental model",
+      "Load caused by inconsistent patterns",
+      "Load that varies by user expertise",
+      "The residual load after a redesign"
+     ],
+     "answer": 0,
+     "explain": "Support it with consistency so effort goes into the domain, not the UI."
+    },
+    {
+     "type": "single",
+     "q": "Why is “reduce cognitive load” too blunt as advice?",
+     "options": [
+      "Only one of the three kinds should be removed",
+      "Load can't be measured reliably",
+      "It ignores physical effort entirely",
+      "Users differ too much for a general rule"
+     ],
+     "answer": 0,
+     "explain": "Cut the extraneous, respect the intrinsic, support the germane."
+    }
+   ]
+  }
+ ]
+}

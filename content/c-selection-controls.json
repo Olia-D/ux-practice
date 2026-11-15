@@ -1,0 +1,144 @@
+{
+ "id": "c-selection-controls",
+ "module": "controls",
+ "title": "Choosing the Selection Control",
+ "icon": "☑️",
+ "intro": "Radio for a question with one answer, checkbox for a statement or independent options, toggle only when the change applies immediately. Never pre-select.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Choosing the Selection Control",
+   "learn": [
+    {
+     "title": "Six controls, six jobs",
+     "text": "**Radio** — the label is a question; exactly one answer; options equally weighted; good for required input.\n**Checkbox** — the label is a statement; multi-select or a single confirmation; good for optional input.\n**Toggle** — a binary setting that takes effect immediately.\n**Segmented** — 2–5 short options, single select.\n**Dropdown** — single choice from a long list (5+).\n**Chips** — short multi-select, often filters.",
+     "try": {
+      "type": "single",
+      "q": "A settings change only takes effect after the user clicks Save. Which control is wrong for it?",
+      "options": [
+       "A toggle",
+       "A checkbox",
+       "A radio button",
+       "A segmented control"
+      ],
+      "answer": 0,
+      "explain": "A toggle promises immediate effect."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Common mistakes",
+       "items": [
+        "Pre-selected radio or checkbox",
+        "Dropdown for 3 options",
+        "Toggle that needs a Save button"
+       ]
+      },
+      "right": {
+       "label": "Rule",
+       "items": [
+        "Nothing pre-filled",
+        "Segmented control for 2–5",
+        "Toggle = applies instantly"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Never pre-select",
+     "text": "In usability testing, **pre-selected options are consistently overlooked and submitted unchanged**.\n\nA pre-filled answer isn't a default the user chose — it's an answer they never gave.\n\nSort options from most to least common, and offer a way out: “None of the above”, “I don't remember”.",
+     "try": {
+      "type": "single",
+      "q": "What happens to pre-selected options in testing?",
+      "options": [
+       "Users overlook them and submit unchanged",
+       "Users change them more often than blank ones",
+       "Users read them more carefully",
+       "Users skip the whole question"
+      ],
+      "answer": 0,
+      "explain": "Which is why the recommendation is absolute."
+     }
+    },
+    {
+     "title": "Size and layout",
+     "text": "Targets around **40×40 px**.\n\nUse a dropdown only when the list is long (5 or more) and single-choice; below that, a segmented control or radio group shows everything at once.\n\nChips suit short multi-select such as filters — not single-choice questions styled to look modern.",
+     "try": {
+      "type": "single",
+      "q": "You have three mutually exclusive, short options. What should you use?",
+      "options": [
+       "A segmented control or radio group",
+       "A dropdown",
+       "Chips",
+       "A toggle with three positions"
+      ],
+      "answer": 0,
+      "explain": "Dropdowns hide the options; with three, show them all."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "When is the label of a control a question?",
+     "options": [
+      "Radio buttons",
+      "Checkboxes",
+      "Toggles",
+      "Chips"
+     ],
+     "answer": 0,
+     "explain": "Radio: one question, exactly one answer."
+    },
+    {
+     "type": "single",
+     "q": "What is the threshold for a dropdown?",
+     "options": [
+      "Five or more single-choice options",
+      "Three or more options",
+      "Ten or more options",
+      "Any list that doesn't fit on one line"
+     ],
+     "answer": 0,
+     "explain": "Below that, show the options."
+    },
+    {
+     "type": "single",
+     "q": "Which control suits a single optional confirmation, such as agreeing to terms?",
+     "options": [
+      "A checkbox",
+      "A radio button",
+      "A toggle",
+      "A segmented control"
+     ],
+     "answer": 0,
+     "explain": "The label is a statement the user agrees with or doesn't."
+    },
+    {
+     "type": "single",
+     "q": "How should options be ordered?",
+     "options": [
+      "Most to least common",
+      "Alphabetically, always",
+      "Shortest to longest label",
+      "In the order the system stores them"
+     ],
+     "answer": 0,
+     "explain": "With a way out such as “None of the above”."
+    },
+    {
+     "type": "single",
+     "q": "What are chips best for?",
+     "options": [
+      "Short multi-select, such as filters",
+      "Single-choice questions",
+      "Binary settings",
+      "Long lists of records"
+     ],
+     "answer": 0,
+     "explain": "Styling radio buttons as chips is listed as a mistake."
+    }
+   ]
+  }
+ ]
+}

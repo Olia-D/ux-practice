@@ -1,6 +1,6 @@
 {
  "id": "tasks",
- "module": "foundations",
+ "module": "running-studies",
  "title": "UX Research Starts with Tasks",
  "icon": "📋",
  "intro": "A full task analysis exposes every decision point in a workflow, but it is slow. Calabro's shortcut is a **Top Task List**: a short, prioritised list of what users are trying to do, built with stakeholders in one working session.",

@@ -1,0 +1,144 @@
+{
+ "id": "interview-questions",
+ "module": "running-studies",
+ "title": "Interview Questions That Work",
+ "icon": "🎤",
+ "intro": "Juniors used to write leading questions. Prompt-engineering habits have swung them to the opposite problem: flat, context-free questions that produce flat answers.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Interview Questions That Work",
+   "learn": [
+    {
+     "title": "Two failure modes",
+     "text": "**Leading (the old problem)** — “How much do you love the new dashboard?”, example answers inside the question, two questions in one.\n\n**Over-neutral (the new one)** — no scenario or moment in time, the same emotional temperature throughout, a rigid 15-question script that reads like an AI prompt.\n\nNeutrality is one tool, not the goal.",
+     "try": {
+      "type": "single",
+      "q": "What is the newer failure mode in interview guides?",
+      "options": [
+       "Over-neutral, context-free questions",
+       "Questions that are too personal",
+       "Too many follow-up probes",
+       "Questions asked in the wrong order"
+      ],
+      "answer": 0,
+      "explain": "Flat questions produce flat answers."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Leading",
+       "items": [
+        "“How much do you love…?”",
+        "Example answers supplied",
+        "Two questions in one"
+       ]
+      },
+      "right": {
+       "label": "Over-neutral",
+       "items": [
+        "No scenario or moment",
+        "Flat temperature throughout",
+        "Reads like an AI prompt"
+       ]
+      }
+     }
+    },
+    {
+     "title": "How to structure the guide",
+     "text": "**Don't over-script.** Five broad questions organised by theme beat ten narrow ones. Follow relevant tangents — that's where discoveries are.\n\n**Funnel.** Broad context first, then narrow to specifics.\n\n**One question at a time.** Split double-barrelled questions; people answer only half.\n\n**No example answers.** They anchor the response and shape what follows.",
+     "try": {
+      "type": "single",
+      "q": "What happens when you ask a double-barrelled question?",
+      "options": [
+       "People answer only half of it",
+       "People take longer to respond",
+       "People ask you to repeat it",
+       "People give a more detailed answer"
+      ],
+      "answer": 0,
+      "explain": "Split it in two."
+     }
+    },
+    {
+     "title": "Framing on purpose",
+     "text": "Add an **“if any” escape hatch**: “What problems, if any, did you run into?” lets people say “none” without feeling they've failed you.\n\nAnd deliberate framing is legitimate when a follow-up needs focus: naming a specific moment or scenario is how experienced researchers direct a session without leading it.",
+     "try": {
+      "type": "single",
+      "q": "What does “if any” do in a question?",
+      "options": [
+       "Lets people answer “none” comfortably",
+       "Makes the question more neutral overall",
+       "Prompts a longer answer",
+       "Signals that problems are expected"
+      ],
+      "answer": 0,
+      "explain": "It removes the pressure to produce a problem."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the funnel structure?",
+     "options": [
+      "Broad context first, then specifics",
+      "Specifics first, then generalise",
+      "Easy questions first, hard ones last",
+      "Demographics first, then behaviour"
+     ],
+     "answer": 0,
+     "explain": "It gives the specifics somewhere to sit."
+    },
+    {
+     "type": "single",
+     "q": "Why avoid example answers in a question?",
+     "options": [
+      "They anchor the response",
+      "They make questions too long",
+      "They reveal the hypothesis",
+      "They slow the session down"
+     ],
+     "answer": 0,
+     "explain": "And they shape every follow-up that comes after."
+    },
+    {
+     "type": "single",
+     "q": "How many broad questions does Calabro suggest over ten narrow ones?",
+     "options": [
+      "Five",
+      "Three",
+      "Eight",
+      "Twelve"
+     ],
+     "answer": 0,
+     "explain": "Organised by theme, with room to follow tangents."
+    },
+    {
+     "type": "single",
+     "q": "Where do discoveries usually come from?",
+     "options": [
+      "Relevant tangents",
+      "The prepared question list",
+      "The final wrap-up question",
+      "Post-session surveys"
+     ],
+     "answer": 0,
+     "explain": "Which is why over-scripting costs you."
+    },
+    {
+     "type": "single",
+     "q": "Is deliberate framing always wrong?",
+     "options": [
+      "No — it focuses a follow-up",
+      "Yes, it always leads the participant",
+      "Only in generative research",
+      "Only when the sample is small"
+     ],
+     "answer": 0,
+     "explain": "Neutrality is one tool, not the goal."
+    }
+   ]
+  }
+ ]
+}

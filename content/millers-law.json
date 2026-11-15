@@ -1,0 +1,144 @@
+{
+ "id": "millers-law",
+ "module": "foundations",
+ "title": "Stop Weaponizing Miller's Law",
+ "icon": "🧠",
+ "intro": "Miller studied how much people hold in working memory **once information is gone**. A visible menu requires no memorising, so his finding says nothing about how many items it should have.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Stop Weaponizing Miller's Law",
+   "learn": [
+    {
+     "title": "What Miller actually studied",
+     "text": "Miller's 1956 research asked people to repeat information they could **no longer see** — a string of digits, for example.\n\nA dropdown that stays open is a different task entirely: users scan, compare and go back. Labels and grouping decide whether they succeed, not the item count.",
+     "try": {
+      "type": "single",
+      "q": "Why doesn't 7 ± 2 apply to an open dropdown?",
+      "options": [
+       "Nothing has to be remembered — the items are visible",
+       "Dropdowns scroll, so length doesn't matter",
+       "Miller's sample was too small to generalise",
+       "Menus are scanned faster than digits are recalled"
+      ],
+      "answer": 0,
+      "explain": "Recall and recognition are different tasks."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Working memory (Miller, 1956)",
+       "items": [
+        "Items are no longer visible",
+        "Must be held in mind",
+        "e.g. repeat a digit string"
+       ]
+      },
+      "right": {
+       "label": "A visible menu",
+       "items": [
+        "All items stay on screen",
+        "Scan, compare, go back",
+        "Labels and grouping decide success"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Two ways it gets weaponised",
+     "text": "**As a shortcut.** Nine items become seven, and nobody asks whether the labels are clear or the grouping matches users' mental models.\n\n**As a conversation-ender.** Once a famous study is invoked, questioning the decision sounds like questioning science — so nobody shows that the original was confusing or the new version is better.",
+     "try": {
+      "type": "single",
+      "q": "A team cuts a nine-item menu to seven and closes the discussion. What went unexamined?",
+      "options": [
+       "Whether the labels and grouping work",
+       "Whether seven is the correct limit",
+       "Whether the menu should be a sidebar",
+       "Whether the removed items were popular"
+      ],
+      "answer": 0,
+      "explain": "Trimming the count doesn't address the structure, which is what actually decides success."
+     }
+    },
+    {
+     "title": "Don't swap 7 for 4",
+     "text": "Newer research puts working memory capacity lower than Miller's figure. The answer isn't to cap menus at four instead.\n\n**Real working-memory problems do exist** — a verification code carried between screens, values compared across pages — but those are design flaws to remove, not a rule about list length.",
+     "try": {
+      "type": "single",
+      "q": "Which of these genuinely taxes working memory?",
+      "options": [
+       "A code you must carry to the next screen",
+       "A visible list of twelve navigation links",
+       "A long settings page with section headings",
+       "A table of values with a sticky header row"
+      ],
+      "answer": 0,
+      "explain": "The information disappears and must be held in mind."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does Miller's 7 ± 2 describe?",
+     "options": [
+      "Working memory for information you can't see",
+      "The ideal number of items in a menu",
+      "How many choices a person will compare",
+      "The number of steps users tolerate in a flow"
+     ],
+     "answer": 0,
+     "explain": "It is a memory finding, not an interface rule."
+    },
+    {
+     "type": "single",
+     "q": "What decides whether users succeed with a visible menu?",
+     "options": [
+      "Labels and grouping",
+      "The number of items",
+      "The order the items were added",
+      "How many levels deep it goes"
+     ],
+     "answer": 0,
+     "explain": "Scanning is a recognition task; clarity matters more than count."
+    },
+    {
+     "type": "single",
+     "q": "Why is citing a famous study as a conversation-ender a problem?",
+     "options": [
+      "Disagreeing starts to sound like questioning science",
+      "Famous studies are usually poorly replicated",
+      "It takes too long to read the original paper",
+      "Stakeholders dislike academic references"
+     ],
+     "answer": 0,
+     "explain": "So nobody shows that the original was confusing or the new version is better."
+    },
+    {
+     "type": "single",
+     "q": "Newer research suggests working memory is smaller than Miller said. What follows for menus?",
+     "options": [
+      "Nothing — the finding still isn't about menus",
+      "Menus should be capped at four items",
+      "Menus should be replaced with search",
+      "Items should be shown four at a time"
+     ],
+     "answer": 0,
+     "explain": "Swapping one wrong number for another misses the point."
+    },
+    {
+     "type": "single",
+     "q": "A verification code must be carried from one screen to the next. What should you do?",
+     "options": [
+      "Remove the memory demand from the design",
+      "Limit the next screen to seven fields",
+      "Add a reminder tooltip on the second screen",
+      "Accept it — codes are inherently hard to handle"
+     ],
+     "answer": 0,
+     "explain": "Genuine working-memory demands are design flaws to remove."
+    }
+   ]
+  }
+ ]
+}

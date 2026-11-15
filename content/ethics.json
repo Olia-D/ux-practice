@@ -1,0 +1,144 @@
+{
+ "id": "ethics",
+ "module": "running-studies",
+ "title": "Ethics You Can Actually Use",
+ "icon": "🤝",
+ "intro": "Talking about ethics isn't a practice. Calabro borrows psychology's APA Ethics Code — adopted in 1953 when that field moved from academia into practice, much like UX today.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Ethics You Can Actually Use",
+   "learn": [
+    {
+     "title": "Five principles, applied",
+     "text": "**Respect for rights and dignity** — informed consent, the right to withdraw, privacy and confidentiality.\n**Competence** — only take on work you're qualified to do; get help when you aren't.\n**Integrity** — honest reporting: no overclaiming, no cherry-picking.\n**Professional responsibility** — methods that fit the question; accountability for findings.\n**Concern for welfare** — avoid harm and distress; protect vulnerable participants.\n\nCalabro adds **social responsibility**: consider the wider effects of what the research enables.",
+     "try": {
+      "type": "single",
+      "q": "Which principle covers “no cherry-picking the quotes that support the roadmap”?",
+      "options": [
+       "Integrity",
+       "Competence",
+       "Concern for welfare",
+       "Professional responsibility"
+      ],
+      "answer": 0,
+      "explain": "Honest reporting, without overclaiming."
+     }
+    },
+    {
+     "title": "Consent in practice",
+     "text": "Consent must be **understandable, voluntary and revocable** — not a wall of legal text.\n\nStore and share recordings and data to a security standard, and only for as long as they are needed.\n\nRemove rare details that could identify someone, even when the name has been taken off.",
+     "try": {
+      "type": "single",
+      "q": "A transcript has no name but mentions a very unusual job title at a named company. What should you do?",
+      "options": [
+       "Remove the identifying detail",
+       "Keep it — the name is already gone",
+       "Ask the participant to approve the quote",
+       "Store it in a restricted folder"
+      ],
+      "answer": 0,
+      "explain": "Rare details can identify someone on their own."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Consent theatre",
+       "items": [
+        "A wall of legal text",
+        "Recordings kept indefinitely",
+        "Names removed, rare details left in"
+       ]
+      },
+      "right": {
+       "label": "Real consent",
+       "items": [
+        "Understandable and voluntary",
+        "Kept only as long as needed",
+        "Identifying details removed"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The research you shouldn't run",
+     "text": "Don't run research whose only purpose is to make a decided product look validated.\n\nThat is both an integrity problem and a professional-responsibility one: the method doesn't fit the question, because there is no real question.",
+     "try": {
+      "type": "single",
+      "q": "A team has decided to ship and asks for a study to prove users like it. Which principles are at stake?",
+      "options": [
+       "Integrity and professional responsibility",
+       "Competence and welfare",
+       "Consent and confidentiality",
+       "Social responsibility alone"
+      ],
+      "answer": 0,
+      "explain": "Honest reporting, and methods that fit a real question."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Why the APA code specifically?",
+     "options": [
+      "Psychology professionalised the same way UX is now",
+      "It is legally binding in most countries",
+      "It was written for interview-based research",
+      "It is the shortest ethics code available"
+     ],
+     "answer": 0,
+     "explain": "Adopted in 1953 as the field moved from academia into practice."
+    },
+    {
+     "type": "single",
+     "q": "What does “competence” require?",
+     "options": [
+      "Getting help for work you aren't qualified to do",
+      "A formal research qualification",
+      "Annual ethics training",
+      "Peer review of every study"
+     ],
+     "answer": 0,
+     "explain": "Know the limits of your own practice."
+    },
+    {
+     "type": "single",
+     "q": "How long should participant data be kept?",
+     "options": [
+      "Only as long as it is needed",
+      "Seven years, for audit purposes",
+      "Until the project ships",
+      "Indefinitely, in anonymised form"
+     ],
+     "answer": 0,
+     "explain": "And stored to a security standard."
+    },
+    {
+     "type": "single",
+     "q": "What does Calabro add to the APA principles?",
+     "options": [
+      "Social responsibility",
+      "Data minimisation",
+      "Participant compensation",
+      "Independent oversight"
+     ],
+     "answer": 0,
+     "explain": "Consider the wider effects of what the research enables."
+    },
+    {
+     "type": "single",
+     "q": "What makes consent revocable?",
+     "options": [
+      "Participants can withdraw afterwards",
+      "They sign a second form at the end",
+      "The recording auto-deletes after a period",
+      "Consent is re-confirmed each session"
+     ],
+     "answer": 0,
+     "explain": "The right to withdraw is part of respect for rights and dignity."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "id": "jakobs-law",
+ "module": "foundations",
+ "title": "Stop Weaponizing Jakob's Law",
+ "icon": "🔁",
+ "intro": "Jakob's Law is about **prevalence** — patterns users meet constantly across the tools they actually use. One screenshot from a niche product is not evidence of a shared mental model.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Stop Weaponizing Jakob's Law",
+   "learn": [
+    {
+     "title": "What the law actually says",
+     "text": "Users spend most of their time on other sites, so they expect your site to work the way those sites work.\n\nAny convention used on the **majority of products users interact with** gets burned into their mental models, and deviating from it creates friction.\n\nIn practical terms: don't reinvent the wheel.",
+     "try": {
+      "type": "single",
+      "q": "What makes an appeal to Jakob's Law valid?",
+      "options": [
+       "Users meet the pattern constantly, across many tools",
+       "A respected product uses the pattern",
+       "The pattern appears in a major design system",
+       "The team has used the pattern before without complaints"
+      ],
+      "answer": 0,
+      "explain": "The law is about prevalence across the user's whole digital environment."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Invalid use ✗",
+       "items": [
+        "“One analytics tool does it”",
+        "A niche example users rarely meet",
+        "1 screenshot ≠ familiarity"
+       ]
+      },
+      "right": {
+       "label": "Valid use ✓",
+       "items": [
+        "“A hamburger opens a mobile menu”",
+        "Met daily across hundreds of apps",
+        "Prevalence = mental model"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The misuse pattern",
+     "text": "**1.** A team introduces a novel interaction.\n**2.** A usability concern is raised.\n**3.** Someone finds a single screenshot from a niche tool doing something similar.\n**4.** Jakob's Law is invoked and the discussion ends.\n\nWhat's missing: any serious look at how often users actually encounter that pattern.\n\nOne team hid controls in a dense data table to look “cleaner”. When users couldn't find them in testing, a screenshot from one specialised tool was presented as proof.",
+     "try": {
+      "type": "single",
+      "q": "Users fail to find hidden table controls, and a screenshot from one niche tool is offered as Jakob's Law proof. What is missing?",
+      "options": [
+       "Evidence that users encounter that pattern often",
+       "A larger sample in the usability test",
+       "A second screenshot from another product",
+       "Agreement from the design system team"
+      ],
+      "answer": 0,
+      "explain": "Prevalence is the whole point of the law; one precedent isn't prevalence."
+     }
+    },
+    {
+     "title": "The test before you invoke it",
+     "text": "Calabro's bar: collect examples from **at least five products** that solve the same kind of problem for similar users.\n\nIf you are working on a finance app, that means other finance apps your users have — not a design showcase.\n\nIf you can't do that simply, you are not ready to claim that a familiar pattern exists.",
+     "try": {
+      "type": "single",
+      "q": "How many comparable products does Calabro ask you to find before claiming a pattern is familiar?",
+      "options": [
+       "At least five",
+       "At least two",
+       "At least ten",
+       "One, if it is a market leader"
+      ],
+      "answer": 0,
+      "explain": "Five products solving the same problem for similar users."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is Jakob's Law really about?",
+     "options": [
+      "Prevalence across the tools users actually use",
+      "Consistency within a single product",
+      "The speed at which users learn new patterns",
+      "Matching the conventions of your closest competitor"
+     ],
+     "answer": 0,
+     "explain": "Not a single precedent."
+    },
+    {
+     "type": "single",
+     "q": "Which is a valid example of the law?",
+     "options": [
+      "A hamburger icon opening a mobile menu",
+      "A custom gesture used in one analytics tool",
+      "A novel table interaction that tested poorly",
+      "A pattern taken from an award-winning portfolio site"
+     ],
+     "answer": 0,
+     "explain": "Users meet the hamburger daily across hundreds of apps."
+    },
+    {
+     "type": "single",
+     "q": "Why should finance app examples come from other finance apps?",
+     "options": [
+      "They are the tools those users actually spend time in",
+      "Finance apps have stricter regulatory requirements",
+      "Other industries use incompatible design systems",
+      "Finance users dislike patterns from consumer apps"
+     ],
+     "answer": 0,
+     "explain": "Prevalence is measured in the user's own environment."
+    },
+    {
+     "type": "single",
+     "q": "What is the effect of invoking the law with one screenshot?",
+     "options": [
+      "It ends the discussion without evidence",
+      "It satisfies the five-product requirement",
+      "It proves the pattern is a usability risk",
+      "It shifts the decision to the research team"
+     ],
+     "answer": 0,
+     "explain": "That is the weaponising the title refers to."
+    },
+    {
+     "type": "single",
+     "q": "If you can't easily collect comparable examples, what follows?",
+     "options": [
+      "You aren't ready to claim the pattern is familiar",
+      "You should test the pattern with five users",
+      "You should adopt your competitor's version",
+      "The pattern is automatically a bad idea"
+     ],
+     "answer": 0,
+     "explain": "No prevalence, no claim — the pattern may still be fine, but not on these grounds."
+    }
+   ]
+  }
+ ]
+}

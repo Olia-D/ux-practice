@@ -1,0 +1,144 @@
+{
+ "id": "nav-guide",
+ "module": "interaction",
+ "title": "Primary Navigation Interaction Guide",
+ "icon": "📋",
+ "intro": "A spec-ready rule set for primary navigation, refined over ten years and written to hand to engineering. Most navigation failures come from hover-driven behaviour and split rows.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Primary Navigation Interaction Guide",
+   "learn": [
+    {
+     "title": "Two item types, no hybrids",
+     "text": "**Destination items** are links with no indicator.\n**Menu items** are buttons with an indicator and an expanded/collapsed state.\n\n**No split rows.** A row navigates or opens a menu, never both. If the parent has its own page, put an “Overview” link inside the menu.",
+     "try": {
+      "type": "single",
+      "q": "A top-level item both links to a section page and opens a submenu. What does the guide say?",
+      "options": [
+       "Pick one; put an “Overview” link in the menu",
+       "Keep both but enlarge the chevron",
+       "Make the link work on click and the menu on hover",
+       "Allow it only on desktop screens"
+      ],
+      "answer": 0,
+      "explain": "A row navigates or opens a menu, never both."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Breaks navigation",
+       "items": [
+        "Hover opens or closes menus",
+        "Item both navigates and expands",
+        "A tiny chevron is the only target"
+       ]
+      },
+      "right": {
+       "label": "Calabro's rules",
+       "items": [
+        "Only click, tap, Enter or Space",
+        "Link OR button; parent gets “Overview”",
+        "Targets ≥ 24×24 px, spaced"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Hover is decoration",
+     "text": "Activation is **click, tap, Enter or Space** — never hover.\n\nHover can't open, close or dismiss anything, change ARIA state, or affect tab order. Moving the pointer away does **not** close an open menu.\n\nDismissal: re-activate the trigger, click outside, or press Esc — with focus returning to the trigger.",
+     "try": {
+      "type": "single",
+      "q": "A user opens a menu, then moves the mouse away. What should happen?",
+      "options": [
+       "The menu stays open",
+       "The menu closes after a short delay",
+       "The menu closes immediately",
+       "The first item receives focus"
+      ],
+      "answer": 0,
+      "explain": "Hover is visual only; it can't dismiss anything."
+     }
+    },
+    {
+     "title": "Semantics and targets",
+     "text": "Use **native HTML before ARIA**: a landmark for the nav, real buttons and links, and `aria-expanded` on menu triggers.\n\nDon't put `role=\"menu\"` on site navigation — that role is for application menus, and it changes the keyboard model users expect.\n\nTargets are at least **24×24 px** and spaced apart, and focus is visible and clearly distinct from hover.",
+     "try": {
+      "type": "single",
+      "q": "Which attribute belongs on a navigation menu trigger?",
+      "options": [
+       "aria-expanded",
+       "role=\"menu\"",
+       "aria-live",
+       "tabindex=\"-1\""
+      ],
+      "answer": 0,
+      "explain": "It communicates the expanded or collapsed state; role=\"menu\" is for application menus."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Which inputs may activate a navigation item?",
+     "options": [
+      "Click, tap, Enter or Space",
+      "Click, tap or hover",
+      "Any pointer or keyboard event",
+      "Click and long-press only"
+     ],
+     "answer": 0,
+     "explain": "Hover is explicitly excluded."
+    },
+    {
+     "type": "single",
+     "q": "What is the minimum target size in the guide?",
+     "options": [
+      "24×24 px",
+      "16×16 px",
+      "32×32 px",
+      "44×44 px"
+     ],
+     "answer": 0,
+     "explain": "And targets must be spaced apart."
+    },
+    {
+     "type": "single",
+     "q": "Why avoid role=\"menu\" on site navigation?",
+     "options": [
+      "It sets up an application keyboard model users don't expect",
+      "Screen readers ignore it entirely",
+      "It conflicts with landmark roles",
+      "It is deprecated in current ARIA versions"
+     ],
+     "answer": 0,
+     "explain": "Native HTML semantics come first."
+    },
+    {
+     "type": "single",
+     "q": "What happens to focus when a menu is dismissed with Esc?",
+     "options": [
+      "It returns to the trigger",
+      "It moves to the first page heading",
+      "It stays where it was",
+      "It moves to the next navigation item"
+     ],
+     "answer": 0,
+     "explain": "Returning focus keeps keyboard users oriented."
+    },
+    {
+     "type": "single",
+     "q": "Why did Calabro publish this as a spec?",
+     "options": [
+      "So it can be handed straight to engineering",
+      "To replace the W3C navigation guidance",
+      "Because his earlier articles were too theoretical",
+      "To standardise navigation across design systems"
+     ],
+     "answer": 0,
+     "explain": "It is the document he had refined over ten years of writing similar ones."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,144 @@
+{
+ "id": "researchops",
+ "module": "running-studies",
+ "title": "ResearchOps Breaks at the Hand-Offs",
+ "icon": "🔧",
+ "intro": "Research rarely fails for lack of methods or talent. It fails in the hand-offs.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "ResearchOps Breaks at the Hand-Offs",
+   "learn": [
+    {
+     "title": "Where studies fragment",
+     "text": "**1. Recruit** — CRM → spreadsheet → outreach\n**2. Schedule** — people, buffers, incentives\n**3. Collect** — recordings, transcripts\n**4. Synthesise** — the evidence chain stays linked, or doesn't\n**5. Tell** — the story should trace back to the evidence\n\nEvery transition that adds admin work is a place for errors, stale participant data and lost evidence.",
+     "try": {
+      "type": "single",
+      "q": "Where does ResearchOps usually break?",
+      "options": [
+       "At the hand-offs between stages",
+       "In the synthesis stage",
+       "During recruiting",
+       "When reporting to stakeholders"
+      ],
+      "answer": 0,
+      "explain": "Each transition adds admin work and loses fidelity."
+     }
+    },
+    {
+     "title": "Fewer tools isn't the fix",
+     "text": "The instinct is to consolidate tools. The actual problem is **incoherent transitions**.\n\n**Audit hand-offs, not tool counts:** what gets re-typed, re-uploaded or re-explained?\n\nPull participant data from where it lives and keep it current, rather than rebuilding a pool for each study. And outreach that looks legitimate and comes from a real person gets more responses.",
+     "try": {
+      "type": "single",
+      "q": "What should an ops audit look for?",
+      "options": [
+       "What gets re-typed, re-uploaded or re-explained",
+       "How many tools the team pays for",
+       "How long each study takes end to end",
+       "Which methods are used most often"
+      ],
+      "answer": 0,
+      "explain": "The friction lives in the transitions."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Common fix",
+       "items": [
+        "Buy one platform",
+        "Reduce the tool count",
+        "Standardise templates"
+       ]
+      },
+      "right": {
+       "label": "Actual fix",
+       "items": [
+        "Audit what gets re-typed",
+        "Keep participant data live",
+        "Keep the evidence chain linked"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Analytics, same lesson",
+     "text": "From his Pendo rollout playbook: **auto-tagging everything** produces a mass of data nobody can use.\n\nSet the strategy before tagging — decide which top tasks and funnels you need to see, then instrument those.\n\nSame principle as the research chain: decide what you need to learn, then build the pipeline for it.",
+     "try": {
+      "type": "single",
+      "q": "What goes wrong when you auto-tag everything in an analytics tool?",
+      "options": [
+       "You get data nobody can use",
+       "The tool slows the product down",
+       "Tags conflict with each other",
+       "You exceed the event quota"
+      ],
+      "answer": 0,
+      "explain": "Strategy before tags; top tasks first."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does Calabro say research usually fails for?",
+     "options": [
+      "Hand-offs, not methods or talent",
+      "Lack of stakeholder buy-in",
+      "Insufficient sample sizes",
+      "Poor question design"
+     ],
+     "answer": 0,
+     "explain": "The transitions are where fidelity is lost."
+    },
+    {
+     "type": "single",
+     "q": "How should a study be treated?",
+     "options": [
+      "As a connected chain of evidence",
+      "As a single deliverable",
+      "As one phase of the design process",
+      "As a repeatable template"
+     ],
+     "answer": 0,
+     "explain": "Momentum is lost at each break in the chain."
+    },
+    {
+     "type": "single",
+     "q": "What improves recruiting response rates?",
+     "options": [
+      "Outreach from a real person that looks legitimate",
+      "Larger incentives",
+      "Shorter screener surveys",
+      "Contacting people on weekdays"
+     ],
+     "answer": 0,
+     "explain": "Legitimacy matters more than volume."
+    },
+    {
+     "type": "single",
+     "q": "Why not rebuild a participant pool for each study?",
+     "options": [
+      "The data goes stale and work is duplicated",
+      "It breaches data protection rules",
+      "Recruiting platforms charge per pool",
+      "Participants resent repeat contact"
+     ],
+     "answer": 0,
+     "explain": "Pull from where the data lives and keep it current."
+    },
+    {
+     "type": "single",
+     "q": "What should the final story do?",
+     "options": [
+      "Trace back to the evidence",
+      "Summarise every session",
+      "Lead with the method",
+      "Include all raw quotes"
+     ],
+     "answer": 0,
+     "explain": "The chain holds from recruiting through to telling."
+    }
+   ]
+  }
+ ]
+}

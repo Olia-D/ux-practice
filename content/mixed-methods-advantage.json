@@ -1,0 +1,144 @@
+{
+ "id": "mixed-methods-advantage",
+ "module": "evidence",
+ "title": "The Mixed-Methods Advantage",
+ "icon": "🧬",
+ "intro": "Running a mixed-methods study and being a mixed-methods researcher are different things.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "The Mixed-Methods Advantage",
+   "learn": [
+    {
+     "title": "What the second one means",
+     "text": "A mixed-methods researcher can **work in either tradition**, **connect findings from studies never designed to combine**, and **interpret single-method data more carefully**.\n\nExample: interviews weeks ago showed a confusing CTA label; today's analytics show a drop at that step. Nobody planned that connection — noticing it is the skill.",
+     "try": {
+      "type": "single",
+      "q": "What can a mixed-methods researcher do that a specialist often can't?",
+      "options": [
+       "Connect studies that weren't designed to combine",
+       "Run larger samples",
+       "Analyse data faster",
+       "Write more persuasive readouts"
+      ],
+      "answer": 0,
+      "explain": "Plus working in either tradition and reading single-method data more carefully."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Quant alone",
+       "items": [
+        "Patterns and magnitude",
+        "Benchmarks over time",
+        "Often can't say why"
+       ]
+      },
+      "right": {
+       "label": "Qual alone",
+       "items": [
+        "Unexpected problems",
+        "The circumstances around them",
+        "Can't say how widespread"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Three ways to mix by design",
+     "text": "**1. Measure, then investigate** — analytics find the drop-off; interviews explain it.\n**2. Investigate, then measure** — usability finds a problem; a first-click test sizes it.\n**3. Together** — completion rates and interviews on the same tasks.\n\nWhat makes it mixed methods is **planning both methods and their integration before the study** — not which one comes first.",
+     "try": {
+      "type": "single",
+      "q": "What makes a study genuinely mixed methods?",
+      "options": [
+       "Integration planned before it starts",
+       "Using qual and quant in one project",
+       "Reporting both in the same deck",
+       "Having both a researcher and an analyst"
+      ],
+      "answer": 0,
+      "explain": "Order doesn't matter; planned integration does."
+     }
+    },
+    {
+     "title": "Why it's a career argument",
+     "text": "As research teams shrink, Calabro argues **qual-only is no longer a safe career strategy**.\n\nThis is also where his own view evolved: in 2023 he was calling for *more qual* in analytics-heavy teams. By 2025–26 the position is integration — neither tradition alone.",
+     "try": {
+      "type": "single",
+      "q": "How did Calabro's position change between 2023 and 2026?",
+      "options": [
+       "From “more qual” to integration",
+       "From quant-first to qual-first",
+       "From mixed methods to specialisation",
+       "From behavioural to attitudinal data"
+      ],
+      "answer": 0,
+      "explain": "The 2023 article argued for more qualitative work; the later ones argue for mixing."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does quantitative data typically not tell you?",
+     "options": [
+      "Why",
+      "How much",
+      "How often",
+      "Whether a difference is real"
+     ],
+     "answer": 0,
+     "explain": "Patterns and magnitude, but rarely the reason."
+    },
+    {
+     "type": "single",
+     "q": "What does qualitative data typically not tell you?",
+     "options": [
+      "How widespread something is",
+      "What the problem is",
+      "Why it happens",
+      "What the circumstances were"
+     ],
+     "answer": 0,
+     "explain": "It finds unexpected problems without sizing them."
+    },
+    {
+     "type": "single",
+     "q": "In “investigate, then measure”, what comes second?",
+     "options": [
+      "A study that sizes the problem",
+      "A round of interviews",
+      "A stakeholder workshop",
+      "A usability test"
+     ],
+     "answer": 0,
+     "explain": "For example a first-click test after usability testing finds the issue."
+    },
+    {
+     "type": "single",
+     "q": "What does a mixed-methods mindset change when only one method is used?",
+     "options": [
+      "You interpret the single source more carefully",
+      "You always add a second method",
+      "You delay the readout",
+      "You report lower confidence by default"
+     ],
+     "answer": 0,
+     "explain": "The habit applies even to single-method work."
+    },
+    {
+     "type": "single",
+     "q": "Why does team size matter to this argument?",
+     "options": [
+      "Smaller teams need researchers who cover both",
+      "Larger teams prefer specialists",
+      "Budgets favour quantitative work",
+      "Hiring managers prefer generalists"
+     ],
+     "answer": 0,
+     "explain": "As teams shrink, breadth becomes a safety issue."
+    }
+   ]
+  }
+ ]
+}

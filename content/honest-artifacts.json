@@ -1,0 +1,144 @@
+{
+ "id": "honest-artifacts",
+ "module": "running-studies",
+ "title": "Honest Artifacts and Alignment Workshops",
+ "icon": "📔",
+ "intro": "Journey maps built in a workshop without research let teams invent user emotions and leave feeling user-centred.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Honest Artifacts and Alignment Workshops",
+   "learn": [
+    {
+     "title": "The feeling of learning vs. learning",
+     "text": "**UX theatre:** a journey map of guessed emotions, sticky-note personas, “we did the user-centred thing”, internal familiarity treated as evidence.\n\n**Honest version:** a service blueprint of real operations, assumptions labelled as assumptions, a workshop that aligns on the problem, and research that fills the gaps the map exposes.\n\nJourney maps aren't useless — but their polish makes guesses look like findings.",
+     "try": {
+      "type": "single",
+      "q": "What makes a workshop journey map risky?",
+      "options": [
+       "Its polish makes guesses look like findings",
+       "It takes too long to produce",
+       "It can't be updated later",
+       "It only covers the happy path"
+      ],
+      "answer": 0,
+      "explain": "The artifact looks like evidence whether or not any was collected."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "UX theatre",
+       "items": [
+        "Guessed emotions on a map",
+        "Sticky-note personas",
+        "Familiarity treated as evidence"
+       ]
+      },
+      "right": {
+       "label": "Honest artifact",
+       "items": [
+        "Blueprint of real operations",
+        "Assumptions labelled as such",
+        "Research fills the exposed gaps"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Why a service blueprint instead",
+     "text": "A blueprint documents **how the service actually works**: frontstage, backstage, systems, owners and hand-offs — and where it breaks.\n\nThat is usually what the organisation is missing, and it's checkable: people can confirm or correct each step.\n\n**Document, then interpret.** Map the real process first; mark what is evidence and what the room believes.",
+     "try": {
+      "type": "single",
+      "q": "What does a service blueprint document that a journey map typically doesn't?",
+      "options": [
+       "Backstage systems, owners and hand-offs",
+       "The user's emotional highs and lows",
+       "Competitor comparisons",
+       "Future-state opportunities"
+      ],
+      "answer": 0,
+      "explain": "It describes real operations, which can be verified."
+     }
+    },
+    {
+     "title": "Workshops are for alignment",
+     "text": "Design-thinking workshops are great for alignment — diverging and converging on problem framing and priorities.\n\nJust don't call it user research. **Dot-voting ranks the group's opinions, not users' needs.**",
+     "try": {
+      "type": "single",
+      "q": "What does dot-voting in a workshop actually measure?",
+      "options": [
+       "The group's opinions",
+       "User priorities",
+       "Business value",
+       "Technical feasibility"
+      ],
+      "answer": 0,
+      "explain": "Useful for alignment, not a substitute for research."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the honest alternative to an imagined journey map?",
+     "options": [
+      "A service blueprint",
+      "A persona set",
+      "A competitive audit",
+      "An empathy map"
+     ],
+     "answer": 0,
+     "explain": "It documents how the service actually works."
+    },
+    {
+     "type": "single",
+     "q": "What should be labelled explicitly on any artifact?",
+     "options": [
+      "Assumptions",
+      "Data sources",
+      "The facilitator's name",
+      "The revision date"
+     ],
+     "answer": 0,
+     "explain": "Separate observed behaviour from what the room believes."
+    },
+    {
+     "type": "single",
+     "q": "What is the right order?",
+     "options": [
+      "Document, then interpret",
+      "Interpret, then document",
+      "Workshop, then blueprint",
+      "Research, then align"
+     ],
+     "answer": 0,
+     "explain": "Map the real process before adding meaning to it."
+    },
+    {
+     "type": "single",
+     "q": "Are design-thinking workshops useless, in this view?",
+     "options": [
+      "No — they're good for alignment",
+      "Yes, they produce no value",
+      "Only with a trained facilitator",
+      "Only when users attend them"
+     ],
+     "answer": 0,
+     "explain": "The error is calling the output research."
+    },
+    {
+     "type": "single",
+     "q": "What should research do after the blueprint exists?",
+     "options": [
+      "Fill the gaps the map exposes",
+      "Validate the blueprint with users",
+      "Re-run the workshop with more people",
+      "Convert the blueprint into a journey map"
+     ],
+     "answer": 0,
+     "explain": "The blueprint shows you where the unknowns are."
+    }
+   ]
+  }
+ ]
+}

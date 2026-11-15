@@ -1,0 +1,144 @@
+{
+ "id": "best-practice-default",
+ "module": "foundations",
+ "title": "Best Practices Are the Default",
+ "icon": "✅",
+ "intro": "Re-testing established best practices on every project wastes time and puts the burden of proof on the wrong person. Make the rule explicit.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Best Practices Are the Default",
+   "learn": [
+    {
+     "title": "Flip the burden of proof",
+     "text": "The common pattern: the researcher has to prove that icons need labels, that a scale works, that the convention applies here.\n\n**Calabro's rule:** whoever wants to deviate from a well-evidenced practice brings the evidence.\n\nAgreed once at a large tech company, the rule ended months of relitigating and improved outcomes across teams.",
+     "try": {
+      "type": "single",
+      "q": "A stakeholder wants to ship icon-only navigation. Under Calabro's rule, who brings evidence?",
+      "options": [
+       "The stakeholder proposing the deviation",
+       "The researcher who raised the concern",
+       "Whichever side has more stakeholders",
+       "Nobody — it should go straight to an A/B test"
+      ],
+      "answer": 0,
+      "explain": "The default is the evidenced practice; the exception has to prove itself."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Inverted (common)",
+       "items": [
+        "Researcher must prove icons need labels",
+        "Re-test 3-point scales every survey",
+        "“Our users are tech-savvy”"
+       ]
+      },
+      "right": {
+       "label": "Fair (Calabro's rule)",
+       "items": [
+        "Challenger brings data to skip labels",
+        "Use existing guidance and move on",
+        "Show the behaviour, not the belief"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Use your head about which research applies",
+     "text": "In the 1990s, studies rated colour pairs **on swatches, out of context**. Sites adopted the “winning” palettes and many were unreadable.\n\nA study of icon styles in isolation said little about icons in a real interface.\n\nSome questions need not be asked. Some things need not be tested. And some findings don't transfer.",
+     "try": {
+      "type": "single",
+      "q": "A study rates colour pairs on isolated swatches. What can you conclude for your product page?",
+      "options": [
+       "Very little — the context is missing",
+       "That the winning pair will be most readable",
+       "That colour has no effect on readability",
+       "That the study should be repeated with more participants"
+      ],
+      "answer": 0,
+      "explain": "Context-free ratings didn't predict what worked on real pages."
+     }
+    },
+    {
+     "title": "Before you cite a study",
+     "text": "Check that it studied **your situation**: real interfaces, comparable users, comparable tasks.\n\nThe same discipline that protects you from re-testing the obvious also protects you from citing research that doesn't transfer.",
+     "try": {
+      "type": "single",
+      "q": "What should you check before citing a study in a design argument?",
+      "options": [
+       "Whether it studied a situation like yours",
+       "Whether it was published in the last two years",
+       "Whether the sample was at least 30 people",
+       "Whether its authors are well known in the industry"
+      ],
+      "answer": 0,
+      "explain": "Comparable interface, users and tasks — otherwise the finding doesn't transfer."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the default, in Calabro's rule?",
+     "options": [
+      "The well-evidenced practice",
+      "Whatever the design system specifies",
+      "The option that tests fastest",
+      "The approach the previous team used"
+     ],
+     "answer": 0,
+     "explain": "Default to the evidence; make the exception prove itself."
+    },
+    {
+     "type": "single",
+     "q": "What did the explicit rule achieve at the large tech company?",
+     "options": [
+      "It ended months of relitigating the same debates",
+      "It reduced the research budget by a third",
+      "It replaced the need for a design system",
+      "It let the team ship without any usability testing"
+     ],
+     "answer": 0,
+     "explain": "And it improved outcomes across teams."
+    },
+    {
+     "type": "single",
+     "q": "Why were the 1990s colour studies misleading?",
+     "options": [
+      "Pairs were rated out of context, on swatches",
+      "The samples were too small to be meaningful",
+      "Monitors of the era showed colour inaccurately",
+      "Participants were all design professionals"
+     ],
+     "answer": 0,
+     "explain": "Sites adopted the winning palettes and many were unreadable."
+    },
+    {
+     "type": "single",
+     "q": "“Our users are tech-savvy” is offered as a reason to skip labels. What does the rule ask for?",
+     "options": [
+      "The behaviour, not the belief",
+      "A second opinion from another stakeholder",
+      "A written exception in the design system",
+      "A longer research timeline before deciding"
+     ],
+     "answer": 0,
+     "explain": "The claim needs evidence from those users."
+    },
+    {
+     "type": "single",
+     "q": "Which is NOT a conclusion of this article?",
+     "options": [
+      "Every best practice should be re-tested per project",
+      "Some questions need not be asked",
+      "Some findings don't transfer to your context",
+      "The challenger should bring the evidence"
+     ],
+     "answer": 0,
+     "explain": "Re-testing everything is exactly the waste it argues against."
+    }
+   ]
+  }
+ ]
+}

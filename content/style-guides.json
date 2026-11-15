@@ -1,0 +1,144 @@
+{
+ "id": "style-guides",
+ "module": "controls",
+ "title": "Why Your UI Style Guide Sucks",
+ "icon": "📖",
+ "intro": "Lightweight style guides show a button's colour, padding and maybe a hover state, then leave developers to invent the rest. A button has a dozen or more states, and each one is a UX decision someone will make — designed or not.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Why Your UI Style Guide Sucks",
+   "learn": [
+    {
+     "title": "A button has more than three states",
+     "text": "Typical Figma guide: default, hover, disabled, and “dev will figure out the rest”.\n\nWhat a button actually needs:\n\n• **focus-visible** and **pressed (active)**\n• **selected**, plus selected + hover and selected + focus\n• **loading** and indeterminate\n• **error, warning, success, confirmation**",
+     "try": {
+      "type": "single",
+      "q": "Which state does Calabro see skipped most often?",
+      "options": [
+       "Pressed",
+       "Hover",
+       "Disabled",
+       "Focus-visible for keyboard users"
+      ],
+      "answer": 0,
+      "explain": "It is the user's immediate proof that something happened."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Typical style guide",
+       "items": [
+        "Default",
+        "Hover",
+        "Disabled"
+       ]
+      },
+      "right": {
+       "label": "What a button needs",
+       "items": [
+        "Focus-visible, pressed",
+        "Selected, and its combinations",
+        "Loading, error, success"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Why combined states exist",
+     "text": "People switch between mouse and keyboard mid-task. That produces states like **selected + focused** or **selected + hovered** that nobody specified.\n\n**focus-visible** must be distinct from hover — keyboard and assistive-tech users rely on it.\n\n**Loading** belongs on anything tied to a background process, with a **confirmation** (“Submitted”) afterwards.",
+     "try": {
+      "type": "single",
+      "q": "Why must the focus style differ from the hover style?",
+      "options": [
+       "Keyboard users rely on it to know where they are",
+       "Hover styles don't render on touch devices",
+       "Focus styles have stricter contrast requirements",
+       "Design systems usually define them separately"
+      ],
+      "answer": 0,
+      "explain": "Reusing the hover style leaves keyboard users without a position indicator."
+     }
+    },
+    {
+     "title": "Who makes the decision if you don't",
+     "text": "Visual values belong in tokens and CSS. **The guide's job is states and behaviour.**\n\nWhen the guide says “you figure it out”, developers make interaction decisions without UX context — and the inconsistency shows up later as bugs, accessibility failures and components that behave differently in each part of the product.",
+     "try": {
+      "type": "single",
+      "q": "What belongs in the style guide rather than in tokens?",
+      "options": [
+       "States and behaviour",
+       "Hex values and spacing scales",
+       "Typography and font weights",
+       "Border radius and shadow depth"
+      ],
+      "answer": 0,
+      "explain": "Visual values live in tokens; the guide documents what the component does."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the real cost of an incomplete style guide?",
+     "options": [
+      "Developers make UX decisions without context",
+      "Designers spend longer in review",
+      "Components take longer to build",
+      "The design system falls out of date"
+     ],
+     "answer": 0,
+     "explain": "The inconsistency surfaces as bugs and accessibility failures."
+    },
+    {
+     "type": "single",
+     "q": "What does the pressed state give the user?",
+     "options": [
+      "Immediate proof the action registered",
+      "A preview of the resulting page",
+      "An indication the control is enabled",
+      "A visual match with the hover state"
+     ],
+     "answer": 0,
+     "explain": "It is instant system feedback."
+    },
+    {
+     "type": "single",
+     "q": "When should a button have a loading state?",
+     "options": [
+      "Whenever it triggers a background process",
+      "Only on forms that submit to a server",
+      "Only when the wait exceeds five seconds",
+      "Whenever the design system provides one"
+     ],
+     "answer": 0,
+     "explain": "With a confirmation afterwards."
+    },
+    {
+     "type": "single",
+     "q": "Why do combined states matter?",
+     "options": [
+      "Users switch between mouse and keyboard",
+      "Designers forget to specify them",
+      "They are required by WCAG 2.2",
+      "They appear only in dark mode"
+     ],
+     "answer": 0,
+     "explain": "Selected + focused, selected + hovered and similar combinations occur in real use."
+    },
+    {
+     "type": "single",
+     "q": "Which is a behaviour question rather than a visual one?",
+     "options": [
+      "What happens while the action is processing",
+      "Which grey the disabled state uses",
+      "How much padding the label gets",
+      "Which corner radius the component has"
+     ],
+     "answer": 0,
+     "explain": "Behaviour is what the guide must specify."
+    }
+   ]
+  }
+ ]
+}

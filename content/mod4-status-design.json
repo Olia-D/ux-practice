@@ -1,6 +1,6 @@
 {
  "id": "status-design",
- "module": "design-principles",
+ "module": "controls",
  "title": "Fixing Bad Status Design",
  "icon": "🚦",
  "intro": "Most UX effort goes into the moment of action. But **post-action UX** — what happens after users click Submit — is where confusion actually lives, especially in enterprise.",

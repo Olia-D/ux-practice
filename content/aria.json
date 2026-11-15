@@ -1,0 +1,144 @@
+{
+ "id": "aria",
+ "module": "accessibility",
+ "title": "ARIA 101 for UXers",
+ "icon": "🔊",
+ "intro": "ARIA is the set of cues assistive technology reads aloud. Rule one: don't use it if semantic HTML does the job.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "ARIA 101 for UXers",
+   "learn": [
+    {
+     "title": "Four layers that matter",
+     "text": "**Anchor navigation** — `aria-current` answers “where am I?”. One per set: page, step or location.\n**Clarify meaning** — `aria-labelledby` and `aria-describedby`, reusing visible text.\n**Reveal state** — `aria-expanded` on the toggle itself, with optional `aria-controls`.\n**Signal change** — `role=\"status\"` (polite) or `role=\"alert\"` (urgent).",
+     "try": {
+      "type": "single",
+      "q": "Which attribute answers “where am I in this set?”",
+      "options": [
+       "aria-current",
+       "aria-expanded",
+       "aria-describedby",
+       "aria-live"
+      ],
+      "answer": 0,
+      "explain": "One per set — page, step or location."
+     }
+    },
+    {
+     "title": "What the gaps sound like",
+     "text": "In a financial-dashboard study, every screen-reader participant hit what one called **“an invisible wall”**.\n\n• Missing `aria-current` → “Am I on step two or three?”, and clicks on the page they're already on\n• Missing labels → “What is this button supposed to do?”\n• Missing `aria-expanded` → they press Enter, nothing seems to happen, and they assume it's broken",
+     "try": {
+      "type": "single",
+      "q": "A participant presses Enter on a toggle and assumes the product is broken. What is missing?",
+      "options": [
+       "aria-expanded",
+       "aria-current",
+       "role=\"alert\"",
+       "aria-describedby"
+      ],
+      "answer": 0,
+      "explain": "Without the state, nothing in the announcement changes."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "What users hit",
+       "items": [
+        "“Am I on step two or three?”",
+        "“What is this button for?”",
+        "“I pressed it and nothing happened”"
+       ]
+      },
+      "right": {
+       "label": "What was missing",
+       "items": [
+        "aria-current",
+        "An accessible label",
+        "aria-expanded"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Live regions and care",
+     "text": "A live region must **exist in the DOM before the update** and must not be `display:none`.\n\nMarking everything `assertive` overwhelms people — reserve it for urgent messages.\n\nFor form errors: set `aria-invalid` and link the message with `aria-describedby`.\n\nResearchers can hear these gaps in sessions before users hit them in production.",
+     "try": {
+      "type": "single",
+      "q": "Why must a live region exist before the content updates?",
+      "options": [
+       "Otherwise the change isn't announced",
+       "Otherwise the markup fails validation",
+       "Because screen readers cache the DOM",
+       "Because CSS transitions interfere with it"
+      ],
+      "answer": 0,
+      "explain": "A region created at the same moment as its content is usually missed."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is ARIA's first rule?",
+     "options": [
+      "Don't use it if semantic HTML does the job",
+      "Label every interactive element",
+      "Always provide a live region",
+      "Test with at least two screen readers"
+     ],
+     "answer": 0,
+     "explain": "Real buttons and links work out of the box."
+    },
+    {
+     "type": "single",
+     "q": "Which role is for urgent messages?",
+     "options": [
+      "role=\"alert\"",
+      "role=\"status\"",
+      "role=\"log\"",
+      "role=\"note\""
+     ],
+     "answer": 0,
+     "explain": "role=\"status\" is polite; alert interrupts."
+    },
+    {
+     "type": "single",
+     "q": "What happens if everything is marked assertive?",
+     "options": [
+      "Users are overwhelmed",
+      "Older screen readers ignore it",
+      "The page fails WCAG 2.2",
+      "Announcements are queued and delayed"
+     ],
+     "answer": 0,
+     "explain": "Urgency has to mean something."
+    },
+    {
+     "type": "single",
+     "q": "How should a form error be connected to its field?",
+     "options": [
+      "aria-invalid plus aria-describedby",
+      "aria-label on the input",
+      "role=\"alert\" on the field",
+      "aria-controls on the error text"
+     ],
+     "answer": 0,
+     "explain": "State on the field, message linked as a description."
+    },
+    {
+     "type": "single",
+     "q": "What can researchers contribute here?",
+     "options": [
+      "Hearing the gaps in sessions before production",
+      "Writing the ARIA attributes themselves",
+      "Running automated audits each sprint",
+      "Choosing which screen readers to support"
+     ],
+     "answer": 0,
+     "explain": "The dashboard study is the example."
+    }
+   ]
+  }
+ ]
+}

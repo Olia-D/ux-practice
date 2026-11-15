@@ -1,0 +1,146 @@
+{
+ "id": "harmful-ideas",
+ "module": "foundations",
+ "title": "UX Ideas That Do More Harm Than Good",
+ "icon": "⚠️",
+ "intro": "Across three articles in three years, Calabro returns to the same list: useful ideas that get misused as shortcuts. Each has a real meaning and a rule of thumb that keeps it honest.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "UX Ideas That Do More Harm Than Good",
+   "learn": [
+    {
+     "title": "Four ideas and their alibi versions",
+     "text": "**Aesthetic-usability effect** — attractive interfaces are *perceived* as easier (Kurosu & Kashimura). The original research noted the effect is modest and varies across cultures. It doesn't reduce load, clarify state or prevent errors.\n\n**User delight** — Bill Scott's “interesting moments”: a by-product of smooth, low-effort flow that users barely notice mid-task, not decoration.\n\n**Jakob's Law** — real, but used as retroactive justification.\n\n**Element animation** — motion mistaken for polish.",
+     "try": {
+      "type": "single",
+      "q": "A team cites the aesthetic-usability effect to ship an untested redesign. What does the effect actually say?",
+      "options": [
+       "Attractive interfaces are perceived as easier",
+       "Attractive interfaces cause fewer user errors",
+       "Visual quality predicts task completion rates",
+       "Users forgive problems in products they find beautiful"
+      ],
+      "answer": 0,
+      "explain": "Perception is not performance: it doesn't reduce load, clarify state or prevent errors."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Used as an alibi",
+       "items": [
+        "Pretty = usable",
+        "Delight = confetti",
+        "“Google does it” = familiar",
+        "Motion = polish"
+       ]
+      },
+      "right": {
+       "label": "Rule of thumb",
+       "items": [
+        "Task-test before polishing",
+        "Remove effort first",
+        "5+ similar products, similar users",
+        "Only on user action, to show state"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Nudging, gamification, synthetic users",
+     "text": "**Nudging** — fine when it helps the user; the test is “would the user choose this if they understood it?” Pushing the business goal is not a nudge.\n\n**Gamification** — points and streaks layered onto work that is still hard.\n\n**Synthetic users** — plausible text instead of behaviour.\n\nNone of these ideas is bad. Their **shortcut versions** are how teams ship friction with a straight face.",
+     "try": {
+      "type": "single",
+      "q": "What is Calabro's test for whether a nudge is honest?",
+      "options": [
+       "Would the user choose this if they understood it?",
+       "Does it measurably increase conversion?",
+       "Is it reversible within the same session?",
+       "Has it been approved by the legal team?"
+      ],
+      "answer": 0,
+      "explain": "If the answer is no, it is pushing the business goal, not nudging."
+     }
+    },
+    {
+     "title": "The rule of thumb for animation",
+     "text": "Element-level animation earns its place only when it is triggered **by the user** and communicates a **state change**.\n\nThat is the same test as the full article on motion: if the user didn't trigger it, it probably shouldn't move.",
+     "try": {
+      "type": "single",
+      "q": "Which animation passes the rule of thumb?",
+      "options": [
+       "A row collapsing when the user clicks it",
+       "A hero image panning on page load",
+       "A pulsing badge on a new feature",
+       "An auto-advancing tutorial overlay"
+      ],
+      "answer": 0,
+      "explain": "User-triggered, and it shows a state change."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What do all the ideas on Calabro's list have in common?",
+     "options": [
+      "Each is real but gets used as a shortcut",
+      "Each was disproved by later research",
+      "Each comes from marketing rather than UX",
+      "Each applies only to consumer products"
+     ],
+     "answer": 0,
+     "explain": "“None of these ideas is bad. Their shortcut versions are how teams ship friction with a straight face.”"
+    },
+    {
+     "type": "single",
+     "q": "Whose concept of “interesting moments” does Calabro use for delight?",
+     "options": [
+      "Bill Scott's",
+      "Don Norman's",
+      "Jakob Nielsen's",
+      "Kurosu and Kashimura's"
+     ],
+     "answer": 0,
+     "explain": "Delight is a by-product of low-effort flow."
+    },
+    {
+     "type": "single",
+     "q": "What did the original aesthetic-usability research note about the effect?",
+     "options": [
+      "It is modest and varies across cultures",
+      "It disappears in expert users",
+      "It is strongest in mobile interfaces",
+      "It only applies to first impressions of a brand"
+     ],
+     "answer": 0,
+     "explain": "Which is rather less than the way it gets quoted."
+    },
+    {
+     "type": "single",
+     "q": "How is Jakob's Law misused, according to this list?",
+     "options": [
+      "As retroactive justification for a decision",
+      "To argue against all novel interactions",
+      "To justify longer onboarding tours",
+      "To defend inconsistent navigation labels"
+     ],
+     "answer": 0,
+     "explain": "Often by copying patterns from companies big enough to train users into them."
+    },
+    {
+     "type": "single",
+     "q": "What is wrong with gamifying a difficult workflow?",
+     "options": [
+      "The work is still hard underneath the points",
+      "Users find game mechanics childish",
+      "Streaks are hard to implement accurately",
+      "It requires too much engineering effort"
+     ],
+     "answer": 0,
+     "explain": "Decoration doesn't remove effort — the rule of thumb is to remove effort first."
+    }
+   ]
+  }
+ ]
+}

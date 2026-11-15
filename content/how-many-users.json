@@ -1,0 +1,144 @@
+{
+ "id": "how-many-users",
+ "module": "running-studies",
+ "title": "How Many Users Do I Need?",
+ "icon": "👥",
+ "intro": "For qualitative work the honest answer is “until new sessions stop changing what we know”. Stakeholders still need a planning number.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "How Many Users Do I Need?",
+   "learn": [
+    {
+     "title": "Saturation",
+     "text": "Saturation is the point where new data stops changing what you know — **not** everyone saying the same thing, but the core themes holding steady.\n\nSigns you've reached it:\n\n• Repetition across sessions\n• Your framework stops changing\n• “What surprised me in that last session?” → “Not much”, two or three times running\n• Edge cases confirm themes instead of opening new questions",
+     "try": {
+      "type": "single",
+      "q": "What is saturation?",
+      "options": [
+       "New data stops changing what you know",
+       "All participants give the same answer",
+       "You reach the planned sample size",
+       "The error margin falls below 5%"
+      ],
+      "answer": 0,
+      "explain": "Core themes hold steady; sessions stop reshaping the framework."
+     }
+    },
+    {
+     "title": "Planning ranges",
+     "text": "Give a range per method and say up front you may stop early or add more:\n\n• Usability test (per group) — **5**, then iterate\n• Cognitive walkthrough / think-aloud — **5–8**\n• Field / ethnographic — **4–10**\n• Concept test — **5–12**\n• In-depth interviews — **6–15**\n• Diary study — **10–20**\n• Qual card sort — **15–30**\n\nDrawn from NN/g, MeasuringU and Sauro. Present them as risk management, not quotas.",
+     "try": {
+      "type": "single",
+      "q": "How should a planning range be presented to stakeholders?",
+      "options": [
+       "As risk management",
+       "As a contractual commitment",
+       "As a statistical requirement",
+       "As the industry standard for that method"
+      ],
+      "answer": 0,
+      "explain": "Say up front you may stop early or add more."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Treated as a quota",
+       "items": [
+        "“We promised 15, so run 15”",
+        "Sample size fixed before the question",
+        "Stopping early looks like failure"
+       ]
+      },
+      "right": {
+       "label": "Treated as risk management",
+       "items": [
+        "A range, with a reason",
+        "Stop early or extend, deliberately",
+        "Saturation decides the end"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Quantitative starting points",
+     "text": "For quantitative questions, the number follows **the claim you want to make**.\n\nFrom his startup cheat sheet: discovering problems needs far fewer people than estimating a rate, which needs fewer than detecting a small difference between two designs.\n\nSo decide the claim first — “we found problems”, “about X% succeed”, “A beats B” — then size for it.",
+     "try": {
+      "type": "single",
+      "q": "What determines a quantitative sample size?",
+      "options": [
+       "The claim you want to make",
+       "The size of the user base",
+       "The budget for incentives",
+       "The number of variants being tested"
+      ],
+      "answer": 0,
+      "explain": "Finding problems, estimating a rate and detecting a difference need very different numbers."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the honest answer to “how many users?” for qual work?",
+     "options": [
+      "Until sessions stop changing what we know",
+      "Five, for almost any method",
+      "As many as the budget allows",
+      "At least thirty, for reliability"
+     ],
+     "answer": 0,
+     "explain": "Saturation, with a planning range for the calendar."
+    },
+    {
+     "type": "single",
+     "q": "Which sign suggests saturation?",
+     "options": [
+      "Nothing surprised you, twice running",
+      "Participants agree with each other",
+      "You've run the planned number",
+      "The transcripts stop getting longer"
+     ],
+     "answer": 0,
+     "explain": "Agreement isn't the test; a stable framework is."
+    },
+    {
+     "type": "single",
+     "q": "What is the planning range for in-depth interviews?",
+     "options": [
+      "6–15",
+      "5–8",
+      "10–20",
+      "15–30"
+     ],
+     "answer": 0,
+     "explain": "Drawn from NN/g, MeasuringU and Sauro."
+    },
+    {
+     "type": "single",
+     "q": "Where do the ranges come from?",
+     "options": [
+      "NN/g, MeasuringU and Sauro",
+      "Calabro's own client projects",
+      "A meta-analysis of HCI literature",
+      "ISO standards for usability testing"
+     ],
+     "answer": 0,
+     "explain": "Established sources, presented as ranges rather than rules."
+    },
+    {
+     "type": "single",
+     "q": "Why five for a usability test?",
+     "options": [
+      "It's enough to find problems, then iterate",
+      "It is statistically representative",
+      "It matches most recruiting budgets",
+      "Five is the saturation point for all qual work"
+     ],
+     "answer": 0,
+     "explain": "Per group, and then you run another round."
+    }
+   ]
+  }
+ ]
+}

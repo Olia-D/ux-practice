@@ -1,0 +1,144 @@
+{
+ "id": "think-researcher",
+ "module": "foundations",
+ "title": "Think Like a Researcher",
+ "icon": "🔍",
+ "intro": "Researchers are trained to let good evidence change their minds. Calabro wants the same from designers — and holds himself to it.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Think Like a Researcher",
+   "learn": [
+    {
+     "title": "“But Google does it” isn't evidence",
+     "text": "Google's products are free, pervasive, and can tolerate usability problems most businesses can't. They may succeed **despite** some of their interface choices, not because of them.\n\nCopying a pattern from a dominant product imports the pattern without the market position that absorbs its cost.",
+     "try": {
+      "type": "single",
+      "q": "A stakeholder justifies a pattern with “Google does it.” What is the flaw?",
+      "options": [
+       "Google can absorb usability costs others can't",
+       "Google's designs are legally protected",
+       "Google tests patterns far less than most firms",
+       "Google users are more technical than average users"
+      ],
+      "answer": 0,
+      "explain": "Dominance tolerates friction that would cost a smaller business real money."
+     }
+    },
+    {
+     "title": "Patterns with decades of evidence against them",
+     "text": "Still presented as good ideas:\n\n• Unlabeled icons\n• Split buttons\n• Placeholder text used as a label\n• Floating help and chatbot bubbles\n• Info icons hiding key information\n• Decorative animation\n\nCalabro offers the list as something to send to a designer who genuinely wants to learn — a starting point, not a rulebook.",
+     "try": {
+      "type": "single",
+      "q": "How does Calabro describe his list of evidence-backed articles?",
+      "options": [
+       "A starting point, not a rulebook",
+       "The definitive standard for interaction design",
+       "A checklist to apply before every release",
+       "A replacement for usability testing"
+      ],
+      "answer": 0,
+      "explain": "It is for a designer who genuinely wants to learn."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Still proposed",
+       "items": [
+        "Unlabeled icons",
+        "Split buttons",
+        "Placeholder as label"
+       ]
+      },
+      "right": {
+       "label": "Where the evidence is",
+       "items": [
+        "Every Icon Needs a Label",
+        "The Problem With Split Buttons",
+        "Anatomy of an Input Field"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The standard cuts both ways",
+     "text": "Don't change your mind because someone says a pattern is bad. **Ask for the evidence, check its method, decide whether it applies to your users.**\n\nAnd if good research with your actual users shows a “bad” pattern works in your context, the researcher has to update too.\n\nExperience should improve your first judgments, not make them untouchable.\n\nThe prompt for the article was a book that changed how Calabro thinks about contextual inquiry — enough that he started piloting the new approach.",
+     "try": {
+      "type": "single",
+      "q": "Your research shows a widely criticised pattern works well for your users. What should you do?",
+      "options": [
+       "Update your position — the evidence cuts both ways",
+       "Dismiss the result as a sampling artefact",
+       "Keep the pattern but don't publish the finding",
+       "Run the study again until it matches the literature"
+      ],
+      "answer": 0,
+      "explain": "The same standard applies to researchers."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does Calabro say experience should do?",
+     "options": [
+      "Improve your first judgments without making them untouchable",
+      "Replace the need to check new evidence",
+      "Let you decide design questions faster than juniors",
+      "Qualify you to set standards for the whole team"
+     ],
+     "answer": 0,
+     "explain": "Good evidence should still be able to change your mind."
+    },
+    {
+     "type": "single",
+     "q": "What should you do when someone tells you a pattern is bad?",
+     "options": [
+      "Ask for the evidence and check its method",
+      "Accept it if they are more senior than you",
+      "Change the design and move on quickly",
+      "Put it to a vote in the next design review"
+     ],
+     "answer": 0,
+     "explain": "Then decide whether the evidence applies to your users."
+    },
+    {
+     "type": "single",
+     "q": "Which is on Calabro's list of patterns with evidence against them?",
+     "options": [
+      "Info icons that hide key information",
+      "Breadcrumb navigation on deep pages",
+      "Inline validation on long forms",
+      "Persistent labels above input fields"
+     ],
+     "answer": 0,
+     "explain": "The last two are things he recommends."
+    },
+    {
+     "type": "single",
+     "q": "Why did a book prompt this article?",
+     "options": [
+      "Its approach changed how he thinks about contextual inquiry",
+      "It disproved several of his earlier articles",
+      "It is the only research book he recommends",
+      "It was written by a former colleague of his"
+     ],
+     "answer": 0,
+     "explain": "He was piloting the method as a result — learning doing what it should."
+    },
+    {
+     "type": "single",
+     "q": "What is the article's view of Google's usability problems?",
+     "options": [
+      "Its products may succeed despite them",
+      "They are deliberate experiments on users",
+      "They prove usability rules no longer apply",
+      "They only affect users outside the United States"
+     ],
+     "answer": 0,
+     "explain": "Free and pervasive products tolerate friction others cannot."
+    }
+   ]
+  }
+ ]
+}

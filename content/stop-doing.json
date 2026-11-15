@@ -1,0 +1,144 @@
+{
+ "id": "stop-doing",
+ "module": "foundations",
+ "title": "5 Things UXers Need to Stop Doing",
+ "icon": "🛑",
+ "intro": "A one-page index to Calabro's recurring arguments — five habits that keep producing bad UX.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "5 Things UXers Need to Stop Doing",
+   "learn": [
+    {
+     "title": "Two kinds of weaponising",
+     "text": "**Jakob's Law.** One popular app isn't a convention. Compare across a set of similar products before claiming users already know a pattern.\n\n**“Conversational UX”.** It's about how an interaction unfolds, not casual wording — and casual wording can disguise interruptions, shaming or upsells. Test whether the language helps the task.",
+     "try": {
+      "type": "single",
+      "q": "A microcopy rewrite makes an upsell sound friendly. Is that conversational UX?",
+      "options": [
+       "No — it's casual wording over an interruption",
+       "Yes, if the tone matches the brand voice",
+       "Yes, if users rate the copy positively",
+       "Only if the upsell can be dismissed easily"
+      ],
+      "answer": 0,
+      "explain": "Conversational UX is about how the interaction unfolds, not how chatty it sounds."
+     }
+    },
+    {
+     "title": "Two kinds of throwing away evidence",
+     "text": "**Time-on-task data.** Don't discard it because the sample is small or the numbers look messy. Lead with the median, report the range and individual cases, and explain the slow ones.\n\n**Institutional knowledge used to shut down work.** Best practice is the default; whoever wants the exception carries the burden of proof.",
+     "try": {
+      "type": "single",
+      "q": "Someone says “our users are different” to stop a usability recommendation. Who carries the burden of proof?",
+      "options": [
+       "The person claiming the exception",
+       "The researcher making the recommendation",
+       "Whoever has worked here longest",
+       "The product manager who owns the area"
+      ],
+      "answer": 0,
+      "explain": "Best practice is the default position."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Habit to drop",
+       "items": [
+        "“Our users are different”",
+        "Deleting the slow outlier",
+        "One screenshot = a convention"
+       ]
+      },
+      "right": {
+       "label": "What to do instead",
+       "items": [
+        "Make the claimant bring evidence",
+        "Median, range, and the slow cases",
+        "Five comparable products"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Style guides that only describe looks",
+     "text": "Document **states and behaviour**, not just colour and spacing.\n\nOtherwise developers end up making the UX decisions — at build time, without the context.",
+     "try": {
+      "type": "single",
+      "q": "A style guide specifies a button's colour and padding but not its disabled or loading behaviour. What happens?",
+      "options": [
+       "Developers decide the behaviour at build time",
+       "The button renders inconsistently across browsers",
+       "Designers have to review every pull request",
+       "The component fails accessibility testing automatically"
+      ],
+      "answer": 0,
+      "explain": "Undocumented behaviour becomes someone else's decision."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does this article do?",
+     "options": [
+      "Indexes five arguments Calabro makes elsewhere",
+      "Introduces five new research methods",
+      "Lists the five most common usability errors",
+      "Ranks UX practices by business impact"
+     ],
+     "answer": 0,
+     "explain": "It is a one-page summary pointing at the longer pieces."
+    },
+    {
+     "type": "single",
+     "q": "What should you lead with when reporting time on task?",
+     "options": [
+      "The median",
+      "The mean",
+      "The fastest completion",
+      "The number of participants"
+     ],
+     "answer": 0,
+     "explain": "Then the range, the individual cases, and an explanation of the slow ones."
+    },
+    {
+     "type": "single",
+     "q": "Why is one popular app not enough to claim a convention?",
+     "options": [
+      "A convention needs prevalence across similar products",
+      "Popular apps change their patterns too often",
+      "Users rarely use more than one app in a category",
+      "The app may be under a different design licence"
+     ],
+     "answer": 0,
+     "explain": "Compare across a set of similar products."
+    },
+    {
+     "type": "single",
+     "q": "Which habit is on the list?",
+     "options": [
+      "Using institutional knowledge to end a discussion",
+      "Running too many usability tests per quarter",
+      "Writing research plans that are too detailed",
+      "Reporting confidence intervals to stakeholders"
+     ],
+     "answer": 0,
+     "explain": "The other three are things he recommends doing."
+    },
+    {
+     "type": "single",
+     "q": "What is the risk of a looks-only style guide?",
+     "options": [
+      "UX decisions get made in code",
+      "Designers copy components inconsistently",
+      "Brand colours drift between products",
+      "New hires take longer to onboard"
+     ],
+     "answer": 0,
+     "explain": "States and behaviour belong in the guide."
+    }
+   ]
+  }
+ ]
+}

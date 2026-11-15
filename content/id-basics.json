@@ -1,0 +1,144 @@
+{
+ "id": "id-basics",
+ "module": "foundations",
+ "title": "Reframing Interaction Design Basics",
+ "icon": "📐",
+ "intro": "Academic definitions of interaction design laws are technically correct and practically useless in a design review. Calabro reframes eight of them in plain language.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Reframing Interaction Design Basics",
+   "learn": [
+    {
+     "title": "Six laws, reframed",
+     "text": "**Fitts's Law** — put things near the user's cursor; make the important things bigger.\n**Law of Magic Pixels** — users look in corners and can reach them easily. Use corners for global elements.\n**Hick's Law** — break things into categories and steps when they get complicated.\n**Progressive Disclosure** — show users what they need, when they need it.\n**Miller's Law** — don't make users remember things or think too hard.\n**Affordances & Signifiers** — make it look like what it does; tell users what will happen.",
+     "try": {
+      "type": "single",
+      "q": "Which is the plain reframe of Miller's Law that Calabro teaches?",
+      "options": [
+       "Don't make users remember things",
+       "Keep every menu to seven items",
+       "Show seven options, then paginate",
+       "Group related options into chunks of five to nine"
+      ],
+      "answer": 0,
+      "explain": "He explicitly says it is not about the magic number seven."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Academic version",
+       "items": [
+        "Time to acquire a target ∝ distance ÷ size",
+        "Decision time increases with the number of choices",
+        "7 ± 2 chunks in working memory"
+       ]
+      },
+      "right": {
+       "label": "Plain reframe",
+       "items": [
+        "Put it near the cursor; make it bigger",
+        "Break it into categories and steps",
+        "Don't make users remember or think hard"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The two that seem to contradict",
+     "text": "Fitts's Law says put things near the predicted cursor. The Law of Magic Pixels says users head for the corners. Which wins?\n\n**Context decides.** Use corners for global elements — navigation, logout, settings. Place contextual elements near the thing being acted on.",
+     "try": {
+      "type": "single",
+      "q": "Where does a global “Log out” control belong, by these two laws?",
+      "options": [
+       "In a corner",
+       "Next to the user's current cursor position",
+       "Centred at the bottom of the page",
+       "Wherever the design system happens to place it"
+      ],
+      "answer": 0,
+      "explain": "Corners for global elements; near the cursor for contextual ones."
+     }
+    },
+    {
+     "title": "Jakob's Law overrides the rest",
+     "text": "Jakob's Law — users spend more time on other sites than yours, so leverage familiar patterns — is the **guiding principle that overlays all the others**.\n\nWhen in doubt, default to what users already expect.\n\nWhy reframe at all? Academic language starts a theoretical discussion. Plain language produces a design decision.",
+     "try": {
+      "type": "single",
+      "q": "Two laws point to different solutions and the team is stuck. What does Calabro suggest?",
+      "options": [
+       "Default to the familiar pattern (Jakob's Law)",
+       "Apply whichever law was published earliest",
+       "Run an A/B test on both versions",
+       "Escalate the decision to the product manager"
+      ],
+      "answer": 0,
+      "explain": "He calls Jakob's Law the overriding principle."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Why does Calabro reframe the laws in plain language?",
+     "options": [
+      "Plain language produces design decisions",
+      "Academic definitions are factually wrong",
+      "Junior designers don't read research papers",
+      "Plain language is required by most design systems"
+     ],
+     "answer": 0,
+     "explain": "Academic phrasing activates theoretical discussion instead."
+    },
+    {
+     "type": "single",
+     "q": "What does the Law of Magic Pixels describe?",
+     "options": [
+      "Users look for things in corners and reach them easily",
+      "Screens have a fixed number of usable pixels",
+      "Users notice movement before they notice colour",
+      "Magic numbers in layout grids improve scanning"
+     ],
+     "answer": 0,
+     "explain": "Hence corners for global elements."
+    },
+    {
+     "type": "single",
+     "q": "Which law is the reframe “show users what they need when they need it”?",
+     "options": [
+      "Progressive disclosure",
+      "Hick's Law",
+      "Fitts's Law",
+      "The aesthetic-usability effect"
+     ],
+     "answer": 0,
+     "explain": "Just-in-time information."
+    },
+    {
+     "type": "single",
+     "q": "Hick's Law, in Calabro's reframe, tells you to:",
+     "options": [
+      "Break complicated things into categories and steps",
+      "Remove at least half of the options",
+      "Limit menus to a maximum of seven items",
+      "Put the most popular option first in every list"
+     ],
+     "answer": 0,
+     "explain": "It is about reducing decision load, not deleting content."
+    },
+    {
+     "type": "single",
+     "q": "What is the difference between an affordance and a signifier?",
+     "options": [
+      "It looks like what it does vs. it says what will happen",
+      "One is visual and one is written in the code",
+      "One applies to desktop and one to mobile devices",
+      "Affordances are tested; signifiers are decided by the brand"
+     ],
+     "answer": 0,
+     "explain": "Affordance: can I interact? Signifier: what happens if I do?"
+    }
+   ]
+  }
+ ]
+}

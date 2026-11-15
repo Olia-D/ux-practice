@@ -1,0 +1,144 @@
+{
+ "id": "quantifying-qual",
+ "module": "evidence",
+ "title": "Quantifying Qual Without Losing the Story",
+ "icon": "🔢",
+ "intro": "Counting how many people mentioned something rewards noisy, low-impact issues and buries rare, severe ones.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Quantifying Qual Without Losing the Story",
+   "learn": [
+    {
+     "title": "Five steps from transcript to evidence",
+     "text": "**1. Slice** — one testable claim per evidence unit\n**2. Code** — against a codebook tied to decisions: in, out, which decision\n**3. Agree** — check two researchers code alike (kappa or alpha), after calibration\n**4. Weight** — by severity, segment and evidence quality\n**5. Show a range** — not one number, and say what could change it\n\nOverkill for every study. Right when the decision drives a major investment or a critical journey.",
+     "try": {
+      "type": "single",
+      "q": "What is the problem with simply counting mentions?",
+      "options": [
+       "Noisy minor issues outrank rare severe ones",
+       "Counts are hard to calculate reliably",
+       "Participants mention different things",
+       "Stakeholders distrust qualitative numbers"
+      ],
+      "answer": 0,
+      "explain": "Frequency is not severity."
+     }
+    },
+    {
+     "title": "Slicing rules",
+     "text": "Rules you can teach in ten minutes:\n\n• **Split on conjunctions that introduce a new claim.** “I search first, and then I browse categories” is two units.\n• **Keep cause and effect together.** “The label is vague, so I hesitate” is one unit.\n• **Separate speculation from observation and flag it.** “Maybe other teams would like this.”",
+     "try": {
+      "type": "single",
+      "q": "“I search first, and then I browse categories.” How many evidence units?",
+      "options": [
+       "Two",
+       "One",
+       "Three",
+       "It depends on the codebook"
+      ],
+      "answer": 0,
+      "explain": "The conjunction introduces a second claim."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "One unit",
+       "items": [
+        "“The label is vague, so I hesitate”",
+        "A single testable claim",
+        "Cause and effect together"
+       ]
+      },
+      "right": {
+       "label": "Two units",
+       "items": [
+        "“I search first, and then I browse”",
+        "Two separate claims",
+        "Split on the conjunction"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Agreement and weighting",
+     "text": "Before synthesis, two researchers code the same subset and compare — **after calibration**, not before. Kappa or Krippendorff's alpha gives a number for how much the coding is reproducible.\n\nThen weight by **severity**, **segment** (does it affect the users who matter for this decision?) and **evidence quality**.\n\nFinally show a range and name what could move it, rather than a single confident figure.",
+     "try": {
+      "type": "single",
+      "q": "What does rater agreement tell you?",
+      "options": [
+       "Whether the coding is reproducible",
+       "Whether the finding is true",
+       "Whether the sample was large enough",
+       "Whether the codebook covers everything"
+      ],
+      "answer": 0,
+      "explain": "It measures consistency between coders, not correctness."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "When is this level of rigour appropriate?",
+     "options": [
+      "When the decision drives a major investment",
+      "For every interview study",
+      "Whenever stakeholders ask for numbers",
+      "When the sample exceeds twenty people"
+     ],
+     "answer": 0,
+     "explain": "Calabro calls it overkill for everyday work."
+    },
+    {
+     "type": "single",
+     "q": "What should the codebook be tied to?",
+     "options": [
+      "The decisions the study informs",
+      "The interview guide",
+      "The product's feature list",
+      "Standard UX taxonomies"
+     ],
+     "answer": 0,
+     "explain": "In, out, and which decision each code serves."
+    },
+    {
+     "type": "single",
+     "q": "What should be flagged separately from observation?",
+     "options": [
+      "Speculation",
+      "Negative comments",
+      "Repeated statements",
+      "Quotes from power users"
+     ],
+     "answer": 0,
+     "explain": "“Maybe other teams would like this” is not evidence of what happens."
+    },
+    {
+     "type": "single",
+     "q": "Which three factors drive the weighting?",
+     "options": [
+      "Severity, segment, evidence quality",
+      "Frequency, recency, sample size",
+      "Impact, effort, confidence",
+      "Cost, risk, reversibility"
+     ],
+     "answer": 0,
+     "explain": "Weighting is what stops counting from misleading."
+    },
+    {
+     "type": "single",
+     "q": "What should the final output show?",
+     "options": [
+      "A range, and what could change it",
+      "A single percentage",
+      "The number of mentions per theme",
+      "A ranked list of quotes"
+     ],
+     "answer": 0,
+     "explain": "Uncertainty stays visible."
+    }
+   ]
+  }
+ ]
+}

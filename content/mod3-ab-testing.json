@@ -1,6 +1,6 @@
 {
  "id": "ab-testing",
- "module": "testing-analysis",
+ "module": "experiments",
  "title": "A/B Testing and the Two-Party Trap",
  "icon": "⚖️",
  "intro": "Calabro compares A/B testing to the US two-party system: both assume almost any problem reduces to two options, and both sell clarity while delivering a narrow answer.",

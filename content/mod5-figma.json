@@ -1,6 +1,6 @@
 {
  "id": "figma",
- "module": "business-impact",
+ "module": "business",
  "title": "Users Don't Care About Your Figma File",
  "icon": "🎨",
  "intro": "A licence renewal site looked modern and didn't work: “Submit” clicked three times with no response. Calabro's point: first make things that work, and only then make them look appealing.",

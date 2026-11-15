@@ -1,0 +1,144 @@
+{
+ "id": "analogies",
+ "module": "foundations",
+ "title": "Five Analogies That Explain UX",
+ "icon": "🚪",
+ "intro": "The fastest way to explain a UX concept is to borrow an everyday object, in Don Norman's tradition. Each one is instantly relatable — which is exactly why it persuades.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Five Analogies That Explain UX",
+   "learn": [
+    {
+     "title": "Doors, ramps and spice racks",
+     "text": "**Push-or-pull door** — affordance is what's possible; the signifier is the cue that tells you which.\n\n**Curb ramp** — built for wheelchairs, used by everyone with a pram, a suitcase or a delivery trolley. Accessibility helps all.\n\n**Unlabeled spice rack** — identical jars look tidy, but you have to remember which is which. Label your controls.",
+     "try": {
+      "type": "single",
+      "q": "Which concept does the unlabeled spice rack explain?",
+      "options": [
+       "Recognition over recall",
+       "Progressive disclosure",
+       "Affordance versus signifier",
+       "Consistency across an interface"
+      ],
+      "answer": 0,
+      "explain": "Identical jars look tidy and force you to remember — like icon-only controls."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Analogy",
+       "items": [
+        "Push or pull door",
+        "Curb ramp",
+        "Unlabeled spice rack"
+       ]
+      },
+      "right": {
+       "label": "Concept",
+       "items": [
+        "Affordance vs. signifier",
+        "Accessibility helps everyone",
+        "Recognition over recall"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The missing screw and the express lane",
+     "text": "**IKEA missing screw** — you discover it halfway through assembly. Information belongs at the moment of need, not in a manual up front.\n\nThat's the form telling you a field was required *after* you filled in fifteen of them.\n\n**Express lane** — “10 items or fewer”, with nobody enforcing it. Rules need mechanisms. If a field is required, the system should require it.",
+     "try": {
+      "type": "single",
+      "q": "A form reveals a required field only after submission fails. Which analogy fits?",
+      "options": [
+       "The missing IKEA screw",
+       "The curb ramp",
+       "The express lane",
+       "The push-or-pull door"
+      ],
+      "answer": 0,
+      "explain": "Just-in-time information: tell people before they need it, not after."
+     }
+    },
+    {
+     "title": "Triangulation, in metaphors",
+     "text": "His 2023 set for explaining why one data source isn't enough:\n\n• A winemaker who samples only a few barrels → small samples\n• Reading only the reviews you agree with → confirmation bias\n• A picture with missing puzzle pieces → incomplete data\n\nCombine qualitative, quantitative, evaluative and generative work so each covers the others' blind spots.",
+     "try": {
+      "type": "single",
+      "q": "Which metaphor stands for confirmation bias?",
+      "options": [
+       "Reading only the reviews you agree with",
+       "Sampling a few barrels of wine",
+       "A puzzle with missing pieces",
+       "A door with no handle on either side"
+      ],
+      "answer": 0,
+      "explain": "You see only the evidence that fits what you already think."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does the curb-ramp analogy illustrate?",
+     "options": [
+      "Accessibility work helps everyone",
+      "Public infrastructure sets design standards",
+      "Regulation drives better outcomes than research",
+      "Physical design is easier than digital design"
+     ],
+     "answer": 0,
+     "explain": "Built for wheelchair users; used by anyone with wheels."
+    },
+    {
+     "type": "single",
+     "q": "In the door analogy, what is the signifier?",
+     "options": [
+      "The cue telling you to push or pull",
+      "The fact that the door can open",
+      "The hinge mechanism itself",
+      "The sign giving the opening hours"
+     ],
+     "answer": 0,
+     "explain": "Affordance is what's possible; the signifier tells you how."
+    },
+    {
+     "type": "single",
+     "q": "What does the express lane with no enforcement represent?",
+     "options": [
+      "Rules without mechanisms to uphold them",
+      "A queue that is optimised for speed",
+      "Prioritising frequent users over new ones",
+      "A shortcut that only experts discover"
+     ],
+     "answer": 0,
+     "explain": "If a field is required, the system should require it."
+    },
+    {
+     "type": "single",
+     "q": "Whose tradition is Calabro following with these analogies?",
+     "options": [
+      "Don Norman's",
+      "Jakob Nielsen's",
+      "Edward Tufte's",
+      "Bill Scott's"
+     ],
+     "answer": 0,
+     "explain": "The Design of Everyday Things made the everyday object a UX teaching tool."
+    },
+    {
+     "type": "single",
+     "q": "Why do analogies persuade so well, according to the article?",
+     "options": [
+      "They are instantly relatable",
+      "They remove the need for research data",
+      "They sound more professional than jargon",
+      "They can be drawn quickly on a whiteboard"
+     ],
+     "answer": 0,
+     "explain": "Relatability is the mechanism — and the reason to choose them carefully."
+    }
+   ]
+  }
+ ]
+}

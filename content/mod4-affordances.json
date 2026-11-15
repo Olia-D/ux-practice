@@ -1,6 +1,6 @@
 {
  "id": "affordances",
- "module": "design-principles",
+ "module": "interaction",
  "title": "Make It Look Like What It Does",
  "icon": "🔘",
  "intro": "Affordances show what something **is**. Signifiers show what it **does**. When either is broken, users stop trusting your interface.",

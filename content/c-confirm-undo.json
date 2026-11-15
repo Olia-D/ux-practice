@@ -1,0 +1,144 @@
+{
+ "id": "c-confirm-undo",
+ "module": "controls",
+ "title": "Confirm or Undo?",
+ "icon": "↩️",
+ "intro": "Choose by frequency and severity. Frequent, low-impact actions get Undo; rare, severe ones get a confirmation — typed, if the stakes are high.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Confirm or Undo?",
+   "learn": [
+    {
+     "title": "The severity × frequency grid",
+     "text": "**Frequent + low impact** → Undo by default.\n**Rare + low impact** → one click, no interruption.\n**Frequent + severe** → Undo, plus a warning.\n**Rare + severe** → confirmation, typed if the stakes are high.\n\nMost actions are reversible, so Undo is the default. Confirmation interrupts the flow — make sure it's worth it.",
+     "try": {
+      "type": "single",
+      "q": "Users archive items dozens of times a day. Which guardrail fits?",
+      "options": [
+       "Undo",
+       "A confirmation dialog",
+       "A typed confirmation",
+       "A warning banner above the list"
+      ],
+      "answer": 0,
+      "explain": "Frequent and low impact: don't interrupt, let them reverse it."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Confirmation",
+       "items": [
+        "Rare and severe",
+        "Typed confirm for the worst cases",
+        "Interrupts deliberately"
+       ]
+      },
+      "right": {
+       "label": "Undo",
+       "items": [
+        "Frequent and low impact",
+        "Persistent button, not a toast",
+        "No interruption"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Truly irreversible actions",
+     "text": "Only a few actions genuinely can't be undone:\n\n• Deleting linked items\n• Removing data from other people's accounts\n• Disconnecting devices\n• Leaving without saving\n\n**If you can't make it undoable, delay it** — for example, 15 minutes before a permanent delete actually runs.",
+     "try": {
+      "type": "single",
+      "q": "A delete can't be reversed by the system. What's the fallback?",
+      "options": [
+       "Delay the action so it can still be cancelled",
+       "Show two confirmation dialogs in sequence",
+       "Require an admin to approve it",
+       "Email the user a copy of the deleted data"
+      ],
+      "answer": 0,
+      "explain": "A delay turns an irreversible action into a reversible window."
+     }
+    },
+    {
+     "title": "Label the outcome, not the dialog",
+     "text": "Use **specific verbs**: Delete, Leave, Unsubscribe, Stay. Add “forever” or “permanently” when it is.\n\nNo **double negatives** — “Cancel cancellation?” is a trap.\n\nFor high-severity actions, ask the user to **type a name** to break the instinctive click.\n\nAnd put Undo in a **persistent button**, not only a toast that fades away.",
+     "try": {
+      "type": "single",
+      "q": "What is wrong with “Yes” and “Cancel” as dialog buttons?",
+      "options": [
+       "They don't say what will happen",
+       "They are too short to tap accurately",
+       "They don't translate consistently",
+       "They imply the action is reversible"
+      ],
+      "answer": 0,
+      "explain": "Label the outcome: Delete forever, Stay on this page."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the default guardrail, according to this note?",
+     "options": [
+      "Undo",
+      "A confirmation dialog",
+      "A warning message",
+      "A permissions check"
+     ],
+     "answer": 0,
+     "explain": "Most actions are reversible, so Undo should be the norm."
+    },
+    {
+     "type": "single",
+     "q": "When is a typed confirmation worth it?",
+     "options": [
+      "Rare actions with high stakes",
+      "Any deletion of user data",
+      "Actions performed by administrators",
+      "Any action affecting more than one record"
+     ],
+     "answer": 0,
+     "explain": "Typing breaks the instinctive click."
+    },
+    {
+     "type": "single",
+     "q": "Why is a toast a poor place for Undo?",
+     "options": [
+      "It disappears before users react",
+      "It can't be styled consistently",
+      "Screen readers announce it twice",
+      "It blocks part of the interface"
+     ],
+     "answer": 0,
+     "explain": "Undo should be a persistent button."
+    },
+    {
+     "type": "single",
+     "q": "Which action is genuinely irreversible?",
+     "options": [
+      "Removing data from another person's account",
+      "Archiving a project",
+      "Changing a notification setting",
+      "Deleting a draft you just wrote"
+     ],
+     "answer": 0,
+     "explain": "Along with disconnecting devices and leaving without saving."
+    },
+    {
+     "type": "single",
+     "q": "What does “Cancel cancellation?” illustrate?",
+     "options": [
+      "A double negative in a dialog",
+      "An action that needs typed confirmation",
+      "A missing undo path",
+      "An over-used confirmation step"
+     ],
+     "answer": 0,
+     "explain": "Specific verbs avoid the trap."
+    }
+   ]
+  }
+ ]
+}

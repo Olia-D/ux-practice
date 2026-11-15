@@ -1,0 +1,144 @@
+{
+ "id": "five-star-confidence",
+ "module": "evidence",
+ "title": "The 5-Star Confidence System",
+ "icon": "⭐",
+ "intro": "Put a star rating next to every finding so stakeholders see at a glance how much to trust it. Stars rise as evidence accumulates.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "The 5-Star Confidence System",
+   "learn": [
+    {
+     "title": "The scale",
+     "text": "★☆☆☆☆ — one attitudinal finding, or a secondary source\n★★☆☆☆ — at least one behavioural finding, best practice or technical fact; or two or more attitudinal\n★★★☆☆ — three or more findings, including at least one behavioural, best-practice or factual\n★★★★☆ — as above, and replicated\n★★★★★ — well established; validated repeatedly across studies\n\nCalabro has used this for more than seven years. Stakeholders learn it in seconds.",
+     "try": {
+      "type": "single",
+      "q": "A finding rests on one survey question. How many stars?",
+      "options": [
+       "One",
+       "Two",
+       "Three",
+       "None — it shouldn't be in the repository"
+      ],
+      "answer": 0,
+      "explain": "A single attitudinal finding is the bottom of the scale."
+     }
+    },
+    {
+     "title": "Why it works",
+     "text": "Nobody needs a statistics lecture: **three stars says “solid, may need more validation”**.\n\nIt becomes shorthand in difficult conversations, it encourages teams to check the repository before commissioning a new study, and it makes clear when a recommendation rests on one survey answer.",
+     "try": {
+      "type": "single",
+      "q": "What does the system change in a difficult conversation?",
+      "options": [
+       "It gives everyone shared shorthand for confidence",
+       "It settles which finding is correct",
+       "It removes the need for a readout",
+       "It assigns ownership of the decision"
+      ],
+      "answer": 0,
+      "explain": "Three stars means “solid, may need more validation” without a statistics lecture."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Without stars",
+       "items": [
+        "Every finding reads as equally certain",
+        "New studies commissioned by default",
+        "“Trust me” as the evidence"
+       ]
+      },
+      "right": {
+       "label": "With stars",
+       "items": [
+        "Confidence visible at a glance",
+        "Repository checked first",
+        "Weak findings can't hide"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The Bayesian habit underneath",
+     "text": "**Start from priors** — best practices from NN/g and MeasuringU are prior knowledge, not a blank slate.\n\n**Update with each study** rather than treating every project as the first look at the question.\n\n**Communicate uncertainty** as a level, not a yes/no.\n\nThe stars are the practical, visible form of that habit.",
+     "try": {
+      "type": "single",
+      "q": "What are “priors” in this approach?",
+      "options": [
+       "What you already know before the study",
+       "The pilot session results",
+       "The stakeholders' expectations",
+       "The previous quarter's metrics"
+      ],
+      "answer": 0,
+      "explain": "Established best practice counts as prior knowledge."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the star rating attached to?",
+     "options": [
+      "Each finding in the repository",
+      "Each study",
+      "Each research method",
+      "Each stakeholder recommendation"
+     ],
+     "answer": 0,
+     "explain": "So confidence travels with the finding."
+    },
+    {
+     "type": "single",
+     "q": "What does four stars require that three doesn't?",
+     "options": [
+      "Replication",
+      "A larger sample",
+      "A behavioural finding",
+      "Sign-off from a second researcher"
+     ],
+     "answer": 0,
+     "explain": "Same evidence base, confirmed again."
+    },
+    {
+     "type": "single",
+     "q": "What behaviour does the system encourage before a new study?",
+     "options": [
+      "Checking the repository",
+      "Writing a research plan",
+      "Estimating the sample size",
+      "Booking a synthesis session"
+     ],
+     "answer": 0,
+     "explain": "Existing evidence may already be at three or four stars."
+    },
+    {
+     "type": "single",
+     "q": "Why is a Michelin-style scale useful for stakeholders?",
+     "options": [
+      "It needs no statistical background",
+      "It is an industry standard",
+      "It maps to confidence intervals",
+      "It can be automated from the data"
+     ],
+     "answer": 0,
+     "explain": "Learned in seconds, used immediately."
+    },
+    {
+     "type": "single",
+     "q": "How long has Calabro used this system?",
+     "options": [
+      "More than seven years",
+      "About two years",
+      "Since 2024",
+      "Since his first UX role"
+     ],
+     "answer": 0,
+     "explain": "Long enough to see it become team shorthand."
+    }
+   ]
+  }
+ ]
+}

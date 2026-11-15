@@ -1,6 +1,6 @@
 {
  "id": "behavioral-evidence",
- "module": "foundations",
+ "module": "evidence",
  "title": "Behavioral > Self-Reported Evidence",
  "icon": "🧠",
  "intro": "Users are consistently unreliable narrators of their own behavior. Not because they're dishonest — because memory is reconstructive, social desirability is real, and people genuinely can't articulate why they do what they do.",

@@ -1,6 +1,6 @@
 {
  "id": "misunderstandings",
- "module": "testing-analysis",
+ "module": "foundations",
  "title": "Top 10 UX Misunderstandings",
  "icon": "❌",
  "intro": "These misunderstandings sound just enough like truth to pass a design review. Each one hides complexity instead of handling it — and shifts work onto the user.",

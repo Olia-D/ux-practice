@@ -1,0 +1,144 @@
+{
+ "id": "interaction-cost",
+ "module": "interaction",
+ "title": "Remembering Interaction Cost",
+ "icon": "⏱️",
+ "intro": "Interaction cost is the total effort — physical and mental — people spend to get something done. In daily-use B2B tools those costs repeat hundreds of times.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Remembering Interaction Cost",
+   "learn": [
+    {
+     "title": "Four places cost hides",
+     "text": "**Physical** — clicks, scrolls, typing, pointing.\n**Mental** — reading, deciding, remembering.\n**Recovery** — errors, undo, backtracking.\n**Repetition** — multiply all of the above by how often the task is done.\n\nA small cost in a task done once is noise. The same cost in a task done 40 times a day is a productivity problem.",
+     "try": {
+      "type": "single",
+      "q": "Which multiplier turns a small friction into a real problem?",
+      "options": [
+       "How often the task is performed",
+       "How many users have access",
+       "How long the product has existed",
+       "How complex the underlying system is"
+      ],
+      "answer": 0,
+      "explain": "Repetition is the fourth component of the cost."
+     }
+    },
+    {
+     "title": "Unnecessary interactions are the worst kind",
+     "text": "Calabro's definition: the total effort people spend using anything they interface with.\n\n**Unnecessary** interactions stand out, because users are forced to repeat them every time — and that's what turns tolerant users into jaded, angry ones.",
+     "try": {
+      "type": "single",
+      "q": "Why are unnecessary interactions worse than necessary ones of the same size?",
+      "options": [
+       "Users repeat them every single time",
+       "They are harder to measure",
+       "They usually break accessibility",
+       "They cost more to implement"
+      ],
+      "answer": 0,
+      "explain": "Repeated pointless effort is what makes users resentful."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Costs users accept",
+       "items": [
+        "Steps the task genuinely needs",
+        "A confirmation before deletion",
+        "Reading a result they asked for"
+       ]
+      },
+      "right": {
+       "label": "Costs that breed resentment",
+       "items": [
+        "Re-entering data the system has",
+        "A dialog that adds nothing",
+        "Navigating back to where you were"
+       ]
+      }
+     }
+    },
+    {
+     "title": "How to find it",
+     "text": "**Task analysis and timing** — GOMS-KLM, PURE ratings, benchmark tests and cognitive walkthroughs show where steps and time accumulate.\n\n**Observation in context** — contextual inquiry, shadowing and longitudinal studies reveal repetition, interruptions and workarounds that labs miss.\n\n**System data** — drop-off rates, error logs, undo frequency and repeat attempts measure cost objectively.\n\nUse it early: treat interaction cost as a design input, not a post-launch metric.",
+     "try": {
+      "type": "single",
+      "q": "Which signal in your system data points at recovery cost?",
+      "options": [
+       "Undo frequency",
+       "Session length",
+       "Daily active users",
+       "Feature adoption rate"
+      ],
+      "answer": 0,
+      "explain": "Undo, error logs and repeat attempts measure the cost of recovering from mistakes."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does interaction cost measure?",
+     "options": [
+      "Total physical and mental effort to get something done",
+      "Time on task for a single workflow",
+      "The development cost of an interaction",
+      "The number of clicks to reach a page"
+     ],
+     "answer": 0,
+     "explain": "Clicks are only the physical part."
+    },
+    {
+     "type": "single",
+     "q": "Which method reveals repetition that a lab study misses?",
+     "options": [
+      "Shadowing in context",
+      "A moderated usability test",
+      "A preference survey",
+      "A heuristic evaluation"
+     ],
+     "answer": 0,
+     "explain": "Contextual inquiry and longitudinal studies show real working conditions."
+    },
+    {
+     "type": "single",
+     "q": "When should interaction cost be considered?",
+     "options": [
+      "Early, as a design input",
+      "After launch, as a metric",
+      "During QA, alongside bug triage",
+      "Only when users complain"
+     ],
+     "answer": 0,
+     "explain": "Treat it as an input, not a post-launch measurement."
+    },
+    {
+     "type": "single",
+     "q": "Which of these is a mental cost?",
+     "options": [
+      "Deciding which option applies",
+      "Scrolling a long page",
+      "Typing an address",
+      "Clicking a submit button"
+     ],
+     "answer": 0,
+     "explain": "Reading, deciding and remembering are the mental component."
+    },
+    {
+     "type": "single",
+     "q": "Why does Calabro call this an old concept worth bringing back?",
+     "options": [
+      "It applies to every review, and teams have stopped using it",
+      "It was disproved and later re-validated",
+      "It predates usability testing as a method",
+      "Modern analytics tools can finally measure it"
+     ],
+     "answer": 0,
+     "explain": "He wants it back in every design review."
+    }
+   ]
+  }
+ ]
+}

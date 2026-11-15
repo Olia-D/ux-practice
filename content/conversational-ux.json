@@ -1,0 +1,144 @@
+{
+ "id": "conversational-ux",
+ "module": "controls",
+ "title": "Stop Weaponizing Conversational UX",
+ "icon": "💬",
+ "intro": "Conversational UX isn't a chatty tone. Moore and Arar's Natural Conversation Framework is about interaction mechanics: turn-taking, context, repair and shared meaning.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Stop Weaponizing Conversational UX",
+   "learn": [
+    {
+     "title": "Four mechanics of a real conversation",
+     "text": "**Turn-taking** — respond to what the user just did.\n**Context** — fit where they are in the workflow.\n**Repair** — help them recover when something breaks.\n**Shared meaning** — use the user's words, not the system's internal names.\n\nFramed this way, progressive disclosure is a conversational move: you don't tell a new acquaintance your whole life story.",
+     "try": {
+      "type": "single",
+      "q": "Which mechanic does “Something went wrong” fail hardest?",
+      "options": [
+       "Repair",
+       "Turn-taking",
+       "Context",
+       "Shared meaning"
+      ],
+      "answer": 0,
+      "explain": "It gives the user nothing to recover with."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Monologue dressed as conversation",
+       "items": [
+        "Auto-starting tour",
+        "“Friendly” upsell modal",
+        "“Something went wrong”"
+       ]
+      },
+      "right": {
+       "label": "Actual conversation",
+       "items": [
+        "Responds to the user's last action",
+        "Fits the workflow stage",
+        "Helps repair the problem"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The B2B example",
+     "text": "A user logs into an analytics tool to export last month's report.\n\nAn unrequested tour introduces Workspaces, Automations and Integrations. A modal pushes an upgrade. The export fails with “Something went wrong”. The settings page leads with add-on marketing.\n\nNone of it starts from user intent, respects task order, supports repair or builds shared meaning — however friendly the wording is.",
+     "try": {
+      "type": "single",
+      "q": "What is wrong with an auto-starting tour, in conversational terms?",
+      "options": [
+       "It ignores what the user came to do",
+       "It uses too much text at once",
+       "It can't be dismissed on mobile",
+       "It repeats information from the signup flow"
+      ],
+      "answer": 0,
+      "explain": "No turn-taking: it starts talking before the user has done anything."
+     }
+    },
+    {
+     "title": "The paper test",
+     "text": "**1.** Print the words from an onboarding tour, modal, paywall, error or settings page.\n**2.** One colleague plays “the system” and may only say what's printed.\n**3.** Another plays the user, with a real goal.\n\nIf the system can only interrupt, repeat itself, or fail to answer, you have a monologue — and casual wording can disguise interruptions, shaming or upsells.",
+     "try": {
+      "type": "single",
+      "q": "In the paper test, what may the person playing the system say?",
+      "options": [
+       "Only the words that are printed",
+       "Anything a support agent would say",
+       "Whatever the design intent was",
+       "Only answers to direct questions"
+      ],
+      "answer": 0,
+      "explain": "The constraint is the point: it exposes a monologue immediately."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is conversational UX actually about?",
+     "options": [
+      "How an interaction unfolds",
+      "How friendly the wording is",
+      "Whether the product has a chatbot",
+      "How closely copy matches the brand voice"
+     ],
+     "answer": 0,
+     "explain": "Turn-taking, context, repair and shared meaning."
+    },
+    {
+     "type": "single",
+     "q": "Whose framework does Calabro use?",
+     "options": [
+      "Moore and Arar's",
+      "Nielsen and Molich's",
+      "Pirolli and Card's",
+      "Kurosu and Kashimura's"
+     ],
+     "answer": 0,
+     "explain": "The Natural Conversation Framework, 2017."
+    },
+    {
+     "type": "single",
+     "q": "What does “shared meaning” require?",
+     "options": [
+      "Using the user's words, not system names",
+      "Defining key terms in a glossary",
+      "Matching the reading level to the audience",
+      "Keeping terminology consistent across screens"
+     ],
+     "answer": 0,
+     "explain": "Internal feature names break it."
+    },
+    {
+     "type": "single",
+     "q": "Why is progressive disclosure a conversational move?",
+     "options": [
+      "You don't tell a new acquaintance everything at once",
+      "It reduces the number of words on screen",
+      "It lets users set their own pace",
+      "It mirrors how chatbots stream responses"
+     ],
+     "answer": 0,
+     "explain": "Information arrives when it is relevant to the exchange."
+    },
+    {
+     "type": "single",
+     "q": "What can casual wording disguise?",
+     "options": [
+      "Interruptions, shaming and upsells",
+      "Slow system performance",
+      "Missing accessibility features",
+      "Inconsistent visual design"
+     ],
+     "answer": 0,
+     "explain": "Which is why the test is whether the language helps the task."
+    }
+   ]
+  }
+ ]
+}

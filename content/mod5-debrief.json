@@ -1,6 +1,6 @@
 {
  "id": "debrief",
- "module": "business-impact",
+ "module": "business",
  "title": "UX Research Debriefs Reframed",
  "icon": "🗣️",
  "intro": "Teams merge two kinds of research debrief to save time and get the worst of both. Calabro separates them: a **synthesis session** to make sense of data, then a **strategic session** to decide.",

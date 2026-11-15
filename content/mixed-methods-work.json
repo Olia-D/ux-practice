@@ -1,0 +1,144 @@
+{
+ "id": "mixed-methods-work",
+ "module": "evidence",
+ "title": "Mixed Methods at Work",
+ "icon": "🧪",
+ "intro": "Admins say reporting is essential; the dashboard says almost nobody used it last month. Before choosing a side, check what the data actually counts.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Mixed Methods at Work",
+   "learn": [
+    {
+     "title": "Separate observation from explanation",
+     "text": "“Few reports were run last month” is **recorded behaviour**.\n\n“Users don't need reporting” is an **explanation** that nobody has established.\n\nThe hypothetical: an employee-training platform where admins export completion records. Interviews say the report matters; the analytics show tiny monthly usage; the PM asks whether to keep investing.",
+     "try": {
+      "type": "single",
+      "q": "“Users don't need reporting” — what kind of statement is that?",
+      "options": [
+       "An explanation nobody has established",
+       "A behavioural finding",
+       "A testable hypothesis with support",
+       "A direct quote from the research"
+      ],
+      "answer": 0,
+      "explain": "The data shows usage, not need."
+     }
+    },
+    {
+     "title": "Audit the analytics before trusting them",
+     "text": "Three questions before accepting the metric:\n\n• **Right users?** Who does the dashboard actually count?\n• **Right event?** What does that event record — opening the page, or completing an export?\n• **Right window?** A monthly view misses a quarterly task.\n\nIn the example the pattern was quarterly: the monthly dashboard made a normal rhythm look like abandonment.",
+     "try": {
+      "type": "single",
+      "q": "A task is done once a quarter but the dashboard shows monthly usage. What does the metric look like?",
+      "options": [
+       "Abandonment",
+       "Steady growth",
+       "Seasonal demand",
+       "A data pipeline error"
+      ],
+      "answer": 0,
+      "explain": "The window has to fit the work."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "The metric said",
+       "items": [
+        "Almost nobody uses reporting",
+        "Monthly usage is tiny",
+        "Low priority"
+       ]
+      },
+      "right": {
+       "label": "The audit found",
+       "items": [
+        "Wrong window for a quarterly task",
+        "Event counted page views",
+        "Normal rhythm, not abandonment"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Then watch the work",
+     "text": "Walking through the **last real attempt** with an admin showed where the time actually went: cleaning up the export afterwards.\n\nThe recommendation changed from “deprioritise reporting” to “fix the export clean-up”.\n\nNeither “users said it matters” nor “monthly usage is low” supported a decision on its own.",
+     "try": {
+      "type": "single",
+      "q": "What did the triangulated answer turn out to be?",
+      "options": [
+       "Fix the export clean-up",
+       "Remove the reporting feature",
+       "Rebuild the dashboard",
+       "Add a reporting tutorial"
+      ],
+      "answer": 0,
+      "explain": "The friction was after the export, not in the decision to use it."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the first step when qual and quant disagree?",
+     "options": [
+      "Clarify what the PM is deciding",
+      "Re-run the interviews",
+      "Trust the larger sample",
+      "Check the statistical significance"
+     ],
+     "answer": 0,
+     "explain": "The decision tells you which contradiction matters."
+    },
+    {
+     "type": "single",
+     "q": "Which audit question is about the event definition?",
+     "options": [
+      "What does the event actually record?",
+      "Who does the dashboard count?",
+      "Does the window fit the work?",
+      "How far back does the data go?"
+     ],
+     "answer": 0,
+     "explain": "Opening a page is not completing an export."
+    },
+    {
+     "type": "single",
+     "q": "Why walk through the last real attempt?",
+     "options": [
+      "It shows where the time actually goes",
+      "It validates the analytics setup",
+      "It produces a quotable story",
+      "It confirms the sample is representative"
+     ],
+     "answer": 0,
+     "explain": "That is how the clean-up problem surfaced."
+    },
+    {
+     "type": "single",
+     "q": "What would “deprioritise reporting” have cost?",
+     "options": [
+      "Cutting a feature that was working as intended",
+      "A quarter of development time",
+      "The relationship with the admin users",
+      "The ability to measure adoption later"
+     ],
+     "answer": 0,
+     "explain": "The usage pattern was normal for a quarterly task."
+    },
+    {
+     "type": "single",
+     "q": "What does the article say about choosing a side?",
+     "options": [
+      "Neither source supported a decision alone",
+      "The qualitative source was right",
+      "The quantitative source was right",
+      "Both were wrong about the feature"
+     ],
+     "answer": 0,
+     "explain": "Triangulation produced a different, better answer."
+    }
+   ]
+  }
+ ]
+}

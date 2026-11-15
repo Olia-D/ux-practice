@@ -1,0 +1,144 @@
+{
+ "id": "accessibility",
+ "module": "accessibility",
+ "title": "Reframing Accessibility",
+ "icon": "♿",
+ "intro": "Teams treat accessibility as a separate step — a compliance exercise tacked on at the end. Calabro's argument: accessibility is a proxy for good usability, and every accessibility failure is a usability failure for a much larger group.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Reframing Accessibility",
+   "learn": [
+    {
+     "title": "Every failure hits more people than you think",
+     "text": "| Design flaw | Primary harm | Who else it hurts |\n|---|---|---|\n| Help hidden behind hover | Keyboard and touch users | Everyone who never finds it |\n| Colour-only status indicators | Colour-blind users | Anyone in low light or on a poor display |\n| Placeholder-only labels | Screen reader users | All users, as soon as they click in |\n\nTreating the two as separate workstreams means solving the same problem twice.",
+     "try": {
+      "type": "single",
+      "q": "A status is shown only by colour. Beyond colour-blind users, who else is affected?",
+      "options": [
+       "Anyone on a poor display or in bright light",
+       "Only users who have disabled CSS",
+       "Users on older browsers",
+       "Nobody — it's a compliance issue"
+      ],
+      "answer": 0,
+      "explain": "Accessibility failures degrade the experience under ordinary real-world conditions."
+     }
+    },
+    {
+     "title": "The review that changed the room",
+     "text": "Consulting with a large organisation, Calabro reviewed a site the team felt good about: clean UI, generous white space, balanced typography.\n\nThen they walked through the **top user tasks the way a real user would**. The vibe in the room shifted.\n\nImportant help content was hidden; key actions were unreachable without a mouse; status depended on colour alone.",
+     "try": {
+      "type": "single",
+      "q": "What exposed the problems in his review?",
+      "options": [
+       "Walking the top tasks as a real user would",
+       "Running an automated accessibility scan",
+       "Comparing the site with competitors",
+       "Asking the team to rate their own work"
+      ],
+      "answer": 0,
+      "explain": "Looking at the page is not the same as using it."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "How it was judged",
+       "items": [
+        "Clean UI",
+        "Generous white space",
+        "Balanced typography"
+       ]
+      },
+      "right": {
+       "label": "What the walkthrough showed",
+       "items": [
+        "Help hidden behind hover",
+        "Actions unreachable by keyboard",
+        "Status carried by colour alone"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Usability under real-world conditions",
+     "text": "The reframe: accessibility isn't a checklist that runs after design. It is what usability looks like when conditions aren't ideal — a user who is distracted, tired, on a phone in sunlight, or using a keyboard because their trackpad died.\n\nSo accessibility findings are usability findings, and belong in the same backlog with the same priority.",
+     "try": {
+      "type": "single",
+      "q": "What does the article say accessibility is a proxy for?",
+      "options": [
+       "Good usability",
+       "Regulatory risk",
+       "Design system maturity",
+       "Engineering quality"
+      ],
+      "answer": 0,
+      "explain": "Which is why separate workstreams solve the same problem twice."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "When do teams usually address accessibility?",
+     "options": [
+      "At the end, as a compliance step",
+      "During discovery research",
+      "In the design system work",
+      "Continuously, in most organisations"
+     ],
+     "answer": 0,
+     "explain": "The article argues against exactly that placement."
+    },
+    {
+     "type": "single",
+     "q": "Why do placeholder-only labels hurt everyone?",
+     "options": [
+      "The label vanishes as soon as you type",
+      "Placeholders fail contrast requirements",
+      "Screen readers skip them entirely",
+      "They can't be translated reliably"
+     ],
+     "answer": 0,
+     "explain": "It affects all users the moment they click in, not only assistive tech users."
+    },
+    {
+     "type": "single",
+     "q": "What should happen to accessibility findings?",
+     "options": [
+      "They go in the same backlog as usability findings",
+      "They go to a separate compliance team",
+      "They are scheduled after the release",
+      "They are logged against WCAG criteria only"
+     ],
+     "answer": 0,
+     "explain": "They are usability findings."
+    },
+    {
+     "type": "single",
+     "q": "What was the team's own assessment before the walkthrough?",
+     "options": [
+      "They felt very good about how it looked",
+      "They knew accessibility was weak",
+      "They had already run an audit",
+      "They expected keyboard problems"
+     ],
+     "answer": 0,
+     "explain": "Appearance and usability were being confused."
+    },
+    {
+     "type": "single",
+     "q": "What is the cost of running accessibility as a separate workstream?",
+     "options": [
+      "You solve the same problem twice",
+      "You need specialist tooling",
+      "Compliance deadlines slip",
+      "Designers lose ownership of quality"
+     ],
+     "answer": 0,
+     "explain": "The failures overlap almost completely."
+    }
+   ]
+  }
+ ]
+}

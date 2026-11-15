@@ -1,0 +1,146 @@
+{
+ "id": "dark-patterns",
+ "module": "accessibility",
+ "title": "Reframing Dark Patterns: 2025 Edition",
+ "icon": "🎃",
+ "intro": "The field spent years fighting unethical design by naming it — “Roach Motel”, “Confirmshaming”, “Bait and Switch”. Naming helped at first, then became a loophole.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Reframing Dark Patterns: 2025 Edition",
+   "learn": [
+    {
+     "title": "Why naming stopped working",
+     "text": "The idea was that catchy names would shame teams into stopping. Shared vocabulary did help.\n\nBut once a pattern has a name, teams argue about **taxonomy** instead of intent: “this isn't technically Confirmshaming.”\n\nMeanwhile the patterns multiplied.",
+     "try": {
+      "type": "single",
+      "q": "How does naming become a loophole?",
+      "options": [
+       "Teams argue the label doesn't apply to them",
+       "Names are hard to translate",
+       "Users learn to recognise the names",
+       "Regulators only ban named patterns"
+      ],
+      "answer": 0,
+      "explain": "The debate shifts from intent to definitions."
+     }
+    },
+    {
+     "title": "The principle underneath",
+     "text": "**Every dark pattern removes a user's ability to act freely.**\n\nThree questions: Can they stop? Can they undo? Can they refuse?\n\nIf any answer is “no”, it's already veering into manipulation — whatever the pattern is called.",
+     "try": {
+      "type": "single",
+      "q": "Which three questions test a pattern?",
+      "options": [
+       "Can they stop, undo, refuse?",
+       "Is it legal, ethical, profitable?",
+       "Is it named, documented, measured?",
+       "Does it convert, retain, delight?"
+      ],
+      "answer": 0,
+      "explain": "The principle is user control and freedom."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Named patterns",
+       "items": [
+        "Roach Motel",
+        "Confirmshaming",
+        "Scroll-jacking",
+        "Trick checkboxes"
+       ]
+      },
+      "right": {
+       "label": "The shared root",
+       "items": [
+        "Easy in, impossible out",
+        "Shame as the exit cost",
+        "Control taken from the user",
+        "Consent never given"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Accessibility is the canary",
+     "text": "Dark patterns hurt users with disabilities first and hardest: a timed offer that can't be paused, a close button too small to hit, consent flows that can't be completed by keyboard.\n\nIf a pattern fails for them, it's usually taking control away from everyone.",
+     "try": {
+      "type": "single",
+      "q": "Why does the article call accessibility “the canary in the coal mine”?",
+      "options": [
+       "Patterns that remove control break there first",
+       "Accessibility audits catch them automatically",
+       "Regulators test accessibility before ethics",
+       "Disabled users complain more often"
+      ],
+      "answer": 0,
+      "explain": "It is the earliest visible symptom of a control problem."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the article's proposed replacement for naming?",
+     "options": [
+      "A principle grounded in user control",
+      "A stricter legal definition",
+      "An industry certification",
+      "A public register of offenders"
+     ],
+     "answer": 0,
+     "explain": "Can they stop, undo, refuse?"
+    },
+    {
+     "type": "single",
+     "q": "What is a Roach Motel?",
+     "options": [
+      "Easy to enter, very hard to leave",
+      "A pre-checked consent box",
+      "An offer that expires on refresh",
+      "A button labelled to mislead"
+     ],
+     "answer": 0,
+     "explain": "Subscription flows are the classic example."
+    },
+    {
+     "type": "single",
+     "q": "What is Confirmshaming?",
+     "options": [
+      "Making the decline option insulting to choose",
+      "Asking for confirmation twice",
+      "Hiding the confirm button",
+      "Shaming users who abandon a cart by email"
+     ],
+     "answer": 0,
+     "explain": "“No thanks, I hate saving money.”"
+    },
+    {
+     "type": "single",
+     "q": "What did naming achieve, according to Calabro?",
+     "options": [
+      "It helped at first, by creating shared vocabulary",
+      "It had no effect at all",
+      "It reduced dark patterns substantially",
+      "It led directly to regulation"
+     ],
+     "answer": 0,
+     "explain": "The problem is that it stopped there."
+    },
+    {
+     "type": "single",
+     "q": "What happens when the debate becomes taxonomy?",
+     "options": [
+      "Teams avoid confronting intent",
+      "Patterns get documented more accurately",
+      "Regulators intervene sooner",
+      "Designers learn the vocabulary faster"
+     ],
+     "answer": 0,
+     "explain": "Which is exactly the loophole."
+    }
+   ]
+  }
+ ]
+}

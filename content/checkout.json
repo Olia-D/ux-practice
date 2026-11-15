@@ -1,0 +1,144 @@
+{
+ "id": "checkout",
+ "module": "controls",
+ "title": "11 Checkout Essentials",
+ "icon": "🛒",
+ "intro": "Most cart abandonment comes from surprises and friction, not indecision. Baymard's survey of US shoppers puts unexpected costs at the top by a wide margin.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "11 Checkout Essentials",
+   "learn": [
+    {
+     "title": "Why shoppers abandon",
+     "text": "From Baymard's survey as cited in 2024:\n\n• Extra costs too high — **47%**\n• Forced account creation — **25%**\n• Delivery too slow — **24%**\n• Didn't trust the site — **19%**\n• Checkout too long — **18%**\n• Couldn't see the total up front — **17%**\n• Returns policy — **16%**\n• Site errors or crashes — **14%**\n\nBaymard updates these figures regularly — check the current release before quoting them.",
+     "try": {
+      "type": "single",
+      "q": "What is the single biggest reason shoppers abandon checkout?",
+      "options": [
+       "Extra costs appearing late",
+       "Being forced to create an account",
+       "Slow delivery options",
+       "A checkout flow with too many steps"
+      ],
+      "answer": 0,
+      "explain": "47% in the cited survey — nearly twice the next reason."
+     }
+    },
+    {
+     "title": "Price, account, delivery",
+     "text": "**Show all costs up front** and every change as it happens; keep a running total visible.\n\n**Make guest checkout prominent** and offer an account after the purchase, not before.\n\n**State delivery times before checkout**, not on the final screen.",
+     "try": {
+      "type": "single",
+      "q": "When should you offer account creation?",
+      "options": [
+       "After the purchase",
+       "Before the cart page",
+       "At the payment step",
+       "Only to returning customers"
+      ],
+      "answer": 0,
+      "explain": "Forced account creation is the second-largest abandonment reason."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Surprises that lose the sale",
+       "items": [
+        "Shipping added at the last step",
+        "Account required to continue",
+        "Delivery date revealed after payment"
+       ]
+      },
+      "right": {
+       "label": "What to do",
+       "items": [
+        "Running total, visible throughout",
+        "Guest checkout, account offered later",
+        "Delivery times before checkout"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Trust, length and recovery",
+     "text": "Earn trust at the payment step with recognisable security cues and clear assurances about data.\n\nCut checkout to essentials and autofill everything you can. Offer the wallets people already use — Apple Pay, Google Pay, PayPal.\n\nMake the return policy easy to find and fair. And handle errors without wiping what the user typed.",
+     "try": {
+      "type": "single",
+      "q": "A card is declined. What should the form do?",
+      "options": [
+       "Keep everything the user entered",
+       "Return the user to the cart",
+       "Clear the card fields for security",
+       "Offer a different payment method only"
+      ],
+      "answer": 0,
+      "explain": "Site errors are an abandonment cause in their own right; preserving input is basic recovery."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Where do these percentages come from?",
+     "options": [
+      "A Baymard survey of US shoppers, as cited in 2024",
+      "Calabro's own e-commerce client data",
+      "A Nielsen Norman Group benchmark study",
+      "Aggregated analytics from retail platforms"
+     ],
+     "answer": 0,
+     "explain": "And the article notes they should be re-checked before quoting."
+    },
+    {
+     "type": "single",
+     "q": "What is the main cause of abandonment, in one word?",
+     "options": [
+      "Surprises",
+      "Indecision",
+      "Price",
+      "Speed"
+     ],
+     "answer": 0,
+     "explain": "Unexpected costs, hidden totals and late delivery news."
+    },
+    {
+     "type": "single",
+     "q": "What should stay visible throughout checkout?",
+     "options": [
+      "A running total",
+      "The returns policy",
+      "A progress bar",
+      "A support chat widget"
+     ],
+     "answer": 0,
+     "explain": "Including every change as it happens."
+    },
+    {
+     "type": "single",
+     "q": "Why offer familiar wallets?",
+     "options": [
+      "Users already trust and can use them",
+      "They reduce payment processing fees",
+      "They remove the need for a privacy policy",
+      "They are required in most European markets"
+     ],
+     "answer": 0,
+     "explain": "Recognition reduces both friction and distrust at the payment step."
+    },
+    {
+     "type": "single",
+     "q": "Which two reasons sit at 19% and 18% in the cited data?",
+     "options": [
+      "Didn't trust the site; checkout too long",
+      "Returns policy; site errors",
+      "Delivery too slow; hidden total",
+      "Forced account; extra costs"
+     ],
+     "answer": 0,
+     "explain": "Trust and length sit in the middle of the list."
+    }
+   ]
+  }
+ ]
+}

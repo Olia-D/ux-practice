@@ -1,0 +1,144 @@
+{
+ "id": "split-buttons",
+ "module": "interaction",
+ "title": "The Problem With Split Buttons",
+ "icon": "🔀",
+ "intro": "A split button pairs a labelled primary action with a small dropdown arrow. Users treat it as one button, read the chevron as decoration, and never find what's behind it.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "The Problem With Split Buttons",
+   "learn": [
+    {
+     "title": "What users actually do",
+     "text": "In Calabro's recent tests, **about 80% of participants clicked only the labelled side**, never realising there was more under the arrow.\n\nUsers who *intended* to open the menu often triggered the primary action instead — an accidental purchase, or the wrong state.\n\nThe tiny chevron reads as decoration.",
+     "try": {
+      "type": "single",
+      "q": "Roughly what share of participants clicked only the labelled side in his tests?",
+      "options": [
+       "About 80%",
+       "About 20%",
+       "About half",
+       "Nearly everyone, apart from screen reader users"
+      ],
+      "answer": 0,
+      "explain": "They never realised there was more functionality under the arrow."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "What the team assumes",
+       "items": [
+        "Two clear actions in one control",
+        "The arrow invites exploration",
+        "Saves horizontal space"
+       ]
+      },
+      "right": {
+       "label": "What testing shows",
+       "items": [
+        "One button, one action",
+        "The chevron looks decorative",
+        "Secondary options never found"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Why stakeholders keep asking for them",
+     "text": "Split buttons let a team avoid a hard decision about priority. “We can put every possible action in one button? Cool.”\n\nIt feels like a compromise that saves space. **Saving space is not the same as reducing cognitive load.**\n\nThree e-commerce clients asked Calabro to validate theirs. All three pushed back — and during a demo, one of them mis-clicked the arrow himself.",
+     "try": {
+      "type": "single",
+      "q": "What hard question does a split button let a team avoid?",
+      "options": [
+       "Which action is primary",
+       "Which users are the target",
+       "Which platform to design for first",
+       "Whether the feature should exist at all"
+      ],
+      "answer": 0,
+      "explain": "That is exactly the question the pattern is designed to dodge."
+     }
+    },
+    {
+     "title": "What to do instead",
+     "text": "If the secondary actions matter, expose them as **separate buttons** or a clear **overflow menu** — not hidden behind an ambiguous chevron attached to a primary action.\n\nAesthetic adjustments don't help: one client tried multiple rounds of visual refinement to emphasise the split, and end-user behaviour didn't change at all.",
+     "try": {
+      "type": "single",
+      "q": "A client emphasises the visual split between the two halves. What happens to behaviour?",
+      "options": [
+       "Nothing changes",
+       "Discovery roughly doubles",
+       "Mis-clicks fall but discovery stays low",
+       "Screen reader users benefit, others don't"
+      ],
+      "answer": 0,
+      "explain": "Multiple rounds of visual refinement didn't alter end-user behaviour."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is a split button?",
+     "options": [
+      "A labelled action plus a small dropdown arrow",
+      "Two buttons separated by a divider line",
+      "A button that changes label based on context",
+      "A toggle that reveals a second action on hover"
+     ],
+     "answer": 0,
+     "explain": "The two halves do different things."
+    },
+    {
+     "type": "single",
+     "q": "What does the chevron communicate to most users?",
+     "options": [
+      "Nothing — it reads as decoration",
+      "That the button has a secondary menu",
+      "That the action is irreversible",
+      "That more options load after clicking"
+     ],
+     "answer": 0,
+     "explain": "Which is why hidden options stay hidden."
+    },
+    {
+     "type": "single",
+     "q": "Why is a split button especially risky in a destructive flow?",
+     "options": [
+      "Users trigger the primary action by mistake",
+      "Destructive actions need confirmation dialogs",
+      "The arrow is too small for touch targets",
+      "Screen readers announce the label twice"
+     ],
+     "answer": 0,
+     "explain": "Intending the menu and hitting the action is a common failure in testing."
+    },
+    {
+     "type": "single",
+     "q": "What does Calabro recommend in place of a split button?",
+     "options": [
+      "Separate buttons or a clear overflow menu",
+      "A dropdown containing every action",
+      "A context menu on right-click",
+      "A single button plus a help tooltip"
+     ],
+     "answer": 0,
+     "explain": "Force the priority decision instead of hiding it."
+    },
+    {
+     "type": "single",
+     "q": "Why doesn't “our users are on the site all the time” hold up?",
+     "options": [
+      "Even that client mis-clicked during the demo",
+      "Frequent users read chevrons more carefully",
+      "Repeat visitors avoid dropdown menus",
+      "Site frequency doesn't affect motor accuracy"
+     ],
+     "answer": 0,
+     "explain": "Familiarity didn't rescue the pattern, even for its defender."
+    }
+   ]
+  }
+ ]
+}

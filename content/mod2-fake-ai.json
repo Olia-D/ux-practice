@@ -1,6 +1,6 @@
 {
  "id": "fake-ai",
- "module": "running-studies",
+ "module": "evidence",
  "title": "The Dangerous Appeal of Fake AI Users",
  "icon": "🤖",
  "intro": "Synthetic or “proxy” users let teams simulate research without doing any. The output looks enough like insight to pass. Calabro's test is practical: what would a real person tell you that a model never could?",

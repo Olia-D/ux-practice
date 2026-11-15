@@ -1,0 +1,144 @@
+{
+ "id": "carousels",
+ "module": "interaction",
+ "title": "Bad UI Patterns Don't Need Checklists",
+ "icon": "🎠",
+ "intro": "Baymard published “10 UX Requirements for User-Friendly Carousel Design”. Its first hundred words concede carousels aren't great; the next 2,000 explain how to do them right. That's the problem.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Bad UI Patterns Don't Need Checklists",
+   "learn": [
+    {
+     "title": "A best-practice guide for a bad pattern",
+     "text": "Calabro's objection isn't that the advice is wrong. It's that a how-to guide **gives teams cover** to keep using a pattern the evidence says to avoid.\n\nThe structure of the article is: “carousels don't work” … “but here's how to make one anyway.”",
+     "try": {
+      "type": "single",
+      "q": "What is Calabro's main objection to the Baymard article?",
+      "options": [
+       "It legitimises a pattern the evidence rejects",
+       "Its ten requirements are technically wrong",
+       "It was published without original research",
+       "It ignores accessibility entirely"
+      ],
+      "answer": 0,
+      "explain": "A guide to doing it right reads as permission to do it."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Softened",
+       "items": [
+        "“Carousels don't work…”",
+        "“…but here's how to do it anyway”",
+        "Reads as permission to ship it"
+       ]
+      },
+      "right": {
+       "label": "Honest",
+       "items": [
+        "Say plainly that it fails",
+        "If it's harm reduction, say so",
+        "Point at the alternative first"
+       ]
+      }
+     }
+    },
+    {
+     "title": "He grants the counter-arguments",
+     "text": "• Everyone uses them anyway, so help make the least-bad version\n• It's a stopgap for teams still phasing them out\n• Stakeholders insist, and this gives UX folks something concrete\n• Reduced harm beats no guidance\n\nHe doesn't think any of these is completely wrong. **His point: if harm reduction is the rationale, say so out loud.**",
+     "try": {
+      "type": "single",
+      "q": "A team genuinely can't remove its carousel this quarter. What does Calabro ask of guidance written for them?",
+      "options": [
+       "Say plainly that it's harm reduction",
+       "Withhold the guidance entirely",
+       "Add a disclaimer about sample sizes",
+       "Require sign-off from a researcher"
+      ],
+      "answer": 0,
+      "explain": "He accepts the stopgap; he objects to presenting it as best practice."
+     }
+    },
+    {
+     "title": "The bigger pattern",
+     "text": "This isn't really about carousels. It's about a trend of **watering down strong evidence** so it feels less confrontational.\n\nWe don't want to alienate teams. We want to be helpful. So we offer guidance that makes a bad pattern slightly less bad — and the pattern survives another five years.",
+     "try": {
+      "type": "single",
+      "q": "What industry habit does the article criticise?",
+      "options": [
+       "Softening strong evidence to stay agreeable",
+       "Publishing research without peer review",
+       "Relying on competitor analysis",
+       "Testing with too few participants"
+      ],
+      "answer": 0,
+      "explain": "Diplomatic dishonesty, in the article's phrase."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does the article say about the first hundred words of the Baymard post?",
+     "options": [
+      "They already concede carousels aren't great",
+      "They overstate the evidence against carousels",
+      "They promise data that never appears",
+      "They define the pattern incorrectly"
+     ],
+     "answer": 0,
+     "explain": "Then 2,000 words follow on how to do one anyway."
+    },
+    {
+     "type": "single",
+     "q": "Which counter-argument does Calabro accept as reasonable?",
+     "options": [
+      "Stopgap guidance for teams phasing carousels out",
+      "Carousels work well when auto-rotation is off",
+      "Carousel performance depends on the industry",
+      "Users have learned to expect carousels by now"
+     ],
+     "answer": 0,
+     "explain": "He grants several practical reasons; he wants them stated."
+    },
+    {
+     "type": "single",
+     "q": "What does “diplomatic dishonesty” refer to?",
+     "options": [
+      "Phrasing that softens what the evidence says",
+      "Disagreeing privately but agreeing in public",
+      "Citing research you haven't read",
+      "Avoiding criticism of named companies"
+     ],
+     "answer": 0,
+     "explain": "Such as “don't perform adequately” for “consistently underperform”."
+    },
+    {
+     "type": "single",
+     "q": "Why does a how-to guide matter more than an opinion piece here?",
+     "options": [
+      "Teams cite it as permission to ship the pattern",
+      "Guides reach a larger audience",
+      "Opinion pieces are rarely read by stakeholders",
+      "Guides are harder to correct later"
+     ],
+     "answer": 0,
+     "explain": "The format itself grants legitimacy."
+    },
+    {
+     "type": "single",
+     "q": "What is the article ultimately about?",
+     "options": [
+      "How the UX industry communicates evidence",
+      "The specific usability of carousels",
+      "Baymard's research methodology",
+      "E-commerce homepage conversion rates"
+     ],
+     "answer": 0,
+     "explain": "Carousels are the example, not the subject."
+    }
+   ]
+  }
+ ]
+}

@@ -1,6 +1,6 @@
 {
  "id": "dashboard",
- "module": "business-impact",
+ "module": "data-viz",
  "title": "Why Your Data Dashboard Stinks",
  "icon": "📉",
  "intro": "Most teams stop at visual clarity: the chart renders, matches the design system and passes accessibility checks. Dashboards built that way still mislead, because human cognition is full of shortcuts.",

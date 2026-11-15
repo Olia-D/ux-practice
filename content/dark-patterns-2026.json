@@ -1,0 +1,144 @@
+{
+ "id": "dark-patterns-2026",
+ "module": "accessibility",
+ "title": "Reframing Dark Patterns: 2026 Edition",
+ "icon": "🕸️",
+ "intro": "A retail-heavy follow-up. Six patterns still everywhere in 2026 — and each one fails a basic Nielsen heuristic.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Reframing Dark Patterns: 2026 Edition",
+   "learn": [
+    {
+     "title": "Six patterns and their honest versions",
+     "text": "• **Consent asymmetry** — “Accept All” big, “Reject” buried → make both equally easy\n• **Fake urgency** — a timer that resets on refresh → deadlines only when real\n• **False scarcity** — “Only 2 left” that isn't → accurate, verifiable stock\n• **Pre-selected opt-ins** → optional opt-ins unchecked\n• **Misleading labels** — “View pricing” → a sign-up form → the label says where it goes\n• **Forms that punish errors** → keep the input, allow paste, allow undo",
+     "try": {
+      "type": "single",
+      "q": "A countdown timer restarts when the page is refreshed. Which pattern is this?",
+      "options": [
+       "Fake urgency",
+       "False scarcity",
+       "Consent asymmetry",
+       "A misleading label"
+      ],
+      "answer": 0,
+      "explain": "The deadline isn't real."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "The pattern",
+       "items": [
+        "Accept All big, Reject buried",
+        "Timer resets on refresh",
+        "Opt-ins pre-checked"
+       ]
+      },
+      "right": {
+       "label": "The honest version",
+       "items": [
+        "Both equally easy",
+        "Deadlines only when real",
+        "Optional opt-ins unchecked"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Pre-selection is absolute",
+     "text": "Calabro's position: **a pre-checked opt-in is a dark pattern even when the team believes users benefit.**\n\nPeople shouldn't have to undo a choice they never made.\n\nThere is no version of “but it's useful for them” that makes the pre-check acceptable.",
+     "try": {
+      "type": "single",
+      "q": "The team argues the pre-checked newsletter genuinely benefits users. What is Calabro's position?",
+      "options": [
+       "It is still a dark pattern",
+       "It is acceptable if easily unchecked",
+       "It depends on the opt-out rate",
+       "It is acceptable outside the EU"
+      ],
+      "answer": 0,
+      "explain": "Users shouldn't have to undo a choice they never made."
+     }
+    },
+    {
+     "title": "Conversion isn't consent",
+     "text": "High acceptance or conversion rates don't prove users wanted the outcome. Observing a behaviour tells you what happened under those conditions — not what people would have chosen freely.\n\nAnd each of the six patterns breaks a basic heuristic: visibility of status, match with the real world, user control, consistency or error prevention.",
+     "try": {
+      "type": "single",
+      "q": "Acceptance of a consent banner is 94%. What does that prove?",
+      "options": [
+       "Only what happened under those conditions",
+       "That users are happy with the terms",
+       "That the design is clear enough",
+       "That the pattern is legally compliant"
+      ],
+      "answer": 0,
+      "explain": "Conversion isn't consent."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "How does this edition differ from 2025?",
+     "options": [
+      "It focuses on B2C and retail",
+      "It drops the user-control principle",
+      "It adds legal analysis of the EU rules",
+      "It covers enterprise software instead"
+     ],
+     "answer": 0,
+     "explain": "A retail-heavy follow-up to the 2025 edition."
+    },
+    {
+     "type": "single",
+     "q": "What is consent asymmetry?",
+     "options": [
+      "Accepting is easy; refusing is buried",
+      "Consent is requested twice",
+      "Different users see different terms",
+      "Consent can't be withdrawn later"
+     ],
+     "answer": 0,
+     "explain": "Make both paths equally easy."
+    },
+    {
+     "type": "single",
+     "q": "Which heuristic does a misleading button label break?",
+     "options": [
+      "Match between the system and the real world",
+      "Visibility of system status",
+      "Error prevention",
+      "Flexibility and efficiency of use"
+     ],
+     "answer": 0,
+     "explain": "The label should say where it goes."
+    },
+    {
+     "type": "single",
+     "q": "What should a form do when it rejects an entry?",
+     "options": [
+      "Keep the input and allow paste and undo",
+      "Clear the field to avoid confusion",
+      "Scroll to the top of the form",
+      "Disable submission until it is fixed"
+     ],
+     "answer": 0,
+     "explain": "Forms that punish errors are one of the six patterns."
+    },
+    {
+     "type": "single",
+     "q": "Who does the article say these patterns hurt most?",
+     "options": [
+      "Disabled users",
+      "New customers",
+      "Mobile users",
+      "Users outside the EU"
+     ],
+     "answer": 0,
+     "explain": "As in the 2025 edition, accessibility is where they break first."
+    }
+   ]
+  }
+ ]
+}

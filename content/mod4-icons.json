@@ -1,6 +1,6 @@
 {
  "id": "icons",
- "module": "design-principles",
+ "module": "interaction",
  "title": "Every Icon Needs a Label",
  "icon": "🏷️",
  "intro": "19 years of field data across 5 companies: unlabeled icons fail usability tests every time. Even \"universal\" icons aren't universal enough.",

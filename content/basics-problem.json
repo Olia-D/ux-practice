@@ -1,0 +1,144 @@
+{
+ "id": "basics-problem",
+ "module": "foundations",
+ "title": "UX Has a Basics Problem",
+ "icon": "🧩",
+ "intro": "Choosing a checkbox over a radio button is a logic question, not a matter of taste. Teams that re-debate settled conventions waste hours and ship contradictions developers spot immediately.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "UX Has a Basics Problem",
+   "learn": [
+    {
+     "title": "Three controls, three different logics",
+     "text": "**Checkbox** — independent options. Zero, one or many. A single checkbox is one yes/no.\n\n**Radio button** — exactly one of two or more mutually exclusive options.\n\n**Toggle / switch** — a binary state that takes effect immediately, like a setting.\n\nEach control signals a different logic. Picking the wrong one is a mismatch between what the interface says and what the system does.",
+     "try": {
+      "type": "single",
+      "q": "A user must pick exactly one billing cycle: monthly or yearly. Which control?",
+      "options": [
+       "Radio buttons",
+       "Two checkboxes",
+       "A toggle switch",
+       "A checkbox with a help icon explaining the rule"
+      ],
+      "answer": 0,
+      "explain": "Radio buttons mean exactly one of several mutually exclusive options."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Seen in review",
+       "items": [
+        "Parent switch over two checkboxes",
+        "Exclusive options as checkboxes",
+        "Required email as a disabled switch"
+       ]
+      },
+      "right": {
+       "label": "What the logic calls for",
+       "items": [
+        "Two independent checkboxes",
+        "Radio buttons — exactly one",
+        "Plain text: you'll always get this"
+       ]
+      }
+     }
+    },
+    {
+     "title": "The email preferences review",
+     "text": "A single on/off switch was meant to control separate email and SMS checkboxes underneath it. Nobody could say what the switch should show when only one was ticked, or what toggling it would do.\n\nA legally required email appeared as a preference with a **disabled switch** — offering a choice the user doesn't have.\n\nThe team spent close to an hour on questions that already had answers.",
+     "try": {
+      "type": "single",
+      "q": "A legally required notification is shown as a greyed-out toggle. What is wrong with that?",
+      "options": [
+       "It presents a choice the user doesn't have",
+       "Greyed-out controls fail colour contrast rules",
+       "Toggles should never be used for notifications",
+       "Legal notifications belong on a separate settings page entirely"
+      ],
+      "answer": 0,
+      "explain": "If there is no choice, say so in plain text instead of showing a disabled control."
+     }
+    },
+    {
+     "title": "Raise the floor, not just the ceiling",
+     "text": "The AI-era argument that designers bring “taste” usually means aesthetics. Calabro's order of work:\n\n**user goals → real system states → real user choices → the pattern that fits → then the visual polish**\n\nRe-debating settled conventions teaches the rest of the company that UX is common sense anyone can do.",
+     "try": {
+      "type": "single",
+      "q": "Where does visual polish come in Calabro's order of work?",
+      "options": [
+       "Last, after the pattern is chosen",
+       "First, to get buy-in from stakeholders",
+       "Alongside choosing the control",
+       "It isn't part of a designer's job at all"
+      ],
+      "answer": 0,
+      "explain": "Goals, states and choices decide the pattern; polish comes after."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Why does Calabro call control choice a logic question?",
+     "options": [
+      "The control has to match what the system actually does",
+      "Logic puzzles are a good interview exercise for designers",
+      "Because engineers prefer logical arguments to visual ones",
+      "Because usability testing can't resolve questions of taste"
+     ],
+     "answer": 0,
+     "explain": "A mismatch between control and system state is an error, not a preference."
+    },
+    {
+     "type": "single",
+     "q": "What does a single checkbox represent?",
+     "options": [
+      "One yes/no choice",
+      "One of several exclusive options",
+      "A setting that applies immediately",
+      "A required field that cannot be skipped"
+     ],
+     "answer": 0,
+     "explain": "Checkboxes are independent: zero, one or many; a single one is a yes/no."
+    },
+    {
+     "type": "single",
+     "q": "What is the cost of re-debating settled conventions, beyond the lost hours?",
+     "options": [
+      "It teaches the company that UX is just common sense",
+      "It delays the visual design phase of the project",
+      "It makes the design system harder to maintain",
+      "It leaves junior designers without clear mentorship"
+     ],
+     "answer": 0,
+     "explain": "It devalues the discipline and ships contradictions developers spot immediately."
+    },
+    {
+     "type": "single",
+     "q": "Which control is right for a setting that takes effect the moment it changes?",
+     "options": [
+      "A toggle switch",
+      "A radio button",
+      "A checkbox",
+      "A dropdown with Apply and Cancel buttons"
+     ],
+     "answer": 0,
+     "explain": "A toggle is a binary state that takes effect immediately."
+    },
+    {
+     "type": "single",
+     "q": "What does “raise the floor” mean in this article?",
+     "options": [
+      "Get the settled basics right everywhere",
+      "Set a higher bar for visual craft",
+      "Hire more senior designers per team",
+      "Move UX earlier in the delivery process"
+     ],
+     "answer": 0,
+     "explain": "The problem isn't the ceiling of ambition; it's basics that keep being got wrong."
+    }
+   ]
+  }
+ ]
+}

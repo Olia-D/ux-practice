@@ -1,0 +1,146 @@
+{
+ "id": "onboarding-help",
+ "module": "interaction",
+ "title": "Onboarding & In-App Help Strategy",
+ "icon": "💡",
+ "intro": "Help works when it appears at the moment of the decision, inside the workflow, written from the user's task. Tours, front-loaded wizards and tooltips carrying essential instructions are the patterns decades of data say don't work.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Onboarding & In-App Help Strategy",
+   "learn": [
+    {
+     "title": "Just in time, not up front",
+     "text": "**Just-in-time** — information appears when the user makes the next decision, not before they need to remember it.\n\n**Only what's necessary** — up-front steps only for what the system needs to work, or for security and compliance.\n\n**Explicit next action** — the minimum text needed to make the next step obvious. That is not the same as minimum text.",
+     "try": {
+      "type": "single",
+      "q": "What is the difference between “explicit next action” and “minimum text”?",
+      "options": [
+       "Enough words to make the step obvious",
+       "Fewer words, in a larger type size",
+       "A single sentence per screen, always",
+       "Text replaced by illustrations where possible"
+      ],
+      "answer": 0,
+      "explain": "Brevity is not the goal; clarity about the next step is."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Easy to ship, rarely works",
+       "items": [
+        "Product tour before any task",
+        "Optional setup forced up front",
+        "A ? icon holding key information",
+        "Floating help bubble, bottom right"
+       ]
+      },
+      "right": {
+       "label": "Just in time and in flow",
+       "items": [
+        "Guidance at first meaningful use",
+        "Ask only what the system needs now",
+        "Required help visible on the screen",
+        "Labels, helper text, empty states"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Relevance and recovery",
+     "text": "**Relevant only** — adapt to role, permissions, product access and workflow stage. Help for features a user can't reach is noise.\n\n**Prevent and recover** — structure, validation and review first; then clear correction when errors do happen.\n\n**Help inside the flow** — don't depend on separate docs the user has to go and find.",
+     "try": {
+      "type": "single",
+      "q": "An admin-only feature is explained in the tour every user sees. Which principle does this break?",
+      "options": [
+       "Relevant only",
+       "Just-in-time",
+       "Prevent and recover",
+       "Explicit next action"
+      ],
+      "answer": 0,
+      "explain": "Help should adapt to role, permissions and workflow stage."
+     }
+    },
+    {
+     "title": "Why this keeps happening",
+     "text": "Tools like Pendo make tours and tooltips **easy to add** — which is exactly why they get added.\n\nCalabro wrote the framework as a cross-team standard so onboarding stops becoming “a maze of popups, tours and misunderstood help widgets”.\n\nThe principles for any analytics or guidance tool: set the strategy before tagging anything, and start from the top tasks.",
+     "try": {
+      "type": "single",
+      "q": "Why does Calabro single out tools like Pendo?",
+      "options": [
+       "They make the weak patterns trivial to add",
+       "Their analytics are inaccurate",
+       "They can't be made accessible",
+       "They conflict with most design systems"
+      ],
+      "answer": 0,
+      "explain": "Ease of shipping is how the maze of popups accumulates."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "When should help appear?",
+     "options": [
+      "At the moment of the decision",
+      "Immediately after signup",
+      "At the end of the first session",
+      "Whenever the user has been idle"
+     ],
+     "answer": 0,
+     "explain": "Just-in-time, inside the workflow."
+    },
+    {
+     "type": "single",
+     "q": "Which up-front step is justified?",
+     "options": [
+      "Something the system needs to function",
+      "A guided tour of the main features",
+      "A preferences questionnaire",
+      "An invitation to connect integrations"
+     ],
+     "answer": 0,
+     "explain": "Or security and compliance requirements."
+    },
+    {
+     "type": "single",
+     "q": "What's wrong with putting essential instructions in a tooltip?",
+     "options": [
+      "Required help has to be visible on the screen",
+      "Tooltips are hard to translate",
+      "Tooltips slow the page down",
+      "Tooltips can't contain formatted text"
+     ],
+     "answer": 0,
+     "explain": "An icon-only trigger hides what people need."
+    },
+    {
+     "type": "single",
+     "q": "Where should required guidance live instead of a separate help site?",
+     "options": [
+      "Inside the flow",
+      "In a searchable knowledge base",
+      "In the welcome email",
+      "In a downloadable PDF guide"
+     ],
+     "answer": 0,
+     "explain": "Help inside the flow is one of the six principles."
+    },
+    {
+     "type": "single",
+     "q": "What does “prevent and recover” put first?",
+     "options": [
+      "Structure, validation and review",
+      "A clear error message",
+      "An undo button on every action",
+      "A support contact link"
+     ],
+     "answer": 0,
+     "explain": "Prevention first; clear correction when errors still happen."
+    }
+   ]
+  }
+ ]
+}

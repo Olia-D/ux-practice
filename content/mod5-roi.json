@@ -1,6 +1,6 @@
 {
  "id": "roi",
- "module": "business-impact",
+ "module": "business",
  "title": "Calculating the ROI of UX",
  "icon": "📈",
  "intro": "Stakeholders see UX as a 'nice-to-have' until you put a number on it. This 5-step framework turns usability improvements into dollars saved or earned.",

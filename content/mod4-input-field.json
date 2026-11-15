@@ -1,6 +1,6 @@
 {
  "id": "input-field",
- "module": "design-principles",
+ "module": "controls",
  "title": "The Anatomy of an Input Field",
  "icon": "📝",
  "intro": "Every input field has up to **7 elements**. Most teams get at least 2 wrong. The required indicator debate alone has tripped up entire design systems.",
