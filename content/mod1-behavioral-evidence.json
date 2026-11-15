@@ -3,142 +3,140 @@
  "module": "evidence",
  "title": "Behavioral > Self-Reported Evidence",
  "icon": "🧠",
- "intro": "Users are consistently unreliable narrators of their own behavior. Not because they're dishonest — because memory is reconstructive, social desirability is real, and people genuinely can't articulate why they do what they do.",
+ "intro": "When the question is usability, the best evidence comes from observing behaviour. The closer you get to real tasks, real constraints and real consequences, the more trustworthy the data.",
  "topics": [
   {
-   "id": "the-gap",
-   "title": "The Say–Do Gap",
+   "id": "main",
+   "title": "Behavioral > Self-Reported Evidence",
    "learn": [
     {
-     "title": "Two types of data, two different questions",
-     "text": "**Self-reported data** (surveys, interviews, preference ratings) answers:\n→ What do users **think**?\n\n**Behavioral data** (task completion, clicks, time, errors) answers:\n→ What do users **do**?\n\nConflating them leads to overconfident product decisions. They answer fundamentally different questions.",
+     "title": "Three categories, not two",
+     "text": "**Behavioural evidence** — task completion or failure, critical errors and where they happen, backtracking and hesitation, time on task when meaningful, moments where the user needs help, accessibility outcomes like keyboard operability.\n\n**Perception evidence** — what the participant believed the system was doing, what they thought a control meant, what goal they were pursuing, what felt missing, what they expected next.\n\n**Sentiment** — “I liked it”, “it feels modern”, “it was intuitive”, ratings and NPS-style prompts.",
+     "try": {
+      "type": "single",
+      "q": "A participant says they thought the “Archive” button would delete the item. Which category is that?",
+      "options": [
+       "Perception evidence",
+       "Behavioural evidence",
+       "Sentiment",
+       "A usability defect"
+      ],
+      "answer": 0,
+      "explain": "What they believed the system was doing — valuable, but not a record of what happened."
+     },
      "visual": {
       "type": "compare",
       "left": {
-       "label": "Self-Reported",
+       "label": "Behavioural",
        "items": [
-        "Attitudes",
-        "Motivations",
-        "Satisfaction",
-        "Intent"
+        "Completed or failed",
+        "Where they backtracked",
+        "Where they needed help"
        ]
       },
       "right": {
-       "label": "Behavioral",
+       "label": "Perception and sentiment",
        "items": [
-        "Task success/failure",
-        "Time on task",
-        "Error rates",
-        "Click patterns"
+        "What they thought a control meant",
+        "What they expected next",
+        "“It felt intuitive”"
        ]
       }
-     },
-     "try": {
-      "type": "single",
-      "q": "\"82% of users said they were satisfied with the checkout flow.\" What type of evidence is this?",
-      "options": [
-       "Self-reported",
-       "Behavioral",
-       "Mixed methods",
-       "Heuristic"
-      ],
-      "answer": 0,
-      "explain": "Satisfaction ratings are self-reported data — they tell you what users THINK, not what they DO."
      }
     },
     {
-     "title": "Where the gap hits hardest",
-     "text": "**Feature preferences:** Users say they want more features. Behavioral data shows they use fewer than they think.\n\n**Task difficulty:** Users rate tasks as \"easy\" that actually took twice as long and produced twice the errors.\n\n**Navigation confidence:** Users say they found what they looked for. Eye-tracking shows they scanned past it multiple times.\n\n**Onboarding feedback:** Users say onboarding was clear. Activation and time-to-value data tells the real story.",
+     "title": "The rule of thumb",
+     "text": "**If behavioural evidence and perception evidence conflict, behavioural evidence wins.**\n\nThat doesn't mean ignoring what the person said. It means interpreting the statement in light of what they did — the quote explains the behaviour, it doesn't override it.\n\nA quote from a discovery interview, a post-task rating and a screen recording of task failure are all data. Treating them as interchangeable is the mistake.",
      "try": {
       "type": "single",
-      "q": "Users rate a new feature as \"easy to use\" in a post-task survey, but task completion was only 40%. Which data point should drive your next design decision?",
+      "q": "A user rates the task 4/5 for ease but failed it twice on video. Which do you lead with?",
       "options": [
-       "The 40% task completion rate",
-       "The 'easy to use' rating",
-       "Average the two",
-       "Discard both and survey more users"
+       "The observed failures",
+       "The rating, since it's quantified",
+       "Whichever matches other studies",
+       "Neither — the result is inconclusive"
       ],
       "answer": 0,
-      "explain": "Behavioral data (task completion) wins. Users genuinely can't accurately assess their own performance."
+      "explain": "Behavioural evidence wins; the rating then helps explain why they felt it went well."
      }
     },
     {
-     "title": "Why this happens",
-     "text": "It's not that users are liars. Three real mechanisms are at work:\n\n**Reconstructive memory** — People don't replay events; they reconstruct them, filling gaps with what \"must have\" happened.\n\n**Social desirability** — People answer the way they think a competent, attentive person would answer.\n\n**Introspection limits** — People genuinely don't know or can't articulate why they do what they do. \"I always read error messages\" → they don't.",
+     "title": "Why teams get this wrong",
+     "text": "Three predictable reasons, and none of them is that users lie:\n\n**1. Perception data is easy to package.** A clean quote looks good on a slide and travels well through an organisation.\n\n**2. It often aligns with what stakeholders already want to be true.** Confirmation bias turns a single quote into a decision.\n\n**3. Lean UX culture trained teams to over-index on lightweight discovery.** Interview-driven discovery crowds out observation — the reason that annoys Calabro most, because the HCI field is not new.",
      "try": {
       "type": "single",
-      "q": "A user in a study says: \"I carefully read all the error messages.\" Video shows they dismissed every error without reading. Why?",
+      "q": "Why does perception data travel so well in organisations?",
       "options": [
-       "Social desirability",
-       "They're deliberately lying to the researcher",
-       "The video recording is inaccurate",
-       "Error messages weren't visible enough"
+       "A clean quote packages easily for a slide",
+       "It is statistically more reliable",
+       "It is cheaper to collect",
+       "Stakeholders request it directly"
       ],
       "answer": 0,
-      "explain": "Social desirability: users describe how a competent person would behave, not what they actually did. (They're describing the ideal version of their behavior.)"
+      "explain": "Easy to package, and it often matches what people already believe."
      }
     }
    ],
    "test": [
     {
      "type": "single",
-     "q": "What does self-reported data primarily tell you?",
+     "q": "What is the rule of thumb when the two kinds of evidence conflict?",
      "options": [
-      "What users think, feel, or believe",
-      "What users actually do",
-      "How long tasks take",
-      "Where users click"
+      "Behavioural evidence wins",
+      "The larger sample wins",
+      "The more recent study wins",
+      "Treat the result as inconclusive"
      ],
      "answer": 0,
-     "explain": "Self-reported data captures attitudes, motivations, and preferences — not actual behavior."
+     "explain": "You still interpret the statement — you just don't let it override what happened."
     },
     {
      "type": "single",
-     "q": "Users say they prefer fewer features, but analytics show they use 12 features regularly. What's this an example of?",
+     "q": "Which of these is behavioural evidence?",
      "options": [
-      "The say–do gap",
-      "Feature creep",
-      "Bad analytics",
-      "Statistical noise"
+      "Backtracking and hesitation",
+      "A satisfaction rating",
+      "What the user expected to happen",
+      "A preference between two designs"
      ],
      "answer": 0,
-     "explain": "Classic say–do gap: what users report about their behavior doesn't match their actual behavior."
+     "explain": "Along with completion, errors, time on task and accessibility outcomes."
     },
     {
      "type": "single",
-     "q": "Which of these is behavioral evidence?",
+     "q": "Which reason annoys Calabro most?",
      "options": [
-      "Task completion rate of 73%",
-      "4.2/5 satisfaction score",
-      "\"I found the navigation intuitive\"",
-      "Net Promoter Score of 45"
+      "Lean UX over-indexing on lightweight discovery",
+      "Stakeholders asking for quotes",
+      "Survey tools being too easy to use",
+      "Researchers avoiding analytics"
      ],
      "answer": 0,
-     "explain": "Task completion rate is behavioral — it measures what users did, not what they said."
+     "explain": "Because the HCI field is not new — this was settled decades ago."
     },
     {
      "type": "single",
-     "q": "Why are users \"unreliable narrators\" of their own behavior?",
+     "q": "What makes evidence more trustworthy, according to the opening?",
      "options": [
-      "Reconstructive memory, social desirability, and introspection limits",
-      "They're usually not paying full attention during research sessions or surveys",
-      "They want to sabotage the research",
-      "They're confused by the questions"
+      "Real tasks, real constraints, real consequences",
+      "A larger and more diverse sample",
+      "Triangulating three or more methods",
+      "Using a validated instrument"
      ],
      "answer": 0,
-     "explain": "Three mechanisms: memory reconstruction, desire to appear competent, and genuine inability to explain their own actions."
+     "explain": "The closer you get to those, the better the data."
     },
     {
      "type": "single",
-     "q": "Post-study survey says onboarding was \"clear and helpful.\" Activation data shows 60% of users never complete setup. What should you trust?",
+     "q": "What is wrong with treating a quote, a rating and a screen recording as the same thing?",
      "options": [
-      "Activation data",
-      "The survey — users know their own experience",
-      "Neither — the sample size is too small",
-      "The survey — it's more recent data"
+      "They answer different questions",
+      "Quotes are less reliable than ratings",
+      "Recordings take longer to analyse",
+      "Ratings need a larger sample"
      ],
      "answer": 0,
-     "explain": "Behavioral data (activation rate) wins when it conflicts with self-report. Always. Behavioral evidence trumps self-report."
+     "explain": "All three are data; the error is interchangeability."
     }
    ]
   }

@@ -126,16 +126,15 @@
      "explain": "The burden of proof is on whoever wants to break from a best practice. They need behavioral data, not opinions."
     },
     {
-     "type": "single",
-     "q": "Icon-only navigation was tested across seven organizations. What was the consistent finding?",
+     "q": "Stakeholders claim their users have memorised the product's icon language. What does the icon research actually show?",
      "options": [
-      "Even power users struggled without labels",
-      "Power users performed fine without any labels",
-      "Labels slowed users down",
-      "Results varied by industry"
+      "Even experienced users rely on position, not recognition",
+      "Power users recognise icons reliably after six months",
+      "Icon recognition improves with consistent styling",
+      "Memorisation works when the icon set is small"
      ],
      "answer": 0,
-     "explain": "In every test, participants — including power users — struggled with icon-only navigation. Labels consistently help."
+     "explain": "When the icons were shuffled, experienced users were lost — they had memorised locations, not meanings."
     },
     {
      "type": "single",

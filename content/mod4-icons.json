@@ -124,16 +124,15 @@
      "explain": "Users had memorized where things were on screen, not what the icons looked like. Shuffling positions broke their workflow. (They had memorized location, not the icon.)"
     },
     {
-     "type": "single",
-     "q": "Why does the article say Google can get away with unlabeled icons but your product can't?",
+     "q": "Why does the article say Google can use unlabeled icons when your product can't?",
      "options": [
-      "Google's market dominance lets it skip usability norms others can't afford to",
-      "Google's icons are simply better designed and tested than the icons most companies use",
-      "Google has trained users over decades",
-      "Google only uses universal icons"
+      "Google's focus isn't usability — it's a free, connected suite",
+      "Google's icons are better designed than most",
+      "Google users are more technical than average",
+      "Google has tested its icons far more thoroughly"
      ],
      "answer": 0,
-     "explain": "Google's dominance means users will figure things out regardless. Most products don't have that luxury."
+     "explain": "Popular apps using a pattern doesn't make it a best practice."
     },
     {
      "type": "single",

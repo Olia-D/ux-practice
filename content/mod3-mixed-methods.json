@@ -150,16 +150,15 @@
      "explain": "Contradictions are valuable signals. A feature users love in concept but struggle with in practice points to an execution problem, not a data problem."
     },
     {
-     "type": "single",
-     "q": "The self-check for real mixed methods includes 5 criteria. Which of these is one of them?",
+     "q": "What does Calabro offer teams unsure whether their study really mixes?",
      "options": [
-      "Findings changed because of how the methods interacted",
-      "At least 100 participants were used across the methods",
-      "Both methods used the same data collection tool",
-      "Results were presented in a single slide deck"
+      "A checklist to work through",
+      "A five-point scoring rubric",
+      "A decision tree by research question",
+      "A template research plan"
      ],
      "answer": 0,
-     "explain": "If one method alone would have reached the same result, the study wasn't truly mixed. The methods should produce different — and richer — findings together."
+     "explain": "If the team can't say how the methods worked together, start with the checklist and build from there."
     }
    ]
   }

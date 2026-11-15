@@ -3,184 +3,140 @@
  "module": "career",
  "title": "2026 Predictions for UX",
  "icon": "🔮",
- "intro": "The divide isn't between companies that use AI and those that don't. It's between those that make UX decisions from systems and evidence, and those that run on gut feel and politics.",
+ "intro": "His ten predictions for 2026, published in the 2025 year-in-review — “the tradition of me making ill-thought-out predictions”. He scores his 2025 set at about 8.5/10.",
  "topics": [
   {
-   "id": "core",
-   "title": "Core Concepts",
+   "id": "main",
+   "title": "2026 Predictions for UX",
    "learn": [
     {
-     "title": "System-driven vs. vibes-driven orgs",
-     "text": "The defining split in UX maturity isn't budget or headcount. It's **how decisions get made**.\n\n**System-driven orgs** use repeatable processes:\n→ Research informs the roadmap (not validates it after)\n→ Design decisions reference evidence and best practices\n→ Quality is measured by user outcomes, not stakeholder approval\n→ Standards exist and are followed\n\n**Vibes-driven orgs** rely on:\n→ The loudest voice in the room\n→ \"I think users would want...\"\n→ Copy what competitors are doing\n→ Whatever the CEO saw at a conference\n\nMost orgs are a mix — but the direction they're trending matters more than where they are today.",
+     "title": "What senior researchers get hired for",
+     "text": "**Judgment, not method coverage.** The strongest researchers will be hired less for what methods they can run and more for **what they can stop**: saying no, slowing teams down, calling out weak logic.\n\n**Fixing inputs, not running studies.** The best will be pulled upstream to define questions, success criteria and evidence standards before any research happens — less visible work, much more valuable.\n\n**ROI becomes a must-have.** Not inherently a researcher's job, but squarely within our strengths.",
+     "try": {
+      "type": "single",
+      "q": "What does Calabro predict senior researchers will be valued for?",
+      "options": [
+       "What they can stop",
+       "How many studies they run",
+       "Which methods they have mastered",
+       "The size of the research team they manage"
+      ],
+      "answer": 0,
+      "explain": "Saying no, slowing teams down and calling out weak logic become core expectations."
+     },
      "visual": {
       "type": "compare",
       "left": {
-       "label": "System-driven",
+       "label": "Hired for in the past",
        "items": [
-        "Evidence-based decisions",
-        "Repeatable research process",
-        "Outcomes measured by user data",
-        "Standards documented and followed"
+        "Methods you can run",
+        "Studies delivered",
+        "Insight volume"
        ]
       },
       "right": {
-       "label": "Vibes-driven",
+       "label": "Valued in 2026",
        "items": [
-        "HiPPO decisions",
-        "Ad-hoc research (if any)",
-        "Success = stakeholder approval",
-        "\"Best practices\" = whatever feels right"
+        "What you can stop",
+        "Questions and evidence standards set upstream",
+        "Impact shown in cost, risk or revenue"
        ]
       }
-     },
-     "try": {
-      "type": "single",
-      "q": "A team skips research because \"the CEO already decided the direction.\" What type of org is this?",
-      "options": [
-       "Vibes-driven — decisions come from authority, not evidence",
-       "System-driven — the CEO is part of the system and sets its direction",
-       "Efficient — research would slow them down",
-       "Mature — they trust leadership"
-      ],
-      "answer": 0,
-      "explain": "When decisions come from authority and gut feel rather than evidence, that's vibes-driven, regardless of how senior the decision-maker is."
      }
     },
     {
-     "title": "AI becomes useful (not magical)",
-     "text": "The hype cycle around AI in UX is settling into reality:\n\n**What AI is actually good for:**\n→ Speeding up analysis of qualitative data\n→ Surfacing patterns across large datasets\n→ Generating first-draft prototypes to react to\n→ Automating routine tagging and categorization\n\n**What AI still can't do:**\n→ Replace watching a real user struggle\n→ Generate surprise — the most valuable research outcome\n→ Understand context and culture\n→ Know when a best practice doesn't apply\n\nAI is a **tool**, not a replacement for UX judgment. Teams that use it to speed up research will outperform those that use it to skip research.",
-     "visual": {
-      "type": "compare",
-      "left": {
-       "label": "AI as tool (good)",
-       "items": [
-        "Speeds up transcription",
-        "Helps spot patterns",
-        "Generates starting points",
-        "Augments researcher judgment"
-       ]
-      },
-      "right": {
-       "label": "AI as replacement (bad)",
-       "items": [
-        "\"Synthetic users\"",
-        "Skipping real research",
-        "Auto-generated insights",
-        "Removing humans from the loop"
-       ]
-      }
-     },
+     "title": "The split in UX maturity",
+     "text": "Companies will fall into two camps, and the gap will become impossible to ignore.\n\n**System-driven orgs** can explain decisions, trade-offs and ROI.\n**Vibes-driven orgs** keep shipping confident-looking products that underperform once they meet real market conditions.\n\nRelated: **ResearchOps will matter more than ever** — one great researcher can't fix a broken system. Teams that improve will invest in templates, decision logs, evidence standards and repeatable workflows. The ones that don't will keep burning out their strongest people.",
      "try": {
       "type": "single",
-      "q": "Your team wants to use AI to replace moderated usability testing. What's the biggest risk?",
+      "q": "What will separate the two camps of UX maturity?",
       "options": [
-       "AI can't generate surprise",
-       "AI is too expensive for research",
-       "AI gives biased results",
-       "AI can't create video recordings"
+       "Whether they can explain decisions, trade-offs and ROI",
+       "How much they spend on research",
+       "Whether they employ dedicated researchers",
+       "How quickly they ship new features"
       ],
       "answer": 0,
-      "explain": "The value of real research is discovering things you didn't expect. AI can only work with patterns it's seen before. (The most valuable research outcome.)"
+      "explain": "One group can explain; the other ships confident-looking products that underperform."
      }
     },
     {
-     "title": "Where UX careers are heading",
-     "text": "Key trends shaping UX careers:\n\n**One senior > many juniors.** Companies are favoring one experienced UX person who can own strategy over several juniors who need direction. The hiring market rewards depth.\n\n**Qualitative research comes back.** The quant-heavy era is recalibrating. Teams are rediscovering that behavioral insights from watching real users can't be replaced by dashboards.\n\n**The heuristics still work.** Nielsen's 10 usability heuristics apply to AR, VR, and AI interfaces just as they do to web forms. New tech succeeds in spite of its usability, not because of it.\n\n**Micro-tools rise.** UX practitioners build their own lightweight tools for internal workflows — not products to sell, but scripts and utilities that solve real daily friction.",
-     "visual": {
-      "type": "compare",
-      "left": {
-       "label": "Fading",
-       "items": [
-        "Hiring many juniors",
-        "Pure quant / analytics",
-        "\"Move fast, skip research\"",
-        "AI replaces researchers"
-       ]
-      },
-      "right": {
-       "label": "Rising",
-       "items": [
-        "One senior who owns strategy",
-        "Qualitative comeback",
-        "Evidence-based speed",
-        "AI augments researchers"
-       ]
-      }
-     },
+     "title": "Four more",
+     "text": "**Synthetic users quietly fall out of favour** — what looks like insight is often automated bias confirmation. By late 2026, AI proxy users start to feel embarrassing in serious research orgs.\n\n**Heuristic reviews regain credibility as a senior skill** — expert evaluation grounded in task flow and real context, as teams tire of expensive studies answering obvious questions.\n\n**“Delight” stays misunderstood** — more bad animation, less proper labelling, more friction.\n\n**Accessibility stops being a checklist** — discussed as failure modes, legal exposure and task breakdowns instead.\n\n**Reporting gets shorter and sharper** — concise readouts, shared docs and short clips, with real recommendations.",
      "try": {
       "type": "single",
-      "q": "A startup is deciding between hiring 3 junior UX researchers or 1 senior. Based on current trends, which is the better investment?",
+      "q": "Why does he expect heuristic reviews to regain credibility?",
       "options": [
-       "1 senior who can own strategy and mentor",
-       "3 juniors, for more research coverage per sprint",
-       "It depends on the budget",
-       "Neither — use AI instead"
+       "Teams tire of expensive studies answering obvious questions",
+       "Automated tools now run them reliably",
+       "They are cheaper than recruiting participants",
+       "Regulators have started requiring expert review"
       ],
       "answer": 0,
-      "explain": "The trend is toward fewer, more experienced researchers who can own strategy, not just execute studies."
+      "explain": "Expert-driven evaluation grounded in task flow and real-world context."
      }
     }
    ],
    "test": [
     {
      "type": "single",
-     "q": "What defines a 'system-driven' UX organization?",
+     "q": "Where were these predictions published?",
      "options": [
-      "Decisions are based on evidence and repeatable processes",
-      "They use the latest design tools and keep their libraries updated",
-      "They have a large UX team",
-      "They follow what competitors do"
+      "In his 2025 year-in-review post",
+      "As a WCAG conformance target for each release",
+      "In a conference keynote",
+      "In the Reframing series"
      ],
      "answer": 0,
-     "explain": "System-driven means decisions come from evidence and repeatable processes, not gut feel or authority."
+     "explain": "The year-in-review ends with article groupings, a top five, and the predictions."
     },
     {
      "type": "single",
-     "q": "What is the most valuable outcome of real user research that AI cannot replicate?",
+     "q": "How does he score his previous year's predictions?",
      "options": [
-      "Surprise — discovering things you didn't expect",
-      "Speed — getting results faster",
-      "Scale — testing with more users",
-      "Cost — reducing research budgets and timelines"
+      "About 8.5 out of 10",
+      "Roughly half right",
+      "He doesn't revisit them",
+      "Nine out of ten"
      ],
      "answer": 0,
-     "explain": "AI works with existing patterns. The most valuable research findings are surprises that change your understanding."
+     "explain": "One flat-out wrong and one partially right, by his own assessment."
     },
     {
      "type": "single",
-     "q": "What hiring trend is the author predicting for UX?",
+     "q": "What does he predict for synthetic users?",
      "options": [
-      "Companies prefer one senior researcher over several juniors",
-      "Companies are hiring more junior researchers than ever before",
-      "AI is replacing all UX roles",
-      "UX researchers are becoming PMs"
+      "They quietly fall out of favour",
+      "They replace early-stage interviews",
+      "They become standard for screening",
+      "Regulators restrict their use"
      ],
      "answer": 0,
-     "explain": "The trend is toward fewer, more experienced UX professionals who can own strategy and deliver depth."
+     "explain": "“Automated bias confirmation” that starts to feel embarrassing in serious orgs."
     },
     {
      "type": "single",
-     "q": "In a 'vibes-driven' org, how are UX decisions typically made?",
+     "q": "How will accessibility be framed, in his prediction?",
      "options": [
-      "By the loudest voice, gut feel",
-      "By structured research processes agreed in advance",
-      "By data analysis teams",
-      "By democratic team voting"
+      "As failure modes, legal exposure and task breakdowns",
+      "As a WCAG conformance target",
+      "As a design system responsibility",
+      "As part of the QA process"
      ],
      "answer": 0,
-     "explain": "Vibes-driven orgs rely on authority, gut instinct, and competitive mimicry rather than evidence. Or copying competitors."
+     "explain": "Less optional, more operational."
     },
     {
      "type": "single",
-     "q": "Nielsen's 10 usability heuristics are predicted to:",
+     "q": "What does he expect to happen to research reporting?",
      "options": [
-      "Stay relevant even for AR, VR, and AI interfaces",
-      "Become obsolete with new technology",
-      "Be replaced by AI-generated guidelines within a few years",
-      "Only apply to web and mobile"
+      "Shorter readouts with real recommendations",
+      "More detailed methodology sections",
+      "A move to live dashboards",
+      "Standardised templates across the industry"
      ],
      "answer": 0,
-     "explain": "The heuristics are fundamental enough to apply to any interface paradigm. New tech often succeeds in spite of its usability."
+     "explain": "Researchers who can't summarise impact in plain language will struggle."
     }
    ]
   }

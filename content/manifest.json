@@ -419,7 +419,7 @@
      "title": "Behavioral > Self-Reported Evidence",
      "icon": "🧠",
      "source": "https://trevorcalabro.substack.com/p/behavioral-evidence-self-reported",
-     "summary": "What people say and what people do are systematically different.",
+     "summary": "Behaviour, perception and sentiment are three different things — and behaviour wins when they conflict.",
      "file": "content/mod1-behavioral-evidence.json"
     },
     {
@@ -809,7 +809,7 @@
      "title": "Why I Stay an IC",
      "icon": "💎",
      "source": "https://trevorcalabro.substack.com/p/why-i-stay-an-ic",
-     "summary": "IC influence via insight > manager influence via authority.",
+     "summary": "Companies say they value research; what they value is confidence. Influence comes from reframing decisions.",
      "file": "content/mod6-ic.json"
     },
     {
@@ -817,7 +817,7 @@
      "title": "UX Is Thankless (That's Good)",
      "icon": "🏅",
      "source": "https://trevorcalabro.substack.com/p/ux-is-thankless-and-thats-a-good",
-     "summary": "Hedonic adaptation: improvements become invisible baseline.",
+     "summary": "Hedonic adaptation explains why good UX gets forgotten — and why that's the work succeeding.",
      "file": "content/mod6-thankless.json"
     },
     {
@@ -825,7 +825,7 @@
      "title": "2026 Predictions for UX",
      "icon": "🔮",
      "source": "https://trevorcalabro.substack.com/p/2025-in-review",
-     "summary": "System-driven vs vibes-driven orgs.",
+     "summary": "Ten predictions for 2026, from the year-in-review: judgment over methods, ROI, and a split in UX maturity.",
      "file": "content/mod6-predictions.json"
     },
     {

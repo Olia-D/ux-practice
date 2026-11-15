@@ -3,163 +3,140 @@
  "module": "career",
  "title": "Why I Stay an IC",
  "icon": "💎",
- "intro": "Management isn't the only path to impact. Senior IC researchers influence decisions through insight, not authority — and that influence can be more durable than a manager's.",
+ "intro": "His case for why senior UX researchers don't need a management title to lead.",
  "topics": [
   {
-   "id": "core",
-   "title": "Core Concepts",
+   "id": "main",
+   "title": "Why I Stay an IC",
    "learn": [
     {
-     "title": "Insight vs. authority",
-     "text": "Managers influence through **authority** — they assign work, set priorities, approve decisions.\n\nSenior ICs influence through **insight** — they change how teams think about problems by surfacing evidence others don't have.\n\nAuthority works top-down and stops at your org boundary. Insight travels horizontally — a well-placed finding can shift strategy across the entire company.\n\nThe IC path isn't \"staying small.\" It's choosing a different lever.",
+     "title": "What companies actually value",
+     "text": "A lot of companies say they value research. What they really value is **confidence**.\n\nIf you're not careful, research becomes the thing that supplies it: “go test this”, or worse, “get a quick user quote to support this deck”.\n\nThe context is the end of what he calls the **“easy money era”** of the early 2020s, when teams could build freely, fail often and try again.",
+     "try": {
+      "type": "single",
+      "q": "What does Calabro say companies really value, as opposed to what they say?",
+      "options": [
+       "Confidence",
+       "Speed of delivery above all",
+       "Evidence",
+       "User satisfaction"
+      ],
+      "answer": 0,
+      "explain": "Which is how research gets reduced to supplying it after the decision."
+     }
+    },
+    {
+     "title": "The “customer representative” trap",
+     "text": "Under delivery pressure, PMs shortcut user data — summarising Slack messages, speaking for the customer from memory.\n\nIt isn't that they're anti-user. They're moving fast, and real research seems slow **unless someone shows them a better way**.\n\nA senior IC is positioned to do exactly that:\n\n• Sit in roadmap planning and say “before we commit, can I show you what users are actually trying to do?”\n• Reframe a feature spec into a hypothesis testable **this week** instead of next quarter\n• Take a vague business goal and show how it maps — or doesn't — to actual behaviour\n• Work **across teams**, not just within a reporting structure",
+     "try": {
+      "type": "single",
+      "q": "Why do PMs end up acting as the customer representative?",
+      "options": [
+       "Research seems slow unless shown a better way",
+       "They distrust research methods",
+       "They are measured on user satisfaction",
+       "They have been trained to do it"
+      ],
+      "answer": 0,
+      "explain": "It's delivery pressure, not hostility to users."
+     },
      "visual": {
       "type": "compare",
       "left": {
        "label": "Manager influence",
        "items": [
-        "Through authority",
-        "Bounded by org chart",
-        "Allocates resources",
-        "Stops when role changes"
+        "Flows through reporting lines",
+        "Assigns and approves",
+        "Bounded by the org chart"
        ]
       },
       "right": {
-       "label": "IC influence",
+       "label": "Senior IC influence",
        "items": [
-        "Through insight",
-        "Crosses org boundaries",
-        "Changes how people think",
-        "Persists after you leave"
+        "Shows up in roadmap planning",
+        "Reframes specs into testable hypotheses",
+        "Works across teams"
        ]
       }
-     },
-     "try": {
-      "type": "single",
-      "q": "A UX finding changes how the product team frames their entire roadmap. What kind of influence is this?",
-      "options": [
-       "Insight-driven — it changed thinking",
-       "Authority-driven — it changed the roadmap",
-       "Neither — roadmap decisions are PM territory",
-       "Political — it's about internal dynamics"
-      ],
-      "answer": 0,
-      "explain": "Changing how people think about problems is insight-driven influence. No authority needed. Not reporting lines."
      }
     },
     {
-     "title": "What senior IC work actually looks like",
-     "text": "Senior IC impact isn't about doing more studies. It's about:\n\n→ **Choosing the right question** — not \"test this flow\" but \"should we build this at all?\"\n→ **Connecting dots across research** — seeing the pattern in 12 studies that nobody else noticed\n→ **Building research capability** — teaching teams to think in evidence, not just commissioning studies\n→ **Shaping methodology** — knowing when a quick guerrilla test beats a 6-week study\n\nThe shift from mid to senior IC is from \"doing research\" to \"making research matter.\"",
-     "visual": {
-      "type": "compare",
-      "left": {
-       "label": "Mid-level IC",
-       "items": [
-        "Executes assigned studies",
-        "Reports findings",
-        "Follows the brief",
-        "Measures what's asked"
-       ]
-      },
-      "right": {
-       "label": "Senior IC",
-       "items": [
-        "Chooses what to study",
-        "Connects findings to strategy",
-        "Challenges the brief",
-        "Defines what to measure"
-       ]
-      }
-     },
+     "title": "Tactics that work",
+     "text": "**Ask reframing questions** — change what the team is deciding, not just what gets tested.\n**Think outcomes over artifacts** — the deck isn't the deliverable; the decision is.\n**Get good at moving faster** — speed is what buys you the seat.\n\nHe also reframes research as a way to **de-risk investment**: not just user-centred, but cost-conscious.\n\nAnd his rule of thumb: *“if you ever find yourself talking to non-UXers about cognitive load, you're doing it wrong.”*",
      "try": {
       "type": "single",
-      "q": "A PM asks you to test a checkout flow redesign. You suspect the real problem is earlier in the funnel. What does a senior IC do?",
+      "q": "What is his rule of thumb about talking to non-UXers?",
       "options": [
-       "Push back on the brief and propose studying the real friction point",
-       "Test the checkout flow exactly as requested and report the results on time",
-       "Test both and let the PM decide",
-       "Escalate to the PM's manager"
+       "Don't talk to them about cognitive load",
+       "Always bring a working prototype to the meeting",
+       "Lead with the method",
+       "Translate findings into personas"
       ],
       "answer": 0,
-      "explain": "Senior ICs challenge the brief when the question is wrong. Testing the wrong thing perfectly still wastes everyone's time."
-     }
-    },
-    {
-     "title": "The IC ceiling is a myth",
-     "text": "Common objections to the IC path:\n\n\"You can't grow without managing people\" — Growth means expanding your **impact radius**, not your headcount.\n\n\"You'll hit a pay ceiling\" — Companies with mature UX tracks have staff/principal levels that match director comp.\n\n\"You'll lose influence\" — The opposite: a senior IC who regularly surfaces insights that shift strategy has more influence than a manager buried in 1:1s and hiring.\n\nThe real risk isn't staying IC. It's becoming a **manager who stops doing the work** that made them valuable in the first place.",
-     "try": {
-      "type": "single",
-      "q": "A colleague says: \"You'll never have real influence unless you manage people.\" What's the strongest counter-argument?",
-      "options": [
-       "Influence comes from insight that changes decisions, not from having direct reports",
-       "Some people just aren't cut out for management",
-       "ICs can always become managers later",
-       "Management is overrated"
-      ],
-      "answer": 0,
-      "explain": "The strongest argument is about the mechanism of influence: insight changes decisions directly, authority changes them through hierarchy."
+      "explain": "Speak in their terms — risk, cost, outcomes."
      }
     }
    ],
    "test": [
     {
      "type": "single",
-     "q": "What is the primary way a senior IC researcher influences decisions?",
+     "q": "How does a senior IC reframe research for stakeholders?",
      "options": [
-      "Through insight that changes how teams think about problems",
-      "Through formal authority and position in the organisation chart",
-      "Through managing a research team",
-      "Through presenting at conferences"
+      "As a way to de-risk investment",
+      "As a quality gate before release",
+      "As a service with a fixed turnaround",
+      "As a design input"
      ],
      "answer": 0,
-     "explain": "Senior ICs influence through insight — surfacing evidence that shifts how teams frame problems and make decisions."
+     "explain": "Not just user-centred, but cost-conscious."
     },
     {
      "type": "single",
-     "q": "What distinguishes a senior IC from a mid-level IC?",
+     "q": "What happens to research when a company values confidence above all?",
      "options": [
-      "Choosing what to study and connecting findings to strategy",
-      "Running more studies per quarter",
-      "Using more advanced research methods and statistical techniques",
-      "Having more years of experience"
+      "It gets used to justify decisions already made",
+      "It gets more budget than it needs",
+      "As a service with a fixed turnaround time",
+      "It moves earlier in the process"
      ],
      "answer": 0,
-     "explain": "The shift is from executing research to making research matter — choosing the right questions and connecting dots across studies."
+     "explain": "“Go test this” or “get a quick user quote to support this deck”."
     },
     {
      "type": "single",
-     "q": "Why can IC influence be more durable than manager influence?",
+     "q": "Which tactic is on his list?",
      "options": [
-      "Insight crosses org boundaries and persists after the person leaves",
-      "ICs work longer hours",
-      "ICs have better technical skills and therefore produce more reliable work",
-      "Managers change roles more often"
+      "Think outcomes over artifacts",
+      "Publish a quarterly research report",
+      "Run more studies per sprint",
+      "Train PMs in research methods"
      ],
      "answer": 0,
-     "explain": "A manager's authority is bounded by their org chart and disappears when they change roles. Insights that change thinking persist."
+     "explain": "Along with asking reframing questions and moving faster."
     },
     {
      "type": "single",
-     "q": "A PM hands you a brief to \"test the new settings page.\" A senior IC would:",
+     "q": "What does “work across teams” mean here?",
      "options": [
-      "Question whether the settings page is the right thing to test",
-      "Run the test exactly as briefed",
-      "Suggest adding more participants to make the settings test robust",
-      "Propose a different testing tool"
+      "Influence beyond your reporting structure",
+      "Join several squads at once",
+      "Share findings in a central repository",
+      "Rotate between product areas every quarter"
      ],
      "answer": 0,
-     "explain": "Senior ICs challenge the brief. If the real problem is elsewhere, testing the wrong thing — even perfectly — wastes effort."
+     "explain": "An IC's reach isn't bounded by the org chart."
     },
     {
      "type": "single",
-     "q": "What is the real risk of moving from IC to management?",
+     "q": "What was the “easy money era”?",
      "options": [
-      "Stopping the hands-on work that made you valuable",
-      "Lower salary",
-      "Less prestige",
-      "Having fewer career options later, in most companies"
+      "The early 2020s, when teams could build and fail freely",
+      "The period before UX had job titles",
+      "The boom in UX bootcamps",
+      "The years before AI tooling"
      ],
      "answer": 0,
-     "explain": "Managers often get pulled into hiring, 1:1s, and process — losing touch with the research craft that created their impact."
+     "explain": "The context for why research is under pressure now."
     }
    ]
   }
