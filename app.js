@@ -74,7 +74,7 @@
     });
     html += '</div>';
     if (q.hint) html += '<details class="note hint"><summary>Hint</summary>' + fmt(q.hint) + '</details>';
-    html += '<div class="fbwrap" aria-live="polite"></div><div class="row end"><button class="btn check" type="button" disabled>Check</button></div>';
+    html += '<div class="fbwrap" aria-live="polite"></div><div class="row end"><button class="btn check" type="button">Check</button></div>';
     box.innerHTML = html;
 
     box.classList.add('guard');
@@ -84,13 +84,14 @@
     function current() { var c = box.querySelector('input:checked'); return c ? +c.value : -1; }
     function refresh() {
       if (answered) return;
-      checkBtn.disabled = current() < 0;
+      if (current() >= 0 && fbw.querySelector('.need')) fbw.innerHTML = '';
       Array.prototype.forEach.call(box.querySelectorAll('.opt'), function (l) { l.classList.toggle('sel', l.querySelector('input').checked); });
     }
     box.addEventListener('change', refresh);
     checkBtn.addEventListener('click', function () {
       if (answered) return;
       var c = current(), ok = c === q.answer;
+      if (c < 0) { fbw.innerHTML = '<div class="fb need">Pick an answer first.</div>'; return; }
       answered = true;
       Array.prototype.forEach.call(box.querySelectorAll('input'), function (i) { i.disabled = true; });
       Array.prototype.forEach.call(box.querySelectorAll('.opt'), function (l) {

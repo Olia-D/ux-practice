@@ -95,6 +95,7 @@ p{margin:8px 0}
 .fb.ok{background:var(--okbg);color:#14532d}
 .fb.near{background:var(--nearbg);color:#5c3d00}
 .fb.no{background:var(--nobg);color:#6b3000}
+.fb.need{background:var(--nearbg);color:#5c3d00;padding:10px 14px;font-size:15px}
 .fb .head{display:block;font-size:18px;font-weight:700;margin-bottom:4px}
 
 /* learn card visuals */

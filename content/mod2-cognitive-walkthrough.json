@@ -1,120 +1,144 @@
 {
-  "id": "cognitive-walkthrough",
-  "module": "running-studies",
-  "title": "How to Run a Cognitive Walkthrough",
-  "icon": "🚶",
-  "intro": "A structured way to catch obvious UX problems before any user touches the design. Four questions at every step, independent reviewers, no participants needed — but it's not a replacement for usability testing.",
-  "topics": [
+ "id": "cognitive-walkthrough",
+ "module": "running-studies",
+ "title": "How to Run a Cognitive Walkthrough",
+ "icon": "🚶",
+ "intro": "A cognitive walkthrough steps through a task as if you were a brand-new user. The goal is not to show how the interface works but to find where a newcomer would stall.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "How to Run a Cognitive Walkthrough",
+   "learn": [
     {
-      "id": "core",
-      "title": "Core Concepts",
-      "learn": [
-        {
-          "title": "The 4 questions at every step",
-          "text": "A cognitive walkthrough simulates a brand-new user moving through a task. At every single step, each reviewer independently answers four questions:\n\n**1. Will the user know what they're trying to do?**\nIs the goal obvious at this point in the flow?\n\n**2. Will they see the control that lets them do it?**\nIs the button, link, or input visible and discoverable?\n\n**3. Will they understand that this control does what they need?**\nDoes the label match their mental model?\n\n**4. After acting, will they get feedback that it worked?**\nDoes the system confirm what happened?\n\nA product demo where a PM clicks through and explains is NOT a walkthrough. If you're narrating the steps aloud, you're convincing the team the controls are discoverable — not testing if they are.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Cognitive walkthrough", "items": ["Simulate naive user", "4 questions at each step", "Independent reviewers", "Catches obvious issues early"] },
-            "right": { "label": "Product demo", "items": ["Show how it works", "PM narrates the flow", "Group consensus", "Creates false confidence"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Why must reviewers work independently before discussing?",
-            "options": ["So each person's judgment isn't influenced by others", "To save time", "Because only one reviewer is needed", "To make the report longer"],
-            "answer": 0,
-            "explain": "Independent work prevents groupthink. Mismatches between reviewers are the most valuable output — they signal likely user struggles."
-          }
-        },
-        {
-          "title": "How to run it step by step",
-          "text": "**1. Define a specific user goal**\nNot \"explore the dashboard\" — something concrete like \"a compliance officer generating and exporting a quarterly report for an auditor.\"\n\n**2. Pick realistic entry points**\nDon't default to the homepage. Real tasks start from deep links, notification emails, or alerts.\n\n**3. Break the workflow into atomic steps**\nEach step = one observable action. \"Navigate to Reports\" and \"Click Generate\" — not \"Prepare compliance report.\"\n\n**4. Assign independent reviewers**\nEach answers the 4 questions alone. Include at least one naive reviewer from outside the product team.\n\n**5. Compare results — mismatches are gold**\nHalf the reviewers thought \"Generate\" meant create a new report. The other half thought it meant export. That disagreement IS the finding.\n\n**6. Validate risky steps with users**\nA quick test with 3 real users confirmed \"Generate\" was confusing → label changed before launch.",
-          "try": {
-            "type": "single",
-            "q": "Why should you avoid starting the walkthrough from the homepage?",
-            "options": ["Real tasks often start from deep links, emails, or notifications", "The homepage is too simple to walk through", "Users never visit the homepage", "It takes too long"],
-            "answer": 0,
-            "explain": "Realistic entry points matter. A compliance officer doesn't start from the homepage — they click a link in a quarterly reminder email."
-          }
-        },
-        {
-          "title": "When to use it (and when not to)",
-          "text": "**Use walkthroughs when:**\n→ Early in the project, before designs reach users\n→ For complex workflows where small errors compound\n→ To catch discoverability, labeling, and feedback issues\n→ To avoid wasting limited participant hours on obviously broken flows\n\n**Walkthroughs are NOT a replacement for:**\n→ Usability testing with real users\n→ Usage analytics after launch\n→ Any method that captures actual user behavior\n\n**Watch for confirmation bias:**\n• Assuming users know what the team knows (\"They'll understand 'Finalize' means submit\")\n• Skipping messy starting points\n• Narrating steps aloud during the session\n\n**Pro tips:**\n• Rotate facilitators — don't let the PM or lead designer always run it\n• Timebox each step — if you can't answer the 4 questions in a few minutes, the step is too vague\n• Separate assumptions from findings — \"Users will know this because...\" belongs in an assumptions list",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Do this", "items": ["Include a naive reviewer", "Start from realistic entry points", "Timebox each step", "Validate risky steps with real users"] },
-            "right": { "label": "Not this", "items": ["Only have the product team review", "Always start from the homepage", "Spend 30 minutes debating one label", "Skip usability testing because the walkthrough passed"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A walkthrough found no issues. Can you skip usability testing?",
-            "options": ["No — walkthroughs catch obvious issues but can't replace real user behavior", "Yes — the walkthrough proves the design works", "Only if you had 5+ reviewers", "Only for simple tasks"],
-            "answer": 0,
-            "explain": "Walkthroughs are expert-led and catch obvious problems. But they can't simulate real user confusion, workarounds, or context — you still need usability testing."
-          }
-        }
+     "title": "The four questions",
+     "text": "At every step, ask:\n\n**1.** Will the user know what they are trying to do?\n**2.** Will they see the control that lets them do it?\n**3.** Will they understand that this control does what they need?\n**4.** After acting, will they get feedback that it worked?",
+     "try": {
+      "type": "single",
+      "q": "A user clicks Save and nothing visibly changes. Which question does this step fail?",
+      "options": [
+       "Will they get feedback that it worked?",
+       "Will they know what they are trying to do?",
+       "Will they see the control for it?",
+       "Will they understand what the control does?"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What are the four questions asked at every step of a cognitive walkthrough?",
-          "options": [
-            "Will users know the goal, see the control, understand it, and get feedback?",
-            "Is it useful, usable, desirable, and findable?",
-            "Can users learn, remember, recover from errors, and complete tasks?",
-            "Does it meet business goals, user goals, technical goals, and design goals?"
-          ],
-          "answer": 0,
-          "explain": "The 4 questions: (1) Know the goal, (2) See the control, (3) Understand it does what they need, (4) Get feedback after acting."
-        },
-        {
-          "type": "single",
-          "q": "Why are mismatches between reviewers the most valuable output?",
-          "options": [
-            "They signal where real users are likely to struggle too",
-            "They prove the design is fundamentally broken",
-            "They show which reviewer is wrong",
-            "They indicate the task definition was unclear"
-          ],
-          "answer": 0,
-          "explain": "When experienced reviewers disagree about what a control does, that's exactly where users will struggle."
-        },
-        {
-          "type": "single",
-          "q": "Who should be included as a reviewer in a cognitive walkthrough?",
-          "options": [
-            "At least one naive reviewer from outside the product team",
-            "Only senior designers",
-            "Only the PM and engineering lead",
-            "At least 5 end users"
-          ],
-          "answer": 0,
-          "explain": "Including someone unfamiliar with the product catches assumptions the team takes for granted."
-        },
-        {
-          "type": "single",
-          "q": "What's wrong with a PM clicking through the prototype and explaining each step to the team?",
-          "options": [
-            "Narrating the steps convinces the team controls are discoverable when they may not be",
-            "Only UX researchers are qualified to click through prototypes",
-            "PMs don't understand the design well enough",
-            "It takes too much time"
-          ],
-          "answer": 0,
-          "explain": "A narrated demo creates false confidence. The whole point of a walkthrough is to test if someone can figure it out WITHOUT narration."
-        },
-        {
-          "type": "single",
-          "q": "When in the project lifecycle should you run a cognitive walkthrough?",
-          "options": [
-            "Early — before designs reach users, to catch obvious issues",
-            "After launch — to confirm the design works",
-            "Only after usability testing finds problems",
-            "During the final QA sprint"
-          ],
-          "answer": 0,
-          "explain": "Walkthroughs belong early in the research funnel. They catch obvious issues so flawed designs don't waste limited participant hours in usability sessions."
-        }
-      ]
+      "answer": 0,
+      "explain": "The action was found and understood; the system didn't confirm it."
+     }
+    },
+    {
+     "title": "Where confirmation bias creeps in",
+     "text": "Many teams think they ran a walkthrough when they only confirmed what they knew. Three predictable ways:\n\n• Assuming users know what the team knows\n• Skipping messy starting points: real users arrive from deep links, emails and alerts\n• Narrating steps aloud and filling in gaps without noticing",
+     "try": {
+      "type": "single",
+      "q": "Your team starts every walkthrough from the home page. What is the risk?",
+      "options": [
+       "Real users often start from deep links or emails",
+       "The home page takes too long to review",
+       "Reviewers will disagree about the first step",
+       "Reviewers will usually disagree about what the first step is"
+      ],
+      "answer": 0,
+      "explain": "Skipping messy starting points is one of the three ways bias creeps in."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Guided demo",
+       "items": [
+        "Starts at the home page",
+        "One person narrates",
+        "Everyone nods"
+       ]
+      },
+      "right": {
+       "label": "Real walkthrough",
+       "items": [
+        "Realistic entry points",
+        "Reviewers work independently",
+        "Disagreements recorded"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Six steps",
+     "text": "**1.** Define a specific user goal\n**2.** Select realistic entry points\n**3.** Break the workflow into atomic steps\n**4.** Assign independent reviewers\n**5.** Compare results and document disagreements\n**6.** Validate risky steps with users\n\nTwo extra safeguards: bring in a naive reviewer, and rotate facilitators.",
+     "try": {
+      "type": "single",
+      "q": "Why should reviewers fill in the grid independently before comparing?",
+      "options": [
+       "Disagreements between them reveal the risky steps",
+       "It makes the session shorter for everyone",
+       "It removes the need to test with users",
+       "Each reviewer can then cover a different task in the same hour"
+      ],
+      "answer": 0,
+      "explain": "Step 5 is comparing results and documenting disagreements; those are the findings."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the goal of a cognitive walkthrough?",
+     "options": [
+      "Find where a new user would stall",
+      "Show stakeholders how the flow works",
+      "Measure time on task precisely",
+      "Collect opinions about the design"
+     ],
+     "answer": 0,
+     "explain": "It is done as if you were a brand-new user."
+    },
+    {
+     "type": "single",
+     "q": "Which is one of the four questions?",
+     "options": [
+      "Will they see the control that lets them do it?",
+      "Would they recommend this product to a friend or colleague?",
+      "Is the visual design consistent here?",
+      "How long does this step take on average?"
+     ],
+     "answer": 0,
+     "explain": "Know the goal, see the control, understand it, get feedback."
+    },
+    {
+     "type": "single",
+     "q": "A team believes “Finalize” is obviously the right label because they use the word daily. Which bias pattern is this?",
+     "options": [
+      "Assuming users know what the team knows",
+      "Skipping messy starting points",
+      "Rotating facilitators too often",
+      "Validating the risky steps with real users too early"
+     ],
+     "answer": 0,
+     "explain": "Team vocabulary is not user vocabulary."
+    },
+    {
+     "type": "single",
+     "q": "What is the last of the six steps?",
+     "options": [
+      "Validate risky steps with users",
+      "Define a specific user goal",
+      "Assign independent reviewers",
+      "Break the workflow into atomic steps"
+     ],
+     "answer": 0,
+     "explain": "The walkthrough flags risk; users confirm it."
+    },
+    {
+     "type": "single",
+     "q": "Which safeguard does Calabro suggest against confirmation bias?",
+     "options": [
+      "Bring in a naive reviewer",
+      "Let the designer narrate the flow",
+      "Review only the happy path",
+      "Agree on answers before the session"
+     ],
+     "answer": 0,
+     "explain": "A naive reviewer and rotating facilitators both help."
+    }
+   ]
+  }
+ ]
 }

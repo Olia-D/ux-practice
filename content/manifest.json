@@ -1,273 +1,273 @@
 {
-  "version": 1,
-  "title": "UX Practice",
-  "modules": [
+ "version": 1,
+ "title": "UX Practice",
+ "modules": [
+  {
+   "id": "foundations",
+   "name": "Foundations",
+   "icon": "🧱",
+   "week": "Module 1",
+   "subtitle": "What IS good UX — and how do you know?",
+   "articles": [
     {
-      "id": "foundations",
-      "name": "Foundations",
-      "icon": "🧱",
-      "week": "Module 1",
-      "subtitle": "What IS good UX — and how do you know?",
-      "articles": [
-        {
-          "id": "usability-vs-concept",
-          "title": "Usability Tests vs. Concept Tests",
-          "icon": "🔬",
-          "source": "https://trevorcalabro.substack.com/p/usability-tests-vs-concept-tests",
-          "summary": "Behavioral science, not PM rituals — why moderated usability testing is your default.",
-          "file": "content/mod1-usability-vs-concept.json"
-        },
-        {
-          "id": "behavioral-evidence",
-          "title": "Behavioral > Self-Reported Evidence",
-          "icon": "🧠",
-          "source": "https://trevorcalabro.substack.com/p/behavioral-evidence-self-reported",
-          "summary": "What people say and what people do are systematically different.",
-          "file": "content/mod1-behavioral-evidence.json"
-        },
-        {
-          "id": "tasks",
-          "title": "UX Research Starts with Tasks",
-          "icon": "📋",
-          "source": "https://trevorcalabro.substack.com/p/ux-research-starts-with-tasks",
-          "summary": "3-step framework: user goal, realistic scenario, no leading language.",
-          "file": "content/mod1-tasks.json"
-        },
-        {
-          "id": "research-rigor",
-          "title": "Research Rigor at Product Speed",
-          "icon": "⚡",
-          "source": "https://trevorcalabro.substack.com/p/research-rigor-at-product-speed",
-          "summary": "3 magic questions to determine your minimum rigor threshold.",
-          "file": "content/mod1-research-rigor.json"
-        }
-      ]
+     "id": "usability-vs-concept",
+     "title": "Usability Tests vs. Concept Tests",
+     "icon": "🔬",
+     "source": "https://trevorcalabro.substack.com/p/usability-tests-vs-concept-tests",
+     "summary": "A usability test observes behaviour; a concept test collects opinions. How to tell which one you ran.",
+     "file": "content/mod1-usability-vs-concept.json"
     },
     {
-      "id": "running-studies",
-      "name": "Running Studies",
-      "icon": "🔍",
-      "week": "Module 2",
-      "subtitle": "How to do research right — and avoid the traps",
-      "articles": [
-        {
-          "id": "cognitive-biases",
-          "title": "Cognitive Biases in UX Research",
-          "icon": "🪤",
-          "source": "https://trevorcalabro.substack.com/p/cognitive-biases-in-ux-research",
-          "summary": "20 biases in 3 groups: how we think about others, our own thinking, research artifacts.",
-          "file": "content/mod2-cognitive-biases.json"
-        },
-        {
-          "id": "cognitive-walkthrough",
-          "title": "How to Run a Cognitive Walkthrough",
-          "icon": "🚶",
-          "source": "https://trevorcalabro.substack.com/p/how-to-run-a-cognitive-walkthrough",
-          "summary": "4 questions at each step. Expert evaluation, no users needed.",
-          "file": "content/mod2-cognitive-walkthrough.json"
-        },
-        {
-          "id": "fake-ai",
-          "title": "The Dangerous Appeal of Fake AI Users",
-          "icon": "🤖",
-          "source": "https://trevorcalabro.substack.com/p/the-dangerous-appeal-of-fake-users",
-          "summary": "Synthetic users can't surprise you. The surprise IS the value.",
-          "file": "content/mod2-fake-ai.json"
-        },
-        {
-          "id": "ux-as-service",
-          "title": "UX Research as a Service",
-          "icon": "🤝",
-          "source": "https://trevorcalabro.substack.com/p/ux-research-as-a-service",
-          "summary": "Show up during shaping, not after requirements harden.",
-          "file": "content/mod2-ux-as-service.json"
-        }
-      ]
+     "id": "behavioral-evidence",
+     "title": "Behavioral > Self-Reported Evidence",
+     "icon": "🧠",
+     "source": "https://trevorcalabro.substack.com/p/behavioral-evidence-self-reported",
+     "summary": "What people say and what people do are systematically different.",
+     "file": "content/mod1-behavioral-evidence.json"
     },
     {
-      "id": "testing-analysis",
-      "name": "Testing & Analysis",
-      "icon": "📊",
-      "week": "Module 3",
-      "subtitle": "Making sense of data — and when A/B tests lie",
-      "articles": [
-        {
-          "id": "ab-testing",
-          "title": "A/B Testing and the Two-Party Trap",
-          "icon": "⚖️",
-          "source": "https://trevorcalabro.substack.com/p/ab-testing-and-the-two-party-trap",
-          "summary": "Binary choice can't find solutions you didn't build.",
-          "file": "content/mod3-ab-testing.json"
-        },
-        {
-          "id": "ab-mislead",
-          "title": "Another Way A/B Tests Mislead",
-          "icon": "🎭",
-          "source": "https://trevorcalabro.substack.com/p/another-way-ab-tests-mislead",
-          "summary": "4 confounds: novelty, segment bleed, time effects, underpowered.",
-          "file": "content/mod3-ab-mislead.json"
-        },
-        {
-          "id": "mixed-methods",
-          "title": "Mixed Methods Studies That Mix",
-          "icon": "🔀",
-          "source": "https://trevorcalabro.substack.com/p/mixed-methods-studies-that-mix",
-          "summary": "4 real designs, not parallel tracks.",
-          "file": "content/mod3-mixed-methods.json"
-        },
-        {
-          "id": "misunderstandings",
-          "title": "Top 10 UX Misunderstandings",
-          "icon": "❌",
-          "source": "https://trevorcalabro.substack.com/p/top-10-ux-misunderstandings",
-          "summary": "The complete NNG/Baymard/MeasuringU reference.",
-          "file": "content/mod3-misunderstandings.json"
-        }
-      ]
+     "id": "tasks",
+     "title": "UX Research Starts with Tasks",
+     "icon": "📋",
+     "source": "https://trevorcalabro.substack.com/p/ux-research-starts-with-tasks",
+     "summary": "The Top Task List: task analysis in three steps, so every study starts from what users really do.",
+     "file": "content/mod1-tasks.json"
     },
     {
-      "id": "design-principles",
-      "name": "Design Principles",
-      "icon": "✏️",
-      "week": "Module 4",
-      "subtitle": "Evidence-based interaction design patterns",
-      "articles": [
-        {
-          "id": "icons",
-          "title": "Every Icon Needs a Label",
-          "icon": "🏷️",
-          "source": "https://trevorcalabro.substack.com/p/every-icon-needs-a-label",
-          "summary": "19 years of field data, 5 companies.",
-          "file": "content/mod4-icons.json"
-        },
-        {
-          "id": "affordances",
-          "title": "Make It Look Like What It Does",
-          "icon": "🔘",
-          "source": "https://trevorcalabro.substack.com/p/make-it-look-like-what-it-does",
-          "summary": "Affordances & signifiers — the real distinction.",
-          "file": "content/mod4-affordances.json"
-        },
-        {
-          "id": "animations",
-          "title": "Most UI Animations Shouldn't Exist",
-          "icon": "🎬",
-          "source": "https://trevorcalabro.substack.com/p/most-ui-animations-shouldnt-exist",
-          "summary": "Against auto-triggered motion.",
-          "file": "content/mod4-animations.json"
-        },
-        {
-          "id": "input-field",
-          "title": "The Anatomy of an Input Field",
-          "icon": "📝",
-          "source": "https://trevorcalabro.substack.com/p/the-anatomy-of-an-input-field",
-          "summary": "6 elements + the required indicator debate.",
-          "file": "content/mod4-input-field.json"
-        },
-        {
-          "id": "status-design",
-          "title": "Fixing Bad Status Design",
-          "icon": "🚦",
-          "source": "https://trevorcalabro.substack.com/p/fixing-bad-status-design",
-          "summary": "Post-action UX in complex workflows.",
-          "file": "content/mod4-status-design.json"
-        }
-      ]
-    },
-    {
-      "id": "business-impact",
-      "name": "Business Impact",
-      "icon": "💰",
-      "week": "Module 5",
-      "subtitle": "Proving value — ROI, debriefs, and data storytelling",
-      "articles": [
-        {
-          "id": "roi",
-          "title": "Calculating the ROI of UX",
-          "icon": "📈",
-          "source": "https://trevorcalabro.substack.com/p/calculating-the-roi-of-ux",
-          "summary": "5-step framework: benchmark → goals → quantify cost → calculate → lead with the number.",
-          "file": "content/mod5-roi.json"
-        },
-        {
-          "id": "debrief",
-          "title": "UX Research Debriefs Reframed",
-          "icon": "🗣️",
-          "source": "https://trevorcalabro.substack.com/p/ux-research-debriefs-reframed",
-          "summary": "Two types: synthesis (team) and strategic (decision-makers). Don't mix them.",
-          "file": "content/mod5-debrief.json"
-        },
-        {
-          "id": "delight",
-          "title": "Rethinking User Delight",
-          "icon": "✨",
-          "source": "https://trevorcalabro.substack.com/p/rethinking-user-delight",
-          "summary": "Delight = task was hard, now it's easy. Not confetti.",
-          "file": "content/mod5-delight.json"
-        },
-        {
-          "id": "dashboard",
-          "title": "Why Your Data Dashboard Stinks",
-          "icon": "📉",
-          "source": "https://trevorcalabro.substack.com/p/your-data-dashboard-sucks",
-          "summary": "Decisions-first design for data visualization.",
-          "file": "content/mod5-dashboard.json"
-        },
-        {
-          "id": "figma",
-          "title": "Users Don't Care About Your Figma File",
-          "icon": "🎨",
-          "source": "https://trevorcalabro.substack.com/p/users-dont-care-about-your-figma",
-          "summary": "Internal quality ≠ UX quality. Measure task completion.",
-          "file": "content/mod5-figma.json"
-        }
-      ]
-    },
-    {
-      "id": "career",
-      "name": "Career & Influence",
-      "icon": "🚀",
-      "week": "Module 6",
-      "subtitle": "Growing as a UX leader — influence without authority",
-      "articles": [
-        {
-          "id": "ic",
-          "title": "Why I Stay an IC",
-          "icon": "💎",
-          "source": "https://trevorcalabro.substack.com/p/why-i-stay-an-ic",
-          "summary": "IC influence via insight > manager influence via authority.",
-          "file": "content/mod6-ic.json"
-        },
-        {
-          "id": "thankless",
-          "title": "UX Is Thankless (That's Good)",
-          "icon": "🏅",
-          "source": "https://trevorcalabro.substack.com/p/ux-is-thankless-and-thats-a-good",
-          "summary": "Hedonic adaptation: improvements become invisible baseline.",
-          "file": "content/mod6-thankless.json"
-        },
-        {
-          "id": "institutional",
-          "title": "Weaponized Institutional Knowledge",
-          "icon": "🛡️",
-          "source": "https://trevorcalabro.substack.com/p/weaponized-institutional-knowledge",
-          "summary": "The 90/10 rule: burden of proof on the person claiming different.",
-          "file": "content/mod6-institutional.json"
-        },
-        {
-          "id": "predictions",
-          "title": "2026 Predictions for UX",
-          "icon": "🔮",
-          "source": "https://trevorcalabro.substack.com/p/2025-in-review",
-          "summary": "System-driven vs vibes-driven orgs.",
-          "file": "content/mod6-predictions.json"
-        }
-      ]
+     "id": "research-rigor",
+     "title": "Research Rigor at Product Speed",
+     "icon": "⚡",
+     "source": "https://trevorcalabro.substack.com/p/research-rigor-at-product-speed",
+     "summary": "3 magic questions to determine your minimum rigor threshold.",
+     "file": "content/mod1-research-rigor.json"
     }
-  ],
-  "schedule": {
-    "description": "One article per day, 4 days per week. Each article: read the learn cards, then take the quiz. Review mixed quiz at end of each module.",
-    "pace": "4 articles per week",
-    "total_weeks": 6
+   ]
+  },
+  {
+   "id": "running-studies",
+   "name": "Running Studies",
+   "icon": "🔍",
+   "week": "Module 2",
+   "subtitle": "How to do research right — and avoid the traps",
+   "articles": [
+    {
+     "id": "cognitive-biases",
+     "title": "Cognitive Biases in UX Research",
+     "icon": "🪤",
+     "source": "https://trevorcalabro.substack.com/p/cognitive-biases-in-ux-research",
+     "summary": "20 biases in three groups, each with an antidote. Naming the bias is what slows a bad decision.",
+     "file": "content/mod2-cognitive-biases.json"
+    },
+    {
+     "id": "cognitive-walkthrough",
+     "title": "How to Run a Cognitive Walkthrough",
+     "icon": "🚶",
+     "source": "https://trevorcalabro.substack.com/p/how-to-run-a-cognitive-walkthrough",
+     "summary": "Four questions at every step, and how to stop a walkthrough turning into a demo.",
+     "file": "content/mod2-cognitive-walkthrough.json"
+    },
+    {
+     "id": "fake-ai",
+     "title": "The Dangerous Appeal of Fake AI Users",
+     "icon": "🤖",
+     "source": "https://trevorcalabro.substack.com/p/the-dangerous-appeal-of-fake-users",
+     "summary": "What a synthetic “proxy” user could never tell you, and why simulated research spreads.",
+     "file": "content/mod2-fake-ai.json"
+    },
+    {
+     "id": "ux-as-service",
+     "title": "UX Research as a Service",
+     "icon": "🤝",
+     "source": "https://trevorcalabro.substack.com/p/ux-research-as-a-service",
+     "summary": "Show up during shaping, not after requirements harden.",
+     "file": "content/mod2-ux-as-service.json"
+    }
+   ]
+  },
+  {
+   "id": "testing-analysis",
+   "name": "Testing & Analysis",
+   "icon": "📊",
+   "week": "Module 3",
+   "subtitle": "Making sense of data — and when A/B tests lie",
+   "articles": [
+    {
+     "id": "ab-testing",
+     "title": "A/B Testing and the Two-Party Trap",
+     "icon": "⚖️",
+     "source": "https://trevorcalabro.substack.com/p/ab-testing-and-the-two-party-trap",
+     "summary": "Binary choice can't find solutions you didn't build.",
+     "file": "content/mod3-ab-testing.json"
+    },
+    {
+     "id": "ab-mislead",
+     "title": "Another Way A/B Tests Mislead",
+     "icon": "🎭",
+     "source": "https://trevorcalabro.substack.com/p/another-way-ab-tests-mislead",
+     "summary": "4 confounds: novelty, segment bleed, time effects, underpowered.",
+     "file": "content/mod3-ab-mislead.json"
+    },
+    {
+     "id": "mixed-methods",
+     "title": "Mixed Methods Studies That Mix",
+     "icon": "🔀",
+     "source": "https://trevorcalabro.substack.com/p/mixed-methods-studies-that-mix",
+     "summary": "4 real designs, not parallel tracks.",
+     "file": "content/mod3-mixed-methods.json"
+    },
+    {
+     "id": "misunderstandings",
+     "title": "Top 10 UX Misunderstandings",
+     "icon": "❌",
+     "source": "https://trevorcalabro.substack.com/p/top-10-ux-misunderstandings",
+     "summary": "The complete NNG/Baymard/MeasuringU reference.",
+     "file": "content/mod3-misunderstandings.json"
+    }
+   ]
+  },
+  {
+   "id": "design-principles",
+   "name": "Design Principles",
+   "icon": "✏️",
+   "week": "Module 4",
+   "subtitle": "Evidence-based interaction design patterns",
+   "articles": [
+    {
+     "id": "icons",
+     "title": "Every Icon Needs a Label",
+     "icon": "🏷️",
+     "source": "https://trevorcalabro.substack.com/p/every-icon-needs-a-label",
+     "summary": "19 years of field data, 5 companies.",
+     "file": "content/mod4-icons.json"
+    },
+    {
+     "id": "affordances",
+     "title": "Make It Look Like What It Does",
+     "icon": "🔘",
+     "source": "https://trevorcalabro.substack.com/p/make-it-look-like-what-it-does",
+     "summary": "Affordances & signifiers — the real distinction.",
+     "file": "content/mod4-affordances.json"
+    },
+    {
+     "id": "animations",
+     "title": "Most UI Animations Shouldn't Exist",
+     "icon": "🎬",
+     "source": "https://trevorcalabro.substack.com/p/most-ui-animations-shouldnt-exist",
+     "summary": "Against auto-triggered motion.",
+     "file": "content/mod4-animations.json"
+    },
+    {
+     "id": "input-field",
+     "title": "The Anatomy of an Input Field",
+     "icon": "📝",
+     "source": "https://trevorcalabro.substack.com/p/the-anatomy-of-an-input-field",
+     "summary": "6 elements + the required indicator debate.",
+     "file": "content/mod4-input-field.json"
+    },
+    {
+     "id": "status-design",
+     "title": "Fixing Bad Status Design",
+     "icon": "🚦",
+     "source": "https://trevorcalabro.substack.com/p/fixing-bad-status-design",
+     "summary": "Post-action UX in complex workflows.",
+     "file": "content/mod4-status-design.json"
+    }
+   ]
+  },
+  {
+   "id": "business-impact",
+   "name": "Business Impact",
+   "icon": "💰",
+   "week": "Module 5",
+   "subtitle": "Proving value — ROI, debriefs, and data storytelling",
+   "articles": [
+    {
+     "id": "roi",
+     "title": "Calculating the ROI of UX",
+     "icon": "📈",
+     "source": "https://trevorcalabro.substack.com/p/calculating-the-roi-of-ux",
+     "summary": "5-step framework: benchmark → goals → quantify cost → calculate → lead with the number.",
+     "file": "content/mod5-roi.json"
+    },
+    {
+     "id": "debrief",
+     "title": "UX Research Debriefs Reframed",
+     "icon": "🗣️",
+     "source": "https://trevorcalabro.substack.com/p/ux-research-debriefs-reframed",
+     "summary": "Two types: synthesis (team) and strategic (decision-makers). Don't mix them.",
+     "file": "content/mod5-debrief.json"
+    },
+    {
+     "id": "delight",
+     "title": "Rethinking User Delight",
+     "icon": "✨",
+     "source": "https://trevorcalabro.substack.com/p/rethinking-user-delight",
+     "summary": "Delight = task was hard, now it's easy. Not confetti.",
+     "file": "content/mod5-delight.json"
+    },
+    {
+     "id": "dashboard",
+     "title": "Why Your Data Dashboard Stinks",
+     "icon": "📉",
+     "source": "https://trevorcalabro.substack.com/p/your-data-dashboard-sucks",
+     "summary": "Decisions-first design for data visualization.",
+     "file": "content/mod5-dashboard.json"
+    },
+    {
+     "id": "figma",
+     "title": "Users Don't Care About Your Figma File",
+     "icon": "🎨",
+     "source": "https://trevorcalabro.substack.com/p/users-dont-care-about-your-figma",
+     "summary": "Internal quality ≠ UX quality. Measure task completion.",
+     "file": "content/mod5-figma.json"
+    }
+   ]
+  },
+  {
+   "id": "career",
+   "name": "Career & Influence",
+   "icon": "🚀",
+   "week": "Module 6",
+   "subtitle": "Growing as a UX leader — influence without authority",
+   "articles": [
+    {
+     "id": "ic",
+     "title": "Why I Stay an IC",
+     "icon": "💎",
+     "source": "https://trevorcalabro.substack.com/p/why-i-stay-an-ic",
+     "summary": "IC influence via insight > manager influence via authority.",
+     "file": "content/mod6-ic.json"
+    },
+    {
+     "id": "thankless",
+     "title": "UX Is Thankless (That's Good)",
+     "icon": "🏅",
+     "source": "https://trevorcalabro.substack.com/p/ux-is-thankless-and-thats-a-good",
+     "summary": "Hedonic adaptation: improvements become invisible baseline.",
+     "file": "content/mod6-thankless.json"
+    },
+    {
+     "id": "institutional",
+     "title": "Weaponized Institutional Knowledge",
+     "icon": "🛡️",
+     "source": "https://trevorcalabro.substack.com/p/weaponized-institutional-knowledge",
+     "summary": "The 90/10 rule: burden of proof on the person claiming different.",
+     "file": "content/mod6-institutional.json"
+    },
+    {
+     "id": "predictions",
+     "title": "2026 Predictions for UX",
+     "icon": "🔮",
+     "source": "https://trevorcalabro.substack.com/p/2025-in-review",
+     "summary": "System-driven vs vibes-driven orgs.",
+     "file": "content/mod6-predictions.json"
+    }
+   ]
   }
+ ],
+ "schedule": {
+  "description": "One article per day, 4 days per week. Each article: read the learn cards, then take the quiz. Review mixed quiz at end of each module.",
+  "pace": "4 articles per week",
+  "total_weeks": 6
+ }
 }

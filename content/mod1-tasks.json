@@ -1,125 +1,144 @@
 {
-  "id": "tasks",
-  "module": "foundations",
-  "title": "UX Research Starts with Tasks",
-  "icon": "📋",
-  "intro": "The task is the atomic unit of usability testing. Get the task wrong, and even a perfectly run study produces misleading results. This article gives you a 3-step framework for writing tasks that reveal real behavior.",
-  "topics": [
+ "id": "tasks",
+ "module": "foundations",
+ "title": "UX Research Starts with Tasks",
+ "icon": "📋",
+ "intro": "A full task analysis exposes every decision point in a workflow, but it is slow. Calabro's shortcut is a **Top Task List**: a short, prioritised list of what users are trying to do, built with stakeholders in one working session.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "UX Research Starts with Tasks",
+   "learn": [
     {
-      "id": "three-steps",
-      "title": "The 3-Step Framework",
-      "learn": [
-        {
-          "title": "Step 1: User goal, not UI action",
-          "text": "Write tasks in terms of what the user is trying to **accomplish**, not what buttons to press.\n\n❌ \"Click on the Settings icon and find the notification preferences\"\n→ This tests whether they can follow instructions.\n\n✅ \"You're getting too many email notifications. Figure out how to reduce them.\"\n→ This tests whether the interface supports the real goal.",
-          "try": {
-            "type": "single",
-            "q": "Which task is correctly written as a user goal?",
-            "options": [
-              "You need to add a new team member to your project. Set them up so they can start.",
-              "Click the 'Add Member' button in the top right and enter an email address.",
-              "Navigate to Settings > Team > Add Member.",
-              "Use the team management feature to invite someone."
-            ],
-            "answer": 0,
-            "explain": "The first option frames a goal (add someone who can start working) without prescribing UI steps."
-          }
-        },
-        {
-          "title": "Step 2: Realistic scenario",
-          "text": "Wrap the task in a scenario that gives the user **context** and **motivation** — the same kind they'd have in real life.\n\n❌ \"Find a product under $50.\"\n→ Why? For whom? What kind of product?\n\n✅ \"Your friend's birthday is next week. You want to find a gift for under $50 that they'd actually like. They're into cooking.\"\n→ Now the user has a reason, constraints, and a way to evaluate success.",
-          "try": {
-            "type": "single",
-            "q": "What does a realistic scenario add to a research task?",
-            "options": [
-              "Context and motivation that mirror real-world use",
-              "More words to make the task seem professional",
-              "Constraints that make the task harder",
-              "Entertainment value for the participant"
-            ],
-            "answer": 0,
-            "explain": "Scenarios give users the same context and motivation they'd have in real life, producing realistic behavior."
-          }
-        },
-        {
-          "title": "Step 3: No leading language",
-          "text": "Don't use the same words the interface uses. If the button says \"Manage Notifications,\" your task shouldn't say \"manage your notifications.\"\n\n**Leading language** tells users where to look, which means you're testing reading comprehension, not usability.\n\n❌ \"Use the **filter** feature to narrow results\" (if the UI label says \"Filter\")\n✅ \"You only want to see items from the last month. How would you do that?\"\n\nThe user should discover the path, not follow your breadcrumbs.",
-          "try": {
-            "type": "single",
-            "q": "The UI has a button labeled \"Export Report.\" Which task avoids leading language?",
-            "options": [
-              "Your manager needs this data in a spreadsheet for a meeting tomorrow. How would you get it to her?",
-              "Use the Export Report button to download the data.",
-              "Export the report using the available tools.",
-              "Find the export functionality."
-            ],
-            "answer": 0,
-            "explain": "It describes the goal without using UI labels. The user has to figure out that 'Export Report' is the path."
-          }
-        }
+     "title": "Step 1: The most common tasks",
+     "text": "A small number of workflows account for most user activity (the 80/20 rule). Find them with **real data**: product analytics, telemetry, click tracking or logs.\n\nDon't guess, and don't ask users to guess either.",
+     "try": {
+      "type": "single",
+      "q": "You're building a Top Task List. What is the best source for step 1?",
+      "options": [
+       "Product analytics and usage logs",
+       "A stakeholder brainstorm of key features",
+       "A survey asking users what they do most",
+       "The feature list from the product roadmap"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What are the 3 steps for writing good research tasks?",
-          "options": [
-            "User goal, realistic scenario, no leading language",
-            "Clear instruction, time limit, success criteria",
-            "Simple wording, multiple choice, follow-up questions",
-            "Hypothesis, test plan, statistical analysis"
-          ],
-          "answer": 0,
-          "explain": "The 3-step framework: frame as a user goal, wrap in a realistic scenario, avoid leading language."
-        },
-        {
-          "type": "single",
-          "q": "Why is \"Click on Settings and find notification preferences\" a bad task?",
-          "options": [
-            "It tests instruction-following, not usability",
-            "It's too short",
-            "Settings is hard to find",
-            "It doesn't have a time limit"
-          ],
-          "answer": 0,
-          "explain": "Task prescribes UI steps. You're testing whether they can follow directions, not whether the interface works."
-        },
-        {
-          "type": "single",
-          "q": "The button says \"Archive.\" Your task says: \"Archive the completed project.\" What's the problem?",
-          "options": [
-            "Leading language — you're using the same word as the UI label",
-            "The task is too short",
-            "Archive is not a common word",
-            "Nothing — this is fine"
-          ],
-          "answer": 0,
-          "explain": "Using the UI label in the task tells users exactly where to look, defeating the purpose of the test."
-        },
-        {
-          "type": "single",
-          "q": "A task reads: \"Find a flight.\" What's missing?",
-          "options": [
-            "A realistic scenario — where, when, why, for whom?",
-            "A time limit",
-            "Technical specifications",
-            "The correct answer"
-          ],
-          "answer": 0,
-          "explain": "Without scenario context, users have no motivation or constraints — their behavior won't match real-world use."
-        },
-        {
-          "type": "single",
-          "q": "If you write tasks well but the interface is good, what should happen in the test?",
-          "options": [
-            "Users complete tasks successfully — confirming the design works",
-            "Users fail — good tasks always expose problems",
-            "Users get confused by the scenario",
-            "Nothing useful — you wasted the study"
-          ],
-          "answer": 0,
-          "explain": "Well-written tasks reveal real behavior. If the design is good, success is the valid finding."
-        }
-      ]
+      "answer": 0,
+      "explain": "Step 1 needs real behaviour data. Guessing, or asking users to guess, is exactly what the method avoids."
+     }
+    },
+    {
+     "title": "Step 2: The critical or risky tasks",
+     "text": "Some tasks are rare but carry real weight: compliance steps, deadlines, anything essential to the system working.\n\nThe test: if something going wrong here would be serious, the task belongs on the list even if it happens once a year.",
+     "try": {
+      "type": "single",
+      "q": "A task happens twice a year, but an error means a failed compliance audit. Does it belong on the Top Task List?",
+      "options": [
+       "Yes, as a critical or risky task",
+       "No, it is too rare to matter",
+       "Only if analytics show growing usage",
+       "Only after the common tasks are tested"
+      ],
+      "answer": 0,
+      "explain": "Step 2 adds tasks that are infrequent but high-stakes."
+     }
+    },
+    {
+     "title": "Step 3: Dedupe and check coverage",
+     "text": "Merge workflows that overlap. When two tasks are alike, keep the one that **touches more screens, UI elements or interaction points**.\n\nYou don't need a full task-analysis diagram. The list then feeds every other method: usability tests, walkthroughs and reviews take their scenarios from it.",
+     "try": {
+      "type": "single",
+      "q": "Two tasks on your list are nearly the same. Which one do you keep?",
+      "options": [
+       "The one that touches more of the system",
+       "The one stakeholders mention more often",
+       "The one that is quicker to test",
+       "Both, to be safe about coverage"
+      ],
+      "answer": 0,
+      "explain": "Keep the best-representative task: the one covering more screens, elements or interaction points."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Without a list",
+       "items": [
+        "Scenarios invented from assumptions",
+        "Trying to test everything",
+        "Studies that don't connect"
+       ]
+      },
+      "right": {
+       "label": "With a Top Task List",
+       "items": [
+        "Scenarios come from real tasks",
+        "Focus on what matters most",
+        "Every method shares one basis"
+       ]
+      }
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is a Top Task List?",
+     "options": [
+      "A short, prioritised list of what users are trying to do",
+      "A backlog of usability issues ranked by severity and by team",
+      "A script of click-by-click test instructions",
+      "A list of features ranked by stakeholder votes"
+     ],
+     "answer": 0,
+     "explain": "It is a simplified task analysis: what users try to do, prioritised."
+    },
+    {
+     "type": "single",
+     "q": "Why did Calabro create this method instead of always running a full hierarchical task analysis?",
+     "options": [
+      "A full analysis is slow and needs lots of field time",
+      "Hierarchical task analysis is no longer a valid research method",
+      "Stakeholders refuse to read diagrams",
+      "Analytics tools made observation unnecessary"
+     ],
+     "answer": 0,
+     "explain": "He keeps the spirit of formal task analysis but trims it, in the tradition of Nielsen's discount usability."
+    },
+    {
+     "type": "single",
+     "q": "What are the three steps, in order?",
+     "options": [
+      "Most common tasks → critical tasks → dedupe and check coverage",
+      "Critical tasks → dedupe → most common tasks",
+      "User goals → realistic scenario → neutral wording → pilot with one colleague",
+      "Recruit users → observe → build a diagram"
+     ],
+     "answer": 0,
+     "explain": "Common first, then critical or risky, then deduplicate."
+    },
+    {
+     "type": "single",
+     "q": "Who usually takes part in building the list?",
+     "options": [
+      "The primary stakeholders, in a short working session",
+      "Only the research team, working alone",
+      "A panel of at least twenty end users",
+      "Engineering leads and designers, during regular sprint planning"
+     ],
+     "answer": 0,
+     "explain": "Calabro walks the primary stakeholders through the three steps in a short session."
+    },
+    {
+     "type": "single",
+     "q": "What does the finished list change about later research?",
+     "options": [
+      "Studies draw their scenarios from real tasks",
+      "Usability tests are no longer needed",
+      "Research can skip recruiting real users for most studies",
+      "Every feature gets tested equally often"
+     ],
+     "answer": 0,
+     "explain": "The list focuses research; he calls it a multiplier for every other method."
+    }
+   ]
+  }
+ ]
 }

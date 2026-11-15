@@ -1,115 +1,144 @@
 {
-  "id": "usability-vs-concept",
-  "module": "foundations",
-  "title": "Usability Tests vs. Concept Tests",
-  "icon": "🔬",
-  "intro": "The most important distinction in UX research: **what users do** vs. **what users say**. Most teams misuse concept tests as a cheaper substitute for usability testing. This article draws the line.",
-  "topics": [
+ "id": "usability-vs-concept",
+ "module": "foundations",
+ "title": "Usability Tests vs. Concept Tests",
+ "icon": "🔬",
+ "intro": "Moderated usability testing comes from behavioural science: give real users a real goal and watch what they do. Many teams say “we did a usability test” when they actually asked people what they thought.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Usability Tests vs. Concept Tests",
+   "learn": [
     {
-      "id": "core-distinction",
-      "title": "The Core Distinction",
-      "learn": [
-        {
-          "title": "Two fundamentally different methods",
-          "text": "A **usability test** gives users a realistic task on a working interface and observes what they actually do — errors, confusion, hesitation, workarounds.\n\nA **concept test** shows users a concept or prototype and asks for reactions, preferences, or opinions.\n\nThey answer different questions. They are not interchangeable.\n\nUsability testing evaluates 5 specific qualities (Nielsen): **learnability**, **efficiency**, **memorability**, **error recovery**, and **satisfaction**. If your test doesn't measure at least one of these, it's not a usability test.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Usability Test", "items": ["Observe behavior", "Working interface", "Realistic task", "See errors + confusion"] },
-            "right": { "label": "Concept Test", "items": ["Ask opinions", "Concept/prototype", "Show and tell", "Hear preferences"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "Your team has a working checkout flow redesign. You want to know if users can complete a purchase. Which method?",
-            "options": ["Usability test", "Concept test", "A/B test", "Survey"],
-            "answer": 0,
-            "explain": "You have a working interface and want to observe behavior — that's a usability test."
-          }
-        },
-        {
-          "title": "The self-report gap",
-          "text": "What users **say** they want and what they actually **do** diverge constantly. Behavioral science has documented this gap for decades.\n\n\"I always read error messages carefully\" → usability testing routinely shows they don't.\n\n\"I prefer fewer features\" → behavioral data shows they use more features than they think.\n\nWhen self-report and behavior conflict, **behavioral data wins. Every time.**",
-          "try": {
-            "type": "single",
-            "q": "Users in a concept test say they love the new onboarding. What should you conclude?",
-            "options": [
-              "They like the concept — but you don't know if they can actually use it",
-              "The onboarding is good — ship it",
-              "Users always know what works for them",
-              "Concept tests are more reliable than usability tests"
-            ],
-            "answer": 0,
-            "explain": "Concept tests capture opinion, not behavior. You still need usability testing to know if it actually works."
-          }
-        },
-        {
-          "title": "When to use each",
-          "text": "**Use usability testing when:**\n→ Evaluating an existing product\n→ Validating a redesign\n→ Identifying friction in a critical workflow\n→ Understanding failure modes\n\n**Use concept testing when:**\n→ Early-stage exploration (no interface exists yet)\n→ Testing distinctly different strategic directions\n→ Gathering initial reactions before committing resources\n\nModerated usability testing should almost always be your **default**.",
-          "try": {
-            "type": "single",
-            "q": "You're exploring 3 radically different product directions and have no prototype yet. Which method?",
-            "options": ["Concept test", "Usability test", "Cognitive walkthrough", "Heuristic evaluation"],
-            "answer": 0,
-            "explain": "Early-stage exploration with no working interface = concept test territory."
-          }
-        }
+     "title": "Behaviour, not opinion",
+     "text": "A usability test shows **what real users do** when faced with a real goal. That is still the gold standard.\n\nA concept test asks for reactions: “What do you think this button does?” “Would you use something like this?”\n\n“Real intuitiveness is not a feeling; it is a measurable outcome.”",
+     "try": {
+      "type": "single",
+      "q": "In a session you asked “Would you use something like this?” and wrote down the answers. What did you run?",
+      "options": [
+       "A concept test",
+       "A usability test",
+       "A cognitive walkthrough",
+       "A heuristic evaluation"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What is the fundamental difference between usability and concept tests?",
-          "options": [
-            "Usability observes behavior; concept tests collect opinions",
-            "Usability tests are faster; concept tests are slower",
-            "Usability tests need more participants",
-            "Concept tests are more scientific"
-          ],
-          "answer": 0,
-          "explain": "Usability = what users DO. Concept = what users SAY. Different questions entirely."
-        },
-        {
-          "type": "single",
-          "q": "When self-reported data and behavioral data conflict, which wins?",
-          "options": ["Behavioral data", "Self-reported data", "Whichever has more participants", "Neither — run more research"],
-          "answer": 0,
-          "explain": "Behavioral data wins. Always. People are consistently unreliable narrators of their own behavior."
-        },
-        {
-          "type": "single",
-          "q": "A PM says: \"We concept-tested this and users loved it, so we're skipping usability testing.\" What's wrong with this?",
-          "options": [
-            "Concept tests can't tell you if users can actually use the interface",
-            "Nothing — concept tests are sufficient",
-            "They should have used surveys instead",
-            "Concept tests are only for mobile apps"
-          ],
-          "answer": 0,
-          "explain": "Concept tests capture preference, not performance. Users saying they like something doesn't mean they can use it."
-        },
-        {
-          "type": "single",
-          "q": "What should be your default research method when you have access to users?",
-          "options": [
-            "Moderated usability testing",
-            "Concept testing",
-            "Surveys",
-            "A/B testing"
-          ],
-          "answer": 0,
-          "explain": "Moderated usability testing — born from behavioral science — should almost always be the default."
-        },
-        {
-          "type": "single",
-          "q": "Which scenario is appropriate for a concept test?",
-          "options": [
-            "Exploring 3 strategic directions before any design work",
-            "Evaluating a working checkout flow",
-            "Identifying why users abandon a form",
-            "Measuring task completion time"
-          ],
-          "answer": 0,
-          "explain": "Concept tests are for early-stage exploration when no working interface exists yet."
-        }
-      ]
+      "answer": 0,
+      "explain": "Collecting opinions about a design is concept testing, whatever the meeting was called."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Concept test",
+       "items": [
+        "“Would you use this?”",
+        "“How would you imagine it working?”",
+        "You collect quotes"
+       ]
+      },
+      "right": {
+       "label": "Usability test",
+       "items": [
+        "A goal, not instructions",
+        "You observe actions",
+        "Success is measured"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Write tasks as intent",
+     "text": "Bad instructions describe the interface:\n❌ “Click the download button.”\n❌ “Find the profile page and update your settings.”\n\nGood instructions state the intent:\n✅ “You want to keep a copy of this for your records.”\n✅ “You need to change something about how the system notifies you.”",
+     "try": {
+      "type": "single",
+      "q": "Which task is written as intent?",
+      "options": [
+       "You want to keep a copy of this for your records.",
+       "Click the download button in the toolbar.",
+       "Open the File menu and choose Export as PDF.",
+       "Find the profile page and update your notification settings."
+      ],
+      "answer": 0,
+      "explain": "It gives a goal and leaves the route open, so you learn whether the interface supports it."
+     }
+    },
+    {
+     "title": "When concept testing fits",
+     "text": "Concept testing has a place: **early-stage ideas**, when you need to know if the general direction makes sense.\n\nBut most of the time teams use it where a usability test would give much better data: when there is something users could interact with.",
+     "try": {
+      "type": "single",
+      "q": "When is a concept test the reasonable choice?",
+      "options": [
+       "Early ideas, to check the general direction",
+       "Validating a finished redesign shortly before launch",
+       "Finding friction in an existing checkout",
+       "Measuring whether a flow is intuitive"
+      ],
+      "answer": 0,
+      "explain": "Once users can interact with something, test behaviour instead."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Where does moderated usability testing come from?",
+     "options": [
+      "Behavioural science",
+      "Agile product rituals",
+      "Marketing focus groups",
+      "Visual design critique"
+     ],
+     "answer": 0,
+     "explain": "It was built by researchers such as Gould, Lewis, Nielsen and Virzi who studied what people did, not what they said."
+    },
+    {
+     "type": "single",
+     "q": "Which is a sign you ran a concept test, not a usability test?",
+     "options": [
+      "You gathered quotes instead of observing actions",
+      "Participants failed several of the tasks you had prepared",
+      "The prototype was built in low fidelity",
+      "A moderator was present in the session"
+     ],
+     "answer": 0,
+     "explain": "Other signs: asking how they'd imagine it working, or testing a design nobody interacts with."
+    },
+    {
+     "type": "single",
+     "q": "What should you do before writing usability test tasks?",
+     "options": [
+      "Work out what people are actually trying to do",
+      "Decide which screens look most finished",
+      "Ask stakeholders which features they most want to show off",
+      "Write the report template for the findings"
+     ],
+     "answer": 0,
+     "explain": "Start with a task analysis, not the UI."
+    },
+    {
+     "type": "single",
+     "q": "What is wrong with “Find the profile page and update your settings”?",
+     "options": [
+      "It describes the interface, not the user's intent",
+      "It is too long for most participants to remember accurately",
+      "It tests two different pages at once",
+      "It doesn't include a time limit"
+     ],
+     "answer": 0,
+     "explain": "It hands the route to the participant, so you only test instruction-following."
+    },
+    {
+     "type": "single",
+     "q": "How does Calabro define real intuitiveness?",
+     "options": [
+      "A measurable outcome",
+      "A feeling users report",
+      "A sign of clean visual design",
+      "Something experts can judge by eye"
+     ],
+     "answer": 0,
+     "explain": "“Real intuitiveness is not a feeling; it is a measurable outcome.”"
+    }
+   ]
+  }
+ ]
 }

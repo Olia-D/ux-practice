@@ -1,120 +1,144 @@
 {
-  "id": "fake-ai",
-  "module": "running-studies",
-  "title": "The Dangerous Appeal of Fake AI Users",
-  "icon": "🤖",
-  "intro": "AI-generated \"synthetic users\" look like research but aren't. LLMs predict words, not behavior. The things that make real research valuable — confusion, workarounds, surprise — are exactly what AI can't produce.",
-  "topics": [
+ "id": "fake-ai",
+ "module": "running-studies",
+ "title": "The Dangerous Appeal of Fake AI Users",
+ "icon": "🤖",
+ "intro": "Synthetic or “proxy” users let teams simulate research without doing any. The output looks enough like insight to pass. Calabro's test is practical: what would a real person tell you that a model never could?",
+ "topics": [
+  {
+   "id": "main",
+   "title": "The Dangerous Appeal of Fake AI Users",
+   "learn": [
     {
-      "id": "core",
-      "title": "Core Concepts",
-      "learn": [
-        {
-          "title": "Why synthetic users fail",
-          "text": "Some teams prompt LLMs with persona data and treat the output as user research. The fundamental problem:\n\n**LLMs predict the most likely next words.** They don't generate insight — they generate plausibility.\n\nThe output mirrors your assumptions right back at you. You describe your persona in the prompt, the model produces responses consistent with that description, and you call it \"validation.\"\n\nThat's not research. That's an expensive mirror.\n\nReal users give you data you didn't expect. Synthetic users give you data you already assumed.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "Real user", "items": ["Gives up out of frustration", "Uses a workaround because the system is slow", "Clicks by mistake and stays quiet", "Doesn't notice a feature until pointed out"] },
-            "right": { "label": "Synthetic user", "items": ["Produces plausible-sounding feedback", "Follows the persona description exactly", "Never gets confused or emotional", "Can't reveal what it doesn't \"know\""] }
-          },
-          "try": {
-            "type": "single",
-            "q": "You prompt an LLM with a persona and ask it to 'use' your prototype. What are you actually getting?",
-            "options": ["Responses consistent with your own assumptions in the prompt", "Genuine user behavior data", "Statistically valid feedback", "An unbiased perspective"],
-            "answer": 0,
-            "explain": "The model mirrors what you put in. Your assumptions go in, your assumptions come back out — dressed up as user quotes."
-          }
-        },
-        {
-          "title": "The surprise IS the value",
-          "text": "The most important moments in user research are the ones you didn't predict:\n\n• A user avoids a button they don't understand\n• Someone lies in a survey to finish faster\n• A participant feels embarrassed to ask a question\n• A user believes a task worked when it actually didn't\n• Someone asks a coworker instead of using the feature\n\nThese are **unknown unknowns** — and they're where the biggest product decisions come from.\n\nAn LLM has no lived experience. It doesn't pause, get confused, feel frustrated, or choose the wrong path. It can't reveal those moments because it never has them.\n\nReal research deliberately slows you down. That's a feature, not a bug — you get fewer answers, but they're the ones that matter.",
-          "try": {
-            "type": "single",
-            "q": "Why can't AI replicate the most valuable moments in UX research?",
-            "options": ["AI has no lived experience — it can't get confused, frustrated, or surprised", "AI is too slow to process user tasks", "AI doesn't have access to the right data", "AI can only process text, not visuals"],
-            "answer": 0,
-            "explain": "Real insight comes from moments of genuine human confusion, emotion, and workaround — things that require lived experience, not word prediction."
-          }
-        },
-        {
-          "title": "How we got here",
-          "text": "Synthetic users are a symptom, not the root cause. The real problem:\n\n**PM-led research without methods training.** Product managers took on research but shifted from observation to conversation, from evidence to opinion. Short, frequent \"customer touchpoints\" give the appearance of learning without the depth.\n\n**Speed valued over rigor.** The claim that experienced teams can move fast without sacrificing quality falls apart — most teams aren't experienced, and they cut corners.\n\n**The illusion of rigor.** AI output comes with transcripts, quotes, and takeaways that look real. People without research training can't tell the difference.\n\n**Once adopted, hard to abandon.** Teams get detached from the people they build for. AI makes poor practices cheap and repeatable, which institutionalizes bad research at scale.\n\nThe author doesn't reject AI in product development — only its use as a replacement for actual users.",
-          "visual": {
-            "type": "compare",
-            "left": { "label": "AI is useful for", "items": ["Analyzing existing research data", "Generating hypotheses to test", "Summarizing session transcripts", "Draft discussion guides"] },
-            "right": { "label": "AI can't replace", "items": ["Observing real user behavior", "Discovering unknown unknowns", "Capturing emotional responses", "Finding workarounds you didn't imagine"] }
-          },
-          "try": {
-            "type": "single",
-            "q": "A PM says: \"We ran 50 synthetic user sessions this week — way more than we could do with real users.\" What's the problem?",
-            "options": ["Volume of bad data doesn't produce insight — it produces false confidence", "50 sessions is too few", "Synthetic users are fine but should be combined with surveys", "The PM should have used a better prompt"],
-            "answer": 0,
-            "explain": "Scaling bad methodology doesn't make it good. Cheaper and faster doesn't matter if the data can't tell you what you need to know."
-          }
-        }
+     "title": "Ten things a proxy user never says",
+     "text": "Real sessions produce moments like:\n\n“I gave up halfway through because I got frustrated.”\n“I don't know what that button does, so I avoid it.”\n“I use this workaround every time because your system is too slow.”\n“I didn't even notice that feature until you pointed it out.”\n“I thought it worked. Then I realized it didn't.”\n\nThese are the unknown unknowns that make or break a project.",
+     "try": {
+      "type": "single",
+      "q": "Which statement could only come from a real user?",
+      "options": [
+       "“I use this workaround every time.”",
+       "“Users generally prefer simple flows.”",
+       "“This feature would likely be valuable.”",
+       "“The layout appears clear and modern.”"
       ],
-      "test": [
-        {
-          "type": "single",
-          "q": "What is the fundamental flaw of using LLMs as synthetic users?",
-          "options": [
-            "LLMs predict likely words, not actual user behavior",
-            "LLMs are too expensive for research",
-            "LLMs can only handle text, not visual designs",
-            "LLMs require too much setup time"
-          ],
-          "answer": 0,
-          "explain": "LLMs are word-prediction machines. They produce plausible-sounding responses, not behavioral data. That's a category error."
-        },
-        {
-          "type": "single",
-          "q": "Which of these can a real user do but a synthetic user cannot?",
-          "options": [
-            "Give up out of frustration and use a workaround",
-            "Answer questions about their preferences",
-            "Describe what they would do in a scenario",
-            "Evaluate the visual appeal of a design"
-          ],
-          "answer": 0,
-          "explain": "Real frustration, real workarounds, and real emotional responses require lived experience — exactly what LLMs lack."
-        },
-        {
-          "type": "single",
-          "q": "Why does the article call surprise 'the value' of real research?",
-          "options": [
-            "Unknown unknowns drive the biggest product decisions",
-            "Surprises make research reports more interesting",
-            "Users enjoy being surprised during testing",
-            "Unexpected findings generate more stakeholder attention"
-          ],
-          "answer": 0,
-          "explain": "The moments you didn't predict — confusion, workarounds, misunderstandings — are where the most important insights come from."
-        },
-        {
-          "type": "single",
-          "q": "According to the article, why is it hard for teams to stop using synthetic users once adopted?",
-          "options": [
-            "Teams get detached from real users and AI makes poor practices cheap to scale",
-            "The technology is too integrated into their tools",
-            "Synthetic users produce better results over time",
-            "Management mandates their continued use"
-          ],
-          "answer": 0,
-          "explain": "Once teams stop observing real people, they lose connection to actual user behavior. AI makes it easy to keep going — poor research at scale."
-        },
-        {
-          "type": "single",
-          "q": "Does the author reject all use of AI in product development?",
-          "options": [
-            "No — only its use as a replacement for real users",
-            "Yes — AI has no place in product work",
-            "Yes — AI introduces too many biases",
-            "No — but only if used by trained researchers"
-          ],
-          "answer": 0,
-          "explain": "The article specifically says AI has value in product development — just not as a substitute for observing real human behavior."
-        }
-      ]
+      "answer": 0,
+      "explain": "A workaround is lived behaviour. The others are plausible generalities a model can produce."
+     }
+    },
+    {
+     "title": "Things people hide",
+     "text": "Also on his list:\n\n“I lied in your survey because I thought it would help me finish faster.”\n“I feel stupid asking this, but…”\n“I clicked that by mistake, but I didn't want to say anything.”\n“I had to ask a coworker how to do it.”\n“Honestly, I don't trust your product to do this right.”",
+     "try": {
+      "type": "single",
+      "q": "A participant says “I clicked that by mistake, but I didn't want to say anything.” What does this show?",
+      "options": [
+       "Real sessions surface behaviour people hide",
+       "The participant was poorly recruited",
+       "The moderator asked a leading question earlier in the session",
+       "The prototype needs higher fidelity"
+      ],
+      "answer": 0,
+      "explain": "Embarrassment and hidden errors only appear with real people."
+     },
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Proxy user",
+       "items": [
+        "Plausible answer",
+        "No frustration",
+        "No workaround"
+       ]
+      },
+      "right": {
+       "label": "Real user",
+       "items": [
+        "Gives up",
+        "Hides mistakes",
+        "Asks a coworker"
+       ]
+      }
+     }
+    },
+    {
+     "title": "Scaling the decay",
+     "text": "Calabro's biggest worry is not that proxy users give PMs a shortcut to their own opinions. It is that **whole teams can build fast on simulated research**.\n\nHe traces it to years of speed over quality: trading synthesis for sentiment and pushing researchers out of early stages.",
+     "try": {
+      "type": "single",
+      "q": "What does Calabro see as the biggest threat of proxy users?",
+      "options": [
+       "Teams scale up work built on simulated research",
+       "AI tools are still too expensive for small product teams",
+       "Participants will lose paid research work",
+       "PMs will stop attending research sessions"
+      ],
+      "answer": 0,
+      "explain": "They scale the decay of research across entire teams."
+     }
     }
-  ]
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is a “proxy user” in this article?",
+     "options": [
+      "An AI stand-in for real research participants",
+      "A colleague who role-plays a customer during design reviews",
+      "A power user who represents a segment",
+      "A persona built from interview data"
+     ],
+     "answer": 0,
+     "explain": "It is the synthetic-user idea: talking to a chatbot instead of people."
+    },
+    {
+     "type": "single",
+     "q": "Why does synthetic output get accepted?",
+     "options": [
+      "It looks enough like insight to pass",
+      "It is statistically more reliable than interviews",
+      "It always matches analytics data",
+      "Researchers usually recommend it"
+     ],
+     "answer": 0,
+     "explain": "The output is coherent and plausible, which is the danger."
+    },
+    {
+     "type": "single",
+     "q": "Which is on Calabro's list of things a proxy user never says?",
+     "options": [
+      "“I had to ask a coworker how to do it.”",
+      "“I would rate this four out of five.”",
+      "“The onboarding seems well structured.”",
+      "“I prefer the second design option.”"
+     ],
+     "answer": 0,
+     "explain": "Asking a coworker is a real workaround in a real setting."
+    },
+    {
+     "type": "single",
+     "q": "What do the ten statements have in common?",
+     "options": [
+      "They uncover unknown unknowns",
+      "They are all complaints about speed",
+      "They come from expert users only",
+      "They can be predicted in advance"
+     ],
+     "answer": 0,
+     "explain": "They are the parts of a session that lead to real learning."
+    },
+    {
+     "type": "single",
+     "q": "Where does Calabro say the trend comes from?",
+     "options": [
+      "Years of pushing for speed over quality",
+      "A long-running shortage of trained UX researchers",
+      "Stricter privacy rules on recruiting",
+      "Users refusing to join studies"
+     ],
+     "answer": 0,
+     "explain": "PMs didn't set out to break research, but speed-first habits led here."
+    }
+   ]
+  }
+ ]
 }
