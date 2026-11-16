@@ -168,3 +168,31 @@ p{margin:8px 0}
 .idxrow:hover,.idxrow:focus-visible{background:var(--sky)}
 .idxcard{display:block;font-weight:600;line-height:1.35}
 .idxart{display:block;font-size:13px;color:var(--muted);margin-top:2px}
+
+/* library */
+.lib-kicker{margin:0;font-size:13px;font-weight:600;color:var(--accent)}
+.lib-title{margin:2px 0 6px}
+.lib-item h3{margin:0 0 2px}
+.lib-actions{margin-top:12px;gap:8px}
+.lib-head{margin-top:24px}
+.lib-head h2{margin:0}
+.lib-guide{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.lib-guide .chev{color:var(--muted)}
+.lib-refs a{white-space:nowrap}
+.md{font-size:16px;line-height:1.6;overflow-wrap:anywhere}
+.md h2{font-size:22px;margin:4px 0 10px}
+.md h3{font-size:19px;margin:24px 0 8px;padding-top:12px;border-top:1px solid var(--sky)}
+.md h4,.md h5{font-size:16px;margin:18px 0 6px}
+.md ul,.md ol{padding-left:22px;margin:8px 0}
+.md li{margin:4px 0}
+.md code{font-family:var(--mono);font-size:.88em;background:var(--sky);padding:1px 5px;border-radius:5px}
+.md pre{background:var(--sky);padding:12px;border-radius:10px;overflow-x:auto;font-size:14px}
+.md pre code{background:none;padding:0}
+.md blockquote{margin:10px 0;padding:4px 14px;border-left:3px solid var(--border);color:var(--muted)}
+.md hr{border:0;border-top:1px solid var(--border);margin:18px 0}
+.md-desc{font-size:15px;color:var(--muted);border-bottom:1px solid var(--border);padding-bottom:12px}
+.md-table{overflow-x:auto;margin:10px 0;-webkit-overflow-scrolling:touch}
+.md table{border-collapse:collapse;font-size:14px;min-width:100%;overflow-wrap:normal;word-break:normal}
+.md th,.md td{border:1px solid var(--border);padding:6px 8px;text-align:left;vertical-align:top;min-width:8.5em;hyphens:auto}
+.md td:first-child,.md th:first-child{min-width:6.5em}
+.md th{background:var(--sky)}

@@ -1,0 +1,21 @@
+{
+  "book": {
+    "title": "UX Research in the Wild — reference edition",
+    "blurb": "99 chapters with figures, memory aids, a rules cheat sheet and an archive guide. One HTML file; works offline.",
+    "read": "book/ux-research-in-the-wild.html",
+    "download": "book/ux-research-in-the-wild.html",
+    "zip": "downloads/ux-research-in-the-wild-book.zip"
+  },
+  "guide": "skills/HOW-TO-USE.md",
+  "all": "downloads/ux-skills-all.zip",
+  "skills": [
+    {"id": "ux-start", "title": "UX Start", "blurb": "Router: picks the right skill and runs multi-step flows."},
+    {"id": "interaction-design-reviewer", "title": "Interaction Design Reviewer", "blurb": "Forms, controls, navigation, status, accessibility, destructive actions.",
+     "refs": ["forms", "controls", "status-design", "accessibility-and-flows", "test-cases"]},
+    {"id": "ai-ux-patterns", "title": "AI UX Patterns", "blurb": "Autonomy, trust, chat history, citations, EU AI Act labelling."},
+    {"id": "ux-research-advisor", "title": "UX Research Advisor", "blurb": "Method choice, sample size, A/B critique, surveys, readouts, ROI."},
+    {"id": "data-visualization", "title": "Data Visualization", "blurb": "Chart choice, styling, colour, dashboard layout, accessibility."},
+    {"id": "jtbd-research", "title": "JTBD Research", "blurb": "Why users adopt, switch or churn; job statements and probes."},
+    {"id": "ux-digest", "title": "UX Digest", "blurb": "Weekly digest of Calabro, Krutchinsky and Babich."}
+  ]
+}

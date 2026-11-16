@@ -34,3 +34,4 @@ Run `python3 scripts/check-content.py`. It fails on broken content (bad JSON, mi
 - `#/` modules · `#/m/<id>` module · `#/a/<id>/learn/<n>` learn card · `#/a/<id>/test` quiz
 - `#/review` missed-question bank · `#/review/run` run a review
 - `#/m/<id>/review` module review quiz · `#/index` concept index
+- `#/library` book and skills: read or download · `#/library/skill/<id>` read a skill · `#/library/guide` how to use the skills

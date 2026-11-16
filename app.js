@@ -194,7 +194,8 @@
       html += '<div class="card tools"><a class="toolrow" href="#/review"><span><b>Review missed questions</b>'
            + (nMissed ? '<span class="note"> · ' + nMissed + ' waiting</span>' : '<span class="note"> · nothing yet</span>')
            + '</span><span class="chev">→</span></a>'
-           + '<a class="toolrow" href="#/index"><span><b>Concept index</b><span class="note"> · every learn card</span></span><span class="chev">→</span></a></div>';
+           + '<a class="toolrow" href="#/index"><span><b>Concept index</b><span class="note"> · every learn card</span></span><span class="chev">→</span></a>'
+           + '<a class="toolrow" href="#/library"><span><b>Library</b><span class="note"> · read or download the book and skills</span></span><span class="chev">→</span></a></div>';
       if (totalAll) {
         var totalPct = Math.round(100 * totalDone / totalAll);
         html += '<div class="card" style="text-align:center"><p class="muted">Overall: ' + totalDone + ' of ' + totalAll + ' articles done</p><div class="mod-progress"><div class="mod-bar"><i style="width:' + totalPct + '%"></i></div><span class="mod-pct">' + totalPct + '%</span></div></div>';
@@ -562,6 +563,142 @@
     }).catch(showError);
   }
 
+  // ---------- LIBRARY (book + skills) ----------
+  var libCache = null;
+  function loadLibrary() {
+    if (libCache) return Promise.resolve(libCache);
+    return fetch('skills/index.json').then(function (r) { if (!r.ok) throw new Error('Could not load the library'); return r.json(); })
+      .then(function (d) { libCache = d; return d; });
+  }
+  function dlBtn(href, label, cls) {
+    var name = href.split('/').pop();
+    return '<a class="btn small ' + (cls || '') + '" href="' + esc(href) + '" download="' + esc(name) + '">' + label + '</a>';
+  }
+  function viewLibrary() {
+    loadLibrary().then(function (L) {
+      var b = L.book;
+      var html = '<a class="crumb" href="#/">← All modules</a>' +
+        '<h1>Library</h1><p class="sub">Read online or download the book and the Claude skills.</p>' +
+        '<div class="card lib-item"><p class="lib-kicker">Book</p><h2 class="lib-title">' + esc(b.title) + '</h2>' +
+        '<p class="note">' + esc(b.blurb) + '</p>' +
+        '<div class="row lib-actions"><a class="btn small" href="' + esc(b.read) + '" target="_blank" rel="noopener">Read</a>' +
+        dlBtn(b.download, 'Download HTML', 'secondary') + dlBtn(b.zip, 'Download zip', 'ghost') + '</div></div>';
+      html += '<div class="row between lib-head"><h2>Claude skills</h2>' + dlBtn(L.all, 'Download all', 'secondary') + '</div>' +
+        '<a class="card tile lib-guide" href="#/library/guide"><b>How to install and use the skills</b><span class="chev">→</span></a>';
+      L.skills.forEach(function (s) {
+        html += '<div class="card lib-item"><h3>' + esc(s.title) + '</h3><p class="note">' + esc(s.blurb) + '</p>' +
+          '<div class="row lib-actions"><a class="btn small" href="#/library/skill/' + esc(s.id) + '">Read</a>' +
+          dlBtn('downloads/skill-' + s.id + '.zip', 'Download zip', 'secondary') + '</div></div>';
+      });
+      html += '<p class="note">Upload one zip per skill on claude.ai under Settings → Skills. For Claude Code, unzip into <code>~/.claude/skills/&lt;name&gt;/</code>.</p>';
+      setView(html);
+    }).catch(showError);
+  }
+  function viewDoc(path, back, backLabel, extra) {
+    fetch(path).then(function (r) { if (!r.ok) throw new Error('Could not load ' + path); return r.text(); }).then(function (md) {
+      var html = '<a class="crumb" href="' + back + '">← ' + esc(backLabel) + '</a>' + (extra || '') +
+        '<article class="card md">' + (mdBase = path, renderMd(md)) + '</article>' +
+        '<a class="crumb" href="' + back + '">← ' + esc(backLabel) + '</a>';
+      setView(html);
+    }).catch(showError);
+  }
+  function viewSkill(id, ref) {
+    loadLibrary().then(function (L) {
+      var s = L.skills.filter(function (x) { return x.id === id; })[0];
+      if (!s) { location.hash = '#/library'; return; }
+      if (ref) {
+        if ((s.refs || []).indexOf(ref) < 0) { location.hash = '#/library/skill/' + id; return; }
+        return viewDoc('skills/' + id + '/references/' + ref + '.md', '#/library/skill/' + id, s.title);
+      }
+      var bar = '<div class="card lib-item"><h2 class="lib-title">' + esc(s.title) + '</h2><p class="note">' + esc(s.blurb) + '</p>' +
+        '<div class="row lib-actions">' + dlBtn('downloads/skill-' + id + '.zip', 'Download zip') +
+        dlBtn('skills/' + id + '/SKILL.md', 'Download SKILL.md', 'secondary') + '</div>';
+      if (s.refs && s.refs.length) {
+        bar += '<p class="note lib-refs">Reference files: ' + s.refs.map(function (r) {
+          return '<a href="#/library/skill/' + id + '/' + r + '">' + esc(r.replace(/-/g, ' ')) + '</a>';
+        }).join(' · ') + '</p>';
+      }
+      bar += '</div>';
+      viewDoc('skills/' + id + '/SKILL.md', '#/library', 'Library', bar);
+    }).catch(showError);
+  }
+
+  // Small Markdown renderer for skill files: frontmatter, headings, lists, tables, code, quotes, inline marks.
+  var mdBase = '';
+  function resolveRel(base, rel) {
+    var parts = base.split('/').slice(0, -1);
+    rel.split('/').forEach(function (seg) { if (seg === '..') parts.pop(); else if (seg && seg !== '.') parts.push(seg); });
+    return parts.join('/');
+  }
+  function mdInline(s) {
+    var codes = [];
+    var h = esc(s).replace(/`([^`]+)`/g, function (_, c) { codes.push(c); return '\u0000' + (codes.length - 1) + '\u0000'; });
+    h = h.replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, function (_, txt, url) {
+      var safe = /^(https?:|#|mailto:)/.test(url) ? url : (/^[\w.\/-]+$/.test(url) ? resolveRel(mdBase, url) : '#');
+      var ext = /^https?:/.test(url) ? ' target="_blank" rel="noopener"' : '';
+      return '<a href="' + safe + '"' + ext + '>' + txt + '</a>';
+    });
+    h = h.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/(^|[\s(])\*([^*\s][^*]*?)\*(?=[\s.,;:)!?]|$)/g, '$1<i>$2</i>');
+    return h.replace(/\u0000(\d+)\u0000/g, function (_, i) { return '<code>' + codes[+i] + '</code>'; });
+  }
+  function renderMd(md) {
+    var lines = md.replace(/\r/g, '').split('\n'), out = [], i = 0, meta = '';
+    if (lines[0] === '---') {
+      var j = lines.indexOf('---', 1);
+      if (j > 0) {
+        lines.slice(1, j).forEach(function (l) {
+          var m = l.match(/^description:\s*"?(.*?)"?$/);
+          if (m) meta = m[1].replace(/\\"/g, '"');
+        });
+        lines = lines.slice(j + 1);
+      }
+    }
+    if (meta) out.push('<p class="md-desc">' + mdInline(meta) + '</p>');
+    var para = [];
+    function flush() { if (para.length) { out.push('<p>' + mdInline(para.join(' ')) + '</p>'); para = []; } }
+    while (i < lines.length) {
+      var l = lines[i], m;
+      if (/^```/.test(l)) {
+        flush(); var buf = []; i++;
+        while (i < lines.length && !/^```/.test(lines[i])) buf.push(lines[i++]);
+        i++; out.push('<pre><code>' + esc(buf.join('\n')) + '</code></pre>'); continue;
+      }
+      if ((m = l.match(/^(#{1,4})\s+(.*)/))) { flush(); var n = Math.min(m[1].length + 1, 5); out.push('<h' + n + '>' + mdInline(m[2]) + '</h' + n + '>'); i++; continue; }
+      if (/^\s*\|/.test(l)) {
+        flush(); var rows = [];
+        while (i < lines.length && /^\s*\|/.test(lines[i])) rows.push(lines[i++]);
+        var cells = function (r) { return r.trim().replace(/^\||\|$/g, '').split('|').map(function (c) { return c.trim(); }); };
+        var t = '<div class="md-table"><table>';
+        rows.forEach(function (r, ri) {
+          if (/^\s*\|?\s*:?-{2,}/.test(r)) return;
+          var tag = ri === 0 ? 'th' : 'td';
+          t += '<tr>' + cells(r).map(function (c) { return '<' + tag + '>' + mdInline(c) + '</' + tag + '>'; }).join('') + '</tr>';
+        });
+        out.push(t + '</table></div>'); continue;
+      }
+      if (/^\s*([-*]|\d+\.)\s+/.test(l)) {
+        flush(); var ordered = /^\s*\d+\./.test(l), items = [];
+        while (i < lines.length && (/^\s*([-*]|\d+\.)\s+/.test(lines[i]) || (/^\s{2,}\S/.test(lines[i]) && items.length))) {
+          var ln = lines[i++];
+          if (/^\s*([-*]|\d+\.)\s+/.test(ln)) items.push(ln.replace(/^\s*([-*]|\d+\.)\s+/, ''));
+          else items[items.length - 1] += ' ' + ln.trim();
+        }
+        var tg = ordered ? 'ol' : 'ul';
+        out.push('<' + tg + '>' + items.map(function (x) { return '<li>' + mdInline(x) + '</li>'; }).join('') + '</' + tg + '>'); continue;
+      }
+      if (/^>\s?/.test(l)) {
+        flush(); var q = [];
+        while (i < lines.length && /^>\s?/.test(lines[i])) q.push(lines[i++].replace(/^>\s?/, ''));
+        out.push('<blockquote>' + mdInline(q.join(' ')) + '</blockquote>'); continue;
+      }
+      if (/^\s*(-{3,}|\*{3,})\s*$/.test(l)) { flush(); out.push('<hr>'); i++; continue; }
+      if (!l.trim()) { flush(); i++; continue; }
+      para.push(l.trim()); i++;
+    }
+    flush();
+    return out.join('\n');
+  }
+
   // ---------- backup ----------
   function bindBackup() {
     var exp = document.getElementById('export-btn');
@@ -600,6 +737,11 @@
     var h = location.hash.replace(/^#\/?/, '').split('/');
     if (h[0] === 'review') return h[1] === 'run' ? runReview() : viewReview();
     if (h[0] === 'index') return viewIndex();
+    if (h[0] === 'library') {
+      if (h[1] === 'guide') return loadLibrary().then(function (L) { viewDoc(L.guide, '#/library', 'Library'); }).catch(showError);
+      if (h[1] === 'skill' && h[2]) return viewSkill(h[2], h[3]);
+      return viewLibrary();
+    }
     if (h[0] === 'm' && h[1]) {
       if (h[2] === 'review') return viewModuleReview(h[1]);
       return viewModule(h[1]);

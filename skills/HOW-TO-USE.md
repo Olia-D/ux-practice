@@ -4,7 +4,7 @@ Once installed, the skills need no setup. Claude reads each skill's short descri
 
 ## Install
 
-- **claude.ai (web, desktop, mobile):** go to Settings → Skills → upload. Upload one zip per skill from [`../downloads/`](../downloads/), or the all-in-one zip, unpacked into separate uploads. The skills then work in every chat, project and Claude Code session on that account.
+- **claude.ai (web, desktop, mobile):** go to Settings → Skills → upload. Download one zip per skill from the app's **Library** screen or the [downloads folder](https://github.com/Olia-D/ux-practice/tree/main/downloads), and upload each zip separately. The skills then work in every chat, project and Claude Code session on that account.
 - **Claude Code:** copy the skill folders into `~/.claude/skills/` (for every project) or `<repo>/.claude/skills/` (for one project). They load when the next session starts.
 
 ## Three ways to use them
