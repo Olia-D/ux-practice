@@ -22,8 +22,6 @@ Ask (or infer) two things: **what is the deliverable** and **what decision is be
 | "Should we test this", "how do I know", a finding or A/B result, readout, ROI, "our users are different" | `ux-research-advisor` | + `jtbd-research` if the question is *why users choose/switch* |
 | Why users pick / drop / switch; positioning; churn | `jtbd-research` | + `ux-research-advisor` for the study plan |
 | Button label, error, empty state, any product text | `interaction-design-reviewer` (forms/status) | (ux copy guidance lives there and in Microcopy / Everybody Writes in the project library) |
-| Email, Slack, LinkedIn, CV text she sends as herself | `humanizer` | — |
-| Framer component | `component-idea` | — |
 
 If none fits, say so and answer with the project library (Hall, Torres, Yifrah, Handley,
 Cialdini) rather than forcing a skill.
