@@ -1,6 +1,6 @@
 ---
 name: "ai-ux-patterns"
-description: "Design and review AI product interfaces — decide autonomy level and trust scaffold first (Agentic UX, T.R.U.S.T., C.O.N.V.E.R.S.E. frameworks), then apply patterns from Shape of AI, AI UX Patterns and AI UX Playground: prompting, tuning, human-in-the-loop, trust signals, memory, citations, agentic commerce. Use whenever Olha is designing, speccing, or critiquing any AI-powered feature (chatbots, copilots, generative tools, agents, AI shopping) even if she doesn't say \"AI UX\" — e.g. \"how should the loading state work for this generation\", \"what happens when the agent wants to send an email\", \"how much should the agent do on its own\". Trigger with \"AI feature\", \"AI UX\", \"agent\", \"autonomy\", \"streaming response\", \"hallucination disclosure\", \"memory controls\", \"citations UI\", \"agent interface\", \"thread history\"."
+description: "Design and review AI product interfaces — decide autonomy level and trust scaffold first (Agentic UX, T.R.U.S.T., C.O.N.V.E.R.S.E. frameworks), then apply patterns from Shape of AI, AI UX Patterns and AI UX Playground: prompting, tuning, human-in-the-loop, trust signals, memory, citations, agentic commerce. Use whenever Olha is designing, speccing, or critiquing any AI-powered feature (chatbots, copilots, generative tools, agents, AI shopping) even if she doesn't say \"AI UX\" — e.g. \"how should the loading state work for this generation\", \"what happens when the agent wants to send an email\", \"how much should the agent do on its own\". Trigger with \"AI feature\", \"AI UX\", \"agent\", \"autonomy\", \"streaming response\", \"hallucination disclosure\", \"memory controls\", \"citations UI\", \"agent interface\", \"thread history\", \"chat history\", \"AI label\", \"EU AI Act\", \"AI disclosure\"."
 ---
 
 # AI UX Patterns
@@ -226,6 +226,28 @@ it's information architecture rather than a moment inside a single generation.
   (with context) or starts fresh (without it).
 - **Thread history** — a browsable record of past threads/sessions the user can return to.
 
+**Three-layer model (Calabro, *The Rules of AI Chat History*).** A transcript is a record,
+not a history. Design three connected layers, each with its own job:
+
+1. **Task history** — one thread per distinct goal (a self-contained request with a finish
+   point); refinements stay inside it; users can rename threads in their own words. When a
+   real shift is detected, *suggest* a new task in user terms ("so each request's progress
+   stays separate"), never in terms of tokens, and let them decline. Long-running work gets
+   its own background instance listed by state: needs clarification · in progress · ready
+   for review · completed · failed.
+2. **Interaction history** — separate events from results. The instruction and the final
+   output matter most; tool activity matters when it fails. Mark milestones at real changes
+   of direction, collapse old exchanges into items that name their content ("Completed
+   analysis with 4 flagged changes", not "Updated response"), keep warnings and open
+   questions visible, and show which files/data/earlier tasks informed the response.
+3. **Output workspace** — anything long, editable, versioned, exported or reused lives in a
+   persistent panel beside the conversation, current version obvious, earlier ones comparable.
+
+*Test it* with a pre-populated history: return to a task from days ago; find the final output
+after several revisions; say which sources informed an answer; start an unrelated task without
+contaminating the current one; find the task waiting for review; explain what context the
+system is using now.
+
 *Design risk if skipped:* users lose valuable past work, can't resume an interrupted task,
 or unintentionally carry irrelevant context into a new, unrelated prompt.
 
@@ -295,7 +317,8 @@ which is exactly the kind of work the AI was supposed to remove.
 ## 8. Trust builders — signaling that output is safe to rely on
 
 - **Disclosure** — clearly mark AI-generated or AI-guided content as such, not blended in
-  silently with human-authored content.
+  silently with human-authored content. In the EU this is now law, not a nicety — see
+  *Legal floor* below.
 - **Caveat** — proactively surface known model shortcomings or risk areas (not just a
   generic disclaimer buried in terms of service).
 - **Footprints** — let users trace a result back through the steps that produced it.
@@ -316,6 +339,35 @@ when to double-check a claim, and have no way to audit how a result was produced
 which erode trust faster in AI features than in traditional software, because the failure
 modes (confident wrong answers) are less visible than a broken button.
 
+### Legal floor: EU AI Act Article 50 (in force since 2 August 2026)
+
+Applies whenever AI output reaches people in the EU, whatever the risk class. Fines up to
+€15M or 3% of global turnover. Practical detail: Commission guidelines on transparency
+(20 July 2026) and the Code of Practice on marking and labelling AI-generated content.
+
+| Obligation | Who | UX consequence |
+|---|---|---|
+| Tell people they're interacting with AI, unless obvious from context | Provider | Chatbots and agents identify as AI at the start of the interaction — in text, not only an avatar or sparkle |
+| Mark synthetic audio/image/video/text in a machine-readable, detectable format | Provider (deployer shares) | Watermark/metadata must survive download and sharing. **Grace period:** generative systems already on the market before 2 Aug 2026 have until **2 Dec 2026** |
+| Disclose deepfakes (realistic content of real people, places, events) | Deployer | Visible label on the asset itself |
+| Disclose AI-generated text published on matters of public interest, unless human-reviewed with a named responsible editor | Deployer | Product claims touching health, finance, safety, environment count. A skim isn't review |
+| Inform people exposed to emotion recognition or biometric categorisation | Deployer | Notice before or at exposure, plus GDPR basis |
+
+**Usually exempt:** spellcheck/grammar/translation/cropping-level assistance, clearly
+non-realistic imagery, substantively human-edited text with a named editor.
+**Counts as generation:** summaries, composites, substantive rewrites, adding/removing
+elements in photos.
+
+**What a compliant label looks like:** visible, persistent, accessible plain text (plus the
+EU icon — variants: AI · fully AI-generated · partially AI-modified). **Non-compliant:** a
+faint icon alone, a footer note, a label that flashes and disappears, a sparkle with no text.
+Carbon's AI label (inline label → icon → explainability panel) is a production-ready model.
+
+Disclosure is the floor, not the trust work: provenance, citations and visible context
+(sections 5 and 8) are what make output checkable. In reviews, flag a missing or
+non-compliant disclosure as a **compliance** issue, separate from UX severity. Not legal
+advice — confirm scope with legal for B2B-only or non-EU products.
+
 ## 9. Identifiers — giving the AI a distinct, recognizable identity
 
 - **Avatar** — a visual identifier for the AI itself.
@@ -328,6 +380,23 @@ modes (confident wrong answers) are less visible than a broken button.
 and users can't build a consistent mental model of what the AI is or does across surfaces.
 
 ---
+
+## Evaluating AI features — what not to delegate to AI
+
+Calabro (*5 Things AI Still Can't Do for UX Research*, *The Dangerous Appeal of Fake AI Users*):
+
+- **No synthetic users** for evaluation. They sound human and confirm what you believe; they
+  can't get confused, invent a workaround or surprise you. Test AI features with real people.
+- **Write the research questions yourself** — neutral-prompt habits strip the context a good
+  question needs.
+- **Don't trust AI-run interaction models** — correcting ChatGPT's GOMS-KLM analysis took
+  about 6× longer than doing it by hand.
+- **Choose the statistics yourself** — running code isn't choosing a test; accuracy rose from
+  about a third to 90%+ only with expert prompts.
+- **Interpret against the decision** — a significant result says groups differ, not which or
+  whether it matters.
+
+Hand evaluation planning to `ux-research-advisor`.
 
 ## Output format for reviews
 
@@ -364,6 +433,11 @@ at all?"):
   Define one first-success moment and measure time to it.
 
 ## Sources
+
+Chat-history layers and the "what AI can't do" list: Trevor Calabro, *UX Research in the
+Wild* (The Rules of AI Chat History, Jun 2026; 5 Things AI Still Can't Do for UX Research,
+Oct 2026). Legal floor: Regulation (EU) 2024/1689 Art. 50; Commission transparency
+guidelines (20 Jul 2026); AI Omnibus grace period for marking (to 2 Dec 2026).
 
 Pattern taxonomy combines [The Shape of AI](https://www.shapeof.ai) by Emily Campbell
 (CC-BY-NC-SA) and [AI UX Patterns](https://www.aiuxpatterns.com) by Luke Bennis. Frameworks
