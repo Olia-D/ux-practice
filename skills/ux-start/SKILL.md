@@ -24,7 +24,6 @@ Ask (or infer) two things: **what is the deliverable** and **what decision is be
 | Button label, error, empty state, any product text | `interaction-design-reviewer` (forms/status) | (ux copy guidance lives there and in Microcopy / Everybody Writes in the project library) |
 | Email, Slack, LinkedIn, CV text she sends as herself | `humanizer` | — |
 | Framer component | `component-idea` | — |
-| "What's new from Trevor / Marina / Nick" | `ux-digest` | — |
 
 If none fits, say so and answer with the project library (Hall, Torres, Yifrah, Handley,
 Cialdini) rather than forcing a skill.
