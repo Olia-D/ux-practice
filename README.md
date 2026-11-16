@@ -23,7 +23,7 @@ Seven skills, each in `skills/<name>/` and as an upload-ready zip (SKILL.md at t
 | ux-digest | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/skill-ux-digest.zip) |
 | **All seven** | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/ux-skills-all.zip) |
 
-Install on claude.ai: Settings → Skills → upload one zip per skill. Claude Code: copy the folders into `~/.claude/skills/`. Routing tips are in [`skills/PROJECT-INSTRUCTIONS.md`](skills/PROJECT-INSTRUCTIONS.md).
+**How to install and use them:** [`skills/HOW-TO-USE.md`](skills/HOW-TO-USE.md). In short, upload one zip per skill under Settings → Skills on claude.ai, or copy the folders into `~/.claude/skills/` for Claude Code, then just ask.
 
 ## Before you push
 
