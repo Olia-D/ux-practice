@@ -45,12 +45,10 @@ Cialdini) rather than forcing a skill.
 **Stakeholder pushback / "our users are different" / "just copy competitor X"**
 1. `ux-research-advisor` §10 (90/10 rule, burden of proof) and §6 if an A/B result is cited.
 2. `interaction-design-reviewer` pushback-prep lines for the specific pattern.
-3. `humanizer` if the answer goes out as a message from Olha.
 
 **Launch / post-launch review**
 1. `ux-research-advisor` §9 → baselines, what stopped happening, ROI frame.
 2. `data-visualization` → how to show the before/after so the takeaway is right.
-3. `humanizer` for the write-up.
 
 **Dashboard or analytics page**
 1. `data-visualization` Step 0 → what decision; monitor / diagnose / prove.

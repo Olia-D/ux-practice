@@ -6,7 +6,6 @@ Skill routing — pick before answering:
 - Plan a study, critique findings or an A/B result, debrief, ROI, "our users are different" → ux-research-advisor
 - Any AI-powered feature, agent, copilot, chat → ai-ux-patterns (+ interaction-design-reviewer for the non-AI parts)
 - Why users choose / switch / churn, positioning → jtbd-research
-- Text I will send or publish as myself → humanizer
 - Multi-step or unclear request → ux-start (load it first)
 If a request spans two, load both. End with one line: "Skills used: a, b".
 
