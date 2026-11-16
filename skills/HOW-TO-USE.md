@@ -20,7 +20,7 @@ Once installed, the skills need no setup. Claude reads each skill's short descri
 | `ux-start` | The problem is vague, or it mixes research, design and copy |
 | `interaction-design-reviewer` | You're working on forms, controls, navigation, statuses, accessibility or destructive actions |
 | `ai-ux-patterns` | You're designing any AI feature: how much the agent does on its own, how trust and citations work, chat history, the EU AI Act labelling rules |
-| `ux-research-advisor` | You're planning a study, judging an A/B result, writing a survey, preparing a readout or arguing ROI |
+| `ux-research-advisor` | You're planning a study, judging an A/B result, writing a survey, preparing a readout, arguing ROI, or setting up or reading Pendo analytics |
 | `data-visualization` | You're choosing a chart, reviewing a dashboard or designing KPI views |
 | `jtbd-research` | You need to know why users adopt, switch or churn |
 

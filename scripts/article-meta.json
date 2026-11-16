@@ -367,7 +367,7 @@
  },
  "researchops": {
   "title": "ResearchOps Breaks at the Hand-Offs",
-  "summary": "Including analytics set-up: strategy before tags",
+  "summary": "Fix the transitions, not the toolbox",
   "icon": "🔧",
   "source": "https://trevorcalabro.substack.com/p/most-researchops-problems-start-with"
  },
@@ -592,5 +592,11 @@
   "summary": "Autonomy levels, trust scaffolding and the anatomy of a chat turn",
   "icon": "🎚️",
   "source": ""
+ },
+ "pendo": {
+  "title": "Pendo Without the Tagging Mess",
+  "summary": "A rollout playbook: strategy, top tasks, funnels, then everything else",
+  "icon": "🏷️",
+  "source": "https://trevorcalabro.substack.com/p/pendo-rollout-playbook"
  }
 }

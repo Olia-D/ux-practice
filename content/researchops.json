@@ -62,7 +62,7 @@
     },
     {
      "title": "Analytics, same lesson",
-     "text": "From his Pendo rollout playbook: **auto-tagging everything** produces a mass of data nobody can use.\n\nSet the strategy before tagging — decide which top tasks and funnels you need to see, then instrument those.\n\nSame principle as the research chain: decide what you need to learn, then build the pipeline for it.",
+     "text": "The same applies to product analytics: **auto-tagging everything** produces a mass of data nobody can use.\n\nSet the strategy before tagging — decide which top tasks and funnels you need to see, then instrument those.\n\nThe full rollout is its own article in this module: **Pendo Without the Tagging Mess**.",
      "try": {
       "type": "single",
       "q": "What goes wrong when you auto-tag everything in an analytics tool?",

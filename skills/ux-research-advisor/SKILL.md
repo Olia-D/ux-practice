@@ -1,11 +1,11 @@
 ---
 name: "ux-research-advisor"
-description: "Plan, critique and interpret UX research — method choice (usability vs concept test, walkthrough, mixed methods), task writing, rigor level, sample sizing, surveys, statistics, expert methods (heuristics, PURE, GOMS-KLM), cognitive biases, A/B critique, synthesis and strategic debriefs, ROI of UX, research ops and ethics, and influencing stakeholders with evidence. Use whenever Olha plans a study, questions a finding, is handed an A/B result, writes a survey, prepares a readout, needs to justify UX work in numbers, or hits \"our users are different\"."
+description: "Plan, critique and interpret UX research — method choice (usability vs concept test, walkthrough, mixed methods), task writing, rigor level, sample sizing, surveys, statistics, expert methods (heuristics, PURE, GOMS-KLM), cognitive biases, A/B critique, synthesis and strategic debriefs, ROI of UX, research ops and ethics, and influencing stakeholders with evidence. Use whenever Olha plans a study, questions a finding, is handed an A/B result, writes a survey, prepares a readout, needs to justify UX work in numbers, sets up or reads product analytics (Pendo tagging, funnels, dashboards, guides), or hits \"our users are different\"."
 ---
 
 # UX Research Advisor
 
-Grounded in Trevor Calabro's *UX Research in the Wild* (99 chapters, Nov 2026), cross-checked with
+Grounded in Trevor Calabro's *UX Research in the Wild* (100 chapters, Nov 2026), cross-checked with
 Erika Hall's *Just Enough Research* and Teresa Torres's *Continuous Discovery Habits*. No
 conflicts between the three — Hall gives research foundations, Torres the strategic
 discovery layer, Calabro tactical execution. This skill is the tactical layer.
@@ -359,8 +359,7 @@ time, are we comparing against something existing.
 **Research fails at the hand-offs**, not for lack of method or talent: recruit → schedule →
 collect → synthesise → tell. Audit what gets re-typed, re-uploaded or re-explained, not the
 tool count. Keep participant data where it lives rather than rebuilding a pool per study.
-Same lesson for analytics: set the strategy before tagging, top tasks first — auto-tagging
-everything produces data nobody can use.
+Same lesson for analytics: set the strategy before tagging, top tasks first — see §15.
 
 **Ethics, borrowed from the APA code:** respect for rights and dignity (understandable,
 voluntary, revocable consent) · competence · integrity (no overclaiming, no cherry-picking)
@@ -380,6 +379,60 @@ shadowing people doing similar work, interviewing customer success and domain ex
 postings to map roles and tasks, public forums and search trends, an internal lab of the
 colleagues closest to customers. And the buyer is rarely the user — two experiences to
 design. Access follows trust: small, low-risk first steps.
+
+---
+
+## 15. Product analytics (Pendo): set-up and reading the numbers
+
+Use when rolling out or cleaning up Pendo (or any tag-based analytics), building funnels or
+an exec dashboard, or when someone cites an event count as evidence. Source: Calabro,
+*Pendo Rollout Playbook* (2025).
+
+**Never tag everything.** Auto-tagging tracks layout, not intent: in custom-built apps it
+yields vague, inconsistent tags (div1, buttonX) that flow into funnels and dashboards and
+look like tracking. Assume all tagging is manual. Inconsistent tags create fake findings —
+one Submit button tagged three ways made one product show a 20% drop-off and another none.
+
+**Rollout order**
+1. **Align.** Executives: what user behaviour do you need to see; which metrics are reported
+   across business units and which are missing? Product teams: where do users get stuck,
+   how do they move through complex workflows, where does behaviour differ from expectation?
+   ResearchOps turns the gap into **one shared tagging plan** (tracked actions, funnels,
+   structure) so teams don't fragment the data.
+2. **Top tasks.** List the ~20% of actions that make ~80% of use, add rare-but-critical ones
+   (audit-log export), trim to **10–15** — merge similar, keep the representative one, favour
+   different paths.
+3. **Tag those tasks manually as Features.**
+4. **Funnels** on known top tasks: start trigger → meaningful midpoints → completion trigger,
+   **3–6 steps** (1–2 too thin, 7+ noisy; leave optional branches out).
+
+   | Tag type | In funnels | Why |
+   |---|---|---|
+   | Feature | Use | Clear intent, precise timestamps |
+   | Page | Mostly avoid | Fires passively, over-counts on refresh/idle. OK as a static confirmation exit, or the entry to a separate feature |
+   | Track event | Sparingly | Accurate but costs dev time; back-end actions, custom components |
+   | Guide | Never | System-triggered, can simulate interactions |
+
+5. **Exec dashboard — pull, not push.** Completion rate by app and user type, drop-off
+   points, time on task, adoption tied to specific interactions, funnel comparisons across
+   teams/releases, workflow friction. Pair with one standard survey everywhere (SUS,
+   SUPR-Q or NPS) to triangulate. Leaders' questions create product teams' interest.
+6. **Guides, gradually.** Only after tags, funnels and a shared usage view exist. Each guide
+   is a UX project (design, test, measure, tied to a user goal); interruptions very rare;
+   a few good guides beat many overlapping ones (see `interaction-design-reviewer` on
+   onboarding and in-app help).
+7. **Paths and Journeys** last — exploration (detours, loops; cohorts over time) once the
+   baseline is reliable. Funnels give benchmarks; Paths and Journeys give questions.
+
+Don't wait for perfect coverage: start evaluative, with funnels on the top tasks you know.
+
+**CRITIQUE checklist for an analytics claim** ("usage is low, so nobody needs it"):
+- **Who can do it?** Is the denominator everyone logged in when only admins can act?
+- **What fires the event?** A completed export, or a page view / button hover?
+- **Is the tag consistent** across products and releases?
+- **Is the window right?** Monthly or quarterly tasks look dead in a 30-day view.
+- **Observation vs explanation:** "few exports last month" is behaviour; "users don't need
+  reporting" is an unproven explanation. Pair with qual before deciding.
 
 ---
 
@@ -412,7 +465,7 @@ assumptions stated, qual evidence beside the quant.
 
 ## Sources
 Trevor Calabro, *UX Research in the Wild* (trevorcalabro.substack.com) — all 182 posts
-(2023–2026) read and distilled into the 99-chapter reference book and the UX Practice app ·
+(2023–2026) read and distilled into the 100-chapter reference book and the UX Practice app ·
 Erika Hall, *Just Enough Research* (2nd ed.) · Teresa Torres, *Continuous Discovery Habits*
 · NN/g, Baymard, MeasuringU and Sauro findings cited through Calabro.
 

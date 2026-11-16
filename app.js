@@ -172,7 +172,7 @@
       var totalDone = 0, totalAll = 0;
       var html = '<h1>UX Practice</h1>';
       html += '<p class="sub">Key concepts from Trevor Calabro\'s UX Research in the Wild. Learn the ideas, then test yourself.</p>';
-      html += '<div class="schedule-hint"><b>Suggested pace:</b> 1 article per day, 4 days a week. Read the cards, take the quiz. 99 articles across 12 modules.</div>';
+      html += '<div class="schedule-hint"><b>Suggested pace:</b> 1 article per day, 4 days a week. Read the cards, take the quiz. 100 articles across 12 modules.</div>';
 
       m.modules.forEach(function (mod, mi) {
         var p = moduleProgress(mod);

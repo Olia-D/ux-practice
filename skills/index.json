@@ -1,7 +1,7 @@
 {
   "book": {
     "title": "UX Research in the Wild — reference edition",
-    "blurb": "99 chapters with figures, memory aids, a rules cheat sheet and an archive guide. One HTML file; works offline.",
+    "blurb": "100 chapters with figures, memory aids, a rules cheat sheet and an archive guide. One HTML file; works offline.",
     "read": "book/ux-research-in-the-wild.html",
     "download": "book/ux-research-in-the-wild.html",
     "zip": "downloads/ux-research-in-the-wild-book.zip"
@@ -34,7 +34,7 @@
     {
       "id": "ux-research-advisor",
       "title": "UX Research Advisor",
-      "blurb": "Method choice, sample size, A/B critique, surveys, readouts, ROI."
+      "blurb": "Method choice, sample size, A/B critique, surveys, readouts, ROI, Pendo analytics."
     },
     {
       "id": "data-visualization",

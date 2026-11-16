@@ -1,0 +1,178 @@
+{
+ "id": "pendo",
+ "module": "running-studies",
+ "title": "Pendo Without the Tagging Mess",
+ "icon": "🏷️",
+ "intro": "Pendo usually ends up as a messaging tool or a pile of tags nobody trusts. The fix is strategy before tags.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Pendo Without the Tagging Mess",
+   "learn": [
+    {
+     "title": "Why “tag everything” fails",
+     "text": "**Auto-tagging tracks layout, not intent.** In big custom apps it produces vague names like div1 or buttonX that flow into funnels and dashboards and look like tracking.\n\n**Every tag is an assumption.** One Submit button tagged three ways (submitButton_v1, btn-submit-primary, untagged) made one product show a 20% drop-off and another none, because of set-up, not UX.\n\nCalabro's rule: assume all tagging is manual.",
+     "try": {
+      "type": "single",
+      "q": "Product A shows a 20% drop-off on Submit; product B shows none. What should you check first?",
+      "options": [
+       "Whether the same button is tagged the same way",
+       "Whether product B's form design is simply clearer",
+       "Whether product A has many more active users",
+       "Whether the two date ranges differ by a week"
+      ],
+      "answer": 0,
+      "explain": "Inconsistent tags create differences that look like UX problems."
+     }
+    },
+    {
+     "title": "Start with strategy",
+     "text": "**Executives:** What user behaviour do you need to see? Which metrics are already reported across business units, and which are missing?\n\n**Product teams:** Where do users get stuck? How do people move through complex workflows? Where does behaviour differ from what you expected?\n\nResearchOps turns the gap into **one shared tagging plan**, so teams don't each invent their own and fragment the data.",
+     "try": {
+      "type": "single",
+      "q": "Who do you talk to first, before any tagging?",
+      "options": [
+       "Executives, then product teams",
+       "Developers first, then the designers",
+       "Customer support, then the sales team",
+       "Users first, then the analytics vendor"
+      ],
+      "answer": 0,
+      "explain": "Leaders define what must be visible; teams say where users struggle."
+     }
+    },
+    {
+     "title": "Top tasks: 10–15",
+     "text": "**1.** List the common tasks: roughly the 20% of actions that make up 80% of use.\n**2.** Add rare but high-impact ones (exporting an audit log matters for trust and compliance).\n**3.** Trim to **10–15 core tasks**: merge similar ones, keep the most representative, favour tasks that take different paths.\n\nThose tasks decide what gets tagged.",
+     "try": {
+      "type": "single",
+      "q": "Exporting an audit log is used rarely. Should it be a top task?",
+      "options": [
+       "Yes, if it matters for trust or compliance",
+       "No, top tasks are the most frequent only",
+       "Only if a customer asks for it",
+       "Only after the first quarter of data"
+      ],
+      "answer": 0,
+      "explain": "Rare but high-impact tasks belong on the list."
+     }
+    },
+    {
+     "title": "Funnels: 3–6 steps, feature tags",
+     "text": "A funnel has a **start trigger** (Create report), meaningful **midpoints**, and a **completion trigger** (Submit, Save, Done). 1–2 steps give too little data; 7+ get noisy.\n\n**Feature tags** → use: clear intent, precise timestamps.\n**Page tags** → mostly avoid: they over-count on refreshes and idle time. OK as a static confirmation exit step.\n**Track events** → sparingly: accurate but cost developer time.\n**Guides** → never in funnels: they can simulate interactions.",
+     "visual": {
+      "type": "compare",
+      "left": {
+       "label": "Avoid in funnels",
+       "items": [
+        "Auto-tags",
+        "Page tags (mostly)",
+        "Guides",
+        "7+ steps"
+       ]
+      },
+      "right": {
+       "label": "Build funnels on",
+       "items": [
+        "Feature tags",
+        "Clear start and finish",
+        "3–6 steps",
+        "Top tasks only"
+       ]
+      }
+     },
+     "try": {
+      "type": "single",
+      "q": "Why are page tags weak funnel steps?",
+      "options": [
+       "They fire passively and over-count",
+       "They need extra developer time to set up",
+       "They can't record precise timestamps at all",
+       "They only work on the mobile version"
+      ],
+      "answer": 0,
+      "explain": "Refreshes and idle time inflate page counts."
+     }
+    },
+    {
+     "title": "Then dashboards, guides, paths",
+     "text": "**Pull, not push:** give leaders a dashboard of meaningful funnels — completion rate, drop-off points, time on task, adoption, comparisons across releases — and their questions create the teams' interest. Pair it with one standard survey everywhere (SUS, SUPR-Q or NPS).\n\n**Guides last:** treat each one as a UX project, and keep interruptions very rare.\n\n**Paths and Journeys** are for exploring once the baseline is reliable.",
+     "try": {
+      "type": "single",
+      "q": "When should in-app guides roll out widely?",
+      "options": [
+       "After top tasks are tagged and funnels exist",
+       "On day one, to drive adoption as fast as possible",
+       "Only after Paths and Journeys are fully set up",
+       "Whenever any product team requests one for a feature"
+      ],
+      "answer": 0,
+      "explain": "Overlapping guides hurt usability and skew the data."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What does Calabro recommend about auto-tagging in a large custom app?",
+     "options": [
+      "Assume all tagging is manual",
+      "Use it, then rename the vague tags later",
+      "Use it, but only for the page-level tags",
+      "Use it during the first month, then stop"
+     ],
+     "answer": 0,
+     "explain": "Auto-tags reflect layout, not intent, and break in custom components."
+    },
+    {
+     "type": "single",
+     "q": "How many core tasks should drive the first tagging plan?",
+     "options": [
+      "About 10 to 15, covering common and critical tasks",
+      "Every action available in the product",
+      "Only the top three features by usage",
+      "Around 50, roughly one per screen"
+     ],
+     "answer": 0,
+     "explain": "Narrow common plus rare-but-critical tasks to 10–15."
+    },
+    {
+     "type": "single",
+     "q": "Which funnel is best built?",
+     "options": [
+      "Create report → add data → Submit, on feature tags",
+      "Nine steps that cover every optional branch of the flow",
+      "Two page views: the dashboard, then the settings page",
+      "A welcome guide, then the home page, then any click"
+     ],
+     "answer": 0,
+     "explain": "3–6 steps, a clear start and finish, feature tags, no guides."
+    },
+    {
+     "type": "single",
+     "q": "What are Paths and Journeys for?",
+     "options": [
+      "Exploring once a reliable baseline exists",
+      "Replacing funnels in the executive reporting",
+      "Triggering in-app guides at the right moment",
+      "Counting page views per session across apps"
+     ],
+     "answer": 0,
+     "explain": "Funnels first for benchmarks; Paths and Journeys to explore later."
+    },
+    {
+     "type": "single",
+     "q": "How do you get product teams to use the data?",
+     "options": [
+      "Give leaders a funnel dashboard so they ask",
+      "Send a weekly analytics report to every team",
+      "Require every team to tag its own features",
+      "Add a guide asking users for their feedback"
+     ],
+     "answer": 0,
+     "explain": "Pull, not push: leaders' questions create demand."
+    }
+   ]
+  }
+ ]
+}

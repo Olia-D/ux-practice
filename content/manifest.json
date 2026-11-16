@@ -390,6 +390,14 @@
      "source": "https://trevorcalabro.substack.com/p/most-researchops-problems-start-with"
     },
     {
+     "id": "pendo",
+     "title": "Pendo Without the Tagging Mess",
+     "icon": "🏷️",
+     "summary": "Strategy and top tasks before tags. Feature-tagged funnels, then guides.",
+     "file": "content/pendo.json",
+     "source": "https://trevorcalabro.substack.com/p/pendo-rollout-playbook"
+    },
+    {
      "id": "honest-artifacts",
      "title": "Honest Artifacts and Alignment Workshops",
      "icon": "📔",
