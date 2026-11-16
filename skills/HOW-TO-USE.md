@@ -23,7 +23,6 @@ Once installed, the skills need no setup. Claude reads each skill's short descri
 | `ux-research-advisor` | You're planning a study, judging an A/B result, writing a survey, preparing a readout or arguing ROI |
 | `data-visualization` | You're choosing a chart, reviewing a dashboard or designing KPI views |
 | `jtbd-research` | You need to know why users adopt, switch or churn |
-| `ux-digest` | You want the weekly catch-up on Calabro, Krutchinsky and Babich (it needs a browser tool) |
 
 ## Make routing reliable
 
