@@ -581,7 +581,7 @@
         '<h1>Library</h1><p class="sub">Read online or download the book and the Claude skills.</p>' +
         '<div class="card lib-item"><p class="lib-kicker">Book</p><h2 class="lib-title">' + esc(b.title) + '</h2>' +
         '<p class="note">' + esc(b.blurb) + '</p>' +
-        '<div class="row lib-actions"><a class="btn small" href="' + esc(b.read) + '" target="_blank" rel="noopener">Read</a>' +
+        '<div class="row lib-actions"><a class="btn small" href="' + esc(b.read) + '">Read</a>' +
         dlBtn(b.download, 'Download HTML', 'secondary') + dlBtn(b.zip, 'Download zip', 'ghost') + '</div></div>';
       html += '<div class="row between lib-head"><h2>Claude skills</h2>' + dlBtn(L.all, 'Download all', 'secondary') + '</div>' +
         '<a class="card tile lib-guide" href="#/library/guide"><b>How to install and use the skills</b><span class="chev">→</span></a>';

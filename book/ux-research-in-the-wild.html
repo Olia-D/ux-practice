@@ -292,12 +292,19 @@
 .compare-table td:last-child { color: var(--ink-soft); min-width: 14rem; }
 
 </style>
+<script>try{if(/^https?:$/.test(location.protocol)&&/\/book\/[^\/]+\.html$/.test(location.pathname))document.documentElement.classList.add('in-app')}catch(e){}</script>
+<style>
+  .nav-left { display: flex; gap: 1.25rem; align-items: baseline; }
+  .nav-app { display: none; }
+  html.in-app .nav-app { display: inline; color: var(--accent) !important; font-weight: 600; }
+  @media (max-width: 40rem) { html.in-app .nav-bar > a[target] { display: none; } html.in-app .nav-title { display: none; } }
+</style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav class="nav-bar">
-  <a href="#toc">↑ Contents</a>
+  <span class="nav-left"><a class="nav-app" href="../#/">← UX Practice</a><a href="#toc">↑ Contents</a></span>
   <span class="nav-title">UX Research in the Wild</span>
   <a href="https://trevorcalabro.substack.com" target="_blank">trevorcalabro.substack.com ↗</a>
 </nav>
