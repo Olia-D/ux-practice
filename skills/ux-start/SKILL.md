@@ -1,13 +1,18 @@
 ---
 name: "ux-start"
-description: "Entry point when Olha has a UX problem but hasn't named a method or skill, or when the task spans several steps (new feature, redesign, stakeholder pushback, launch review). Routes to the right specialist skill(s) and runs the standard flow. Trigger with \"where do I start\", \"what should I use\", \"which skill\", \"help me with this feature\", \"I need to design\", \"I'm stuck\", \"we're launching\", \"stakeholder says\", or any request that mixes research, design, copy, AI or data questions."
+description: "Entry point when the user has a UX problem but hasn't named a method or skill, or when the task spans several steps (new feature, redesign, stakeholder pushback, launch review). Routes to the right specialist skill(s) and runs the standard flow. Trigger with \"where do I start\", \"what should I use\", \"which skill\", \"help me with this feature\", \"I need to design\", \"I'm stuck\", \"we're launching\", \"stakeholder says\", or any request that mixes research, design, copy, AI or data questions."
 ---
 
 # UX Start — router and flows
 
 This skill holds no patterns. It decides **which specialist skill(s) to load** and in
 **what order**, then hands off. Always say in one line which skills you're loading and why,
-so Olha learns the map.
+so the user learns the map.
+
+**Optional first check — which layer is stuck?** Before routing a fuzzy request, place it on
+the stack: observed behaviour → domain and vocabulary → user needs → product strategy →
+conceptual model (objects, states, names) → interaction flow → surface. Problems often show up
+at the surface but live one or two layers down; route to the layer that is actually stuck.
 
 ## Step 1 — Classify the request
 
@@ -21,10 +26,12 @@ Ask (or infer) two things: **what is the deliverable** and **what decision is be
 | AI feature, agent, copilot, chat, "should the agent do this itself" | `ai-ux-patterns` (frameworks first) | + `interaction-design-reviewer` for the non-AI surface |
 | "Should we test this", "how do I know", a finding or A/B result, readout, ROI, "our users are different" | `ux-research-advisor` | + `jtbd-research` if the question is *why users choose/switch* |
 | Why users pick / drop / switch; positioning; churn | `jtbd-research` | + `ux-research-advisor` for the study plan |
-| Button label, error, empty state, any product text | `interaction-design-reviewer` (forms/status) | (ux copy guidance lives there and in Microcopy / Everybody Writes in the project library) |
+| Button label, error, empty state, any product text | `ux-writing` | + `interaction-design-reviewer` (forms/status) when the copy sits in a control or status |
+| Stakeholder interview, "how do I get X on board", conflicting priorities | `ux-research-advisor` §16 | + §10 if the pushback cites "our users are different" |
+| Design critique, design review meeting, "how should we run feedback" | `interaction-design-reviewer` (`references/critique-sessions.md`) | — |
 
-If none fits, say so and answer with the project library (Hall, Torres, Yifrah, Handley,
-Cialdini) rather than forcing a skill.
+If none fits, say so and answer from general UX knowledge and the project's reference
+books rather than forcing a skill.
 
 ## Step 2 — Standard flows for multi-step requests
 
@@ -43,8 +50,10 @@ Cialdini) rather than forcing a skill.
    before the team will act, and how to present them (insight → implication → decision).
 
 **Stakeholder pushback / "our users are different" / "just copy competitor X"**
-1. `ux-research-advisor` §10 (90/10 rule, burden of proof) and §6 if an A/B result is cited.
-2. `interaction-design-reviewer` pushback-prep lines for the specific pattern.
+1. `ux-research-advisor` §16 → map the stakeholder's incentives first; pitch on the measure
+   they are rewarded for.
+2. `ux-research-advisor` §10 (90/10 rule, burden of proof) and §6 if an A/B result is cited.
+3. `interaction-design-reviewer` pushback-prep lines for the specific pattern.
 
 **Launch / post-launch review**
 1. `ux-research-advisor` §9 → baselines, what stopped happening, ROI frame.
@@ -59,8 +68,8 @@ Cialdini) rather than forcing a skill.
 ## Step 3 — Hand off cleanly
 
 Load the first skill and follow *its* output format. When a flow has several stages,
-finish one stage, show it, and ask whether to continue — Olha often wants to redirect
-after step 1. Never summarise all stages in one shot unless she asks for the whole flow.
+finish one stage, show it, and ask whether to continue — people often want to redirect
+after step 1. Never summarise all stages in one shot unless the whole flow is asked for.
 
 End every answer with one line: `Skills used: a, b` — so misrouting is visible and
 fixable.

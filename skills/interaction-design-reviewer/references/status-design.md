@@ -154,27 +154,44 @@ later, or follow up. A status that reads "Processing" tells them nothing.
 
 ---
 
-## Voyado-Specific Applications
+## Applied examples
 
-### Messenger Flows
-After a customer activates a flow, the interface should answer: is it live,
-processing, waiting for a trigger condition, or paused? "Active" is not enough
-if users can't tell whether messages are actually sending. Status should
-communicate current state + evidence of activity (e.g., last triggered, messages
-sent today) + any action required.
+### An automation that is live but idle
+After someone activates an automated email campaign, the interface should answer: is it
+live, processing, waiting for a trigger condition, or paused? "Active" is not enough if
+users can't tell whether messages are actually sending. Status should communicate current
+state + evidence of activity (last triggered, messages sent today) + any action required.
 
-### Ratings & Reviews
-After a review is submitted or moderated, what happens next? If there's an
-approval step, who owns it? If a review is rejected, why and what can the
-customer do? Empty or vague post-action states in moderation flows generate
-support tickets — every one of which is a status design failure.
+### An item awaiting moderation
+After a review or comment is submitted, what happens next? If there's an approval step,
+who owns it? If an item is rejected, why, and what can the customer do? Empty or vague
+post-action states in moderation queues generate support tickets — every one of which is
+a status design failure.
 
-### Dashboard views
-Aggregate status views (e.g., campaign health, review volume) should distinguish
-between healthy-and-waiting vs. stuck-and-needing-attention. A list of items
-all in the same visual state, regardless of whether they're progressing normally
-or broken, puts the interpretive burden on the user. The design should do that
-work instead.
+### Aggregate views
+Aggregate status views (campaign health, queue volume) should distinguish
+healthy-and-waiting from stuck-and-needing-attention. A list of items all in the same
+visual state, whether they're progressing normally or broken, puts the interpretive burden
+on the user. The design should do that work instead.
+
+---
+
+## Degraded Experiences — when part of the system is down
+
+Status design also covers the moments when a dependency fails. Decide in advance what the
+page does when an optional service (recommendations, analytics, a third-party widget) is
+slow or down:
+
+- **The page still renders.** One failing panel never blanks the whole screen.
+- **Primary tasks stay available.** Saving, sending and editing keep working when optional
+  services fail.
+- **Say what's missing, in place.** "Recommendations are unavailable right now — everything
+  else works" beats a silent gap or a generic error page.
+- **Never fake it.** Don't show stale numbers as current; label the time of the last update.
+- **Recover on its own.** Retry quietly and update when the service is back, without a reload.
+
+*Risk: when degradation isn't designed, engineering decides at incident time — and the
+result is usually a full-page error for a problem in one widget.*
 
 ---
 

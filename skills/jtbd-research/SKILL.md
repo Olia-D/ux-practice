@@ -1,6 +1,6 @@
 ---
 name: "jtbd-research"
-description: "Frame user research around Jobs to Be Done (JTBD) — statement templates, forces-of-progress interview probes, and competitive comparison matrices. Make sure to use this skill whenever Olha is trying to understand user motivation, positioning, or why users chose/dropped a product, even if she doesn't say \"JTBD\" explicitly — e.g. \"why do people actually use this over the alternative\" or \"help me write up why users churned.\" Trigger with \"jobs to be done\", \"JTBD\", \"job story\", \"why did users switch/adopt/drop this\", or positioning and competitive research questions."
+description: "Frame user research around Jobs to Be Done (JTBD) — statement templates, forces-of-progress interview probes, and competitive comparison matrices. Make sure to use this skill whenever the user is trying to understand user motivation, positioning, or why users chose/dropped a product, even if they don't say \"JTBD\" explicitly — e.g. \"why do people actually use this over the alternative\" or \"help me write up why users churned.\" Trigger with \"jobs to be done\", \"JTBD\", \"job story\", \"why did users switch/adopt/drop this\", or positioning and competitive research questions."
 ---
 
 # Jobs to Be Done (JTBD)
@@ -75,6 +75,21 @@ useful when handing requirements to engineering, since it keeps the "why" attach
    statement, it's still a feature request in disguise, not a job.
 5. **Output** a statement set for positioning/roadmap discussions, or a comparison matrix
    for competitive research.
+
+## JTBD or personas?
+
+They answer different questions, and they combine well:
+- **JTBD** when exploring new solutions or questioning a workflow — the job is stable even
+  when the people doing it differ.
+- **Personas** when you need to balance competing user groups — for example, protecting
+  existing users during a redesign.
+- **Combine** by putting the job and its forces inside each persona.
+
+If you do make personas: psychographics and behaviour over demographics; 3–5 at most;
+co-create them with the team and keep them living documents; build them goal → information
+→ synthesis → text draft → visuals last, and **remove anything invented**. Include at least
+one persona with a disability. With no data yet, make an assumption map instead and label
+it as one.
 
 ## Deliverables
 

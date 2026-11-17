@@ -1,6 +1,6 @@
 ---
 name: "interaction-design-reviewer"
-description: "Design, generate, and review UI designs, forms, controls and interaction patterns using evidence-based HCI research. Use whenever Olha asks to review a design, create a form, pick a control, audit a flow, suggest alternatives, or get feedback on any interface decision — including \"does this follow best practices\", \"is this good UX\", \"how should I design X\", \"what are my options\". Covers forms, selection controls, icons, navigation, status design, accessibility, ARIA, animations, destructive actions, tables, dark patterns and Jakob's Law. For charts and dashboards, data-visualization takes over."
+description: "Design, generate, and review UI designs, forms, controls and interaction patterns using evidence-based HCI research. Use whenever the user asks to review a design, create a form, pick a control, audit a flow, suggest alternatives, or get feedback on any interface decision — including \"does this follow best practices\", \"is this good UX\", \"how should I design X\", \"what are my options\". Covers forms, selection controls, icons, navigation, status design, accessibility, ARIA, animations, destructive actions, tables, hidden vs disabled states, design critiques, dark patterns and Jakob's Law. For charts and dashboards, data-visualization takes over."
 ---
 
 # Interaction Design Skill
@@ -18,21 +18,6 @@ The unifying principle behind every recommendation:
 
 Always frame output in terms of **user behavior** and **business cost** — not "best practices."
 
-### Cross-referenced sources
-
-This skill's patterns are grounded in Trevor Calabro's "UX Research in the Wild" newsletter
-and cross-referenced against two books:
-
-- **Erika Hall, "Just Enough Research"** — usability testing foundations, Nielsen's 5 quality
-  components, the "cheap tests first" sequencing principle, and the warning against
-  "validate" language that frames research as confirmation.
-- **Teresa Torres, "Continuous Discovery Habits"** — the build trap (shipping features ≠
-  measuring outcomes), testing assumptions not ideas, parallel evaluation to counter
-  confirmation bias, and the product trio model for collaborative discovery.
-
-No conflicts between these sources. They operate at complementary layers:
-Hall → research foundations, Torres → strategic discovery, Calabro → tactical UX execution.
-
 ---
 
 ## Reference Files
@@ -43,8 +28,9 @@ Load the relevant file(s) before responding based on what the request is about:
 |-------|------|
 | Forms, input fields, labels, required indicators, placeholders, help text | `references/forms.md` |
 | Icons, navigation, affordances, signifiers, split buttons, animations, Jakob's Law | `references/controls.md` |
-| Accessibility, cognitive walkthroughs, flows | `references/accessibility-and-flows.md` |
-| Status labels, post-action feedback, spinners, toasts, system state communication | `references/status-design.md` |
+| Accessibility, accessibility audits, cognitive walkthroughs, flows | `references/accessibility-and-flows.md` |
+| Status labels, post-action feedback, spinners, toasts, system state communication, degraded experiences | `references/status-design.md` |
+| Running a design critique, review or shareout; giving and structuring feedback | `references/critique-sessions.md` |
 
 **Related skills:** charts, dashboards and analytics views → `data-visualization`. Study
 design, A/B critique, debriefs and ROI → `ux-research-advisor`. AI-powered features →
@@ -108,7 +94,7 @@ Recommendation: [Which one and why, given the stated context]
 2. **Hidden information**: is important content behind tabs, tooltips, hover, or accordions?
 3. **Cross-context consistency**: does this behave differently on mobile vs desktop, or keyboard vs mouse?
 4. **Precision dependency**: does success require hovering precisely or decoding visual minimalism?
-5. **Build trap**: is the team measuring feature output (shipped it!) instead of user outcome (task completion, error reduction)? A polished Figma file is not evidence that users can complete the task. (Torres/Perri)
+5. **Build trap**: is the team measuring feature output (shipped it!) instead of user outcome (task completion, error reduction)? A polished Figma file is not evidence that users can complete the task.
 
 A yes to any of these is a real-world friction point — flag it regardless of how it looks in a static mockup.
 
@@ -169,18 +155,18 @@ These apply across all three modes:
   a ready-made response framed in behavior and cost — not design principle.
 
 - **Never say "validate."** Framing research as "validating the design" primes for confirmation
-  bias. Say "evaluate" or "test." Aim to be proven wrong. (Hall)
+  bias. Say "evaluate" or "test." Aim to be proven wrong.
 
 - **Cheap tests first.** Sequence by cost: paper prototypes before interactive ones, colleagues
   before recruited users, competitor audits before building your own. Each cheaper round
-  eliminates issues the expensive round doesn't need to find. (Hall)
+  eliminates issues the expensive round doesn't need to find.
 
 - **Test assumptions, not whole ideas.** Identify the riskiest assumption and test that
   specifically. A 10-person simulation test on one assumption takes a day; a full prototype
-  test takes weeks. (Torres)
+  test takes weeks.
 
 - **Evaluate in parallel.** Never test a single option in isolation — confirmation bias
-  guarantees you'll find reasons to love it. Always compare at least two alternatives. (Torres)
+  guarantees you'll find reasons to love it. Always compare at least two alternatives.
 
 ---
 
@@ -372,7 +358,7 @@ ROI) that need different design decisions. Everything else — chart choice, axe
 layout, ACES, dataviz accessibility — lives in `data-visualization`. Load it for any
 request involving a chart, KPI, metric or analytics view.
 
-**Usability quality components (Nielsen)**
+**Usability quality components**
 A usability review should check against all five components: learnability (can a new user
 figure it out?), efficiency (can a trained user do it fast?), memorability (can a returning
 user re-learn quickly?), error recovery (can the user recover from mistakes?), and
@@ -381,7 +367,7 @@ that covers learnability and misses the other four.
 *Risk: a design that's learnable but inefficient ships and frustrates power users. A design
 that's efficient but unrecoverable ships and punishes mistakes.*
 
-**Product trio for discovery (Torres)**
+**Product trio for discovery**
 Designer, PM, and engineer should observe the same user sessions together — each role spots
 different signals from the same interview. The designer notices interaction friction, the PM
 notices business-model misalignment, the engineer notices technical feasibility gaps. Handing
@@ -467,7 +453,7 @@ developers spot immediately.
 | **Checkbox** | Independent options, zero/one/many. A single checkbox is one yes/no; the label is a statement. |
 | **Radio** | Exactly one of two or more mutually exclusive options; the label is a question. |
 | **Toggle** | A binary setting that takes effect **immediately**. If it needs a Save button, it isn't a toggle. |
-| **Segmented** | 2–5 short options, single select. |
+| **Segmented** | 2–5 short options, single select, changing a setting or view of the same content. **Not tabs**: never use it for navigation or filtering. |
 | **Dropdown** | Single choice from a long list (5+). Below that, show the options. |
 | **Chips** | Short multi-select, usually filters. Not radio buttons in disguise. |
 
@@ -540,6 +526,41 @@ and keyboard users can't reach them predictably. Use visible buttons on each row
 guardrails) → upload (drag, keyboard, paste) → map (match columns, check values) → **repair
 (show only the error rows, dedupe)** → import (summary, tag the new records). Most products
 dismiss a file as "invalid"; the value is helping users fix it in place.
+
+**Tables have four jobs** — find records, compare, view/edit/add a single row, act on
+records. Design each one on purpose. Right-align numbers and dates, left-align text; pin the
+key column; set minimum widths per content type; show full precision on the active cell.
+
+**Screen readers:** a `<caption>` is the table's accessible name; header cells (`th`) are
+announced with every data cell; **don't make non-interactive cells focusable**. Editable
+grids follow the ARIA grid pattern. Test: can a screen-reader user get what a sighted user
+gets at a glance?
+
+**Bulk:** define an **enablement rule per toolbar command** by selection count (0, 1, many).
+Accept the file as it is rather than forcing a template first, **remember column mappings**
+across sessions, suggest the nearest valid value for unmatched ones, allow a **partial
+import** with a downloadable error report, and let people choose overwrite or skip for
+duplicates. **The 5–20 item gap:** too many for one form, too few to justify a CSV — extend
+the single form into a batch builder with one review step and one approval.
+
+---
+
+### 🙈 Hidden, Disabled or Read-Only — decide, don't default
+
+Ask first **whether the feature should be limited at all**. Then:
+- **Hide** when this user can **never** interact with it (irrelevant to the role, not part
+  of their plan). Still design when, how and to whom it appears.
+- **Read-only** mainly for fields whose value is **system-generated or edited elsewhere** —
+  add a hint saying where it can be changed.
+- **Disabled** when the user should know it **exists but can't use it now** (permissions,
+  a missing prerequisite, a temporary state). **Always say why** and what unlocks it.
+
+WCAG 2.2 AA doesn't require contrast on disabled controls, but people still need to read
+them: keep the text legible and, ideally, focusable so screen readers announce the reason.
+**Never hide buttons or filters by default** — people expect them to stay where they were.
+*Risk: a disabled button with no reason reads as a bug and becomes a support ticket; a
+hidden feature in a role-based product means nobody can tell a missing permission from a
+missing feature.*
 
 ---
 
@@ -633,7 +654,7 @@ big, Reject buried) · **fake urgency** (a timer that resets on refresh) · **fa
 · **pre-selected opt-ins** · **misleading labels** ("View pricing" → a sign-up form) ·
 **forms that punish errors** (wiping input, blocking paste).
 
-Calabro's position on pre-selection is absolute: a pre-checked opt-in is a dark pattern even
+Pre-selection has no exceptions: a pre-checked opt-in is a dark pattern even
 when the team believes users benefit — nobody should have to undo a choice they never made.
 And **conversion isn't consent**: a 94% acceptance rate tells you what happened under those
 conditions, not what people would have chosen freely. Accessibility is the canary: these
@@ -643,5 +664,15 @@ patterns break first, and hardest, for disabled users.
 
 ## Test Cases
 
-Six test cases covering the most common patterns are in `references/test-cases.md`.
+Eight test cases covering the most common patterns are in `references/test-cases.md`.
 Run them after install or updates to verify the skill is behaving correctly.
+
+---
+
+## Sources
+
+The rules in this skill draw on: Trevor Calabro, *UX Research in the Wild*; Erika Hall, *Just
+Enough Research*; Teresa Torres, *Continuous Discovery Habits*; Jakob Nielsen's usability
+quality components; Vitaly Friedman (hidden/disabled/read-only, decision trees, degraded
+experiences); Léonie Watson on accessible tables; Smashing Magazine and Flatfile on complex
+tables and imports; WebAIM Screen Reader User Survey #9; Jeremy Bird on design critiques.

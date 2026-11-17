@@ -2,8 +2,9 @@
 
 Skill routing — pick before answering:
 - Which chart / dashboard / KPI / metric view → data-visualization
-- Form, field, button, icon, status, animation, any screen review → interaction-design-reviewer
-- Plan a study, critique findings or an A/B result, debrief, ROI, "our users are different" → ux-research-advisor
+- Form, field, button, icon, status, table, animation, any screen review, design critique → interaction-design-reviewer
+- Button label, error, empty state, any product text, naming, voice → ux-writing
+- Plan a study, critique findings or an A/B result, debrief, ROI, stakeholder interviews, "our users are different" → ux-research-advisor
 - Any AI-powered feature, agent, copilot, chat → ai-ux-patterns (+ interaction-design-reviewer for the non-AI parts)
 - Why users choose / switch / churn, positioning → jtbd-research
 - Multi-step or unclear request → ux-start (load it first)

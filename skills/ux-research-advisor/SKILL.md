@@ -1,14 +1,12 @@
 ---
 name: "ux-research-advisor"
-description: "Plan, critique and interpret UX research — method choice (usability vs concept test, walkthrough, mixed methods), task writing, rigor level, sample sizing, surveys, statistics, expert methods (heuristics, PURE, GOMS-KLM), cognitive biases, A/B critique, synthesis and strategic debriefs, ROI of UX, research ops and ethics, and influencing stakeholders with evidence. Use whenever Olha plans a study, questions a finding, is handed an A/B result, writes a survey, prepares a readout, needs to justify UX work in numbers, sets up or reads product analytics (Pendo tagging, funnels, dashboards, guides), or hits \"our users are different\"."
+description: "Plan, critique and interpret UX research — method choice (usability vs concept test, walkthrough, mixed methods), task writing, rigor level, sample sizing, surveys, statistics, expert methods (heuristics, PURE, GOMS-KLM), cognitive biases, A/B critique, synthesis and strategic debriefs, ROI of UX, research ops and ethics, AI-assisted analysis guardrails, stakeholder interviews and incentive mapping, standard UX metrics (HEART, North Star, UMUX-Lite), and influencing stakeholders with evidence. Use whenever the user plans a study, questions a finding, is handed an A/B result, writes a survey, prepares a readout, needs to justify UX work in numbers, sets up or reads product analytics (Pendo tagging, funnels, dashboards, guides), or hits \"our users are different\"."
 ---
 
 # UX Research Advisor
 
-Grounded in Trevor Calabro's *UX Research in the Wild* (100 chapters, Nov 2026), cross-checked with
-Erika Hall's *Just Enough Research* and Teresa Torres's *Continuous Discovery Habits*. No
-conflicts between the three — Hall gives research foundations, Torres the strategic
-discovery layer, Calabro tactical execution. This skill is the tactical layer.
+The tactical layer for research decisions: what to study, how hard, how to read the result
+and how to get it acted on. Sources are listed at the end.
 
 The unifying principle:
 > Behavioral evidence beats self-report. When what users *say* and what users *do*
@@ -38,8 +36,8 @@ Three questions before any study:
 Together these give the **least evidence needed for a responsible decision**. Agree it
 with stakeholders *before* data exists — afterwards people move the goalposts.
 
-**Sequence by cost (Hall):** paper before interactive, colleagues before recruited users,
-competitors before building. **Test assumptions, not whole ideas (Torres):** name the
+**Sequence by cost:** paper before interactive, colleagues before recruited users,
+competitors before building. **Test assumptions, not whole ideas:** name the
 riskiest assumption and run a one-day simulation on it instead of a weeks-long test of the
 whole idea. **Check existing evidence first** — past studies, analytics, support tickets,
 sales notes. "We already know enough" is a legitimate research outcome.
@@ -109,7 +107,7 @@ narrating is a demo, not a walkthrough. Rotate facilitators.
 error (blaming personality for circumstance), false consensus (your label logic = theirs).
 *About ourselves:* confirmation bias (logging only supporting evidence), sunk cost
 (resisting a fix because of effort spent), **"validate" language** — say *evaluate* or
-*test*; aim to be proven wrong. **Evaluate options in parallel (Torres)** — one idea alone
+*test*; aim to be proven wrong. **Evaluate options in parallel** — one idea alone
 will always find its reasons.
 *In the session:* social desirability ("I'd use this all the time"), self-report bias
 ("easy" after failing), framing ("others found this hard"), serial-position (first and last
@@ -164,7 +162,7 @@ the real question, say when existing evidence is enough, stay close to the decis
 
 **During shaping** (before prototypes): what problem, who is affected, which decisions
 are already made, where can direction still change; name the riskiest assumptions before
-they harden into requirements. Work as a **product trio (Torres)** — designer, PM, engineer
+they harden into requirements. Work as a **product trio** — designer, PM, engineer
 observing the same sessions; each spots different signals and handoffs lose them.
 
 **Match method to risk:** high-risk → formal study; lower → lightweight sessions or expert
@@ -187,7 +185,7 @@ continuous and searchable, not a batch at the end.
 **insight → implication → decision** ("users abandon at the address step" → "#1 conversion
 blocker" → "fix the form or add autocomplete?"). Output: decisions with owners and timing.
 If you're still finding surprises in the data, it's too early for this meeting.
-Prioritise usability findings by **severity × frequency** (Hall).
+Prioritise usability findings by **severity × frequency**.
 
 ---
 
@@ -210,7 +208,7 @@ training requests that ended, abandonment that fell. Without a baseline there is
 
 **Measure task outcomes, not internal quality:** completion rate, time on task, error rate,
 recovery, confidence — not component coverage or design-system compliance. Watch for the
-**build trap** (Torres/Perri): counting launches as success.
+**build trap**: counting launches as success.
 
 ---
 
@@ -221,9 +219,9 @@ proof is on whoever wants to deviate — and they need **behavioral data**, not 
 
 "Our users are different" claims that collapse under testing: "they've memorised our
 icons", "technical users like jargon", "users don't scroll", "nobody's complained about
-accessibility". The icon evidence: Calabro tested icon-only interfaces 11 times over 19
-years at five companies, and when he shuffled familiar icons, experienced users were lost —
-they had memorised positions, not meanings. If no one is ever confused in your sessions,
+accessibility". The icon evidence: icon-only interfaces tested 11 times over 19 years at
+five companies — when familiar icons were shuffled, experienced users were lost. They had
+memorised positions, not meanings. If no one is ever confused in your sessions,
 suspect the research, not the users.
 
 Six ways it does damage: shuts research down early · flips the burden of proof ·
@@ -309,6 +307,19 @@ usable-but-not-trusted result needs a different study than a trusted-but-hard-to
 Label any derived SUS as *estimated*; take NPS from the recommend item, never by converting
 the composite; don't compare product NPS with company marketing NPS.
 
+**Picking a standard metric — what each is for:**
+
+| Metric | Use when | Watch out |
+|---|---|---|
+| **HEART** (Happiness, Engagement, Adoption, Retention, Task success) | Setting goals → signals → metrics for one product area | Pick 2–3 dimensions, not all five |
+| **North Star** | One leading metric the whole team moves | Shallow engagement shouldn't move it |
+| **UMUX-Lite** | A 2-item usability score inside an in-app survey | Too short to diagnose; pair with a "why" |
+| **TARS** | Feature adoption and satisfaction for one feature | Retention must plateau, not just exist |
+| **Cohort retention** | Whether people keep coming back | Read the curve's shape, not one number |
+
+Example targets ("top-task success above 80%") are only illustrative — set your own
+baseline first and move it.
+
 ---
 
 ## 13. Interviews, expert methods and evidence management
@@ -344,6 +355,26 @@ minor issues and buries rare severe ones.
 It is Bayesian habit made visible: start from priors (NN/g, MeasuringU), update per study,
 communicate uncertainty as a level. Three stars says "solid, may need more validation"
 without a statistics lecture.
+
+**When is it a theme?** Before calling something a theme in affinity synthesis, check that
+at least about **a third of participants** show it. Below that, report it as a signal with
+its count. **Write each insight in four parts:** the learning · why it happens · the
+consequence for the product · a confidence note.
+
+**AI in analysis — guardrails before you trust the output:**
+- **Match tool to stage:** chat for desk research, a shared workspace for studies with one
+  method, scripted pipelines for repeatable analysis.
+- **Participant data:** check the plan's training default, use business plans for
+  participant data, and pseudonymise (faces and voices still identify). Limit folder access
+  and review what the tool changed.
+- **Build disconfirmation into every prompt**, plus a separate pass for edge cases and
+  counter-evidence.
+- **Define failure conditions:** "if the transcript doesn't support a code, return NULL and
+  flag it" — so the model doesn't fill gaps.
+- **A model change is an instrument change.** Keep a set of hand-coded transcripts as a
+  regression set and re-run it after model updates. Record model and effort level in the
+  methods section.
+- **Calibrate on about five transcripts** against human coding before scaling up.
 
 ---
 
@@ -385,8 +416,7 @@ design. Access follows trust: small, low-risk first steps.
 ## 15. Product analytics (Pendo): set-up and reading the numbers
 
 Use when rolling out or cleaning up Pendo (or any tag-based analytics), building funnels or
-an exec dashboard, or when someone cites an event count as evidence. Source: Calabro,
-*Pendo Rollout Playbook* (2025).
+an exec dashboard, or when someone cites an event count as evidence.
 
 **Never tag everything.** Auto-tagging tracks layout, not intent: in custom-built apps it
 yields vague, inconsistent tags (div1, buttonX) that flow into funnels and dashboards and
@@ -436,6 +466,41 @@ Don't wait for perfect coverage: start evaluative, with funnels on the top tasks
 
 ---
 
+## 16. Stakeholders: interviews and incentives
+
+**Interview stakeholders for raw material, not requirements.** Asking for requirements
+directly gets you solutions. Script the interview around three areas: the **domain**, the
+**audience**, and the **constraints** (technical, operational, political).
+
+Questions that work:
+- "Describe the purpose of this project in your own words."
+- "What's the most important thing to get right?"
+- "If you could ask users one question, what would it be?"
+- "How will you judge whether this succeeded?"
+- Question the labels: "Why do we call them power users?"
+- Close with: "What did I miss?"
+
+**Map incentives before pitching anything.** For yourself and each stakeholder, note what
+motivates them, which decisions they own, and whether your goal aligns with theirs. Roles
+have typical incentives: product — short-term lift; engineering — uptime and velocity;
+marketing — brand health; support — fewer tickets. A pitch built on a metric the decider
+doesn't care about fails however good the evidence is. If nothing aligns: ask what would
+matter to them, find a stakeholder whose incentives do align, or shelve it for now.
+
+```
+STAKEHOLDER MAP
+Name / role: [...]
+Motivated by: [...]
+Decisions they own: [...]
+Aligned with our goal? yes / partly / no — because [...]
+The metric they'll listen to: [...]
+```
+
+Pairs with §10: when "our users are different" comes up, the incentive map shows what the
+person is protecting.
+
+---
+
 ## Output formats
 
 **PLAN**
@@ -465,9 +530,12 @@ assumptions stated, qual evidence beside the quant.
 
 ## Sources
 Trevor Calabro, *UX Research in the Wild* (trevorcalabro.substack.com) — all 182 posts
-(2023–2026) read and distilled into the 100-chapter reference book and the UX Practice app ·
-Erika Hall, *Just Enough Research* (2nd ed.) · Teresa Torres, *Continuous Discovery Habits*
-· NN/g, Baymard, MeasuringU and Sauro findings cited through Calabro.
+(2023–2026) read and distilled into the reference book and the UX Practice app, including
+the *Pendo Rollout Playbook* (2025) · Erika Hall, *Just Enough Research* (2nd ed.) · Teresa
+Torres, *Continuous Discovery Habits* · NN/g, Baymard, MeasuringU and Sauro findings cited
+through Calabro · Dan Brown (EightShapes) on stakeholder interviews · Abby Covert on
+incentive architecture · Brittany Hobbs on AI tools in research · Nikki Anderson on theme
+thresholds and insight writing · HEART (Google), UMUX-Lite (Lewis et al.).
 
 Figures here were checked against the original posts in Nov 2026. Where a post is dated —
 AI model comparisons, Baymard's abandonment percentages, R/SPSS tooling — re-check before

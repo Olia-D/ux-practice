@@ -1,7 +1,7 @@
 {
   "book": {
     "title": "UX Research in the Wild — reference edition",
-    "blurb": "100 chapters with figures, memory aids, a rules cheat sheet and an archive guide. One HTML file; works offline.",
+    "blurb": "104 chapters with figures, memory aids, a rules cheat sheet and an archive guide. One HTML file; works offline.",
     "read": "book/ux-research-in-the-wild.html",
     "download": "book/ux-research-in-the-wild.html",
     "zip": "downloads/ux-research-in-the-wild-book.zip"
@@ -17,34 +17,40 @@
     {
       "id": "interaction-design-reviewer",
       "title": "Interaction Design Reviewer",
-      "blurb": "Forms, controls, navigation, status, accessibility, destructive actions.",
+      "blurb": "Forms, controls, navigation, status, accessibility audits, tables, hidden vs disabled, critiques.",
       "refs": [
         "forms",
         "controls",
         "status-design",
         "accessibility-and-flows",
+        "critique-sessions",
         "test-cases"
       ]
     },
     {
+      "id": "ux-writing",
+      "title": "UX Writing",
+      "blurb": "Buttons, errors, empty states, statuses, pronouns, voice and tone."
+    },
+    {
       "id": "ai-ux-patterns",
       "title": "AI UX Patterns",
-      "blurb": "Autonomy, trust, chat history, citations, EU AI Act labelling."
+      "blurb": "Autonomy, placement, trust, voice, chat history, citations, EU AI Act labelling."
     },
     {
       "id": "ux-research-advisor",
       "title": "UX Research Advisor",
-      "blurb": "Method choice, sample size, A/B critique, surveys, readouts, ROI, Pendo analytics."
+      "blurb": "Method choice, sample size, A/B critique, surveys, AI-assisted analysis, stakeholders, metrics, ROI."
     },
     {
       "id": "data-visualization",
       "title": "Data Visualization",
-      "blurb": "Chart choice, styling, colour, dashboard layout, accessibility."
+      "blurb": "Chart choice, colour, dashboards or insights, dashboard trade-offs, accessibility."
     },
     {
       "id": "jtbd-research",
       "title": "JTBD Research",
-      "blurb": "Why users adopt, switch or churn; job statements and probes."
+      "blurb": "Why users adopt, switch or churn; job statements, probes, personas."
     }
   ]
 }

@@ -18,15 +18,16 @@ Once installed, the skills need no setup. Claude reads each skill's short descri
 | Skill | Reach for it when… |
 |---|---|
 | `ux-start` | The problem is vague, or it mixes research, design and copy |
-| `interaction-design-reviewer` | You're working on forms, controls, navigation, statuses, accessibility or destructive actions |
-| `ai-ux-patterns` | You're designing any AI feature: how much the agent does on its own, how trust and citations work, chat history, the EU AI Act labelling rules |
-| `ux-research-advisor` | You're planning a study, judging an A/B result, writing a survey, preparing a readout, arguing ROI, or setting up or reading Pendo analytics |
+| `interaction-design-reviewer` | You're working on forms, controls, navigation, statuses, tables, accessibility audits, destructive actions, or running a design critique |
+| `ux-writing` | You need a button label, error, empty state, status or any product text, or you're setting voice and naming rules |
+| `ai-ux-patterns` | You're designing any AI feature: how much the agent does on its own, where it sits in the UI, voice, how trust and citations work, chat history, the EU AI Act labelling rules |
+| `ux-research-advisor` | You're planning a study, judging an A/B result, writing a survey, using AI in analysis, interviewing stakeholders, picking a metric, preparing a readout, arguing ROI, or setting up or reading Pendo analytics |
 | `data-visualization` | You're choosing a chart, reviewing a dashboard or designing KPI views |
 | `jtbd-research` | You need to know why users adopt, switch or churn |
 
 ## Make routing reliable
 
-- **Turn off overlapping skills.** Generic design skills (for example `design-critique`, `user-research` and `accessibility-review` from the Design plugin) have descriptions that overlap with these. When two skills overlap, the generic one sometimes fires instead. Turn them off in Settings → Skills. Keep a microcopy skill such as `ux-copy` if you use one, since none of these skills cover microcopy.
+- **Turn off overlapping skills.** Generic design skills (for example `design-critique`, `user-research` and `accessibility-review` from the Design plugin) have descriptions that overlap with these. When two skills overlap, the generic one sometimes fires instead. Turn them off in Settings → Skills. `ux-copy` overlaps with `ux-writing`, so keep only one of them.
 - **Add the routing note to your projects.** Pasting [`PROJECT-INSTRUCTIONS.md`](PROJECT-INSTRUCTIONS.md) into a project's custom instructions (claude.ai) or `CLAUDE.md` (Claude Code) makes skill selection more reliable in that project.
 
 ## Keep the skills current

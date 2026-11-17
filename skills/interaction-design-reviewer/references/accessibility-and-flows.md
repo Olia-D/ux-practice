@@ -89,18 +89,17 @@ help text are not optional polish — they are core functionality for self-serve
 
 ---
 
-## Voyado-Specific Lenses
+## Self-serve B2B SaaS lens
 
-When designing or reviewing for Voyado products (Ratings & Reviews, Onsite Messenger Flows,
-dashboards):
+When designing or reviewing for a product that customers configure and monitor on their own
+(campaign tools, review moderation, analytics dashboards):
 
-**Self-serve assumption applies everywhere.** Voyado's customers configure and monitor
-products without Voyado team support in the room. Every piece of context that a trained
-user would have in their head must be explicit in the interface.
+**The self-serve assumption applies everywhere.** Nobody from your team is in the room.
+Every piece of context a trained user carries in their head must be explicit in the interface.
 
-**Setup flows are high-stakes and infrequent.** Users may configure a Messenger Flow or
-set up a Reviews widget once, then not return for months. Design for the user who has
-forgotten everything since last time — not for the user who uses it daily.
+**Setup flows are high-stakes and infrequent.** People configure an automation or a widget
+once, then don't return for months. Design for the user who has forgotten everything since
+last time — not for the one who uses it daily.
 
 **Dashboard views serve three distinct jobs:**
 1. Monitor: is everything working? (surface status clearly, no hunting)
@@ -109,3 +108,26 @@ forgotten everything since last time — not for the user who uses it daily.
 
 Design for all three jobs, and don't let the "monitor" view hide the information needed
 for "diagnose" and "prove ROI."
+
+---
+
+## Accessibility audit in five layers
+
+Automated tools find a minority of real issues. Run all five layers, against WCAG 2.2 AA:
+
+1. **Automated** — axe or Lighthouse for contrast, missing names, ARIA misuse. Fast, partial.
+2. **Keyboard** — tab through every key task: visible focus, logical order, no traps, Esc closes.
+3. **Screen reader** — VoiceOver on iOS and NVDA or JAWS on desktop. Headings, landmarks,
+   names, state changes announced.
+4. **Visual** — zoom to 200% and 400% reflow, contrast in every theme, colour never the only
+   signal, text spacing overrides.
+5. **Flow** — run a key task end to end with assistive tech: errors, timeouts, confirmations,
+   and what happens after.
+
+**Where to spend effort (WebAIM screen reader survey #9, 2021, n≈1,500):** about **68%** of
+respondents navigate a long page by **headings first**, while landmarks are the first choice
+for only about 3% — so heading structure pays off most. About **90%** use a screen reader on
+a **mobile** device, and VoiceOver is the most common mobile reader — test on a phone, not
+only on desktop. (Survey data ages: check whether a newer edition exists before quoting.)
+
+Report each issue with: what fails, who it affects, where, the WCAG criterion, and a fix.

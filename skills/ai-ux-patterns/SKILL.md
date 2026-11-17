@@ -1,14 +1,13 @@
 ---
 name: "ai-ux-patterns"
-description: "Design and review AI product interfaces — decide autonomy level and trust scaffold first (Agentic UX, T.R.U.S.T., C.O.N.V.E.R.S.E. frameworks), then apply patterns from Shape of AI, AI UX Patterns and AI UX Playground: prompting, tuning, human-in-the-loop, trust signals, memory, citations, agentic commerce. Use whenever Olha is designing, speccing, or critiquing any AI-powered feature (chatbots, copilots, generative tools, agents, AI shopping) even if she doesn't say \"AI UX\" — e.g. \"how should the loading state work for this generation\", \"what happens when the agent wants to send an email\", \"how much should the agent do on its own\". Trigger with \"AI feature\", \"AI UX\", \"agent\", \"autonomy\", \"streaming response\", \"hallucination disclosure\", \"memory controls\", \"citations UI\", \"agent interface\", \"thread history\", \"chat history\", \"AI label\", \"EU AI Act\", \"AI disclosure\"."
+description: "Design and review AI product interfaces — decide autonomy level and trust scaffold first (Agentic UX, T.R.U.S.T., C.O.N.V.E.R.S.E. frameworks), then apply patterns from Shape of AI, AI UX Patterns and AI UX Playground: prompting, tuning, human-in-the-loop, trust signals, memory, citations, agentic commerce. Use whenever the user is designing, speccing, or critiquing any AI-powered feature (chatbots, copilots, generative tools, agents, voice assistants, AI shopping) even if they don't say \"AI UX\" — e.g. \"how should the loading state work for this generation\", \"what happens when the agent wants to send an email\", \"how much should the agent do on its own\". Trigger with \"AI feature\", \"AI UX\", \"agent\", \"autonomy\", \"streaming response\", \"hallucination disclosure\", \"memory controls\", \"citations UI\", \"agent interface\", \"thread history\", \"chat history\", \"AI label\", \"EU AI Act\", \"AI disclosure\", \"where should the AI go\", \"AI side panel\", \"voice AI\", \"voice assistant\"."
 ---
 
 # AI UX Patterns
 
-A pattern library for designing and reviewing AI-powered product interfaces, drawn from three
-sources: the Shape of AI taxonomy (Emily Campbell, shapeof.ai), AI UX Patterns (Luke
-Bennis, aiuxpatterns.com), and AI UX Playground (Bestfolios, aiuxplayground.com), which
-contributes the decision frameworks and anti-patterns. Use this alongside general interaction
+A pattern library for designing and reviewing AI-powered product interfaces, combining three
+public pattern libraries with decision frameworks and anti-patterns (credits under Sources).
+Use this alongside general interaction
 design principles — it fills the gaps that traditional HCI pattern libraries don't cover:
 prompting, model behavior, human oversight of AI actions, and trust in generated content.
 
@@ -107,12 +106,31 @@ alert that buys on its own; a wallet removable only by deleting the account.
 
 ---
 
+### E. Placement: where should the AI sit?
+
+Decide placement from the user's primary task, not from what competitors ship.
+
+| Placement | Use when | Avoid when |
+|---|---|---|
+| **Floating widget** | Bounded, reactive help on any page | The AI is the main job |
+| **Inline overlay** | Small edits right inside the content | Long, multi-step work |
+| **Right panel, on demand** | Expert help while deep in another task | Novices — they often miss it |
+| **Left panel, co-creator** | Chat drives a live output beside it | Screen space is already tight |
+| **Centre stage** | Prompting *is* the main job | AI is a helper to another task |
+| **Infinite canvas** | Visual ideation, many parallel options | Linear, form-like tasks |
+| **Grid / spreadsheet** | One query fills many cells or rows | Single answers |
+
+A feature with no visible AI surface at all (it just acts in the workflow) still needs
+the governors and trust builders below — invisible doesn't mean unaccountable.
+
+---
+
 ## Table of contents
 
 Jump straight to the relevant category instead of reading top to bottom:
 
 - [1. Wayfinders](#1-wayfinders--helping-users-start-and-compose-well) — starting and composing a good prompt
-- [2. Input modalities](#2-input-modalities) — text, image, voice
+- [2. Input & output modalities](#2-input--output-modalities) — text, image, voice in and out
 - [3. Prompt actions](#3-prompt-actions--what-users-can-direct-the-ai-to-do) — the verbs available mid-flow
 - [4. Tuners](#4-tuners--refining-what-the-ai-has-to-work-with) — controlling the inputs that shape output
 - [5. Session & thread management](#5-session--thread-management) — navigating and resuming history
@@ -152,9 +170,9 @@ result on the first try.
 *Design risk if skipped:* users stare at an empty input and bounce, or write vague prompts,
 get a bad first result, and blame the product rather than realizing the prompt was the issue.
 
-## 2. Input modalities
+## 2. Input & output modalities
 
-What form the user's input takes, beyond typed text.
+What form the user's input — and the AI's answer — takes, beyond typed text.
 
 - **Raw text input** — the default: direct typed prompting.
 - **Image input** — an image attached alongside a supporting text prompt.
@@ -163,6 +181,23 @@ What form the user's input takes, beyond typed text.
 *Design risk if skipped:* forcing every input through text excludes tasks (and users) that
 are a much better fit for a different modality — describing a photo in words is much
 higher-effort than just attaching it.
+
+**Voice in and out — rules that typed chat doesn't need:**
+- **Confirm key values back** (dates, names, amounts) in the next turn — listeners can't
+  scroll back. Confirm high-risk actions explicitly, simple ones implicitly.
+- **Switch channel for anything people would write down** — send it by text or email.
+- **Voice can't carry tables or code.** Plan the hand-off to a screen.
+- **Push-to-talk** for noisy places or long prompts; **voice activity detection** for hands-free.
+- **Signal the state** — listening, thinking, speaking — and make turn-taking unmistakable.
+- **Be brief, say what it can do with examples,** accept follow-ups and pronouns, never
+  blame the user for a misheard request.
+- **Full-screen voice mode hides the thread** — keep an inline option and a transcript.
+- **Never imply it's human.** Outbound calls identify themselves and earn permission first.
+  Keep the persona steady, including when delivering bad news.
+- **Meeting bots:** decide active / passive / invisible, whether notes auto-share or wait for
+  approval, and mark AI-written text with links back to the transcript moment.
+- **Audio consent:** voice consent with scope and deletion; transcripts and playback speed
+  for accessibility.
 
 ## 3. Prompt actions — what users can direct the AI to do
 
@@ -226,7 +261,7 @@ it's information architecture rather than a moment inside a single generation.
   (with context) or starts fresh (without it).
 - **Thread history** — a browsable record of past threads/sessions the user can return to.
 
-**Three-layer model (Calabro, *The Rules of AI Chat History*).** A transcript is a record,
+**Three-layer model.** A transcript is a record,
 not a history. Design three connected layers, each with its own job:
 
 1. **Task history** — one thread per distinct goal (a self-contained request with a finish
@@ -288,6 +323,12 @@ before/while/after the AI acts.
   intact; lost prompts after failure are a defect.
 - **Smart diff** — highlight exactly what the model changed so review is a diff, not a reread.
 - **Sandbox preview / blast-radius view** — show what a proposed action will touch before it runs.
+- **Role card: "Trusted for / Will not do"** — state the agent's remit in two short lists
+  where the user sets it up. "Will not do" is the part people read.
+- **Stop & take over** — a persistent control to halt and continue manually from the same state.
+- **Intervention inbox** — one place listing everything waiting for human approval across
+  agents, instead of approvals scattered through threads.
+- **Forget what you learned** — let users remove a learned preference or reset personalisation.
 
 *Design risk if skipped:* users can't tell what the AI is about to do, can't stop it
 mid-action, and can't undo it after — the exact conditions that make AI features feel
@@ -333,6 +374,12 @@ which is exactly the kind of work the AI was supposed to remove.
 - **Wrong-source feedback** — a specific "this source is wrong/irrelevant" control, not a bare
   thumbs-down. Citation depth: inline chip → claim preview with excerpt → full source list.
   Chips that open nothing are decoration.
+- **Capabilities & limits before use** — say what it can't do before the first prompt, not
+  after the first failure.
+- **Counterfactual explanation** — "you'd have been approved if X were Y": explain a decision
+  by what would have changed it.
+- **Decision testing** — let people try different inputs and see how the outcome changes.
+- **Consent-usage timeline** — show when and how the data someone consented to was used.
 
 *Design risk if skipped:* users can't distinguish AI output from human output, can't tell
 when to double-check a claim, and have no way to audit how a result was produced — all of
@@ -383,8 +430,6 @@ and users can't build a consistent mental model of what the AI is or does across
 
 ## Evaluating AI features — what not to delegate to AI
 
-Calabro (*5 Things AI Still Can't Do for UX Research*, *The Dangerous Appeal of Fake AI Users*):
-
 - **No synthetic users** for evaluation. They sound human and confirm what you believe; they
   can't get confused, invent a workaround or surprise you. Test AI features with real people.
 - **Write the research questions yourself** — neutral-prompt habits strip the context a good
@@ -434,7 +479,10 @@ at all?"):
 
 ## Sources
 
-Chat-history layers and the "what AI can't do" list: Trevor Calabro, *UX Research in the
+Placement patterns and voice patterns: Sharang Sharma (UX Collective, 2026); Voice
+Principles (Ben Sauer); IBM conversational persona guidance. Governor and trust additions:
+IF Data Patterns catalogue; Dustin Kirk, Agentic UX Patterns. Chat-history layers and the
+"what AI can't do" list: Trevor Calabro, *UX Research in the
 Wild* (The Rules of AI Chat History, Jun 2026; 5 Things AI Still Can't Do for UX Research,
 Oct 2026). Legal floor: Regulation (EU) 2024/1689 Art. 50; Commission transparency
 guidelines (20 Jul 2026); AI Omnibus grace period for marking (to 2 Dec 2026).

@@ -43,7 +43,7 @@ the three dashboard jobs: monitor, diagnose, prove ROI.
 ---
 
 ### Test 5 — Post-action status design (REVIEW + CREATE)
-**Prompt:** "After a customer activates a Messenger Flow, we just show 'Active' as the status. Is that enough?"
+**Prompt:** "After a customer activates an automated email campaign, we just show 'Active' as the status. Is that enough?"
 
 Expected: flags "Active" as insufficient for a B2B self-serve context → explains the six
 questions users carry after an action → identifies what's missing (evidence of activity,
@@ -58,3 +58,23 @@ references the difference between communicating state vs. communicating meaning.
 Expected: flags auto-rotation as a usability and accessibility risk → explains banner
 blindness and the Yale/NN/g carousel engagement data → notes cognitive load cost →
 recommends static or user-triggered alternatives → does not validate the idea.
+
+---
+
+### Test 7 — Permission-limited action (REVIEW)
+**Prompt:** "Viewers can't publish, so we disable the Publish button for them. Fine?"
+
+Expected: asks whether viewers ever need to know publishing exists → if yes, keeps it
+disabled **with a visible reason** and how to get access → if never, hides it and designs
+when it appears → notes legibility and focusability for screen readers → does not leave a
+silent disabled button.
+
+---
+
+### Test 8 — Running a critique (CREATE)
+**Prompt:** "Our design critiques turn into opinion fights. How should I run them?"
+
+Expected: separates the meeting types (critique, design review, quality review, shareout)
+→ recommends 4–6 people with rotating roles → gives the timed 30-minute agenda with silent
+written feedback before discussion → sets the discussion order → keeps feedback as
+questions, optional for the designer, in a critique.

@@ -1,6 +1,6 @@
 ---
 name: "data-visualization"
-description: "Choose, design and review charts, dashboards and data visualizations using evidence-based rules — chart selection by purpose, chart styling, colour, dashboard layout and dataviz accessibility. Use whenever Olha asks which chart to use, to review a chart or dashboard, to design a KPI/analytics/report view, or about chart colour or legibility — even if she only says \"this graph looks off\" or \"how should I show this metric\". Trigger with \"chart\", \"graph\", \"dashboard\", \"KPI\", \"metric\", \"data viz\", \"visualization\", \"legend\", \"axis\", \"colour scale\", \"report view\", \"analytics page\"."
+description: "Choose, design and review charts, dashboards and data visualizations using evidence-based rules — chart selection by purpose, chart styling, colour, dashboard layout and dataviz accessibility. Use whenever the user asks which chart to use, to review a chart or dashboard, to design a KPI/analytics/report view, or about chart colour or legibility — even if they only say \"this graph looks off\" or \"how should I show this metric\". Trigger with \"chart\", \"graph\", \"dashboard\", \"KPI\", \"metric\", \"data viz\", \"visualization\", \"legend\", \"axis\", \"colour scale\", \"report view\", \"analytics page\"."
 ---
 
 # Data Visualization Skill
@@ -26,7 +26,7 @@ they conclude wrongly — not as a styling preference.
 Before any chart: *what decision does the reader make with this?* A sales manager looking
 at pipeline needs three answers (on track? which deals need attention? what changed?) —
 maybe four charts, not fifteen. If a large swing in the number would not change what the
-reader does, the chart should not exist. (Calabro, dataschool "Empowering")
+reader does, the chart should not exist.
 
 Also ask: who reads it (first-time or daily?), on what device, and whether the job is
 **monitor** (is everything OK?), **diagnose** (why?) or **prove** (show this to my manager).
@@ -34,7 +34,7 @@ Each job needs different design decisions; a dashboard built for one breaks the 
 
 ---
 
-## 1. Choosing the chart (FT Visual Vocabulary + Chartio/Atlassian)
+## 1. Choosing the chart
 
 Identify the **purpose** first, then the **data types** (categorical / numeric, how many
 variables), then check the result and simplify.
@@ -63,7 +63,7 @@ grey "Other".
 
 ---
 
-## 2. Chart design rules (City Intelligence / London guidelines, Datawrapper)
+## 2. Chart design rules
 
 **Less, but better — show the data first.**
 - Remove borders, drop shadows, bevels, keylines, decorative icons. Maximise data-ink.
@@ -107,6 +107,13 @@ sized for the viewing device — nobody should squint.
 
 - **Meaning first.** Colour encodes something or it's grey. Keep the same colour meaning
   across every chart in a product — never reassign.
+- **Vary lightness, not just hue.** Colour-blind readers confuse colours of equal
+  *lightness* — saturation doesn't save them. About 8% of men of Northern European descent
+  and 0.5% of women have red–green colour vision deficiency (about 4–5% of men of Asian
+  descent). Red isn't a reliable alarm; red-purple reads as blue; pink, turquoise and grey
+  merge for green-blind readers. Test both protan and deutan simulations.
+- **Contrast:** WCAG 2 AA is the floor; use **APCA** to choose between options, because it
+  accounts for font weight and size. Every colour token must pass in every theme.
 - **Categorical:** distinct hues of similar lightness and saturation so none shouts;
   comfortable up to **5**, with caution to 10, beyond that use direct labels or facets.
   Related series (daily + rolling average) share a hue, the important one darker.
@@ -126,7 +133,7 @@ sized for the viewing device — nobody should squint.
 
 ---
 
-## 4. Dashboards (dataschool ACES, Calabro, Few)
+## 4. Dashboards
 
 **A — Accurate.** Readers must trust it or they won't use it. Show *last updated* and
 refresh cadence; flag broken data loudly; put metric definitions beside the visual, not in
@@ -144,6 +151,31 @@ tabs force recall, and working memory fails under time pressure. Nothing importa
 the fold. Only charts relevant to this dashboard's purpose; drill-down lives in a linked
 second dashboard, not in more panels.
 
+**Should it be a dashboard at all?** Fewer than one in ten adults aged 16–65 in the US have
+proficient numeracy, and people read single values far more easily than relationships or
+trends. Dashboards earn their place for expert analysts. For most B2B and B2C users,
+**deliver the insight in context instead** — a sentence where the decision happens ("3
+campaigns stopped sending yesterday") beats a chart they have to interpret.
+
+**Operational or analytical?** Operational dashboards (monitor now, act fast) are for
+people running a process: few widgets, status first, live. Analytical dashboards (explore,
+compare over time) are for people investigating: filters, drill-down, history. Set
+defaults **by role**, rather than relying on each user to customise. Design the dashboard
+**last**, after the questions are known.
+
+**Four trade-offs — minimising one stresses the others:** screen space, number of pages,
+level of abstraction, and amount of interaction. Fit-to-screen means more abstraction or
+interaction; no interaction means more pages or scrolling. Choose deliberately.
+
+**Meta-information is part of the design:** data source, description, last update and
+refresh cadence, disclaimers, and annotations for events that explain a spike. Without it,
+readers can't trust the number.
+
+**Builder-style dashboards** (users assemble their own): widgets snap to slots; offer
+templates and a blank state with two clear actions; let people try it with sample data;
+export both a read-only view (PDF) and raw data (CSV); time presets plus a custom range;
+highlight and drill down across charts.
+
 **Layout rules.**
 - Group related metrics into zones (and tint zones subtly if it helps); two views of the
   same metric (current value + trend) sit together; stacked time charts share a time axis.
@@ -160,7 +192,7 @@ second dashboard, not in more panels.
 
 ---
 
-## 5. Accessibility (Fossheim, Chartability POUR-CAF, Elavsky)
+## 5. Accessibility
 
 Accessible charts are a stress test: fixes for screen-reader and colourblind users almost
 always improve the chart for everyone under distraction, small screens and bad projectors.
@@ -226,6 +258,10 @@ until it does.
   (POUR-CAF, 50 heuristics, 14 critical)
 - Stephen Few (Perceptual Edge) and Nick Desbarats (*Practical Charts*) for dashboard
   fundamentals
+- Wagner, Zide & Zimmers, *Are data dashboards vanity projects?* (numeracy evidence, PIAAC)
+  · Benjamin Bach et al., *Dashboard Design Patterns* (IEEE VIS 2023) · Taras Bakusevych on
+  operational vs analytical dashboards · Creative Navy dashboard-builder benchmark
+- Lisa Charlotte Muth (Datawrapper) on colour blindness · Wise design system on APCA
 - Further learning: Open Visualization Academy (Alberto Cairo, free courses incl. Elavsky
   on accessibility, Bertini on reading charts, Meirelles on information design);
   datavizproject.com for a catalogue of 160+ chart types
