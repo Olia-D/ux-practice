@@ -1,0 +1,50 @@
+/* Design tokens — shared by the UX Practice app and the book.
+   Monochrome, one accent. Green marks outcomes only: done, correct, passed. */
+@font-face{
+  font-family:"Schibsted Grotesk";
+  src:url("fonts/schibsted-grotesk-latin-wght-normal.woff2") format("woff2");
+  font-weight:400 900;font-style:normal;font-display:swap;
+}
+:root{
+  --bg:#ffffff;
+  --surface:#f2f3f4;
+  --ink:#161616;
+  --ink-soft:#474747;
+  --ink-faint:#666664;   /* smallest text: 5.7:1 on bg */
+  --mute:#8b8b88;        /* second tone of two-tone statements, 24px+ only */
+  --line:#e6e6e3;
+  --line-strong:#c9c9c5;
+  --out:#0e9a68;         /* fills and marks */
+  --out-text:#0a7a52;    /* green text under 24px: 5.4:1 on bg */
+  --emph:#161616;        /* emphasis panels */
+  --emph-hover:#2a2a2a;
+  --on-emph:#ffffff;
+  --btn-bg:var(--ink);
+  --btn-fg:var(--bg);
+  --focus:#161616;
+
+  --r-sm:6px; --r-md:8px; --r-lg:10px; --r-xl:14px;
+  --phi-1:1rem; --phi-2:1.618rem; --phi-3:2.618rem; --phi-4:4.236rem;
+
+  --font:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --ease:cubic-bezier(.22,1,.36,1);
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#141514; --surface:#1e201f; --ink:#f1f1ef; --ink-soft:#c3c3bf;
+    --ink-faint:#9b9b97; --mute:#7a7a76; --line:#2e302f; --line-strong:#454845;
+    --out:#34c38f; --out-text:#4fd1a1;
+    --emph:#2a2d2b; --emph-hover:#343836; --on-emph:#f1f1ef;
+    --btn-bg:#f1f1ef; --btn-fg:#141514; --focus:#f1f1ef;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141514; --surface:#1e201f; --ink:#f1f1ef; --ink-soft:#c3c3bf;
+  --ink-faint:#9b9b97; --mute:#7a7a76; --line:#2e302f; --line-strong:#454845;
+  --out:#34c38f; --out-text:#4fd1a1;
+  --emph:#2a2d2b; --emph-hover:#343836; --on-emph:#f1f1ef;
+  --btn-bg:#f1f1ef; --btn-fg:#141514; --focus:#f1f1ef;
+  color-scheme:dark;
+}

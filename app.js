@@ -63,7 +63,27 @@
       });
     });
     if (total === 0) { summaryEl.textContent = ''; return; }
-    summaryEl.innerHTML = '<b>' + done + '/' + total + '</b> articles done';
+    summaryEl.innerHTML = '<b>' + done + '</b> of ' + total + ' done';
+  }
+
+  // ---------- icons ----------
+  function svg(path, extra) { return '<svg class="ico' + (extra ? ' ' + extra : '') + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' + path + '</svg>'; }
+  var ICON = {
+    back: svg('<path d="M15 18l-6-6 6-6"/>'),
+    chev: svg('<path d="M9 18l6-6-6-6"/>'),
+    check: svg('<path d="M20 6L9 17l-5-5"/>', 'ok'),
+    x: svg('<path d="M18 6L6 18M6 6l12 12"/>'),
+    out: svg('<path d="M7 17L17 7M8 7h9v9"/>')
+  };
+  function setupTheme() {
+    var b = document.getElementById('theme'); if (!b) return;
+    b.addEventListener('click', function () {
+      var root = document.documentElement, cur = root.getAttribute('data-theme');
+      if (!cur) cur = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      var next = cur === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', next);
+      try { localStorage.setItem('uxp-theme', next); } catch (e) {}
+    });
   }
 
   // ---------- text helpers ----------
@@ -71,9 +91,9 @@
   function fmt(s) {
     var h = esc(s);
     h = h.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
-    h = h.replace(/→/g, '<span style="color:var(--accent)">→</span>');
-    h = h.replace(/❌/g, '<span style="color:var(--warm)">✗</span>');
-    h = h.replace(/✅/g, '<span style="color:var(--ok)">✓</span>');
+    h = h.replace(/→/g, '<span style="color:var(--mute)">→</span>');
+    h = h.replace(/❌/g, '<span style="color:var(--ink-faint)">✗</span>');
+    h = h.replace(/✅/g, '<span style="color:var(--out-text)">✓</span>');
     return h.replace(/\n/g, '<br>');
   }
 
@@ -100,7 +120,7 @@
     var html = '<div class="qrow"><div class="q">' + fmt(q.q) + '</div></div>' + visual(q.visual);
     html += '<div class="opts" role="radiogroup" aria-label="Answer options">';
     order.forEach(function (oi) {
-      html += '<label class="opt" data-i="' + oi + '"><input type="radio" name="' + name + '" value="' + oi + '"><span class="otext">' + fmt(q.options[oi]) + '</span><span class="mark" aria-hidden="true"></span></label>';
+      html += '<label class="opt" data-i="' + oi + '"><input type="radio" name="' + name + '" value="' + oi + '"><span class="otext">' + fmt(q.options[oi]) + '</span><span class="mark2"></span></label>';
     });
     html += '</div>';
     if (q.hint) html += '<details class="note hint"><summary>Hint</summary>' + fmt(q.hint) + '</details>';
@@ -125,10 +145,10 @@
       answered = true;
       Array.prototype.forEach.call(box.querySelectorAll('input'), function (i) { i.disabled = true; });
       Array.prototype.forEach.call(box.querySelectorAll('.opt'), function (l) {
-        var i = +l.getAttribute('data-i'), isRight = i === q.answer, picked = l.querySelector('input').checked, mk = l.querySelector('.mark');
-        if (isRight && picked) { l.classList.add('right'); mk.textContent = '✓'; }
-        else if (isRight) { l.classList.add('right'); mk.textContent = '✓ Correct'; }
-        else if (picked) { l.classList.add('wrong'); mk.textContent = '✗'; }
+        var i = +l.getAttribute('data-i'), isRight = i === q.answer, picked = l.querySelector('input').checked, mk = l.querySelector('.mark2');
+        if (isRight && picked) { l.classList.add('right'); mk.innerHTML = ICON.check + 'Correct'; }
+        else if (isRight) { l.classList.add('right'); mk.innerHTML = ICON.check + 'Correct answer'; }
+        else if (picked) { l.classList.add('wrong'); mk.innerHTML = ICON.x + 'Your answer'; }
       });
       var msg;
       if (ok) msg = '<span class="head">Right.</span>' + (q.explain ? fmt(q.explain) : '');
@@ -164,41 +184,52 @@
     return { done: done, total: total, pct: total ? Math.round(100 * done / total) : 0 };
   }
 
+  // The strip: one mark per article. Grey = not started, dark grey = learned, green = done.
+  function stripFor(mod) {
+    var items = progress.items || {};
+    return '<div class="strip" aria-hidden="true">' + mod.articles.map(function (a) {
+      var l = items[a.id + '/learn'] || {}, t = items[a.id + '/test'] || {};
+      var done = l.done && t.best != null;
+      return '<i class="' + (done ? 'd' : (l.done || t.best != null) ? 'l' : '') + '"></i>';
+    }).join('') + '</div>';
+  }
+
   // ---------- HOME VIEW ----------
   function viewHome() {
     loadManifest().then(function (m) {
       renderSummary();
       pruneMissed();
       var totalDone = 0, totalAll = 0;
-      var html = '<h1>UX Practice</h1>';
-      html += '<p class="sub">Key concepts from Trevor Calabro\'s UX Research in the Wild. Learn the ideas, then test yourself.</p>';
-      html += '<div class="schedule-hint"><b>Suggested pace:</b> 1 article per day, 4 days a week. Read the cards, take the quiz. 100 articles across 12 modules.</div>';
+      var nArt = 0; m.modules.forEach(function (x) { nArt += x.articles.length; });
+      var html = '<h1 class="statement">Learn the ideas. <span>Then test yourself.</span></h1>';
+      html += '<p class="sub">Key concepts from Trevor Calabro\'s UX Research in the Wild, plus companion notes.</p>';
+      html += '<p class="pace">Suggested pace: one article a day, four days a week. Read the cards, then take the quiz. ' + nArt + ' articles across ' + m.modules.length + ' modules.</p>';
 
       m.modules.forEach(function (mod, mi) {
         var p = moduleProgress(mod);
         totalDone += p.done; totalAll += p.total;
         var unlocked = mi === 0 || moduleProgress(m.modules[mi - 1]).pct >= 50;
 
-        html += '<a class="card tile mod-card' + (unlocked ? '' : ' locked') + '" href="' + (unlocked ? '#/m/' + mod.id : '#/') + '">' +
-          '<div class="mod-head"><div class="mod-icon">' + mod.icon + '</div><div class="mod-info">' +
+        html += '<a class="mod-card' + (unlocked ? '' : ' locked') + '" href="' + (unlocked ? '#/m/' + mod.id : '#/') + '"' + (unlocked ? '' : ' aria-disabled="true"') + '>' +
+          '<div class="mod-head"><div class="mod-info">' +
           '<div class="mod-week">' + esc(mod.week) + '</div>' +
           '<div class="mod-title">' + esc(mod.name) + '</div>' +
           '<div class="mod-sub">' + esc(mod.subtitle) + '</div>' +
-          '</div></div>' +
-          '<div class="mod-progress"><div class="mod-bar"><i style="width:' + p.pct + '%"></i></div><span class="mod-pct">' + p.done + '/' + p.total + '</span></div>' +
-          (unlocked ? '' : '<div class="note" style="margin-top:6px">Finish half of ' + esc(m.modules[mi - 1].name) + ' first</div>') +
+          '</div><div class="mod-count' + (p.done === p.total && p.total ? ' done' : '') + '">' + p.done + '<small>/' + p.total + '</small></div></div>' +
+          stripFor(mod) +
+          (unlocked ? '' : '<div class="note" style="margin-top:8px">Finish half of ' + esc(m.modules[mi - 1].name) + ' first</div>') +
           '</a>';
       });
 
       var nMissed = missedRefs().length;
-      html += '<div class="card tools"><a class="toolrow" href="#/review"><span><b>Review missed questions</b>'
+      html += '<div class="tools home-tools"><a class="toolrow" href="#/review"><span><b>Review missed questions</b>'
            + (nMissed ? '<span class="note"> · ' + nMissed + ' waiting</span>' : '<span class="note"> · nothing yet</span>')
-           + '</span><span class="chev">→</span></a>'
-           + '<a class="toolrow" href="#/index"><span><b>Concept index</b><span class="note"> · every learn card</span></span><span class="chev">→</span></a>'
-           + '<a class="toolrow" href="#/library"><span><b>Library</b><span class="note"> · read or download the book and skills</span></span><span class="chev">→</span></a></div>';
+           + '</span><span class="chev">' + ICON.chev + '</span></a>'
+           + '<a class="toolrow" href="#/index"><span><b>Concept index</b><span class="note"> · every learn card</span></span><span class="chev">' + ICON.chev + '</span></a>'
+           + '<a class="toolrow" href="#/library"><span><b>Library</b><span class="note"> · read or download the book and skills</span></span><span class="chev">' + ICON.chev + '</span></a></div>';
       if (totalAll) {
         var totalPct = Math.round(100 * totalDone / totalAll);
-        html += '<div class="card" style="text-align:center"><p class="muted">Overall: ' + totalDone + ' of ' + totalAll + ' articles done</p><div class="mod-progress"><div class="mod-bar"><i style="width:' + totalPct + '%"></i></div><span class="mod-pct">' + totalPct + '%</span></div></div>';
+        html += '<div class="overall"><span class="muted">Overall, ' + totalDone + ' of ' + totalAll + ' articles done</span><span class="big num' + (totalPct === 100 ? ' done' : '') + '">' + totalPct + '%</span></div>';
       }
 
       // progress backup
@@ -206,7 +237,7 @@
         '<p class="note">Your progress saves in this browser automatically. Use backup to move it to another device or keep a copy.</p>' +
         '<div class="row" style="gap:8px;margin:8px 0"><button class="btn small secondary" id="export-btn">Copy progress</button>' +
         '<button class="btn small secondary" id="import-btn">Paste progress</button>' +
-        '<button class="btn small secondary" id="reset-btn" style="color:var(--warm)">Reset</button></div>' +
+        '<button class="btn small secondary" id="reset-btn">Reset</button></div>' +
         '</details>';
 
       setView(html);
@@ -220,10 +251,10 @@
       var mod = m.modules.filter(function (x) { return x.id === mid; })[0];
       if (!mod) return viewHome();
       var mp = moduleProgress(mod);
-      var html = '<a class="crumb" href="#/">← All modules</a>';
+      var html = '<a class="crumb" href="#/">' + ICON.back + 'All modules</a>';
       html += '<h1>' + esc(mod.name) + '</h1>';
       html += '<p class="sub">' + esc(mod.subtitle) + '</p>';
-      html += '<p class="note" style="margin:0 0 8px">' + mp.done + '/' + mp.total + ' articles done</p>';
+      html += stripFor(mod) + '<p class="note" style="margin:8px 0 var(--phi-2)">' + mp.done + ' of ' + mp.total + ' articles done</p>';
 
       mod.articles.forEach(function (a, i) {
         var r = (progress.items || {})[a.id + '/test'] || {};
@@ -233,22 +264,22 @@
 
         var articleDone = learned.done && quizDone;
         var artPct = articleDone ? 100 : (learned.done ? 50 : 0);
-        html += '<div class="card' + (articleDone ? ' done' : '') + '">' +
-          '<div class="row between"><h3>' + (articleDone ? '✓ ' : '') + esc(a.title) + '</h3><span class="pill">' + (i + 1) + '</span></div>' +
-          '<p class="muted" style="margin:4px 0 0">' + esc(a.summary) + '</p>' +
-          (hasContent ? '<ul class="steps">' +
-            '<li class="step"><span class="lbl">Learn' + (learned.done ? ' <span class="note">· done</span>' : '') + '</span>' +
-              '<a class="btn small' + (learned.done ? ' secondary' : '') + '" href="#/a/' + a.id + '/learn/0">' + (learned.done ? 'Review' : 'Start') + '</a></li>' +
-            '<li class="step"><span class="lbl">Quiz · 5 questions<br>' + scoreLabel(r.best, 5) + '</span>' +
-              '<a class="btn small' + (quizDone ? ' secondary' : '') + '" href="#/a/' + a.id + '/test">' + (quizDone ? 'Retake' : 'Start') + '</a></li>' +
-          '</ul>' : '<p class="note" style="margin-top:8px">Content coming soon</p>') +
-          (a.source ? '<div class="source"><a href="' + esc(a.source) + '" target="_blank">Read original article ↗</a></div>'
+        html += '<div class="art">' +
+          '<div class="art-n num">' + (i + 1) + '</div><div>' +
+          '<h3>' + esc(a.title) + (articleDone ? ICON.check + '<span class="sr">Done</span>' : '') + '</h3>' +
+          '<p class="art-sum">' + esc(a.summary) + '</p>' +
+          (hasContent ? '<div class="art-actions">' +
+            '<a class="btn small' + (learned.done ? ' secondary' : '') + '" href="#/a/' + a.id + '/learn/0">' + (learned.done ? 'Review cards' : 'Start learning') + '</a>' +
+            '<a class="btn small secondary" href="#/a/' + a.id + '/test">' + (quizDone ? 'Retake quiz' : 'Quiz') + '</a>' +
+            '<span class="score">' + (quizDone ? r.best + ' of 5 correct' : '5 questions') + '</span>' +
+          '</div>' : '<p class="note" style="margin-top:8px">Content coming soon</p>') +
+          (a.source ? '<div class="source"><a href="' + esc(a.source) + '" target="_blank" rel="noopener">Read the original article ' + ICON.out + '</a></div>'
                     : a.sourceNote ? '<div class="source">Source: ' + esc(a.sourceNote) + '</div>' : '') +
-          '</div>';
+          '</div></div>';
       });
       var mr = (progress.items || {})['module/' + mod.id] || {};
       var mMissed = missedRefs(mod.articles.map(function (x) { return x.id; })).length;
-      html += '<div class="card modreview"><div class="row between"><h3 style="margin:0">Module review</h3>' +
+      html += '<div class="modreview"><div class="row between"><h3 style="margin:0">Module review</h3>' +
         (mr.reviewed ? '<span class="pill">Reviewed</span>' : '') + '</div>' +
         '<p class="muted" style="margin:4px 0 0">10 questions drawn across this module' +
         (mMissed ? ', weighted toward the ' + mMissed + ' you have missed' : '') + '.' +
@@ -270,18 +301,18 @@
         if (!t) return showError(new Error('No content'));
         idx = Math.max(0, Math.min(idx, t.learn.length - 1));
         var c = t.learn[idx], last = idx === t.learn.length - 1;
-        var dots = '<div class="dots" aria-label="Card ' + (idx + 1) + ' of ' + t.learn.length + '">' + t.learn.map(function (_, i) { return '<i class="' + (i <= idx ? 'on' : '') + '"></i>'; }).join('') + '</div>';
+        var dots = '<div class="strip cards" role="img" aria-label="Card ' + (idx + 1) + ' of ' + t.learn.length + '">' + t.learn.map(function (_, i) { return '<i class="' + (i <= idx ? 'on' : '') + '"></i>'; }).join('') + '</div>';
 
-        var html = '<a class="crumb" href="#/m/' + (modId || d.module) + '">← ' + esc(art.title) + '</a>' +
-          '<p class="note" style="margin:0">Card ' + (idx + 1) + ' of ' + t.learn.length + '</p>' + dots +
+        var html = '<a class="crumb" href="#/m/' + (modId || d.module) + '">' + ICON.back + esc(art.title) + '</a>' +
+          dots + '<p class="note num" style="margin:8px 0 0">Card ' + (idx + 1) + ' of ' + t.learn.length + '</p>' +
           '<div class="learn-card pop"><h2>' + fmt(c.title) + '</h2>' +
           '<div class="learn-text">' + fmt(c.text) + '</div>' +
           visual(c.visual) +
           (c.try ? '<div class="try-wrap"><h4>Quick check</h4><div class="trybox"></div></div>' : '') +
           '</div>' +
           '<div class="row between">' +
-          (idx > 0 ? '<a class="btn secondary small" href="#/a/' + aid + '/learn/' + (idx - 1) + '">← Back</a>' : '<span></span>') +
-          (last ? '<a class="btn" href="#/a/' + aid + '/test">Take the quiz →</a>' : '<a class="btn" href="#/a/' + aid + '/learn/' + (idx + 1) + '">Next →</a>') +
+          (idx > 0 ? '<a class="btn secondary small" href="#/a/' + aid + '/learn/' + (idx - 1) + '">Back</a>' : '<span></span>') +
+          (last ? '<a class="btn" href="#/a/' + aid + '/test">Take the quiz</a>' : '<a class="btn" href="#/a/' + aid + '/learn/' + (idx + 1) + '">Next</a>') +
           '</div>';
         setView(html);
 
@@ -375,10 +406,10 @@
     var q = s.all[s.idxs[s.pos]];
     var back = s.mixed ? s.back : '#/m/' + s.modId;
     var srcLine = s.mixed && s.srcTitles ? '<p class="note" style="margin:0 0 4px">From <b>' + esc(s.srcTitles[s.pos]) + '</b></p>' : '';
-    var html = '<div class="row between"><a class="crumb cancel" href="' + back + '">← Stop</a><span class="note">' + (s.retry ? 'Retry · ' : '') + esc(s.art.title) + '</span></div>' +
-      '<div class="progress" aria-hidden="true"><i style="width:' + Math.round(100 * s.pos / n) + '%"></i></div>' +
-      '<p class="note" style="margin:0 0 4px">' + (s.pos + 1) + ' of ' + n + '</p>' + srcLine +
-      '<div class="card qbox pop"></div>';
+    var html = '<div class="row between"><a class="crumb cancel" href="' + back + '">' + ICON.back + 'Stop</a><span class="note">' + (s.retry ? 'Retry · ' : '') + esc(s.art.title) + '</span></div>' +
+      '<div class="progress strip cards" role="img" aria-label="Question ' + (s.pos + 1) + ' of ' + n + '">' + s.idxs.map(function (_, i) { return '<i class="' + (i <= s.pos ? 'on' : '') + '"></i>'; }).join('') + '</div>' +
+      '<p class="note num" style="margin:8px 0 4px">Question ' + (s.pos + 1) + ' of ' + n + '</p>' + srcLine +
+      '<div class="qbox pop"></div>';
     setView(html);
     renderQuestion(q, app.querySelector('.qbox'), function (ok, fbw) {
       var qi = s.idxs[s.pos];
@@ -391,7 +422,7 @@
       saveProgress();
       s.pos++; saveSession();
       var b = document.createElement('div'); b.className = 'row end';
-      b.innerHTML = '<button class="btn nextq" type="button">' + (s.pos < n ? 'Next →' : 'See results →') + '</button>';
+      b.innerHTML = '<button class="btn nextq" type="button">' + (s.pos < n ? 'Next' : 'See results') + '</button>';
       fbw.parentNode.appendChild(b);
       var nb = b.querySelector('button'), used = false;
       nb.addEventListener('click', function () { if (used) return; used = true; renderQuizStep(); });
@@ -415,10 +446,8 @@
     var retryLabel = m === 1 ? 'Retry missed question' : 'Retry ' + m + ' missed';
     var learnBtn = m ? '<a class="btn' + (ratio < 0.5 ? '' : ' secondary') + ' wide" href="#/a/' + s.aid + '/learn/0">Review learn cards</a>' : '';
     var retryBtn = m ? '<button class="btn' + (ratio < 0.5 ? ' secondary' : '') + ' wide retry" type="button">' + retryLabel + '</button>' : '';
-    var scorePct = Math.round(100 * s.right / n);
-    var html = '<div class="card result pop"><p class="score">' + s.right + ' / ' + n + '</p>' +
-      '<div class="mod-progress" style="max-width:200px;margin:8px auto"><div class="mod-bar"><i style="width:' + scorePct + '%"></i></div></div>' +
-      '<p style="font-size:17px">' + msg + '</p></div>' +
+    var html = '<div class="result pop"><p class="score num' + (ratio >= 0.7 ? ' pass' : '') + '">' + s.right + '<small> of ' + n + '</small></p>' +
+      '<p class="msg">' + msg + '</p></div>' +
       '<div class="stack">' + (ratio < 0.5 ? learnBtn + retryBtn : retryBtn + learnBtn) +
       '<a class="btn secondary wide" href="#/m/' + s.modId + '">Back to module</a></div>';
     setView(html);
@@ -431,10 +460,8 @@
     saveProgress();
     var left = missedRefs().length;
     var msg = s.right === n ? 'All correct.' : ratio >= 0.7 ? 'Solid. You got the key ideas.' : 'Worth another pass — the learn cards will help.';
-    var scorePct = Math.round(100 * s.right / n);
-    var html = '<div class="card result pop"><p class="score">' + s.right + ' / ' + n + '</p>' +
-      '<div class="mod-progress" style="max-width:200px;margin:8px auto"><div class="mod-bar"><i style="width:' + scorePct + '%"></i></div></div>' +
-      '<p style="font-size:17px">' + msg + '</p>' +
+    var html = '<div class="result pop"><p class="score num' + (ratio >= 0.7 ? ' pass' : '') + '">' + s.right + '<small> of ' + n + '</small></p>' +
+      '<p class="msg">' + msg + '</p>' +
       '<p class="note">' + (left ? left + ' question' + (left === 1 ? '' : 's') + ' still in your review list.' : 'Your review list is empty.') + '</p></div>' +
       '<div class="stack">' + (left ? '<a class="btn wide" href="#/review">Review missed questions</a>' : '') +
       '<a class="btn secondary wide" href="' + s.back + '">Back</a></div>';
@@ -469,20 +496,20 @@
   function viewReview() {
     reviewItems().then(function (items) {
       if (!items.length) {
-        return setView('<a class="crumb" href="#/">\u2190 All modules</a>' +
-          '<div class="card"><h2 style="margin-top:0">Nothing to review</h2>' +
-          '<p class="sub">Questions you get wrong land here. They leave once you answer them right twice.</p></div>');
+        return setView('<a class="crumb" href="#/">' + ICON.back + 'All modules</a>' +
+          '<h1>Nothing to review</h1>' +
+          '<p class="sub">Questions you get wrong land here. They leave once you answer them right twice.</p>');
       }
       var byArticle = {};
       items.forEach(function (x) { byArticle[x.title] = (byArticle[x.title] || 0) + 1; });
       var list = Object.keys(byArticle).sort().map(function (t) {
         return '<li>' + esc(t) + ' <span class="note">\u00b7 ' + byArticle[t] + '</span></li>';
       }).join('');
-      setView('<a class="crumb" href="#/">\u2190 All modules</a>' +
-        '<div class="card"><h2 style="margin-top:0">Review</h2>' +
+      setView('<a class="crumb" href="#/">' + ICON.back + 'All modules</a>' +
+        '<h1>Review</h1>' +
         '<p class="sub">' + items.length + ' question' + (items.length === 1 ? '' : 's') + ' you have missed. Each one leaves this list after two correct answers.</p>' +
         '<ul class="review-list">' + list + '</ul>' +
-        '<div class="row end"><a class="btn" href="#/review/run">Start review</a></div></div>');
+        '<div class="row" style="margin-top:var(--phi-2)"><a class="btn" href="#/review/run">Start review</a></div>');
     }).catch(showError);
   }
 
@@ -525,11 +552,11 @@
       return Promise.all(all.map(function (row) {
         return loadArticle(row.a.file).then(function (d) { return { row: row, d: d }; }, function () { return null; });
       })).then(function (rows) {
-        var html = '<a class="crumb" href="#/">← All modules</a>' +
-          '<div class="card"><h2 style="margin-top:0">Concept index</h2>' +
+        var html = '<a class="crumb" href="#/">' + ICON.back + 'All modules</a>' +
+          '<h1>Concept index</h1>' +
           '<p class="sub">Every learn card in the app. Tap one to open it.</p>' +
-          '<input class="idxfilter" type="search" placeholder="Filter concepts…" aria-label="Filter concepts">' +
-          '</div><div class="idxresults">';
+          '<input class="idxfilter" type="search" placeholder="Filter concepts" aria-label="Filter concepts">' +
+          '<div class="idxresults">';
         var curMod = null;
         rows.forEach(function (r) {
           if (!r) return;
@@ -577,14 +604,14 @@
   function viewLibrary() {
     loadLibrary().then(function (L) {
       var b = L.book;
-      var html = '<a class="crumb" href="#/">← All modules</a>' +
+      var html = '<a class="crumb" href="#/">' + ICON.back + 'All modules</a>' +
         '<h1>Library</h1><p class="sub">Read online or download the book and the Claude skills.</p>' +
-        '<div class="card lib-item"><p class="lib-kicker">Book</p><h2 class="lib-title">' + esc(b.title) + '</h2>' +
+        '<div class="lib-item card"><p class="lib-kicker">Book</p><h2 class="lib-title">' + esc(b.title) + '</h2>' +
         '<p class="note">' + esc(b.blurb) + '</p>' +
         '<div class="row lib-actions"><a class="btn small" href="' + esc(b.read) + '">Read</a>' +
         dlBtn(b.download, 'Download HTML', 'secondary') + dlBtn(b.zip, 'Download zip', 'ghost') + '</div></div>';
       html += '<div class="row between lib-head"><h2>Claude skills</h2>' + dlBtn(L.all, 'Download all', 'secondary') + '</div>' +
-        '<a class="card tile lib-guide" href="#/library/guide"><b>How to install and use the skills</b><span class="chev">→</span></a>';
+        '<a class="card tile lib-guide" href="#/library/guide"><b>How to install and use the skills</b><span class="chev">' + ICON.chev + '</span></a>';
       L.skills.forEach(function (s) {
         html += '<div class="card lib-item"><h3>' + esc(s.title) + '</h3><p class="note">' + esc(s.blurb) + '</p>' +
           '<div class="row lib-actions"><a class="btn small" href="#/library/skill/' + esc(s.id) + '">Read</a>' +
@@ -596,9 +623,9 @@
   }
   function viewDoc(path, back, backLabel, extra) {
     fetch(path).then(function (r) { if (!r.ok) throw new Error('Could not load ' + path); return r.text(); }).then(function (md) {
-      var html = '<a class="crumb" href="' + back + '">← ' + esc(backLabel) + '</a>' + (extra || '') +
-        '<article class="card md">' + (mdBase = path, renderMd(md)) + '</article>' +
-        '<a class="crumb" href="' + back + '">← ' + esc(backLabel) + '</a>';
+      var html = '<a class="crumb" href="' + back + '">' + ICON.back + esc(backLabel) + '</a>' + (extra || '') +
+        '<article class="md">' + (mdBase = path, renderMd(md)) + '</article>' +
+        '<a class="crumb" href="' + back + '">' + ICON.back + esc(backLabel) + '</a>';
       setView(html);
     }).catch(showError);
   }
@@ -765,6 +792,7 @@
   });
 
   window.addEventListener('hashchange', route);
+  setupTheme();
   renderSummary();
   route();
 })();
