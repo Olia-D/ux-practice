@@ -7,6 +7,6 @@ for d in skills/*/; do
   n=$(basename "$d")
   (cd "$d" && zip -qr -X "../../downloads/skill-$n.zip" .)
 done
-(cd book && zip -q -X ../downloads/ux-research-in-the-wild-book.zip ux-research-in-the-wild.html)
+(cd book && zip -q -X ../downloads/ux-in-the-real-world-book.zip ux-in-the-real-world.html)
 (cd skills && zip -qr -X ../downloads/ux-skills-all.zip HOW-TO-USE.md PROJECT-INSTRUCTIONS.md */)
 ls -1 downloads

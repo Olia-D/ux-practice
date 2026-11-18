@@ -2,7 +2,7 @@
 """Add companion notes 101-104 and the extensions to the book. Idempotent."""
 import re, pathlib
 root = pathlib.Path(__file__).resolve().parent.parent
-p = root / 'book' / 'ux-research-in-the-wild.html'
+p = root / 'book' / 'ux-in-the-real-world.html'
 s = p.read_text(encoding='utf-8')
 if 'id="c-legacy-ux"' in s:
     print('chapters already present'); raise SystemExit

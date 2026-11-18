@@ -1,4 +1,4 @@
-/* UX Practice – learn-then-test app for UX Research in the Wild.
+/* UX Practice – learn-then-test app for the book UX in the Real World.
    Static SPA. Content in content/*.json. */
 (function () {
   'use strict';
@@ -202,7 +202,7 @@
       var totalDone = 0, totalAll = 0;
       var nArt = 0; m.modules.forEach(function (x) { nArt += x.articles.length; });
       var html = '<h1 class="statement">Learn the ideas. <span>Then test yourself.</span></h1>';
-      html += '<p class="sub">Key concepts from Trevor Calabro\'s UX Research in the Wild, plus companion notes.</p>';
+      html += '<p class="sub">Key concepts from the book UX in the Real World: Trevor Calabro\'s research writing plus companion notes from other authors.</p>';
       html += '<p class="pace">Suggested pace: one article a day, four days a week. Read the cards, then take the quiz. ' + nArt + ' articles across ' + m.modules.length + ' modules.</p>';
 
       m.modules.forEach(function (mod, mi) {

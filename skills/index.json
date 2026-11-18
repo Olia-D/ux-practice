@@ -1,10 +1,10 @@
 {
   "book": {
-    "title": "UX Research in the Wild — reference edition",
+    "title": "UX in the Real World — reference edition",
     "blurb": "104 chapters with figures, memory aids, a rules cheat sheet and an archive guide. One HTML file; works offline.",
-    "read": "book/ux-research-in-the-wild.html",
-    "download": "book/ux-research-in-the-wild.html",
-    "zip": "downloads/ux-research-in-the-wild-book.zip"
+    "read": "book/ux-in-the-real-world.html",
+    "download": "book/ux-in-the-real-world.html",
+    "zip": "downloads/ux-in-the-real-world-book.zip"
   },
   "guide": "skills/HOW-TO-USE.md",
   "all": "downloads/ux-skills-all.zip",

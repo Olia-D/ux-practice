@@ -530,7 +530,7 @@ assumptions stated, qual evidence beside the quant.
 
 ## Sources
 Trevor Calabro, *UX Research in the Wild* (trevorcalabro.substack.com) — all 182 posts
-(2023–2026) read and distilled into the reference book and the UX Practice app, including
+(2023–2026) read and distilled into the reference book *UX in the Real World* and the UX Practice app, including
 the *Pendo Rollout Playbook* (2025) · Erika Hall, *Just Enough Research* (2nd ed.) · Teresa
 Torres, *Continuous Discovery Habits* · NN/g, Baymard, MeasuringU and Sauro findings cited
 through Calabro · Dan Brown (EightShapes) on stakeholder interviews · Abby Covert on

@@ -180,6 +180,8 @@ svg rect[fill="#1f4e5a"]~text[fill="#fcfcfa"]{fill:#fff}
 #who h2{font-weight:600;font-size:clamp(1.75rem,4vw,2.5rem);letter-spacing:-.04em;margin-bottom:1rem}
 #who p{max-width:var(--col);margin-bottom:1rem;color:var(--ink-soft);font-size:1.0625rem}
 #who .section-label{margin-bottom:.4rem}
+#who .who-lede{font-size:1.1875rem;color:var(--ink);margin-bottom:2rem}
+#who h3.who-name{font-weight:600;font-size:1.25rem;letter-spacing:-.02em;margin:0 0 .75rem;padding-top:1.25rem;border-top:1px solid var(--line)}
 #who>.who-inner>div{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:2.5rem;align-items:start}
 @media (max-width:48rem){#who>.who-inner>div{grid-template-columns:1fr;gap:1.5rem}}
 .who-side .facts{display:grid;grid-template-columns:1fr 1fr;gap:0 1.5rem;border-top:1px solid var(--ink)}

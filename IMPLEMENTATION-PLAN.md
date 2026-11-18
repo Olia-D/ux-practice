@@ -11,7 +11,7 @@ Options are shuffled at runtime, so position doesn't leak — but length does. A
 Manifest uses `/p/animations`, `/p/ab-testing`, `/p/ic`; the real posts are `/p/most-ui-animations-shouldnt-exist`, `/p/ab-testing-and-the-two-party-trap`, `/p/why-i-stay-an-ic`. Most of the 26 links are probably 404s.
 
 ### 3. Coverage — 9 of Calabro's 35 articles are not in the app
-Confirmed missing: *UX Job Security*, *UX Has a Basics Problem*, *The Rules of AI Chat History*, *Reframing Dark Patterns: 2026 Edition*, *The Problem With Split Buttons*. The remaining four are in the HTML reference book on the Mac (`ux-research-in-the-wild-book.html`).
+Confirmed missing: *UX Job Security*, *UX Has a Basics Problem*, *The Rules of AI Chat History*, *Reframing Dark Patterns: 2026 Edition*, *The Problem With Split Buttons*. The remaining four are in the HTML reference book on the Mac (`ux-in-the-real-world-book.html`).
 
 ### 4. Knowledge gathered today that the app doesn't carry
 - **Data visualization** — FT Visual Vocabulary, London data design guidelines, Datawrapper colour rules, dataschool ACES, Chartability. Only one article (*Why Your Data Dashboard Stinks*) touches this.

@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Apply the portfolio design to book/ux-research-in-the-wild.html.
+"""Apply the portfolio design to book/ux-in-the-real-world.html.
 Idempotent: safe to run after every content change. Reads tokens.css and scripts/book.css,
 embeds a Latin WOFF2 subset of Schibsted Grotesk so the book works offline as a single file."""
 import re, base64, pathlib
 root = pathlib.Path(__file__).resolve().parent.parent
-bookp = root / 'book' / 'ux-research-in-the-wild.html'
+bookp = root / 'book' / 'ux-in-the-real-world.html'
 s = bookp.read_text(encoding='utf-8')
 
 tokens = (root / 'tokens.css').read_text(encoding='utf-8')
@@ -55,7 +55,7 @@ s = re.sub(r'<div class="chapter-divider([^"]*)"(?: id="[^"]*")?>\s*<p class="ch
 chev = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="vertical-align:-2px"><path d="M15 18l-6-6 6-6"/></svg>'
 nav = ('<nav class="nav-bar">\n'
        '  <span class="nav-left"><a class="nav-app" href="../#/">' + chev + ' UX Practice</a><a href="#toc">Contents</a><a href="#rules">Rules</a></span>\n'
-       '  <span class="nav-title"><span class="mk" aria-hidden="true"><i></i><i></i><i></i></span>UX Research in the Wild</span>\n'
+       '  <span class="nav-title"><span class="mk" aria-hidden="true"><i></i><i></i><i></i></span>UX in the Real World</span>\n'
        '  <span class="nav-right"><a class="nav-ext" href="https://trevorcalabro.substack.com" target="_blank" rel="noopener">Original newsletter</a>\n'
        '  <button class="theme" id="themeBtn" type="button" aria-label="Switch colour theme">'
        '<svg class="sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>'

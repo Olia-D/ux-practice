@@ -5,9 +5,9 @@ Practice ux
 
 Two separate things live next to the app. Each can be used without the other.
 
-### The book — *UX Research in the Wild*, reference edition (104 chapters)
+### The book — *UX in the Real World*, reference edition (104 chapters)
 Single self-contained HTML file; opens offline in any browser.
-- [Download the zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/ux-research-in-the-wild-book.zip) · or the file itself: [`book/ux-research-in-the-wild.html`](book/ux-research-in-the-wild.html) (use "Download raw file")
+- [Download the zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/ux-in-the-real-world-book.zip) · or the file itself: [`book/ux-in-the-real-world.html`](book/ux-in-the-real-world.html) (use "Download raw file")
 
 ### The skills — UX design toolkit for Claude
 Seven skills, each in `skills/<name>/` and as an upload-ready zip (SKILL.md at the zip root).
