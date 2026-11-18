@@ -10,7 +10,7 @@ s = re.sub(r'\n?<style id="progress-css">.*?</style>', '', s, flags=re.S)
 s = re.sub(r'\n?<!--PROGRESS-->.*?<!--/PROGRESS-->', '', s, flags=re.S)
 assert s.count('</head>') == 1 and s.count('</body>') == 1
 s = s.replace('</head>', '<style id="progress-css">\n' + css + '</style>\n</head>')
-s = s.replace('</body>', '<!--PROGRESS--><script src="../sync.js"></script>\n<script>\n' + js + '</script><!--/PROGRESS-->\n</body>')
+s = s.replace('</body>', '<!--PROGRESS--><script src="../sync.js?v=20261118"></script>\n<script>\n' + js + '</script><!--/PROGRESS-->\n</body>')
 bp.write_text(s)
 
 # chapters.json for the landing page
