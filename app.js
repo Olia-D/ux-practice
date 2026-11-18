@@ -12,11 +12,14 @@
   var session = null;
 
   // ---------- storage ----------
+  var S = window.UXSync;
   function loadProgress() {
+    if (S) return S.getApp();
     try { var p = JSON.parse(localStorage.getItem(KEY)); return (p && typeof p === 'object' && !Array.isArray(p)) ? p : {}; } catch (e) { return {}; }
   }
   function saveProgress() {
-    try { localStorage.setItem(KEY, JSON.stringify(progress)); } catch (e) {}
+    if (S) S.setApp(progress);
+    else try { localStorage.setItem(KEY, JSON.stringify(progress)); } catch (e) {}
     renderSummary();
   }
   function rec(id) { progress.items = progress.items || {}; return progress.items[id] = progress.items[id] || {}; }
@@ -53,6 +56,7 @@
 
   // ---------- header summary ----------
   function renderSummary() {
+    if (!summaryEl) return;
     if (!manifest) { summaryEl.textContent = ''; return; }
     var items = progress.items || {}, done = 0, total = 0;
     manifest.modules.forEach(function (mod) {
@@ -201,7 +205,7 @@
       pruneMissed();
       var totalDone = 0, totalAll = 0;
       var nArt = 0; m.modules.forEach(function (x) { nArt += x.articles.length; });
-      var html = '<h1 class="statement">Learn the ideas. <span>Then test yourself.</span></h1>';
+      var html = '<a class="crumb" href="#/">' + ICON.back + 'Home</a><h1 class="statement">Learn the ideas. <span>Then test yourself.</span></h1>';
       html += '<p class="sub">Key concepts from the book UX in the Real World: Trevor Calabro\'s research writing plus companion notes from other authors.</p>';
       html += '<p class="pace">Suggested pace: one article a day, four days a week. Read the cards, then take the quiz. ' + nArt + ' articles across ' + m.modules.length + ' modules.</p>';
 
@@ -226,23 +230,173 @@
            + (nMissed ? '<span class="note"> · ' + nMissed + ' waiting</span>' : '<span class="note"> · nothing yet</span>')
            + '</span><span class="chev">' + ICON.chev + '</span></a>'
            + '<a class="toolrow" href="#/index"><span><b>Concept index</b><span class="note"> · every learn card</span></span><span class="chev">' + ICON.chev + '</span></a>'
-           + '<a class="toolrow" href="#/library"><span><b>Library</b><span class="note"> · read or download the book and skills</span></span><span class="chev">' + ICON.chev + '</span></a></div>';
+           + '</div>';
       if (totalAll) {
         var totalPct = Math.round(100 * totalDone / totalAll);
         html += '<div class="overall"><span class="muted">Overall, ' + totalDone + ' of ' + totalAll + ' articles done</span><span class="big num' + (totalPct === 100 ? ' done' : '') + '">' + totalPct + '%</span></div>';
       }
 
-      // progress backup
-      html += '<details class="backup-section"><summary class="note">Progress backup</summary>' +
-        '<p class="note">Your progress saves in this browser automatically. Use backup to move it to another device or keep a copy.</p>' +
-        '<div class="row" style="gap:8px;margin:8px 0"><button class="btn small secondary" id="export-btn">Copy progress</button>' +
-        '<button class="btn small secondary" id="import-btn">Paste progress</button>' +
-        '<button class="btn small secondary" id="reset-btn">Reset</button></div>' +
-        '</details>';
-
+      html += syncLine();
       setView(html);
-      bindBackup();
     }).catch(showError);
+  }
+
+  // ---------- LANDING ----------
+  var BOOK = 'book/ux-in-the-real-world.html';
+  var chapters = null;
+  function loadChapters() {
+    return chapters ? Promise.resolve(chapters) : getJSON('book/chapters.json').then(function (c) { chapters = c; return c; });
+  }
+  function bookState() { return S ? S.getBook() : { read: {} }; }
+  function isRead(b, id) { var r = b.read[id]; return !!(r && r.r); }
+
+  function timeAgo(ms) {
+    if (!ms) return '';
+    var s = Math.round((Date.now() - ms) / 1000);
+    if (s < 45) return 'just now';
+    var m = Math.round(s / 60); if (m < 60) return m + ' min ago';
+    var h = Math.round(m / 60); if (h < 24) return h + ' h ago';
+    var d = Math.round(h / 24); return d === 1 ? 'yesterday' : d + ' days ago';
+  }
+  function syncLine() {
+    var st = S ? S.state() : { status: 'local' };
+    var dot = '<span class="sdot ' + st.status + '" aria-hidden="true"></span>';
+    if (st.status === 'local') return '<p class="syncline">' + dot + '<span>Progress is saved on this device only.</span> <a href="#/sync">Sync across devices</a></p>';
+    if (st.status === 'error') return '<p class="syncline">' + dot + '<span>Sync paused: ' + esc(st.error) + '</span> <a href="#/sync">Fix</a></p>';
+    if (st.status === 'syncing') return '<p class="syncline">' + dot + '<span>Syncing…</span> <a href="#/sync">Sync settings</a></p>';
+    return '<p class="syncline">' + dot + '<span>Synced across your devices' + (st.at ? ', ' + timeAgo(st.at) : '') + '.</span> <a href="#/sync">Sync settings</a></p>';
+  }
+
+  // Next practice step: the first unfinished article in an unlocked module.
+  function nextPractice(m) {
+    var items = progress.items || {}, found = null;
+    m.modules.forEach(function (mod, mi) {
+      if (found) return;
+      var unlocked = mi === 0 || moduleProgress(m.modules[mi - 1]).pct >= 50;
+      if (!unlocked) return;
+      mod.articles.forEach(function (a) {
+        if (found || !a.file) return;
+        var l = items[a.id + '/learn'] || {}, t = items[a.id + '/test'] || {};
+        if (!l.done) found = { a: a, href: '#/a/' + a.id + '/learn/0', verb: 'Learn' };
+        else if (t.best == null) found = { a: a, href: '#/a/' + a.id + '/test', verb: 'Quiz' };
+      });
+    });
+    return found;
+  }
+
+  function viewLanding() {
+    Promise.all([loadManifest(), loadChapters().catch(function () { return []; }), loadLibrary().catch(function () { return { skills: [] }; })]).then(function (r) {
+      var m = r[0], ch = r[1], L = r[2], b = bookState();
+      renderSummary();
+      var nRead = ch.filter(function (c) { return isRead(b, c.id); }).length;
+      var last = b.last && ch.filter(function (c) { return c.id === b.last.id; })[0];
+
+      var html = '<section class="hero"><h1 class="statement">Evidence-based UX.<br><span>Read it, practise it, use it at work.</span></h1>' +
+        '<p class="sub">A reference book, a learn-then-test practice app and a set of Claude skills, all built from the same research.</p></section>';
+
+      // Book
+      var bstrip = '<div class="strip grouped" aria-hidden="true">', part = null;
+      ch.forEach(function (c) {
+        if (c.part !== part) { if (part !== null) bstrip += '</span>'; bstrip += '<span class="grp">'; part = c.part; }
+        bstrip += '<i class="' + (isRead(b, c.id) ? 'd' : last && c.id === last.id ? 'cur' : '') + '"></i>';
+      });
+      bstrip += (part !== null ? '</span>' : '') + '</div>';
+      html += '<section class="door" aria-labelledby="d-book">' +
+        '<div class="door-head"><div><p class="door-kind">Book</p><h2 id="d-book">UX in the Real World</h2></div>' +
+        '<p class="door-count num"><b' + (nRead && nRead === ch.length ? ' class="done"' : '') + '>' + nRead + '</b><small>/' + ch.length + ' read</small></p></div>' +
+        '<p class="door-sub">' + ch.length + ' chapters on interaction design, research methods, business impact and the UX career, with figures and a rules cheat sheet.</p>' +
+        bstrip +
+        '<div class="row door-actions">' +
+        (last ? '<a class="btn" href="' + BOOK + '#resume">Continue reading</a>' : '<a class="btn" href="' + BOOK + '#part-i">Start reading</a>') +
+        '<a class="btn secondary" href="' + BOOK + '#toc">Contents</a></div>' +
+        (last ? '<p class="note door-where">You were in <b>' + esc(last.title) + '</b>' + (b.last.t ? ', ' + timeAgo(b.last.t) : '') + '.</p>' : '') +
+        '</section>';
+
+      // Practice
+      var nArt = 0, nDone = 0;
+      var pstrip = '<div class="strip grouped" aria-hidden="true">';
+      m.modules.forEach(function (mod) {
+        var p = moduleProgress(mod); nArt += p.total; nDone += p.done;
+        pstrip += '<span class="grp">' + stripFor(mod).replace(/^<div class="strip" aria-hidden="true">|<\/div>$/g, '') + '</span>';
+      });
+      pstrip += '</div>';
+      var nx = nextPractice(m), nMissed = missedRefs().length;
+      html += '<section class="door" aria-labelledby="d-practice">' +
+        '<div class="door-head"><div><p class="door-kind">Practice</p><h2 id="d-practice">Learn, then test yourself</h2></div>' +
+        '<p class="door-count num"><b' + (nDone && nDone === nArt ? ' class="done"' : '') + '>' + nDone + '</b><small>/' + nArt + ' done</small></p></div>' +
+        '<p class="door-sub">' + nArt + ' short articles in ' + m.modules.length + ' modules. Read a few cards, then answer 5 questions. About 10 minutes each.</p>' +
+        pstrip +
+        '<div class="row door-actions">' +
+        (nx ? '<a class="btn" href="' + nx.href + '">' + (nDone || (progress.items && Object.keys(progress.items).length) ? 'Continue' : 'Start') + ': ' + esc(nx.a.title) + '</a>' : '') +
+        '<a class="btn secondary" href="#/practice">All modules</a></div>' +
+        '<p class="note door-where"><a href="#/review">Review missed questions</a>' + (nMissed ? ' (' + nMissed + ')' : '') + ' · <a href="#/index">Concept index</a></p>' +
+        '</section>';
+
+      // Skills
+      html += '<section class="door" aria-labelledby="d-skills">' +
+        '<div class="door-head"><div><p class="door-kind">Claude skills</p><h2 id="d-skills">Use the rules at work</h2></div>' +
+        '<p class="door-count num"><b>' + L.skills.length + '</b><small> skills</small></p></div>' +
+        '<p class="door-sub">The book’s rules packaged for Claude: design reviews, research planning, UX writing, AI features, charts and Jobs to Be Done.</p>' +
+        '<ul class="skill-list">' + L.skills.map(function (s) {
+          return '<li><a href="#/library/skill/' + esc(s.id) + '"><b>' + esc(s.title) + '</b><span>' + esc(s.blurb) + '</span></a></li>';
+        }).join('') + '</ul>' +
+        '<div class="row door-actions"><a class="btn secondary" href="#/library">All skills and downloads</a></div>' +
+        '</section>';
+
+      html += syncLine();
+      setView(html);
+    }).catch(showError);
+  }
+
+  // ---------- SYNC ----------
+  function viewSync() {
+    var st = S ? S.state() : { status: 'local' }, on = S && S.connected();
+    var html = '<a class="crumb" href="#/">' + ICON.back + 'Home</a>' +
+      '<h1>Sync progress</h1>' +
+      '<p class="sub">Your reading and practice progress is saved in this browser. Connect a private GitHub gist and it stays the same on your laptop, phone and any other device.</p>';
+    if (on) {
+      html += '<div class="panel sync-panel"><p class="sync-state"><span class="sdot ' + st.status + '" aria-hidden="true"></span>' +
+        (st.status === 'error' ? 'Sync paused' : st.status === 'syncing' ? 'Syncing…' : 'Connected') + '</p>' +
+        '<p class="note">' + (st.status === 'error' ? esc(st.error) : st.at ? 'Last synced ' + timeAgo(st.at) + '. ' : '') +
+        'Progress syncs on its own when you finish a chapter or a quiz, and when you come back to the page.</p>' +
+        '<div class="row lib-actions"><button class="btn small" type="button" id="sync-now">Sync now</button>' +
+        '<button class="btn small secondary" type="button" id="sync-off">Disconnect this device</button></div></div>' +
+        '<h2>Add another device</h2><p>Open this page on the other device and paste the same token. Keep the token in your password manager so it’s easy to find.</p>';
+    } else {
+      html += '<ol class="steps">' +
+        '<li><h3>Create a token on GitHub</h3><p>The link opens GitHub with only the <b>gist</b> permission ticked. Choose an expiry, press <b>Generate token</b> at the bottom, and copy the token.</p>' +
+        '<a class="btn small secondary" href="' + (S ? S.tokenUrl : '#') + '" target="_blank" rel="noopener">Create token on GitHub ' + ICON.out + '</a></li>' +
+        '<li><h3>Paste it here</h3><form id="sync-form" class="sync-form" autocomplete="off"><label for="tok" class="sr">GitHub token</label>' +
+        '<input id="tok" class="idxfilter" type="password" placeholder="ghp_…" spellcheck="false" autocapitalize="off" required>' +
+        '<button class="btn" type="submit">Connect</button></form><div class="fbwrap" aria-live="polite"></div></li>' +
+        '<li><h3>Do the same on your other devices</h3><p>Use the same token everywhere. Save it in your password manager so it’s easy to paste on your phone.</p></li></ol>';
+    }
+    html += '<p class="note">The token is stored only in this browser and can only read and write your gists. Progress lives in a secret gist named <code>' + (S ? S.fileName : '') + '</code> in your GitHub account; secret gists are unlisted, not encrypted, so the file holds nothing but chapter and quiz progress.</p>';
+    html += '<details class="backup-section"><summary class="note">Backup without GitHub</summary>' +
+      '<p class="note">Copy your practice progress as text and paste it on another device, or start over.</p>' +
+      '<div class="row" style="gap:8px;margin:8px 0"><button class="btn small secondary" id="export-btn">Copy progress</button>' +
+      '<button class="btn small secondary" id="import-btn">Paste progress</button>' +
+      '<button class="btn small secondary" id="reset-btn">Reset practice progress</button></div></details>';
+    setView(html);
+    bindBackup();
+    var f = document.getElementById('sync-form');
+    if (f) f.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var btn = f.querySelector('button'), fb = f.parentNode.querySelector('.fbwrap');
+      btn.disabled = true; btn.textContent = 'Connecting…'; fb.innerHTML = '';
+      S.connect(document.getElementById('tok').value).then(function () {
+        progress = loadProgress(); viewSync();
+      }, function (err) {
+        btn.disabled = false; btn.textContent = 'Connect';
+        fb.innerHTML = '<div class="fb no"><span class="head">Couldn’t connect.</span>' + esc(err.message) + '</div>';
+      });
+    });
+    var sn = document.getElementById('sync-now');
+    if (sn) sn.addEventListener('click', function () { sn.disabled = true; sn.textContent = 'Syncing…'; S.syncNow().then(function () { progress = loadProgress(); viewSync(); }, function () { viewSync(); }); });
+    var so = document.getElementById('sync-off');
+    if (so) so.addEventListener('click', function () {
+      if (confirm('Disconnect this device? Progress stays on this device and in your gist; it just stops syncing here.')) { S.disconnect(); viewSync(); }
+    });
   }
 
   // ---------- MODULE VIEW ----------
@@ -251,7 +405,7 @@
       var mod = m.modules.filter(function (x) { return x.id === mid; })[0];
       if (!mod) return viewHome();
       var mp = moduleProgress(mod);
-      var html = '<a class="crumb" href="#/">' + ICON.back + 'All modules</a>';
+      var html = '<a class="crumb" href="#/practice">' + ICON.back + 'All modules</a>';
       html += '<h1>' + esc(mod.name) + '</h1>';
       html += '<p class="sub">' + esc(mod.subtitle) + '</p>';
       html += stripFor(mod) + '<p class="note" style="margin:8px 0 var(--phi-2)">' + mp.done + ' of ' + mp.total + ' articles done</p>';
@@ -329,7 +483,7 @@
           };
           runTry();
         }
-        if (last) { var r = rec(aid + '/learn'); if (!r.done) { r.done = true; saveProgress(); } }
+        if (last) { var r = rec(aid + '/learn'); if (!r.done) { r.done = true; r.updated = new Date().toISOString(); saveProgress(); } }
       });
     }).catch(showError);
   }
@@ -496,7 +650,7 @@
   function viewReview() {
     reviewItems().then(function (items) {
       if (!items.length) {
-        return setView('<a class="crumb" href="#/">' + ICON.back + 'All modules</a>' +
+        return setView('<a class="crumb" href="#/practice">' + ICON.back + 'All modules</a>' +
           '<h1>Nothing to review</h1>' +
           '<p class="sub">Questions you get wrong land here. They leave once you answer them right twice.</p>');
       }
@@ -505,7 +659,7 @@
       var list = Object.keys(byArticle).sort().map(function (t) {
         return '<li>' + esc(t) + ' <span class="note">\u00b7 ' + byArticle[t] + '</span></li>';
       }).join('');
-      setView('<a class="crumb" href="#/">' + ICON.back + 'All modules</a>' +
+      setView('<a class="crumb" href="#/practice">' + ICON.back + 'All modules</a>' +
         '<h1>Review</h1>' +
         '<p class="sub">' + items.length + ' question' + (items.length === 1 ? '' : 's') + ' you have missed. Each one leaves this list after two correct answers.</p>' +
         '<ul class="review-list">' + list + '</ul>' +
@@ -552,7 +706,7 @@
       return Promise.all(all.map(function (row) {
         return loadArticle(row.a.file).then(function (d) { return { row: row, d: d }; }, function () { return null; });
       })).then(function (rows) {
-        var html = '<a class="crumb" href="#/">' + ICON.back + 'All modules</a>' +
+        var html = '<a class="crumb" href="#/practice">' + ICON.back + 'All modules</a>' +
           '<h1>Concept index</h1>' +
           '<p class="sub">Every learn card in the app. Tap one to open it.</p>' +
           '<input class="idxfilter" type="search" placeholder="Filter concepts" aria-label="Filter concepts">' +
@@ -604,20 +758,17 @@
   function viewLibrary() {
     loadLibrary().then(function (L) {
       var b = L.book;
-      var html = '<a class="crumb" href="#/">' + ICON.back + 'All modules</a>' +
-        '<h1>Library</h1><p class="sub">Read online or download the book and the Claude skills.</p>' +
-        '<div class="lib-item card"><p class="lib-kicker">Book</p><h2 class="lib-title">' + esc(b.title) + '</h2>' +
-        '<p class="note">' + esc(b.blurb) + '</p>' +
-        '<div class="row lib-actions"><a class="btn small" href="' + esc(b.read) + '">Read</a>' +
-        dlBtn(b.download, 'Download HTML', 'secondary') + dlBtn(b.zip, 'Download zip', 'ghost') + '</div></div>';
-      html += '<div class="row between lib-head"><h2>Claude skills</h2>' + dlBtn(L.all, 'Download all', 'secondary') + '</div>' +
-        '<a class="card tile lib-guide" href="#/library/guide"><b>How to install and use the skills</b><span class="chev">' + ICON.chev + '</span></a>';
+      var html = '<a class="crumb" href="#/">' + ICON.back + 'Home</a>' +
+        '<h1>Claude skills</h1><p class="sub">' + L.skills.length + ' skills that bring the book’s rules into your work with Claude. Read each one here, or download it and add it to Claude.</p>' +
+        '<div class="row lib-actions">' + dlBtn(L.all, 'Download all skills') + '<a class="btn small secondary" href="#/library/guide">How to install them</a></div>';
       L.skills.forEach(function (s) {
         html += '<div class="card lib-item"><h3>' + esc(s.title) + '</h3><p class="note">' + esc(s.blurb) + '</p>' +
           '<div class="row lib-actions"><a class="btn small" href="#/library/skill/' + esc(s.id) + '">Read</a>' +
           dlBtn('downloads/skill-' + s.id + '.zip', 'Download zip', 'secondary') + '</div></div>';
       });
       html += '<p class="note">Upload one zip per skill on claude.ai under Settings → Skills. For Claude Code, unzip into <code>~/.claude/skills/&lt;name&gt;/</code>.</p>';
+      html += '<div class="card lib-item"><p class="lib-kicker">The book as a file</p><h3>' + esc(b.title) + '</h3><p class="note">' + esc(b.blurb) + '</p>' +
+        '<div class="row lib-actions">' + dlBtn(b.download, 'Download HTML', 'secondary') + dlBtn(b.zip, 'Download zip', 'ghost') + '</div></div>';
       setView(html);
     }).catch(showError);
   }
@@ -646,7 +797,7 @@
         }).join(' · ') + '</p>';
       }
       bar += '</div>';
-      viewDoc('skills/' + id + '/SKILL.md', '#/library', 'Library', bar);
+      viewDoc('skills/' + id + '/SKILL.md', '#/library', 'All skills', bar);
     }).catch(showError);
   }
 
@@ -744,12 +895,12 @@
       if (!raw) return;
       try {
         var d = JSON.parse(raw);
-        if (d && typeof d === 'object') { progress = d; saveProgress(); viewHome(); }
+        if (d && typeof d === 'object') { progress = d; saveProgress(); route(); }
       } catch (e) { alert('Could not read that data. Make sure you pasted the full text.'); }
     });
     if (rst) rst.addEventListener('click', function () {
-      if (confirm('Reset all progress? This cannot be undone.')) {
-        progress = {}; saveProgress(); viewHome();
+      if (confirm('Reset all practice progress? This also clears it on your synced devices and cannot be undone.')) {
+        progress = { resetAt: new Date().toISOString() }; saveProgress(); route();
       }
     });
   }
@@ -764,8 +915,10 @@
     var h = location.hash.replace(/^#\/?/, '').split('/');
     if (h[0] === 'review') return h[1] === 'run' ? runReview() : viewReview();
     if (h[0] === 'index') return viewIndex();
+    if (h[0] === 'practice') return viewHome();
+    if (h[0] === 'sync') return viewSync();
     if (h[0] === 'library') {
-      if (h[1] === 'guide') return loadLibrary().then(function (L) { viewDoc(L.guide, '#/library', 'Library'); }).catch(showError);
+      if (h[1] === 'guide') return loadLibrary().then(function (L) { viewDoc(L.guide, '#/library', 'All skills'); }).catch(showError);
       if (h[1] === 'skill' && h[2]) return viewSkill(h[2], h[3]);
       return viewLibrary();
     }
@@ -777,7 +930,14 @@
       if (h[2] === 'learn') return viewLearn(h[1], parseInt(h[3] || '0', 10) || 0);
       if (h[2] === 'test') return startQuiz(h[1]);
     }
-    return viewHome();
+    return viewLanding();
+  }
+  function markNav() {
+    var h = location.hash.replace(/^#\/?/, '').split('/')[0];
+    var cur = h === 'library' ? 'skills' : (h === 'm' || h === 'a' || h === 'practice' || h === 'review' || h === 'index') ? 'practice' : '';
+    Array.prototype.forEach.call(document.querySelectorAll('.topnav a'), function (a) {
+      if (a.getAttribute('data-nav') === cur) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+    });
   }
 
   document.addEventListener('click', function (e) {
@@ -791,7 +951,20 @@
     }
   });
 
-  window.addEventListener('hashchange', route);
+  window.addEventListener('hashchange', function () { markNav(); route(); });
+  // Progress merged in from another device or another tab: refresh overview pages, never a running quiz.
+  if (S) {
+    S.onChange(function () {
+      progress = loadProgress(); renderSummary();
+      var h = location.hash.replace(/^#\/?/, '').split('/')[0];
+      if (!session && (h === '' || h === 'practice' || h === 'm')) route();
+    });
+    S.onStatus(function () {
+      var el = app.querySelector('.syncline');
+      if (el) { var t = document.createElement('div'); t.innerHTML = syncLine(); el.parentNode.replaceChild(t.firstChild, el); }
+    });
+  }
+  markNav();
   setupTheme();
   renderSummary();
   route();

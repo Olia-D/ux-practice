@@ -1,0 +1,522 @@
+[
+{
+"id": "id-basics",
+"title": "Reframing Interaction Design Basics",
+"part": "part-i"
+},
+{
+"id": "icons",
+"title": "Every Icon Needs a Label",
+"part": "part-i"
+},
+{
+"id": "affordances",
+"title": "Make It Look Like What It Does",
+"part": "part-i"
+},
+{
+"id": "animations",
+"title": "Most UI Animations Shouldn't Exist",
+"part": "part-i"
+},
+{
+"id": "split-buttons",
+"title": "The Problem With Split Buttons",
+"part": "part-i"
+},
+{
+"id": "navigation",
+"title": "Why Your Navigation Stinks",
+"part": "part-i"
+},
+{
+"id": "carousels",
+"title": "Bad UI Patterns Don't Need Checklists",
+"part": "part-i"
+},
+{
+"id": "input-field",
+"title": "The Anatomy of an Input Field (Parts 1 & 2)",
+"part": "part-i"
+},
+{
+"id": "jakobs-law",
+"title": "Stop Weaponizing Jakob's Law",
+"part": "part-i"
+},
+{
+"id": "status-design",
+"title": "Fixing Bad Status Design",
+"part": "part-i"
+},
+{
+"id": "basics-problem",
+"title": "UX Has a Basics Problem",
+"part": "part-i"
+},
+{
+"id": "millers-law",
+"title": "Stop Weaponizing Miller's Law",
+"part": "part-i"
+},
+{
+"id": "nav-guide",
+"title": "Primary Navigation Interaction Guide",
+"part": "part-i"
+},
+{
+"id": "onboarding-help",
+"title": "Onboarding & In-App Help Strategy",
+"part": "part-i"
+},
+{
+"id": "misunderstandings",
+"title": "Top 10 UX Misunderstandings",
+"part": "part-i"
+},
+{
+"id": "ai-chat-history",
+"title": "The Rules of AI Chat History",
+"part": "part-i"
+},
+{
+"id": "interaction-cost",
+"title": "Remembering Interaction Cost",
+"part": "part-i"
+},
+{
+"id": "cognitive-load",
+"title": "Cognitive Load, Three Ways",
+"part": "part-i"
+},
+{
+"id": "style-guides",
+"title": "Why Your UI Style Guide Sucks",
+"part": "part-i"
+},
+{
+"id": "conversational-ux",
+"title": "Stop Weaponizing Conversational UX",
+"part": "part-i"
+},
+{
+"id": "harmful-ideas",
+"title": "UX Ideas That Do More Harm Than Good",
+"part": "part-i"
+},
+{
+"id": "checkout",
+"title": "11 Checkout Essentials",
+"part": "part-i"
+},
+{
+"id": "aria",
+"title": "ARIA 101 for UXers",
+"part": "part-i"
+},
+{
+"id": "accessibility-first",
+"title": "Accessibility First, Not Last",
+"part": "part-i"
+},
+{
+"id": "content-structure",
+"title": "Content Beyond Readability",
+"part": "part-i"
+},
+{
+"id": "usability-vs-concept",
+"title": "Usability Tests vs. Concept Tests",
+"part": "part-ii"
+},
+{
+"id": "tasks",
+"title": "UX Research Starts with Tasks",
+"part": "part-ii"
+},
+{
+"id": "cognitive-walkthrough",
+"title": "How to Run a Cognitive Walkthrough",
+"part": "part-ii"
+},
+{
+"id": "ab-testing",
+"title": "A/B Testing and the Two-Party Trap",
+"part": "part-ii"
+},
+{
+"id": "ab-mislead",
+"title": "Another Way A/B Tests Mislead",
+"part": "part-ii"
+},
+{
+"id": "mixed-methods",
+"title": "Mixed Methods Studies That Mix",
+"part": "part-ii"
+},
+{
+"id": "fake-ai",
+"title": "The Dangerous Appeal of Fake AI Users",
+"part": "part-ii"
+},
+{
+"id": "cognitive-biases",
+"title": "Cognitive Biases in UX Research",
+"part": "part-ii"
+},
+{
+"id": "behavioral-evidence",
+"title": "Behavioral Evidence &gt; Self-Reported Evidence",
+"part": "part-ii"
+},
+{
+"id": "accessibility",
+"title": "Reframing Accessibility",
+"part": "part-ii"
+},
+{
+"id": "dashboard",
+"title": "Why Your Data Dashboard Stinks",
+"part": "part-ii"
+},
+{
+"id": "research-rigor",
+"title": "Research Rigor at Product Speed",
+"part": "part-ii"
+},
+{
+"id": "time-on-task",
+"title": "Stop Throwing Away Time-on-Task Data",
+"part": "part-ii"
+},
+{
+"id": "ab-strategies",
+"title": "A/B Test Strategies That Work",
+"part": "part-ii"
+},
+{
+"id": "ab-sample-size",
+"title": "A/B Test Sample Sizing",
+"part": "part-ii"
+},
+{
+"id": "stat-significance",
+"title": "Statistically Significant or Not?",
+"part": "part-ii"
+},
+{
+"id": "in-app-surveys",
+"title": "In-App Surveys Need Lots of Guardrails",
+"part": "part-ii"
+},
+{
+"id": "supr-q",
+"title": "Rethinking UX Metrics With SUPR-Q",
+"part": "part-ii"
+},
+{
+"id": "mixed-methods-work",
+"title": "Mixed Methods at Work",
+"part": "part-ii"
+},
+{
+"id": "mixed-methods-advantage",
+"title": "The Mixed-Methods Advantage",
+"part": "part-ii"
+},
+{
+"id": "tool-math",
+"title": "Check Your Tool’s Math",
+"part": "part-ii"
+},
+{
+"id": "ai-cant-do",
+"title": "5 Things AI Still Can’t Do for UX Research",
+"part": "part-ii"
+},
+{
+"id": "how-many-users",
+"title": "How Many Users Do I Need?",
+"part": "part-ii"
+},
+{
+"id": "confidence-intervals",
+"title": "5 out of 5 Isn't 100%",
+"part": "part-ii"
+},
+{
+"id": "quantifying-qual",
+"title": "Quantifying Qual Without Losing the Story",
+"part": "part-ii"
+},
+{
+"id": "five-star-confidence",
+"title": "The 5-Star Confidence System",
+"part": "part-ii"
+},
+{
+"id": "heuristic-frameworks",
+"title": "Six Heuristic Frameworks",
+"part": "part-ii"
+},
+{
+"id": "pure",
+"title": "PURE: Usability Scores From Experts",
+"part": "part-ii"
+},
+{
+"id": "goms-klm",
+"title": "GOMS-KLM: Predicting Task Time",
+"part": "part-ii"
+},
+{
+"id": "survey-myths",
+"title": "Survey Myths That Harm UX",
+"part": "part-ii"
+},
+{
+"id": "writing-surveys",
+"title": "Writing Surveys That Work",
+"part": "part-ii"
+},
+{
+"id": "interview-questions",
+"title": "Interview Questions That Work",
+"part": "part-ii"
+},
+{
+"id": "correlation",
+"title": "Correlation Is a Signal, Not a Cause",
+"part": "part-ii"
+},
+{
+"id": "stats-llms",
+"title": "Stats With LLMs: Expert in the Loop",
+"part": "part-ii"
+},
+{
+"id": "research-plans",
+"title": "Research Plans Are for Alignment",
+"part": "part-ii"
+},
+{
+"id": "honest-artifacts",
+"title": "Honest Artifacts and Alignment Workshops",
+"part": "part-ii"
+},
+{
+"id": "researchops",
+"title": "ResearchOps Breaks at the Hand-Offs",
+"part": "part-ii"
+},
+{
+"id": "pendo",
+"title": "Pendo Without the Tagging Mess",
+"part": "part-ii"
+},
+{
+"id": "ethics",
+"title": "Ethics You Can Actually Use",
+"part": "part-ii"
+},
+{
+"id": "best-practice-default",
+"title": "Best Practices Are the Default",
+"part": "part-ii"
+},
+{
+"id": "roi",
+"title": "Calculating the ROI of UX",
+"part": "part-iii"
+},
+{
+"id": "debrief",
+"title": "UX Research Debriefs Reframed",
+"part": "part-iii"
+},
+{
+"id": "figma",
+"title": "Users Don't Care About Your Figma File",
+"part": "part-iii"
+},
+{
+"id": "dark-patterns",
+"title": "Reframing Dark Patterns: 2025 Edition",
+"part": "part-iii"
+},
+{
+"id": "delight",
+"title": "Rethinking User Delight",
+"part": "part-iii"
+},
+{
+"id": "chart-types",
+"title": "Choosing the Right Chart Type",
+"part": "part-iii"
+},
+{
+"id": "dark-patterns-2026",
+"title": "Reframing Dark Patterns: 2026 Edition",
+"part": "part-iii"
+},
+{
+"id": "pmf",
+"title": "Measuring Product-Market Fit",
+"part": "part-iii"
+},
+{
+"id": "startup-principles",
+"title": "Five Principles for Small UX Teams",
+"part": "part-iii"
+},
+{
+"id": "service-failure",
+"title": "When the Whole Service Fails",
+"part": "part-iii"
+},
+{
+"id": "fuzzy-middle",
+"title": "Escape the Fuzzy Middle",
+"part": "part-iii"
+},
+{
+"id": "ic",
+"title": "Why I Stay an IC",
+"part": "part-iv"
+},
+{
+"id": "thankless",
+"title": "UX Is Thankless and That's a Good Thing",
+"part": "part-iv"
+},
+{
+"id": "institutional",
+"title": "Weaponized Institutional Knowledge in UX",
+"part": "part-iv"
+},
+{
+"id": "career",
+"title": "UX Career Paths Are Weird",
+"part": "part-iv"
+},
+{
+"id": "predictions",
+"title": "2026 Predictions for UX",
+"part": "part-iv"
+},
+{
+"id": "research-service",
+"title": "UX Research as a Service",
+"part": "part-iv"
+},
+{
+"id": "job-security",
+"title": "UX Job Security",
+"part": "part-iv"
+},
+{
+"id": "think-researcher",
+"title": "Think Like a Researcher",
+"part": "part-iv"
+},
+{
+"id": "stop-doing",
+"title": "5 Things UXers Need to Stop Doing",
+"part": "part-iv"
+},
+{
+"id": "seven-patterns",
+"title": "7 Patterns That Derail Product Teams",
+"part": "part-iv"
+},
+{
+"id": "opt-in",
+"title": "The Opt-In Approach",
+"part": "part-iv"
+},
+{
+"id": "critical-error",
+"title": "Never Ship a Known Critical Error",
+"part": "part-iv"
+},
+{
+"id": "analogies",
+"title": "Five Analogies That Explain UX",
+"part": "part-iv"
+},
+{
+"id": "career-craft",
+"title": "Growing Without Chasing Titles",
+"part": "part-iv"
+},
+{
+"id": "leader-traps",
+"title": "Four Traps That Block UX Leaders",
+"part": "part-iv"
+},
+{
+"id": "c-three-books",
+"title": "Three Sources, One Practice",
+"part": "part-v"
+},
+{
+"id": "c-confirm-undo",
+"title": "Confirm or Undo?",
+"part": "part-v"
+},
+{
+"id": "c-selection-controls",
+"title": "Choosing the Selection Control",
+"part": "part-v"
+},
+{
+"id": "c-tables-bulk",
+"title": "Tables and Bulk Operations",
+"part": "part-v"
+},
+{
+"id": "c-b2b-research",
+"title": "Research Without User Access",
+"part": "part-v"
+},
+{
+"id": "c-tars",
+"title": "Measuring Feature Impact (TARS)",
+"part": "part-v"
+},
+{
+"id": "c-eu-ai-labels",
+"title": "AI Labelling Is Now Law",
+"part": "part-v"
+},
+{
+"id": "c-dataviz",
+"title": "Charts and Dashboards That Lead to Decisions",
+"part": "part-v"
+},
+{
+"id": "c-ai-frameworks",
+"title": "Deciding How Much the AI Should Do",
+"part": "part-v"
+},
+{
+"id": "c-legacy-ux",
+"title": "Modernizing Legacy UX",
+"part": "part-v"
+},
+{
+"id": "c-stakeholders",
+"title": "Interviewing Stakeholders and Mapping Incentives",
+"part": "part-v"
+},
+{
+"id": "c-critiques",
+"title": "Running Design Critiques",
+"part": "part-v"
+},
+{
+"id": "c-hidden-disabled",
+"title": "Hidden, Disabled or Read-Only?",
+"part": "part-v"
+}
+]

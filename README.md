@@ -1,5 +1,9 @@
 # ux-practice
-Practice ux
+A reference book, a learn-then-test practice app and Claude skills for evidence-based UX.
+
+**Open it:** https://olia-d.github.io/ux-practice/ — the landing page links to the book, the practice modules and the skills, and shows where you left off.
+
+**Progress on every device:** reading and practice progress save in the browser. To keep them the same on your laptop and phone, open *Sync across devices* on the landing page and paste a GitHub token that has only the `gist` permission. Progress is stored in a secret gist (`ux-practice-progress.json`) in your own GitHub account; nothing else leaves the browser.
 
 ## Downloads
 
