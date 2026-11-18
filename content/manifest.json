@@ -1010,6 +1010,106 @@
           "q": 6
         }
       ]
+    },
+    {
+      "id": "craft",
+      "name": "Product Craft",
+      "icon": "📐",
+      "week": "Module 14",
+      "subtitle": "Hierarchy, type, colour, systems, IA, content, mobile, prototypes, handoff, workshops",
+      "open": true,
+      "articles": [
+        {
+          "id": "p-hierarchy",
+          "title": "Visual Hierarchy and Spacing",
+          "icon": "📐",
+          "summary": "Three levels of emphasis, weight before size, and spacing from a fixed scale.",
+          "file": "content/p-hierarchy.json",
+          "source": "https://cdn.jsdelivr.net/npm/claude-code-skills@0.5.0/data/skills/ux-ui-design-system/references/refactoring-ui.md",
+          "q": 6
+        },
+        {
+          "id": "p-type",
+          "title": "Type That Reads",
+          "icon": "🔤",
+          "summary": "Body size, line spacing and line length, plus a small type scale.",
+          "file": "content/p-type.json",
+          "source": "https://practicaltypography.com/summary-of-key-rules.html",
+          "q": 6
+        },
+        {
+          "id": "p-colour",
+          "title": "Colour With a Job",
+          "icon": "🎨",
+          "summary": "Neutral scales, colour reserved for meaning, and contrast rules.",
+          "file": "content/p-colour.json",
+          "source": "https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html",
+          "q": 6
+        },
+        {
+          "id": "p-systems",
+          "title": "Design Systems That Last",
+          "icon": "🧩",
+          "summary": "Functional and perceptual patterns, atomic levels, governance and team models.",
+          "file": "content/p-systems.json",
+          "source": "https://atomicdesign.bradfrost.com/chapter-5/",
+          "q": 6
+        },
+        {
+          "id": "p-ia",
+          "title": "Information Architecture Without Jargon",
+          "icon": "🗂️",
+          "summary": "Structural audits, card sorting, tree testing and their benchmarks.",
+          "file": "content/p-ia.json",
+          "source": "https://nngroup.com/articles/interpreting-tree-test-results/",
+          "q": 6
+        },
+        {
+          "id": "p-content-design",
+          "title": "Content Design Starts With a User Need",
+          "icon": "📝",
+          "summary": "User needs as who, what and why, with acceptance criteria, before any writing.",
+          "file": "content/p-content-design.json",
+          "source": "https://guidance.publishing.service.gov.uk/writing-to-gov-uk-standards/plan-manage-content/identify-user-needs/",
+          "q": 6
+        },
+        {
+          "id": "p-thumbs",
+          "title": "Designing for Thumbs",
+          "icon": "👍",
+          "summary": "How people hold phones, where taps are accurate, and target spacing in millimetres.",
+          "file": "content/p-thumbs.json",
+          "source": "https://uxmatters.com/mt/archives/2013/11/design-for-fingers-and-thumbs-instead-of-touch.php",
+          "q": 6
+        },
+        {
+          "id": "p-prototypes",
+          "title": "Prototypes Sized to the Question",
+          "icon": "🧪",
+          "summary": "Role, look and feel, and implementation prototypes, and why fidelity is the wrong first question.",
+          "file": "content/p-prototypes.json",
+          "source": "https://creativetech.mat.ucsb.edu/readings/Prototypes_prototype.pdf",
+          "q": 6
+        },
+        {
+          "id": "p-handoff",
+          "title": "Handoff Is a Conversation",
+          "icon": "🤝",
+          "summary": "Engineers in early, a shared definition of done, and specs that cover every state.",
+          "file": "content/p-handoff.json",
+          "source": "https://www.figma.com/reports/guide-to-handoff/",
+          "q": 6
+        },
+        {
+          "id": "p-workshops",
+          "title": "Workshops That Close",
+          "icon": "🗳️",
+          "summary": "Open, explore, close; designing backwards from the decision; the five-day sprint.",
+          "file": "content/p-workshops.json",
+          "source": "https://gv.com/sprint",
+          "q": 6
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,153 @@
+{
+ "id": "p-type",
+ "module": "craft",
+ "title": "Type That Reads",
+ "icon": "🔤",
+ "intro": "45 to 90 characters a line, 120 to 145% line spacing, and one emphasis at a time.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Type That Reads",
+   "learn": [
+    {
+     "title": "Body text first",
+     "text": "Readers spend their time in body text.\n\nOn screen: **15–25 px** size, **120–145%** line spacing, **45–90 characters** a line, spaces included.",
+     "try": {
+      "type": "single",
+      "q": "Which line length is comfortable?",
+      "options": [
+       "About 70 characters",
+       "About 25 characters",
+       "About 130 characters",
+       "Any length the screen allows"
+      ],
+      "answer": 0,
+      "explain": "It sits inside the 45–90 range."
+     }
+    },
+    {
+     "title": "A small scale",
+     "text": "Pick from a scale such as 12, 14, 16, 18, 20, 24, 30, 36, 48 px.\n\nUse **two or three sizes per component**. Weights with a job: regular body, medium labels, semibold buttons, bold headings.",
+     "try": {
+      "type": "single",
+      "q": "How many type sizes should one component use?",
+      "options": [
+       "Two or three",
+       "Exactly one size",
+       "Five or six sizes",
+       "One per line of text"
+      ],
+      "answer": 0,
+      "explain": "Enough for hierarchy, few enough to stay calm."
+     }
+    },
+    {
+     "title": "Emphasis",
+     "text": "**Bold or italic, sparingly and not together.**\nUnderline only links.\nAll caps for less than a line, with 5–12% extra letter spacing.",
+     "try": {
+      "type": "single",
+      "q": "What should you underline?",
+      "options": [
+       "Only links",
+       "Headings",
+       "Key words",
+       "Bold text"
+      ],
+      "answer": 0,
+      "explain": "Underline signals a link."
+     }
+    },
+    {
+     "title": "UI text is scanned",
+     "text": "Reading rules come from long text. Interface text is scanned: **front-load** the words that matter and keep labels short.\n\nHelp pages and empty states still follow the reading rules.",
+     "try": {
+      "type": "single",
+      "q": "Where do long-text reading rules still apply in a product?",
+      "options": [
+       "Help pages and longer messages",
+       "Button labels and menu items",
+       "Icons and their tooltips",
+       "Table column headers"
+      ],
+      "answer": 0,
+      "explain": "Anything more than a couple of lines is read."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What line spacing suits body text?",
+     "options": [
+      "120–145% of the size",
+      "90–100% of the size",
+      "200% of the size",
+      "The same as headings"
+     ],
+     "answer": 0,
+     "explain": "Tighter for headings, roomier for body."
+    },
+    {
+     "type": "single",
+     "q": "What body size range works on screen?",
+     "options": [
+      "15–25 px",
+      "9–12 px",
+      "28–36 px",
+      "Whatever fits the layout"
+     ],
+     "answer": 0,
+     "explain": "Product UI body rarely goes below 16 px."
+    },
+    {
+     "type": "single",
+     "q": "Bold and italic together on one phrase:",
+     "options": [
+      "Avoid it",
+      "Use it often",
+      "Use it for links",
+      "Use in headings"
+     ],
+     "answer": 0,
+     "explain": "One emphasis at a time."
+    },
+    {
+     "type": "single",
+     "q": "How should all-caps text be set?",
+     "options": [
+      "Short, with a little extra letter spacing",
+      "Long, with tighter letter spacing",
+      "For whole paragraphs of warnings",
+      "Only in the body font’s light weight"
+     ],
+     "answer": 0,
+     "explain": "Less than a line, 5–12% extra spacing."
+    },
+    {
+     "type": "single",
+     "q": "Which is a typographic detail readers notice?",
+     "options": [
+      "Straight quotes instead of curly ones",
+      "The colour of the scroll bar",
+      "The number of breakpoints used",
+      "Whether the CSS uses rem units"
+     ],
+     "answer": 0,
+     "explain": "Use curly quotes and real apostrophes."
+    },
+    {
+     "type": "single",
+     "q": "Wide screens most often break which rule?",
+     "options": [
+      "Line length",
+      "Line spacing",
+      "Font weight",
+      "Letter spacing"
+     ],
+     "answer": 0,
+     "explain": "Long lines make the eye lose its place."
+    }
+   ]
+  }
+ ]
+}

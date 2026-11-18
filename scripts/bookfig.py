@@ -161,3 +161,23 @@ def tree(title, root, opps, target_children, solutions, tests, caption):
         e(title), e(root), e(' · '.join(opps)), e(opps[1]), e(' · '.join(target_children)), e(target_children[0]),
         e(' · '.join(solutions)), e(' · '.join(tests)))
     return figure(svg(W, 320, title, b), narrow, caption)
+
+
+def scale(title, values, caption, unit='px', note=''):
+    """Squares growing along a scale, e.g. a spacing scale."""
+    total = sum(values) + 14 * (len(values) - 1)
+    k = min(1.0, 600 / total)
+    x = 30 + (600 - total * k) / 2
+    base = 150
+    b = ''
+    for v in values:
+        s = v * k
+        b += '<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" rx="2" fill="%s"/>' % (x, base - s, s, s, SURF)
+        b += '<rect x="%.1f" y="%.1f" width="%.1f" height="%.1f" rx="2" fill="none" stroke="%s"/>' % (x, base - s, s, s, LINE)
+        b += text(x + s / 2, base + 18, str(v), 10, INK, 'middle', '600')
+        x += s + 14 * k
+    if note:
+        b += text(330, base + 40, note, 10, FAINT, 'middle')
+    narrow = '<div class="fig-narrow"><p class="fig-title">%s</p><p class="fn-axis">%s</p>%s</div>' % (
+        e(title), e(' · '.join('%d %s' % (v, unit) for v in values)), ('<p class="fn-axis">%s</p>' % e(note)) if note else '')
+    return figure(svg(660, base + 56, title, b), narrow, caption)

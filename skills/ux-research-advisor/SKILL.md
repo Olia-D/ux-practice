@@ -508,6 +508,27 @@ person is protecting.
 
 ---
 
+## 17. Information architecture research
+
+Order: **audit** the current structure → **open card sort** to learn how people group and
+name things → the team **decides** the structure → **tree test** it → fix labels, re-test.
+Card sorting generates; tree testing evaluates. Don't use a closed sort to evaluate
+categories — tree-test them. Avoid hybrid sorts unless sure of one or two categories.
+
+| Method | Sample | Notes |
+|---|---|---|
+| Open card sort | 15+ qualitative, 30–50 quantitative; 30–50 cards | One level only, no context; group names are hints, not labels |
+| Tree test | ~50 per tree when comparing trees (between-subjects) | Success, directness, first click, destination |
+
+**Reading a tree test:** median task success across 98 studies is about 62%. Under 40% poor,
+41–60% fair, 61–80% good, 80–90% very good, over 90% excellent; critical and revenue tasks
+should exceed 90%. Your own past results are the better benchmark. Wrong first clicks predict
+failure; clicks spread across first options mean overlapping categories; a correct first click
+with low success means sibling labels are too similar. Cross-list only where a substantial
+share looks in each parent.
+
+---
+
 ## Output formats
 
 **PLAN**
@@ -539,7 +560,7 @@ assumptions stated, qual evidence beside the quant.
 Trevor Calabro, *UX Research in the Wild* (trevorcalabro.substack.com) — all 182 posts
 (2023–2026) read and distilled into the reference book *UX in the Real World* and the UX Practice app, including
 the *Pendo Rollout Playbook* (2025) · Erika Hall, *Just Enough Research* (2nd ed.) · Teresa
-Torres, *Continuous Discovery Habits* · Giff Constable, *Talking to Humans* · NN/g, Baymard, MeasuringU and Sauro findings cited
+Torres, *Continuous Discovery Habits* · NN/g on card sorting and tree testing (Albert and Tullis benchmarks) · Giff Constable, *Talking to Humans* · NN/g, Baymard, MeasuringU and Sauro findings cited
 through Calabro · Dan Brown (EightShapes) on stakeholder interviews · Abby Covert on
 incentive architecture · Brittany Hobbs on AI tools in research · Nikki Anderson on theme
 thresholds and insight writing · HEART (Google), UMUX-Lite (Lewis et al.).

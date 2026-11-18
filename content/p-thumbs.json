@@ -1,0 +1,153 @@
+{
+ "id": "p-thumbs",
+ "module": "craft",
+ "title": "Designing for Thumbs",
+ "icon": "👍",
+ "intro": "Design for the centre and the edges differently. Space targets more at the top and bottom.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Designing for Thumbs",
+   "learn": [
+    {
+     "title": "Grips",
+     "text": "Of 780 people touching their phones: **49% one hand, 36% cradled, 15% two hands.**\n\nGrips change every few seconds, so reach zones aren’t fixed.",
+     "try": {
+      "type": "single",
+      "q": "About what share used one hand?",
+      "options": [
+       "49%",
+       "90%",
+       "25%",
+       "10%"
+      ],
+      "answer": 0,
+      "explain": "49% one-handed."
+     }
+    },
+    {
+     "title": "Accuracy by zone",
+     "text": "**Centre:** most accurate.\n**Left and right:** slightly less, same for both hands.\n**Top and bottom:** least accurate, slowest, least confident.",
+     "try": {
+      "type": "single",
+      "q": "Where are taps least accurate?",
+      "options": [
+       "Top and bottom edges",
+       "The centre of the screen",
+       "Left edge for right-handers",
+       "Inside list rows"
+      ],
+      "answer": 0,
+      "explain": "Release-based taps drift at low thumb angles."
+     }
+    },
+    {
+     "title": "Spacing in millimetres",
+     "text": "**Centre:** about **7 mm** apart.\n**Top and bottom:** **10–12 mm** between items.\n**Sides:** full-width list rows over small icons and checkboxes.",
+     "try": {
+      "type": "single",
+      "q": "Targets in a bottom bar should be spaced about:",
+      "options": [
+       "10–12 mm apart",
+       "3–4 mm apart",
+       "7 mm, same as centre",
+       "20 mm or more apart"
+      ],
+      "answer": 0,
+      "explain": "Edges need more room."
+     }
+    },
+    {
+     "title": "Practical rules",
+     "text": "Keep tappable items away from tab bars.\nLeave room below the last list item.\nCheck smaller screens.\nTest on a real device in every grip.",
+     "try": {
+      "type": "single",
+      "q": "Why leave room below the last list item?",
+      "options": [
+       "So people can scroll it to a better spot",
+       "To fit an advert later",
+       "To meet a store requirement",
+       "To hide the tab bar"
+      ],
+      "answer": 0,
+      "explain": "It lets people self-correct."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Hoober’s later advice on thumb-reach drawings:",
+     "options": [
+      "Disregard them; plan for accuracy",
+      "Use them for every layout",
+      "Apply them to tablets only",
+      "Mirror them for left-handers"
+     ],
+     "answer": 0,
+     "explain": "He withdrew the early drawings."
+    },
+    {
+     "type": "single",
+     "q": "How should rare or risky actions be placed?",
+     "options": [
+      "Not in hard-to-hit edges just for reach",
+      "Always at the bottom edge",
+      "Always at the top corner",
+      "Next to the tab bar"
+     ],
+     "answer": 0,
+     "explain": "Accuracy matters more than reach."
+    },
+    {
+     "type": "single",
+     "q": "Which is the better side-of-screen control?",
+     "options": [
+      "A full-width list row",
+      "A small checkbox",
+      "A tiny icon button",
+      "A 2 mm toggle"
+     ],
+     "answer": 0,
+     "explain": "Edges are less accurate."
+    },
+    {
+     "type": "single",
+     "q": "Misses near the bottom bar. Often the best fix?",
+     "options": [
+      "More space around targets",
+      "Bigger icons only",
+      "A different colour",
+      "Removing labels"
+     ],
+     "answer": 0,
+     "explain": "Crowding causes misses."
+    },
+    {
+     "type": "single",
+     "q": "How many people were observed in total?",
+     "options": [
+      "1,333",
+      "80",
+      "250",
+      "10,000"
+     ],
+     "answer": 0,
+     "explain": "780 of them were touching the screen."
+    },
+    {
+     "type": "single",
+     "q": "What should you check on smaller phones?",
+     "options": [
+      "That targets aren’t squeezed",
+      "That colours look brighter",
+      "That fonts load faster",
+      "That animations run smoother"
+     ],
+     "answer": 0,
+     "explain": "A bar of five icons may fit only four."
+    }
+   ]
+  }
+ ]
+}

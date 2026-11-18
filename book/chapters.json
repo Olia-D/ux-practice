@@ -548,5 +548,55 @@
 "id": "d-strategy",
 "title": "Strategy You Can Test",
 "part": "part-vi"
+},
+{
+"id": "p-hierarchy",
+"title": "Visual Hierarchy and Spacing",
+"part": "part-vi"
+},
+{
+"id": "p-type",
+"title": "Type That Reads",
+"part": "part-vi"
+},
+{
+"id": "p-colour",
+"title": "Colour With a Job",
+"part": "part-vi"
+},
+{
+"id": "p-systems",
+"title": "Design Systems That Last",
+"part": "part-vi"
+},
+{
+"id": "p-ia",
+"title": "Information Architecture Without Jargon",
+"part": "part-vi"
+},
+{
+"id": "p-content-design",
+"title": "Content Design Starts With a User Need",
+"part": "part-vi"
+},
+{
+"id": "p-thumbs",
+"title": "Designing for Thumbs",
+"part": "part-vi"
+},
+{
+"id": "p-prototypes",
+"title": "Prototypes Sized to the Question",
+"part": "part-vi"
+},
+{
+"id": "p-handoff",
+"title": "Handoff Is a Conversation",
+"part": "part-vi"
+},
+{
+"id": "p-workshops",
+"title": "Workshops That Close",
+"part": "part-vi"
 }
 ]

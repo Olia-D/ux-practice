@@ -1,0 +1,153 @@
+{
+ "id": "p-workshops",
+ "module": "craft",
+ "title": "Workshops That Close",
+ "icon": "🗳️",
+ "intro": "Design the workshop backwards from the decision. Open, explore, then close.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Workshops That Close",
+   "learn": [
+    {
+     "title": "Three movements",
+     "text": "**Open:** generate options.\n**Explore:** group, compare, build.\n**Close:** choose and commit.\n\nAn unsatisfying set of ideas refuses to close.",
+     "try": {
+      "type": "single",
+      "q": "Closing fails. Where should you look first?",
+      "options": [
+       "How the space was opened and explored",
+       "The voting tool you used and how it was set up",
+       "The room booking",
+       "The length of the break"
+      ],
+      "answer": 0,
+      "explain": "Weak openings make closing impossible."
+     }
+    },
+    {
+     "title": "Design backwards",
+     "text": "Start from the **decision you need**, then pick the opening that feeds it.\nBrainstorming opens; affinity mapping explores; voting and ranking close.",
+     "try": {
+      "type": "single",
+      "q": "Which exercise closes?",
+      "options": [
+       "Dot voting",
+       "Brainstorming",
+       "Mind mapping",
+       "Affinity grouping"
+      ],
+      "answer": 0,
+      "explain": "Closing means choosing."
+     }
+    },
+    {
+     "title": "The $100 test",
+     "text": "Groups split an imaginary **$100** across options.\n\nMoney holds attention better than points or rankings.",
+     "try": {
+      "type": "single",
+      "q": "Why use money in the $100 test?",
+      "options": [
+       "It holds attention better than points",
+       "It matches the real budget the team has to spend",
+       "It is faster to count",
+       "It avoids any ties"
+      ],
+      "answer": 0,
+      "explain": "Something at stake sharpens choices."
+     }
+    },
+    {
+     "title": "Five-day sprint",
+     "text": "**Mon:** goal, map, target.\n**Tue:** sketch alone, recruit.\n**Wed:** decide, storyboard.\n**Thu:** realistic prototype.\n**Fri:** test with customers.",
+     "try": {
+      "type": "single",
+      "q": "What happens on Friday of a sprint?",
+      "options": [
+       "Customer tests of the prototype",
+       "Sketching solutions",
+       "Choosing a target",
+       "Building production code for the chosen idea"
+      ],
+      "answer": 0,
+      "explain": "Then summarise what you learned."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Which movement comes second?",
+     "options": [
+      "Explore",
+      "Close",
+      "Open",
+      "Deciding on the outcome"
+     ],
+     "answer": 0,
+     "explain": "Open, explore, close."
+    },
+    {
+     "type": "single",
+     "q": "When is a sprint worth running?",
+     "options": [
+      "A critical question before a costly commitment",
+      "Every two weeks as a routine part of each cycle",
+      "For small copy changes",
+      "After launch, to celebrate"
+     ],
+     "answer": 0,
+     "explain": "Answer it before spending."
+    },
+    {
+     "type": "single",
+     "q": "Why sketch alone before discussing?",
+     "options": [
+      "Every view is collected before anchoring",
+      "It saves printing costs",
+      "Facilitators prefer a quiet room for the first hour",
+      "It shortens the workshop"
+     ],
+     "answer": 0,
+     "explain": "The loudest voice doesn’t set the frame."
+    },
+    {
+     "type": "single",
+     "q": "A good game write-up includes:",
+     "options": [
+      "Players, duration, how to play, strategy",
+      "Only the name and a photo",
+      "Only the materials list",
+      "Only who attended last time and what they thought of it"
+     ],
+     "answer": 0,
+     "explain": "Plus how to run it online."
+    },
+    {
+     "type": "single",
+     "q": "Which free resource collects sprint methods?",
+     "options": [
+      "Google’s Design Sprint Kit",
+      "The Mom Test",
+      "Practical Typography",
+      "Atomic Design"
+     ],
+     "answer": 0,
+     "explain": "Open-source methods and recipes."
+    },
+    {
+     "type": "single",
+     "q": "Fifty ideas and no way to choose means the workshop lacked:",
+     "options": [
+      "A planned closing",
+      "Enough sticky notes",
+      "A bigger room",
+      "More participants"
+     ],
+     "answer": 0,
+     "explain": "Design for the last step."
+    }
+   ]
+  }
+ ]
+}

@@ -119,7 +119,25 @@ state limits plainly; never imply it's a person; label AI-written text.
 
 ---
 
-## 5. Voice and tone
+## 5. Content design: start from a user need
+
+Before writing, decide whether words are the answer. Content design means meeting a need in
+the best way: a sentence in the interface, a page, or removing a page.
+
+- **Write the need:** *As a* [role tied to the task, never "a user"], *I need to* [a task
+  verb: apply, pay, change, claim], *so that* [why it matters]. "Understand" or "be aware
+  of" only when the *so that* shows the task it serves.
+- **No solution in the need.** "I need to use the calculator" justifies a tool; "I need to
+  know how much I could get" is the need.
+- **Acceptance criteria:** what must be true for the need to be met. Record need, criteria,
+  evidence and owner, so content can be checked and retired.
+- **Plan before writing:** how much, what format, where it lives, and whether it already
+  exists. Then write, then maintain or archive.
+- **Audit structure before rewriting a section:** list pages with hierarchy IDs (2.4.1),
+  flag orphans and files, and compare menu labels with page titles.
+- Settle style debates with evidence where it exists (the open *Readability Guidelines*).
+
+## 6. Voice and tone
 
 **Voice stays the same; tone moves with the reader's state.**
 
@@ -136,7 +154,7 @@ direct, isn't curt — because our users are busy, not beginners".
 
 ---
 
-## 6. Review checklist
+## 7. Review checklist
 
 - [ ] Every button names its outcome; no "Submit", "OK", "Yes"
 - [ ] The same action has the same verb from button to confirmation to toast
@@ -170,4 +188,6 @@ Nick DiLallo, *Writing for billions*, and Vitaly Friedman (*Words First*; *Your 
 Canvas · Kinneret Yifrah, *Microcopy: The Complete Guide* · Torrey Podmajersky, *Strategic
 Writing for UX* · the open-source content-designer UX-writing standards (purposeful,
 concise, conversational, clear) · Trevor Calabro, *UX Research in the Wild* (labels,
-status and error findings).
+status and error findings) · GOV.UK content design guidance (user needs, acceptance
+criteria) · Content Design London, *Readability Guidelines* · Lisa Maria Marquis, *Everyday
+Information Architecture* (structural audits).

@@ -1,0 +1,153 @@
+{
+ "id": "p-handoff",
+ "module": "craft",
+ "title": "Handoff Is a Conversation",
+ "icon": "🤝",
+ "intro": "Bring engineers in early and agree what done means. The spec covers every state.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Handoff Is a Conversation",
+   "learn": [
+    {
+     "title": "Not a baton pass",
+     "text": "A finished file thrown over the wall arrives with decisions nobody can question.\n\n**Shift left:** engineers join critiques and early sketches.",
+     "try": {
+      "type": "single",
+      "q": "What does “shift left” mean here?",
+      "options": [
+       "Engineers join earlier in design",
+       "Designs move to a left-aligned grid",
+       "Testing happens after launch",
+       "Handoff moves to the end of the sprint"
+      ],
+      "answer": 0,
+      "explain": "Constraints are found while cheap."
+     }
+    },
+    {
+     "title": "Definition of done",
+     "text": "Agree **before** handoff which states, breakpoints, accessibility checks and content are included.\n\nUse the **lightest process** that works.",
+     "try": {
+      "type": "single",
+      "q": "When should the definition of done be agreed?",
+      "options": [
+       "Before handoff, together",
+       "After the first bug report",
+       "By design alone",
+       "At the end of the quarter"
+      ],
+      "answer": 0,
+      "explain": "Shared expectations prevent late surprises."
+     }
+    },
+    {
+     "title": "Every state",
+     "text": "Empty, loading, partial, error, success, disabled, read-only.\nLongest name, zero items and a thousand, missing images, 30% longer translations.",
+     "try": {
+      "type": "single",
+      "q": "Which is most often missing from specs?",
+      "options": [
+       "Empty and error states",
+       "The happy path",
+       "The brand logo",
+       "The primary button and its hover style"
+      ],
+      "answer": 0,
+      "explain": "Edge states are where handoff bugs hide."
+     }
+    },
+    {
+     "title": "The test",
+     "text": "If an engineer could build it **without asking a question**, the spec is complete.\n\nIf they would have to guess, the guess is your design.",
+     "try": {
+      "type": "single",
+      "q": "An engineer has to guess a loading state. Whose design is it?",
+      "options": [
+       "Effectively the engineer’s guess",
+       "The design system’s default, applied automatically",
+       "The product manager’s",
+       "Nobody’s; it won’t ship"
+      ],
+      "answer": 0,
+      "explain": "Unspecified states get designed by whoever builds them."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Handoff fails most when treated as:",
+     "options": [
+      "A one-way baton pass",
+      "A shared conversation",
+      "An early collaboration",
+      "A review of the spec"
+     ],
+     "answer": 0,
+     "explain": "Questions arrive in the last week."
+    },
+    {
+     "type": "single",
+     "q": "What is a “minimum viable process”?",
+     "options": [
+      "The lightest steps that work for your team",
+      "A heavy, standard template applied to every project",
+      "No process at all",
+      "The process of the largest team"
+     ],
+     "answer": 0,
+     "explain": "Not a standard checklist."
+    },
+    {
+     "type": "single",
+     "q": "A design departs from the system. What to do?",
+     "options": [
+      "Say where and why in the spec",
+      "Hide it in the file",
+      "Rebuild the system first",
+      "Ask engineers to notice"
+     ],
+     "answer": 0,
+     "explain": "Work from the system, explain departures."
+    },
+    {
+     "type": "single",
+     "q": "Which content edge case belongs in a spec?",
+     "options": [
+      "A translation 30% longer",
+      "The designer’s favourite font",
+      "The meeting notes",
+      "The project codename"
+     ],
+     "answer": 0,
+     "explain": "Real content breaks layouts."
+    },
+    {
+     "type": "single",
+     "q": "Which accessibility items belong in a spec?",
+     "options": [
+      "Focus order, labels, keyboard use",
+      "Brand colours only",
+      "Image file sizes only",
+      "Animation easing curves and their durations only"
+     ],
+     "answer": 0,
+     "explain": "Plus contrast."
+    },
+    {
+     "type": "single",
+     "q": "What single change do teams most report helps?",
+     "options": [
+      "Bringing engineers in earlier",
+      "Longer handoff meetings",
+      "More detailed redlines on every screen",
+      "A new design tool"
+     ],
+     "answer": 0,
+     "explain": "Moving engineering earlier."
+    }
+   ]
+  }
+ ]
+}

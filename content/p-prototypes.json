@@ -1,0 +1,153 @@
+{
+ "id": "p-prototypes",
+ "module": "craft",
+ "title": "Prototypes Sized to the Question",
+ "icon": "🧪",
+ "intro": "Name the question first. Then build the cheapest prototype that answers it.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Prototypes Sized to the Question",
+   "learn": [
+    {
+     "title": "What it tests",
+     "text": "**Role:** what it does in someone’s life.\n**Look and feel:** what it’s like to use.\n**Implementation:** whether it can work.\n**Integration:** all three, built last.",
+     "try": {
+      "type": "single",
+      "q": "A storyboard of a new service tests mostly:",
+      "options": [
+       "Its role",
+       "Its build",
+       "Its looks",
+       "All of it"
+      ],
+      "answer": 0,
+      "explain": "What it does in someone’s life."
+     }
+    },
+    {
+     "title": "Fidelity isn’t completeness",
+     "text": "Detail and polish don’t show how settled a design is.\n\nA rough sketch can answer a role question; a polished mockup can hide that nobody knows how it works.",
+     "try": {
+      "type": "single",
+      "q": "What should you decide first?",
+      "options": [
+       "The question it must answer",
+       "How polished it should be",
+       "Which design tool to build it in and share it from",
+       "How many screens it needs"
+      ],
+      "answer": 0,
+      "explain": "Fidelity follows the question."
+     }
+    },
+    {
+     "title": "Habits",
+     "text": "Build **several**, with different tools, and throw them away.\nKnow your audience.\n**Say what it doesn’t answer.**",
+     "try": {
+      "type": "single",
+      "q": "Why say what a prototype doesn’t answer?",
+      "options": [
+       "Prototypes don’t explain their own purpose",
+       "It shortens the test sessions",
+       "Stakeholders ask for disclaimers",
+       "It avoids version-control conflicts between files"
+      ],
+      "answer": 0,
+      "explain": "Otherwise people judge it on the wrong things."
+     }
+    },
+    {
+     "title": "Types for testing ideas",
+     "text": "**Paper:** flow and role.\n**Clickable:** navigation.\n**Realistic façade:** a whole idea in days.\n**Single-feature:** real use.\n**Wizard of Oz:** a person behind the curtain.",
+     "try": {
+      "type": "single",
+      "q": "A service looks automated but a person does the work. This is:",
+      "options": [
+       "Wizard of Oz",
+       "A clickable prototype",
+       "A paper prototype",
+       "An integration prototype"
+      ],
+      "answer": 0,
+      "explain": "Tests demand before building automation."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "A technical spike on data performance tests:",
+     "options": [
+      "Implementation",
+      "Role",
+      "Look and feel only",
+      "Integration of all three"
+     ],
+     "answer": 0,
+     "explain": "Whether and how it can work."
+    },
+    {
+     "type": "single",
+     "q": "When are integration prototypes built?",
+     "options": [
+      "After focused ones answer their questions",
+      "At the very start",
+      "Instead of running any user tests at all",
+      "Only for marketing demos and sales pitches to clients"
+     ],
+     "answer": 0,
+     "explain": "They are slow and hard to build."
+    },
+    {
+     "type": "single",
+     "q": "Testing comprehension with a beautiful mockup invites:",
+     "options": [
+      "Comments on colour",
+      "Better task data",
+      "Faster sessions",
+      "Fewer participants"
+     ],
+     "answer": 0,
+     "explain": "Polish pulls attention to the surface."
+    },
+    {
+     "type": "single",
+     "q": "In a design sprint, Thursday’s prototype is:",
+     "options": [
+      "A realistic surface customers see",
+      "A working production build with real data",
+      "A set of paper sketches",
+      "A technical architecture"
+     ],
+     "answer": 0,
+     "explain": "Only the surface is built."
+    },
+    {
+     "type": "single",
+     "q": "How many prototypes should you build?",
+     "options": [
+      "Several, for different questions",
+      "Exactly one, refined",
+      "One per stakeholder",
+      "None before research"
+     ],
+     "answer": 0,
+     "explain": "Different tools for different questions."
+    },
+    {
+     "type": "single",
+     "q": "What decides a prototype’s audience fit?",
+     "options": [
+      "Who will see it and what they decide",
+      "The design tool licence your company has bought",
+      "The number of screens",
+      "The brand colours"
+     ],
+     "answer": 0,
+     "explain": "A customer test and a leadership pitch differ."
+    }
+   ]
+  }
+ ]
+}

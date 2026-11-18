@@ -1,6 +1,6 @@
 ---
 name: "interaction-design-reviewer"
-description: "Design, generate, and review UI designs, forms, controls and interaction patterns using evidence-based HCI research. Use whenever the user asks to review a design, create a form, pick a control, audit a flow, suggest alternatives, or get feedback on any interface decision — including \"does this follow best practices\", \"is this good UX\", \"how should I design X\", \"what are my options\". Covers forms, selection controls, icons, navigation, status design, accessibility, ARIA, animations, destructive actions, tables, hidden vs disabled states, design critiques, dark patterns and Jakob's Law. For charts and dashboards, data-visualization takes over."
+description: "Design, generate, and review UI designs, forms, controls and interaction patterns using evidence-based HCI research. Use whenever the user asks to review a design, create a form, pick a control, audit a flow, suggest alternatives, or get feedback on any interface decision — including \"does this follow best practices\", \"is this good UX\", \"how should I design X\", \"what are my options\". Covers forms, selection controls, icons, navigation, status design, accessibility, ARIA, animations, destructive actions, tables, hidden vs disabled states, design critiques, dark patterns, visual hierarchy, spacing, type, colour, touch targets, design systems and Jakob's Law. For charts and dashboards, data-visualization takes over."
 ---
 
 # Interaction Design Skill
@@ -31,6 +31,9 @@ Load the relevant file(s) before responding based on what the request is about:
 | Accessibility, accessibility audits, cognitive walkthroughs, flows | `references/accessibility-and-flows.md` |
 | Status labels, post-action feedback, spinners, toasts, system state communication, degraded experiences | `references/status-design.md` |
 | Running a design critique, review or shareout; giving and structuring feedback | `references/critique-sessions.md` |
+| Visual hierarchy, spacing, type scale, line length, colour roles, contrast | `references/visual-design.md` |
+| Mobile and touch: grips, tap accuracy by zone, target spacing, tab bars | `references/touch-and-mobile.md` |
+| Design systems: pattern types, atomic levels, governance, team models, documenting states | `references/design-systems.md` |
 
 **Related skills:** charts, dashboards and analytics views → `data-visualization`. Study
 design, A/B critique, debriefs and ROI → `ux-research-advisor`. AI-powered features →
@@ -675,4 +678,7 @@ The rules in this skill draw on: Trevor Calabro, *UX Research in the Wild*; Erik
 Enough Research*; Teresa Torres, *Continuous Discovery Habits*; Jakob Nielsen's usability
 quality components; Vitaly Friedman (hidden/disabled/read-only, decision trees, degraded
 experiences); Léonie Watson on accessible tables; Smashing Magazine and Flatfile on complex
-tables and imports; WebAIM Screen Reader User Survey #9; Jeremy Bird on design critiques.
+tables and imports; WebAIM Screen Reader User Survey #9; Jeremy Bird on design critiques;
+*Refactoring UI*; Matthew Butterick, *Practical Typography*; WCAG 2.2; Steven Hoober on touch
+and grips; Alla Kholmatova, *Design Systems*; Brad Frost, *Atomic Design*; Nathan Curtis on
+design-system team models.

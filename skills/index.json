@@ -1,7 +1,7 @@
 {
   "book": {
     "title": "UX in the Real World — reference edition",
-    "blurb": "104 chapters with figures, memory aids, a rules cheat sheet and an archive guide. One HTML file; works offline.",
+    "blurb": "120 chapters with figures, memory aids, a rules cheat sheet and an archive guide. One HTML file; works offline.",
     "read": "book/ux-in-the-real-world.html",
     "download": "book/ux-in-the-real-world.html",
     "zip": "downloads/ux-in-the-real-world-book.zip"
@@ -17,13 +17,16 @@
     {
       "id": "interaction-design-reviewer",
       "title": "Interaction Design Reviewer",
-      "blurb": "Forms, controls, navigation, status, accessibility audits, tables, hidden vs disabled, critiques.",
+      "blurb": "Forms, controls, navigation, status, accessibility, tables, critiques, visual design, touch targets, design systems.",
       "refs": [
         "forms",
         "controls",
         "status-design",
         "accessibility-and-flows",
         "critique-sessions",
+        "visual-design",
+        "touch-and-mobile",
+        "design-systems",
         "test-cases"
       ]
     },

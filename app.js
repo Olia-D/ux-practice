@@ -304,7 +304,7 @@
       html += '<section class="door" aria-labelledby="d-book">' +
         '<div class="door-head"><div><p class="door-kind">Book</p><h2 id="d-book">UX in the Real World</h2></div>' +
         '<p class="door-count num"><b' + (nRead && nRead === ch.length ? ' class="done"' : '') + '>' + nRead + '</b><small>/' + ch.length + ' read</small></p></div>' +
-        '<p class="door-sub">' + ch.length + ' chapters on interaction design, research methods, business impact and the UX career, with figures and a rules cheat sheet.</p>' +
+        '<p class="door-sub">' + ch.length + ' chapters on interaction design, research methods, discovery, the product craft, business impact and the UX career, with figures and a rules cheat sheet.</p>' +
         bstrip +
         '<div class="row door-actions">' +
         (last ? '<a class="btn" href="' + BOOK + '#resume">Continue reading</a>' : '<a class="btn" href="' + BOOK + '#part-i">Start reading</a>') +

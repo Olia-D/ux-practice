@@ -1,0 +1,153 @@
+{
+ "id": "p-ia",
+ "module": "craft",
+ "title": "Information Architecture Without Jargon",
+ "icon": "🗂️",
+ "intro": "Audit, sort, decide, test. Card sorts give ideas; tree tests give answers.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Information Architecture Without Jargon",
+   "learn": [
+    {
+     "title": "In order",
+     "text": "**Audit** how it works today → **card sort** to learn how people group things → **decide** the structure → **tree test** it.\n\nCard sorting generates; tree testing evaluates.",
+     "try": {
+      "type": "single",
+      "q": "What does a tree test do?",
+      "options": [
+       "Checks people can find things in a structure",
+       "Shows how people would group content",
+       "Lists every page that exists today",
+       "Measures how fast pages load"
+      ],
+      "answer": 0,
+      "explain": "It evaluates a proposed or existing tree."
+     }
+    },
+    {
+     "title": "Card sorting",
+     "text": "**Open sort:** people make and name groups. The default.\n**Closed:** your categories (a tree test is usually better).\n**15+** people for qualitative, **30–50** for quantitative. **30–50 cards.**",
+     "try": {
+      "type": "single",
+      "q": "How many cards should a sort have?",
+      "options": [
+       "About 30–50",
+       "About 5–10",
+       "About 100–150",
+       "Every page on the site"
+      ],
+      "answer": 0,
+      "explain": "More and people tire and dump the rest."
+     }
+    },
+    {
+     "title": "Tree test metrics",
+     "text": "**Success:** reached a correct place.\n**Directness:** without backtracking.\n**First click:** where they expected it.\n**Destination:** where they ended up.",
+     "try": {
+      "type": "single",
+      "q": "Clicks spread across several first options suggest:",
+      "options": [
+       "Overlapping categories",
+       "A slow server",
+       "Too few participants",
+       "Labels that are too short"
+      ],
+      "answer": 0,
+      "explain": "The item could belong in several places."
+     }
+    },
+    {
+     "title": "Benchmarks",
+     "text": "Across 98 studies the median task success was **62%**.\nBelow 40% poor · 61–80% good · above 90% excellent.\n**Critical tasks: above 90%.** Comparing trees: about **50 people per tree**.",
+     "try": {
+      "type": "single",
+      "q": "A checkout-critical task scores 75%. Verdict?",
+      "options": [
+       "Not good enough for a critical task",
+       "Excellent for any task",
+       "Fine; above the median",
+       "Too low to measure"
+      ],
+      "answer": 0,
+      "explain": "Critical and revenue tasks should pass 90%."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "How does a structural audit ID a page two levels down?",
+     "options": [
+      "A decimal like 2.4.1",
+      "Its page title",
+      "Its URL length",
+      "The date it was added"
+     ],
+     "answer": 0,
+     "explain": "The ID shows its place in the hierarchy."
+    },
+    {
+     "type": "single",
+     "q": "Why avoid hybrid card sorts?",
+     "options": [
+      "Fixed groups bias the rest",
+      "They take too long to run",
+      "Tools don’t support them",
+      "They need more than 100 people"
+     ],
+     "answer": 0,
+     "explain": "Use them only when sure of one or two categories."
+    },
+    {
+     "type": "single",
+     "q": "Menu labels often differ from page titles. What does it suggest?",
+     "options": [
+      "Inconsistent publishing or a broken back end",
+      "The menu is too short",
+      "The site needs search",
+      "Users prefer short labels"
+     ],
+     "answer": 0,
+     "explain": "Track mismatches in the audit."
+    },
+    {
+     "type": "single",
+     "q": "What is directness?",
+     "options": [
+      "Reaching the answer without backtracking",
+      "Choosing the shortest label",
+      "Finishing in under a minute",
+      "Clicking the first menu item"
+     ],
+     "answer": 0,
+     "explain": "Confident wrong turns are the worst failures."
+    },
+    {
+     "type": "single",
+     "q": "Why may real-world findability beat a tree test?",
+     "options": [
+      "The test removes search and visual cues",
+      "Real users are more expert",
+      "Tree tests use fake content",
+      "Tree tests always time out"
+     ],
+     "answer": 0,
+     "explain": "The tree is shown bare."
+    },
+    {
+     "type": "single",
+     "q": "Most IA problems are really:",
+     "options": [
+      "Naming problems",
+      "Server problems",
+      "Colour problems",
+      "Animation problems"
+     ],
+     "answer": 0,
+     "explain": "Agree the words before the boxes."
+    }
+   ]
+  }
+ ]
+}

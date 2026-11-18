@@ -30,6 +30,12 @@ Ask (or infer) two things: **what is the deliverable** and **what decision is be
 | Button label, error, empty state, any product text | `ux-writing` | + `interaction-design-reviewer` (forms/status) when the copy sits in a control or status |
 | Stakeholder interview, "how do I get X on board", conflicting priorities | `ux-research-advisor` §16 | + §10 if the pushback cites "our users are different" |
 | Design critique, design review meeting, "how should we run feedback" | `interaction-design-reviewer` (`references/critique-sessions.md`) | — |
+| Visual hierarchy, spacing, type, colour, contrast | `interaction-design-reviewer` (`references/visual-design.md`) | + `data-visualization` for chart colour |
+| Mobile layout, touch targets, thumb reach | `interaction-design-reviewer` (`references/touch-and-mobile.md`) | — |
+| Design system, component library, governance | `interaction-design-reviewer` (`references/design-systems.md`) | + `ux-writing` for naming and voice |
+| Navigation structure, card sort, tree test, findability | `ux-research-advisor` §17 | + `ux-writing` §5 for labels and content audits |
+| Content strategy, user needs, "do we need this page" | `ux-writing` §5 | + `ux-research-advisor` for evidence |
+| Workshop, design sprint, prototype fidelity | `product-discovery` (what to test) | + `interaction-design-reviewer` (`references/critique-sessions.md`) for running feedback |
 
 If none fits, say so and answer from general UX knowledge and the project's reference
 books rather than forcing a skill.

@@ -1,0 +1,153 @@
+{
+ "id": "p-content-design",
+ "module": "craft",
+ "title": "Content Design Starts With a User Need",
+ "icon": "📝",
+ "intro": "Start from who needs to do what, and why. Then decide whether it needs words at all.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Content Design Starts With a User Need",
+   "learn": [
+    {
+     "title": "The format",
+     "text": "**As a…** who, by their relationship to the task.\n**I need to…** a task.\n**So that…** why it matters.\n\nAs a carer, I need to get financial help, so that I can keep looking after the person I care for.",
+     "try": {
+      "type": "single",
+      "q": "Which opening is valid?",
+      "options": [
+       "As a carer",
+       "As a user",
+       "As a visitor",
+       "As everyone"
+      ],
+      "answer": 0,
+      "explain": "Name the role that makes the need specific."
+     }
+    },
+    {
+     "title": "No solution inside",
+     "text": "A need describes a goal, not a tool.\n\n“I need to use the benefits calculator” justifies a tool. “I need to know how much I could get” is a need.",
+     "try": {
+      "type": "single",
+      "q": "Which is a real user need?",
+      "options": [
+       "I need to know how much I could get",
+       "I need to use the benefits calculator",
+       "I need a PDF of the benefit rules",
+       "I need a chatbot to answer me"
+      ],
+      "answer": 0,
+      "explain": "The others name a solution."
+     }
+    },
+    {
+     "title": "Acceptance criteria",
+     "text": "What must be true for the need to be met.\n\nFor the carer: understand the allowance, check eligibility, apply, know the amount.\n\nRecord each need with its criteria, evidence and owner.",
+     "try": {
+      "type": "single",
+      "q": "What do acceptance criteria describe?",
+      "options": [
+       "What must happen for the need to be met",
+       "Who approved the content",
+       "How long the page should be",
+       "Which words are banned"
+      ],
+      "answer": 0,
+      "explain": "They make a need checkable."
+     }
+    },
+    {
+     "title": "Need, plan, write, maintain",
+     "text": "**Identify** the need with evidence.\n**Plan** the amount, format and place, and check for duplicates.\n**Write** clearly.\n**Maintain** or archive.",
+     "try": {
+      "type": "single",
+      "q": "What comes before writing?",
+      "options": [
+       "Planning the format and place",
+       "Choosing the font",
+       "Writing the meta tags",
+       "Picking the illustrations"
+      ],
+      "answer": 0,
+      "explain": "Sometimes the answer is a sentence in the UI, or removing a page."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Which verb fits a user need best?",
+     "options": [
+      "Apply",
+      "Be aware of",
+      "Feel",
+      "Browse"
+     ],
+     "answer": 0,
+     "explain": "Needs are tasks; “be aware of” only if it serves a task."
+    },
+    {
+     "type": "single",
+     "q": "When is “understand” acceptable in a need?",
+     "options": [
+      "When the “so that” shows a task",
+      "Never, under any condition",
+      "Always, for policy pages",
+      "Only for legal content"
+     ],
+     "answer": 0,
+     "explain": "Understanding must serve a task."
+    },
+    {
+     "type": "single",
+     "q": "Where should needs be recorded?",
+     "options": [
+      "With criteria, evidence and an owner",
+      "In the page footer",
+      "In the style guide",
+      "In the release notes"
+     ],
+     "answer": 0,
+     "explain": "So content can be checked and retired."
+    },
+    {
+     "type": "single",
+     "q": "Content design’s first question is:",
+     "options": [
+      "What does someone need to do?",
+      "How should this page be worded?",
+      "How long can this page be?",
+      "Which template should we use?"
+     ],
+     "answer": 0,
+     "explain": "Wording comes after the need."
+    },
+    {
+     "type": "single",
+     "q": "A need is met elsewhere already. What do you do?",
+     "options": [
+      "Don’t duplicate it",
+      "Write a better version anyway",
+      "Link to it from every page",
+      "Copy it into your section"
+     ],
+     "answer": 0,
+     "explain": "Planning checks for duplicates."
+    },
+    {
+     "type": "single",
+     "q": "Which free resource collects evidence for style decisions?",
+     "options": [
+      "The Readability Guidelines",
+      "The Mom Test",
+      "Atomic Design",
+      "The Design Sprint Kit"
+     ],
+     "answer": 0,
+     "explain": "An open, evidence-based style project."
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,153 @@
+{
+ "id": "p-systems",
+ "module": "craft",
+ "title": "Design Systems That Last",
+ "icon": "🧩",
+ "intro": "A system is patterns, names and an owner. Without the owner it decays.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Design Systems That Last",
+   "learn": [
+    {
+     "title": "Two kinds of pattern",
+     "text": "**Functional:** the parts people use: buttons, fields, tables.\n**Perceptual:** how it feels: type, colour, spacing, motion, voice.\n\nA **shared language** names both, the same in design, code and conversation.",
+     "try": {
+      "type": "single",
+      "q": "Which is a perceptual pattern?",
+      "options": [
+       "Motion and timing",
+       "A date picker with a calendar grid",
+       "A data table",
+       "A search field"
+      ],
+      "answer": 0,
+      "explain": "It shapes how everything feels."
+     }
+    },
+    {
+     "title": "From parts to pages",
+     "text": "**Atoms** (inputs, buttons) → **molecules** (a search form) → **organisms** (a header) → **templates** (layouts) → **pages** (real content).\n\nReal content finds weak spots.",
+     "try": {
+      "type": "single",
+      "q": "A label, input and button working as a search form is a:",
+      "options": [
+       "Molecule",
+       "Atom",
+       "Template",
+       "Page"
+      ],
+      "answer": 0,
+      "explain": "A small group of atoms acting as one unit."
+     }
+    },
+    {
+     "title": "Keep it alive",
+     "text": "Run it as a **funded product**.\nWrite a **governance process**: request, change, approve, retire.\nRetire patterns with notice and a replacement.\nKeep design and code **in sync**.",
+     "try": {
+      "type": "single",
+      "q": "What is the biggest threat to a design system?",
+      "options": [
+       "Neglect",
+       "Too many parts",
+       "Dark mode",
+       "Tokens"
+      ],
+      "answer": 0,
+      "explain": "Systems decay when nobody owns them."
+     }
+    },
+    {
+     "title": "Team models",
+     "text": "**Solitary:** one team’s library, offered to others.\n**Centralised:** a dedicated system team.\n**Federated:** designers from several teams decide together.\n\nWhatever the model, someone writes decisions down.",
+     "try": {
+      "type": "single",
+      "q": "A federated model’s main risk?",
+      "options": [
+       "Slow decisions that get lost",
+       "One team’s needs dominate",
+       "No designers are involved",
+       "It can’t be documented by any single team"
+      ],
+      "answer": 0,
+      "explain": "Many voices, no single owner."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What makes a component library a design system?",
+     "options": [
+      "Principles, names and rules for change",
+      "More components and variants for every case",
+      "A dedicated Figma file",
+      "A public website"
+     ],
+     "answer": 0,
+     "explain": "The library is only one part."
+    },
+    {
+     "type": "single",
+     "q": "A homepage layout with no real content yet is a:",
+     "options": [
+      "Template",
+      "Page",
+      "Organism",
+      "Molecule"
+     ],
+     "answer": 0,
+     "explain": "Pages are templates with real content."
+    },
+    {
+     "type": "single",
+     "q": "How should a pattern be retired?",
+     "options": [
+      "With notice and a recommended replacement",
+      "Removed in the next release",
+      "Hidden from the documentation",
+      "Left in place, unsupported and undocumented"
+     ],
+     "answer": 0,
+     "explain": "Teams need time to move."
+    },
+    {
+     "type": "single",
+     "q": "A solitary model’s main risk?",
+     "options": [
+      "Its own team’s needs come first",
+      "Too many people decide",
+      "Nobody uses the library",
+      "Engineers aren’t involved"
+     ],
+     "answer": 0,
+     "explain": "Others fork it when it doesn’t fit."
+    },
+    {
+     "type": "single",
+     "q": "Who should a design system serve?",
+     "options": [
+      "Designers, engineers, writers and PMs",
+      "Front-end engineers who build the components only",
+      "The design team only",
+      "New hires only"
+     ],
+     "answer": 0,
+     "explain": "Voice, principles and usage matter too."
+    },
+    {
+     "type": "single",
+     "q": "How do you start a design system?",
+     "options": [
+      "A small pilot that shows value",
+      "A complete library before launch",
+      "A company-wide mandate first",
+      "A rebrand of the product"
+     ],
+     "answer": 0,
+     "explain": "Prove it, then ask for support."
+    }
+   ]
+  }
+ ]
+}

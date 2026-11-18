@@ -1,0 +1,153 @@
+{
+ "id": "p-hierarchy",
+ "module": "craft",
+ "title": "Visual Hierarchy and Spacing",
+ "icon": "📐",
+ "intro": "One primary thing per view. Group by spacing before you reach for a border.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Visual Hierarchy and Spacing",
+   "learn": [
+    {
+     "title": "Three levels",
+     "text": "**Primary:** the main action or information, one per view.\n**Secondary:** supporting content.\n**Tertiary:** metadata and hints.\n\nWhen everything is bold, nothing is.",
+     "try": {
+      "type": "single",
+      "q": "How many primary actions per view?",
+      "options": [
+       "One",
+       "Two",
+       "Three",
+       "Five"
+      ],
+      "answer": 0,
+      "explain": "One filled primary button; others are outlined or text."
+     }
+    },
+    {
+     "title": "Weight and colour first",
+     "text": "Make secondary text **lighter grey** or **lighter weight** before making it smaller.\n\nVisual emphasis and HTML structure are separate: an h2 doesn’t have to be big.",
+     "try": {
+      "type": "single",
+      "q": "A label competes with the value next to it. First fix?",
+      "options": [
+       "Make the label a lighter grey",
+       "Make the value much larger",
+       "Put a border around the value",
+       "Move the label into a tooltip"
+      ],
+      "answer": 0,
+      "explain": "De-emphasise the supporting part before enlarging the main one."
+     }
+    },
+    {
+     "title": "A spacing scale",
+     "text": "Base unit **4 or 8 px**: 4, 8, 12, 16, 24, 32, 48, 64, 96.\n\nForms: 4 px input to help text, 8 px label to input, **24 px between groups.**",
+     "try": {
+      "type": "single",
+      "q": "Why space from a fixed scale?",
+      "options": [
+       "Choices stay distinct and consistent",
+       "It loads faster in the browser",
+       "Screen readers rely on it",
+       "It removes the need for grids"
+      ],
+      "answer": 0,
+      "explain": "Values that grow apart stop near-identical gaps."
+     }
+    },
+    {
+     "title": "Squint test",
+     "text": "Start with **too much whitespace**, then remove.\n\nBlur your eyes: related items should merge into one shape, separate groups should stay apart. Space between groups must be larger than space inside them.",
+     "try": {
+      "type": "single",
+      "q": "What should the squint test show?",
+      "options": [
+       "Related items merge, groups stay apart",
+       "Every element is equally visible",
+       "Text stays readable when blurred",
+       "Colours keep enough contrast"
+      ],
+      "answer": 0,
+      "explain": "It checks grouping, not legibility."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Which is tertiary content?",
+     "options": [
+      "A timestamp under a comment",
+      "The main call to action",
+      "The page’s key number",
+      "The body of the comment"
+     ],
+     "answer": 0,
+     "explain": "Metadata steps back."
+    },
+    {
+     "type": "single",
+     "q": "A secondary action should usually be:",
+     "options": [
+      "An outlined or subtle button",
+      "A second filled button",
+      "A larger filled button",
+      "A link inside the page title"
+     ],
+     "answer": 0,
+     "explain": "Only the primary action is filled."
+    },
+    {
+     "type": "single",
+     "q": "A layout feels cramped. Best way to start?",
+     "options": [
+      "Add generous space, then reduce",
+      "Add borders between all items",
+      "Shrink the font sizes a little",
+      "Remove the section headings"
+     ],
+     "answer": 0,
+     "explain": "Removing space from an airy layout works better than squeezing more in."
+    },
+    {
+     "type": "single",
+     "q": "Before adding a border, try:",
+     "options": [
+      "A background change or more space",
+      "A thicker font for the label",
+      "A coloured icon in each corner",
+      "A drop shadow on every item"
+     ],
+     "answer": 0,
+     "explain": "Borders add lines to scan."
+    },
+    {
+     "type": "single",
+     "q": "Which layout can be dense?",
+     "options": [
+      "A data table for daily users",
+      "A first-run onboarding screen",
+      "A marketing landing page",
+      "An empty state with one action"
+     ],
+     "answer": 0,
+     "explain": "Density suits repeated, expert work."
+    },
+    {
+     "type": "single",
+     "q": "Space between groups should be:",
+     "options": [
+      "Larger than space inside them",
+      "Equal to space inside them",
+      "Smaller than space inside them",
+      "Set by the length of the labels"
+     ],
+     "answer": 0,
+     "explain": "Otherwise a label sits as close to the wrong field."
+    }
+   ]
+  }
+ ]
+}

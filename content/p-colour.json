@@ -1,0 +1,153 @@
+{
+ "id": "p-colour",
+ "module": "craft",
+ "title": "Colour With a Job",
+ "icon": "🎨",
+ "intro": "Neutral by default. Colour means something, and never says it alone.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Colour With a Job",
+   "learn": [
+    {
+     "title": "Roles, not swatches",
+     "text": "**Neutrals:** 9+ greys for text, borders, backgrounds.\n**Primary:** 5–7 shades for actions, links, selection.\n**Status:** success, warning, error, info, with text or an icon.",
+     "try": {
+      "type": "single",
+      "q": "What should saturated colour be kept for?",
+      "options": [
+       "Actions, links and status",
+       "Large background areas",
+       "Body text and headings",
+       "Borders between sections"
+      ],
+      "answer": 0,
+      "explain": "Then colour carries meaning when it appears."
+     }
+    },
+    {
+     "title": "Contrast",
+     "text": "**Text:** 4.5:1.\n**Controls, their states and meaningful graphics:** 3:1 against what’s next to them.",
+     "try": {
+      "type": "single",
+      "q": "A checkbox border against its background needs at least:",
+      "options": [
+       "3:1",
+       "1.5:1",
+       "4.5:1",
+       "7:1"
+      ],
+      "answer": 0,
+      "explain": "Non-text contrast, WCAG 1.4.11."
+     }
+    },
+    {
+     "title": "Never colour alone",
+     "text": "Information shown by colour needs another cue: **text, a shape or an icon.**\n\nA red border alone doesn’t mark an error. Green for valid and red for invalid still need another cue.",
+     "try": {
+      "type": "single",
+      "q": "How should an invalid field be marked?",
+      "options": [
+       "Red border plus a message and icon",
+       "A red border on its own",
+       "A red background on its own",
+       "A slightly darker red label"
+      ],
+      "answer": 0,
+      "explain": "Colour must not be the only signal, WCAG 1.4.1."
+     }
+    },
+    {
+     "title": "Greys with character",
+     "text": "Tint greys slightly towards the brand hue.\n\nUse a grey from the scale for secondary text, not lower opacity, which shifts on coloured backgrounds.",
+     "try": {
+      "type": "single",
+      "q": "Why avoid opacity for secondary text?",
+      "options": [
+       "It changes on coloured backgrounds",
+       "Browsers don’t support it well",
+       "It always fails contrast checks",
+       "It makes text impossible to select"
+      ],
+      "answer": 0,
+      "explain": "A fixed grey stays predictable."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Minimum contrast for body text:",
+     "options": [
+      "4.5:1",
+      "2:1",
+      "3:1",
+      "10:1"
+     ],
+     "answer": 0,
+     "explain": "WCAG 1.4.3."
+    },
+    {
+     "type": "single",
+     "q": "How should links inside a paragraph stand out?",
+     "options": [
+      "Underline, or 3:1 against the text",
+      "A different colour only",
+      "Bold weight only",
+      "A slightly larger size"
+     ],
+     "answer": 0,
+     "explain": "Colour alone isn’t enough."
+    },
+    {
+     "type": "single",
+     "q": "How many grey shades does a working palette need?",
+     "options": [
+      "Nine or more",
+      "Exactly two",
+      "Three or four",
+      "Only black and white"
+     ],
+     "answer": 0,
+     "explain": "Text, borders and backgrounds need many steps."
+    },
+    {
+     "type": "single",
+     "q": "Two chart series differ only by hue. What to add?",
+     "options": [
+      "Labels or patterns",
+      "A brighter palette",
+      "A darker background",
+      "A thicker chart border"
+     ],
+     "answer": 0,
+     "explain": "Check charts in greyscale."
+    },
+    {
+     "type": "single",
+     "q": "What does a mostly neutral screen make possible?",
+     "options": [
+      "One colour shows what to do next",
+      "Faster loading of images",
+      "Fewer accessibility checks",
+      "No need for a type scale"
+     ],
+     "answer": 0,
+     "explain": "Colour stands out when it’s rare."
+    },
+    {
+     "type": "single",
+     "q": "A primary colour scale usually needs:",
+     "options": [
+      "5–7 shades",
+      "One exact shade",
+      "2 shades",
+      "15–20 shades"
+     ],
+     "answer": 0,
+     "explain": "For hover, pressed, selected and backgrounds."
+    }
+   ]
+  }
+ ]
+}
