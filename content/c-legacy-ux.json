@@ -1,0 +1,125 @@
+{
+  "id": "c-legacy-ux",
+  "module": "business",
+  "title": "Modernizing Legacy UX",
+  "icon": "🏛️",
+  "intro": "A legacy product succeeded and then stopped fitting. Modernize when keeping it costs more than it returns, and aim at what should exist now.",
+  "topics": [
+    {
+      "id": "main",
+      "title": "Modernizing Legacy UX",
+      "learn": [
+        {
+          "title": "Legacy is success that no longer fits",
+          "text": "Legacy software isn’t bad software. It was right for its time and has drifted from what people need.\n\n**Common failure modes:** late-found dependencies, worn-down people, the **feature-parity trap**, innovation theatre, a feature factory, and delivering too late.\n\nBehind most of them are unknown unknowns that only surface once migration begins.",
+          "try": {
+            "type": "single",
+            "q": "Which of these is the feature-parity trap?",
+            "options": [
+              "Requiring the new product to match every old feature",
+              "Launching a new look on the same old workflows",
+              "Shipping a long feature list without checking it helps",
+              "Discovering hidden dependencies in the final month"
+            ],
+            "answer": 0,
+            "explain": "Parity rebuilds every past compromise. The others are innovation theatre, a feature factory and late-found dependencies."
+          }
+        },
+        {
+          "title": "Modernize the product, not the interface",
+          "text": "Ask **“what should exist now?”** before “what must we carry over?”.\n\nStart with a working group of people who use the legacy product every day. They know which parts are load-bearing and which are just habit.\n\nMulti-year rebuilds often deliver what was needed one to three years ago.",
+          "try": {
+            "type": "single",
+            "q": "Where should a modernization start?",
+            "options": [
+              "With a working group of daily legacy users",
+              "With a complete inventory of every old feature",
+              "With a visual refresh of the existing screens",
+              "With an early retirement date for the old system"
+            ],
+            "answer": 0,
+            "explain": "They can tell you what the old product really does and what no longer matters."
+          }
+        },
+        {
+          "title": "Migrate by slice, not by feature",
+          "text": "Five common strategies: **big bang**, **incremental**, **parallel** (a public beta), **incremental and parallel** (power users first, once the new version matches the old on day one), and **upgrading the legacy UI** while a new one runs in beta.\n\nWhichever you pick, migrate **one key workflow at a time**, end to end, and pilot each slice with a small group to build trust.\n\nA claim that 65–79% of modernizations fail circulates widely but has no source in the original article. Leave it out of a business case.",
+          "try": {
+            "type": "single",
+            "q": "What is the better unit of migration?",
+            "options": [
+              "A key workflow, end to end",
+              "A single feature, one at a time",
+              "A single screen, one at a time",
+              "A single team, one at a time"
+            ],
+            "answer": 0,
+            "explain": "A finished workflow teaches you more than a feature that is only part of a task."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What best describes a legacy product?",
+          "options": [
+            "Successful software that has stopped fitting",
+            "Software that was written in an outdated language",
+            "Software that has lost all of its remaining users",
+            "Software that nobody maintains any more"
+          ],
+          "answer": 0,
+          "explain": "Legacy is about fit, not age. The product worked, and the needs moved."
+        },
+        {
+          "type": "single",
+          "q": "Why do multi-year rebuilds often disappoint?",
+          "options": [
+            "They ship what was needed years ago",
+            "Engineers always underestimate the effort",
+            "Users dislike every new interface they meet",
+            "Old systems cannot be replaced by new ones"
+          ],
+          "answer": 0,
+          "explain": "By the time a long project ships, the needs it was built for have changed."
+        },
+        {
+          "type": "single",
+          "q": "Which strategy lets power users move first?",
+          "options": [
+            "Incremental and parallel",
+            "Big bang",
+            "Upgrading the legacy UI only",
+            "A parallel beta open to everyone"
+          ],
+          "answer": 0,
+          "explain": "Power users move first once the new version matches the old on day one."
+        },
+        {
+          "type": "single",
+          "q": "Why shouldn’t you quote “65–79% of modernizations fail” in a business case?",
+          "options": [
+            "The source article cites no reference",
+            "It is true only for large banks",
+            "It counts only big-bang projects",
+            "It is more than ten years old"
+          ],
+          "answer": 0,
+          "explain": "A figure without a source can’t be defended when someone asks where it came from."
+        },
+        {
+          "type": "single",
+          "q": "Why pilot each slice with a small group?",
+          "options": [
+            "Early wins build trust for later slices",
+            "It removes the need for a working group",
+            "It means training can be skipped entirely",
+            "It lets the team skip usability testing"
+          ],
+          "answer": 0,
+          "explain": "Trust is the scarce resource in a long migration. A pilot earns it one slice at a time."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "id": "c-critiques",
+  "module": "career",
+  "title": "Running Design Critiques",
+  "icon": "🪟",
+  "intro": "Name the meeting type first. Then run a timed slot with silent written feedback before the discussion.",
+  "topics": [
+    {
+      "id": "main",
+      "title": "Running Design Critiques",
+      "learn": [
+        {
+          "title": "Four kinds of meeting",
+          "text": "**Critique:** improve the craft. Questions, not instructions.\n**Design review:** check against goals. Feedback is implemented or answered.\n**Quality review:** keep the system consistent. Led by a lead, directive.\n**Shareout:** show progress. One-way.\n\nMost critique fights start because people expected a different meeting.",
+          "try": {
+            "type": "single",
+            "q": "Feedback must be implemented or answered with a reason. Which meeting is this?",
+            "options": [
+              "A design review",
+              "A critique",
+              "A quality review",
+              "A shareout"
+            ],
+            "answer": 0,
+            "explain": "In a critique the designer chooses what to use. In a design review each point gets an answer."
+          }
+        },
+        {
+          "title": "The 30-minute slot",
+          "text": "**2 min** background · **3 min** walkthrough · **2 min** clarifying questions only · **7–10 min of silent written feedback** · **10–13 min** conversation · **3 min** wrap-up.\n\nSilent writing collects everyone’s view before one person anchors the room.",
+          "try": {
+            "type": "single",
+            "q": "What comes right before the conversation?",
+            "options": [
+              "Silent written feedback",
+              "The presenter’s response",
+              "A vote on the options",
+              "The wrap-up"
+            ],
+            "answer": 0,
+            "explain": "Everyone has written down their view, so the loudest voice doesn’t set the frame."
+          }
+        },
+        {
+          "title": "Who speaks, and what to ask",
+          "text": "Hear from other disciplines first, then designers, then leads.\n\nGood questions: what is the main benefit for the user? What other ways would deliver it? Which decision are you least sure about? What happens when it goes wrong?\n\nA polished mockup can hide missing decisions. Match the fidelity to how settled the idea is.",
+          "try": {
+            "type": "single",
+            "q": "In the discussion, who speaks first?",
+            "options": [
+              "People from other disciplines",
+              "The most senior lead in the room",
+              "The designer who made the work",
+              "Whoever is taking the notes"
+            ],
+            "answer": 0,
+            "explain": "Seniority speaking last stops juniors simply agreeing."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "How many people should be in a critique?",
+          "options": [
+            "Four to six",
+            "Two or three",
+            "Eight to ten",
+            "Everyone on the team"
+          ],
+          "answer": 0,
+          "explain": "More than six and the quiet people stop contributing."
+        },
+        {
+          "type": "single",
+          "q": "When should the presenter share the topic?",
+          "options": [
+            "24 to 48 hours ahead",
+            "At the start of the meeting",
+            "A week before",
+            "After the feedback round"
+          ],
+          "answer": 0,
+          "explain": "People need time to look at the context, and the presenter states the feedback they want."
+        },
+        {
+          "type": "single",
+          "q": "What kind of feedback does a critique ask for?",
+          "options": [
+            "Questions, not instructions",
+            "A list of required changes",
+            "A numeric score for each screen",
+            "A plain yes or no on the design"
+          ],
+          "answer": 0,
+          "explain": "The designer decides what to use. Questions open the work up instead of closing it."
+        },
+        {
+          "type": "single",
+          "q": "What is the form factor trap?",
+          "options": [
+            "A polished artifact hides undecided questions",
+            "Testing on only one device size",
+            "Designing a form before the data model exists",
+            "Putting too many fields on a single form"
+          ],
+          "answer": 0,
+          "explain": "Fidelity should match how settled the idea is. If nobody can name the user benefit, that is a finding."
+        },
+        {
+          "type": "single",
+          "q": "Why rotate roles like captain and note-taker?",
+          "options": [
+            "So the same voices don’t dominate",
+            "To keep every meeting a bit shorter",
+            "To give design leads more control",
+            "To avoid having to write an agenda"
+          ],
+          "answer": 0,
+          "explain": "Rotation spreads ownership and keeps the room from relying on one person."
+        }
+      ]
+    }
+  ]
+}

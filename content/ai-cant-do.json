@@ -1,144 +1,184 @@
 {
- "id": "ai-cant-do",
- "module": "ai-ux",
- "title": "5 Things AI Still Can’t Do for UX Research",
- "icon": "🚧",
- "intro": "AI can automate research activities. It can't yet produce trustworthy findings on its own.",
- "topics": [
-  {
-   "id": "main",
-   "title": "5 Things AI Still Can’t Do for UX Research",
-   "learn": [
+  "id": "ai-cant-do",
+  "module": "ai-ux",
+  "title": "5 Things AI Still Can’t Do for UX Research",
+  "icon": "🚧",
+  "intro": "AI can automate research activities. It can't yet produce trustworthy findings on its own.",
+  "topics": [
     {
-     "title": "The five gaps",
-     "text": "**1. Replace real users** — synthetic users sound human and confirm what you already believe\n**2. Design good research questions** — knowing when to add context, probe or steer is judgement\n**3. Model complex interactions** — see below\n**4. Choose the right statistics** — running code isn't choosing a test\n**5. Interpret results against the decision** — the finding has to answer a specific question",
-     "try": {
-      "type": "single",
-      "q": "Which gap is “running code isn't the same as choosing a test”?",
-      "options": [
-       "Choosing the right statistics",
-       "Modelling complex interactions",
-       "Designing research questions",
-       "Interpreting results"
+      "id": "main",
+      "title": "5 Things AI Still Can’t Do for UX Research",
+      "learn": [
+        {
+          "title": "The five gaps",
+          "text": "**1. Replace real users** — synthetic users sound human and confirm what you already believe\n**2. Design good research questions** — knowing when to add context, probe or steer is judgement\n**3. Model complex interactions** — see below\n**4. Choose the right statistics** — running code isn't choosing a test\n**5. Interpret results against the decision** — the finding has to answer a specific question",
+          "try": {
+            "type": "single",
+            "q": "Which gap is “running code isn't the same as choosing a test”?",
+            "options": [
+              "Choosing the right statistics",
+              "Modelling complex interactions",
+              "Designing research questions",
+              "Interpreting results"
+            ],
+            "answer": 0,
+            "explain": "The calculation is easy; the choice is the expertise."
+          }
+        },
+        {
+          "title": "The GOMS-KLM experiment",
+          "text": "Calabro gave a model his operator table, the workflows and screenshots, and asked for a GOMS-KLM analysis.\n\nIt **missed operators, misread interface elements and invented interactions**.\n\nFixing the output took about **six times longer** than doing the analysis by hand.\n\n*Newer models may do better — the specific result is tied to the model of the day.*",
+          "try": {
+            "type": "single",
+            "q": "What made the AI's GOMS-KLM output expensive?",
+            "options": [
+              "Checking and correcting it took longer than doing it",
+              "It refused to complete the analysis without more detail",
+              "It required a paid model tier",
+              "The output format was unusable"
+            ],
+            "answer": 0,
+            "explain": "About six times the manual effort."
+          },
+          "visual": {
+            "type": "compare",
+            "left": {
+              "label": "Manual analysis",
+              "items": [
+                "1× baseline",
+                "Known method",
+                "Verifiable step by step"
+              ]
+            },
+            "right": {
+              "label": "Fixing the AI output",
+              "items": [
+                "≈6× longer",
+                "Missed operators",
+                "Invented interactions"
+              ]
+            }
+          }
+        },
+        {
+          "title": "Where prompting habits hurt",
+          "text": "Habits from writing neutral prompts can **strip out the context a good research question needs**.\n\nA research question often needs a scenario, a moment in time, or a deliberate frame — the opposite of a clean, context-free prompt.\n\nThat's the same point as the interview-questions article: neutrality is a tool, not the goal.",
+          "try": {
+            "type": "single",
+            "q": "How can prompt-writing habits damage a research question?",
+            "options": [
+              "They remove context the question needs",
+              "They make questions too long",
+              "They introduce subtly leading language into probes",
+              "They favour closed questions"
+            ],
+            "answer": 0,
+            "explain": "Clean and context-free produces flat answers."
+          }
+        },
+        {
+          "title": "Guardrails when AI does help",
+          "text": "**Build disconfirmation into every prompt**, and run a separate pass for edge cases.\n\n**Define failure:** “if the transcript doesn’t support a code, return NULL and flag it.”\n\nKeep a few hand-coded transcripts as a **regression set**, and re-run them after any model change. Record the model and effort level in your methods.",
+          "try": {
+            "type": "single",
+            "q": "What should the model return when a transcript doesn’t support a code?",
+            "options": [
+              "NULL, flagged for review",
+              "The closest matching code",
+              "A best-guess code with a caveat",
+              "An empty summary"
+            ],
+            "answer": 0,
+            "explain": "Without a failure rule, models fill gaps with plausible guesses."
+          }
+        }
       ],
-      "answer": 0,
-      "explain": "The calculation is easy; the choice is the expertise."
-     }
-    },
-    {
-     "title": "The GOMS-KLM experiment",
-     "text": "Calabro gave a model his operator table, the workflows and screenshots, and asked for a GOMS-KLM analysis.\n\nIt **missed operators, misread interface elements and invented interactions**.\n\nFixing the output took about **six times longer** than doing the analysis by hand.\n\n*Newer models may do better — the specific result is tied to the model of the day.*",
-     "try": {
-      "type": "single",
-      "q": "What made the AI's GOMS-KLM output expensive?",
-      "options": [
-       "Checking and correcting it took longer than doing it",
-       "It refused to complete the analysis without more detail",
-       "It required a paid model tier",
-       "The output format was unusable"
-      ],
-      "answer": 0,
-      "explain": "About six times the manual effort."
-     },
-     "visual": {
-      "type": "compare",
-      "left": {
-       "label": "Manual analysis",
-       "items": [
-        "1× baseline",
-        "Known method",
-        "Verifiable step by step"
-       ]
-      },
-      "right": {
-       "label": "Fixing the AI output",
-       "items": [
-        "≈6× longer",
-        "Missed operators",
-        "Invented interactions"
-       ]
-      }
-     }
-    },
-    {
-     "title": "Where prompting habits hurt",
-     "text": "Habits from writing neutral prompts can **strip out the context a good research question needs**.\n\nA research question often needs a scenario, a moment in time, or a deliberate frame — the opposite of a clean, context-free prompt.\n\nThat's the same point as the interview-questions article: neutrality is a tool, not the goal.",
-     "try": {
-      "type": "single",
-      "q": "How can prompt-writing habits damage a research question?",
-      "options": [
-       "They remove context the question needs",
-       "They make questions too long",
-       "They introduce subtly leading language into probes",
-       "They favour closed questions"
-      ],
-      "answer": 0,
-      "explain": "Clean and context-free produces flat answers."
-     }
+      "test": [
+        {
+          "type": "single",
+          "q": "What can AI do well here?",
+          "options": [
+            "Automate research activities",
+            "Produce trustworthy findings",
+            "Replace a junior researcher",
+            "Choose appropriate methods"
+          ],
+          "answer": 0,
+          "explain": "Activities, not conclusions."
+        },
+        {
+          "type": "single",
+          "q": "Why can't synthetic users surprise you?",
+          "options": [
+            "They confirm what you already believe",
+            "They are too slow to respond",
+            "They lack demographic diversity in their answers",
+            "They can't be recorded"
+          ],
+          "answer": 0,
+          "explain": "And surprise is where the best findings come from."
+        },
+        {
+          "type": "single",
+          "q": "What did the model get wrong in the GOMS-KLM test?",
+          "options": [
+            "It missed operators and invented interactions",
+            "It used the wrong operator times",
+            "It refused to work from the screenshots provided",
+            "It produced an unreadable table"
+          ],
+          "answer": 0,
+          "explain": "Given the operator table, workflows and screenshots."
+        },
+        {
+          "type": "single",
+          "q": "What is the fifth gap?",
+          "options": [
+            "Interpreting results against the decision",
+            "Recruiting and scheduling research participants",
+            "Writing the readout",
+            "Running the analysis"
+          ],
+          "answer": 0,
+          "explain": "A finding only matters in relation to a specific choice."
+        },
+        {
+          "type": "single",
+          "q": "How should the six-times figure be read today?",
+          "options": [
+            "As tied to the model of the day",
+            "As a stable benchmark",
+            "As an underestimate",
+            "As applying to every kind of AI analysis"
+          ],
+          "answer": 0,
+          "explain": "Newer models may do better; the five gaps are the durable part."
+        },
+        {
+          "type": "single",
+          "q": "A model update ships. What do you re-run?",
+          "options": [
+            "A set of hand-coded transcripts",
+            "The whole study, from the first step",
+            "Nothing, because newer is better",
+            "Only the final summary prompt"
+          ],
+          "answer": 0,
+          "explain": "A model change is an instrument change. A regression set shows whether results moved."
+        },
+        {
+          "type": "single",
+          "q": "What does a disconfirmation prompt ask for?",
+          "options": [
+            "Evidence against the theme",
+            "A shorter summary of the theme",
+            "Extra quotes that back the theme",
+            "A confidence score for the theme"
+          ],
+          "answer": 0,
+          "explain": "Models tend to agree with the framing they are given. Ask them to argue the other side."
+        }
+      ]
     }
-   ],
-   "test": [
-    {
-     "type": "single",
-     "q": "What can AI do well here?",
-     "options": [
-      "Automate research activities",
-      "Produce trustworthy findings",
-      "Replace a junior researcher",
-      "Choose appropriate methods"
-     ],
-     "answer": 0,
-     "explain": "Activities, not conclusions."
-    },
-    {
-     "type": "single",
-     "q": "Why can't synthetic users surprise you?",
-     "options": [
-      "They confirm what you already believe",
-      "They are too slow to respond",
-      "They lack demographic diversity in their answers",
-      "They can't be recorded"
-     ],
-     "answer": 0,
-     "explain": "And surprise is where the best findings come from."
-    },
-    {
-     "type": "single",
-     "q": "What did the model get wrong in the GOMS-KLM test?",
-     "options": [
-      "It missed operators and invented interactions",
-      "It used the wrong operator times",
-      "It refused to work from the screenshots provided",
-      "It produced an unreadable table"
-     ],
-     "answer": 0,
-     "explain": "Given the operator table, workflows and screenshots."
-    },
-    {
-     "type": "single",
-     "q": "What is the fifth gap?",
-     "options": [
-      "Interpreting results against the decision",
-      "Recruiting and scheduling research participants",
-      "Writing the readout",
-      "Running the analysis"
-     ],
-     "answer": 0,
-     "explain": "A finding only matters in relation to a specific choice."
-    },
-    {
-     "type": "single",
-     "q": "How should the six-times figure be read today?",
-     "options": [
-      "As tied to the model of the day",
-      "As a stable benchmark",
-      "As an underestimate",
-      "As applying to every kind of AI analysis"
-     ],
-     "answer": 0,
-     "explain": "Newer models may do better; the five gaps are the durable part."
-    }
-   ]
-  }
- ]
+  ]
 }

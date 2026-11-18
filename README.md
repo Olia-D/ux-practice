@@ -5,12 +5,12 @@ Practice ux
 
 Two separate things live next to the app. Each can be used without the other.
 
-### The book — *UX Research in the Wild*, reference edition (100 chapters)
+### The book — *UX Research in the Wild*, reference edition (104 chapters)
 Single self-contained HTML file; opens offline in any browser.
 - [Download the zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/ux-research-in-the-wild-book.zip) · or the file itself: [`book/ux-research-in-the-wild.html`](book/ux-research-in-the-wild.html) (use "Download raw file")
 
 ### The skills — UX design toolkit for Claude
-Six skills, each in `skills/<name>/` and as an upload-ready zip (SKILL.md at the zip root).
+Seven skills, each in `skills/<name>/` and as an upload-ready zip (SKILL.md at the zip root).
 
 | Skill | Download |
 |---|---|
@@ -20,13 +20,18 @@ Six skills, each in `skills/<name>/` and as an upload-ready zip (SKILL.md at the
 | ai-ux-patterns | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/skill-ai-ux-patterns.zip) |
 | data-visualization | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/skill-data-visualization.zip) |
 | jtbd-research | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/skill-jtbd-research.zip) |
-| **All six** | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/ux-skills-all.zip) |
+| ux-writing | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/skill-ux-writing.zip) |
+| **All seven** | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/ux-skills-all.zip) |
 
 **How to install and use them:** [`skills/HOW-TO-USE.md`](skills/HOW-TO-USE.md). In short, upload one zip per skill under Settings → Skills on claude.ai, or copy the folders into `~/.claude/skills/` for Claude Code, then just ask.
 
+## Design
+
+Monochrome with one accent: green marks outcomes only (done, correct, passed). Type is Schibsted Grotesk (OFL, in `fonts/`). Colours, radii and type live in `tokens.css`, shared by the app and the book. The book inlines the tokens and an embedded Latin font subset, so it still works as a single offline file. After editing `scripts/book.css` or the book content, run `python3 scripts/book-restyle.py`.
+
 ## Before you push
 
-Run `python3 scripts/check-content.py`. It fails on broken content (bad JSON, missing files, answer index out of range, duplicate options) and warns when the length of the options gives the answer away.
+Rebuild the zips with `scripts/build-downloads.sh` after changing a skill or the book. Run `python3 scripts/check-content.py`. It fails on broken content (bad JSON, missing files, answer index out of range, duplicate options) and warns when the length of the options gives the answer away.
 
 ## Routes
 

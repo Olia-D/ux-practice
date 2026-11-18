@@ -1,144 +1,184 @@
 {
- "id": "c-dataviz",
- "module": "data-viz",
- "title": "Charts and Dashboards That Lead to Decisions",
- "icon": "🎨",
- "intro": "Start from the decision, pick the chart by purpose, then strip it to the data.",
- "topics": [
-  {
-   "id": "main",
-   "title": "Charts and Dashboards That Lead to Decisions",
-   "learn": [
+  "id": "c-dataviz",
+  "module": "data-viz",
+  "title": "Charts and Dashboards That Lead to Decisions",
+  "icon": "🎨",
+  "intro": "Start from the decision, pick the chart by purpose, then strip it to the data.",
+  "topics": [
     {
-     "title": "Chart design rules",
-     "text": "• **Label data directly** instead of using a legend\n• **Titles state the takeaway** — “Churn rose 3 pts after the price change”\n• **Bars start at zero**; lines may not, if the range is obvious\n• About **five gridlines**, no more\n• **Grey for context, one colour for the point**; five categorical colours at most\n• **Never rainbow scales**; red and green only with a second cue\n• **Small multiples** with shared scales instead of one crowded chart",
-     "try": {
-      "type": "single",
-      "q": "What should a chart title say?",
-      "options": [
-       "The takeaway",
-       "The metric and the date range",
-       "The data source",
-       "The chart type and dimensions"
+      "id": "main",
+      "title": "Charts and Dashboards That Lead to Decisions",
+      "learn": [
+        {
+          "title": "Chart design rules",
+          "text": "• **Label data directly** instead of using a legend\n• **Titles state the takeaway** — “Churn rose 3 pts after the price change”\n• **Bars start at zero**; lines may not, if the range is obvious\n• About **five gridlines**, no more\n• **Grey for context, one colour for the point**; five categorical colours at most\n• **Never rainbow scales**; red and green only with a second cue\n• **Small multiples** with shared scales instead of one crowded chart",
+          "try": {
+            "type": "single",
+            "q": "What should a chart title say?",
+            "options": [
+              "The takeaway",
+              "The metric and the date range",
+              "The data source",
+              "The chart type and dimensions"
+            ],
+            "answer": 0,
+            "explain": "“Churn rose 3 pts after the price change” does the reader's work for them."
+          }
+        },
+        {
+          "title": "Dashboard trade-offs",
+          "text": "From Bach et al.'s analysis of **144 dashboards and 42 patterns**: four forces trade against each other.\n\n**Screen space** → less room means more **abstraction** → or more **pages** → or more **interaction** (drill-down).\n\nSqueeze one and the stress moves to the others. There is no layout that escapes the trade — only a deliberate choice about which pressure you accept.",
+          "try": {
+            "type": "single",
+            "q": "You cut the dashboard to one screen. What happens to the other three forces?",
+            "options": [
+              "They take the strain",
+              "They stay unchanged",
+              "Interaction becomes unnecessary",
+              "Abstraction decreases"
+            ],
+            "answer": 0,
+            "explain": "Screen space, abstraction, pages and interaction trade against each other."
+          },
+          "visual": {
+            "type": "compare",
+            "left": {
+              "label": "Squeeze screen space",
+              "items": [
+                "More aggregation",
+                "More pages",
+                "More drill-down"
+              ]
+            },
+            "right": {
+              "label": "The honest options",
+              "items": [
+                "Decide which pressure to accept",
+                "Split into small multiples",
+                "Sometimes: no dashboard at all"
+              ]
+            }
+          }
+        },
+        {
+          "title": "Sometimes the answer isn't a dashboard",
+          "text": "If the question has one answer, an **insight** beats a dashboard: a sentence, a number and what to do about it.\n\nDashboards earn their place when people need to monitor, compare and investigate repeatedly.\n\nAnd accessibility applies to charts too (Chartability): don't rely on colour alone, make the data available as a table, and check that the chart is navigable without a mouse.",
+          "try": {
+            "type": "single",
+            "q": "The team needs the answer to one recurring question. What might serve better than a dashboard?",
+            "options": [
+              "A stated insight with a recommendation",
+              "A single-chart dashboard",
+              "An automated weekly export",
+              "An alert threshold"
+            ],
+            "answer": 0,
+            "explain": "“You might not need a dashboard” is one of the findings."
+          }
+        },
+        {
+          "title": "Should it be a dashboard at all?",
+          "text": "Fewer than one in ten US adults aged 16–65 reach proficient numeracy, and people read single values more easily than trends. Dashboards earn their place for expert analysts; for most users, **an insight placed where the decision happens** often works better.\n\nDashboards trade off **screen space, pages, abstraction and interaction**: reducing one stresses the others. And show the **meta-information**: data source, last update, disclaimers.",
+          "try": {
+            "type": "single",
+            "q": "For most users, what often beats a dashboard?",
+            "options": [
+              "An insight shown at the decision",
+              "More charts packed onto one screen",
+              "A larger and richer filter bar",
+              "A prominent export-to-CSV button"
+            ],
+            "answer": 0,
+            "explain": "People read single values far more easily than they interpret charts."
+          }
+        }
       ],
-      "answer": 0,
-      "explain": "“Churn rose 3 pts after the price change” does the reader's work for them."
-     }
-    },
-    {
-     "title": "Dashboard trade-offs",
-     "text": "From Bach et al.'s analysis of **144 dashboards and 42 patterns**: four forces trade against each other.\n\n**Screen space** → less room means more **abstraction** → or more **pages** → or more **interaction** (drill-down).\n\nSqueeze one and the stress moves to the others. There is no layout that escapes the trade — only a deliberate choice about which pressure you accept.",
-     "try": {
-      "type": "single",
-      "q": "You cut the dashboard to one screen. What happens to the other three forces?",
-      "options": [
-       "They take the strain",
-       "They stay unchanged",
-       "Interaction becomes unnecessary",
-       "Abstraction decreases"
-      ],
-      "answer": 0,
-      "explain": "Screen space, abstraction, pages and interaction trade against each other."
-     },
-     "visual": {
-      "type": "compare",
-      "left": {
-       "label": "Squeeze screen space",
-       "items": [
-        "More aggregation",
-        "More pages",
-        "More drill-down"
-       ]
-      },
-      "right": {
-       "label": "The honest options",
-       "items": [
-        "Decide which pressure to accept",
-        "Split into small multiples",
-        "Sometimes: no dashboard at all"
-       ]
-      }
-     }
-    },
-    {
-     "title": "Sometimes the answer isn't a dashboard",
-     "text": "If the question has one answer, an **insight** beats a dashboard: a sentence, a number and what to do about it.\n\nDashboards earn their place when people need to monitor, compare and investigate repeatedly.\n\nAnd accessibility applies to charts too (Chartability): don't rely on colour alone, make the data available as a table, and check that the chart is navigable without a mouse.",
-     "try": {
-      "type": "single",
-      "q": "The team needs the answer to one recurring question. What might serve better than a dashboard?",
-      "options": [
-       "A stated insight with a recommendation",
-       "A single-chart dashboard",
-       "An automated weekly export",
-       "An alert threshold"
-      ],
-      "answer": 0,
-      "explain": "“You might not need a dashboard” is one of the findings."
-     }
+      "test": [
+        {
+          "type": "single",
+          "q": "Why label data directly rather than use a legend?",
+          "options": [
+            "It removes a look-up step",
+            "Legends fail on mobile",
+            "It saves vertical space",
+            "Legends can't be translated"
+          ],
+          "answer": 0,
+          "explain": "The reader shouldn't have to match colours to names."
+        },
+        {
+          "type": "single",
+          "q": "When may a line chart's axis not start at zero?",
+          "options": [
+            "When the range is obvious",
+            "Never",
+            "Always, for readability",
+            "When the trend is upward"
+          ],
+          "answer": 0,
+          "explain": "Bars must start at zero; lines are judged differently."
+        },
+        {
+          "type": "single",
+          "q": "How many categorical colours at most?",
+          "options": [
+            "Five",
+            "Three",
+            "Eight",
+            "As many as the palette provides"
+          ],
+          "answer": 0,
+          "explain": "Grey for context, one colour for the point."
+        },
+        {
+          "type": "single",
+          "q": "What did Bach et al. analyse?",
+          "options": [
+            "144 dashboards and 42 patterns",
+            "42 dashboards in 144 companies",
+            "A survey of 144 analysts",
+            "144 charts across 42 tools"
+          ],
+          "answer": 0,
+          "explain": "The source of the four-way trade-off."
+        },
+        {
+          "type": "single",
+          "q": "What does red and green always need?",
+          "options": [
+            "A second cue",
+            "A legend",
+            "A higher contrast ratio",
+            "A colourblind-safe palette only"
+          ],
+          "answer": 0,
+          "explain": "Shape, label or position, so colour isn't carrying the meaning alone."
+        },
+        {
+          "type": "single",
+          "q": "Which of these is NOT one of the four dashboard trade-offs?",
+          "options": [
+            "Colour palette",
+            "Screen space",
+            "Level of abstraction",
+            "Amount of interaction"
+          ],
+          "answer": 0,
+          "explain": "The four are screen space, number of pages, abstraction and interaction."
+        },
+        {
+          "type": "single",
+          "q": "What counts as meta-information on a dashboard?",
+          "options": [
+            "Source, last update and disclaimers",
+            "The chart legend and axis labels",
+            "The filter controls above the charts",
+            "The page title and the date range"
+          ],
+          "answer": 0,
+          "explain": "It tells readers whether they can trust the numbers."
+        }
+      ]
     }
-   ],
-   "test": [
-    {
-     "type": "single",
-     "q": "Why label data directly rather than use a legend?",
-     "options": [
-      "It removes a look-up step",
-      "Legends fail on mobile",
-      "It saves vertical space",
-      "Legends can't be translated"
-     ],
-     "answer": 0,
-     "explain": "The reader shouldn't have to match colours to names."
-    },
-    {
-     "type": "single",
-     "q": "When may a line chart's axis not start at zero?",
-     "options": [
-      "When the range is obvious",
-      "Never",
-      "Always, for readability",
-      "When the trend is upward"
-     ],
-     "answer": 0,
-     "explain": "Bars must start at zero; lines are judged differently."
-    },
-    {
-     "type": "single",
-     "q": "How many categorical colours at most?",
-     "options": [
-      "Five",
-      "Three",
-      "Eight",
-      "As many as the palette provides"
-     ],
-     "answer": 0,
-     "explain": "Grey for context, one colour for the point."
-    },
-    {
-     "type": "single",
-     "q": "What did Bach et al. analyse?",
-     "options": [
-      "144 dashboards and 42 patterns",
-      "42 dashboards in 144 companies",
-      "A survey of 144 analysts",
-      "144 charts across 42 tools"
-     ],
-     "answer": 0,
-     "explain": "The source of the four-way trade-off."
-    },
-    {
-     "type": "single",
-     "q": "What does red and green always need?",
-     "options": [
-      "A second cue",
-      "A legend",
-      "A higher contrast ratio",
-      "A colourblind-safe palette only"
-     ],
-     "answer": 0,
-     "explain": "Shape, label or position, so colour isn't carrying the meaning alone."
-    }
-   ]
-  }
- ]
+  ]
 }

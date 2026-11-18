@@ -271,7 +271,7 @@
           (hasContent ? '<div class="art-actions">' +
             '<a class="btn small' + (learned.done ? ' secondary' : '') + '" href="#/a/' + a.id + '/learn/0">' + (learned.done ? 'Review cards' : 'Start learning') + '</a>' +
             '<a class="btn small secondary" href="#/a/' + a.id + '/test">' + (quizDone ? 'Retake quiz' : 'Quiz') + '</a>' +
-            '<span class="score">' + (quizDone ? r.best + ' of 5 correct' : '5 questions') + '</span>' +
+            '<span class="score">' + (quizDone ? r.best + ' of ' + (a.q || 5) + ' correct' : (a.q || 5) + ' questions') + '</span>' +
           '</div>' : '<p class="note" style="margin-top:8px">Content coming soon</p>') +
           (a.source ? '<div class="source"><a href="' + esc(a.source) + '" target="_blank" rel="noopener">Read the original article ' + ICON.out + '</a></div>'
                     : a.sourceNote ? '<div class="source">Source: ' + esc(a.sourceNote) + '</div>' : '') +

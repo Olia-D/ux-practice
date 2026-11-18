@@ -1,144 +1,184 @@
 {
- "id": "accessibility-first",
- "module": "accessibility",
- "title": "Accessibility First, Not Last",
- "icon": "🫱",
- "intro": "Watching an AAC app give his non-verbal son a voice led Calabro to a rule he's used since 2015: usability is largely a subset of accessibility.",
- "topics": [
-  {
-   "id": "main",
-   "title": "Accessibility First, Not Last",
-   "learn": [
+  "id": "accessibility-first",
+  "module": "accessibility",
+  "title": "Accessibility First, Not Last",
+  "icon": "🫱",
+  "intro": "Watching an AAC app give his non-verbal son a voice led Calabro to a rule he's used since 2015: usability is largely a subset of accessibility.",
+  "topics": [
     {
-     "title": "Before the app",
-     "text": "Asking for juice could mean twenty minutes of wrong guesses, with Seth getting more frustrated at each one.\n\nThe LAMP communication app changed that — and changed how Calabro works. Since 2015 he errs on the side of accessibility best practice, while noting the rare cases where it conflicts with usability guidance.",
-     "try": {
-      "type": "single",
-      "q": "What rule did the experience give him?",
-      "options": [
-       "Usability is largely a subset of accessibility",
-       "Accessibility and usability are separate disciplines",
-       "Assistive technology should be tested separately",
-       "Accessibility matters most in public-sector products"
+      "id": "main",
+      "title": "Accessibility First, Not Last",
+      "learn": [
+        {
+          "title": "Before the app",
+          "text": "Asking for juice could mean twenty minutes of wrong guesses, with Seth getting more frustrated at each one.\n\nThe LAMP communication app changed that — and changed how Calabro works. Since 2015 he errs on the side of accessibility best practice, while noting the rare cases where it conflicts with usability guidance.",
+          "try": {
+            "type": "single",
+            "q": "What rule did the experience give him?",
+            "options": [
+              "Usability is largely a subset of accessibility",
+              "Accessibility and usability are separate disciplines",
+              "Assistive technology should be tested separately",
+              "Accessibility matters most in public-sector products"
+            ],
+            "answer": 0,
+            "explain": "So optimise for accessibility and everyone benefits."
+          }
+        },
+        {
+          "title": "Two starting points",
+          "text": "**Aesthetics first:** beauty is decided, usability is layered on, the accessible version hides in Settings, and users with impairments fix it themselves — often finding it still fails the basics afterwards.\n\n**Accessibility first:** constraints are set before the visuals, the product is accessible by default, and no burden is shifted to the user.",
+          "try": {
+            "type": "single",
+            "q": "What is the core question Calabro asks of Apple's Liquid Glass?",
+            "options": [
+              "Why wasn't the accessible version the default?",
+              "Why wasn't it tested with more users?",
+              "Why does it need so much GPU power?",
+              "Why was it announced before it was finished?"
+            ],
+            "answer": 0,
+            "explain": "“Because they chose not to.”"
+          },
+          "visual": {
+            "type": "compare",
+            "left": {
+              "label": "Aesthetics first",
+              "items": [
+                "Accessible version in Settings",
+                "Users with impairments adjust it",
+                "Retrofit after the fact"
+              ]
+            },
+            "right": {
+              "label": "Accessibility first",
+              "items": [
+                "Accessible by default",
+                "No burden on the user",
+                "Constraints before visuals"
+              ]
+            }
+          }
+        },
+        {
+          "title": "No excuses at either end",
+          "text": "He had already argued that scrappy startups can't use “no time” as a reason to skip accessibility.\n\nIf that doesn't hold for them, it certainly doesn't hold for the world's largest design teams.\n\n*Context: the critique was written at the June 2025 announcement and Apple has adjusted the design since. The principle doesn't date.*",
+          "try": {
+            "type": "single",
+            "q": "Who does the “no time for accessibility” excuse apply to, in his view?",
+            "options": [
+              "Nobody",
+              "Only teams without a designer",
+              "Only pre-revenue startups",
+              "Only teams without a design system"
+            ],
+            "answer": 0,
+            "explain": "If a startup can't use it, neither can a company with Apple's resources."
+          }
+        },
+        {
+          "title": "Where to spend the effort",
+          "text": "In the WebAIM screen reader survey (#9, 2021), about **68%** navigate a long page by **headings first**. Landmarks are first for only about 3%. About **90%** use a screen reader on a **phone**.\n\nAudit in five layers: **automated, keyboard, screen reader, visual and a full task flow.**\n\nThe survey is from 2021. Check for a newer edition before quoting.",
+          "try": {
+            "type": "single",
+            "q": "How do most screen-reader users scan a long page first?",
+            "options": [
+              "By headings",
+              "By landmarks",
+              "By links",
+              "By reading it all"
+            ],
+            "answer": 0,
+            "explain": "Heading structure pays off most."
+          }
+        }
       ],
-      "answer": 0,
-      "explain": "So optimise for accessibility and everyone benefits."
-     }
-    },
-    {
-     "title": "Two starting points",
-     "text": "**Aesthetics first:** beauty is decided, usability is layered on, the accessible version hides in Settings, and users with impairments fix it themselves — often finding it still fails the basics afterwards.\n\n**Accessibility first:** constraints are set before the visuals, the product is accessible by default, and no burden is shifted to the user.",
-     "try": {
-      "type": "single",
-      "q": "What is the core question Calabro asks of Apple's Liquid Glass?",
-      "options": [
-       "Why wasn't the accessible version the default?",
-       "Why wasn't it tested with more users?",
-       "Why does it need so much GPU power?",
-       "Why was it announced before it was finished?"
-      ],
-      "answer": 0,
-      "explain": "“Because they chose not to.”"
-     },
-     "visual": {
-      "type": "compare",
-      "left": {
-       "label": "Aesthetics first",
-       "items": [
-        "Accessible version in Settings",
-        "Users with impairments adjust it",
-        "Retrofit after the fact"
-       ]
-      },
-      "right": {
-       "label": "Accessibility first",
-       "items": [
-        "Accessible by default",
-        "No burden on the user",
-        "Constraints before visuals"
-       ]
-      }
-     }
-    },
-    {
-     "title": "No excuses at either end",
-     "text": "He had already argued that scrappy startups can't use “no time” as a reason to skip accessibility.\n\nIf that doesn't hold for them, it certainly doesn't hold for the world's largest design teams.\n\n*Context: the critique was written at the June 2025 announcement and Apple has adjusted the design since. The principle doesn't date.*",
-     "try": {
-      "type": "single",
-      "q": "Who does the “no time for accessibility” excuse apply to, in his view?",
-      "options": [
-       "Nobody",
-       "Only teams without a designer",
-       "Only pre-revenue startups",
-       "Only teams without a design system"
-      ],
-      "answer": 0,
-      "explain": "If a startup can't use it, neither can a company with Apple's resources."
-     }
+      "test": [
+        {
+          "type": "single",
+          "q": "What does AAC technology do in this story?",
+          "options": [
+            "Gives a non-verbal child a way to communicate",
+            "Transcribes speech for deaf users",
+            "Magnifies the screen for low vision",
+            "Reads interfaces aloud"
+          ],
+          "answer": 0,
+          "explain": "The LAMP app replaced twenty minutes of guessing."
+        },
+        {
+          "type": "single",
+          "q": "Since when has Calabro applied this rule?",
+          "options": [
+            "2015",
+            "2010",
+            "2020",
+            "2024"
+          ],
+          "answer": 0,
+          "explain": "Nine years into his UX career."
+        },
+        {
+          "type": "single",
+          "q": "What does “accessible by default” mean in practice?",
+          "options": [
+            "The accessible configuration ships as the standard one",
+            "Accessibility settings are easy to find",
+            "An accessibility statement is published",
+            "The product passes an automated audit"
+          ],
+          "answer": 0,
+          "explain": "Not an option the user has to go and switch on."
+        },
+        {
+          "type": "single",
+          "q": "What is the burden the article objects to?",
+          "options": [
+            "Users with impairments adjusting every control",
+            "Designers learning WCAG criteria",
+            "Engineers retrofitting ARIA",
+            "Teams documenting accessibility decisions"
+          ],
+          "answer": 0,
+          "explain": "The people least able to carry it end up carrying it."
+        },
+        {
+          "type": "single",
+          "q": "Does Calabro say accessibility and usability guidance never conflict?",
+          "options": [
+            "No — he notes rare exceptions",
+            "Yes, they always align",
+            "He says the conflicts are frequent",
+            "He says usability should win when they clash"
+          ],
+          "answer": 0,
+          "explain": "He errs toward accessibility while acknowledging the rare contradictions."
+        },
+        {
+          "type": "single",
+          "q": "Roughly how many screen-reader users also use one on a mobile device?",
+          "options": [
+            "About 90%",
+            "About 30%",
+            "Under 10%",
+            "About half"
+          ],
+          "answer": 0,
+          "explain": "Test on a phone, not only on desktop."
+        },
+        {
+          "type": "single",
+          "q": "Which of these is NOT one of the five audit layers?",
+          "options": [
+            "A competitor benchmark",
+            "Keyboard testing",
+            "Screen reader testing",
+            "A full task flow"
+          ],
+          "answer": 0,
+          "explain": "The five are automated, keyboard, screen reader, visual and flow."
+        }
+      ]
     }
-   ],
-   "test": [
-    {
-     "type": "single",
-     "q": "What does AAC technology do in this story?",
-     "options": [
-      "Gives a non-verbal child a way to communicate",
-      "Transcribes speech for deaf users",
-      "Magnifies the screen for low vision",
-      "Reads interfaces aloud"
-     ],
-     "answer": 0,
-     "explain": "The LAMP app replaced twenty minutes of guessing."
-    },
-    {
-     "type": "single",
-     "q": "Since when has Calabro applied this rule?",
-     "options": [
-      "2015",
-      "2010",
-      "2020",
-      "2024"
-     ],
-     "answer": 0,
-     "explain": "Nine years into his UX career."
-    },
-    {
-     "type": "single",
-     "q": "What does “accessible by default” mean in practice?",
-     "options": [
-      "The accessible configuration ships as the standard one",
-      "Accessibility settings are easy to find",
-      "An accessibility statement is published",
-      "The product passes an automated audit"
-     ],
-     "answer": 0,
-     "explain": "Not an option the user has to go and switch on."
-    },
-    {
-     "type": "single",
-     "q": "What is the burden the article objects to?",
-     "options": [
-      "Users with impairments adjusting every control",
-      "Designers learning WCAG criteria",
-      "Engineers retrofitting ARIA",
-      "Teams documenting accessibility decisions"
-     ],
-     "answer": 0,
-     "explain": "The people least able to carry it end up carrying it."
-    },
-    {
-     "type": "single",
-     "q": "Does Calabro say accessibility and usability guidance never conflict?",
-     "options": [
-      "No — he notes rare exceptions",
-      "Yes, they always align",
-      "He says the conflicts are frequent",
-      "He says usability should win when they clash"
-     ],
-     "answer": 0,
-     "explain": "He errs toward accessibility while acknowledging the rare contradictions."
-    }
-   ]
-  }
- ]
+  ]
 }

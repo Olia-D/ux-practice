@@ -1,0 +1,142 @@
+{
+  "id": "c-hidden-disabled",
+  "module": "controls",
+  "title": "Hidden, Disabled or Read-Only?",
+  "icon": "🙈",
+  "intro": "Three states, three meanings. Pick by asking what the user should know about the feature, not by what is easiest to build.",
+  "topics": [
+    {
+      "id": "main",
+      "title": "Hidden, Disabled or Read-Only?",
+      "learn": [
+        {
+          "title": "Three states, three meanings",
+          "text": "**Hidden** — this user can never use it.\n**Read-only** — a value the system makes, or one edited somewhere else.\n**Disabled** — it exists, but this user can’t use it right now.\n\nThe choice is a product decision. It tells people what the product is and what they can expect from it.",
+          "try": {
+            "type": "single",
+            "q": "A field shows an account ID the system generates. Users change it nowhere. Which state fits?",
+            "options": [
+              "Read-only, with a hint if editable elsewhere",
+              "Disabled, with a note about why it is greyed out",
+              "Hidden, since nobody can change it anyway",
+              "Editable, with validation on every keystroke"
+            ],
+            "answer": 0,
+            "explain": "The value is system-made, so people can see it but not edit it. Add a hint where it can be changed, if anywhere."
+          },
+          "visual": {
+            "type": "compare",
+            "left": {
+              "label": "Hide it when",
+              "items": [
+                "The user can never use it",
+                "It is irrelevant to their role"
+              ]
+            },
+            "right": {
+              "label": "Disable it when",
+              "items": [
+                "The user may use it later",
+                "A reason can be given"
+              ]
+            }
+          }
+        },
+        {
+          "title": "Ask the first question first",
+          "text": "Before choosing a state, ask: **should this feature be limited at all?**\n\nIt may be irrelevant, not allowed for this role, or temporarily unavailable. Each leads somewhere different.\n\nIf the user can never interact with it, hide it — but still decide when, how and to whom it appears, so the product doesn’t look inconsistent between roles.",
+          "try": {
+            "type": "single",
+            "q": "A Delete button is irrelevant to the Viewer role, which can never delete. What fits best?",
+            "options": [
+              "Hide it, and plan how it appears elsewhere",
+              "Disable it and explain why in a tooltip",
+              "Make it read-only for this role",
+              "Show it with a warning when pressed"
+            ],
+            "answer": 0,
+            "explain": "If a user can never use something, a disabled control only teaches them to hunt for a way to unlock it."
+          }
+        },
+        {
+          "title": "A disabled control needs a reason",
+          "text": "A disabled control must say **why** and **what unlocks it**: a missing permission, a missing prerequisite, a temporary state.\n\nWCAG 2.2 AA doesn’t require contrast on disabled controls, but people still need to read them. Keep the text legible and, ideally, focusable so a screen reader announces the reason.\n\n**Never hide buttons or filters by default.** People expect them to stay where they were.",
+          "try": {
+            "type": "single",
+            "q": "Publish is unavailable until a title is added. What should the disabled button do?",
+            "options": [
+              "Stay focusable and say a title is needed",
+              "Disappear until the title is filled in",
+              "Stay grey, with no explanation at all",
+              "Turn red and show an error on hover only"
+            ],
+            "answer": 0,
+            "explain": "The user needs the reason, and keyboard and screen-reader users need to reach it too."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "What is the first question in the decision tree?",
+          "options": [
+            "Should this be limited for this user at all?",
+            "Which colour should the disabled state use?",
+            "Is the thing a button, a field or a link?",
+            "Does the person use a touch device or a mouse?"
+          ],
+          "answer": 0,
+          "explain": "Hidden, read-only and disabled only make sense once you know why the feature is limited."
+        },
+        {
+          "type": "single",
+          "q": "When should a feature be hidden?",
+          "options": [
+            "When this user can never use it",
+            "When it is temporarily unavailable",
+            "When it needs a prerequisite first",
+            "When it takes up too much space"
+          ],
+          "answer": 0,
+          "explain": "Temporary or conditional limits call for disabled with a reason. Hiding is for things that are never theirs."
+        },
+        {
+          "type": "single",
+          "q": "Read-only fits best for which of these?",
+          "options": [
+            "A value the system makes or edits elsewhere",
+            "A button the user has no permission for",
+            "A feature that is outside the customer’s plan",
+            "A field that currently shows an error"
+          ],
+          "answer": 0,
+          "explain": "Read-only shows a value people need to see but can’t change here. Add a hint pointing to where it can be edited."
+        },
+        {
+          "type": "single",
+          "q": "What must every disabled control include?",
+          "options": [
+            "The reason, and what unlocks it",
+            "Lower contrast than any enabled control",
+            "Removal from the keyboard tab order",
+            "A tooltip that shows on mouse hover only"
+          ],
+          "answer": 0,
+          "explain": "A disabled control with no reason reads as a bug. Hover-only text is invisible on touch screens and to keyboard users."
+        },
+        {
+          "type": "single",
+          "q": "A filter has no effect on the current results. What should the interface do by default?",
+          "options": [
+            "Keep it visible where it was",
+            "Remove it until it applies again",
+            "Hide it until the user hovers nearby",
+            "Move it into an overflow menu instead"
+          ],
+          "answer": 0,
+          "explain": "Buttons and filters that move or vanish make people doubt the interface. Keep them in place, and disable with a reason if needed."
+        }
+      ]
+    }
+  ]
+}

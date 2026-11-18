@@ -1,0 +1,125 @@
+{
+  "id": "c-stakeholders",
+  "module": "career",
+  "title": "Interviewing Stakeholders and Mapping Incentives",
+  "icon": "🗝️",
+  "intro": "Interview for raw material, not requirements. Then pitch on what each person is rewarded for.",
+  "topics": [
+    {
+      "id": "main",
+      "title": "Interviewing Stakeholders and Mapping Incentives",
+      "learn": [
+        {
+          "title": "Interview for raw material",
+          "text": "Don’t ask stakeholders for requirements. You will get solutions, and the first one they thought of.\n\nAsk for raw material across three areas: the **domain**, the **audience**, and the **constraints** — technical, operational and political.\n\nThe political constraints decide more than people admit.",
+          "try": {
+            "type": "single",
+            "q": "What should you ask stakeholders for?",
+            "options": [
+              "Raw material: purpose, audience, constraints",
+              "A complete list of requirements to build",
+              "A prioritised backlog of features to ship",
+              "A signed-off design brief to work from"
+            ],
+            "answer": 0,
+            "explain": "Requirements arrive as solutions. Raw material lets you find the problem yourself."
+          }
+        },
+        {
+          "title": "Questions that work",
+          "text": "• “Describe the purpose of this project in your own words.”\n• “What is the most important thing to get right?”\n• “If you could ask users one question, what would it be?”\n• “How will you judge whether this succeeded?”\n• Question the labels: “Why do we call them power users?”\n\nClose with **“What did I miss?”**",
+          "try": {
+            "type": "single",
+            "q": "Which question should close the interview?",
+            "options": [
+              "“What did I miss?”",
+              "“Are we done?”",
+              "“Do you approve this plan?”",
+              "“When can I have the requirements?”"
+            ],
+            "answer": 0,
+            "explain": "It invites the one thing they didn’t think to say until the end."
+          }
+        },
+        {
+          "title": "Map incentives before you pitch",
+          "text": "Write down what each person is rewarded for. Typical patterns: product — short-term lift in a headline metric; engineering — uptime and speed; marketing — brand health; support — fewer tickets.\n\nPitch on a measure the decider cares about. If nothing lines up, **ask what would matter, find a better-aligned stakeholder, or shelve the idea for now.**",
+          "try": {
+            "type": "single",
+            "q": "A support lead doubts a usability finding. Which framing helps most?",
+            "options": [
+              "How the fix cuts support tickets",
+              "How it improves learnability scores",
+              "How it lines up with usability heuristics",
+              "How many sessions showed the problem"
+            ],
+            "answer": 0,
+            "explain": "It speaks to what the support lead is rewarded for."
+          }
+        }
+      ],
+      "test": [
+        {
+          "type": "single",
+          "q": "Which three areas should a stakeholder interview cover?",
+          "options": [
+            "Domain, audience and constraints",
+            "Budget, timeline and scope of work",
+            "Goals, tasks and the screens involved",
+            "Features, priorities and delivery risks"
+          ],
+          "answer": 0,
+          "explain": "These give you raw material to find the problem, rather than a list of solutions."
+        },
+        {
+          "type": "single",
+          "q": "Why ask “Why do we call them power users?”",
+          "options": [
+            "To test labels the team takes for granted",
+            "To find out exactly who the power users are",
+            "To get a clean definition for the glossary",
+            "To move the conversation on to personas"
+          ],
+          "answer": 0,
+          "explain": "Labels hide assumptions. Asking what a word means often reveals the assumption behind it."
+        },
+        {
+          "type": "single",
+          "q": "Which incentive is typical for engineering?",
+          "options": [
+            "Uptime and delivery speed",
+            "Short-term lift in a headline metric",
+            "Brand health",
+            "Fewer support tickets"
+          ],
+          "answer": 0,
+          "explain": "Engineering is usually rewarded for stable, on-time delivery, so frame the work in those terms."
+        },
+        {
+          "type": "single",
+          "q": "What can you do if no stakeholder’s incentives line up with your idea?",
+          "options": [
+            "Ask what matters, find an ally, or shelve it",
+            "Present the same evidence more often to them",
+            "Escalate the issue to the most senior person",
+            "Reframe the findings so they read as requirements"
+          ],
+          "answer": 0,
+          "explain": "More evidence on a metric the decider doesn’t care about doesn’t help. Change the audience or the pitch."
+        },
+        {
+          "type": "single",
+          "q": "Why does a pitch fail when it uses the wrong metric?",
+          "options": [
+            "The decider isn’t rewarded for that measure",
+            "The supporting data is usually out of date",
+            "Evidence never changes anyone’s mind at all",
+            "The presentation is almost always too long"
+          ],
+          "answer": 0,
+          "explain": "People act on what they are rewarded for. A finding that doesn’t touch it is easy to set aside."
+        }
+      ]
+    }
+  ]
+}

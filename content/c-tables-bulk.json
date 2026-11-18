@@ -1,144 +1,184 @@
 {
- "id": "c-tables-bulk",
- "module": "controls",
- "title": "Tables and Bulk Operations",
- "icon": "📑",
- "intro": "Complex tables and bulk import are the B2B work most products get wrong — and the import succeeds or fails in its repair step.",
- "topics": [
-  {
-   "id": "main",
-   "title": "Tables and Bulk Operations",
-   "learn": [
+  "id": "c-tables-bulk",
+  "module": "controls",
+  "title": "Tables and Bulk Operations",
+  "icon": "📑",
+  "intro": "Complex tables and bulk import are the B2B work most products get wrong — and the import succeeds or fails in its repair step.",
+  "topics": [
     {
-     "title": "Tables start from tasks",
-     "text": "Work out which filters, sorts, search, editing modes and permissions are actually needed.\n\n• Let users build their own filter set; consider per-column filters for speed\n• Let users show, hide and reorder columns when comparison matters\n• Offer compact and comfortable **density modes**\n• Test with very long and very short values, and with pseudo-localisation\n• Check how a screen reader moves through the table",
-     "try": {
-      "type": "single",
-      "q": "Why offer density modes?",
-      "options": [
-       "Different users need different row counts on screen",
-       "Compact mode improves rendering performance",
-       "It is required for WCAG compliance",
-       "It compensates for long translated strings"
+      "id": "main",
+      "title": "Tables and Bulk Operations",
+      "learn": [
+        {
+          "title": "Tables start from tasks",
+          "text": "Work out which filters, sorts, search, editing modes and permissions are actually needed.\n\n• Let users build their own filter set; consider per-column filters for speed\n• Let users show, hide and reorder columns when comparison matters\n• Offer compact and comfortable **density modes**\n• Test with very long and very short values, and with pseudo-localisation\n• Check how a screen reader moves through the table",
+          "try": {
+            "type": "single",
+            "q": "Why offer density modes?",
+            "options": [
+              "Different users need different row counts on screen",
+              "Compact mode improves rendering performance",
+              "It is required for WCAG compliance",
+              "It compensates for long translated strings"
+            ],
+            "answer": 0,
+            "explain": "Some users scan many rows; others read a few in detail."
+          }
+        },
+        {
+          "title": "Row actions must be visible",
+          "text": "**Avoid hover-only row actions.** They cause errors and rage clicks, they don't exist on touch, and keyboard users can't reach them predictably.\n\nUse visible buttons on each row.",
+          "try": {
+            "type": "single",
+            "q": "What does the note say about hover-reveal row actions?",
+            "options": [
+              "They cause errors and rage clicks",
+              "They work if the hover area is large",
+              "They are acceptable on desktop-only tools",
+              "They should be paired with a tooltip"
+            ],
+            "answer": 0,
+            "explain": "Use visible buttons instead."
+          },
+          "visual": {
+            "type": "compare",
+            "left": {
+              "label": "Hover-only actions",
+              "items": [
+                "Invisible until you find them",
+                "Nothing on touch devices",
+                "Rage clicks and mis-clicks"
+              ]
+            },
+            "right": {
+              "label": "Visible row buttons",
+              "items": [
+                "Discoverable at a glance",
+                "Work on every input",
+                "Predictable for keyboard users"
+              ]
+            }
+          }
+        },
+        {
+          "title": "Five stages of bulk import",
+          "text": "**1. Pre-import** — template, example file, guardrails\n**2. Upload** — drag, keyboard, copy-paste\n**3. Map** — match columns, check values\n**4. Repair** — show only the error rows; dedupe\n**5. Import** — summary, and tag the new records\n\nMost products dismiss a file as corrupt or invalid. **The value is in helping users fix it in place.**",
+          "try": {
+            "type": "single",
+            "q": "Which stage decides whether a bulk import succeeds?",
+            "options": [
+              "Repair",
+              "Upload",
+              "Mapping",
+              "Pre-import"
+            ],
+            "answer": 0,
+            "explain": "Letting users fix mismatches inside the flow instead of rejecting the file."
+          }
+        },
+        {
+          "title": "Screen readers and the 5–20 gap",
+          "text": "A table’s **caption** is its accessible name. Header cells are announced with every data cell. Non-interactive cells shouldn’t take focus.\n\nThe test: can a screen-reader user get what a sighted user gets at a glance?\n\nFor **5–20 items** — too many for one form, too few for a spreadsheet — extend the single form into a batch builder with one review step and one approval.",
+          "try": {
+            "type": "single",
+            "q": "What gives a data table its accessible name?",
+            "options": [
+              "Its caption",
+              "The first row of data",
+              "A tooltip on hover",
+              "The page heading"
+            ],
+            "answer": 0,
+            "explain": "A caption is announced when a screen reader reaches the table."
+          }
+        }
       ],
-      "answer": 0,
-      "explain": "Some users scan many rows; others read a few in detail."
-     }
-    },
-    {
-     "title": "Row actions must be visible",
-     "text": "**Avoid hover-only row actions.** They cause errors and rage clicks, they don't exist on touch, and keyboard users can't reach them predictably.\n\nUse visible buttons on each row.",
-     "try": {
-      "type": "single",
-      "q": "What does the note say about hover-reveal row actions?",
-      "options": [
-       "They cause errors and rage clicks",
-       "They work if the hover area is large",
-       "They are acceptable on desktop-only tools",
-       "They should be paired with a tooltip"
-      ],
-      "answer": 0,
-      "explain": "Use visible buttons instead."
-     },
-     "visual": {
-      "type": "compare",
-      "left": {
-       "label": "Hover-only actions",
-       "items": [
-        "Invisible until you find them",
-        "Nothing on touch devices",
-        "Rage clicks and mis-clicks"
-       ]
-      },
-      "right": {
-       "label": "Visible row buttons",
-       "items": [
-        "Discoverable at a glance",
-        "Work on every input",
-        "Predictable for keyboard users"
-       ]
-      }
-     }
-    },
-    {
-     "title": "Five stages of bulk import",
-     "text": "**1. Pre-import** — template, example file, guardrails\n**2. Upload** — drag, keyboard, copy-paste\n**3. Map** — match columns, check values\n**4. Repair** — show only the error rows; dedupe\n**5. Import** — summary, and tag the new records\n\nMost products dismiss a file as corrupt or invalid. **The value is in helping users fix it in place.**",
-     "try": {
-      "type": "single",
-      "q": "Which stage decides whether a bulk import succeeds?",
-      "options": [
-       "Repair",
-       "Upload",
-       "Mapping",
-       "Pre-import"
-      ],
-      "answer": 0,
-      "explain": "Letting users fix mismatches inside the flow instead of rejecting the file."
-     }
+      "test": [
+        {
+          "type": "single",
+          "q": "What is the most common bulk-import failure?",
+          "options": [
+            "Rejecting the file instead of helping fix it",
+            "Losing data during the upload",
+            "Importing duplicate records silently",
+            "Timing out on large files"
+          ],
+          "answer": 0,
+          "explain": "“Invalid file” ends the task; a repair step completes it."
+        },
+        {
+          "type": "single",
+          "q": "What should the repair step show?",
+          "options": [
+            "Only the rows with errors",
+            "The full file with errors highlighted",
+            "A downloadable error report",
+            "The first ten problems found"
+          ],
+          "answer": 0,
+          "explain": "Plus deduplication."
+        },
+        {
+          "type": "single",
+          "q": "When should users be able to reorder columns?",
+          "options": [
+            "When comparison matters",
+            "Whenever the table has more than five columns",
+            "Only in admin-level views",
+            "When the table is printed or exported"
+          ],
+          "answer": 0,
+          "explain": "Along with showing and hiding them."
+        },
+        {
+          "type": "single",
+          "q": "What should you test a table with?",
+          "options": [
+            "Very long and very short values",
+            "At least a thousand rows",
+            "Three different screen sizes",
+            "Every supported browser"
+          ],
+          "answer": 0,
+          "explain": "Plus pseudo-localisation, to catch layouts that break in translation."
+        },
+        {
+          "type": "single",
+          "q": "What happens at the final import stage?",
+          "options": [
+            "A summary, and the new records get tagged",
+            "The file is archived for audit",
+            "Users are emailed a confirmation",
+            "The table refreshes automatically"
+          ],
+          "answer": 0,
+          "explain": "Tagging lets users find what they just imported."
+        },
+        {
+          "type": "single",
+          "q": "A user must pay 12 suppliers in one go. What fits best?",
+          "options": [
+            "A batch builder extending the single form",
+            "A CSV-only import with a template file",
+            "Twelve separate forms completed in a row",
+            "One free-text box for all the amounts"
+          ],
+          "answer": 0,
+          "explain": "Between 5 and 20 items, a batch builder avoids both the form-per-item grind and the spreadsheet overhead."
+        },
+        {
+          "type": "single",
+          "q": "Which table cells should take keyboard focus?",
+          "options": [
+            "Only the interactive ones",
+            "Every cell",
+            "Header cells only",
+            "The cell under the pointer"
+          ],
+          "answer": 0,
+          "explain": "Focusing static cells adds tab stops that lead nowhere."
+        }
+      ]
     }
-   ],
-   "test": [
-    {
-     "type": "single",
-     "q": "What is the most common bulk-import failure?",
-     "options": [
-      "Rejecting the file instead of helping fix it",
-      "Losing data during the upload",
-      "Importing duplicate records silently",
-      "Timing out on large files"
-     ],
-     "answer": 0,
-     "explain": "“Invalid file” ends the task; a repair step completes it."
-    },
-    {
-     "type": "single",
-     "q": "What should the repair step show?",
-     "options": [
-      "Only the rows with errors",
-      "The full file with errors highlighted",
-      "A downloadable error report",
-      "The first ten problems found"
-     ],
-     "answer": 0,
-     "explain": "Plus deduplication."
-    },
-    {
-     "type": "single",
-     "q": "When should users be able to reorder columns?",
-     "options": [
-      "When comparison matters",
-      "Whenever the table has more than five columns",
-      "Only in admin-level views",
-      "When the table is printed or exported"
-     ],
-     "answer": 0,
-     "explain": "Along with showing and hiding them."
-    },
-    {
-     "type": "single",
-     "q": "What should you test a table with?",
-     "options": [
-      "Very long and very short values",
-      "At least a thousand rows",
-      "Three different screen sizes",
-      "Every supported browser"
-     ],
-     "answer": 0,
-     "explain": "Plus pseudo-localisation, to catch layouts that break in translation."
-    },
-    {
-     "type": "single",
-     "q": "What happens at the final import stage?",
-     "options": [
-      "A summary, and the new records get tagged",
-      "The file is archived for audit",
-      "Users are emailed a confirmation",
-      "The table refreshes automatically"
-     ],
-     "answer": 0,
-     "explain": "Tagging lets users find what they just imported."
-    }
-   ]
-  }
- ]
+  ]
 }
