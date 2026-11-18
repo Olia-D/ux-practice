@@ -1,0 +1,169 @@
+{
+ "id": "d-discovery-loop",
+ "module": "discovery",
+ "title": "Continuous Discovery in One Page",
+ "icon": "🔁",
+ "intro": "The team that builds the product talks to customers every week, together, aimed at one outcome.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Continuous Discovery in One Page",
+   "learn": [
+    {
+     "title": "What makes it continuous",
+     "text": "Project research happens before a big decision and then stops.\n\n**Continuous discovery:** the team building the product has a customer touchpoint **at least every week**, in small activities aimed at one outcome.\n\nEvery decision keeps meeting fresh evidence.",
+     "try": {
+      "type": "single",
+      "q": "What is the minimum cadence of customer contact?",
+      "options": [
+       "Every week",
+       "Every sprint review",
+       "Before each release",
+       "Once a quarter"
+      ],
+      "answer": 0,
+      "explain": "Weekly is the floor, not the target."
+     }
+    },
+    {
+     "title": "The product trio",
+     "text": "A **product manager, a designer and an engineer** interview together.\n\nWhen all three hear the same stories, they argue less about whose information is right and more about what to do.",
+     "try": {
+      "type": "single",
+      "q": "Why should the trio interview together?",
+      "options": [
+       "They build a shared view from the same stories",
+       "It cuts the number of interviews needed",
+       "Engineers can answer the technical questions live during the call",
+       "Customers trust a bigger group more"
+      ],
+      "answer": 0,
+      "explain": "Shared evidence reduces arguments based on different information."
+     }
+    },
+    {
+     "title": "The loop",
+     "text": "**Outcome** → **opportunities** heard in stories → about three **solutions** for one target → **assumption tests**.\n\nTest results send you back to the opportunity map, not straight to the backlog.",
+     "try": {
+      "type": "single",
+      "q": "Where do assumption-test results go?",
+      "options": [
+       "Back into the opportunity map",
+       "Straight into the delivery backlog",
+       "Into a quarterly research report",
+       "Into the next outcome target"
+      ],
+      "answer": 0,
+      "explain": "The loop closes on the map, which keeps the next choice informed."
+     }
+    },
+    {
+     "title": "Habits to start with",
+     "text": "**Automate recruiting**, so next week’s interview is already booked.\n**Write a one-page snapshot** after each interview and share it.\n**Refresh the map** every three to four interviews.\n**Story-map an idea** to list its assumptions: 20 to 30 minutes.",
+     "try": {
+      "type": "single",
+      "q": "What keeps weekly interviews from stalling?",
+      "options": [
+       "Recruiting that runs on its own",
+       "A longer interview script",
+       "A dedicated research team that books everything",
+       "Interviewing only power users"
+      ],
+      "answer": 0,
+      "explain": "If recruiting is manual, the habit dies the first busy week."
+     }
+    },
+    {
+     "title": "Where to start",
+     "text": "**Feature factory:** story-map one planned feature and list its hidden assumptions.\n**Messy middle:** make one bright spot: the trio interviews together.\n**Sliding back under pressure:** share snapshots and the map after every interview.",
+     "try": {
+      "type": "single",
+      "q": "Stakeholders under pressure are asking for specific features again. First step?",
+      "options": [
+       "Share a snapshot after every interview",
+       "Pause discovery until things calm down",
+       "Build the requested features first",
+       "Run a large survey to settle it"
+      ],
+      "answer": 0,
+      "explain": "Showing your work rebuilds trust in the evidence."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Which statement describes continuous discovery?",
+     "options": [
+      "Small research activities every week, aimed at one outcome",
+      "A research phase before each new project",
+      "A quarterly study run by a research team",
+      "Customer feedback collected and reviewed after each major release"
+     ],
+     "answer": 0,
+     "explain": "It runs alongside delivery, not before it."
+    },
+    {
+     "type": "single",
+     "q": "Who is in the product trio?",
+     "options": [
+      "Product manager, designer, engineer",
+      "Researcher, designer, data analyst",
+      "Product manager, sales lead, designer",
+      "Designer, engineer, customer success"
+     ],
+     "answer": 0,
+     "explain": "The people who decide and build the product."
+    },
+    {
+     "type": "single",
+     "q": "What is the order of the discovery loop?",
+     "options": [
+      "Outcome, opportunities, solutions, tests",
+      "Solutions, tests, outcome, opportunities",
+      "Opportunities, outcome, tests, solutions",
+      "Tests, solutions, opportunities, outcome"
+     ],
+     "answer": 0,
+     "explain": "Start from the outcome; solutions come only after a target opportunity."
+    },
+    {
+     "type": "single",
+     "q": "How often should the opportunity map be refreshed?",
+     "options": [
+      "Every three to four interviews",
+      "After every single interview",
+      "Once a quarter, together with roadmap planning",
+      "Only when the outcome changes"
+     ],
+     "answer": 0,
+     "explain": "Often enough to stay current without chasing every story."
+    },
+    {
+     "type": "single",
+     "q": "A team works from a fixed roadmap and counts features shipped. Best first step?",
+     "options": [
+      "Story-map one feature and list its assumptions",
+      "Rewrite the whole roadmap as outcomes",
+      "Hire a dedicated researcher before changing anything else",
+      "Stop shipping until interviews start"
+     ],
+     "answer": 0,
+     "explain": "It needs no permission and shows the risk in the plan."
+    },
+    {
+     "type": "single",
+     "q": "How long does story-mapping an idea’s assumptions take?",
+     "options": [
+      "About 20 to 30 minutes",
+      "About half a day",
+      "One full sprint",
+      "Two or three full working days"
+     ],
+     "answer": 0,
+     "explain": "Short enough to do for every idea."
+    }
+   ]
+  }
+ ]
+}

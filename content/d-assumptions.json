@@ -1,0 +1,169 @@
+{
+ "id": "d-assumptions",
+ "module": "discovery",
+ "title": "Assumption Mapping and Testing",
+ "icon": "🧪",
+ "intro": "Test the belief that would sink the idea, with the cheapest test that could prove it wrong.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Assumption Mapping and Testing",
+   "learn": [
+    {
+     "title": "Find the assumptions",
+     "text": "Story-map the idea as if it already existed: each step the customer takes, and under it **what must be true.**\n\nWrite each as **“We believe that…”**",
+     "try": {
+      "type": "single",
+      "q": "Why write assumptions as “We believe that…”?",
+      "options": [
+       "It keeps the team open to being wrong",
+       "It makes every assumption easier to measure later",
+       "Stakeholders expect that format",
+       "It turns them into requirements"
+      ],
+      "answer": 0,
+      "explain": "A belief invites a test; a statement invites a defence."
+     }
+    },
+    {
+     "title": "Five types",
+     "text": "**Desirability:** do they want it?\n**Usability:** can they use it?\n**Feasibility:** can we build it?\n**Viability:** does it work for the business?\n**Ethics:** could it harm anyone?",
+     "try": {
+      "type": "single",
+      "q": "“Reminders won’t pressure people who said no.” Which type?",
+      "options": [
+       "Ethics",
+       "Desirability",
+       "Usability",
+       "Viability"
+      ],
+      "answer": 0,
+      "explain": "It asks whether the idea could cause harm."
+     }
+    },
+    {
+     "title": "Importance × evidence",
+     "text": "Place each assumption on two questions:\n**If it’s wrong, does the idea fail?**\n**Do we have observed evidence?**\n\nTest the **important, unevidenced** corner first.",
+     "try": {
+      "type": "single",
+      "q": "Which assumption do you test first?",
+      "options": [
+       "Important, with no evidence",
+       "Minor, with no evidence",
+       "Important, with strong evidence",
+       "Minor, with some evidence"
+      ],
+      "answer": 0,
+      "explain": "If it’s wrong, the idea fails and you wouldn’t know."
+     }
+    },
+    {
+     "title": "Evidence strength",
+     "text": "**Weaker:** what people say (interviews, surveys).\n**Stronger:** what people do (prototype tests, fake doors, A/B tests).\n**Strongest:** what they give up (effortful sign-ups, pre-orders).\n\nStart cheap, then move up as the signal improves.",
+     "try": {
+      "type": "single",
+      "q": "Which gives the strongest evidence?",
+      "options": [
+       "A paid pilot",
+       "A survey of intent",
+       "A customer interview",
+       "A focus group"
+      ],
+      "answer": 0,
+      "explain": "Giving something up is the clearest signal."
+     }
+    },
+    {
+     "title": "Run it well",
+     "text": "**Change one thing at a time.**\n**Write the pass line before the test.**\n**Define who you test with.**\n\nA badly built A/B test is weak evidence; a well-run interview can be strong.",
+     "try": {
+      "type": "single",
+      "q": "When should the pass line be written?",
+      "options": [
+       "Before the test runs",
+       "After seeing the first results",
+       "When the test is half done",
+       "Only if results are unclear"
+      ],
+      "answer": 0,
+      "explain": "Otherwise the result can be argued either way."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "How long does story-mapping assumptions take?",
+     "options": [
+      "About 20 to 30 minutes",
+      "About one full day",
+      "Roughly one sprint",
+      "Around two hours for every step in the map"
+     ],
+     "answer": 0,
+     "explain": "Cheap enough to do for every idea."
+    },
+    {
+     "type": "single",
+     "q": "“Admins want colleagues to join in week one.” Which type?",
+     "options": [
+      "Desirability",
+      "Feasibility",
+      "Viability",
+      "Usability"
+     ],
+     "answer": 0,
+     "explain": "It’s about whether they want it."
+    },
+    {
+     "type": "single",
+     "q": "What counts as evidence on the evidence axis?",
+     "options": [
+      "Something observed",
+      "The most senior opinion",
+      "The loudest argument",
+      "A confident estimate"
+     ],
+     "answer": 0,
+     "explain": "Not who argues loudest."
+    },
+    {
+     "type": "single",
+     "q": "Why start with cheap, weaker tests?",
+     "options": [
+      "They kill bad ideas before costly tests",
+      "Strong tests are always unreliable",
+      "Stakeholders always prefer the cheapest test available",
+      "Weak tests give final answers"
+     ],
+     "answer": 0,
+     "explain": "Move to stronger tests as the signal improves."
+    },
+    {
+     "type": "single",
+     "q": "Why change only one thing per test?",
+     "options": [
+      "Extra variables make results unreadable",
+      "It makes the test shorter",
+      "Participants find tests with one change easier to follow",
+      "Tools allow only one variable"
+     ],
+     "answer": 0,
+     "explain": "You can’t tell which change caused the result."
+    },
+    {
+     "type": "single",
+     "q": "Which free book lists evaluative experiments?",
+     "options": [
+      "The Real Startup Book",
+      "The Mom Test",
+      "Escaping the Build Trap",
+      "Good Strategy / Bad Strategy"
+     ],
+     "answer": 0,
+     "explain": "It’s Creative Commons and lists when to use each experiment."
+    }
+   ]
+  }
+ ]
+}

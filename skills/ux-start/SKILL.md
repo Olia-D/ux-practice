@@ -26,6 +26,7 @@ Ask (or infer) two things: **what is the deliverable** and **what decision is be
 | AI feature, agent, copilot, chat, "should the agent do this itself" | `ai-ux-patterns` (frameworks first) | + `interaction-design-reviewer` for the non-AI surface |
 | "Should we test this", "how do I know", a finding or A/B result, readout, ROI, "our users are different" | `ux-research-advisor` | + `jtbd-research` if the question is *why users choose/switch* |
 | Why users pick / drop / switch; positioning; churn | `jtbd-research` | + `ux-research-advisor` for the study plan |
+| What to build next, outcomes vs outputs, discovery cadence, opportunity tree, assumption tests, roadmap critique | `product-discovery` | + `jtbd-research` for job statements; + `ux-research-advisor` for study design |
 | Button label, error, empty state, any product text | `ux-writing` | + `interaction-design-reviewer` (forms/status) when the copy sits in a control or status |
 | Stakeholder interview, "how do I get X on board", conflicting priorities | `ux-research-advisor` §16 | + §10 if the pushback cites "our users are different" |
 | Design critique, design review meeting, "how should we run feedback" | `interaction-design-reviewer` (`references/critique-sessions.md`) | — |
@@ -36,8 +37,9 @@ books rather than forcing a skill.
 ## Step 2 — Standard flows for multi-step requests
 
 **New feature / redesign**
-1. `ux-research-advisor` → what decision, cost of being wrong, riskiest assumption,
-   existing evidence. Output: rigor level + what to test first.
+1. `product-discovery` → which outcome it moves, which opportunity it serves, about three
+   alternatives, the riskiest assumption. Then `ux-research-advisor` → cost of being wrong,
+   existing evidence, rigor level + what to test first.
 2. `interaction-design-reviewer` CREATE / SUGGEST → spec or 2–3 options. Add
    `ai-ux-patterns` if AI is involved (set autonomy level and trust scaffold *before* UI),
    `data-visualization` if it shows numbers.

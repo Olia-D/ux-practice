@@ -946,6 +946,70 @@
           "sourceNote": "Jeremy Bird — improving design critiques"
         }
       ]
+    },
+    {
+      "id": "discovery",
+      "name": "Continuous Discovery",
+      "icon": "🔁",
+      "week": "Module 13",
+      "subtitle": "Weekly customer contact, opportunity trees and assumption tests",
+      "open": true,
+      "articles": [
+        {
+          "id": "d-discovery-loop",
+          "title": "Continuous Discovery in One Page",
+          "icon": "🔁",
+          "summary": "Weekly customer contact by the product trio, in a loop from outcome to assumption tests.",
+          "file": "content/d-discovery-loop.json",
+          "source": "https://www.producttalk.org/getting-started-with-discovery.md",
+          "q": 6
+        },
+        {
+          "id": "d-outcomes",
+          "title": "Outcomes, Not Outputs",
+          "icon": "🎯",
+          "summary": "Why counting features shipped traps teams, and which metric discovery should aim at.",
+          "file": "content/d-outcomes.json",
+          "source": "https://svpg.com/product-risk-taxonomies",
+          "q": 6
+        },
+        {
+          "id": "d-interviews",
+          "title": "Story-Based Interviews",
+          "icon": "🗣️",
+          "summary": "Ask about the last time, dig out the story, and spot compliments and promises as bad data.",
+          "file": "content/d-interviews.json",
+          "source": "https://www.producttalk.org/sourcing-opportunities.md",
+          "q": 6
+        },
+        {
+          "id": "d-ost",
+          "title": "Opportunity Solution Trees",
+          "icon": "🌳",
+          "summary": "Map opportunities from interviews under an outcome, choose one target, then compare solutions.",
+          "file": "content/d-ost.json",
+          "source": "https://www.producttalk.org/opportunity-solution-trees.md",
+          "q": 6
+        },
+        {
+          "id": "d-assumptions",
+          "title": "Assumption Mapping and Testing",
+          "icon": "🧪",
+          "summary": "List what must be true, test the important unevidenced beliefs first, and prefer evidence of behaviour.",
+          "file": "content/d-assumptions.json",
+          "source": "https://strategyzer.com/library/how-assumptions-mapping-can-focus-your-teams-on-running-experiments-that-matter",
+          "q": 6
+        },
+        {
+          "id": "d-strategy",
+          "title": "Strategy You Can Test",
+          "icon": "♟️",
+          "summary": "Diagnosis, guiding policy, coherent actions, and four signs of bad strategy.",
+          "file": "content/d-strategy.json",
+          "source": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/the-perils-of-bad-strategy",
+          "q": 6
+        }
+      ]
     }
   ]
 }

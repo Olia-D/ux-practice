@@ -36,3 +36,5 @@
 .nav-bar a,.nav-bar .nav-left{white-space:nowrap}
 .nav-bar .nav-left{align-items:center}
 @media (max-width:40rem){.nav-bar .nav-left{gap:.9rem}.nav-bar .nav-ext{display:none}.nav-bar{gap:.5rem}}
+/* figure text set on an ink box flips with the theme */
+svg text[fill="#fdfdfb"]{fill:var(--bg)}

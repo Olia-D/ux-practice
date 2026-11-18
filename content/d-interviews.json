@@ -1,0 +1,169 @@
+{
+ "id": "d-interviews",
+ "module": "discovery",
+ "title": "Story-Based Interviews",
+ "icon": "🗣️",
+ "intro": "Ask for one specific, recent story. Opinions about the future aren’t data.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Story-Based Interviews",
+   "learn": [
+    {
+     "title": "Why stories",
+     "text": "“Would you use this?” invites a guess.\n“Tell me about the last time you…” brings back what happened.\n\nThe details of a real story make the who, what, why and how trustworthy.",
+     "try": {
+      "type": "single",
+      "q": "Which question collects a story?",
+      "options": [
+       "Tell me about the last time you exported a report",
+       "Would you use a faster export?",
+       "How often do you usually export?",
+       "What would your ideal export look like if you could design it?"
+      ],
+      "answer": 0,
+      "explain": "It anchors the answer in one real event."
+     }
+    },
+    {
+     "title": "Dig it out",
+     "text": "**Set the scene:** when, where, what happened just before.\n**Keep them in the moment;** ask what happened next.\n**Bring generalisations back:** “I usually…” → “And last time?”\n**Don’t stop at a short answer.**",
+     "try": {
+      "type": "single",
+      "q": "They say “I usually check it every morning.” Best follow-up?",
+      "options": [
+       "And the last time you checked it, what happened?",
+       "Why do you check it every morning?",
+       "Would you like us to send you a daily summary instead of that?",
+       "How long does that usually take you?"
+      ],
+      "answer": 0,
+      "explain": "Return to one specific instance."
+     }
+    },
+    {
+     "title": "Three kinds of bad data",
+     "text": "**Compliments:** “That’s really cool.”\n**Generalisations and promises:** “I always…”, “I would definitely buy that.”\n**Feature requests:** “You should add…”\n\nEach is a prompt to dig, not evidence.",
+     "try": {
+      "type": "single",
+      "q": "“I would definitely buy that.” What is it?",
+      "options": [
+       "A future promise, the least reliable data",
+       "Strong evidence of demand you can plan the roadmap around",
+       "A sign to start building",
+       "A useful price signal"
+      ],
+      "answer": 0,
+      "explain": "Ask what they do today and what it costs them."
+     }
+    },
+    {
+     "title": "Commitment",
+     "text": "When you’re testing demand, interest shows as something given up:\n**time** (a trial, another meeting), **reputation** (an introduction), **money** (a pre-order).\n\nCompliments and no next step taught you little.",
+     "try": {
+      "type": "single",
+      "q": "Which response shows real interest?",
+      "options": [
+       "They introduce you to their manager",
+       "They say the idea is brilliant",
+       "They promise to try it as soon as it launches someday",
+       "They ask for more features"
+      ],
+      "answer": 0,
+      "explain": "An introduction costs them reputation."
+     }
+    },
+    {
+     "title": "Make it weekly",
+     "text": "**Recruit automatically:** an in-product invite, a line in onboarding.\n**Interview as a trio.**\n**Write a snapshot within the hour:** a quote, quick facts, the story’s moments, the opportunities heard.",
+     "try": {
+      "type": "single",
+      "q": "What goes in an interview snapshot?",
+      "options": [
+       "A quote, the story’s moments, the opportunities",
+       "A full transcript of the whole interview, word for word",
+       "A feature list for the roadmap",
+       "A score for the participant"
+      ],
+      "answer": 0,
+      "explain": "One page, written while the story is fresh."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Why ask about the past rather than the future?",
+     "options": [
+      "People can’t predict what they’ll do",
+      "Past questions are quicker to answer",
+      "Future questions upset participants",
+      "Past behaviour is easier to quantify"
+     ],
+     "answer": 0,
+     "explain": "Predictions are guesses; stories are facts."
+    },
+    {
+     "type": "single",
+     "q": "Instead of “How much would you pay?”, ask:",
+     "options": [
+      "What did this problem cost you last month?",
+      "Would you pay a monthly fee for it?",
+      "Is our planned price higher or lower than you expected it to be?",
+      "Which price tier would you choose?"
+     ],
+     "answer": 0,
+     "explain": "Real costs reveal what solving it is worth."
+    },
+    {
+     "type": "single",
+     "q": "A participant suggests a feature. What next?",
+     "options": [
+      "Ask why they want it and what they do now",
+      "Add it to the backlog straight away, with their name attached",
+      "Explain why it can’t be built",
+      "Ask them to rank it against others"
+     ],
+     "answer": 0,
+     "explain": "The need underneath is the opportunity."
+    },
+    {
+     "type": "single",
+     "q": "Which is a commitment of money?",
+     "options": [
+      "A pre-order paid in advance",
+      "A positive review",
+      "A second interview",
+      "An introduction to a colleague"
+     ],
+     "answer": 0,
+     "explain": "Money, time and reputation are the three kinds."
+    },
+    {
+     "type": "single",
+     "q": "What is the classic interviewer mistake?",
+     "options": [
+      "Selling when you should be listening",
+      "Asking too many follow-up questions",
+      "Taking detailed notes during the interview itself",
+      "Interviewing with a colleague"
+     ],
+     "answer": 0,
+     "explain": "If you hear yourself explaining the product, switch back to their story."
+    },
+    {
+     "type": "single",
+     "q": "When should the snapshot be written?",
+     "options": [
+      "Within the hour",
+      "At the end of the week",
+      "After all interviews are done",
+      "Before the next planning cycle"
+     ],
+     "answer": 0,
+     "explain": "Details fade fast."
+    }
+   ]
+  }
+ ]
+}

@@ -330,6 +330,13 @@ context-free questions that read like an AI prompt and produce flat answers). Us
 questions by theme over ten narrow ones, funnel broad → specific, one question at a time, no
 example answers, and an "if any" escape hatch. Neutrality is a tool, not the goal.
 
+**For discovery interviews, collect stories, not opinions.** Ask for one recent instance ("tell
+me about the last time you…"), keep the person in that moment, and bring generalisations back
+("I usually…" → "and last time?"). Treat compliments, future promises ("I'd definitely buy
+it") and feature requests as prompts to dig, not as evidence. When testing demand, look for a
+commitment (time, an introduction, money). Weekly cadence, opportunity trees and assumption
+tests → `product-discovery`.
+
 **Pick the heuristic lens, don't default to Nielsen's ten:** Norman's 7 (is it intuitive at
 all) · Nielsen's 10 (general review, shared vocabulary) · Weinschenk & Barker's 20 (detail,
 persuasion, emotion) · Tognazzini (complex interaction: defaults, anticipation, autonomy) ·
@@ -532,7 +539,7 @@ assumptions stated, qual evidence beside the quant.
 Trevor Calabro, *UX Research in the Wild* (trevorcalabro.substack.com) — all 182 posts
 (2023–2026) read and distilled into the reference book *UX in the Real World* and the UX Practice app, including
 the *Pendo Rollout Playbook* (2025) · Erika Hall, *Just Enough Research* (2nd ed.) · Teresa
-Torres, *Continuous Discovery Habits* · NN/g, Baymard, MeasuringU and Sauro findings cited
+Torres, *Continuous Discovery Habits* · Giff Constable, *Talking to Humans* · NN/g, Baymard, MeasuringU and Sauro findings cited
 through Calabro · Dan Brown (EightShapes) on stakeholder interviews · Abby Covert on
 incentive architecture · Brittany Hobbs on AI tools in research · Nikki Anderson on theme
 thresholds and insight writing · HEART (Google), UMUX-Lite (Lewis et al.).

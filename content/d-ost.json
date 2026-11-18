@@ -1,0 +1,169 @@
+{
+ "id": "d-ost",
+ "module": "discovery",
+ "title": "Opportunity Solution Trees",
+ "icon": "🌳",
+ "intro": "Map what you heard before choosing what to build.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Opportunity Solution Trees",
+   "learn": [
+    {
+     "title": "The structure",
+     "text": "**Outcome** at the top.\n**Opportunities** below it: needs, pain points and desires from interviews.\n**Solutions** only under the target opportunity.\n**Assumption tests** under each solution.",
+     "try": {
+      "type": "single",
+      "q": "Where do solutions go on the tree?",
+      "options": [
+       "Only under the target opportunity",
+       "Directly under the outcome",
+       "Under every opportunity, so nothing is missed",
+       "Beside the assumption tests"
+      ],
+      "answer": 0,
+      "explain": "Brainstorming across the whole tree spreads the team thin."
+     }
+    },
+    {
+     "title": "Disguised solutions",
+     "text": "An opportunity can be addressed in **more than one way**. If there’s only one way, it’s a solution.\n\n“I need a calendar export” → a solution.\n“I need to see my schedule outside the app” → an opportunity.\n\nAsk “why?” to find what’s underneath.",
+     "try": {
+      "type": "single",
+      "q": "Which is an opportunity, not a solution?",
+      "options": [
+       "I lose track of deadlines across projects",
+       "I need a Gantt chart view",
+       "Add email reminders for every upcoming project deadline",
+       "Give me a deadline widget"
+      ],
+      "answer": 0,
+      "explain": "It can be solved many ways."
+     }
+    },
+    {
+     "title": "Parents, children, siblings",
+     "text": "A **child is part of its parent.** Ask “what are other reasons why…?”\n**Siblings are distinct:** you can address one without the others.\n“Watch on a flight” and “watch on a train” share the parent “watch on the go”.",
+     "try": {
+      "type": "single",
+      "q": "Why are “watch on a flight” and “watch on a train” siblings?",
+      "options": [
+       "Their constraints differ under one parent",
+       "They are the same opportunity",
+       "One is a solution to the other",
+       "They belong to two different outcomes on separate trees"
+      ],
+      "answer": 0,
+      "explain": "Offline viewing matters on planes; trains may have data."
+     }
+    },
+    {
+     "title": "Choose a target",
+     "text": "**Size:** how many, how often.\n**Market position:** catch up or stand out.\n**Strategic fit.**\n**Customer importance** and satisfaction today.\n\n**Leave effort out.** Compare one row at a time. It’s a two-way door.",
+     "try": {
+      "type": "single",
+      "q": "Which factor should you leave out when choosing a target?",
+      "options": [
+       "Effort to build",
+       "How many customers it affects",
+       "Fit with company strategy",
+       "How much customers care"
+      ],
+      "answer": 0,
+      "explain": "Feasibility is tested later; judging it now rules out good options."
+     }
+    },
+    {
+     "title": "Keep it alive",
+     "text": "Before the first tree: a clear outcome and **three or four story interviews.**\nRevisit **every 3–4 interviews.**\nStill messy after **6–8**? Check how you interview.\nNew tree only when the outcome **changes direction.**",
+     "try": {
+      "type": "single",
+      "q": "When do you start a new tree?",
+      "options": [
+       "When the outcome changes direction",
+       "When the target number changes",
+       "Every quarter, together with the planning cycle",
+       "After every eight interviews"
+      ],
+      "answer": 0,
+      "explain": "A new number for the same outcome keeps the same tree."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "Where should opportunities come from?",
+     "options": [
+      "Story-based customer interviews",
+      "The team’s brainstorm",
+      "The support ticket queue on its own, sorted by volume",
+      "Competitor feature lists"
+     ],
+     "answer": 0,
+     "explain": "Tickets and analytics suggest what to ask about; they aren’t opportunities on their own."
+    },
+    {
+     "type": "single",
+     "q": "How many solutions should you compare for a target?",
+     "options": [
+      "About three",
+      "Just one",
+      "Ten or more",
+      "Two, A vs B"
+     ],
+     "answer": 0,
+     "explain": "Comparing stops the team defending its first idea."
+    },
+    {
+     "type": "single",
+     "q": "Why avoid scoring formulas for opportunities?",
+     "options": [
+      "Numbers make judgements look like facts",
+      "They take far too long to calculate for every opportunity",
+      "Stakeholders find them confusing",
+      "They favour small opportunities"
+     ],
+     "answer": 0,
+     "explain": "It discourages revisiting a wrong call."
+    },
+    {
+     "type": "single",
+     "q": "How should opportunities be compared?",
+     "options": [
+      "One row of the tree at a time",
+      "All of them in one ranked list",
+      "By the number of requests",
+      "By how quickly they can ship"
+     ],
+     "answer": 0,
+     "explain": "Compare like with like, then go deeper within the winner."
+    },
+    {
+     "type": "single",
+     "q": "Which is a common tree mistake?",
+     "options": [
+      "One tree for the whole company",
+      "A tree with only one outcome",
+      "Revisiting it every few interviews",
+      "Keeping effort out of targeting"
+     ],
+     "answer": 0,
+     "explain": "A company-wide view needs a KPI tree or an experience map instead."
+    },
+    {
+     "type": "single",
+     "q": "What is needed before the first tree?",
+     "options": [
+      "An outcome and three or four story interviews",
+      "A full research report",
+      "A prioritised feature backlog",
+      "Formal approval from every stakeholder involved in the product"
+     ],
+     "answer": 0,
+     "explain": "Without stories, the opportunities are invented."
+    }
+   ]
+  }
+ ]
+}

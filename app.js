@@ -212,7 +212,7 @@
       m.modules.forEach(function (mod, mi) {
         var p = moduleProgress(mod);
         totalDone += p.done; totalAll += p.total;
-        var unlocked = mi === 0 || moduleProgress(m.modules[mi - 1]).pct >= 50;
+        var unlocked = mi === 0 || mod.open === true || moduleProgress(m.modules[mi - 1]).pct >= 50;
 
         html += '<a class="mod-card' + (unlocked ? '' : ' locked') + '" href="' + (unlocked ? '#/m/' + mod.id : '#/') + '"' + (unlocked ? '' : ' aria-disabled="true"') + '>' +
           '<div class="mod-head"><div class="mod-info">' +
@@ -272,7 +272,7 @@
     var items = progress.items || {}, found = null;
     m.modules.forEach(function (mod, mi) {
       if (found) return;
-      var unlocked = mi === 0 || moduleProgress(m.modules[mi - 1]).pct >= 50;
+      var unlocked = mi === 0 || mod.open === true || moduleProgress(m.modules[mi - 1]).pct >= 50;
       if (!unlocked) return;
       mod.articles.forEach(function (a) {
         if (found || !a.file) return;
@@ -336,7 +336,7 @@
       html += '<section class="door" aria-labelledby="d-skills">' +
         '<div class="door-head"><div><p class="door-kind">Claude skills</p><h2 id="d-skills">Use the rules at work</h2></div>' +
         '<p class="door-count num"><b>' + L.skills.length + '</b><small> skills</small></p></div>' +
-        '<p class="door-sub">The book’s rules packaged for Claude: design reviews, research planning, UX writing, AI features, charts and Jobs to Be Done.</p>' +
+        '<p class="door-sub">The book’s rules packaged for Claude: discovery, design reviews, research planning, UX writing, AI features, charts and Jobs to Be Done.</p>' +
         '<ul class="skill-list">' + L.skills.map(function (s) {
           return '<li><a href="#/library/skill/' + esc(s.id) + '"><b>' + esc(s.title) + '</b><span>' + esc(s.blurb) + '</span></a></li>';
         }).join('') + '</ul>' +

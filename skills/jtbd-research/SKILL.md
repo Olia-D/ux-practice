@@ -91,6 +91,13 @@ co-create them with the team and keep them living documents; build them goal →
 one persona with a disability. With no data yet, make an assumption map instead and label
 it as one.
 
+## Jobs and opportunities
+
+A job statement is a good opportunity on an opportunity solution tree: it names a need
+without a solution in it. When the work moves from understanding why users switch to choosing
+what to build next, hand off to `product-discovery` — the job becomes an opportunity, the
+forces become evidence for choosing a target, and solutions are compared under it.
+
 ## Deliverables
 
 - JTBD statement set (one per distinct job uncovered)

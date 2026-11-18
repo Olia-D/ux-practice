@@ -1,0 +1,153 @@
+{
+ "id": "d-strategy",
+ "module": "discovery",
+ "title": "Strategy You Can Test",
+ "icon": "♟️",
+ "intro": "A goal is not a strategy. Name the obstacle, choose how to beat it, act coherently.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Strategy You Can Test",
+   "learn": [
+    {
+     "title": "The kernel",
+     "text": "**Diagnosis:** the critical challenge.\n**Guiding policy:** the overall approach. It rules options out.\n**Coherent actions:** steps and resources that support each other.\n\nMissing one, it’s a wish, a slogan or a to-do list.",
+     "try": {
+      "type": "single",
+      "q": "What does a guiding policy do?",
+      "options": [
+       "Rules many options out",
+       "Lists every planned feature",
+       "Sets the revenue target",
+       "Assigns work to each team"
+      ],
+      "answer": 0,
+      "explain": "A policy that rules nothing out isn’t a policy."
+     }
+    },
+    {
+     "title": "Four signs of bad strategy",
+     "text": "**Fluff:** buzzwords restating the obvious.\n**Not facing the problem:** no named challenge.\n**Goals as strategy:** a target with no route.\n**Bad objectives:** sprawling lists or unreachable aims.",
+     "try": {
+      "type": "single",
+      "q": "“20% growth and 20% margins.” Which sign?",
+      "options": [
+       "A goal dressed as strategy",
+       "Fluff and buzzwords",
+       "A clear guiding policy",
+       "A set of coherent actions"
+      ],
+      "answer": 0,
+      "explain": "It says where, not how."
+     }
+    },
+    {
+     "title": "A good example",
+     "text": "A chip maker diagnosed it was **losing the performance race.**\nPolicy: release faster chips at about **three times** the industry pace.\nActions: overlapping teams, heavy simulation, control of its drivers.",
+     "try": {
+      "type": "single",
+      "q": "Why do those actions count as coherent?",
+      "options": [
+       "They all serve the same policy",
+       "They were cheap to fund",
+       "Each team chose its own",
+       "They were planned together in quarterly reviews"
+      ],
+      "answer": 0,
+      "explain": "Actions that reinforce each other."
+     }
+    },
+    {
+     "title": "Ask it of any roadmap",
+     "text": "What is the diagnosis?\nWhich options does the policy rule out?\nDo the actions reinforce each other?\nWhich outcome tells us it’s working, and when do we look?",
+     "try": {
+      "type": "single",
+      "q": "A roadmap rules out nothing. What does that suggest?",
+      "options": [
+       "There is no real guiding policy",
+       "The strategy is very flexible and ready for change",
+       "The team is well aligned",
+       "The goals are ambitious"
+      ],
+      "answer": 0,
+      "explain": "Choosing means saying no."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What are the three parts of the kernel?",
+     "options": [
+      "Diagnosis, guiding policy, coherent actions",
+      "Vision, mission, values",
+      "Goals, metrics, deadlines",
+      "Strengths, weaknesses, opportunities, threats"
+     ],
+     "answer": 0,
+     "explain": "Templates of vision and values produce rhetoric, not a diagnosis."
+    },
+    {
+     "type": "single",
+     "q": "“Customer-centric intermediation” is an example of:",
+     "options": [
+      "Fluff",
+      "A policy",
+      "A diagnosis",
+      "An action"
+     ],
+     "answer": 0,
+     "explain": "Stripped down, it means being a bank."
+    },
+    {
+     "type": "single",
+     "q": "A city plan had 47 strategies and 178 actions. Which sign?",
+     "options": [
+      "Bad objectives",
+      "Fluff",
+      "A sharp diagnosis",
+      "Coherent action"
+     ],
+     "answer": 0,
+     "explain": "A sprawling list isn’t a choice."
+    },
+    {
+     "type": "single",
+     "q": "Why does bad strategy persist?",
+     "options": [
+      "Choosing is hard, so plans keep every option",
+      "Good strategy is too expensive for most companies to produce",
+      "Leaders lack the data needed",
+      "Teams resist all planning"
+     ],
+     "answer": 0,
+     "explain": "Avoiding a choice feels safer than making one."
+    },
+    {
+     "type": "single",
+     "q": "Where does strategy become testable for a product team?",
+     "options": [
+      "In its outcome and opportunity tree",
+      "In the annual budget and its quarterly forecasts",
+      "In the brand guidelines",
+      "In the release notes"
+     ],
+     "answer": 0,
+     "explain": "The outcome says what should change; the tree shows the bets."
+    },
+    {
+     "type": "single",
+     "q": "What is a strategy, in one line?",
+     "options": [
+      "Coherent action backed by an argument",
+      "An ambitious target for the year",
+      "A list of the planned initiatives for the year ahead",
+      "A statement of company values"
+     ],
+     "answer": 0,
+     "explain": "It must explain how the obstacle will be beaten."
+    }
+   ]
+  }
+ ]
+}

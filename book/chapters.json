@@ -518,5 +518,35 @@
 "id": "c-hidden-disabled",
 "title": "Hidden, Disabled or Read-Only?",
 "part": "part-v"
+},
+{
+"id": "d-discovery-loop",
+"title": "Continuous Discovery in One Page",
+"part": "part-vi"
+},
+{
+"id": "d-outcomes",
+"title": "Outcomes, Not Outputs",
+"part": "part-vi"
+},
+{
+"id": "d-interviews",
+"title": "Story-Based Interviews",
+"part": "part-vi"
+},
+{
+"id": "d-ost",
+"title": "Opportunity Solution Trees",
+"part": "part-vi"
+},
+{
+"id": "d-assumptions",
+"title": "Assumption Mapping and Testing",
+"part": "part-vi"
+},
+{
+"id": "d-strategy",
+"title": "Strategy You Can Test",
+"part": "part-vi"
 }
 ]

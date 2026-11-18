@@ -23,6 +23,7 @@ Once installed, the skills need no setup. Claude reads each skill's short descri
 | `ai-ux-patterns` | You're designing any AI feature: how much the agent does on its own, where it sits in the UI, voice, how trust and citations work, chat history, the EU AI Act labelling rules |
 | `ux-research-advisor` | You're planning a study, judging an A/B result, writing a survey, using AI in analysis, interviewing stakeholders, picking a metric, preparing a readout, arguing ROI, or setting up or reading Pendo analytics |
 | `data-visualization` | You're choosing a chart, reviewing a dashboard or designing KPI views |
+| `product-discovery` | You're deciding what to build next: setting an outcome, running weekly interviews, mapping an opportunity tree, testing assumptions, or questioning a roadmap |
 | `jtbd-research` | You need to know why users adopt, switch or churn |
 
 ## Make routing reliable

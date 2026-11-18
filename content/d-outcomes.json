@@ -1,0 +1,153 @@
+{
+ "id": "d-outcomes",
+ "module": "discovery",
+ "title": "Outcomes, Not Outputs",
+ "icon": "🎯",
+ "intro": "Outputs are what you ship. Outcomes are what changes because of it.",
+ "topics": [
+  {
+   "id": "main",
+   "title": "Outcomes, Not Outputs",
+   "learn": [
+    {
+     "title": "The build trap",
+     "text": "Teams measured on **features shipped** keep shipping and stop checking whether anything changed.\n\nA product has no value on its own. Value is what it does for customers; the business gains only when that happens.",
+     "try": {
+      "type": "single",
+      "q": "Which of these is an outcome?",
+      "options": [
+       "More teams finish setup in week one",
+       "Ten features shipped this quarter",
+       "Every single roadmap date met on time this year",
+       "Story points closed per sprint"
+      ],
+      "answer": 0,
+      "explain": "It describes a change in customer behaviour."
+     }
+    },
+    {
+     "title": "Three kinds of metric",
+     "text": "**Business outcome:** revenue, retention. Too far away for one team.\n**Product outcome:** customer behaviour in the product. **The best fit for discovery.**\n**Traction metric:** use of one feature. Narrows the solutions to one.",
+     "try": {
+      "type": "single",
+      "q": "Which metric suits a discovery team best?",
+      "options": [
+       "A product outcome",
+       "A business outcome",
+       "A traction metric",
+       "A delivery velocity metric"
+      ],
+      "answer": 0,
+      "explain": "The team can move it, and many solutions could."
+     }
+    },
+    {
+     "title": "From strategy to the team",
+     "text": "**Strategic intent:** a few goals for one to two years.\n**Product initiatives:** customer problems to solve.\n**Options:** solutions, treated as bets.\n\nLeaders set the why. Teams own the how.",
+     "try": {
+      "type": "single",
+      "q": "In this cascade, what are solutions treated as?",
+      "options": [
+       "Bets on moving the outcome",
+       "Fixed commitments",
+       "Signed-off requirements",
+       "Dated milestones"
+      ],
+      "answer": 0,
+      "explain": "A solution is a bet that it will move the outcome."
+     }
+    },
+    {
+     "title": "Four risks",
+     "text": "**Value:** will they choose it?\n**Usability:** can they use it?\n**Feasibility:** can we build it?\n**Viability:** does it work for the business, including legal and ethics?\n\nCheck them before building.",
+     "try": {
+      "type": "single",
+      "q": "“Does it break our pricing or compliance rules?” Which risk is that?",
+      "options": [
+       "Viability",
+       "Value",
+       "Usability",
+       "Feasibility"
+      ],
+      "answer": 0,
+      "explain": "Viability covers whether the business can support it."
+     }
+    }
+   ],
+   "test": [
+    {
+     "type": "single",
+     "q": "What is the build trap?",
+     "options": [
+      "Judging success by features shipped",
+      "Building before the design is final",
+      "Shipping too slowly to compete",
+      "Letting engineers choose the roadmap"
+     ],
+     "answer": 0,
+     "explain": "Outputs become the goal instead of the change they should cause."
+    },
+    {
+     "type": "single",
+     "q": "Which is a traction metric?",
+     "options": [
+      "Weekly uses of the export button",
+      "Annual recurring revenue",
+      "Share of teams still active 30 days after signing up",
+      "Support cost per customer"
+     ],
+     "answer": 0,
+     "explain": "It tracks one feature, which suits optimising that feature."
+    },
+    {
+     "type": "single",
+     "q": "Why is a business outcome a poor discovery goal?",
+     "options": [
+      "Too many teams and forces move it",
+      "It cannot be measured precisely enough to be useful",
+      "Leaders rarely care about it",
+      "It changes every single week"
+     ],
+     "answer": 0,
+     "explain": "A team can’t see its own effect on it."
+    },
+    {
+     "type": "single",
+     "q": "Someone asks for a feature. What should you ask first?",
+     "options": [
+      "Which outcome it should move",
+      "How soon they need it",
+      "Which competitor has it",
+      "How many engineers it will need to build it"
+     ],
+     "answer": 0,
+     "explain": "If nobody can say, it is an output looking for a reason."
+    },
+    {
+     "type": "single",
+     "q": "Who is usually best placed to judge feasibility?",
+     "options": [
+      "Engineers",
+      "Customers",
+      "Sales",
+      "Leadership"
+     ],
+     "answer": 0,
+     "explain": "They know the time, skills and technology available."
+    },
+    {
+     "type": "single",
+     "q": "What should leaders set in outcome-led work?",
+     "options": [
+      "The intent and the why",
+      "The features and the dates",
+      "The designs and the copy",
+      "The sprint plan and estimates"
+     ],
+     "answer": 0,
+     "explain": "Teams own how to reach it."
+    }
+   ]
+  }
+ ]
+}
