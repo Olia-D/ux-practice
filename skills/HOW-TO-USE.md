@@ -26,6 +26,8 @@ Once installed, the skills need no setup. Claude reads each skill's short descri
 | `product-discovery` | You're deciding what to build next: setting an outcome, running weekly interviews, mapping an opportunity tree, testing assumptions, or questioning a roadmap |
 | `jtbd-research` | You need to know why users adopt, switch or churn |
 | `portfolio-playbook` | You're building, reviewing or tailoring a design portfolio, a case study or an interview deck |
+| `work-impact-writing` | You're writing about your own work: a self-review, an impact log entry, a promotion case, a status update or CV copy |
+| `stakeholder-influence` | You need to shift a decision you don't control: disagreeing with a PM, pushing back on a pet idea, raising a blocker, or recovering from being overruled |
 
 ## Make routing reliable
 
