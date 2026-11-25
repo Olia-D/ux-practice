@@ -36,6 +36,7 @@ Ask (or infer) two things: **what is the deliverable** and **what decision is be
 | Navigation structure, card sort, tree test, findability | `ux-research-advisor` §17 | + `ux-writing` §5 for labels and content audits |
 | Content strategy, user needs, "do we need this page" | `ux-writing` §5 | + `ux-research-advisor` for evidence |
 | Workshop, design sprint, prototype fidelity | `product-discovery` (what to test) | + `interaction-design-reviewer` (`references/critique-sessions.md`) for running feedback |
+| Design portfolio, case study write-up, interview deck, "why no callbacks" | `portfolio-playbook` | + `ux-writing` for card and hero copy |
 
 If none fits, say so and answer from general UX knowledge and the project's reference
 books rather than forcing a skill.

@@ -14,7 +14,7 @@ Single self-contained HTML file; opens offline in any browser.
 - [Download the zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/ux-in-the-real-world-book.zip) · or the file itself: [`book/ux-in-the-real-world.html`](book/ux-in-the-real-world.html) (use "Download raw file")
 
 ### The skills — UX design toolkit for Claude
-Eight skills, each in `skills/<name>/` and as an upload-ready zip (SKILL.md at the zip root).
+Nine skills, each in `skills/<name>/` and as an upload-ready zip (SKILL.md at the zip root).
 
 | Skill | Download |
 |---|---|
@@ -26,7 +26,8 @@ Eight skills, each in `skills/<name>/` and as an upload-ready zip (SKILL.md at t
 | product-discovery | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/skill-product-discovery.zip) |
 | jtbd-research | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/skill-jtbd-research.zip) |
 | ux-writing | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/skill-ux-writing.zip) |
-| **All eight** | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/ux-skills-all.zip) |
+| portfolio-playbook | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/skill-portfolio-playbook.zip) |
+| **All nine** | [zip](https://github.com/Olia-D/ux-practice/raw/main/downloads/ux-skills-all.zip) |
 
 **How to install and use them:** [`skills/HOW-TO-USE.md`](skills/HOW-TO-USE.md). In short, upload one zip per skill under Settings → Skills on claude.ai, or copy the folders into `~/.claude/skills/` for Claude Code, then just ask.
 

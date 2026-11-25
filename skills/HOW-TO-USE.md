@@ -25,6 +25,7 @@ Once installed, the skills need no setup. Claude reads each skill's short descri
 | `data-visualization` | You're choosing a chart, reviewing a dashboard or designing KPI views |
 | `product-discovery` | You're deciding what to build next: setting an outcome, running weekly interviews, mapping an opportunity tree, testing assumptions, or questioning a roadmap |
 | `jtbd-research` | You need to know why users adopt, switch or churn |
+| `portfolio-playbook` | You're building, reviewing or tailoring a design portfolio, a case study or an interview deck |
 
 ## Make routing reliable
 

@@ -8,6 +8,7 @@ Skill routing — pick before answering:
 - Any AI-powered feature, agent, copilot, chat → ai-ux-patterns (+ interaction-design-reviewer for the non-AI parts)
 - Why users choose / switch / churn, positioning → jtbd-research
 - What to build next, outcomes, discovery cadence, opportunity tree, assumption tests, roadmap critique → product-discovery
+- Design portfolio, case study, interview deck, tailoring to a job ad → portfolio-playbook
 - Multi-step or unclear request → ux-start (load it first)
 If a request spans two, load both. End with one line: "Skills used: a, b".
 
