@@ -64,6 +64,16 @@
       "id": "portfolio-playbook",
       "title": "Portfolio Playbook",
       "blurb": "Positioning, case studies, homepage and cards, site craft, CV and LinkedIn consistency, interview decks."
+    },
+    {
+      "id": "work-impact-writing",
+      "title": "Work Impact Writing",
+      "blurb": "Self-reviews, impact logs, promotion cases, status updates: what you did, what changed, who can confirm it."
+    },
+    {
+      "id": "stakeholder-influence",
+      "title": "Stakeholder Influence",
+      "blurb": "Shifting a decision you don't control: bring new information, show the path, priorities over ownership."
     }
   ]
 }
